@@ -76,41 +76,32 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative grid grid-cols-5 grid-rows-5 gap-3 sm:gap-4">
-            <div className="relative col-span-3 row-span-3 overflow-hidden rounded">
+          <div className="relative grid aspect-[5/4] grid-cols-2 grid-rows-2 gap-4 sm:gap-5">
+            <div className="relative row-span-2 overflow-hidden rounded-2xl bg-line-soft">
               <Image
-                src="https://picsum.photos/seed/hayvia-hero-main/900/900"
-                alt="A furnished condo living room in Hat Yai"
+                src="/images/hero-living-room.jpg"
+                alt="A warm, minimal living room with light oak furniture and linen textiles"
                 fill
                 priority
                 sizes="(max-width: 1024px) 60vw, 30vw"
                 className="object-cover"
               />
             </div>
-            <div className="relative col-span-2 col-start-4 row-span-2 overflow-hidden rounded">
+            <div className="relative overflow-hidden rounded-2xl bg-line-soft">
               <Image
-                src="https://picsum.photos/seed/hayvia-hero-2/500/500"
-                alt="A residential street in Hat Yai"
+                src="/images/hero-bedroom.jpg"
+                alt="A calm, minimal bedroom with natural light and neutral linen bedding"
                 fill
                 sizes="(max-width: 1024px) 30vw, 15vw"
                 className="object-cover"
               />
             </div>
-            <div className="relative col-span-2 col-start-4 row-span-3 row-start-3 overflow-hidden rounded">
+            <div className="relative overflow-hidden rounded-2xl bg-line-soft">
               <Image
-                src="https://picsum.photos/seed/hayvia-hero-3/500/700"
-                alt="A modern condo building facade"
+                src="/images/hero-dining.jpg"
+                alt="A minimal dining nook with light oak wood and warm natural lighting"
                 fill
                 sizes="(max-width: 1024px) 30vw, 15vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="relative col-span-3 col-start-1 row-span-2 row-start-4 overflow-hidden rounded">
-              <Image
-                src="https://picsum.photos/seed/hayvia-hero-4/700/500"
-                alt="A well-lit kitchen area in a Hat Yai rental unit"
-                fill
-                sizes="(max-width: 1024px) 60vw, 30vw"
                 className="object-cover"
               />
             </div>
