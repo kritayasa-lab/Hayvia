@@ -28,7 +28,7 @@ interface CommonProps {
 
 interface ButtonAsButton
   extends CommonProps,
-    Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className"> {
+    Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className" | "children"> {
   href?: undefined;
 }
 
