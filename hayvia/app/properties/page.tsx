@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 };
 
 export default async function PropertiesPage() {
-  const properties = await getProperties();
+    const properties = await getProperties();
+
+  return (
     <Container className="py-10 sm:py-14">
       <div className="max-w-2xl">
         <h1 className="font-display text-3xl text-ink sm:text-4xl">
