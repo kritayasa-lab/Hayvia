@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 import { NextResponse } from "next/server";
-import { GOOGLE_APPS_SCRIPT_GET_MATCHED_URL } from "@/config/integrations";
+import { GOOGLE_APPS_SCRIPT_URL } from "@/config/integrations";
 
 export const dynamic = "force-dynamic";
 
@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     );
   }
 
-  if (!GOOGLE_APPS_SCRIPT_GET_MATCHED_URL) {
+  if (!GOOGLE_APPS_SCRIPT_URL) {
     console.error(
       "[HAYVIA] Missing Google Apps Script endpoint for Get Matched submissions."
     );
@@ -40,7 +40,7 @@ export async function POST(request: Request) {
   let scriptResponse: Response;
 
   try {
-    scriptResponse = await fetch(GOOGLE_APPS_SCRIPT_GET_MATCHED_URL, {
+    scriptResponse = await fetch(GOOGLE_APPS_SCRIPT_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
