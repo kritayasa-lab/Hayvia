@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import PropertiesExplorer from "@/components/property/PropertiesExplorer";
-import { properties } from "@/data/properties";
+import { getProperties } from "@/lib/properties-source";
 
 export const metadata: Metadata = {
   title: "Properties for Rent in Hat Yai",
@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     "Browse condos, apartments, houses and townhouses for rent in Hat Yai. Filter by location, budget, bedrooms and more.",
 };
 
-export default function PropertiesPage() {
-  return (
+export default async function PropertiesPage() {
+  const properties = await getProperties();
     <Container className="py-10 sm:py-14">
       <div className="max-w-2xl">
         <h1 className="font-display text-3xl text-ink sm:text-4xl">
