@@ -10,14 +10,15 @@ export const metadata: Metadata = {
 };
 
 export default async function PropertiesPage() {
-    const properties = await getProperties();
+  const properties = await getProperties();
 
-return (
-  <Container
+  return (
+    <Container className="py-10 sm:py-14">
       <div className="max-w-2xl">
         <h1 className="font-display text-3xl text-ink sm:text-4xl">
           Find a place that's right for you.
         </h1>
+
         <p className="mt-3 text-ink-soft">
           Browse our selected rental listings across Hat Yai, or use the filters to
           narrow things down by location, budget and property type.
