@@ -463,4 +463,3 @@ function isNextRedirectError(err: unknown): boolean {
     (err as { digest: string }).digest.startsWith("NEXT_REDIRECT")
   );
 }
-```
