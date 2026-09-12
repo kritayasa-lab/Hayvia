@@ -1,5 +1,5 @@
 {
-  "name": "hayvia",
+  "name": "subphiphat-real-estate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,11 @@
     "next": "14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "lucide-react": "^0.424.0"
+    "lucide-react": "^0.424.0",
+    "@supabase/supabase-js": "^2.45.4",
+    "@supabase/ssr": "^0.5.1",
+    "libphonenumber-js": "^1.11.9",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "typescript": "^5.5.4",

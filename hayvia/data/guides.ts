@@ -26,7 +26,7 @@ export const guides: GuideArticle[] = [
     category: "Neighbourhoods",
     readingTime: "5 min read",
     date: "2026-08-12",
-    image: "https://picsum.photos/seed/hayvia-guide-1/1200/700",
+    image: "https://picsum.photos/seed/subphiphat-guide-1/1200/700",
     content: [
       "Hat Yai is compact enough that most areas are within a short drive of each other, but each part of the city has a slightly different character. Knowing the basics before you start looking will save you time.",
       "Central Hat Yai, around Niphat Uthit roads and Lee Gardens Plaza, is the commercial heart of the city. It suits people who want to walk to shops, restaurants and the night market, and who don't mind paying a bit more for that convenience.",
@@ -44,14 +44,14 @@ export const guides: GuideArticle[] = [
     category: "Budgeting",
     readingTime: "4 min read",
     date: "2026-08-05",
-    image: "https://picsum.photos/seed/hayvia-guide-2/1200/700",
+    image: "https://picsum.photos/seed/subphiphat-guide-2/1200/700",
     content: [
       "Rental costs in Hat Yai vary widely depending on property type, location and furnishing level. This guide gives general ranges to help you set a realistic budget — always confirm the exact price and what's included with the property owner or agent.",
       "Studios and small apartments, especially near the university, often start from around ฿5,500–8,000 per month. These are typically compact, furnished, and aimed at students or short-term tenants.",
       "One-bedroom condos in central areas tend to fall between ฿10,000–15,000 per month, with fully furnished units at the higher end of that range and older or less central buildings closer to the lower end.",
       "Townhouses and small houses, which offer more space and often a private parking area, generally range from ฿15,000–25,000 per month depending on size, condition and furnishing.",
       "Larger or higher-spec condos and houses aimed at families or professionals can run ฿25,000 and above, particularly in central locations with additional amenities like a pool or fitness room.",
-      "Beyond monthly rent, budget for a security deposit (commonly one to two months' rent) and sometimes an advance payment. These terms vary by property, which is why HAYVIA lists deposit and lease information on every listing.",
+      "Beyond monthly rent, budget for a security deposit (commonly one to two months' rent) and sometimes an advance payment. These terms vary by property, which is why Subphiphat Real Estate lists deposit and lease information on every listing.",
     ],
   },
   {
@@ -62,14 +62,14 @@ export const guides: GuideArticle[] = [
     category: "For Foreigners",
     readingTime: "6 min read",
     date: "2026-07-29",
-    image: "https://picsum.photos/seed/hayvia-guide-3/1200/700",
+    image: "https://picsum.photos/seed/subphiphat-guide-3/1200/700",
     content: [
       "Renting as a foreigner in Hat Yai is generally straightforward, though the process can feel unfamiliar if you haven't rented in Thailand before. This guide covers the basics.",
-      "Most property owners will ask for a copy of your passport and, if applicable, your visa or work permit. Some may also ask for a local contact number, which is one reason HAYVIA collects your preferred contact method during matching.",
+      "Most property owners will ask for a copy of your passport and, if applicable, your visa or work permit. Some may also ask for a local contact number, which is one reason Subphiphat Real Estate collects your preferred contact method during matching.",
       "Lease agreements are usually written in Thai, sometimes with an English translation. It's reasonable to ask for time to review the agreement, or to have someone you trust look it over, before signing.",
       "Deposits are typically one to two months' rent, refundable at the end of the lease minus any deductions for damage or unpaid bills. Ask specifically how the deposit will be returned and what condition the unit needs to be in.",
       "Utility billing (electricity and water) is often separate from rent and may be billed at a per-unit rate set by the building rather than the government rate — this is worth confirming upfront so there are no surprises.",
-      "Language can be a barrier when dealing directly with an owner who doesn't speak English. This is part of why HAYVIA exists: to help translate your requirements clearly and support the introduction between you and the property owner or agent.",
+      "Language can be a barrier when dealing directly with an owner who doesn't speak English. This is part of why Subphiphat Real Estate exists: to help translate your requirements clearly and support the introduction between you and the property owner or agent.",
     ],
   },
   {
@@ -80,7 +80,7 @@ export const guides: GuideArticle[] = [
     category: "Property Types",
     readingTime: "4 min read",
     date: "2026-07-18",
-    image: "https://picsum.photos/seed/hayvia-guide-4/1200/700",
+    image: "https://picsum.photos/seed/subphiphat-guide-4/1200/700",
     content: [
       "In Hat Yai, 'condo' and 'apartment' are often used loosely, but there are some practical differences worth understanding when you compare listings.",
       "Condos are typically individually owned units within a larger building, each rented out by its individual owner. They often come with shared facilities like a pool, gym or 24-hour security, and furnishing standards can vary between units in the same building.",
@@ -97,7 +97,7 @@ export const guides: GuideArticle[] = [
     category: "Practical Tips",
     readingTime: "5 min read",
     date: "2026-07-02",
-    image: "https://picsum.photos/seed/hayvia-guide-5/1200/700",
+    image: "https://picsum.photos/seed/subphiphat-guide-5/1200/700",
     content: [
       "Before signing a lease anywhere in Thailand, it's worth working through a short checklist. None of this is unique to Hat Yai, but it's easy to overlook when you're excited about a new place.",
       "Confirm the exact monthly rent, deposit amount, and what's included — some listings include water and internet, others don't. Get this in writing, even if it's a simple message thread.",

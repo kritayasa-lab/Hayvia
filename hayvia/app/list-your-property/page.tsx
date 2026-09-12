@@ -5,7 +5,7 @@ import ListPropertyForm from "@/components/forms/ListPropertyForm";
 export const metadata: Metadata = {
   title: "List Your Property",
   description:
-    "Have a rental property in Hat Yai? Submit your property details for review and possible inclusion on HAYVIA.",
+    "Have a rental property in Hat Yai? Submit your property details for review and possible inclusion on Subphiphat Real Estate.",
 };
 
 export default function ListYourPropertyPage() {
@@ -16,7 +16,7 @@ export default function ListYourPropertyPage() {
           Have a property in Hat Yai?
         </h1>
         <p className="mt-3 text-ink-soft">
-          Tell us about your property and we'll review it for inclusion on HAYVIA.
+          Tell us about your property and we'll review it for inclusion on Subphiphat Real Estate.
         </p>
       </div>
 

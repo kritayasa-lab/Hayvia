@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, UserRound } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
+import { contactConfig } from "@/config/contact";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -34,8 +35,11 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur">
       <Container>
         <div className="flex h-16 items-center justify-between sm:h-20">
-          <Link href="/" className="font-display text-xl tracking-tight text-ink">
-            HAYVIA
+          <Link
+            href="/"
+            className="whitespace-nowrap font-display text-base tracking-tight text-ink sm:text-lg"
+          >
+            {contactConfig.brand}
           </Link>
 
           <nav className="hidden items-center gap-8 lg:flex">
@@ -58,6 +62,13 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <Link
+              href="/account"
+              aria-label="My Account"
+              className="hidden h-10 w-10 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-moss-500 hover:text-moss-700 sm:inline-flex"
+            >
+              <UserRound size={18} />
+            </Link>
             <Link
               href="/get-matched"
               className="hidden rounded bg-moss-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-moss-700 sm:inline-flex"
@@ -96,6 +107,12 @@ export default function Header() {
                 </Link>
               );
             })}
+            <Link
+              href="/account"
+              className="rounded px-3 py-3.5 text-lg text-ink"
+            >
+              My Account
+            </Link>
             <Link
               href="/get-matched"
               className="mt-4 inline-flex items-center justify-center rounded bg-moss-600 px-4 py-3.5 text-base font-medium text-white"

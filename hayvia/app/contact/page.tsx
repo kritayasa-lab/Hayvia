@@ -6,7 +6,7 @@ import ContactForm from "@/components/forms/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with HAYVIA — questions about renting, looking for a property, or want to list your own.",
+    "Get in touch with Subphiphat Real Estate — questions about renting, looking for a property, or want to list your own.",
 };
 
 export default function ContactPage() {

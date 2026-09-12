@@ -45,6 +45,7 @@ export default function GetMatchedForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -69,12 +70,19 @@ export default function GetMatchedForm() {
       return;
     }
     setStatus("submitting");
-    await submitLead({
+    setSubmitError(null);
+    const result = await submitLead({
       source: "get-matched",
       submittedAt: new Date().toISOString(),
       ...form,
     });
-    setStatus("success");
+
+    if (result.success) {
+      setStatus("success");
+    } else {
+      setStatus("idle");
+      setSubmitError(result.message);
+    }
   }
 
   if (status === "success") {
@@ -283,6 +291,12 @@ export default function GetMatchedForm() {
           />
         </FieldWrapper>
       </FormSection>
+
+      {submitError && (
+        <p role="alert" className="text-sm text-red-500">
+          {submitError}
+        </p>
+      )}
 
       <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "submitting"}>
         {status === "submitting" ? (

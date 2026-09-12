@@ -13,7 +13,7 @@ const columns = [
     ],
   },
   {
-    heading: "HAYVIA",
+    heading: contactConfig.brand,
     links: [
       { href: "/about", label: "About" },
       { href: "/list-your-property", label: "List Your Property" },
@@ -28,28 +28,28 @@ export default function Footer() {
       <Container className="py-14 sm:py-16">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <p className="font-display text-xl text-ink">HAYVIA</p>
+            <p className="font-display text-xl text-ink">{contactConfig.brand}</p>
             <p className="mt-2 max-w-xs text-sm text-ink-soft">
               {contactConfig.tagline} — {contactConfig.descriptor}
             </p>
             <div className="mt-5 flex items-center gap-3">
               <a
                 href={contactConfig.facebookLink}
-                aria-label="HAYVIA on Facebook"
+                aria-label={`${contactConfig.brand} on Facebook`}
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-moss-500 hover:text-moss-700"
               >
                 <Facebook size={16} />
               </a>
               <a
                 href={contactConfig.instagramLink}
-                aria-label="HAYVIA on Instagram"
+                aria-label={`${contactConfig.brand} on Instagram`}
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-moss-500 hover:text-moss-700"
               >
                 <Instagram size={16} />
               </a>
               <a
                 href={contactConfig.emailLink}
-                aria-label="Email HAYVIA"
+                aria-label={`Email ${contactConfig.brand}`}
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-moss-500 hover:text-moss-700"
               >
                 <Mail size={16} />
@@ -82,7 +82,7 @@ export default function Footer() {
             details with the property owner or agent before making any decisions.
           </p>
           <p className="mt-4 text-xs text-ink-faint">
-            © 2026 HAYVIA. All rights reserved.
+            © 2026 {contactConfig.brand}. All rights reserved.
           </p>
         </div>
       </Container>

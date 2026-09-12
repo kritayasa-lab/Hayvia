@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // Lead submission service
 // -----------------------------------------------------------------------------
-// This file is the single place that "sends" data collected from HAYVIA's forms
+// This file is the single place that "sends" data collected from Subphiphat Real Estate's forms
 // (Get Matched, List Your Property, Property Inquiry, Contact).
 //
 // Get Matched submissions are POSTed to /api/get-matched (a Next.js Route
@@ -12,7 +12,15 @@
 //
 // The other forms (Property Inquiry, List Your Property, Contact) still use a
 // local mock handler for now, so the UI can be tested without a backend. When
-// ready, swap their block below for a real integration.
+// ready, swap their block below for a real integration, e.g.:
+//   - Supabase / PostgreSQL: insert into a `leads` table
+//   - CRM: POST to a CRM's REST API
+//   - Email: send via a transactional email provider (Resend, Postmark, SES)
+//   - Google Sheets: POST to a Google Apps Script web app / Sheets API
+//   - Webhook: POST the payload to an internal automation (n8n, Zapier, Make)
+//
+// Every form in the app calls the same `submitLead` function, so this file is
+// the only place that needs to change to go live with a new integration.
 // -----------------------------------------------------------------------------
 
 export type LeadSource =
@@ -88,14 +96,27 @@ export interface SubmitLeadResult {
   message: string;
 }
 
+/**
+ * Submits a lead captured from any form on the site.
+ *
+ * - "get-matched" leads are sent live to the Google Apps Script Web App.
+ * - All other lead types currently use a local mock handler — replace their
+ *   branch below to connect to Supabase, a CRM, email, Google Sheets, or a
+ *   webhook.
+ */
 export async function submitLead(lead: Lead): Promise<SubmitLeadResult> {
   if (lead.source === "get-matched") {
     return submitGetMatchedLead(lead);
   }
 
+  // Mock handler for Property Inquiry, List Your Property, and Contact.
+  // Simulate network latency so the UI's loading state can be exercised.
   await new Promise((resolve) => setTimeout(resolve, 700));
 
-  console.info("[HAYVIA] New lead received:", lead);
+  // TODO(production): replace this block with a real integration call, e.g.
+  //   await fetch("/api/leads", { method: "POST", body: JSON.stringify(lead) });
+  // eslint-disable-next-line no-console
+  console.info("[Subphiphat] New lead received:", lead);
 
   return {
     success: true,
@@ -103,9 +124,14 @@ export async function submitLead(lead: Lead): Promise<SubmitLeadResult> {
   };
 }
 
-async function submitGetMatchedLead(
-  lead: GetMatchedLead
-): Promise<SubmitLeadResult> {
+/**
+ * Sends a Get Matched submission to our own /api/get-matched Route Handler,
+ * which forwards it server-side to the Google Apps Script Web App configured
+ * in config/integrations.ts. The browser only ever talks to /api/get-matched
+ * — see app/api/get-matched/route.ts for the server-side forwarding step and
+ * the real success/failure result parsed from Apps Script's response.
+ */
+async function submitGetMatchedLead(lead: GetMatchedLead): Promise<SubmitLeadResult> {
   try {
     const response = await fetch("/api/get-matched", {
       method: "POST",
@@ -114,7 +140,6 @@ async function submitGetMatchedLead(
     });
 
     let data: { success?: boolean; error?: string } | null = null;
-
     try {
       data = await response.json();
     } catch {
@@ -133,8 +158,8 @@ async function submitGetMatchedLead(
       message: data?.error || "Failed to submit lead.",
     };
   } catch (error) {
-    console.error("[HAYVIA] Failed to reach /api/get-matched:", error);
-
+    // eslint-disable-next-line no-console
+    console.error("[Subphiphat] Failed to reach /api/get-matched:", error);
     return {
       success: false,
       message:
@@ -142,3 +167,4 @@ async function submitGetMatchedLead(
     };
   }
 }
+

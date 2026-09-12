@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // Property data
 // -----------------------------------------------------------------------------
-// This is the single source of truth for every property shown on HAYVIA.
+// This is the single source of truth for every property shown on Subphiphat Real Estate.
 // The homepage, /properties listing, filters, and /properties/[slug] detail
 // pages all render from this file — nothing is hard-coded elsewhere.
 //
@@ -45,8 +45,15 @@ export interface Property {
   images: string[];
   verified: boolean;
   featured: boolean;
-  status: "available" | "reserved";
+  // "rented" added for Google Sheets compatibility (see lib/properties-source.ts).
+  // None of the hardcoded demo properties below use it — they're unaffected.
+  status: "available" | "reserved" | "rented";
   contactType: ContactType;
+  // Optional fields below are populated when a property comes from Google
+  // Sheets (see lib/properties-source.ts). They're optional specifically so
+  // none of the hardcoded demo properties below need to be touched.
+  googleMapsUrl?: string;
+  viewCount?: number;
 }
 
 export const properties: Property[] = [
@@ -71,9 +78,9 @@ export const properties: Property[] = [
       "A compact, well-kept condo unit a short walk from Lee Gardens Plaza and the Central Hat Yai night market. Good fit for a single tenant or couple who wants to be close to shopping, restaurants and transport links without paying for extra space.",
     amenities: ["Swimming pool", "Fitness room", "24-hour security", "Elevator", "CCTV"],
     images: [
-      "https://picsum.photos/seed/hayvia-p1-a/1200/800",
-      "https://picsum.photos/seed/hayvia-p1-b/1200/800",
-      "https://picsum.photos/seed/hayvia-p1-c/1200/800",
+      "https://picsum.photos/seed/subphiphat-p1-a/1200/800",
+      "https://picsum.photos/seed/subphiphat-p1-b/1200/800",
+      "https://picsum.photos/seed/subphiphat-p1-c/1200/800",
     ],
     verified: true,
     featured: true,
@@ -101,9 +108,9 @@ export const properties: Property[] = [
       "A quiet two-storey townhouse in a residential Kho Hong sub-project, suited to a small family or a couple who wants more space and a small front yard while staying a short drive from central Hat Yai.",
     amenities: ["Private parking", "Small garden", "Village security gate", "Air conditioning (2 units)"],
     images: [
-      "https://picsum.photos/seed/hayvia-p2-a/1200/800",
-      "https://picsum.photos/seed/hayvia-p2-b/1200/800",
-      "https://picsum.photos/seed/hayvia-p2-c/1200/800",
+      "https://picsum.photos/seed/subphiphat-p2-a/1200/800",
+      "https://picsum.photos/seed/subphiphat-p2-b/1200/800",
+      "https://picsum.photos/seed/subphiphat-p2-c/1200/800",
     ],
     verified: true,
     featured: true,
@@ -131,9 +138,9 @@ export const properties: Property[] = [
       "A budget-friendly studio in a low-rise apartment block popular with students and young professionals. Walking distance to PSU's main gate, tutoring centres and inexpensive local eateries.",
     amenities: ["Communal laundry", "Bike parking", "On-site convenience store", "CCTV"],
     images: [
-      "https://picsum.photos/seed/hayvia-p3-a/1200/800",
-      "https://picsum.photos/seed/hayvia-p3-b/1200/800",
-      "https://picsum.photos/seed/hayvia-p3-c/1200/800",
+      "https://picsum.photos/seed/subphiphat-p3-a/1200/800",
+      "https://picsum.photos/seed/subphiphat-p3-b/1200/800",
+      "https://picsum.photos/seed/subphiphat-p3-c/1200/800",
     ],
     verified: false,
     featured: true,
@@ -161,9 +168,9 @@ export const properties: Property[] = [
       "A detached single-storey house in a peaceful Khlong Hae neighbourhood, close to the floating market and weekend food stalls. Suited to a family that wants a garden, extra bedrooms and a slower pace outside the city centre.",
     amenities: ["Private garden", "Carport (2 cars)", "Storage room", "Village entrance gate"],
     images: [
-      "https://picsum.photos/seed/hayvia-p4-a/1200/800",
-      "https://picsum.photos/seed/hayvia-p4-b/1200/800",
-      "https://picsum.photos/seed/hayvia-p4-c/1200/800",
+      "https://picsum.photos/seed/subphiphat-p4-a/1200/800",
+      "https://picsum.photos/seed/subphiphat-p4-b/1200/800",
+      "https://picsum.photos/seed/subphiphat-p4-c/1200/800",
     ],
     verified: true,
     featured: true,
@@ -191,9 +198,9 @@ export const properties: Property[] = [
       "A higher-floor two-bedroom unit with city views, in a well-maintained condo building near Lee Gardens Plaza. A comfortable option for a small family, roommates, or a professional who works from home and wants an extra room.",
     amenities: ["Swimming pool", "Fitness room", "Co-working lounge", "24-hour security", "Elevator"],
     images: [
-      "https://picsum.photos/seed/hayvia-p5-a/1200/800",
-      "https://picsum.photos/seed/hayvia-p5-b/1200/800",
-      "https://picsum.photos/seed/hayvia-p5-c/1200/800",
+      "https://picsum.photos/seed/subphiphat-p5-a/1200/800",
+      "https://picsum.photos/seed/subphiphat-p5-b/1200/800",
+      "https://picsum.photos/seed/subphiphat-p5-c/1200/800",
     ],
     verified: true,
     featured: false,
@@ -221,9 +228,9 @@ export const properties: Property[] = [
       "A recently built condo unit in Kho Hong with straightforward, modern interiors. A practical mid-range option for a tenant who wants furnished convenience without paying central Hat Yai prices.",
     amenities: ["Swimming pool", "Fitness room", "CCTV", "Keycard access"],
     images: [
-      "https://picsum.photos/seed/hayvia-p6-a/1200/800",
-      "https://picsum.photos/seed/hayvia-p6-b/1200/800",
-      "https://picsum.photos/seed/hayvia-p6-c/1200/800",
+      "https://picsum.photos/seed/subphiphat-p6-a/1200/800",
+      "https://picsum.photos/seed/subphiphat-p6-b/1200/800",
+      "https://picsum.photos/seed/subphiphat-p6-c/1200/800",
     ],
     verified: false,
     featured: false,
@@ -251,9 +258,9 @@ export const properties: Property[] = [
       "A corner unit with extra window light, in a small apartment building popular with graduate students and university staff. Basic furniture is included; tenants typically add their own kitchen appliances.",
     amenities: ["Motorbike parking", "Communal laundry", "On-site management"],
     images: [
-      "https://picsum.photos/seed/hayvia-p7-a/1200/800",
-      "https://picsum.photos/seed/hayvia-p7-b/1200/800",
-      "https://picsum.photos/seed/hayvia-p7-c/1200/800",
+      "https://picsum.photos/seed/subphiphat-p7-a/1200/800",
+      "https://picsum.photos/seed/subphiphat-p7-b/1200/800",
+      "https://picsum.photos/seed/subphiphat-p7-c/1200/800",
     ],
     verified: true,
     featured: false,
@@ -281,9 +288,9 @@ export const properties: Property[] = [
       "A two-bedroom townhouse a few minutes' walk from Khlong Hae's canal-side market street. Reasonably priced for the space, with a small covered parking area at the front.",
     amenities: ["Private parking", "Air conditioning (2 units)", "Village security"],
     images: [
-      "https://picsum.photos/seed/hayvia-p8-a/1200/800",
-      "https://picsum.photos/seed/hayvia-p8-b/1200/800",
-      "https://picsum.photos/seed/hayvia-p8-c/1200/800",
+      "https://picsum.photos/seed/subphiphat-p8-a/1200/800",
+      "https://picsum.photos/seed/subphiphat-p8-b/1200/800",
+      "https://picsum.photos/seed/subphiphat-p8-c/1200/800",
     ],
     verified: false,
     featured: false,
@@ -311,9 +318,9 @@ export const properties: Property[] = [
       "A higher-spec two-bedroom condo aimed at professionals and relocating families who want a fully equipped home within walking distance of Hat Yai's main commercial streets.",
     amenities: ["Swimming pool", "Fitness room", "Sky lounge", "24-hour security", "Fibre internet ready"],
     images: [
-      "https://picsum.photos/seed/hayvia-p9-a/1200/800",
-      "https://picsum.photos/seed/hayvia-p9-b/1200/800",
-      "https://picsum.photos/seed/hayvia-p9-c/1200/800",
+      "https://picsum.photos/seed/subphiphat-p9-a/1200/800",
+      "https://picsum.photos/seed/subphiphat-p9-b/1200/800",
+      "https://picsum.photos/seed/subphiphat-p9-c/1200/800",
     ],
     verified: true,
     featured: false,
@@ -341,9 +348,9 @@ export const properties: Property[] = [
       "A simple, no-frills studio for tenants prioritising a low monthly cost. Basic furniture and appliances are included; a practical short-stay option while you get to know Hat Yai.",
     amenities: ["Communal laundry", "24-hour security", "Motorbike parking"],
     images: [
-      "https://picsum.photos/seed/hayvia-p10-a/1200/800",
-      "https://picsum.photos/seed/hayvia-p10-b/1200/800",
-      "https://picsum.photos/seed/hayvia-p10-c/1200/800",
+      "https://picsum.photos/seed/subphiphat-p10-a/1200/800",
+      "https://picsum.photos/seed/subphiphat-p10-b/1200/800",
+      "https://picsum.photos/seed/subphiphat-p10-c/1200/800",
     ],
     verified: false,
     featured: false,

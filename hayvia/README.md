@@ -1,11 +1,11 @@
-# HAYVIA — Your Gateway to Hat Yai
+# Subphiphat Real Estate — Find Your Place in Thailand
 
 A property rental and matching platform MVP for Hat Yai, Thailand. Built with
 Next.js (App Router), React, TypeScript and Tailwind CSS.
 
 This is a lead-generation and matching platform, not a booking engine: visitors
 browse selected listings, submit their requirements through **Get Matched**,
-and the HAYVIA team manually matches them with suitable properties and
+and the Subphiphat Real Estate team manually matches them with suitable properties and
 introduces them to the property owner or agent.
 
 ---
@@ -76,8 +76,9 @@ Header, Footer, Contact page, and forms. Update the values here and they
 change everywhere.
 
 ### Branding
-- Wordmark: the "HAYVIA" text logo is set directly in
-  `components/layout/Header.tsx` and `components/layout/Footer.tsx`.
+- Wordmark: `config/contact.ts` (`brand`) — read by both
+  `components/layout/Header.tsx` and `components/layout/Footer.tsx`, so
+  renaming the brand is a one-line change.
 - Tagline / descriptor: `config/contact.ts` (`tagline`, `descriptor`).
 - Colors and type: `tailwind.config.ts` (see the `moss`, `clay`, `ink`, and
   `paper` color tokens) and the font setup in `app/layout.tsx`.

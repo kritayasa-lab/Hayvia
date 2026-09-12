@@ -21,23 +21,23 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(contactConfig.siteUrl),
   title: {
-    default: "HAYVIA | Find Your Home in Hat Yai",
-    template: "%s | HAYVIA",
+    default: "Subphiphat Real Estate | Find Your Home in Hat Yai",
+    template: "%s | Subphiphat Real Estate",
   },
   description:
-    "HAYVIA helps you discover selected rental properties in Hat Yai, Thailand, and get matched with a home that fits your budget, location and lifestyle.",
+    "Subphiphat Real Estate helps you discover selected rental properties in Hat Yai, Thailand, and get matched with a home that fits your budget, location and lifestyle.",
   openGraph: {
-    title: "HAYVIA | Find Your Home in Hat Yai",
+    title: "Subphiphat Real Estate | Find Your Home in Hat Yai",
     description:
       "Discover selected rental properties in Hat Yai and get matched with a home that fits your budget, location and lifestyle.",
     url: contactConfig.siteUrl,
-    siteName: "HAYVIA",
+    siteName: "Subphiphat Real Estate",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "HAYVIA | Find Your Home in Hat Yai",
+    title: "Subphiphat Real Estate | Find Your Home in Hat Yai",
     description:
       "Discover selected rental properties in Hat Yai and get matched with a home that fits your budget, location and lifestyle.",
   },

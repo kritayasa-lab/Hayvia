@@ -7,7 +7,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "HAYVIA helps people discover selected rental properties in Hat Yai and connect with local property owners and agents.",
+    "Subphiphat Real Estate helps people discover selected rental properties in Hat Yai and connect with local property owners and agents.",
 };
 
 const values = [
@@ -24,7 +24,7 @@ const values = [
   {
     title: "We're a connector, not the landlord",
     description:
-      "HAYVIA doesn't own the properties listed here. We help you find suitable options and connect you with the property owner or agent who manages them.",
+      "Subphiphat Real Estate doesn't own the properties listed here. We help you find suitable options and connect you with the property owner or agent who manages them.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
               A simpler way to find your place in Hat Yai.
             </h1>
             <p className="mt-5 leading-relaxed text-ink-soft">
-              HAYVIA helps people discover selected rental properties in Hat Yai and
+              Subphiphat Real Estate helps people discover selected rental properties in Hat Yai and
               connect with local property owners and agents. We built this for anyone
               who's ever tried to rent a place in a new city and found the process
               scattered across Facebook groups, word of mouth and listings with missing
@@ -55,7 +55,7 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded">
             <Image
-              src="https://picsum.photos/seed/hayvia-about/900/700"
+              src="https://picsum.photos/seed/subphiphat-about/900/700"
               alt="A Hat Yai street scene"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

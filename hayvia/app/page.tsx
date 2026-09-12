@@ -5,7 +5,7 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import PropertyGrid from "@/components/property/PropertyGrid";
-import { getFeaturedProperties } from "@/data/properties";
+import { getProperties, getMostViewedProperties } from "@/lib/properties-source";
 
 const trustPoints = [
   {
@@ -49,8 +49,15 @@ const steps = [
   },
 ];
 
-export default function HomePage() {
-  const featured = getFeaturedProperties(6);
+export default async function HomePage() {
+  const { properties } = await getProperties();
+  // "Featured" heading/design is unchanged — the ranking underneath is now
+  // by View Count (Most Viewed), per the Google Sheets integration spec.
+  // The old Featured-column-based `getFeaturedProperties()` in
+  // data/properties.ts is no longer called here, but is left untouched for
+  // now since it's still exported (and the demo data's `featured` flags are
+  // untouched too).
+  const featured = getMostViewedProperties(properties, 6);
 
   return (
     <>
@@ -173,7 +180,7 @@ export default function HomePage() {
         <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="relative aspect-[4/3] overflow-hidden rounded">
             <Image
-              src="https://picsum.photos/seed/hayvia-living/900/700"
+              src="https://picsum.photos/seed/subphiphat-living/900/700"
               alt="A neighbourhood street scene in Hat Yai"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
