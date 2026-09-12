@@ -154,21 +154,21 @@ async function requestPhoneOtpInternal(
 }
 
 export async function requestPhoneOtpForLogin(
-  _prevState: ActionState,
+  _prevState: ActionState | null,
   formData: FormData
 ): Promise<ActionState> {
   return requestPhoneOtpInternal(String(formData.get("phone") || ""), "login", getCaptchaToken(formData));
 }
 
 export async function requestPhoneOtpForRegister(
-  _prevState: ActionState,
+  _prevState: ActionState | null,
   formData: FormData
 ): Promise<ActionState> {
   return requestPhoneOtpInternal(String(formData.get("phone") || ""), "register", getCaptchaToken(formData));
 }
 
 export async function requestPhoneOtpForLink(
-  _prevState: ActionState,
+  _prevState: ActionState | null,
   formData: FormData
 ): Promise<ActionState> {
   return requestPhoneOtpInternal(String(formData.get("phone") || ""), "link");
@@ -200,7 +200,7 @@ export async function resendPhoneOtp(captchaToken?: string): Promise<ActionState
 }
 
 export async function verifyPhoneOtp(
-  _prevState: ActionState,
+  _prevState: ActionState | null,
   formData: FormData
 ): Promise<ActionState> {
   const code = String(formData.get("code") || "").trim();
@@ -253,7 +253,7 @@ export async function verifyPhoneOtp(
 // -----------------------------------------------------------------------
 
 export async function signUpWithEmail(
-  _prevState: ActionState,
+  _prevState: ActionState | null,
   formData: FormData
 ): Promise<ActionState> {
   const fullName = String(formData.get("fullName") || "").trim();
@@ -290,7 +290,7 @@ export async function signUpWithEmail(
 }
 
 export async function signInWithEmail(
-  _prevState: ActionState,
+  _prevState: ActionState | null,
   formData: FormData
 ): Promise<ActionState> {
   const email = String(formData.get("email") || "").trim();
@@ -350,7 +350,7 @@ export async function resendEmailVerification(): Promise<ActionState> {
 }
 
 export async function linkEmailToAccount(
-  _prevState: ActionState,
+  _prevState: ActionState | null,
   formData: FormData
 ): Promise<ActionState> {
   const email = String(formData.get("email") || "").trim();
@@ -380,7 +380,7 @@ export async function linkEmailToAccount(
 // -----------------------------------------------------------------------
 
 export async function requestPasswordReset(
-  _prevState: ActionState,
+  _prevState: ActionState | null,
   formData: FormData
 ): Promise<ActionState> {
   const email = String(formData.get("email") || "").trim();
@@ -410,7 +410,7 @@ export async function requestPasswordReset(
 }
 
 export async function updatePassword(
-  _prevState: ActionState,
+  _prevState: ActionState | null,
   formData: FormData
 ): Promise<ActionState> {
   const password = String(formData.get("password") || "");
@@ -463,3 +463,4 @@ function isNextRedirectError(err: unknown): boolean {
     (err as { digest: string }).digest.startsWith("NEXT_REDIRECT")
   );
 }
+```
