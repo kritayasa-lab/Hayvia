@@ -58,7 +58,13 @@ export async function POST(request: Request) {
       );
     }
 
-    const propertyId = await syncPropertyToSupabase(property);
+    // If this property came directly from Supabase (Phase A — the site's
+    // primary source now), it already has a real row — resyncing it here
+    // would be redundant at best, and for an admin-created property with no
+    // external_ref, syncPropertyToSupabase's external_ref-based upsert
+    // wouldn't find that row at all, creating a duplicate. Only Sheets/demo-
+    // sourced properties (no supabaseId) still need the lazy sync.
+    const propertyId = property.supabaseId ?? (await syncPropertyToSupabase(property));
     const supabase = createAdminClient();
 
     const { data: inquiry, error: inquiryError } = await supabase

@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { getAdminUser } from "@/lib/auth/admin";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { slugify } from "@/lib/utils";
+import { backupPropertyToSheets } from "@/lib/admin/sheets-backup";
 
 export interface PropertyActionState {
   error?: string;
@@ -11,6 +12,22 @@ export interface PropertyActionState {
 
 function requireString(formData: FormData, key: string): string {
   return String(formData.get(key) || "").trim();
+}
+
+/**
+ * Best-effort Supabase -> Sheets backup after an admin create/edit. Never
+ * throws (backupPropertyToSheets already catches everything internally and
+ * logs to backup_logs) and its outcome never affects whether the admin's
+ * save is reported as successful — awaited only so the attempt actually
+ * completes before this serverless function returns, not to gate on it.
+ */
+async function backupNewPropertyToSheets(propertyId: string) {
+  try {
+    await backupPropertyToSheets(propertyId);
+  } catch {
+    // backupPropertyToSheets shouldn't throw, but this is defense in depth —
+    // a backup failure must never surface as a property-save failure.
+  }
 }
 
 function optionalString(formData: FormData, key: string): string | null {
@@ -105,6 +122,8 @@ export async function createProperty(
     return { error: error?.message || "Failed to create property." };
   }
 
+  await backupNewPropertyToSheets(data.id);
+
   redirect(`/admin/properties/${data.id}?created=1`);
 }
 
@@ -141,6 +160,8 @@ export async function updateProperty(
     }
     return { error: error.message || "Failed to save changes." };
   }
+
+  await backupNewPropertyToSheets(id);
 
   redirect(`/admin/properties/${id}?saved=1`);
 }

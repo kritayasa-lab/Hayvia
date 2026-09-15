@@ -68,7 +68,9 @@ export async function persistMatchingRun(
   }
 
   for (const result of results) {
-    const propertyId = await syncPropertyToSupabase(result.property);
+    // See app/api/inquiries/route.ts for why supabaseId (when present) is
+    // used directly instead of always resyncing.
+    const propertyId = result.property.supabaseId ?? (await syncPropertyToSupabase(result.property));
     const { error: resultError } = await supabase.from("matching_results").insert({
       matching_preference_id: preference.id,
       property_id: propertyId,

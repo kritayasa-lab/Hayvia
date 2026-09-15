@@ -1,21 +1,24 @@
 // -----------------------------------------------------------------------------
 // Property data source
 // -----------------------------------------------------------------------------
-// PRIMARY source: the "HAYVIA — Properties" Google Sheet, read through the
-// existing Google Apps Script Web App (config/integrations.ts) via a GET
-// request. This file is server-only — it's used by Server Components and by
-// app/api/properties/route.ts, never imported into client components.
+// PHASE A: Supabase is now the SOURCE OF TRUTH (see supabase/DATABASE_SCHEMA.md
+// and the Phase A audit report). Read order:
 //
-// FALLBACK: if the Google Sheets fetch fails, times out, or returns an
-// invalid/empty response, we fall back to the hardcoded demo data in
-// data/properties.ts so the site never shows a broken or blank page. That
-// hardcoded data is untouched — see data/properties.ts.
+//   1. Supabase `public_properties` (+ property_images, property_amenities) —
+//      via the anon-key client (lib/supabase/server.ts), which respects RLS.
+//      Used whenever this returns at least one property.
+//   2. The "HAYVIA — Properties" Google Sheet, via the existing Google Apps
+//      Script Web App (config/integrations.ts) — used only when Supabase has
+//      zero properties (e.g. the bulk import hasn't been run yet). This is
+//      the ORIGINAL primary source from before Phase A, kept exactly as-is,
+//      purely as a fallback now.
+//   3. The hardcoded demo data in data/properties.ts — used only if both of
+//      the above fail or are empty, so the site never shows a broken page.
 //
-// This fallback is intentionally isolated to the `fetchPropertiesFromSheet` /
-// `getProperties` pair below so it can be removed cleanly later (once Google
-// Sheets has been fully tested) by deleting the try/catch fallback branch in
-// `getProperties` and importing directly from data/properties.ts is no longer
-// needed anywhere else in the app.
+// This three-way fallback is intentionally isolated to `getProperties()`
+// below — every caller (Server Components, app/api/properties/route.ts,
+// the matching engine) is unaffected by which source actually served a
+// given request.
 // -----------------------------------------------------------------------------
 
 import { cache } from "react";
@@ -25,8 +28,9 @@ import {
   type Property,
 } from "@/data/properties";
 import { slugify } from "@/lib/utils";
+import { createClient } from "@/lib/supabase/server";
 
-export type PropertiesSource = "sheets" | "fallback";
+export type PropertiesSource = "supabase" | "sheets" | "fallback";
 
 interface RawSheetRow {
   [header: string]: unknown;
@@ -170,9 +174,13 @@ function mapSheetRowToProperty(row: RawSheetRow): Property | null {
 /**
  * Fetches and maps properties from the Google Apps Script Web App. Throws on
  * any failure (network error, non-2xx status, invalid/unsuccessful response
- * shape) so the caller (`getProperties`) can decide to fall back.
+ * shape) so callers can decide to fall back. Exported (not just used via
+ * `getProperties()`) for lib/admin/sheets-import.ts, which needs the REAL
+ * Sheet data specifically — importing the demo-data fallback into Supabase
+ * as if it were real inventory would be wrong, so the importer must see a
+ * genuine failure here rather than a silently-substituted fallback.
  */
-async function fetchPropertiesFromSheet(): Promise<Property[]> {
+export async function fetchPropertiesFromSheet(): Promise<Property[]> {
   if (!GOOGLE_APPS_SCRIPT_URL) {
     throw new Error("Missing Google Apps Script URL in config/integrations.ts.");
   }
@@ -215,28 +223,179 @@ async function fetchPropertiesFromSheet(): Promise<Property[]> {
   return mapped;
 }
 
+const supabasePropertyTypeMap: Record<string, Property["propertyType"]> = {
+  CONDO: "Condo",
+  APARTMENT: "Apartment",
+  HOUSE: "House",
+  TOWNHOUSE: "Townhouse",
+  // VILLA/LAND/COMMERCIAL/OTHER have no equivalent in the app's current
+  // 4-value PropertyType union (a pre-existing constraint, not introduced by
+  // Phase A) — falls back to "Condo" the same way the Sheets mapper already
+  // falls back to a default for an unrecognized value, rather than crashing.
+  // Flagged as a known limitation: extending PropertyType to cover these is
+  // out of scope for a data-foundation pass.
+};
+
+const supabaseFurnishedMap: Record<string, Property["furnished"]> = {
+  FULLY_FURNISHED: "Fully furnished",
+  PARTIALLY_FURNISHED: "Partially furnished",
+  UNFURNISHED: "Unfurnished",
+};
+
+const supabaseStatusMap: Record<string, Property["status"]> = {
+  PUBLISHED: "available",
+  RESERVED: "reserved",
+  RENTED: "rented",
+};
+
+interface SupabasePropertyRow {
+  id: string;
+  external_ref: string | null;
+  listing_type: string;
+  status: string;
+  title: string;
+  slug: string;
+  property_type: string;
+  description: string | null;
+  price: number;
+  bedrooms: number | null;
+  bathrooms: number | null;
+  size_sqm: number | null;
+  furnished: string | null;
+  parking: boolean;
+  wifi: boolean;
+  available_date: string | null;
+  minimum_rental: string | null;
+  deposit: string | null;
+  district: string | null;
+  location: string | null;
+  google_maps_url: string | null;
+  contact_type: string | null;
+  verified: boolean;
+  featured: boolean;
+  view_count: number;
+}
+
+function mapSupabaseRowToProperty(
+  row: SupabasePropertyRow,
+  images: string[],
+  amenities: string[]
+): Property {
+  return {
+    id: row.external_ref || row.id,
+    supabaseId: row.id,
+    slug: row.slug,
+    title: row.title,
+    location: row.location || row.district || "Hat Yai",
+    district: (row.district || "Central Hat Yai") as Property["district"],
+    price: row.price,
+    propertyType: supabasePropertyTypeMap[row.property_type] ?? "Condo",
+    bedrooms: row.bedrooms ?? 0,
+    bathrooms: row.bathrooms ?? 1,
+    size: row.size_sqm ?? 0,
+    furnished: (row.furnished && supabaseFurnishedMap[row.furnished]) || "Unfurnished",
+    parking: row.parking,
+    wifi: row.wifi,
+    availableDate: row.available_date || "",
+    minimumLease: row.minimum_rental || "",
+    deposit: row.deposit || "",
+    description: row.description || "",
+    amenities,
+    images: images.length > 0 ? images : ["/images/hero-living-room.jpg"],
+    verified: row.verified,
+    featured: row.featured,
+    status: supabaseStatusMap[row.status] ?? "available",
+    contactType: (row.contact_type as Property["contactType"]) || "WhatsApp",
+    googleMapsUrl: row.google_maps_url || undefined,
+    viewCount: row.view_count,
+    listingType: row.listing_type === "BUY" ? "sale" : "rent",
+  };
+}
+
+/**
+ * Reads every publicly-visible property directly from Supabase
+ * (public_properties + property_images + property_amenities, via the
+ * anon-key client — never service-role). Returns an empty array (not a
+ * throw) on any failure or when there simply are no properties yet, so
+ * `getProperties()` below can fall through to Sheets cleanly either way.
+ */
+async function fetchPropertiesFromSupabase(): Promise<Property[]> {
+  try {
+    const supabase = createClient();
+    const { data: rows, error } = await supabase.from("public_properties").select("*");
+
+    if (error || !rows || rows.length === 0) return [];
+
+    const ids = rows.map((row) => row.id);
+    const [{ data: imageRows }, { data: amenityRows }] = await Promise.all([
+      supabase
+        .from("property_images")
+        .select("property_id, url, sort_order")
+        .in("property_id", ids)
+        .order("sort_order", { ascending: true }),
+      supabase.from("property_amenities").select("property_id, amenities(name)").in("property_id", ids),
+    ]);
+
+    const imagesByProperty = new Map<string, string[]>();
+    for (const image of imageRows ?? []) {
+      const list = imagesByProperty.get(image.property_id) ?? [];
+      list.push(image.url);
+      imagesByProperty.set(image.property_id, list);
+    }
+
+    const amenitiesByProperty = new Map<string, string[]>();
+    for (const link of amenityRows ?? []) {
+      const name = (link.amenities as unknown as { name?: string } | null)?.name;
+      if (!name) continue;
+      const list = amenitiesByProperty.get(link.property_id) ?? [];
+      list.push(name);
+      amenitiesByProperty.set(link.property_id, list);
+    }
+
+    return rows.map((row) =>
+      mapSupabaseRowToProperty(
+        row as SupabasePropertyRow,
+        imagesByProperty.get(row.id) ?? [],
+        amenitiesByProperty.get(row.id) ?? []
+      )
+    );
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error("[Subphiphat] Failed to read properties from Supabase:", error);
+    return [];
+  }
+}
+
 /**
  * The single entry point every page/route should use to get property data.
  * Wrapped in React's `cache()` so multiple calls within the same request
  * (e.g. a page's generateMetadata + the page component itself) only hit the
- * Google Apps Script endpoint once.
+ * same source once.
  *
- * - On success: returns ONLY the Google Sheets properties (not merged with
- *   demo data), source: "sheets".
- * - On any failure: returns the hardcoded demo properties, source:
- *   "fallback", so the site remains usable.
+ * Phase A read order:
+ *   1. Supabase — source: "supabase" — used whenever it returns at least one
+ *      property. This is now the source of truth.
+ *   2. Google Sheets — source: "sheets" — used only when Supabase has none
+ *      (e.g. the bulk import hasn't been run yet on this project).
+ *   3. Hardcoded demo data — source: "fallback" — used only if both of the
+ *      above fail or are empty, so the site never shows a broken page.
  */
 export const getProperties = cache(async (): Promise<{
   properties: Property[];
   source: PropertiesSource;
 }> => {
+  const supabaseProperties = await fetchPropertiesFromSupabase();
+  if (supabaseProperties.length > 0) {
+    return { properties: supabaseProperties, source: "supabase" };
+  }
+
   try {
     const sheetProperties = await fetchPropertiesFromSheet();
     return { properties: sheetProperties, source: "sheets" };
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error(
-      "[Subphiphat] Falling back to demo property data — Google Sheets fetch failed:",
+      "[Subphiphat] Falling back to demo property data — Supabase is empty and Google Sheets fetch failed:",
       error
     );
     return { properties: demoProperties, source: "fallback" };

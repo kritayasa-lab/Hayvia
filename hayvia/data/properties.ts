@@ -63,6 +63,14 @@ export interface Property {
   viewCount?: number;
   // Optional — absent means "rent". See `ListingType` above.
   listingType?: ListingType;
+  // Set ONLY when this property was fetched directly from Supabase (Phase A
+  // — see lib/properties-source.ts). Lets app/api/inquiries, app/api/viewings,
+  // and lib/matching/persist.ts use this real id directly instead of calling
+  // syncPropertyToSupabase() again, which would be redundant at best and, for
+  // an admin-created property with no external_ref, could create a duplicate
+  // row at worst. Absent for Sheets/demo-sourced properties, which still need
+  // the sync step exactly as before.
+  supabaseId?: string;
 }
 
 // Every property is "rent" unless explicitly marked "sale" — use this

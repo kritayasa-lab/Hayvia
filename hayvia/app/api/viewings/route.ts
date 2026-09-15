@@ -62,7 +62,9 @@ export async function POST(request: Request) {
       );
     }
 
-    const propertyId = await syncPropertyToSupabase(property);
+    // See app/api/inquiries/route.ts for why supabaseId (when present) is
+    // used directly instead of always resyncing.
+    const propertyId = property.supabaseId ?? (await syncPropertyToSupabase(property));
     const supabase = createAdminClient();
 
     const { error } = await supabase.from("viewings").insert({

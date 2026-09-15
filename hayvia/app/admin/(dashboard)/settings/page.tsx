@@ -1,6 +1,9 @@
 import { createAdminClient } from "@/lib/supabase/admin";
 import AdminCard from "@/components/admin/AdminCard";
 import MatchingWeightsForm from "@/components/admin/MatchingWeightsForm";
+import DataSyncPanel from "@/components/admin/DataSyncPanel";
+import Badge from "@/components/ui/Badge";
+import { formatDate } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
 
@@ -10,15 +13,63 @@ async function fetchActiveWeights() {
   return data;
 }
 
+async function fetchRecentBackupLogs() {
+  const supabase = createAdminClient();
+  const { data } = await supabase
+    .from("backup_logs")
+    .select("id, entity_id, status, destination, error_message, attempted_at")
+    .order("attempted_at", { ascending: false })
+    .limit(10);
+  return data ?? [];
+}
+
 export default async function AdminSettingsPage() {
-  const weights = await fetchActiveWeights();
+  const [weights, backupLogs] = await Promise.all([fetchActiveWeights(), fetchRecentBackupLogs()]);
 
   return (
     <div>
       <h1 className="font-display text-2xl text-ink">Settings</h1>
-      <p className="mt-1 text-sm text-ink-faint">Configuration for the Get Matched scoring engine.</p>
+      <p className="mt-1 text-sm text-ink-faint">Configuration and data sync for Subphiphat Real Estate.</p>
 
-      <div className="mt-6 max-w-2xl">
+      <div className="mt-6 max-w-3xl space-y-6">
+        <AdminCard
+          title="Google Sheets Sync"
+          description="Supabase is the source of truth. Sheets is a backup/export — imports and backups are both idempotent and safe to run repeatedly."
+        >
+          <DataSyncPanel />
+        </AdminCard>
+
+        <AdminCard title="Recent Backup Activity">
+          {backupLogs.length === 0 ? (
+            <p className="text-sm text-ink-faint">No backup attempts logged yet.</p>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[480px] text-left text-sm">
+                <thead className="text-xs uppercase tracking-wide text-ink-faint">
+                  <tr>
+                    <th className="py-2 pr-3 font-medium">Time</th>
+                    <th className="py-2 pr-3 font-medium">Destination</th>
+                    <th className="py-2 pr-3 font-medium">Status</th>
+                    <th className="py-2 pr-3 font-medium">Error</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-line-soft">
+                  {backupLogs.map((log) => (
+                    <tr key={log.id}>
+                      <td className="py-2 pr-3 text-ink-soft">{formatDate(log.attempted_at)}</td>
+                      <td className="py-2 pr-3 text-ink-soft">{log.destination}</td>
+                      <td className="py-2 pr-3">
+                        <Badge tone={log.status === "SUCCESS" ? "moss" : "clay"}>{log.status}</Badge>
+                      </td>
+                      <td className="py-2 pr-3 text-ink-faint">{log.error_message || "—"}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </AdminCard>
+
         <AdminCard
           title="Matching Engine Weights"
           description="Changes apply to every new Get Matched run immediately — no deploy needed."
