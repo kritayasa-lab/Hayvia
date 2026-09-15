@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { BedDouble, Bath, Ruler, Car, ShieldCheck, CheckCircle2, MapPin } from "lucide-react";
+import { BedDouble, Bath, Ruler, Car, ShieldCheck, CheckCircle2 } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import ImageGallery from "@/components/property/ImageGallery";
 import InquiryPanel from "@/components/property/InquiryPanel";
+import PropertyLocationMap, { formatLocationSummary } from "@/components/property/PropertyLocationMap";
 import PropertyGrid from "@/components/property/PropertyGrid";
 import ViewTracker from "@/components/property/ViewTracker";
 import { getProperties, findPropertyBySlug, findRelatedProperties } from "@/lib/properties-source";
@@ -138,20 +139,10 @@ export default async function PropertyDetailPage({
           </Section>
 
           <Section title="Location">
-            <p className="leading-relaxed text-ink-soft">
-              {property.location}, {property.district}. Exact building details are shared
-              once we connect you with the property owner or agent.
-            </p>
-            {property.googleMapsUrl && (
-              <a
-                href={property.googleMapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-moss-700 hover:underline"
-              >
-                <MapPin size={15} /> View on Google Maps
-              </a>
-            )}
+            <PropertyLocationMap
+              googleMapsUrl={property.googleMapsUrl}
+              locationSummary={formatLocationSummary(property.location, property.district)}
+            />
           </Section>
 
           <Section title="Important Information">

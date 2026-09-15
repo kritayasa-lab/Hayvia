@@ -157,7 +157,7 @@ export default function InquiryForm({
             <Loader2 className="animate-spin" size={18} /> Sending...
           </>
         ) : (
-          "ส่งคำสอบถาม"
+          "Send Inquiry"
         )}
       </Button>
     </form>

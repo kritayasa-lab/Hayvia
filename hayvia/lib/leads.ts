@@ -48,7 +48,8 @@ export interface PropertyViewingLead extends BaseLead {
   source: "property-viewing";
   propertySlug: string;
   propertyTitle: string;
-  viewingType: "In-person Viewing" | "Video Call";
+  // The public viewing flow is in-person only — see components/property/ViewingForm.tsx.
+  viewingType: "In-person Viewing";
   preferredDate: string;
   preferredTime: string;
   firstName: string;

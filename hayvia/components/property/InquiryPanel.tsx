@@ -33,7 +33,7 @@ export default function InquiryPanel({
           onClick={() => setActiveModal("inquiry")}
         >
           <MessageCircle size={18} />
-          สอบถามข้อมูลเพิ่มเติม
+          Make an Inquiry
         </Button>
         <Button
           size="lg"
@@ -42,14 +42,14 @@ export default function InquiryPanel({
           onClick={() => setActiveModal("viewing")}
         >
           <CalendarClock size={18} />
-          นัดหมายเข้าชม
+          Arrange a Viewing
         </Button>
       </div>
 
       <Modal
         open={activeModal === "inquiry"}
         onClose={() => setActiveModal(null)}
-        title="สอบถามข้อมูลเพิ่มเติม"
+        title="Make an Inquiry"
         description={`Send us your details and questions about ${propertyTitle}.`}
       >
         <InquiryForm propertySlug={propertySlug} propertyTitle={propertyTitle} />
@@ -58,8 +58,8 @@ export default function InquiryPanel({
       <Modal
         open={activeModal === "viewing"}
         onClose={() => setActiveModal(null)}
-        title="นัดหมายเข้าชม"
-        description={`Request an in-person or video-call viewing for ${propertyTitle}.`}
+        title="Arrange a Viewing"
+        description={`Request an in-person viewing for ${propertyTitle}.`}
       >
         <ViewingForm propertySlug={propertySlug} propertyTitle={propertyTitle} />
       </Modal>

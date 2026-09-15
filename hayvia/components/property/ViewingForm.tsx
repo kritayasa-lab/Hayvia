@@ -2,17 +2,20 @@
 
 import { useState } from "react";
 import { AlertCircle, CalendarCheck2, Loader2 } from "lucide-react";
-import { FieldWrapper, TextInput, TextArea, RadioPillGroup } from "@/components/ui/FormField";
+import { FieldWrapper, TextInput, TextArea } from "@/components/ui/FormField";
 import Button from "@/components/ui/Button";
-import { submitLead, type PropertyViewingLead } from "@/lib/leads";
+import { submitLead } from "@/lib/leads";
 
-const viewingTypes: PropertyViewingLead["viewingType"][] = [
-  "In-person Viewing",
-  "Video Call",
-];
+// The public viewing flow is in-person only (see lib/leads.ts —
+// PropertyViewingLead.viewingType is now the single literal value below).
+// The Supabase `viewings.viewing_type` column still supports both
+// IN_PERSON/VIDEO_CALL (see app/api/viewings/route.ts and
+// supabase/migrations/20260912100013_pass2_viewing_type_and_min_size.sql) —
+// nothing there needed to change, since a public submission has only ever
+// been able to set that column, and it now always resolves to IN_PERSON.
+const VIEWING_TYPE = "In-person Viewing" as const;
 
 interface FormState {
-  viewingType: PropertyViewingLead["viewingType"];
   preferredDate: string;
   preferredTime: string;
   firstName: string;
@@ -23,7 +26,6 @@ interface FormState {
 }
 
 const initialState: FormState = {
-  viewingType: "In-person Viewing",
   preferredDate: "",
   preferredTime: "",
   firstName: "",
@@ -69,6 +71,7 @@ export default function ViewingForm({
       submittedAt: new Date().toISOString(),
       propertySlug,
       propertyTitle,
+      viewingType: VIEWING_TYPE,
       ...form,
     });
 
@@ -94,18 +97,6 @@ export default function ViewingForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-      <div>
-        <label className="mb-1.5 block text-sm font-medium text-ink">Viewing Type</label>
-        <RadioPillGroup
-          name="viewingType"
-          options={viewingTypes}
-          value={form.viewingType}
-          onChange={(value) =>
-            setForm({ ...form, viewingType: value as PropertyViewingLead["viewingType"] })
-          }
-        />
-      </div>
-
       <div className="grid grid-cols-2 gap-4">
         <FieldWrapper
           label="Preferred Date"
@@ -208,7 +199,7 @@ export default function ViewingForm({
             <Loader2 className="animate-spin" size={18} /> Sending...
           </>
         ) : (
-          "นัดหมายเข้าชม"
+          "Request Viewing"
         )}
       </Button>
     </form>
