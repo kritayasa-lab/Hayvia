@@ -4,12 +4,15 @@ import { NextResponse, type NextRequest } from "next/server";
 /**
  * Refreshes the Supabase session cookie on every request that passes through
  * middleware.ts. This is what keeps a user's session alive across page loads
- * without them noticing an access token silently expiring mid-visit.
+ * without them noticing an access token silently expiring mid-visit — kept
+ * because Supabase Auth itself is staying (admin authentication will need
+ * it), even though the public site is guest-first and no longer has any
+ * customer-facing login/account routes to protect.
  *
- * Also does a light, redirect-only protection check for /account — the
- * actual authorization check still happens again in the page itself
- * (defense in depth; per Supabase's own guidance, middleware alone should
- * never be the only place an auth check happens).
+ * There is no /admin route yet. When one is added, its own
+ * "logged in + role === ADMIN" guard belongs here (redirecting to wherever
+ * the admin login page ends up living) — deliberately not added speculatively
+ * now, since there's nothing to protect yet.
  */
 export async function updateSession(request: NextRequest) {
   let response = NextResponse.next({
@@ -38,15 +41,12 @@ export async function updateSession(request: NextRequest) {
     }
   );
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (request.nextUrl.pathname.startsWith("/account") && !user) {
-    const redirectUrl = new URL("/login", request.url);
-    redirectUrl.searchParams.set("redirect", request.nextUrl.pathname);
-    return NextResponse.redirect(redirectUrl);
-  }
+  // Calling getUser() (rather than just reading the cookie) is what
+  // actually triggers Supabase to refresh an expired access token — that
+  // refresh is what the set()/remove() callbacks above capture into
+  // `response`. No route-based redirect decision is made here anymore; see
+  // the file-level comment for why.
+  await supabase.auth.getUser();
 
   return response;
 }

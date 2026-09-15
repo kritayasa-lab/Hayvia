@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, X, UserRound } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 import { contactConfig } from "@/config/contact";
@@ -65,13 +65,6 @@ export default function Header() {
 
           <div className="flex items-center gap-3">
             <Link
-              href="/account"
-              aria-label="My Account"
-              className="hidden h-10 w-10 items-center justify-center rounded-full border border-seashell text-ink-soft transition-colors hover:border-matcha-mist hover:text-moss-700 sm:inline-flex"
-            >
-              <UserRound size={18} />
-            </Link>
-            <Link
               href="/get-matched"
               className="hidden rounded bg-matcha-mist px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 sm:inline-flex"
             >
@@ -109,12 +102,6 @@ export default function Header() {
                 </Link>
               );
             })}
-            <Link
-              href="/account"
-              className="rounded px-3 py-3.5 text-lg text-ink"
-            >
-              My Account
-            </Link>
             <Link
               href="/get-matched"
               className="mt-4 inline-flex items-center justify-center rounded bg-matcha-mist px-4 py-3.5 text-base font-medium text-white"
