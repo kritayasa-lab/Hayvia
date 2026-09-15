@@ -32,7 +32,7 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-seashell bg-warm-ivory/90 backdrop-blur">
       <Container>
         <div className="flex h-16 items-center justify-between sm:h-20">
           <Link
@@ -65,13 +65,13 @@ export default function Header() {
             <Link
               href="/account"
               aria-label="My Account"
-              className="hidden h-10 w-10 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-moss-500 hover:text-moss-700 sm:inline-flex"
+              className="hidden h-10 w-10 items-center justify-center rounded-full border border-seashell text-ink-soft transition-colors hover:border-matcha-mist hover:text-moss-700 sm:inline-flex"
             >
               <UserRound size={18} />
             </Link>
             <Link
               href="/get-matched"
-              className="hidden rounded bg-moss-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-moss-700 sm:inline-flex"
+              className="hidden rounded bg-matcha-mist px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90 sm:inline-flex"
             >
               Get Matched
             </Link>
@@ -89,7 +89,7 @@ export default function Header() {
       </Container>
 
       {open && (
-        <div className="fixed inset-x-0 top-16 z-30 h-[calc(100vh-4rem)] overflow-y-auto border-t border-line bg-paper sm:top-20 sm:h-[calc(100vh-5rem)] lg:hidden">
+        <div className="fixed inset-x-0 top-16 z-30 h-[calc(100vh-4rem)] overflow-y-auto border-t border-seashell bg-warm-ivory sm:top-20 sm:h-[calc(100vh-5rem)] lg:hidden">
           <Container className="flex flex-col gap-1 py-6">
             {navLinks.map((link) => {
               const active =
@@ -100,7 +100,7 @@ export default function Header() {
                   href={link.href}
                   className={cn(
                     "rounded px-3 py-3.5 text-lg",
-                    active ? "bg-moss-50 text-moss-700 font-medium" : "text-ink"
+                    active ? "bg-linden-leaf text-moss-700 font-medium" : "text-ink"
                   )}
                 >
                   {link.label}
@@ -115,7 +115,7 @@ export default function Header() {
             </Link>
             <Link
               href="/get-matched"
-              className="mt-4 inline-flex items-center justify-center rounded bg-moss-600 px-4 py-3.5 text-base font-medium text-white"
+              className="mt-4 inline-flex items-center justify-center rounded bg-matcha-mist px-4 py-3.5 text-base font-medium text-white"
             >
               Get Matched
             </Link>

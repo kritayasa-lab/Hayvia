@@ -60,11 +60,11 @@ export default function InquiryForm({
 
   if (status === "success") {
     return (
-      <div className="rounded border border-moss-100 bg-moss-50 p-6 text-center">
-        <CheckCircle2 className="mx-auto mb-3 text-moss-600" size={28} />
-        <p className="font-display text-lg text-ink">Thanks — we've received your message</p>
+      <div className="rounded border border-linden-leaf bg-kiwi-cream p-6 text-center">
+        <CheckCircle2 className="mx-auto mb-3 text-moss-700" size={28} />
+        <p className="font-display text-lg text-ink">Thanks — we&apos;ve received your message</p>
         <p className="mt-2 text-sm text-ink-soft">
-          We'll pass your details to the owner or agent for {propertyTitle} and follow up
+          We&apos;ll pass your details to the owner or agent for {propertyTitle} and follow up
           with you shortly.
         </p>
       </div>
@@ -122,7 +122,12 @@ export default function InquiryForm({
         />
       </FieldWrapper>
 
-      <Button type="submit" size="lg" className="w-full" disabled={status === "submitting"}>
+      <Button
+        type="submit"
+        size="lg"
+        className="w-full bg-matcha-mist hover:opacity-90"
+        disabled={status === "submitting"}
+      >
         {status === "submitting" ? (
           <>
             <Loader2 className="animate-spin" size={18} /> Sending...

@@ -70,11 +70,15 @@ export default async function PropertyDetailPage({
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 {property.verified && (
-                  <Badge tone="moss">
+                  <Badge tone="moss" className="bg-linden-leaf">
                     <ShieldCheck size={12} /> Verified Listing
                   </Badge>
                 )}
-                {property.status === "reserved" && <Badge tone="neutral">Reserved</Badge>}
+                {property.status === "reserved" && (
+                  <Badge tone="neutral" className="bg-seashell">
+                    Reserved
+                  </Badge>
+                )}
               </div>
               <h1 className="mt-2 font-display text-2xl text-ink sm:text-3xl">
                 {property.title}
@@ -89,7 +93,7 @@ export default async function PropertyDetailPage({
             </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-2 gap-4 rounded border border-line bg-surface p-5 sm:grid-cols-4">
+          <div className="mt-6 grid grid-cols-2 gap-4 rounded border border-seashell bg-white p-5 sm:grid-cols-4">
             <Spec icon={BedDouble} label={bedroomLabel} />
             <Spec icon={Bath} label={`${property.bathrooms} bathroom`} />
             <Spec icon={Ruler} label={`${property.size} sqm`} />
@@ -159,12 +163,16 @@ export default async function PropertyDetailPage({
         <div className="lg:sticky lg:top-24 lg:h-fit">
           <InquiryPanel propertySlug={property.slug} propertyTitle={property.title} />
 
-          <div className="mt-6 rounded border border-line-soft bg-surface p-5">
+          <div className="mt-6 rounded border border-seashell bg-white p-5">
             <p className="text-sm font-medium text-ink">Looking for something similar?</p>
             <p className="mt-1.5 text-sm text-ink-soft">
-              Tell us your requirements and we'll suggest other suitable options.
+              Tell us your requirements and we&apos;ll suggest other suitable options.
             </p>
-            <Button href="/get-matched" variant="secondary" className="mt-4 w-full">
+            <Button
+              href="/get-matched"
+              variant="secondary"
+              className="mt-4 w-full border-matcha-mist text-moss-700 hover:bg-linden-leaf/30"
+            >
               Get Matched
             </Button>
           </div>

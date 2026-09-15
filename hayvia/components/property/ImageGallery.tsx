@@ -15,7 +15,7 @@ export default function ImageGallery({
 
   return (
     <div>
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded border border-line bg-line-soft sm:aspect-[16/10]">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded border border-seashell bg-line-soft sm:aspect-[16/10]">
         <Image
           src={images[active]}
           alt={`${title} — photo ${active + 1}`}
@@ -36,7 +36,7 @@ export default function ImageGallery({
               aria-current={active === index}
               className={cn(
                 "relative aspect-square overflow-hidden rounded border transition-colors",
-                active === index ? "border-moss-600" : "border-line hover:border-ink/30"
+                active === index ? "border-matcha-mist" : "border-seashell hover:border-ink/30"
               )}
             >
               <Image src={image} alt="" fill sizes="120px" className="object-cover" />

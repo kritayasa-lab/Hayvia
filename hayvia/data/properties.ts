@@ -22,6 +22,13 @@ export type District =
   | "PSU / University Area"
   | "Khlong Hae";
 export type ContactType = "WhatsApp" | "LINE" | "Email";
+// Listing intent — rent (default) vs for-sale. Added as an optional field
+// (see `listingType` below) so it degrades safely for every property that
+// predates it: both the hardcoded demo data and the current Google Sheet
+// (which has no "Listing Type" column yet) simply omit it and are treated
+// as "rent", exactly as before. No sale properties exist anywhere yet —
+// this only adds the ability to represent one once real data exists.
+export type ListingType = "rent" | "sale";
 
 export interface Property {
   id: string;
@@ -54,6 +61,15 @@ export interface Property {
   // none of the hardcoded demo properties below need to be touched.
   googleMapsUrl?: string;
   viewCount?: number;
+  // Optional — absent means "rent". See `ListingType` above.
+  listingType?: ListingType;
+}
+
+// Every property is "rent" unless explicitly marked "sale" — use this
+// instead of reading `property.listingType` directly so the default is
+// applied consistently everywhere.
+export function getListingType(property: Pick<Property, "listingType">): ListingType {
+  return property.listingType === "sale" ? "sale" : "rent";
 }
 
 export const properties: Property[] = [

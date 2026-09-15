@@ -159,6 +159,11 @@ function mapSheetRowToProperty(row: RawSheetRow): Property | null {
     contactType: (str(row["Contact Type"]) || "WhatsApp") as Property["contactType"],
     googleMapsUrl: str(row["Google Maps URL"]) || undefined,
     viewCount: parseNumber(row["View Count"], 0),
+    // No "Listing Type" column exists in the live sheet yet — this reads it
+    // defensively so today it always resolves to undefined (→ "rent" via
+    // getListingType) and nothing changes, but a sale row can be added to
+    // the sheet later without any code changes here.
+    listingType: str(row["Listing Type"]).toLowerCase() === "sale" ? "sale" : undefined,
   };
 }
 

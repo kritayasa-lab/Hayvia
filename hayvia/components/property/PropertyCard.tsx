@@ -11,7 +11,7 @@ export default function PropertyCard({ property }: { property: Property }) {
   return (
     <Link
       href={`/properties/${property.slug}`}
-      className="group flex h-full flex-col overflow-hidden rounded border border-line bg-surface shadow-card transition-shadow hover:shadow-lg"
+      className="group flex h-full flex-col overflow-hidden rounded border border-seashell bg-white shadow-card transition-shadow hover:shadow-lg"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-line-soft">
         <Image
@@ -23,12 +23,12 @@ export default function PropertyCard({ property }: { property: Property }) {
         />
         <div className="absolute left-3 top-3 flex gap-2">
           {property.verified && (
-            <Badge tone="moss" className="bg-surface/95">
+            <Badge tone="moss" className="bg-linden-leaf/95">
               <ShieldCheck size={12} /> Verified Listing
             </Badge>
           )}
           {property.status === "reserved" && (
-            <Badge tone="neutral" className="bg-surface/95">
+            <Badge tone="neutral" className="bg-seashell/95">
               Reserved
             </Badge>
           )}
