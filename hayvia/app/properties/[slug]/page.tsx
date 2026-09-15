@@ -181,7 +181,7 @@ export default async function PropertyDetailPage({
 
       {related.length > 0 && (
         <div className="mt-16 border-t border-line pt-12">
-          <h2 className="font-display text-2xl text-ink">You might also like</h2>
+          <h2 className="font-display text-2xl text-ink">Similar Properties</h2>
           <div className="mt-8">
             <PropertyGrid properties={related} />
           </div>

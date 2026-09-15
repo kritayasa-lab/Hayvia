@@ -7,19 +7,19 @@ import Button from "@/components/ui/Button";
 import { submitLead } from "@/lib/leads";
 
 interface FormState {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   whatsapp: string;
-  moveInDate: string;
-  message: string;
+  additionalRequirements: string;
 }
 
 const initialState: FormState = {
-  name: "",
+  firstName: "",
+  lastName: "",
   email: "",
   whatsapp: "",
-  moveInDate: "",
-  message: "",
+  additionalRequirements: "",
 };
 
 export default function InquiryForm({
@@ -35,10 +35,11 @@ export default function InquiryForm({
 
   function validate(): boolean {
     const nextErrors: Partial<Record<keyof FormState, string>> = {};
-    if (!form.name.trim()) nextErrors.name = "Please enter your name.";
+    if (!form.firstName.trim()) nextErrors.firstName = "Please enter your first name.";
+    if (!form.lastName.trim()) nextErrors.lastName = "Please enter your last name.";
     if (!form.email.trim() || !form.email.includes("@"))
       nextErrors.email = "Please enter a valid email.";
-    if (!form.whatsapp.trim()) nextErrors.whatsapp = "Please enter a WhatsApp number.";
+    if (!form.whatsapp.trim()) nextErrors.whatsapp = "Please enter a phone or WhatsApp number.";
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
   }
@@ -73,15 +74,27 @@ export default function InquiryForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-      <FieldWrapper label="Name" htmlFor="inquiry-name" required error={errors.name}>
-        <TextInput
-          id="inquiry-name"
-          value={form.name}
-          onChange={(e) => setForm({ ...form, name: e.target.value })}
-          error={Boolean(errors.name)}
-          placeholder="Your full name"
-        />
-      </FieldWrapper>
+      <div className="grid grid-cols-2 gap-4">
+        <FieldWrapper label="First Name" htmlFor="inquiry-first-name" required error={errors.firstName}>
+          <TextInput
+            id="inquiry-first-name"
+            value={form.firstName}
+            onChange={(e) => setForm({ ...form, firstName: e.target.value })}
+            error={Boolean(errors.firstName)}
+            placeholder="First name"
+          />
+        </FieldWrapper>
+
+        <FieldWrapper label="Last Name" htmlFor="inquiry-last-name" required error={errors.lastName}>
+          <TextInput
+            id="inquiry-last-name"
+            value={form.lastName}
+            onChange={(e) => setForm({ ...form, lastName: e.target.value })}
+            error={Boolean(errors.lastName)}
+            placeholder="Last name"
+          />
+        </FieldWrapper>
+      </div>
 
       <FieldWrapper label="Email" htmlFor="inquiry-email" required error={errors.email}>
         <TextInput
@@ -94,30 +107,26 @@ export default function InquiryForm({
         />
       </FieldWrapper>
 
-      <FieldWrapper label="WhatsApp" htmlFor="inquiry-whatsapp" required error={errors.whatsapp}>
+      <FieldWrapper
+        label="Phone / WhatsApp"
+        htmlFor="inquiry-whatsapp"
+        required
+        error={errors.whatsapp}
+      >
         <TextInput
           id="inquiry-whatsapp"
           value={form.whatsapp}
           onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
           error={Boolean(errors.whatsapp)}
-          placeholder="+60 1X XXX XXXX"
+          placeholder="+66 8X XXX XXXX"
         />
       </FieldWrapper>
 
-      <FieldWrapper label="Preferred move-in date" htmlFor="inquiry-movein">
-        <TextInput
-          id="inquiry-movein"
-          type="date"
-          value={form.moveInDate}
-          onChange={(e) => setForm({ ...form, moveInDate: e.target.value })}
-        />
-      </FieldWrapper>
-
-      <FieldWrapper label="Message" htmlFor="inquiry-message">
+      <FieldWrapper label="Additional Requirements" htmlFor="inquiry-additional">
         <TextArea
-          id="inquiry-message"
-          value={form.message}
-          onChange={(e) => setForm({ ...form, message: e.target.value })}
+          id="inquiry-additional"
+          value={form.additionalRequirements}
+          onChange={(e) => setForm({ ...form, additionalRequirements: e.target.value })}
           placeholder="Any questions about this property?"
         />
       </FieldWrapper>
@@ -133,7 +142,7 @@ export default function InquiryForm({
             <Loader2 className="animate-spin" size={18} /> Sending...
           </>
         ) : (
-          "Send Inquiry"
+          "ส่งคำสอบถาม"
         )}
       </Button>
     </form>

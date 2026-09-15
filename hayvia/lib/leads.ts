@@ -10,9 +10,10 @@
 // The browser never talks to Google Apps Script directly — see
 // app/api/get-matched/route.ts for that server-side step.
 //
-// The other forms (Property Inquiry, List Your Property, Contact) still use a
-// local mock handler for now, so the UI can be tested without a backend. When
-// ready, swap their block below for a real integration, e.g.:
+// The other forms (Property Inquiry, Property Viewing, List Your Property,
+// Contact) still use a local mock handler for now, so the UI can be tested
+// without a backend. When ready, swap their block below for a real
+// integration, e.g.:
 //   - Supabase / PostgreSQL: insert into a `leads` table
 //   - CRM: POST to a CRM's REST API
 //   - Email: send via a transactional email provider (Resend, Postmark, SES)
@@ -26,6 +27,7 @@
 export type LeadSource =
   | "get-matched"
   | "property-inquiry"
+  | "property-viewing"
   | "list-your-property"
   | "contact";
 
@@ -56,10 +58,24 @@ export interface PropertyInquiryLead extends BaseLead {
   source: "property-inquiry";
   propertySlug: string;
   propertyTitle: string;
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   whatsapp: string;
-  moveInDate: string;
+  additionalRequirements?: string;
+}
+
+export interface PropertyViewingLead extends BaseLead {
+  source: "property-viewing";
+  propertySlug: string;
+  propertyTitle: string;
+  viewingType: "In-person Viewing" | "Video Call";
+  preferredDate: string;
+  preferredTime: string;
+  firstName: string;
+  lastName: string;
+  phone: string;
+  email: string;
   message?: string;
 }
 
@@ -88,6 +104,7 @@ export interface ContactLead extends BaseLead {
 export type Lead =
   | GetMatchedLead
   | PropertyInquiryLead
+  | PropertyViewingLead
   | ListPropertyLead
   | ContactLead;
 

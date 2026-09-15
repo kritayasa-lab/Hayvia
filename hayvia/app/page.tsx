@@ -5,11 +5,17 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import SearchBar from "@/components/ui/SearchBar";
+import HeroVideo from "@/components/home/HeroVideo";
 import PropertyGrid from "@/components/property/PropertyGrid";
 import GuideCard from "@/components/guide/GuideCard";
 import { districts, propertyTypes, type Property, type PropertyType } from "@/data/properties";
 import { guides } from "@/data/guides";
-import { getProperties, getMostViewedProperties } from "@/lib/properties-source";
+import { contactConfig } from "@/config/contact";
+import {
+  getProperties,
+  getMostViewedProperties,
+  getLatestProperties,
+} from "@/lib/properties-source";
 
 const propertyTypeIcons: Record<PropertyType, typeof Building2> = {
   Condo: Building2,
@@ -45,72 +51,86 @@ function getPopularLocations(properties: Property[], limit = 4) {
 export default async function HomePage() {
   const { properties } = await getProperties();
   const featured = getMostViewedProperties(properties, 6);
+  const latest = getLatestProperties(
+    properties,
+    featured.map((p) => p.id),
+    6
+  );
   const typeCounts = getPropertyTypeCounts(properties);
   const popularLocations = getPopularLocations(properties);
   const latestGuides = guides.slice(0, 3);
 
   return (
     <>
-      {/* Hero */}
-      <section className="border-b border-line bg-warm-ivory">
-        <Container className="py-14 sm:py-20 lg:py-24">
+      {/* Hero — cinematic video background (infrastructure only until a real
+          asset lands, see components/home/HeroVideo.tsx), Buy/Rent/Sell
+          search on top. */}
+      <HeroVideo className="border-b border-line">
+        <Container className="py-20 sm:py-28 lg:py-32">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm text-moss-700">Property • Living • Local Services</p>
-            <h1 className="mt-4 font-display text-4xl leading-[1.1] text-ink sm:text-5xl lg:text-[3.4rem]">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/90">
+              {contactConfig.brand}
+            </p>
+            <h1 className="mt-4 font-display text-4xl leading-[1.1] text-white sm:text-5xl lg:text-[3.4rem]">
               Find a place that feels like home.
             </h1>
-            <p className="mx-auto mt-5 max-w-md text-lg leading-relaxed text-ink-soft">
-              Carefully selected rental and sale properties in Hat Yai, matched to your
-              budget, location and lifestyle.
-            </p>
           </div>
 
-          {/*
-            Rent / Buy / Sell live inside SearchBar as tabs — Rent and Buy
-            set the listing-type filter and search /properties for real
-            (see SearchBar.tsx); Sell links straight to /list-your-property.
-            This replaces the previous separate "Browse Properties" /
-            "List Your Property" button pair so there's one CTA mechanism,
-            not two overlapping ones.
-          */}
           <div className="mx-auto mt-10 max-w-3xl">
             <SearchBar />
           </div>
 
-          <div className="relative mx-auto mt-12 grid aspect-[16/7] max-w-5xl grid-cols-2 grid-rows-2 gap-4 sm:grid-cols-3 sm:grid-rows-1 sm:gap-5">
-            <div className="relative row-span-2 overflow-hidden rounded-2xl bg-line-soft sm:row-span-1">
-              <Image
-                src="/images/hero-living-room.jpg"
-                alt="A warm, minimal living room with light oak furniture and linen textiles"
-                fill
-                priority
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 33vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-2xl bg-line-soft">
-              <Image
-                src="/images/hero-bedroom.jpg"
-                alt="A calm, minimal bedroom with natural light and neutral linen bedding"
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 30vw, 33vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-2xl bg-line-soft">
-              <Image
-                src="/images/hero-dining.jpg"
-                alt="A minimal dining nook with light oak wood and warm natural lighting"
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 30vw, 33vw"
-                className="object-cover"
-              />
-            </div>
+          <div className="mt-6 text-center">
+            <Link
+              href="/get-matched"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-white underline-offset-4 hover:underline"
+            >
+              Find My Perfect Property <ArrowRight size={15} />
+            </Link>
+          </div>
+        </Container>
+      </HeroVideo>
+
+      {/* Featured Properties */}
+      <section className="border-b border-line py-14 sm:py-20">
+        <Container>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <SectionHeading
+              eyebrow="Featured"
+              title="Selected properties in Hat Yai"
+              description="A sample of the kind of listings we work with — furnished condos, family houses and everything in between."
+            />
+            <Link
+              href="/properties"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-moss-700 hover:underline"
+            >
+              View all properties <ArrowRight size={15} />
+            </Link>
+          </div>
+          <div className="mt-10">
+            <PropertyGrid properties={featured} />
           </div>
         </Container>
       </section>
 
-      {/* Explore Properties */}
+      {/* Latest Listings — real data: soonest-available properties not
+          already shown above, so this genuinely differs from Featured. */}
+      {latest.length > 0 && (
+        <section className="border-b border-line bg-surface py-14 sm:py-20">
+          <Container>
+            <SectionHeading
+              eyebrow="New"
+              title="Latest listings"
+              description="Recently available properties, freshest first."
+            />
+            <div className="mt-10">
+              <PropertyGrid properties={latest} />
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Property Types */}
       {typeCounts.length > 0 && (
         <section className="py-14 sm:py-20">
           <Container>
@@ -141,35 +161,15 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* Featured Properties */}
-      <section className="border-t border-line py-14 sm:py-20">
-        <Container>
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <SectionHeading
-              eyebrow="Featured"
-              title="Selected properties in Hat Yai"
-              description="A sample of the kind of listings we work with — furnished condos, family houses and everything in between."
-            />
-            <Link
-              href="/properties"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-moss-700 hover:underline"
-            >
-              View all properties <ArrowRight size={15} />
-            </Link>
-          </div>
-          <div className="mt-10">
-            <PropertyGrid properties={featured} />
-          </div>
-        </Container>
-      </section>
-
       {/*
-        Recently Reduced — intentionally omitted. The Property data model
-        (data/properties.ts) and the Google Sheets integration
-        (lib/properties-source.ts) have no previous-price / price-history
-        field, so there is no real reduction data to show. Fabricating one
-        would violate the "no invented data" requirement. Add a section here
-        once a real price-history field exists in the schema.
+        Popular Searches (Price Reduced / Under ฿10M / Sea View / Pet
+        Friendly / Investment / Foreign Ownership) and Recently Reduced are
+        intentionally omitted. None of these tags or a sale-price-reduction
+        field exist anywhere in the Property schema or the Google Sheets
+        integration yet — every property in the current dataset is a Hat Yai
+        rental. Fabricating tag counts or "reduced" badges would violate the
+        no-invented-data requirement. Both are real, buildable sections once
+        the schema carries this data (tracked as Pass 2/3 work).
       */}
 
       {/* Popular Locations */}
@@ -206,7 +206,13 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* Find Your Property Match */}
+      {/* Find Your Perfect Property — explains the matching system.
+          CTA now points at /get-matched (the real, working route) per the
+          latest brief, which explicitly supersedes an earlier round's
+          instruction to link /find-your-property instead. The matching
+          system itself (deterministic scoring, top-3 results) is Pass 2 —
+          today /get-matched still captures requirements for manual
+          follow-up, same as before. */}
       <section className="border-t border-line py-14 sm:py-20">
         <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
@@ -221,21 +227,11 @@ export default async function HomePage() {
           <div>
             <SectionHeading
               eyebrow="Personalized"
-              title="Find your property match"
-              description="Not sure where to start? Tell us your budget, preferred area and must-haves, and we'll point you toward properties that actually fit — no endless scrolling required."
+              title="Find your perfect property"
+              description="Tell us your budget, preferred area, property type and lifestyle preferences, and we'll match you with the properties that actually fit — no endless scrolling required."
             />
-            {/*
-              Product architecture calls for /find-your-property — that
-              route doesn't exist yet (this checkpoint intentionally
-              doesn't create it), so this link will 404 until it's built.
-              Not substituted with /get-matched per explicit instruction.
-            */}
-            <Button
-              href="/find-your-property"
-              size="lg"
-              className="mt-6 bg-matcha-mist hover:opacity-90"
-            >
-              Find Your Match
+            <Button href="/get-matched" size="lg" className="mt-6 bg-matcha-mist hover:opacity-90">
+              Find Your Perfect Property
             </Button>
           </div>
         </Container>

@@ -272,6 +272,24 @@ export function getMostViewedProperties(list: Property[], limit = 6): Property[]
 }
 
 /**
+ * Returns the `limit` properties with the soonest `availableDate` (i.e. the
+ * newest listings coming onto the market), used for the homepage's "Latest
+ * Listings" section. Properties whose id is in `excludeIds` are skipped so
+ * this section doesn't just repeat whatever "Featured" already showed.
+ */
+export function getLatestProperties(
+  list: Property[],
+  excludeIds: string[] = [],
+  limit = 6
+): Property[] {
+  const exclude = new Set(excludeIds);
+  return [...list]
+    .filter((p) => !exclude.has(p.id))
+    .sort((a, b) => new Date(b.availableDate).getTime() - new Date(a.availableDate).getTime())
+    .slice(0, limit);
+}
+
+/**
  * Sends a view-increment request for a single property to our own
  * /api/properties/view route (server-side helper, not used by the browser —
  * the browser calls the API route directly via fetch from a client

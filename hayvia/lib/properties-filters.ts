@@ -24,6 +24,8 @@ export const budgetOptions = [
 
 export const bedroomOptions = ["Any", "Studio", "1", "2", "3+"];
 
+export const bathroomOptions = ["Any", "1", "2", "3+"];
+
 export const sortOptions = [
   "Recommended",
   "Price: Low to High",
@@ -42,6 +44,7 @@ export const defaultFilters = {
   propertyType: "Any type",
   budget: budgetOptions[0].label,
   bedrooms: "Any",
+  bathrooms: "Any",
   furnished: "Any",
   parking: "Any",
 };
@@ -54,6 +57,8 @@ export interface PropertiesSearchParams {
   listingType?: string;
   location?: string;
   type?: string;
+  budget?: string;
+  bedrooms?: string;
 }
 
 /**
@@ -82,5 +87,13 @@ export function resolveInitialFilters(
     ? (searchParams.type as PropertyType)
     : defaultFilters.propertyType;
 
-  return { ...defaultFilters, listingType, location, propertyType };
+  const budget = budgetOptions.some((option) => option.label === searchParams.budget)
+    ? (searchParams.budget as string)
+    : defaultFilters.budget;
+
+  const bedrooms = bedroomOptions.includes(searchParams.bedrooms ?? "")
+    ? (searchParams.bedrooms as string)
+    : defaultFilters.bedrooms;
+
+  return { ...defaultFilters, listingType, location, propertyType, budget, bedrooms };
 }

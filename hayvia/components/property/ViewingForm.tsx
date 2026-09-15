@@ -1,0 +1,202 @@
+"use client";
+
+import { useState } from "react";
+import { CalendarCheck2, Loader2 } from "lucide-react";
+import { FieldWrapper, TextInput, TextArea, RadioPillGroup } from "@/components/ui/FormField";
+import Button from "@/components/ui/Button";
+import { submitLead, type PropertyViewingLead } from "@/lib/leads";
+
+const viewingTypes: PropertyViewingLead["viewingType"][] = [
+  "In-person Viewing",
+  "Video Call",
+];
+
+interface FormState {
+  viewingType: PropertyViewingLead["viewingType"];
+  preferredDate: string;
+  preferredTime: string;
+  firstName: string;
+  lastName: string;
+  phone: string;
+  email: string;
+  message: string;
+}
+
+const initialState: FormState = {
+  viewingType: "In-person Viewing",
+  preferredDate: "",
+  preferredTime: "",
+  firstName: "",
+  lastName: "",
+  phone: "",
+  email: "",
+  message: "",
+};
+
+export default function ViewingForm({
+  propertySlug,
+  propertyTitle,
+}: {
+  propertySlug: string;
+  propertyTitle: string;
+}) {
+  const [form, setForm] = useState<FormState>(initialState);
+  const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
+  const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+
+  function validate(): boolean {
+    const nextErrors: Partial<Record<keyof FormState, string>> = {};
+    if (!form.preferredDate) nextErrors.preferredDate = "Please choose a preferred date.";
+    if (!form.preferredTime) nextErrors.preferredTime = "Please choose a preferred time.";
+    if (!form.firstName.trim()) nextErrors.firstName = "Please enter your first name.";
+    if (!form.lastName.trim()) nextErrors.lastName = "Please enter your last name.";
+    if (!form.phone.trim()) nextErrors.phone = "Please enter your phone or WhatsApp number.";
+    if (!form.email.trim() || !form.email.includes("@"))
+      nextErrors.email = "Please enter a valid email.";
+    setErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
+  }
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!validate()) return;
+
+    setStatus("submitting");
+    await submitLead({
+      source: "property-viewing",
+      submittedAt: new Date().toISOString(),
+      propertySlug,
+      propertyTitle,
+      ...form,
+    });
+    setStatus("success");
+  }
+
+  if (status === "success") {
+    return (
+      <div className="rounded border border-linden-leaf bg-kiwi-cream p-6 text-center">
+        <CalendarCheck2 className="mx-auto mb-3 text-moss-700" size={28} />
+        <p className="font-display text-lg text-ink">Viewing request received</p>
+        <p className="mt-2 text-sm text-ink-soft">
+          We&apos;ll confirm your {form.viewingType.toLowerCase()} for {propertyTitle} and get
+          back to you shortly to finalize the date and time.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+      <div>
+        <label className="mb-1.5 block text-sm font-medium text-ink">Viewing Type</label>
+        <RadioPillGroup
+          name="viewingType"
+          options={viewingTypes}
+          value={form.viewingType}
+          onChange={(value) =>
+            setForm({ ...form, viewingType: value as PropertyViewingLead["viewingType"] })
+          }
+        />
+      </div>
+
+      <div className="grid grid-cols-2 gap-4">
+        <FieldWrapper
+          label="Preferred Date"
+          htmlFor="viewing-date"
+          required
+          error={errors.preferredDate}
+        >
+          <TextInput
+            id="viewing-date"
+            type="date"
+            value={form.preferredDate}
+            onChange={(e) => setForm({ ...form, preferredDate: e.target.value })}
+            error={Boolean(errors.preferredDate)}
+          />
+        </FieldWrapper>
+
+        <FieldWrapper
+          label="Preferred Time"
+          htmlFor="viewing-time"
+          required
+          error={errors.preferredTime}
+        >
+          <TextInput
+            id="viewing-time"
+            type="time"
+            value={form.preferredTime}
+            onChange={(e) => setForm({ ...form, preferredTime: e.target.value })}
+            error={Boolean(errors.preferredTime)}
+          />
+        </FieldWrapper>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4">
+        <FieldWrapper label="First Name" htmlFor="viewing-first-name" required error={errors.firstName}>
+          <TextInput
+            id="viewing-first-name"
+            value={form.firstName}
+            onChange={(e) => setForm({ ...form, firstName: e.target.value })}
+            error={Boolean(errors.firstName)}
+            placeholder="First name"
+          />
+        </FieldWrapper>
+
+        <FieldWrapper label="Last Name" htmlFor="viewing-last-name" required error={errors.lastName}>
+          <TextInput
+            id="viewing-last-name"
+            value={form.lastName}
+            onChange={(e) => setForm({ ...form, lastName: e.target.value })}
+            error={Boolean(errors.lastName)}
+            placeholder="Last name"
+          />
+        </FieldWrapper>
+      </div>
+
+      <FieldWrapper label="Phone / WhatsApp" htmlFor="viewing-phone" required error={errors.phone}>
+        <TextInput
+          id="viewing-phone"
+          value={form.phone}
+          onChange={(e) => setForm({ ...form, phone: e.target.value })}
+          error={Boolean(errors.phone)}
+          placeholder="+66 8X XXX XXXX"
+        />
+      </FieldWrapper>
+
+      <FieldWrapper label="Email" htmlFor="viewing-email" required error={errors.email}>
+        <TextInput
+          id="viewing-email"
+          type="email"
+          value={form.email}
+          onChange={(e) => setForm({ ...form, email: e.target.value })}
+          error={Boolean(errors.email)}
+          placeholder="you@example.com"
+        />
+      </FieldWrapper>
+
+      <FieldWrapper label="Additional Message / Comment" htmlFor="viewing-message">
+        <TextArea
+          id="viewing-message"
+          value={form.message}
+          onChange={(e) => setForm({ ...form, message: e.target.value })}
+          placeholder="Anything else we should know before the viewing?"
+        />
+      </FieldWrapper>
+
+      <Button
+        type="submit"
+        size="lg"
+        className="w-full bg-matcha-mist hover:opacity-90"
+        disabled={status === "submitting"}
+      >
+        {status === "submitting" ? (
+          <>
+            <Loader2 className="animate-spin" size={18} /> Sending...
+          </>
+        ) : (
+          "นัดหมายเข้าชม"
+        )}
+      </Button>
+    </form>
+  );
+}

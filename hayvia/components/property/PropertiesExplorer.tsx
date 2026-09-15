@@ -5,10 +5,10 @@ import { SlidersHorizontal, X } from "lucide-react";
 import type { Property } from "@/data/properties";
 import { districts, getListingType, propertyTypes } from "@/data/properties";
 import {
+  bathroomOptions,
   bedroomOptions,
   budgetOptions,
   defaultFilters,
-  listingTypeOptions,
   sortOptions,
   type PropertiesFilters,
   type SortOption,
@@ -55,6 +55,12 @@ export default function PropertiesExplorer({
           return false;
       }
 
+      if (filters.bathrooms !== "Any") {
+        if (filters.bathrooms === "3+" && p.bathrooms < 3) return false;
+        if (["1", "2"].includes(filters.bathrooms) && p.bathrooms !== Number(filters.bathrooms))
+          return false;
+      }
+
       if (filters.furnished !== "Any" && p.furnished !== filters.furnished) return false;
 
       if (filters.parking === "Required" && !p.parking) return false;
@@ -81,6 +87,30 @@ export default function PropertiesExplorer({
 
   return (
     <div>
+      <div
+        role="tablist"
+        aria-label="Listing type"
+        className="mb-6 inline-flex gap-1 rounded-full border border-seashell bg-white p-1 shadow-card"
+      >
+        {(["Any", "Rent", "Sale"] as const).map((option) => (
+          <button
+            key={option}
+            type="button"
+            role="tab"
+            aria-selected={filters.listingType === option}
+            onClick={() => updateFilter("listingType", option)}
+            className={cn(
+              "rounded-full px-5 py-2 text-sm font-medium transition-colors",
+              filters.listingType === option
+                ? "bg-matcha-mist text-white"
+                : "text-ink-soft hover:bg-kiwi-cream"
+            )}
+          >
+            {option === "Any" ? "All" : option === "Rent" ? "For Rent" : "For Sale"}
+          </button>
+        ))}
+      </div>
+
       <div className="flex items-center justify-between gap-4 lg:hidden">
         <button
           type="button"
@@ -131,17 +161,6 @@ export default function PropertiesExplorer({
           )}
 
           <div className="space-y-6 rounded border border-seashell bg-white p-5">
-            <FilterField label="Listing Type">
-              <Select
-                value={filters.listingType}
-                onChange={(e) => updateFilter("listingType", e.target.value)}
-              >
-                {listingTypeOptions.map((option) => (
-                  <option key={option}>{option}</option>
-                ))}
-              </Select>
-            </FilterField>
-
             <FilterField label="Location">
               <Select
                 value={filters.location}
@@ -183,6 +202,17 @@ export default function PropertiesExplorer({
                 onChange={(e) => updateFilter("bedrooms", e.target.value)}
               >
                 {bedroomOptions.map((b) => (
+                  <option key={b}>{b}</option>
+                ))}
+              </Select>
+            </FilterField>
+
+            <FilterField label="Bathrooms">
+              <Select
+                value={filters.bathrooms}
+                onChange={(e) => updateFilter("bathrooms", e.target.value)}
+              >
+                {bathroomOptions.map((b) => (
                   <option key={b}>{b}</option>
                 ))}
               </Select>
