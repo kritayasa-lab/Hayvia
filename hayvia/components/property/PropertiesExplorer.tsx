@@ -13,7 +13,7 @@ import {
   type PropertiesFilters,
   type SortOption,
 } from "@/lib/properties-filters";
-import { Select } from "@/components/ui/FormField";
+import { Select, TextInput } from "@/components/ui/FormField";
 import PropertyGrid from "@/components/property/PropertyGrid";
 import { cn } from "@/lib/utils";
 
@@ -60,6 +60,8 @@ export default function PropertiesExplorer({
         if (["1", "2"].includes(filters.bathrooms) && p.bathrooms !== Number(filters.bathrooms))
           return false;
       }
+
+      if (filters.minSize && p.size < Number(filters.minSize)) return false;
 
       if (filters.furnished !== "Any" && p.furnished !== filters.furnished) return false;
 
@@ -216,6 +218,16 @@ export default function PropertiesExplorer({
                   <option key={b}>{b}</option>
                 ))}
               </Select>
+            </FilterField>
+
+            <FilterField label="Minimum Size (sqm)">
+              <TextInput
+                type="number"
+                min={0}
+                value={filters.minSize}
+                onChange={(e) => updateFilter("minSize", e.target.value)}
+                placeholder="e.g. 30"
+              />
             </FilterField>
 
             <FilterField label="Furnished">

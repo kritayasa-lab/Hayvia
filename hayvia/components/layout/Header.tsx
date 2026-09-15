@@ -9,11 +9,13 @@ import { cn } from "@/lib/utils";
 import { contactConfig } from "@/config/contact";
 
 const navLinks = [
-  { href: "/", label: "Home" },
+  { href: "/properties?listingType=sale", label: "Buy" },
+  { href: "/properties?listingType=rent", label: "Rent" },
+  { href: "/list-your-property", label: "Sell" },
   { href: "/properties", label: "Properties" },
   { href: "/get-matched", label: "Get Matched" },
-  { href: "/guide", label: "Hat Yai Guide" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {

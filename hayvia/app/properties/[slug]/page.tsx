@@ -10,6 +10,7 @@ import InquiryPanel from "@/components/property/InquiryPanel";
 import PropertyGrid from "@/components/property/PropertyGrid";
 import ViewTracker from "@/components/property/ViewTracker";
 import { getProperties, findPropertyBySlug, findRelatedProperties } from "@/lib/properties-source";
+import { getListingType } from "@/data/properties";
 import { formatPrice, formatDate } from "@/lib/utils";
 
 // Property data now comes live from Google Sheets (with a demo-data
@@ -27,8 +28,10 @@ export async function generateMetadata({
   const property = findPropertyBySlug(properties, params.slug);
   if (!property) return {};
 
+  const priceSuffix = getListingType(property) === "sale" ? "" : "/month";
+
   return {
-    title: `${property.title} — ${formatPrice(property.price)}/month`,
+    title: `${property.title} — ${formatPrice(property.price)}${priceSuffix}`,
     description: property.description,
     openGraph: {
       title: property.title,
@@ -49,6 +52,7 @@ export default async function PropertyDetailPage({
 
   const related = findRelatedProperties(properties, property, 3);
   const bedroomLabel = property.bedrooms === 0 ? "Studio" : `${property.bedrooms} bedroom`;
+  const forSale = getListingType(property) === "sale";
 
   return (
     <Container className="py-10 sm:py-14">
@@ -89,7 +93,7 @@ export default async function PropertyDetailPage({
               <p className="font-display text-2xl text-ink sm:text-3xl">
                 {formatPrice(property.price)}
               </p>
-              <p className="text-sm text-ink-faint">per month</p>
+              <p className="text-sm text-ink-faint">{forSale ? "asking price" : "per month"}</p>
             </div>
           </div>
 

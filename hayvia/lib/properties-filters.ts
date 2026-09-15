@@ -45,6 +45,7 @@ export const defaultFilters = {
   budget: budgetOptions[0].label,
   bedrooms: "Any",
   bathrooms: "Any",
+  minSize: "",
   furnished: "Any",
   parking: "Any",
 };
