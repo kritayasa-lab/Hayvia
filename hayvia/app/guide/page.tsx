@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import GuideCard from "@/components/guide/GuideCard";
-import { guides } from "@/data/guides";
+import { getPublishedGuides } from "@/lib/news-source";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Hat Yai Guide",
@@ -9,7 +11,9 @@ export const metadata: Metadata = {
     "Practical, beginner-friendly guides to renting and living in Hat Yai — neighbourhoods, costs, and what to check before you sign a lease.",
 };
 
-export default function GuidePage() {
+export default async function GuidePage() {
+  const { guides } = await getPublishedGuides();
+
   return (
     <Container className="py-10 sm:py-14">
       <div className="max-w-2xl">

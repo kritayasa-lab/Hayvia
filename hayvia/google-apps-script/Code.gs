@@ -13,7 +13,7 @@
  * deployed at the URL in config/integrations.ts). Paste this into the
  * Apps Script editor (Extensions > Apps Script, from your Google Sheet).
  *
- * This script now serves THREE purposes, all through the same Web App
+ * This script now serves FOUR purposes, all through the same Web App
  * deployment:
  *
  *   1. doPost(e) with a normal Get Matched payload (no "action" field)
@@ -27,6 +27,17 @@
  *   3. doPost(e) with { "action": "incrementView", "slug": "..." }
  *      -> increments that property's View Count by 1, using LockService to
  *      stay safe under concurrent requests.
+ *
+ *   4. doPost(e) with { "action": "upsertProperty", "property": {...} }
+ *      -> Phase A: Supabase -> Sheets backup. Finds the existing row by ID
+ *      (column A) and overwrites it in place, or appends a new row if no
+ *      row with that ID exists yet. See handleUpsertProperty() below.
+ *      IMPORTANT: only ever writes the SAME public-safe columns (A-AF) this
+ *      sheet has always had — owner/agent/source/commission/private notes
+ *      are NEVER included here, because this is the exact sheet the public
+ *      website's Sheets fallback reads from (doGet, above). A private
+ *      admin-only backup destination, if ever needed, must be a SEPARATE
+ *      sheet/tab — never this one.
  *
  * Response shape is always JSON, via ContentService:
  *   { "success": true, ... }
@@ -122,6 +133,10 @@ function doPost(e) {
 
     if (data && data.action === "incrementView") {
       return handleIncrementView(data);
+    }
+
+    if (data && data.action === "upsertProperty") {
+      return handleUpsertProperty(data);
     }
 
     // No "action" field -> this is a Get Matched lead submission, handled
@@ -255,6 +270,90 @@ function handleIncrementView(data) {
     var sheetRowNumber = targetRowIndex + 1;
     var sheetColNumber = viewCountCol + 1;
     sheet.getRange(sheetRowNumber, sheetColNumber).setValue(currentCount + 1);
+
+    return jsonResponse({ success: true });
+  } catch (error) {
+    return jsonResponse({ success: false, error: String(error) });
+  } finally {
+    if (gotLock) {
+      lock.releaseLock();
+    }
+  }
+}
+
+/**
+ * Upserts one property row into "HAYVIA — Properties", matched by ID
+ * (column A). Looks up each column by header name (like handleIncrementView
+ * above) rather than a hardcoded column index, so it keeps working even if
+ * columns are reordered later. Writes ONLY the same public-safe columns this
+ * sheet has always had (A-AF) — see the file-level comment for why owner/
+ * agent/source/commission/private-notes must never appear here.
+ *
+ * Expected payload: { "action": "upsertProperty", "property": { "ID": "...",
+ * "Status": "...", "Title": "...", ... one key per sheet column ... } }
+ */
+function handleUpsertProperty(data) {
+  var property = data.property || {};
+  var id = String(property["ID"] || "").trim();
+
+  if (!id) {
+    return jsonResponse({ success: false, error: "Property ID is required." });
+  }
+
+  var lock = LockService.getScriptLock();
+  var gotLock = false;
+
+  try {
+    gotLock = lock.waitLock(10000);
+    if (!gotLock) {
+      return jsonResponse({ success: false, error: "Could not acquire lock in time." });
+    }
+
+    var sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(PROPERTIES_SHEET_NAME);
+    if (!sheet) {
+      return jsonResponse({ success: false, error: "Properties sheet not found." });
+    }
+
+    var values = sheet.getDataRange().getValues();
+    var headers = values.length > 0 ? values[0] : [];
+
+    if (headers.length === 0) {
+      return jsonResponse({
+        success: false,
+        error: "Properties sheet has no header row — cannot map columns.",
+      });
+    }
+
+    var idCol = headers.indexOf("ID");
+    if (idCol === -1) {
+      return jsonResponse({ success: false, error: '"ID" column not found.' });
+    }
+
+    // Build the row to write, one cell per existing header, in the sheet's
+    // OWN column order — so this keeps working regardless of what order the
+    // Next.js side happens to send keys in, and never writes a column this
+    // sheet doesn't already have.
+    var rowValues = [];
+    for (var c = 0; c < headers.length; c++) {
+      var header = String(headers[c]).trim();
+      var value = property.hasOwnProperty(header) ? property[header] : "";
+      rowValues.push(value === null || value === undefined ? "" : value);
+    }
+
+    var targetRowIndex = -1;
+    for (var r = 1; r < values.length; r++) {
+      if (String(values[r][idCol] || "").trim() === id) {
+        targetRowIndex = r;
+        break;
+      }
+    }
+
+    if (targetRowIndex === -1) {
+      sheet.appendRow(rowValues);
+    } else {
+      // +1 for 1-indexed sheet rows.
+      sheet.getRange(targetRowIndex + 1, 1, 1, rowValues.length).setValues([rowValues]);
+    }
 
     return jsonResponse({ success: true });
   } catch (error) {

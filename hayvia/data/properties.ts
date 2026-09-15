@@ -22,6 +22,13 @@ export type District =
   | "PSU / University Area"
   | "Khlong Hae";
 export type ContactType = "WhatsApp" | "LINE" | "Email";
+// Listing intent — rent (default) vs for-sale. Added as an optional field
+// (see `listingType` below) so it degrades safely for every property that
+// predates it: both the hardcoded demo data and the current Google Sheet
+// (which has no "Listing Type" column yet) simply omit it and are treated
+// as "rent", exactly as before. No sale properties exist anywhere yet —
+// this only adds the ability to represent one once real data exists.
+export type ListingType = "rent" | "sale";
 
 export interface Property {
   id: string;
@@ -54,6 +61,23 @@ export interface Property {
   // none of the hardcoded demo properties below need to be touched.
   googleMapsUrl?: string;
   viewCount?: number;
+  // Optional — absent means "rent". See `ListingType` above.
+  listingType?: ListingType;
+  // Set ONLY when this property was fetched directly from Supabase (Phase A
+  // — see lib/properties-source.ts). Lets app/api/inquiries, app/api/viewings,
+  // and lib/matching/persist.ts use this real id directly instead of calling
+  // syncPropertyToSupabase() again, which would be redundant at best and, for
+  // an admin-created property with no external_ref, could create a duplicate
+  // row at worst. Absent for Sheets/demo-sourced properties, which still need
+  // the sync step exactly as before.
+  supabaseId?: string;
+}
+
+// Every property is "rent" unless explicitly marked "sale" — use this
+// instead of reading `property.listingType` directly so the default is
+// applied consistently everywhere.
+export function getListingType(property: Pick<Property, "listingType">): ListingType {
+  return property.listingType === "sale" ? "sale" : "rent";
 }
 
 export const properties: Property[] = [

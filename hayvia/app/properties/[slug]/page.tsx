@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { BedDouble, Bath, Ruler, Car, ShieldCheck, CheckCircle2, MapPin } from "lucide-react";
+import { BedDouble, Bath, Ruler, Car, ShieldCheck, CheckCircle2 } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import ImageGallery from "@/components/property/ImageGallery";
 import InquiryPanel from "@/components/property/InquiryPanel";
+import PropertyLocationMap, { formatLocationSummary } from "@/components/property/PropertyLocationMap";
 import PropertyGrid from "@/components/property/PropertyGrid";
 import ViewTracker from "@/components/property/ViewTracker";
 import { getProperties, findPropertyBySlug, findRelatedProperties } from "@/lib/properties-source";
+import { getListingType } from "@/data/properties";
 import { formatPrice, formatDate } from "@/lib/utils";
 
 // Property data now comes live from Google Sheets (with a demo-data
@@ -27,8 +29,10 @@ export async function generateMetadata({
   const property = findPropertyBySlug(properties, params.slug);
   if (!property) return {};
 
+  const priceSuffix = getListingType(property) === "sale" ? "" : "/month";
+
   return {
-    title: `${property.title} — ${formatPrice(property.price)}/month`,
+    title: `${property.title} — ${formatPrice(property.price)}${priceSuffix}`,
     description: property.description,
     openGraph: {
       title: property.title,
@@ -49,6 +53,7 @@ export default async function PropertyDetailPage({
 
   const related = findRelatedProperties(properties, property, 3);
   const bedroomLabel = property.bedrooms === 0 ? "Studio" : `${property.bedrooms} bedroom`;
+  const forSale = getListingType(property) === "sale";
 
   return (
     <Container className="py-10 sm:py-14">
@@ -70,11 +75,15 @@ export default async function PropertyDetailPage({
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 {property.verified && (
-                  <Badge tone="moss">
+                  <Badge tone="moss" className="bg-linden-leaf">
                     <ShieldCheck size={12} /> Verified Listing
                   </Badge>
                 )}
-                {property.status === "reserved" && <Badge tone="neutral">Reserved</Badge>}
+                {property.status === "reserved" && (
+                  <Badge tone="neutral" className="bg-seashell">
+                    Reserved
+                  </Badge>
+                )}
               </div>
               <h1 className="mt-2 font-display text-2xl text-ink sm:text-3xl">
                 {property.title}
@@ -85,11 +94,11 @@ export default async function PropertyDetailPage({
               <p className="font-display text-2xl text-ink sm:text-3xl">
                 {formatPrice(property.price)}
               </p>
-              <p className="text-sm text-ink-faint">per month</p>
+              <p className="text-sm text-ink-faint">{forSale ? "asking price" : "per month"}</p>
             </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-2 gap-4 rounded border border-line bg-surface p-5 sm:grid-cols-4">
+          <div className="mt-6 grid grid-cols-2 gap-4 rounded border border-seashell bg-white p-5 sm:grid-cols-4">
             <Spec icon={BedDouble} label={bedroomLabel} />
             <Spec icon={Bath} label={`${property.bathrooms} bathroom`} />
             <Spec icon={Ruler} label={`${property.size} sqm`} />
@@ -130,20 +139,10 @@ export default async function PropertyDetailPage({
           </Section>
 
           <Section title="Location">
-            <p className="leading-relaxed text-ink-soft">
-              {property.location}, {property.district}. Exact building details are shared
-              once we connect you with the property owner or agent.
-            </p>
-            {property.googleMapsUrl && (
-              <a
-                href={property.googleMapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-moss-700 hover:underline"
-              >
-                <MapPin size={15} /> View on Google Maps
-              </a>
-            )}
+            <PropertyLocationMap
+              googleMapsUrl={property.googleMapsUrl}
+              locationSummary={formatLocationSummary(property.location, property.district)}
+            />
           </Section>
 
           <Section title="Important Information">
@@ -159,12 +158,16 @@ export default async function PropertyDetailPage({
         <div className="lg:sticky lg:top-24 lg:h-fit">
           <InquiryPanel propertySlug={property.slug} propertyTitle={property.title} />
 
-          <div className="mt-6 rounded border border-line-soft bg-surface p-5">
+          <div className="mt-6 rounded border border-seashell bg-white p-5">
             <p className="text-sm font-medium text-ink">Looking for something similar?</p>
             <p className="mt-1.5 text-sm text-ink-soft">
-              Tell us your requirements and we'll suggest other suitable options.
+              Tell us your requirements and we&apos;ll suggest other suitable options.
             </p>
-            <Button href="/get-matched" variant="secondary" className="mt-4 w-full">
+            <Button
+              href="/get-matched"
+              variant="secondary"
+              className="mt-4 w-full border-matcha-mist text-moss-700 hover:bg-linden-leaf/30"
+            >
               Get Matched
             </Button>
           </div>
@@ -173,7 +176,7 @@ export default async function PropertyDetailPage({
 
       {related.length > 0 && (
         <div className="mt-16 border-t border-line pt-12">
-          <h2 className="font-display text-2xl text-ink">You might also like</h2>
+          <h2 className="font-display text-2xl text-ink">Similar Properties</h2>
           <div className="mt-8">
             <PropertyGrid properties={related} />
           </div>

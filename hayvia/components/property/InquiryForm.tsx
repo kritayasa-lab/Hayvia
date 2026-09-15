@@ -1,25 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { AlertCircle, CheckCircle2, Loader2 } from "lucide-react";
 import { FieldWrapper, TextInput, TextArea } from "@/components/ui/FormField";
 import Button from "@/components/ui/Button";
 import { submitLead } from "@/lib/leads";
 
 interface FormState {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   whatsapp: string;
-  moveInDate: string;
-  message: string;
+  additionalRequirements: string;
 }
 
 const initialState: FormState = {
-  name: "",
+  firstName: "",
+  lastName: "",
   email: "",
   whatsapp: "",
-  moveInDate: "",
-  message: "",
+  additionalRequirements: "",
 };
 
 export default function InquiryForm({
@@ -32,13 +32,15 @@ export default function InquiryForm({
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   function validate(): boolean {
     const nextErrors: Partial<Record<keyof FormState, string>> = {};
-    if (!form.name.trim()) nextErrors.name = "Please enter your name.";
+    if (!form.firstName.trim()) nextErrors.firstName = "Please enter your first name.";
+    if (!form.lastName.trim()) nextErrors.lastName = "Please enter your last name.";
     if (!form.email.trim() || !form.email.includes("@"))
       nextErrors.email = "Please enter a valid email.";
-    if (!form.whatsapp.trim()) nextErrors.whatsapp = "Please enter a WhatsApp number.";
+    if (!form.whatsapp.trim()) nextErrors.whatsapp = "Please enter a phone or WhatsApp number.";
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
   }
@@ -48,23 +50,30 @@ export default function InquiryForm({
     if (!validate()) return;
 
     setStatus("submitting");
-    await submitLead({
+    setSubmitError(null);
+    const result = await submitLead({
       source: "property-inquiry",
       submittedAt: new Date().toISOString(),
       propertySlug,
       propertyTitle,
       ...form,
     });
-    setStatus("success");
+
+    if (result.success) {
+      setStatus("success");
+    } else {
+      setStatus("idle");
+      setSubmitError(result.message);
+    }
   }
 
   if (status === "success") {
     return (
-      <div className="rounded border border-moss-100 bg-moss-50 p-6 text-center">
-        <CheckCircle2 className="mx-auto mb-3 text-moss-600" size={28} />
-        <p className="font-display text-lg text-ink">Thanks — we've received your message</p>
+      <div className="rounded border border-linden-leaf bg-kiwi-cream p-6 text-center">
+        <CheckCircle2 className="mx-auto mb-3 text-moss-700" size={28} />
+        <p className="font-display text-lg text-ink">Thank you. Your inquiry has been received.</p>
         <p className="mt-2 text-sm text-ink-soft">
-          We'll pass your details to the owner or agent for {propertyTitle} and follow up
+          We&apos;ll pass your details to the owner or agent for {propertyTitle} and follow up
           with you shortly.
         </p>
       </div>
@@ -73,15 +82,27 @@ export default function InquiryForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-      <FieldWrapper label="Name" htmlFor="inquiry-name" required error={errors.name}>
-        <TextInput
-          id="inquiry-name"
-          value={form.name}
-          onChange={(e) => setForm({ ...form, name: e.target.value })}
-          error={Boolean(errors.name)}
-          placeholder="Your full name"
-        />
-      </FieldWrapper>
+      <div className="grid grid-cols-2 gap-4">
+        <FieldWrapper label="First Name" htmlFor="inquiry-first-name" required error={errors.firstName}>
+          <TextInput
+            id="inquiry-first-name"
+            value={form.firstName}
+            onChange={(e) => setForm({ ...form, firstName: e.target.value })}
+            error={Boolean(errors.firstName)}
+            placeholder="First name"
+          />
+        </FieldWrapper>
+
+        <FieldWrapper label="Last Name" htmlFor="inquiry-last-name" required error={errors.lastName}>
+          <TextInput
+            id="inquiry-last-name"
+            value={form.lastName}
+            onChange={(e) => setForm({ ...form, lastName: e.target.value })}
+            error={Boolean(errors.lastName)}
+            placeholder="Last name"
+          />
+        </FieldWrapper>
+      </div>
 
       <FieldWrapper label="Email" htmlFor="inquiry-email" required error={errors.email}>
         <TextInput
@@ -94,35 +115,43 @@ export default function InquiryForm({
         />
       </FieldWrapper>
 
-      <FieldWrapper label="WhatsApp" htmlFor="inquiry-whatsapp" required error={errors.whatsapp}>
+      <FieldWrapper
+        label="Phone / WhatsApp"
+        htmlFor="inquiry-whatsapp"
+        required
+        error={errors.whatsapp}
+      >
         <TextInput
           id="inquiry-whatsapp"
           value={form.whatsapp}
           onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
           error={Boolean(errors.whatsapp)}
-          placeholder="+60 1X XXX XXXX"
+          placeholder="+66 8X XXX XXXX"
         />
       </FieldWrapper>
 
-      <FieldWrapper label="Preferred move-in date" htmlFor="inquiry-movein">
-        <TextInput
-          id="inquiry-movein"
-          type="date"
-          value={form.moveInDate}
-          onChange={(e) => setForm({ ...form, moveInDate: e.target.value })}
-        />
-      </FieldWrapper>
-
-      <FieldWrapper label="Message" htmlFor="inquiry-message">
+      <FieldWrapper label="Additional Requirements" htmlFor="inquiry-additional">
         <TextArea
-          id="inquiry-message"
-          value={form.message}
-          onChange={(e) => setForm({ ...form, message: e.target.value })}
+          id="inquiry-additional"
+          value={form.additionalRequirements}
+          onChange={(e) => setForm({ ...form, additionalRequirements: e.target.value })}
           placeholder="Any questions about this property?"
         />
       </FieldWrapper>
 
-      <Button type="submit" size="lg" className="w-full" disabled={status === "submitting"}>
+      {submitError && (
+        <p role="alert" className="flex items-start gap-2 text-sm text-red-500">
+          <AlertCircle size={16} className="mt-0.5 shrink-0" />
+          {submitError}
+        </p>
+      )}
+
+      <Button
+        type="submit"
+        size="lg"
+        className="w-full bg-matcha-mist hover:opacity-90"
+        disabled={status === "submitting"}
+      >
         {status === "submitting" ? (
           <>
             <Loader2 className="animate-spin" size={18} /> Sending...

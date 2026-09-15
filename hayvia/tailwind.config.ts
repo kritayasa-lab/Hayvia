@@ -30,6 +30,18 @@ const config: Config = {
           400: "#C88A5C",
           500: "#B97847",
         },
+        // Approved palette additions. Kept separate from the original
+        // paper/surface/ink/moss/clay tokens above — those remain the
+        // default for existing components (compatibility); these are used
+        // for the redesigned components (Input/Modal/EmptyState/SearchBar)
+        // and the homepage.
+        "warm-ivory": "#FAF8F1",
+        "matcha-mist": "#9DBF7C",
+        "linden-leaf": "#C7DDAA",
+        "sunny-citron": "#FFF2A6",
+        "kiwi-cream": "#E6F0C3",
+        seashell: "#F1F1F1",
+        "old-copper": "#775537",
       },
       fontFamily: {
         display: ["var(--font-display)", "serif"],

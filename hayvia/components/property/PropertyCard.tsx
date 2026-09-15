@@ -1,17 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BedDouble, Bath, Ruler, Car, ShieldCheck } from "lucide-react";
-import type { Property } from "@/data/properties";
+import { BedDouble, Bath, Ruler, Car, ShieldCheck, Sparkles } from "lucide-react";
+import { getListingType, type Property } from "@/data/properties";
 import { formatPrice, formatDate } from "@/lib/utils";
 import Badge from "@/components/ui/Badge";
 
 export default function PropertyCard({ property }: { property: Property }) {
   const bedroomLabel = property.bedrooms === 0 ? "Studio" : `${property.bedrooms} bed`;
+  const forSale = getListingType(property) === "sale";
 
   return (
     <Link
       href={`/properties/${property.slug}`}
-      className="group flex h-full flex-col overflow-hidden rounded border border-line bg-surface shadow-card transition-shadow hover:shadow-lg"
+      className="group flex h-full flex-col overflow-hidden rounded border border-seashell bg-white shadow-card transition-shadow hover:shadow-lg"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-line-soft">
         <Image
@@ -23,16 +24,23 @@ export default function PropertyCard({ property }: { property: Property }) {
         />
         <div className="absolute left-3 top-3 flex gap-2">
           {property.verified && (
-            <Badge tone="moss" className="bg-surface/95">
+            <Badge tone="moss" className="bg-linden-leaf/95">
               <ShieldCheck size={12} /> Verified Listing
             </Badge>
           )}
           {property.status === "reserved" && (
-            <Badge tone="neutral" className="bg-surface/95">
+            <Badge tone="neutral" className="bg-seashell/95">
               Reserved
             </Badge>
           )}
         </div>
+        {property.featured && (
+          <div className="absolute right-3 top-3">
+            <Badge tone="clay" className="bg-sunny-citron/95 text-ink">
+              <Sparkles size={12} /> Featured
+            </Badge>
+          </div>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col p-5">
@@ -67,7 +75,7 @@ export default function PropertyCard({ property }: { property: Property }) {
         <div className="mt-auto flex items-end justify-between pt-5">
           <div>
             <p className="font-display text-xl text-ink">{formatPrice(property.price)}</p>
-            <p className="text-xs text-ink-faint">per month</p>
+            <p className="text-xs text-ink-faint">{forSale ? "asking price" : "per month"}</p>
           </div>
           <span className="text-sm font-medium text-moss-700 group-hover:underline">
             View Property
