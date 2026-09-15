@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
-import { guides, getGuideBySlug } from "@/data/guides";
+import { getPublishedGuides, findGuideBySlug } from "@/lib/news-source";
 import { formatDate } from "@/lib/utils";
 
-export function generateStaticParams() {
-  return guides.map((g) => ({ slug: g.slug }));
-}
+// Article data can come from Supabase (admin-managed) or the static
+// fallback (see lib/news-source.ts) — either way it can change without a
+// deploy, so this page is rendered dynamically per request rather than
+// statically pre-built, the same reasoning as /properties/[slug].
+export const dynamic = "force-dynamic";
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const article = getGuideBySlug(params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { guides } = await getPublishedGuides();
+  const article = findGuideBySlug(guides, params.slug);
   if (!article) return {};
 
   return {
@@ -26,8 +32,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function GuideArticlePage({ params }: { params: { slug: string } }) {
-  const article = getGuideBySlug(params.slug);
+export default async function GuideArticlePage({ params }: { params: { slug: string } }) {
+  const { guides } = await getPublishedGuides();
+  const article = findGuideBySlug(guides, params.slug);
   if (!article) notFound();
 
   return (
@@ -52,13 +59,12 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
         </div>
 
         <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded">
-          <Image
+          {/* Plain <img>, not next/image — see GuideCard.tsx for why. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={article.image}
             alt={article.title}
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, 768px"
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
 
@@ -73,7 +79,7 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
         <div className="mt-14 rounded border border-line bg-surface p-8 text-center">
           <p className="font-display text-xl text-ink">Ready to start looking?</p>
           <p className="mt-2 text-sm text-ink-soft">
-            Browse current listings or tell us what you need and we'll help you find it.
+            Browse current listings or tell us what you need and we&apos;ll help you find it.
           </p>
           <div className="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
             <Button href="/properties" variant="secondary">

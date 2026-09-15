@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { GuideArticle } from "@/data/guides";
 import { formatDate } from "@/lib/utils";
@@ -10,12 +9,18 @@ export default function GuideCard({ article }: { article: GuideArticle }) {
       className="group flex h-full flex-col overflow-hidden rounded border border-line bg-surface shadow-card transition-shadow hover:shadow-lg"
     >
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-line-soft">
-        <Image
+        {/*
+          Plain <img>, not next/image: article.image can now come from an
+          admin-entered cover_image_url (see lib/news-source.ts), an
+          arbitrary URL not necessarily on the picsum.photos/unsplash
+          domains allowed in next.config.js's image remotePatterns. Using
+          next/image here would throw for any other host.
+        */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={article.image}
           alt={article.title}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
         />
       </div>
       <div className="flex flex-1 flex-col p-5">
