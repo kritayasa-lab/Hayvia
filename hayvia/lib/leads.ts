@@ -1,57 +1,36 @@
 // -----------------------------------------------------------------------------
 // Lead submission service
 // -----------------------------------------------------------------------------
-// This file is the single place that "sends" data collected from Subphiphat Real Estate's forms
-// (Get Matched, List Your Property, Property Inquiry, Contact).
+// This file is the single place that "sends" data collected from Subphiphat
+// Real Estate's forms (Property Inquiry, Property Viewing, List Your
+// Property, Contact).
 //
-// Get Matched submissions are POSTed to /api/get-matched (a Next.js Route
-// Handler), which forwards them server-side to the Google Apps Script Web App
-// configured in config/integrations.ts and relays back a real, parsed result.
-// The browser never talks to Google Apps Script directly — see
-// app/api/get-matched/route.ts for that server-side step.
+// Property Inquiry and Property Viewing are real Supabase-backed writes —
+// see app/api/inquiries/route.ts and app/api/viewings/route.ts (server-side,
+// service-role client; inquiries/viewings have RLS enabled with no
+// anon/authenticated policy, so this is the only path that can write them
+// today).
 //
-// The other forms (Property Inquiry, Property Viewing, List Your Property,
-// Contact) still use a local mock handler for now, so the UI can be tested
-// without a backend. When ready, swap their block below for a real
-// integration, e.g.:
-//   - Supabase / PostgreSQL: insert into a `leads` table
-//   - CRM: POST to a CRM's REST API
-//   - Email: send via a transactional email provider (Resend, Postmark, SES)
-//   - Google Sheets: POST to a Google Apps Script web app / Sheets API
-//   - Webhook: POST the payload to an internal automation (n8n, Zapier, Make)
+// Get Matched no longer goes through this file — the matching flow (real
+// deterministic scoring + its own Supabase writes) lives at /api/match and
+// is called directly by components/matching/MatchingWizard.tsx, since it
+// returns structured results, not a simple accept/reject lead submission.
 //
-// Every form in the app calls the same `submitLead` function, so this file is
-// the only place that needs to change to go live with a new integration.
+// List Your Property and Contact still use a local mock handler — out of
+// this pass's scope (see supabase/DATABASE_SCHEMA.md: seller_leads already
+// has a real schema for List Your Property, but wiring it up is left for a
+// following pass). When ready, swap their block below for a real
+// integration the same way Inquiry/Viewing were.
+//
+// Every form in the app calls the same `submitLead` function, so this file
+// is the only place that needs to change to go live with a new integration.
 // -----------------------------------------------------------------------------
 
-export type LeadSource =
-  | "get-matched"
-  | "property-inquiry"
-  | "property-viewing"
-  | "list-your-property"
-  | "contact";
+export type LeadSource = "property-inquiry" | "property-viewing" | "list-your-property" | "contact";
 
 export interface BaseLead {
   source: LeadSource;
   submittedAt: string;
-}
-
-export interface GetMatchedLead extends BaseLead {
-  source: "get-matched";
-  name: string;
-  nationality: string;
-  contactMethod: string;
-  contactInfo: string;
-  propertyType: string;
-  preferredArea: string;
-  budget: string;
-  bedrooms: string;
-  furnished: string;
-  parking: string;
-  moveInDate: string;
-  rentalDuration: string;
-  occupants: string;
-  additionalRequirements?: string;
 }
 
 export interface PropertyInquiryLead extends BaseLead {
@@ -101,12 +80,7 @@ export interface ContactLead extends BaseLead {
   message: string;
 }
 
-export type Lead =
-  | GetMatchedLead
-  | PropertyInquiryLead
-  | PropertyViewingLead
-  | ListPropertyLead
-  | ContactLead;
+export type Lead = PropertyInquiryLead | PropertyViewingLead | ListPropertyLead | ContactLead;
 
 export interface SubmitLeadResult {
   success: boolean;
@@ -116,17 +90,21 @@ export interface SubmitLeadResult {
 /**
  * Submits a lead captured from any form on the site.
  *
- * - "get-matched" leads are sent live to the Google Apps Script Web App.
- * - All other lead types currently use a local mock handler — replace their
- *   branch below to connect to Supabase, a CRM, email, Google Sheets, or a
- *   webhook.
+ * - "property-inquiry" → real Supabase insert via /api/inquiries.
+ * - "property-viewing" → real Supabase insert via /api/viewings.
+ * - "list-your-property" / "contact" → still a local mock handler; replace
+ *   their branch below to go live with a real integration.
  */
 export async function submitLead(lead: Lead): Promise<SubmitLeadResult> {
-  if (lead.source === "get-matched") {
-    return submitGetMatchedLead(lead);
+  if (lead.source === "property-inquiry") {
+    return submitToRoute("/api/inquiries", lead);
   }
 
-  // Mock handler for Property Inquiry, List Your Property, and Contact.
+  if (lead.source === "property-viewing") {
+    return submitToRoute("/api/viewings", lead);
+  }
+
+  // Mock handler for List Your Property and Contact.
   // Simulate network latency so the UI's loading state can be exercised.
   await new Promise((resolve) => setTimeout(resolve, 700));
 
@@ -142,15 +120,15 @@ export async function submitLead(lead: Lead): Promise<SubmitLeadResult> {
 }
 
 /**
- * Sends a Get Matched submission to our own /api/get-matched Route Handler,
- * which forwards it server-side to the Google Apps Script Web App configured
- * in config/integrations.ts. The browser only ever talks to /api/get-matched
- * — see app/api/get-matched/route.ts for the server-side forwarding step and
- * the real success/failure result parsed from Apps Script's response.
+ * POSTs a lead to one of our own Route Handlers (/api/inquiries,
+ * /api/viewings), which perform the real, server-side Supabase insert.
+ * Never reports success unless that insert actually succeeded — a failed
+ * fetch, a non-2xx response, or `{ success: false }` in the body all become
+ * an honest failure result the calling form can show to the user.
  */
-async function submitGetMatchedLead(lead: GetMatchedLead): Promise<SubmitLeadResult> {
+async function submitToRoute(path: string, lead: Lead): Promise<SubmitLeadResult> {
   try {
-    const response = await fetch("/api/get-matched", {
+    const response = await fetch(path, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(lead),
@@ -164,24 +142,19 @@ async function submitGetMatchedLead(lead: GetMatchedLead): Promise<SubmitLeadRes
     }
 
     if (response.ok && data?.success) {
-      return {
-        success: true,
-        message: "Lead received.",
-      };
+      return { success: true, message: "Lead received." };
     }
 
     return {
       success: false,
-      message: data?.error || "Failed to submit lead.",
+      message: data?.error || "Something went wrong. Please try again.",
     };
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error("[Subphiphat] Failed to reach /api/get-matched:", error);
+    console.error(`[Subphiphat] Failed to reach ${path}:`, error);
     return {
       success: false,
-      message:
-        "Something went wrong sending your details. Please check your connection and try again.",
+      message: "Something went wrong. Please check your connection and try again.",
     };
   }
 }
-

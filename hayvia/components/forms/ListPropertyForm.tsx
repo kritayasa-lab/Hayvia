@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, ImagePlus, Loader2 } from "lucide-react";
+import { AlertCircle, CheckCircle2, ImagePlus, Loader2 } from "lucide-react";
 import { FieldWrapper, TextInput, TextArea, Select } from "@/components/ui/FormField";
 import Button from "@/components/ui/Button";
 import { submitLead, type ListPropertyLead } from "@/lib/leads";
@@ -37,6 +37,7 @@ export default function ListPropertyForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -60,12 +61,19 @@ export default function ListPropertyForm() {
     e.preventDefault();
     if (!validate()) return;
     setStatus("submitting");
-    await submitLead({
+    setSubmitError(null);
+    const result = await submitLead({
       source: "list-your-property",
       submittedAt: new Date().toISOString(),
       ...form,
     });
-    setStatus("success");
+
+    if (result.success) {
+      setStatus("success");
+    } else {
+      setStatus("idle");
+      setSubmitError(result.message);
+    }
   }
 
   if (status === "success") {
@@ -74,7 +82,7 @@ export default function ListPropertyForm() {
         <CheckCircle2 className="mx-auto mb-4 text-moss-600" size={36} />
         <h2 className="font-display text-2xl text-ink">Thank you.</h2>
         <p className="mx-auto mt-3 max-w-md text-ink-soft">
-          We'll review your property details and contact you if it is suitable for our
+          We&apos;ll review your property details and contact you if it is suitable for our
           platform.
         </p>
       </div>
@@ -208,14 +216,20 @@ export default function ListPropertyForm() {
         <div className="flex flex-col items-center justify-center gap-2 rounded border border-dashed border-line px-6 py-10 text-center">
           <ImagePlus className="text-ink-faint" size={24} />
           <p className="text-sm text-ink-soft">
-            Photo upload isn't connected yet for this MVP.
+            Photo upload isn&apos;t connected yet for this MVP.
           </p>
           <p className="text-xs text-ink-faint">
-            We'll follow up with you directly to collect photos of your property.
+            We&apos;ll follow up with you directly to collect photos of your property.
           </p>
         </div>
       </div>
 
+      {submitError && (
+        <p role="alert" className="flex items-start gap-2 text-sm text-red-500">
+          <AlertCircle size={16} className="mt-0.5 shrink-0" />
+          {submitError}
+        </p>
+      )}
       <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={status === "submitting"}>
         {status === "submitting" ? (
           <>

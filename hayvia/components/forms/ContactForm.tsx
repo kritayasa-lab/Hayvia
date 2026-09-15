@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { AlertCircle, CheckCircle2, Loader2 } from "lucide-react";
 import { FieldWrapper, TextInput, TextArea } from "@/components/ui/FormField";
 import Button from "@/components/ui/Button";
 import { submitLead } from "@/lib/leads";
@@ -18,6 +18,7 @@ export default function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   function validate(): boolean {
     const nextErrors: Partial<Record<keyof FormState, string>> = {};
@@ -33,12 +34,19 @@ export default function ContactForm() {
     e.preventDefault();
     if (!validate()) return;
     setStatus("submitting");
-    await submitLead({
+    setSubmitError(null);
+    const result = await submitLead({
       source: "contact",
       submittedAt: new Date().toISOString(),
       ...form,
     });
-    setStatus("success");
+
+    if (result.success) {
+      setStatus("success");
+    } else {
+      setStatus("idle");
+      setSubmitError(result.message);
+    }
   }
 
   if (status === "success") {
@@ -47,7 +55,7 @@ export default function ContactForm() {
         <CheckCircle2 className="mx-auto mb-3 text-moss-600" size={28} />
         <p className="font-display text-lg text-ink">Message sent</p>
         <p className="mt-2 text-sm text-ink-soft">
-          Thanks for reaching out — we'll get back to you shortly.
+          Thanks for reaching out — we&apos;ll get back to you shortly.
         </p>
       </div>
     );
@@ -80,6 +88,12 @@ export default function ContactForm() {
           error={Boolean(errors.message)}
         />
       </FieldWrapper>
+      {submitError && (
+        <p role="alert" className="flex items-start gap-2 text-sm text-red-500">
+          <AlertCircle size={16} className="mt-0.5 shrink-0" />
+          {submitError}
+        </p>
+      )}
       <Button type="submit" size="lg" className="w-full" disabled={status === "submitting"}>
         {status === "submitting" ? (
           <>

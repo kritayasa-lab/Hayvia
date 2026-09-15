@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CalendarCheck2, Loader2 } from "lucide-react";
+import { AlertCircle, CalendarCheck2, Loader2 } from "lucide-react";
 import { FieldWrapper, TextInput, TextArea, RadioPillGroup } from "@/components/ui/FormField";
 import Button from "@/components/ui/Button";
 import { submitLead, type PropertyViewingLead } from "@/lib/leads";
@@ -43,6 +43,7 @@ export default function ViewingForm({
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   function validate(): boolean {
     const nextErrors: Partial<Record<keyof FormState, string>> = {};
@@ -62,24 +63,30 @@ export default function ViewingForm({
     if (!validate()) return;
 
     setStatus("submitting");
-    await submitLead({
+    setSubmitError(null);
+    const result = await submitLead({
       source: "property-viewing",
       submittedAt: new Date().toISOString(),
       propertySlug,
       propertyTitle,
       ...form,
     });
-    setStatus("success");
+
+    if (result.success) {
+      setStatus("success");
+    } else {
+      setStatus("idle");
+      setSubmitError(result.message);
+    }
   }
 
   if (status === "success") {
     return (
       <div className="rounded border border-linden-leaf bg-kiwi-cream p-6 text-center">
         <CalendarCheck2 className="mx-auto mb-3 text-moss-700" size={28} />
-        <p className="font-display text-lg text-ink">Viewing request received</p>
+        <p className="font-display text-lg text-ink">Your viewing request has been received.</p>
         <p className="mt-2 text-sm text-ink-soft">
-          We&apos;ll confirm your {form.viewingType.toLowerCase()} for {propertyTitle} and get
-          back to you shortly to finalize the date and time.
+          Our team will contact you to confirm the appointment for {propertyTitle}.
         </p>
       </div>
     );
@@ -182,6 +189,13 @@ export default function ViewingForm({
           placeholder="Anything else we should know before the viewing?"
         />
       </FieldWrapper>
+
+      {submitError && (
+        <p role="alert" className="flex items-start gap-2 text-sm text-red-500">
+          <AlertCircle size={16} className="mt-0.5 shrink-0" />
+          {submitError}
+        </p>
+      )}
 
       <Button
         type="submit"
