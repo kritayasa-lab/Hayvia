@@ -3,19 +3,24 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { GOOGLE_APPS_SCRIPT_URL } from "@/config/integrations";
 
 // -----------------------------------------------------------------------------
-// Supabase -> Google Sheets backup (Phase A, section 6).
+// Supabase -> Google Sheets backup.
 //
-// Writes ONLY the same public-safe columns "HAYVIA — Properties" has always
-// had (A-AF) — this is the exact sheet the public website's Sheets fallback
-// reads from (lib/properties-source.ts), so owner/agent/source/commission/
-// private_notes must NEVER be included here. See google-apps-script/Code.gs's
-// handleUpsertProperty() for the sheet-side half of this.
+// Google Sheets is backup/export only now — the public website never reads
+// from it (see lib/properties-source.ts). This still writes ONLY the same
+// public-safe columns "HAYVIA — Properties" has always had (A-AF); owner/
+// agent/source/commission/private_notes must NEVER be included here,
+// regardless of whether anything currently reads this sheet, since it's
+// still effectively a semi-public export surface (anyone with sheet access
+// can see it). See google-apps-script/Code.gs's handleUpsertProperty() for
+// the sheet-side half of this.
 //
-// Every call here is meant to be fire-and-forget from the caller's
-// perspective (never awaited on the critical path, never able to fail a
-// property save) — this module itself never throws; every failure is caught,
-// logged to backup_logs, and returned as a result the caller can inspect if
-// it wants to, but doesn't have to.
+// Called automatically after every successful admin property create/update
+// (app/admin/(dashboard)/properties/actions.ts), awaited so the attempt
+// completes but never able to fail or roll back the Supabase write that
+// already succeeded — this module itself never throws; every failure is
+// caught, logged to backup_logs (retryable — see Admin > Settings), and
+// returned as a result the caller can inspect if it wants to, but doesn't
+// have to.
 // -----------------------------------------------------------------------------
 
 const statusToSheet: Record<string, string> = {

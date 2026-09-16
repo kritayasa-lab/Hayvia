@@ -1,9 +1,11 @@
 import { createAdminClient } from "@/lib/supabase/admin";
 import AdminCard from "@/components/admin/AdminCard";
 import MatchingWeightsForm from "@/components/admin/MatchingWeightsForm";
-import DataSyncPanel from "@/components/admin/DataSyncPanel";
+import BackupPanel from "@/components/admin/BackupPanel";
+import LegacyImportPanel from "@/components/admin/LegacyImportPanel";
 import Badge from "@/components/ui/Badge";
 import { formatDate } from "@/lib/utils";
+import { retryBackup } from "@/app/admin/(dashboard)/settings/data-actions";
 
 export const dynamic = "force-dynamic";
 
@@ -33,10 +35,10 @@ export default async function AdminSettingsPage() {
 
       <div className="mt-6 max-w-3xl space-y-6">
         <AdminCard
-          title="Google Sheets Sync"
-          description="Supabase is the source of truth. Sheets is a backup/export — imports and backups are both idempotent and safe to run repeatedly."
+          title="Google Sheets Backup"
+          description="Supabase is the source of truth for every property. Google Sheets is backup/export only — every admin save automatically syncs to Sheets after Supabase succeeds; this is for re-syncing everything on demand."
         >
-          <DataSyncPanel />
+          <BackupPanel />
         </AdminCard>
 
         <AdminCard title="Recent Backup Activity">
@@ -44,13 +46,14 @@ export default async function AdminSettingsPage() {
             <p className="text-sm text-ink-faint">No backup attempts logged yet.</p>
           ) : (
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[480px] text-left text-sm">
+              <table className="w-full min-w-[560px] text-left text-sm">
                 <thead className="text-xs uppercase tracking-wide text-ink-faint">
                   <tr>
                     <th className="py-2 pr-3 font-medium">Time</th>
                     <th className="py-2 pr-3 font-medium">Destination</th>
                     <th className="py-2 pr-3 font-medium">Status</th>
                     <th className="py-2 pr-3 font-medium">Error</th>
+                    <th className="py-2 pr-3 font-medium"></th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-line-soft">
@@ -62,12 +65,28 @@ export default async function AdminSettingsPage() {
                         <Badge tone={log.status === "SUCCESS" ? "moss" : "clay"}>{log.status}</Badge>
                       </td>
                       <td className="py-2 pr-3 text-ink-faint">{log.error_message || "—"}</td>
+                      <td className="py-2 pr-3">
+                        {log.status === "FAILED" && (
+                          <form action={retryBackup.bind(null, log.entity_id)}>
+                            <button type="submit" className="text-xs font-medium text-moss-700 hover:underline">
+                              Retry
+                            </button>
+                          </form>
+                        )}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
           )}
+        </AdminCard>
+
+        <AdminCard
+          title="Legacy Tools"
+          description="Manual, one-off migration utilities — not part of normal day-to-day operations."
+        >
+          <LegacyImportPanel />
         </AdminCard>
 
         <AdminCard

@@ -2,15 +2,23 @@
 // POST /api/properties/view
 // -----------------------------------------------------------------------------
 // Called once by the browser when a property detail page loads (see the
-// client-side ViewTracker component). This route is the only thing that
-// tells Google Apps Script to increment a property's View Count — the
-// browser never edits the Google Sheet directly.
+// client-side ViewTracker component). Increments properties.view_count in
+// Supabase directly — Supabase is the source of truth for property data
+// (including view counts, which feed the homepage's "Most Viewed" section),
+// so this no longer goes through Google Apps Script/Sheets at all.
 //
-// Browser → /api/properties/view → Google Apps Script (action: "incrementView") → Sheet
+// Browser -> /api/properties/view -> Supabase (service-role, server-only)
+//
+// Deliberately NOT mirrored to the Sheets backup: the backup sync
+// (lib/admin/sheets-backup.ts) runs after an ADMIN property save, not on
+// every public page view — mirroring every single view here would mean a
+// Google Apps Script POST per page load, which is unnecessary traffic this
+// architecture doesn't call for. The next admin save (or a manual "Run Full
+// Backup Now") will carry the current view count over.
 // -----------------------------------------------------------------------------
 
 import { NextResponse } from "next/server";
-import { GOOGLE_APPS_SCRIPT_URL } from "@/config/integrations";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 export const dynamic = "force-dynamic";
 
@@ -38,51 +46,40 @@ export async function POST(request: Request) {
     );
   }
 
-  if (!GOOGLE_APPS_SCRIPT_URL) {
-    // eslint-disable-next-line no-console
-    console.error("[Subphiphat] Missing Google Apps Script URL for view tracking.");
-    return NextResponse.json(
-      { success: false, error: "View tracking isn't connected yet." },
-      { status: 500 }
-    );
-  }
-
   try {
-    const scriptResponse = await fetch(GOOGLE_APPS_SCRIPT_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "incrementView", slug }),
-    });
+    const supabase = createAdminClient();
 
-    const rawText = await scriptResponse.text();
-    let parsed: { success?: boolean; error?: string } | null = null;
-    try {
-      parsed = rawText ? JSON.parse(rawText) : null;
-    } catch {
-      parsed = null;
+    const { data: property, error: findError } = await supabase
+      .from("properties")
+      .select("id, view_count")
+      .eq("slug", slug)
+      .maybeSingle();
+
+    if (findError) throw new Error(findError.message);
+
+    if (!property) {
+      // Not every slug the public site can render is guaranteed to exist in
+      // Supabase (e.g. the demo-data fallback, which is only ever used when
+      // Supabase itself is unreachable/empty) — view tracking is non-
+      // critical, so this is a quiet no-op, not an error.
+      return NextResponse.json({ success: true, tracked: false });
     }
 
-    if (!scriptResponse.ok || !parsed || parsed.success !== true) {
-      // eslint-disable-next-line no-console
-      console.error(
-        "[Subphiphat] Google Apps Script failed to increment view count:",
-        scriptResponse.status,
-        rawText
-      );
-      return NextResponse.json(
-        { success: false, error: parsed?.error || "Failed to record view." },
-        { status: 502 }
-      );
-    }
+    const { error: updateError } = await supabase
+      .from("properties")
+      .update({ view_count: (property.view_count ?? 0) + 1 })
+      .eq("id", property.id);
 
-    return NextResponse.json({ success: true });
+    if (updateError) throw new Error(updateError.message);
+
+    return NextResponse.json({ success: true, tracked: true });
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error("[Subphiphat] Failed to reach Google Apps Script for view tracking:", error);
-    // View tracking is non-critical — fail quietly with a 200-adjacent error
-    // rather than surfacing anything to the visitor.
+    console.error("[Subphiphat] Failed to increment property view count:", error);
+    // View tracking is non-critical — fail quietly, never surface anything
+    // to the visitor.
     return NextResponse.json(
-      { success: false, error: "Network error while recording view." },
+      { success: false, error: "Failed to record view." },
       { status: 502 }
     );
   }

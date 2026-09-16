@@ -3,18 +3,22 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { getListingType, type Property } from "@/data/properties";
 
 // -----------------------------------------------------------------------------
-// Bridges the app's real, currently-displayed property data (Google Sheets or
-// the demo fallback — see lib/properties-source.ts) into Supabase's
-// `properties` table. Used two ways:
-//   1. Lazily, one property at a time, whenever a guest inquiry/viewing/match
-//      touches a property that isn't in Supabase yet (app/api/inquiries,
-//      app/api/viewings, lib/matching/persist.ts) — this is the ORIGINAL use
-//      of this function, unchanged in shape (still just `syncPropertyToSupabase
-//      (property): Promise<string>`, so none of those three callers needed to
-//      change).
-//   2. In bulk, from the Phase A Sheets importer (lib/admin/sheets-import.ts),
-//      which calls this same function once per Sheet row — so the two code
-//      paths can never drift out of sync on what "syncing a property" means.
+// Bridges a Property object (Sheets- or demo-data-shaped — see
+// lib/properties-source.ts) into Supabase's `properties` table, by upserting
+// on `external_ref`. Supabase is the source of truth for the live site, so
+// in normal operation every property a visitor can see already has a real
+// Supabase row (property.supabaseId is set) and this function is never
+// called for it — see app/api/inquiries/route.ts, app/api/viewings/route.ts,
+// and lib/matching/persist.ts, which all use property.supabaseId directly
+// when present. This function is only actually invoked in two cases:
+//   1. The demo-data fallback (Supabase is unreachable/empty — see
+//      getProperties() in lib/properties-source.ts): a guest inquiry/
+//      viewing/match against a demo property still needs a real Supabase
+//      row to attach its foreign key to.
+//   2. lib/admin/legacy-sheets-import.ts, the manual/one-off Sheets ->
+//      Supabase migration tool — calls this once per Sheet row so that path
+//      and the guest-sync path above can never drift on what "syncing a
+//      property" means.
 //
 // This upserts by `external_ref` (the property's Sheets/demo id, e.g. "p1" or
 // a Sheet row's ID) — the exact bridging key DATABASE_SCHEMA.md documents for

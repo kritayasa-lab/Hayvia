@@ -3,7 +3,22 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { fetchPropertiesFromSheet } from "@/lib/properties-source";
 import { syncPropertyToSupabase } from "@/lib/supabase/properties-sync";
 
-export interface ImportReport {
+// -----------------------------------------------------------------------------
+// LEGACY / MANUAL MIGRATION TOOL — NOT PART OF THE NORMAL APPLICATION FLOW.
+// -----------------------------------------------------------------------------
+// Supabase is the source of truth now; Google Sheets is backup/export only
+// (see lib/admin/sheets-backup.ts for the direction that DOES run
+// automatically, Supabase -> Sheets, after every admin property save).
+//
+// This file is the opposite direction, Sheets -> Supabase, and is
+// deliberately NOT wired into any automatic flow — no admin save, no page
+// load, no scheduled job calls this. It exists only for the one-off/rare
+// manual case of pulling in property rows that still only exist in the old
+// Sheet and were never created directly in Admin. Trigger it explicitly from
+// Admin > Settings > "Legacy Tools" (clearly labeled there as legacy/manual).
+// -----------------------------------------------------------------------------
+
+export interface LegacyImportReport {
   success: boolean;
   error?: string;
   totalInSheet: number;
@@ -16,9 +31,10 @@ export interface ImportReport {
 
 /**
  * Bulk-imports every property currently in Google Sheets into Supabase,
- * idempotently, by calling the same syncPropertyToSupabase() the lazy guest-
- * triggered sync already uses — see that file for exactly which fields sync
- * and which admin-only fields are deliberately never touched.
+ * idempotently, by calling the same syncPropertyToSupabase() the demo-data-
+ * fallback guest-sync path also uses — see that file for exactly which
+ * fields sync and which admin-only fields (owner/agent/source/commission/
+ * private_notes/price_reduced) are deliberately never touched.
  *
  * Deliberately does NOT fall back to demo data on a Sheets fetch failure —
  * that fallback exists for the public website (so a visitor never sees a
@@ -29,7 +45,7 @@ export interface ImportReport {
  * Admin-only — call this from a route/action that has already verified
  * getAdminUser().
  */
-export async function importPropertiesFromSheets(): Promise<ImportReport> {
+export async function legacyImportPropertiesFromSheets(): Promise<LegacyImportReport> {
   const supabase = createAdminClient();
 
   const { count: beforeCount } = await supabase
