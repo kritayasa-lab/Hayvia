@@ -25,8 +25,8 @@
  *      non-Hidden rows as JSON, keyed by header name.
  *
  *   3. doPost(e) with { "action": "incrementView", "slug": "..." }
- *      -> increments that property's View Count by 1, using LockService to
- *      stay safe under concurrent requests.
+ *      -> increments that property's View Count by 1. No lock (see
+ *      handleIncrementView() below for why it was removed).
  *
  *   4. doPost(e) with { "action": "upsertProperty", "property": {...} }
  *      -> Supabase -> Sheets backup. Writes to a SEPARATE spreadsheet —
@@ -205,9 +205,22 @@ function handleLeadSubmission(data) {
 
 /**
  * Increments View Count (column AF) for one property, matched by Slug
- * (falling back to ID if Slug is blank on that row). Uses LockService so
- * concurrent requests can't read-modify-write the same cell and lose an
- * increment.
+ * (falling back to ID if Slug is blank on that row).
+ *
+ * NO LOCK: previously used LockService.getScriptLock(), which is scoped to
+ * the whole script project and was therefore shared with
+ * handleUpsertProperty()'s lock below — an unrelated function writing to a
+ * completely different spreadsheet. That sharing caused handleUpsertProperty
+ * to intermittently fail with "Could not acquire lock in time." Removed
+ * here (read-only audit confirmed this is safe — see the trade-off note
+ * below); handleUpsertProperty's own lock is untouched.
+ *
+ * Trade-off: without a lock, two near-simultaneous views of the SAME
+ * property could theoretically both read the same starting count and each
+ * write back count+1, losing one increment. That's a low-stakes, self-
+ * correcting cosmetic risk on a view counter — not duplicate rows, not data
+ * loss on the property record itself, and unrelated to the Sheets backup's
+ * idempotency guarantees (handleUpsertProperty, unchanged below).
  */
 function handleIncrementView(data) {
   var slug = String(data.slug || "").trim();
@@ -217,15 +230,7 @@ function handleIncrementView(data) {
     return jsonResponse({ success: false, error: "A property slug or id is required." });
   }
 
-  var lock = LockService.getScriptLock();
-  var gotLock = false;
-
   try {
-    gotLock = lock.waitLock(10000); // wait up to 10 seconds
-    if (!gotLock) {
-      return jsonResponse({ success: false, error: "Could not acquire lock in time." });
-    }
-
     var sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(PROPERTIES_SHEET_NAME);
     if (!sheet) {
       return jsonResponse({ success: false, error: "Properties sheet not found." });
@@ -282,10 +287,6 @@ function handleIncrementView(data) {
     return jsonResponse({ success: true });
   } catch (error) {
     return jsonResponse({ success: false, error: String(error) });
-  } finally {
-    if (gotLock) {
-      lock.releaseLock();
-    }
   }
 }
 
