@@ -1,6 +1,7 @@
 import "server-only";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { normalizeToE164 } from "@/lib/auth/phone";
+import { lookupCustomerByContact, normalizeEmail, type CustomerRow } from "@/lib/customers/lookup";
 
 // -----------------------------------------------------------------------------
 // Customer Identity Foundation — Phase 1.
@@ -46,20 +47,6 @@ export interface CustomerConflict {
 
 export type FindOrCreateCustomerResult = CustomerResolved | CustomerConflict;
 
-interface CustomerRow {
-  id: string;
-  full_name: string | null;
-  email: string | null;
-  phone: string | null;
-  phone_e164: string | null;
-}
-
-function normalizeEmail(raw: string | null | undefined): string | null {
-  if (!raw) return null;
-  const trimmed = raw.trim().toLowerCase();
-  return trimmed || null;
-}
-
 /**
  * Finds or creates the single `customers` row representing a real person.
  * Server-side only — `customers` has no anon/authenticated grants at all
@@ -85,33 +72,18 @@ export async function findOrCreateCustomer(
 
   const supabase = createAdminClient();
 
-  const [byEmail, byPhone] = await Promise.all([
-    email
-      ? supabase
-          .from("customers")
-          .select("id, full_name, email, phone, phone_e164")
-          .eq("email", email)
-          .maybeSingle()
-      : Promise.resolve({ data: null }),
-    phoneE164
-      ? supabase
-          .from("customers")
-          .select("id, full_name, email, phone, phone_e164")
-          .eq("phone_e164", phoneE164)
-          .maybeSingle()
-      : Promise.resolve({ data: null }),
-  ]);
+  const lookup = await lookupCustomerByContact(supabase, email, phoneE164);
 
-  const emailMatch = (byEmail.data as CustomerRow | null) ?? null;
-  const phoneMatch = (byPhone.data as CustomerRow | null) ?? null;
-
-  if (emailMatch && phoneMatch && emailMatch.id !== phoneMatch.id) {
-    return { status: "conflict", emailCustomerId: emailMatch.id, phoneCustomerId: phoneMatch.id };
+  if (lookup.status === "conflict") {
+    return {
+      status: "conflict",
+      emailCustomerId: lookup.emailMatch!.id,
+      phoneCustomerId: lookup.phoneMatch!.id,
+    };
   }
 
-  const existing = emailMatch ?? phoneMatch;
-
-  if (existing) {
+  if (lookup.status === "matched") {
+    const existing = lookup.customer as CustomerRow;
     // Fill in only what's currently missing on this customer — never
     // overwrite an already-known contact channel with a fresh, unverified
     // one from this submission. Phase 1 has no verification flow yet, so
