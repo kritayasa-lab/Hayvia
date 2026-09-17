@@ -55,6 +55,13 @@ created in earlier ones.
 | `lead_status_history` | Every status transition a lead went through, for a full audit trail. | → `leads`, cascade delete. |
 | `viewings` | Viewing requests, separate from generic inquiries since they carry a date/time/status. | → `properties`, optional → `leads`. |
 
+### Customer identity (Phase 1 — migration 16, schema only)
+| Table | Purpose | Key relationships |
+|---|---|---|
+| `customers` | **Private.** Unified CRM identity — one row per real person, independent of whether they ever authenticate. `profile_id` is nullable/unique/optional: a customer can exist forever as a pure guest, and only links to `profiles` if/when that person authenticates by some future means (nothing does yet). Matched only by exact normalized email and/or exact normalized phone (E.164) — see `lib/customers/identity.ts`'s `findOrCreateCustomer()`. | Optional → `profiles`. Referenced by nullable `customer_id` on `leads`, `inquiries`, `viewings`, `seller_leads`, `matching_preferences`. |
+
+Phase 1 adds the `customers` table and nullable `customer_id` columns only — no existing form/route writes to them yet, and no existing row has been backfilled. That wiring is a later phase, done once this foundation is verified. See the Customer Identity design report for the full architecture and rationale.
+
 ### Customer engagement
 | Table | Purpose | Key relationships |
 |---|---|---|
@@ -134,11 +141,13 @@ were also added for `locations`, `amenities`, `property_images`, and
 assumption about Supabase's default table privileges.
 
 **Fully private tables** (no public read at all, not even a filtered view):
-`owners`, `agents`, `admin_users`, `audit_logs`, `backup_logs`. RLS is
-enabled with zero policies for `anon`/`authenticated`, **and** (as of
-migration 11) all table-level grants to those roles are explicitly revoked
-too — a deliberate defense-in-depth choice for the five tables that should
-never be reachable by anon/authenticated even after Phase 11, so a single
+`owners`, `agents`, `admin_users`, `audit_logs`, `backup_logs`, and (as of
+migration 16) `customers` — it contains PII (name/email/phone) and gets the
+exact same treatment. RLS is enabled with zero policies for
+`anon`/`authenticated`, **and** (as of migration 11) all table-level grants
+to those roles are explicitly revoked too — a deliberate defense-in-depth
+choice for tables that should never be reachable by anon/authenticated,
+even after Phase 11, so a single
 future mistake (an accidental permissive policy, say) isn't enough on its
 own to expose them. These are only reachable via the service-role key,
 server-side.
