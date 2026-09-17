@@ -53,6 +53,7 @@ const navSections: NavSection[] = [
   {
     title: "CRM",
     items: [
+      { href: "/admin/customers", label: "Customers", icon: UserSquare2 },
       { href: "/admin/leads", label: "Leads", icon: Users },
       { href: "/admin/inquiries", label: "Inquiries", icon: MessageSquare },
       { href: "/admin/viewings", label: "Viewing Requests", icon: CalendarClock },
