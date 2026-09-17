@@ -6,17 +6,35 @@
 // -----------------------------------------------------------------------------
 
 /**
- * Google Apps Script Web App URL for the Subphiphat Real Estate integration.
- * Deploy the Apps Script as a Web App (Execute as: Me, Who has access: Anyone),
- * then paste the resulting /exec URL here.
- *
- * This single endpoint now serves three purposes (see google-apps-script/Code.gs):
+ * Google Apps Script Web App URL for the LEGACY "HAYVIA" project
+ * (google-apps-script/Code.gs). Still used for the two purposes that script
+ * still owns:
  *   - POST (Get Matched lead payload, no "action" field) -> appends to "HAYVIA — Leads"
- *   - GET                                                -> reads "HAYVIA — Properties"
- *   - POST { action: "incrementView", slug }             -> increments a property's View Count
+ *     (lib/google-apps-script.ts, used by app/api/get-matched and app/api/match)
+ *   - GET -> reads "HAYVIA — Properties"
+ *     (lib/properties-source.ts's fetchPropertiesFromSheet(), used ONLY by
+ *     the isolated, manual lib/admin/legacy-sheets-import.ts — never by the
+ *     public site's read path, which is Supabase-only)
  *
- * To point this at a different endpoint later (a new deployment, a different
- * backend entirely, etc.), this is the only line that needs to change.
+ * Property-view-count tracking and Supabase -> Sheets backup no longer use
+ * this URL — see GOOGLE_APPS_SCRIPT_BACKUP_URL below for backup, and
+ * app/api/properties/view/route.ts (writes to Supabase directly) for view
+ * counts.
  */
 export const GOOGLE_APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbx2QuPiwG2LcqG2m2ByhylgsJ88_ZsRqogLlKDyy-U4wMs6PeSa2_dFjyjYgvRKe9_IWQ/exec";
+
+/**
+ * Google Apps Script Web App URL for the NEW, standalone, backup-only
+ * project (see the "Properties Backup" Code.gs reviewed and approved
+ * separately from google-apps-script/Code.gs — this repo does not currently
+ * keep a copy of that script's source). Supports exactly one action,
+ * { "action": "upsertProperty", "property": {...} }, and writes only to the
+ * "SUBPHIPHAT REAL ESTATE — BACKUP" spreadsheet's "Properties Backup" tab.
+ *
+ * Used ONLY by lib/admin/sheets-backup.ts. Does not implement Get Matched,
+ * property reads, or view counting — do not point lib/google-apps-script.ts
+ * or lib/properties-source.ts's fetchPropertiesFromSheet() at this URL.
+ */
+export const GOOGLE_APPS_SCRIPT_BACKUP_URL =
+  "https://script.google.com/macros/s/AKfycbzl2Wo6qXvX5M5F0Qs2C2QVsuXbgoMksbjLdbfJaD8EMzwJgTUmwl97Jln6gOEaQycjGA/exec";

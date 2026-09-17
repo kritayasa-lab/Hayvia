@@ -4,6 +4,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { fetchOwners, fetchAgents } from "@/lib/admin/people";
 import PropertyForm from "@/components/admin/PropertyForm";
 import AdminCard from "@/components/admin/AdminCard";
+import SaveStatusBanner from "@/components/admin/SaveStatusBanner";
 import {
   updateProperty,
   addPropertyImage,
@@ -38,7 +39,13 @@ async function loadProperty(id: string) {
   };
 }
 
-export default async function EditPropertyPage({ params }: { params: { id: string } }) {
+export default async function EditPropertyPage({
+  params,
+  searchParams,
+}: {
+  params: { id: string };
+  searchParams: { created?: string; saved?: string; backup?: string };
+}) {
   const [{ property, images, amenities, selectedAmenityIds }, owners, agents] = await Promise.all([
     loadProperty(params.id),
     fetchOwners(),
@@ -47,10 +54,17 @@ export default async function EditPropertyPage({ params }: { params: { id: strin
 
   if (!property) notFound();
 
+  const backupStatus =
+    searchParams.backup === "success" || searchParams.backup === "pending" ? searchParams.backup : null;
+
   return (
     <div>
       <h1 className="font-display text-2xl text-ink">{property.title}</h1>
       <p className="mt-1 text-sm text-ink-faint">Property ID: {property.id}</p>
+
+      <div className="mt-4">
+        <SaveStatusBanner justCreated={searchParams.created === "1"} backupStatus={backupStatus} />
+      </div>
 
       <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[1.4fr_1fr]">
         <AdminCard title="Details">

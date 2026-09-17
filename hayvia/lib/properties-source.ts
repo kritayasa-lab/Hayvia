@@ -1,24 +1,31 @@
 // -----------------------------------------------------------------------------
 // Property data source
 // -----------------------------------------------------------------------------
-// PHASE A: Supabase is now the SOURCE OF TRUTH (see supabase/DATABASE_SCHEMA.md
-// and the Phase A audit report). Read order:
+// Supabase is the SOURCE OF TRUTH. Google Sheets is backup/export only — the
+// public website no longer reads properties from Sheets/Apps Script at all.
 //
+//   Admin CMS -> Supabase (source of truth) -> Public website
+//                    |
+//                    v
+//              Google Sheets (backup only, written by lib/admin/sheets-backup.ts
+//              after a successful Supabase write; never read by the public site)
+//
+// getProperties() below is the single entry point every page/route uses.
+// Read order:
 //   1. Supabase `public_properties` (+ property_images, property_amenities) —
 //      via the anon-key client (lib/supabase/server.ts), which respects RLS.
-//      Used whenever this returns at least one property.
-//   2. The "HAYVIA — Properties" Google Sheet, via the existing Google Apps
-//      Script Web App (config/integrations.ts) — used only when Supabase has
-//      zero properties (e.g. the bulk import hasn't been run yet). This is
-//      the ORIGINAL primary source from before Phase A, kept exactly as-is,
-//      purely as a fallback now.
-//   3. The hardcoded demo data in data/properties.ts — used only if both of
-//      the above fail or are empty, so the site never shows a broken page.
+//      Used whenever this returns at least one property. This is the ONLY
+//      live data source for the public site.
+//   2. The hardcoded demo data in data/properties.ts — used only if Supabase
+//      is unreachable or genuinely empty (e.g. before any property has ever
+//      been created in Admin), so the site never shows a broken/blank page.
+//      This is a resilience fallback, not a second data source to keep in
+//      sync with anything — it never touches Google Sheets.
 //
-// This three-way fallback is intentionally isolated to `getProperties()`
-// below — every caller (Server Components, app/api/properties/route.ts,
-// the matching engine) is unaffected by which source actually served a
-// given request.
+// Google Sheets is fetched from application code in exactly one place now:
+// lib/admin/legacy-sheets-import.ts, a manual, admin-triggered, one-off
+// migration tool — explicitly NOT part of this normal read path. See that
+// file for why it still exists and why it's isolated.
 // -----------------------------------------------------------------------------
 
 import { cache } from "react";
@@ -30,7 +37,7 @@ import {
 import { slugify } from "@/lib/utils";
 import { createClient } from "@/lib/supabase/server";
 
-export type PropertiesSource = "supabase" | "sheets" | "fallback";
+export type PropertiesSource = "supabase" | "fallback";
 
 interface RawSheetRow {
   [header: string]: unknown;
@@ -174,11 +181,15 @@ function mapSheetRowToProperty(row: RawSheetRow): Property | null {
 /**
  * Fetches and maps properties from the Google Apps Script Web App. Throws on
  * any failure (network error, non-2xx status, invalid/unsuccessful response
- * shape) so callers can decide to fall back. Exported (not just used via
- * `getProperties()`) for lib/admin/sheets-import.ts, which needs the REAL
- * Sheet data specifically — importing the demo-data fallback into Supabase
- * as if it were real inventory would be wrong, so the importer must see a
- * genuine failure here rather than a silently-substituted fallback.
+ * shape).
+ *
+ * LEGACY — not part of the public read path. This is called from exactly
+ * one place: lib/admin/legacy-sheets-import.ts, the manual/one-off Sheets ->
+ * Supabase migration tool. getProperties() below (the public site's actual
+ * data source) never calls this. Exported only so that legacy importer can
+ * use it directly and see a genuine failure rather than a silently-
+ * substituted fallback (importing demo data into Supabase as if it were
+ * real inventory would be wrong).
  */
 export async function fetchPropertiesFromSheet(): Promise<Property[]> {
   if (!GOOGLE_APPS_SCRIPT_URL) {
@@ -372,13 +383,13 @@ async function fetchPropertiesFromSupabase(): Promise<Property[]> {
  * (e.g. a page's generateMetadata + the page component itself) only hit the
  * same source once.
  *
- * Phase A read order:
+ * Read order — Supabase is the ONLY live source; Google Sheets is never
+ * read here:
  *   1. Supabase — source: "supabase" — used whenever it returns at least one
- *      property. This is now the source of truth.
- *   2. Google Sheets — source: "sheets" — used only when Supabase has none
- *      (e.g. the bulk import hasn't been run yet on this project).
- *   3. Hardcoded demo data — source: "fallback" — used only if both of the
- *      above fail or are empty, so the site never shows a broken page.
+ *      property. This is the source of truth.
+ *   2. Hardcoded demo data — source: "fallback" — used only when Supabase is
+ *      unreachable or genuinely has zero properties, so the site never shows
+ *      a broken/blank page. This does NOT fall back to Google Sheets.
  */
 export const getProperties = cache(async (): Promise<{
   properties: Property[];
@@ -389,17 +400,11 @@ export const getProperties = cache(async (): Promise<{
     return { properties: supabaseProperties, source: "supabase" };
   }
 
-  try {
-    const sheetProperties = await fetchPropertiesFromSheet();
-    return { properties: sheetProperties, source: "sheets" };
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(
-      "[Subphiphat] Falling back to demo property data — Supabase is empty and Google Sheets fetch failed:",
-      error
-    );
-    return { properties: demoProperties, source: "fallback" };
-  }
+  // eslint-disable-next-line no-console
+  console.error(
+    "[Subphiphat] Falling back to demo property data — Supabase returned zero properties or is unreachable. Google Sheets is not used as a fallback for public reads."
+  );
+  return { properties: demoProperties, source: "fallback" };
 });
 
 export function findPropertyBySlug(list: Property[], slug: string): Property | undefined {
@@ -448,43 +453,3 @@ export function getLatestProperties(
     .slice(0, limit);
 }
 
-/**
- * Sends a view-increment request for a single property to our own
- * /api/properties/view route (server-side helper, not used by the browser —
- * the browser calls the API route directly via fetch from a client
- * component). Exported mainly for symmetry/testing; the API route below
- * talks to Apps Script directly.
- */
-export async function incrementPropertyView(
-  slug: string
-): Promise<{ success: boolean; error?: string }> {
-  if (!GOOGLE_APPS_SCRIPT_URL) {
-    return { success: false, error: "Missing Google Apps Script URL." };
-  }
-
-  try {
-    const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "incrementView", slug }),
-    });
-
-    const rawText = await response.text();
-    let data: { success?: boolean; error?: string } = {};
-    try {
-      data = rawText ? JSON.parse(rawText) : {};
-    } catch {
-      data = {};
-    }
-
-    if (!response.ok || data.success !== true) {
-      return { success: false, error: data.error || "Failed to record view." };
-    }
-
-    return { success: true };
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error("[Subphiphat] Failed to increment property view:", error);
-    return { success: false, error: "Network error while recording view." };
-  }
-}

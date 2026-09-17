@@ -20,13 +20,19 @@ function requireString(formData: FormData, key: string): string {
  * logs to backup_logs) and its outcome never affects whether the admin's
  * save is reported as successful — awaited only so the attempt actually
  * completes before this serverless function returns, not to gate on it.
+ * Returns "success" | "pending" (never lets a backup failure look like a
+ * save failure) so the caller can tell the admin which one happened —
+ * "Saved to Supabase. Google Sheets backup pending." vs "Backed up to
+ * Google Sheets." — without ever implying the property itself failed to save.
  */
-async function backupNewPropertyToSheets(propertyId: string) {
+async function backupNewPropertyToSheets(propertyId: string): Promise<"success" | "pending"> {
   try {
-    await backupPropertyToSheets(propertyId);
+    const result = await backupPropertyToSheets(propertyId);
+    return result.success ? "success" : "pending";
   } catch {
     // backupPropertyToSheets shouldn't throw, but this is defense in depth —
     // a backup failure must never surface as a property-save failure.
+    return "pending";
   }
 }
 
@@ -122,9 +128,9 @@ export async function createProperty(
     return { error: error?.message || "Failed to create property." };
   }
 
-  await backupNewPropertyToSheets(data.id);
+  const backupStatus = await backupNewPropertyToSheets(data.id);
 
-  redirect(`/admin/properties/${data.id}?created=1`);
+  redirect(`/admin/properties/${data.id}?created=1&backup=${backupStatus}`);
 }
 
 export async function updateProperty(
@@ -161,9 +167,9 @@ export async function updateProperty(
     return { error: error.message || "Failed to save changes." };
   }
 
-  await backupNewPropertyToSheets(id);
+  const backupStatus = await backupNewPropertyToSheets(id);
 
-  redirect(`/admin/properties/${id}?saved=1`);
+  redirect(`/admin/properties/${id}?saved=1&backup=${backupStatus}`);
 }
 
 // -----------------------------------------------------------------------

@@ -25,19 +25,20 @@
  *      non-Hidden rows as JSON, keyed by header name.
  *
  *   3. doPost(e) with { "action": "incrementView", "slug": "..." }
- *      -> increments that property's View Count by 1, using LockService to
- *      stay safe under concurrent requests.
+ *      -> increments that property's View Count by 1. No lock (see
+ *      handleIncrementView() below for why it was removed).
  *
  *   4. doPost(e) with { "action": "upsertProperty", "property": {...} }
- *      -> Phase A: Supabase -> Sheets backup. Finds the existing row by ID
- *      (column A) and overwrites it in place, or appends a new row if no
- *      row with that ID exists yet. See handleUpsertProperty() below.
- *      IMPORTANT: only ever writes the SAME public-safe columns (A-AF) this
- *      sheet has always had — owner/agent/source/commission/private notes
- *      are NEVER included here, because this is the exact sheet the public
- *      website's Sheets fallback reads from (doGet, above). A private
- *      admin-only backup destination, if ever needed, must be a SEPARATE
- *      sheet/tab — never this one.
+ *      -> Supabase -> Sheets backup. Writes to a SEPARATE spreadsheet —
+ *      SUBPHIPHAT REAL ESTATE — BACKUP, tab "Properties Backup"
+ *      (BACKUP_SPREADSHEET_ID / BACKUP_PROPERTIES_SHEET_NAME below) — NOT
+ *      the legacy HAYVIA spreadsheet every other handler in this file uses.
+ *      Finds the existing row by ID and overwrites it in place, or appends
+ *      a new row if no row with that ID exists yet. See
+ *      handleUpsertProperty() below. IMPORTANT: only ever writes the
+ *      public-safe fields lib/admin/sheets-backup.ts sends — owner/agent/
+ *      source/commission/private notes are NEVER included in that payload,
+ *      so they can never land in this sheet either.
  *
  * Response shape is always JSON, via ContentService:
  *   { "success": true, ... }
@@ -52,6 +53,13 @@
 var SPREADSHEET_ID = "15nxBmRBs185Mw3kIWoSlkVDp_KPxjvRYeCNkMo5LAJg";
 var LEADS_SHEET_NAME = "HAYVIA — Leads";
 var PROPERTIES_SHEET_NAME = "HAYVIA — Properties";
+
+// Separate backup destination (SUBPHIPHAT REAL ESTATE — BACKUP). Used ONLY by
+// handleUpsertProperty() below — every other handler in this file still
+// reads/writes the legacy HAYVIA spreadsheet via SPREADSHEET_ID above,
+// unchanged.
+var BACKUP_SPREADSHEET_ID = "1LXS9kEaBk10TpnSR417_BFPjTCrMxUbhXHpa6cPNi4";
+var BACKUP_PROPERTIES_SHEET_NAME = "Properties Backup";
 
 // -----------------------------------------------------------------------
 // doGet — reads HAYVIA — Properties
@@ -197,9 +205,22 @@ function handleLeadSubmission(data) {
 
 /**
  * Increments View Count (column AF) for one property, matched by Slug
- * (falling back to ID if Slug is blank on that row). Uses LockService so
- * concurrent requests can't read-modify-write the same cell and lose an
- * increment.
+ * (falling back to ID if Slug is blank on that row).
+ *
+ * NO LOCK: previously used LockService.getScriptLock(), which is scoped to
+ * the whole script project and was therefore shared with
+ * handleUpsertProperty()'s lock below — an unrelated function writing to a
+ * completely different spreadsheet. That sharing caused handleUpsertProperty
+ * to intermittently fail with "Could not acquire lock in time." Removed
+ * here (read-only audit confirmed this is safe — see the trade-off note
+ * below); handleUpsertProperty's own lock is untouched.
+ *
+ * Trade-off: without a lock, two near-simultaneous views of the SAME
+ * property could theoretically both read the same starting count and each
+ * write back count+1, losing one increment. That's a low-stakes, self-
+ * correcting cosmetic risk on a view counter — not duplicate rows, not data
+ * loss on the property record itself, and unrelated to the Sheets backup's
+ * idempotency guarantees (handleUpsertProperty, unchanged below).
  */
 function handleIncrementView(data) {
   var slug = String(data.slug || "").trim();
@@ -209,15 +230,7 @@ function handleIncrementView(data) {
     return jsonResponse({ success: false, error: "A property slug or id is required." });
   }
 
-  var lock = LockService.getScriptLock();
-  var gotLock = false;
-
   try {
-    gotLock = lock.waitLock(10000); // wait up to 10 seconds
-    if (!gotLock) {
-      return jsonResponse({ success: false, error: "Could not acquire lock in time." });
-    }
-
     var sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(PROPERTIES_SHEET_NAME);
     if (!sheet) {
       return jsonResponse({ success: false, error: "Properties sheet not found." });
@@ -274,23 +287,25 @@ function handleIncrementView(data) {
     return jsonResponse({ success: true });
   } catch (error) {
     return jsonResponse({ success: false, error: String(error) });
-  } finally {
-    if (gotLock) {
-      lock.releaseLock();
-    }
   }
 }
 
 /**
- * Upserts one property row into "HAYVIA — Properties", matched by ID
- * (column A). Looks up each column by header name (like handleIncrementView
- * above) rather than a hardcoded column index, so it keeps working even if
- * columns are reordered later. Writes ONLY the same public-safe columns this
- * sheet has always had (A-AF) — see the file-level comment for why owner/
- * agent/source/commission/private-notes must never appear here.
+ * Upserts one property row into the SEPARATE backup spreadsheet/tab
+ * (BACKUP_SPREADSHEET_ID / "Properties Backup" — SUBPHIPHAT REAL ESTATE —
+ * BACKUP), matched by ID (column "ID"). Looks up each column by header name
+ * (like handleIncrementView above) rather than a hardcoded column index, so
+ * it keeps working even if columns are reordered later, and so it only ever
+ * writes columns that already exist as headers on that tab. Writes ONLY the
+ * public-safe fields lib/admin/sheets-backup.ts sends — owner/agent/source/
+ * commission/private-notes are never part of that payload, so they can never
+ * appear here either. Deliberately targets a DIFFERENT spreadsheet than
+ * every other handler in this file (doGet, handleLeadSubmission,
+ * handleIncrementView all still use the legacy HAYVIA spreadsheet via
+ * SPREADSHEET_ID, unchanged).
  *
  * Expected payload: { "action": "upsertProperty", "property": { "ID": "...",
- * "Status": "...", "Title": "...", ... one key per sheet column ... } }
+ * "Status": "...", "Title": "...", ... one key per Properties Backup column ... } }
  */
 function handleUpsertProperty(data) {
   var property = data.property || {};
@@ -309,9 +324,12 @@ function handleUpsertProperty(data) {
       return jsonResponse({ success: false, error: "Could not acquire lock in time." });
     }
 
-    var sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(PROPERTIES_SHEET_NAME);
+    var sheet = SpreadsheetApp.openById(BACKUP_SPREADSHEET_ID).getSheetByName(BACKUP_PROPERTIES_SHEET_NAME);
     if (!sheet) {
-      return jsonResponse({ success: false, error: "Properties sheet not found." });
+      return jsonResponse({
+        success: false,
+        error: "Backup Properties sheet not found. Check BACKUP_SPREADSHEET_ID / BACKUP_PROPERTIES_SHEET_NAME in Code.gs.",
+      });
     }
 
     var values = sheet.getDataRange().getValues();
@@ -320,7 +338,7 @@ function handleUpsertProperty(data) {
     if (headers.length === 0) {
       return jsonResponse({
         success: false,
-        error: "Properties sheet has no header row — cannot map columns.",
+        error: "Backup Properties sheet has no header row — cannot map columns.",
       });
     }
 
