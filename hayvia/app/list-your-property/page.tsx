@@ -16,7 +16,7 @@ export default function ListYourPropertyPage() {
           Have a property in Hat Yai?
         </h1>
         <p className="mt-3 text-ink-soft">
-          Tell us about your property and we'll review it for inclusion on Subphiphat Real Estate.
+          Tell us about your property and we&apos;ll review it for inclusion on Subphiphat Real Estate.
         </p>
       </div>
 
