@@ -13,6 +13,7 @@ import { NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { syncPropertyToSupabase } from "@/lib/supabase/properties-sync";
 import { getProperties, findPropertyBySlug } from "@/lib/properties-source";
+import { findOrCreateCustomer } from "@/lib/customers/identity";
 
 export const dynamic = "force-dynamic";
 
@@ -67,6 +68,31 @@ export async function POST(request: Request) {
     const propertyId = property.supabaseId ?? (await syncPropertyToSupabase(property));
     const supabase = createAdminClient();
 
+    // Customer identity resolution — best-effort, never blocks or fails the
+    // viewing request itself. Same rules as /api/inquiries: exact
+    // normalized email/phone match only, a "conflict" is logged for manual
+    // review rather than guessed at.
+    let customerId: string | null = null;
+    try {
+      const customerResult = await findOrCreateCustomer({
+        fullName: `${firstName} ${lastName}`,
+        email,
+        phone,
+        firstSeenSource: "VIEWING",
+      });
+      if (customerResult.status === "conflict") {
+        // eslint-disable-next-line no-console
+        console.error(
+          `[Subphiphat] Customer identity conflict on viewing request (email -> customer ${customerResult.emailCustomerId}, phone -> customer ${customerResult.phoneCustomerId}) — leaving customer_id unset for manual review.`
+        );
+      } else {
+        customerId = customerResult.customerId;
+      }
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error("[Subphiphat] Customer identity resolution failed for viewing request:", err);
+    }
+
     const { error } = await supabase.from("viewings").insert({
       property_id: propertyId,
       viewing_type: payload.viewingType === "Video Call" ? "VIDEO_CALL" : "IN_PERSON",
@@ -77,6 +103,7 @@ export async function POST(request: Request) {
       customer_email: email,
       notes: payload.message?.trim() || null,
       status: "REQUESTED",
+      customer_id: customerId,
     });
 
     if (error) throw new Error(error.message);

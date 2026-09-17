@@ -14,6 +14,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { syncPropertyToSupabase } from "@/lib/supabase/properties-sync";
 import { getProperties, findPropertyBySlug } from "@/lib/properties-source";
 import { getListingType } from "@/data/properties";
+import { findOrCreateCustomer } from "@/lib/customers/identity";
 
 export const dynamic = "force-dynamic";
 
@@ -67,6 +68,32 @@ export async function POST(request: Request) {
     const propertyId = property.supabaseId ?? (await syncPropertyToSupabase(property));
     const supabase = createAdminClient();
 
+    // Customer identity resolution — best-effort, never blocks or fails the
+    // inquiry itself. Matches only by exact normalized email/phone (see
+    // lib/customers/identity.ts); a "conflict" (email and phone belong to
+    // two different existing customers) is logged for manual review rather
+    // than guessed at — customer_id is simply left unset in that case.
+    let customerId: string | null = null;
+    try {
+      const customerResult = await findOrCreateCustomer({
+        fullName: `${firstName} ${lastName}`,
+        email,
+        phone: whatsapp,
+        firstSeenSource: "INQUIRY",
+      });
+      if (customerResult.status === "conflict") {
+        // eslint-disable-next-line no-console
+        console.error(
+          `[Subphiphat] Customer identity conflict on inquiry submission (email -> customer ${customerResult.emailCustomerId}, phone -> customer ${customerResult.phoneCustomerId}) — leaving customer_id unset for manual review.`
+        );
+      } else {
+        customerId = customerResult.customerId;
+      }
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error("[Subphiphat] Customer identity resolution failed for inquiry:", err);
+    }
+
     const { data: inquiry, error: inquiryError } = await supabase
       .from("inquiries")
       .insert({
@@ -77,6 +104,7 @@ export async function POST(request: Request) {
         message: payload.additionalRequirements?.trim() || null,
         inquiry_type: "ENQUIRE",
         status: "NEW",
+        customer_id: customerId,
       })
       .select("id")
       .single();
@@ -98,6 +126,7 @@ export async function POST(request: Request) {
       customer_phone: whatsapp,
       lead_type: getListingType(property) === "sale" ? "BUY" : "RENT",
       status: "NEW",
+      customer_id: customerId,
     });
     if (leadError) {
       // eslint-disable-next-line no-console
