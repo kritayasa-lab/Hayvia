@@ -132,13 +132,13 @@ export default async function AdminDashboardPage() {
       </p>
 
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-        <StatCard label="Active Properties" value={data.activeProperties} href="/admin/properties" icon={Building2} />
-        <StatCard label="For Rent" value={data.forRent} href="/admin/rent" icon={Home} />
-        <StatCard label="For Sale" value={data.forSale} href="/admin/buy" icon={Tag} />
-        <StatCard label="New Inquiries" value={data.newInquiries} href="/admin/inquiries" icon={MessageSquare} tone="accent" />
-        <StatCard label="Pending Viewings" value={data.pendingViewings} href="/admin/viewings" icon={CalendarClock} tone="accent" />
-        <StatCard label="New Matching Requests" value={data.newMatching} href="/admin/matching" icon={Sparkles} tone="accent" />
-        <StatCard label="New Seller Leads" value={data.newSellerLeads} href="/admin/seller-leads" icon={UserPlus} tone="accent" />
+        <StatCard label="Active Properties" value={data.activeProperties} href="/admin/properties" icon={<Building2 size={16} />} />
+        <StatCard label="For Rent" value={data.forRent} href="/admin/rent" icon={<Home size={16} />} />
+        <StatCard label="For Sale" value={data.forSale} href="/admin/buy" icon={<Tag size={16} />} />
+        <StatCard label="New Inquiries" value={data.newInquiries} href="/admin/inquiries" icon={<MessageSquare size={16} />} tone="accent" />
+        <StatCard label="Pending Viewings" value={data.pendingViewings} href="/admin/viewings" icon={<CalendarClock size={16} />} tone="accent" />
+        <StatCard label="New Matching Requests" value={data.newMatching} href="/admin/matching" icon={<Sparkles size={16} />} tone="accent" />
+        <StatCard label="New Seller Leads" value={data.newSellerLeads} href="/admin/seller-leads" icon={<UserPlus size={16} />} tone="accent" />
       </div>
 
       <div className="mt-8">
