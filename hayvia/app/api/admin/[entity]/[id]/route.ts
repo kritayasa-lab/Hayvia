@@ -43,6 +43,20 @@ export async function PATCH(
   }
 
   const supabase = createAdminClient();
+
+  // Leads only (Phase 1 CRM): capture the prior status before updating so the
+  // transition can be recorded in lead_status_history below. Every other
+  // entity's update path is unchanged.
+  let previousLeadStatus: string | null = null;
+  if (params.entity === "leads") {
+    const { data: existingLead } = await supabase
+      .from("leads")
+      .select("status")
+      .eq("id", params.id)
+      .single();
+    previousLeadStatus = existingLead?.status ?? null;
+  }
+
   const { error } = await supabase
     .from(config.table)
     .update({ [config.column]: payload.status })
@@ -55,6 +69,21 @@ export async function PATCH(
       { success: false, error: "Failed to update status." },
       { status: 502 }
     );
+  }
+
+  if (params.entity === "leads" && previousLeadStatus !== null && previousLeadStatus !== payload.status) {
+    const { error: historyError } = await supabase.from("lead_status_history").insert({
+      lead_id: params.id,
+      from_status: previousLeadStatus,
+      to_status: payload.status,
+      changed_by: admin.id,
+    });
+    if (historyError) {
+      // The status update itself already succeeded — never fail the request
+      // over the history row, just surface it in server logs.
+      // eslint-disable-next-line no-console
+      console.error(`[Subphiphat Admin] Failed to write lead_status_history for ${params.id}:`, historyError);
+    }
   }
 
   return NextResponse.json({ success: true });

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { fetchViewings } from "@/lib/admin/crm";
 import StatusSelect from "@/components/admin/StatusSelect";
 import { statusEntities } from "@/lib/admin/status-config";
@@ -38,7 +39,14 @@ export default async function AdminViewingsPage() {
             ) : (
               viewings.map((viewing) => (
                 <tr key={viewing.id} className="align-top hover:bg-line-soft/30">
-                  <td className="px-4 py-3 font-medium text-ink">{viewing.customer_name || "—"}</td>
+                  <td className="px-4 py-3">
+                    <Link
+                      href={`/admin/viewings/${viewing.id}`}
+                      className="font-medium text-ink hover:text-moss-700 hover:underline"
+                    >
+                      {viewing.customer_name || "—"}
+                    </Link>
+                  </td>
                   <td className="px-4 py-3 text-ink-soft">{viewing.property_title}</td>
                   <td className="whitespace-nowrap px-4 py-3 text-ink-soft">
                     {viewing.viewing_type === "VIDEO_CALL" ? "Video Call" : "In-person"}

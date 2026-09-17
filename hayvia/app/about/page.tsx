@@ -40,7 +40,7 @@ export default function AboutPage() {
             <p className="mt-5 leading-relaxed text-ink-soft">
               Subphiphat Real Estate helps people discover selected rental properties in Hat Yai and
               connect with local property owners and agents. We built this for anyone
-              who's ever tried to rent a place in a new city and found the process
+              who&apos;s ever tried to rent a place in a new city and found the process
               scattered across Facebook groups, word of mouth and listings with missing
               information.
             </p>
@@ -85,7 +85,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-2xl rounded border border-line bg-surface p-8 text-center">
           <p className="font-display text-xl text-ink">Have a property to list?</p>
           <p className="mt-2 text-sm text-ink-soft">
-            We're always reviewing new properties from owners and agents across Hat Yai.
+            We&apos;re always reviewing new properties from owners and agents across Hat Yai.
           </p>
           <Button href="/list-your-property" variant="secondary" className="mt-5">
             List Your Property

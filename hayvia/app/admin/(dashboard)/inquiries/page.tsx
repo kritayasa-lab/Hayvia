@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { fetchInquiries } from "@/lib/admin/crm";
 import StatusSelect from "@/components/admin/StatusSelect";
 import { statusEntities } from "@/lib/admin/status-config";
@@ -37,7 +38,14 @@ export default async function AdminInquiriesPage() {
               inquiries.map((inquiry) => (
                 <tr key={inquiry.id} className="align-top hover:bg-line-soft/30">
                   <td className="whitespace-nowrap px-4 py-3 text-ink-soft">{formatDate(inquiry.created_at)}</td>
-                  <td className="px-4 py-3 font-medium text-ink">{inquiry.name}</td>
+                  <td className="px-4 py-3">
+                    <Link
+                      href={`/admin/inquiries/${inquiry.id}`}
+                      className="font-medium text-ink hover:text-moss-700 hover:underline"
+                    >
+                      {inquiry.name}
+                    </Link>
+                  </td>
                   <td className="px-4 py-3 text-ink-soft">{inquiry.property_title}</td>
                   <td className="px-4 py-3 text-ink-soft">{inquiry.email || "—"}</td>
                   <td className="px-4 py-3 text-ink-soft">{inquiry.phone || "—"}</td>
