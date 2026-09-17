@@ -79,10 +79,10 @@ export default async function AdminAnalyticsPage() {
       <p className="mt-1 text-sm text-ink-faint">Real activity from Supabase — no estimated or placeholder figures.</p>
 
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <StatCard label="Total Properties" value={data.totalProperties} icon={Building2} />
-        <StatCard label="Total Property Views" value={data.totalViews} icon={Eye} />
-        <StatCard label="Total Inquiries" value={data.totalInquiries} icon={MessageSquare} />
-        <StatCard label="Total Viewing Requests" value={data.totalViewings} icon={CalendarClock} />
+        <StatCard label="Total Properties" value={data.totalProperties} icon={<Building2 size={16} />} />
+        <StatCard label="Total Property Views" value={data.totalViews} icon={<Eye size={16} />} />
+        <StatCard label="Total Inquiries" value={data.totalInquiries} icon={<MessageSquare size={16} />} />
+        <StatCard label="Total Viewing Requests" value={data.totalViewings} icon={<CalendarClock size={16} />} />
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
