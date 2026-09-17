@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { fetchLeads } from "@/lib/admin/crm";
 import StatusSelect from "@/components/admin/StatusSelect";
 import { statusEntities } from "@/lib/admin/status-config";
@@ -52,7 +53,12 @@ export default async function AdminLeadsPage() {
                     <Badge tone="neutral">{sourceLabel[lead.source_type] ?? lead.source_type}</Badge>
                   </td>
                   <td className="px-4 py-3">
-                    <p className="font-medium text-ink">{lead.customer_name || "—"}</p>
+                    <Link
+                      href={`/admin/leads/${lead.id}`}
+                      className="font-medium text-ink hover:text-moss-700 hover:underline"
+                    >
+                      {lead.customer_name || "—"}
+                    </Link>
                     <p className="text-xs text-ink-faint">
                       {[lead.customer_email, lead.customer_phone].filter(Boolean).join(" · ") || "No contact info"}
                     </p>

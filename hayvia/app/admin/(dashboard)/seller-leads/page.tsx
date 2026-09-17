@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { fetchSellerLeads } from "@/lib/admin/crm";
 import StatusSelect from "@/components/admin/StatusSelect";
 import { statusEntities } from "@/lib/admin/status-config";
@@ -39,7 +40,14 @@ export default async function AdminSellerLeadsPage() {
               leads.map((lead) => (
                 <tr key={lead.id} className="align-top hover:bg-line-soft/30">
                   <td className="whitespace-nowrap px-4 py-3 text-ink-soft">{formatDate(lead.created_at)}</td>
-                  <td className="px-4 py-3 font-medium text-ink">{lead.full_name}</td>
+                  <td className="px-4 py-3">
+                    <Link
+                      href={`/admin/seller-leads/${lead.id}`}
+                      className="font-medium text-ink hover:text-moss-700 hover:underline"
+                    >
+                      {lead.full_name}
+                    </Link>
+                  </td>
                   <td className="px-4 py-3 text-ink-soft">
                     <p>{lead.email}</p>
                     <p>{lead.phone}</p>
