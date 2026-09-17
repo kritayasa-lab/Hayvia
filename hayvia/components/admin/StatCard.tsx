@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -15,6 +18,8 @@ export default function StatCard({
   icon?: LucideIcon;
   tone?: "default" | "accent";
 }) {
+  const router = useRouter();
+
   const content = (
     <div
       className={cn(
@@ -36,7 +41,13 @@ export default function StatCard({
   );
 
   if (href) {
-    return <Link href={href}>{content}</Link>;
+    // Same Router Cache staleness fix as AdminShell's nav links — forces a
+    // fresh server fetch of the destination admin page on click.
+    return (
+      <Link href={href} onClick={() => router.refresh()}>
+        {content}
+      </Link>
+    );
   }
   return content;
 }

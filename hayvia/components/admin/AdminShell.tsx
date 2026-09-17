@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   LayoutDashboard,
   Building2,
@@ -97,6 +97,7 @@ export default function AdminShell({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
+  const router = useRouter();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const nav = (
@@ -113,7 +114,16 @@ export default function AdminShell({
                 <Link
                   key={item.href}
                   href={item.href}
-                  onClick={() => setMobileNavOpen(false)}
+                  onClick={() => {
+                    setMobileNavOpen(false);
+                    // Admin pages are all `dynamic = "force-dynamic"` on the
+                    // server, but the client-side Router Cache can still
+                    // serve an earlier prefetched snapshot of this route on
+                    // a soft navigation — router.refresh() forces a fresh
+                    // server fetch so newly-created Leads/Inquiries/etc.
+                    // never appear to be missing until a hard reload.
+                    router.refresh();
+                  }}
                   className={cn(
                     "flex items-center gap-2.5 rounded px-3 py-2 text-sm font-medium transition-colors",
                     active
