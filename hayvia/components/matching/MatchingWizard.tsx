@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { CheckCircle2, Loader2, MessageCircle, RotateCcw } from "lucide-react";
+import { CheckCircle2, Loader2, Mail, MessageCircle, RotateCcw } from "lucide-react";
 import { districts, propertyTypes, type District, type PropertyType } from "@/data/properties";
 import {
   bedroomOptions,
@@ -84,6 +84,11 @@ export default function MatchingWizard() {
   const [saved, setSaved] = useState(true);
   const [totalCandidates, setTotalCandidates] = useState(0);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  // Opaque, signed token from /api/match — never the raw matching_preferences.id.
+  // See lib/matching/contact-token.ts.
+  const [contactToken, setContactToken] = useState<string | null>(null);
+  const [contactEmail, setContactEmail] = useState("");
+  const [contactState, setContactState] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -145,6 +150,9 @@ export default function MatchingWizard() {
       setResults(data.results);
       setSaved(Boolean(data.saved));
       setTotalCandidates(data.totalCandidates ?? 0);
+      setContactToken(typeof data.contactToken === "string" ? data.contactToken : null);
+      setContactEmail("");
+      setContactState("idle");
       setStep("results");
     } catch {
       setErrorMessage("Something went wrong. Please check your connection and try again.");
@@ -152,9 +160,30 @@ export default function MatchingWizard() {
     }
   }
 
+  async function handleContactSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!contactToken || contactState === "sending") return;
+
+    setContactState("sending");
+    try {
+      const response = await fetch("/api/matching/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ contactToken, email: contactEmail }),
+      });
+      const data = await response.json();
+      setContactState(response.ok && data.success ? "sent" : "error");
+    } catch {
+      setContactState("error");
+    }
+  }
+
   function startOver() {
     setForm(initialState);
     setResults([]);
+    setContactToken(null);
+    setContactEmail("");
+    setContactState("idle");
     setStep("form");
   }
 
@@ -254,6 +283,49 @@ export default function MatchingWizard() {
             </div>
           ))}
         </div>
+
+        {contactToken && (
+          <div className="mt-10 rounded-2xl border border-seashell bg-white p-6 text-center sm:p-8">
+            {contactState === "sent" ? (
+              <p className="flex items-center justify-center gap-2 font-display text-lg text-moss-700">
+                <CheckCircle2 size={20} />
+                Thanks — we&apos;ll send these matches your way.
+              </p>
+            ) : (
+              <form onSubmit={handleContactSubmit} className="mx-auto max-w-sm">
+                <p className="font-display text-lg text-ink">Want us to send these property matches to you?</p>
+                <p className="mt-1 text-sm text-ink-soft">Optional — leave blank to just browse.</p>
+                <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+                  <div className="relative flex-1">
+                    <Mail
+                      size={16}
+                      className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-faint"
+                    />
+                    <input
+                      type="email"
+                      value={contactEmail}
+                      onChange={(e) => setContactEmail(e.target.value)}
+                      placeholder="you@example.com"
+                      className="w-full rounded border border-line py-2.5 pl-10 pr-3.5 text-sm text-ink placeholder:text-ink-faint focus:border-matcha-mist focus:outline-none"
+                    />
+                  </div>
+                  <Button
+                    type="submit"
+                    disabled={!contactEmail || contactState === "sending"}
+                    className="shrink-0 bg-matcha-mist hover:opacity-90"
+                  >
+                    {contactState === "sending" ? "Sending..." : "Send Me These"}
+                  </Button>
+                </div>
+                {contactState === "error" && (
+                  <p className="mt-2 text-xs text-red-600">
+                    Something went wrong sending that. Please try again.
+                  </p>
+                )}
+              </form>
+            )}
+          </div>
+        )}
 
         <div className="mt-10 flex flex-col items-center gap-4 border-t border-line pt-8 text-center">
           <p className="text-sm text-ink-soft">Have questions about any of these matches?</p>

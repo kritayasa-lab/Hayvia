@@ -21,6 +21,7 @@ import { getProperties } from "@/lib/properties-source";
 import { rankMatches } from "@/lib/matching/scoring";
 import { getActiveMatchWeights } from "@/lib/matching/weights";
 import { persistMatchingRun } from "@/lib/matching/persist";
+import { createContactToken } from "@/lib/matching/contact-token";
 import { forwardToGoogleAppsScript } from "@/lib/google-apps-script";
 import { supportedLifestyleTags, type LifestyleTag, type MatchCriteria } from "@/lib/matching/types";
 
@@ -117,9 +118,22 @@ export async function POST(request: Request) {
   const results = rankMatches(criteria, candidates, weights, 3);
 
   let saved = false;
+  // Never the raw matching_preferences.id — only a signed, expiring token
+  // that /api/matching/contact can later verify back into that id. See
+  // lib/matching/contact-token.ts for why.
+  let contactToken: string | undefined;
   try {
-    await persistMatchingRun(criteria, results);
+    const { matchingPreferenceId } = await persistMatchingRun(criteria, results);
     saved = true;
+    try {
+      contactToken = createContactToken(matchingPreferenceId);
+    } catch (error) {
+      // Best-effort, e.g. MATCHING_CONTACT_TOKEN_SECRET not configured —
+      // the matching run is already saved regardless; the "email me these
+      // matches" affordance is simply unavailable for this response.
+      // eslint-disable-next-line no-console
+      console.error("[Subphiphat] Matching run saved, but creating its contact token failed:", error);
+    }
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error("[Subphiphat] Matching results computed, but saving the run to Supabase failed:", error);
@@ -147,6 +161,7 @@ export async function POST(request: Request) {
   return NextResponse.json({
     success: true,
     saved,
+    contactToken,
     totalCandidates: candidates.length,
     results: results.map((r) => ({
       property: r.property,
