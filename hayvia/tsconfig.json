@@ -11,6 +11,12 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    // Lets scripts/*.ts (run directly by `node`, outside Next's bundler)
+    // use explicit .ts extensions in relative imports, which Node's native
+    // ESM resolution requires. Only valid alongside "noEmit": true (set
+    // above) — doesn't affect Next.js's own build, which resolves modules
+    // through its own compiler regardless of this option.
+    "allowImportingTsExtensions": true,
     "jsx": "preserve",
     "incremental": true,
     "plugins": [{ "name": "next" }],

@@ -10,3 +10,7 @@
 
 # vercel
 .vercel
+
+# Phase 5 backfill dry-run reports — contain real customer PII (email/phone),
+# must never be committed. See scripts/backfill-customers-dry-run.ts.
+/scripts/output/
