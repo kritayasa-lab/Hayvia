@@ -1,7 +1,3 @@
-"use client";
-
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 export default function StatCard({
@@ -22,8 +18,6 @@ export default function StatCard({
   icon?: React.ReactNode;
   tone?: "default" | "accent";
 }) {
-  const router = useRouter();
-
   const content = (
     <div
       className={cn(
@@ -44,13 +38,12 @@ export default function StatCard({
   );
 
   if (href) {
-    // Same Router Cache staleness fix as AdminShell's nav links — forces a
-    // fresh server fetch of the destination admin page on click.
-    return (
-      <Link href={href} onClick={() => router.refresh()}>
-        {content}
-      </Link>
-    );
+    // A plain anchor, not next/link — this always does a full browser
+    // navigation, which bypasses the App Router's client Router Cache
+    // entirely. That cache can otherwise serve an earlier, stale RSC
+    // snapshot of the destination admin page on a soft navigation (see
+    // AdminShell.tsx for the full explanation).
+    return <a href={href}>{content}</a>;
   }
   return content;
 }

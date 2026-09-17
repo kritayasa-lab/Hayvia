@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
   Building2,
@@ -97,7 +96,6 @@ export default function AdminShell({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const router = useRouter();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const nav = (
@@ -111,19 +109,16 @@ export default function AdminShell({
             {section.items.map((item) => {
               const active = isActive(pathname, item.href);
               return (
-                <Link
+                // A plain anchor, not next/link — always does a full browser
+                // navigation, bypassing the App Router's client Router Cache.
+                // That cache can otherwise serve an earlier, stale RSC
+                // snapshot of the destination admin page on a soft
+                // navigation, showing e.g. "0 leads" until a manual hard
+                // refresh even though Supabase already has current data.
+                <a
                   key={item.href}
                   href={item.href}
-                  onClick={() => {
-                    setMobileNavOpen(false);
-                    // Admin pages are all `dynamic = "force-dynamic"` on the
-                    // server, but the client-side Router Cache can still
-                    // serve an earlier prefetched snapshot of this route on
-                    // a soft navigation — router.refresh() forces a fresh
-                    // server fetch so newly-created Leads/Inquiries/etc.
-                    // never appear to be missing until a hard reload.
-                    router.refresh();
-                  }}
+                  onClick={() => setMobileNavOpen(false)}
                   className={cn(
                     "flex items-center gap-2.5 rounded px-3 py-2 text-sm font-medium transition-colors",
                     active
@@ -133,7 +128,7 @@ export default function AdminShell({
                 >
                   <item.icon size={16} />
                   {item.label}
-                </Link>
+                </a>
               );
             })}
           </div>
@@ -147,10 +142,10 @@ export default function AdminShell({
       <div className="flex">
         {/* Desktop sidebar */}
         <aside className="hidden w-64 shrink-0 border-r border-line bg-surface px-4 py-6 lg:block">
-          <Link href="/admin" className="block px-3">
+          <a href="/admin" className="block px-3">
             <p className="font-display text-lg text-ink">Subphiphat</p>
             <p className="text-xs text-ink-faint">Admin Dashboard</p>
-          </Link>
+          </a>
           <div className="mt-8">{nav}</div>
         </aside>
 
