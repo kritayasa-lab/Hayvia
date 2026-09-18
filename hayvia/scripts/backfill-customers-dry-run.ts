@@ -153,6 +153,26 @@ function chunk<T>(items: T[], size: number): T[][] {
   return out;
 }
 
+/**
+ * Expands a Supabase/PostgREST error into a diagnosable message. For a
+ * client-side network failure (DNS, connection refused, TLS, timeout —
+ * anything that never got an HTTP response), @supabase/supabase-js puts the
+ * real underlying cause (name/message/code, e.g. ENOTFOUND, ECONNREFUSED,
+ * ETIMEDOUT) in `error.details`, NOT `error.message` (see
+ * node_modules/@supabase/postgrest-js's PostgrestBuilder — it catches the
+ * raw fetch exception and formats `details` as
+ * "<name>: <message>\n\nCaused by: <cause.name>: <cause.message> (<cause.code>)").
+ * `error.message` alone (what these throw sites used before) is only ever
+ * the generic top-level "TypeError: fetch failed" wrapper — never the
+ * reason. Read-only: this only changes what gets logged, not any query.
+ */
+function describeSupabaseError(error: { message?: string; details?: string; hint?: string }): string {
+  const parts = [error.message ?? "unknown error"];
+  if (error.details) parts.push(`Details: ${error.details}`);
+  if (error.hint) parts.push(`Hint: ${error.hint}`);
+  return parts.join("\n");
+}
+
 /** Paginated, read-only fetch of every row with customer_id IS NULL. SELECT only. */
 async function fetchNullCustomerRows(
   table: string,
@@ -167,7 +187,7 @@ async function fetchNullCustomerRows(
       .select(columns)
       .is("customer_id", null)
       .range(from, from + pageSize - 1);
-    if (error) throw new Error(`Failed to read ${table}: ${error.message}`);
+    if (error) throw new Error(`Failed to read ${table}: ${describeSupabaseError(error)}`);
     if (!data || data.length === 0) break;
     rows.push(...(data as unknown as Record<string, unknown>[]));
     if (data.length < pageSize) break;
@@ -287,7 +307,8 @@ async function auditMatchingPreferences(): Promise<RecordResult[]> {
       .select("matching_preference_id, customer_email, customer_phone")
       .eq("source_type", "MATCHING")
       .in("matching_preference_id", idBatch);
-    if (error) throw new Error(`Failed to read leads for matching_preferences lookup: ${error.message}`);
+    if (error)
+      throw new Error(`Failed to read leads for matching_preferences lookup: ${describeSupabaseError(error)}`);
     for (const lead of data ?? []) {
       const prefId = lead.matching_preference_id as string;
       contactByPrefId.set(prefId, {
@@ -326,7 +347,7 @@ async function auditCustomersSummary() {
       .from("customers")
       .select("email, phone_e164")
       .range(from, from + pageSize - 1);
-    if (error) throw new Error(`Failed to read customers: ${error.message}`);
+    if (error) throw new Error(`Failed to read customers: ${describeSupabaseError(error)}`);
     if (!data || data.length === 0) break;
     for (const row of data) {
       total += 1;
