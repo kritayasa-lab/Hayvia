@@ -1,23 +1,11 @@
-import type { Metadata } from "next";
-import Container from "@/components/ui/Container";
-import RegisterForm from "@/components/auth/RegisterForm";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Create an Account",
-};
-
+// Phase 5 — passwordless login unifies "register" and "login" into one
+// /login entry point (see EmailOtpForm/requestEmailMagicLink: a new email
+// creates an account, an existing one signs in, identical UX either way
+// until after verification). /register is no longer a distinct
+// customer-facing flow — kept as a redirect, not deleted, so an old
+// bookmark/link doesn't 404.
 export default function RegisterPage() {
-  return (
-    <Container className="flex min-h-[60vh] items-center justify-center py-14">
-      <div className="w-full max-w-sm">
-        <h1 className="text-center font-display text-2xl text-ink">Create your account</h1>
-        <p className="mt-2 text-center text-sm text-ink-soft">
-          Save properties, track your inquiries, and get matched faster next time.
-        </p>
-        <div className="mt-8 rounded border border-line bg-surface p-6">
-          <RegisterForm />
-        </div>
-      </div>
-    </Container>
-  );
+  redirect("/login");
 }
