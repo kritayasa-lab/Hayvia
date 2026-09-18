@@ -249,7 +249,56 @@ export async function verifyPhoneOtp(
 }
 
 // -----------------------------------------------------------------------
-// Email + password
+// Email Magic Link — Phase 5. The ONLY customer-facing authentication
+// method: passwordless, single /login entry point for both new and
+// returning customers (see components/auth/EmailOtpForm.tsx).
+//
+// shouldCreateUser: true always — this is what unifies "register" and
+// "login" into one action. Supabase itself decides whether the email
+// belongs to an existing auth user (sends a login link) or not (creates
+// the user first, then sends the same-shaped link) — the response and the
+// UI copy are identical either way, so nothing here can be used to probe
+// whether an email has an account before the link is clicked. That
+// distinction is only ever shown AFTER verification (app/auth/confirm's
+// redirect carries a `welcome=new|back` param — see
+// lib/customers/link-auth-user.ts), never at send time.
+// -----------------------------------------------------------------------
+
+export async function requestEmailMagicLink(
+  _prevState: ActionState | null,
+  formData: FormData
+): Promise<ActionState> {
+  const email = String(formData.get("email") || "").trim();
+  if (!email || !email.includes("@")) {
+    return { error: "Please enter a valid email." };
+  }
+
+  try {
+    const supabase = createClient();
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
+      options: {
+        shouldCreateUser: true,
+        emailRedirectTo: `${getSiteUrl()}/auth/confirm?next=/account`,
+        captchaToken: getCaptchaToken(formData),
+      },
+    });
+
+    if (error) return { error: mapAuthError(error.message) };
+  } catch {
+    return { error: NETWORK_ERROR };
+  }
+
+  return { success: "Check your email for a sign-in link." };
+}
+
+// -----------------------------------------------------------------------
+// Email + password — PRESENT BUT UNREACHABLE from any customer-facing UI
+// (see app/login/page.tsx, app/register/page.tsx). Kept, not deleted, per
+// the Phase 5 decision to leave existing password-auth code in place for
+// now. Do not wire this back into customer-facing pages without an
+// explicit decision to reintroduce password auth — Phase 5's login is
+// passwordless-only by design.
 // -----------------------------------------------------------------------
 
 export async function signUpWithEmail(
