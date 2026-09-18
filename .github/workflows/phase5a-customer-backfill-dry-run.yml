@@ -1,0 +1,111 @@
+# =============================================================================
+# Phase 5A — Historical Customer Backfill: READ-ONLY dry-run
+# =============================================================================
+# THIS WORKFLOW IS READ-ONLY AND MUST STAY THAT WAY.
+#
+# It exists solely to run hayvia/scripts/backfill-customers-dry-run.ts — a
+# SELECT-only audit script (see that file's own header comment for the full
+# guarantee: no INSERT/UPDATE/DELETE/UPSERT/RPC anywhere in it or in the
+# shared helper it imports, hayvia/lib/customers/lookup.ts). Running this
+# workflow any number of times changes nothing in the production database.
+#
+# DO NOT turn this into a write/backfill workflow. Do not add a step that
+# runs a real backfill script (hayvia/scripts/backfill-customers.ts does not
+# exist — Phase 5B is a separate, not-yet-approved change), and do not add
+# any INSERT/UPDATE/DELETE/UPSERT/RPC call to any step below. If a write
+# workflow is ever needed, it belongs in a new file with its own explicit
+# review — not as an edit to this one.
+#
+# The two secrets below are production Supabase credentials.
+# SUPABASE_SERVICE_ROLE_KEY bypasses Row Level Security entirely — it is
+# never echoed, never written to a script argument, and only ever passed via
+# `env:` into the one step that needs it. GitHub also automatically masks
+# any exact secret value that appears in logs, as a second layer of
+# protection on top of that.
+# =============================================================================
+
+name: Phase 5A Customer Backfill Dry Run
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: phase5a-customer-backfill-dry-run
+  cancel-in-progress: false
+
+jobs:
+  dry-run:
+    name: Read-only customer backfill dry-run
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: hayvia
+    steps:
+      # Fail fast, before checkout/install, if the repo isn't configured for
+      # this workflow yet. Never prints the secret values themselves.
+      - name: Verify required secrets are configured
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          missing=0
+          if [ -z "$NEXT_PUBLIC_SUPABASE_URL" ]; then
+            echo "::error::Missing required repository secret: NEXT_PUBLIC_SUPABASE_URL"
+            missing=1
+          fi
+          if [ -z "$SUPABASE_SERVICE_ROLE_KEY" ]; then
+            echo "::error::Missing required repository secret: SUPABASE_SERVICE_ROLE_KEY"
+            missing=1
+          fi
+          if [ "$missing" = "1" ]; then
+            echo "::error::One or more required secrets are missing. Configure them under Settings > Secrets and variables > Actions, then re-run this workflow."
+            exit 1
+          fi
+          echo "Required secrets are present (values not printed)."
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: hayvia/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Read-only static checks — no database access, no writes. Catches any
+      # accidental breakage before spending time on the real dry-run below.
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      # The actual READ-ONLY dry-run. SUPABASE_SERVICE_ROLE_KEY is injected
+      # via env, never interpolated into the command line itself.
+      - name: Run customer backfill dry-run (READ-ONLY)
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node --experimental-strip-types scripts/backfill-customers-dry-run.ts
+
+      # Report contains real customer PII (email/phone) — never committed to
+      # the repo (scripts/output/ is gitignored); this artifact is the only
+      # place it's retained, and only for the retention window below.
+      - name: Upload dry-run report
+        uses: actions/upload-artifact@v4
+        with:
+          name: backfill-dry-run-report
+          path: hayvia/scripts/output/backfill-dry-run-*.json
+          retention-days: 30
+          if-no-files-found: error
