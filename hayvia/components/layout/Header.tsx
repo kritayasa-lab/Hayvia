@@ -10,12 +10,14 @@ import { contactConfig } from "@/config/contact";
 import { signOut } from "@/lib/auth/actions";
 import type { CustomerHeaderInfo } from "@/lib/customers/account";
 
+// Phase 6.1 — "Get Matched" is deliberately NOT in this list: the green CTA
+// button below (desktop and mobile) is the only Get Matched entry point,
+// so it isn't duplicated as a plain nav link too.
 const navLinks = [
   { href: "/properties?listingType=sale", label: "Buy" },
   { href: "/properties?listingType=rent", label: "Rent" },
   { href: "/list-your-property", label: "Sell" },
   { href: "/properties", label: "Properties" },
-  { href: "/get-matched", label: "Get Matched" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];

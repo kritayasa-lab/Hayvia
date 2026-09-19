@@ -56,7 +56,7 @@ export async function POST(request: Request) {
       user.email,
       (user.user_metadata?.full_name as string | undefined) ?? null
     );
-    const result = await claimMatchingRunForCustomer(contactToken, resolved.customerId);
+    const result = await claimMatchingRunForCustomer(contactToken, resolved.customerId, resolved.fullName, resolved.email);
     return NextResponse.json({ success: result.claimed });
   } catch (error) {
     // eslint-disable-next-line no-console
