@@ -8,23 +8,29 @@ import { formatDate, formatPrice } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
 
+// Phase 7 — "Approve & Create Property" only makes sense while the lead is
+// still active follow-up work; a REJECTED lead was declined, and a
+// CONVERTED one already has its property (see convertedProperty below).
+const APPROVABLE_STATUSES = new Set(["NEW", "CONTACTED", "QUALIFIED"]);
+
 async function loadSellerLead(id: string) {
   const supabase = createAdminClient();
 
   const { data: sellerLead } = await supabase.from("seller_leads").select("*").eq("id", id).single();
-  if (!sellerLead) return { sellerLead: null, notes: [], history: [], linkedLeadId: null };
+  if (!sellerLead) {
+    return { sellerLead: null, notes: [], history: [], linkedLeadId: null, convertedProperty: null };
+  }
 
   // seller_leads has no direct lead_id column — the reverse link lives on
   // leads.seller_lead_id instead. Same best-effort caveat as Inquiries: not
   // every seller lead is guaranteed to have a linked CRM lead row.
-  const { data: linkedLead } = await supabase
-    .from("leads")
-    .select("id")
-    .eq("seller_lead_id", id)
-    .maybeSingle();
+  const [{ data: linkedLead }, { data: convertedProperty }] = await Promise.all([
+    supabase.from("leads").select("id").eq("seller_lead_id", id).maybeSingle(),
+    supabase.from("properties").select("id, title").eq("seller_lead_id", id).maybeSingle(),
+  ]);
 
   if (!linkedLead) {
-    return { sellerLead, notes: [], history: [], linkedLeadId: null };
+    return { sellerLead, notes: [], history: [], linkedLeadId: null, convertedProperty };
   }
 
   const [{ data: notes }, { data: history }] = await Promise.all([
@@ -40,11 +46,17 @@ async function loadSellerLead(id: string) {
       .order("changed_at", { ascending: false }),
   ]);
 
-  return { sellerLead, notes: notes ?? [], history: history ?? [], linkedLeadId: linkedLead.id as string };
+  return {
+    sellerLead,
+    notes: notes ?? [],
+    history: history ?? [],
+    linkedLeadId: linkedLead.id as string,
+    convertedProperty,
+  };
 }
 
 export default async function SellerLeadDetailPage({ params }: { params: { id: string } }) {
-  const { sellerLead, notes, history, linkedLeadId } = await loadSellerLead(params.id);
+  const { sellerLead, notes, history, linkedLeadId, convertedProperty } = await loadSellerLead(params.id);
   if (!sellerLead) notFound();
 
   return (
@@ -53,8 +65,29 @@ export default async function SellerLeadDetailPage({ params }: { params: { id: s
         &larr; Back to Seller Leads
       </Link>
 
-      <h1 className="mt-2 font-display text-2xl text-ink">{sellerLead.full_name}</h1>
-      <p className="mt-1 text-sm text-ink-faint">Submitted {formatDate(sellerLead.created_at)}</p>
+      <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h1 className="font-display text-2xl text-ink">{sellerLead.full_name}</h1>
+          <p className="mt-1 text-sm text-ink-faint">Submitted {formatDate(sellerLead.created_at)}</p>
+        </div>
+        {convertedProperty ? (
+          <Link
+            href={`/admin/properties/${convertedProperty.id}`}
+            className="inline-flex items-center justify-center rounded bg-moss-600 px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
+          >
+            Converted &rarr; View Property
+          </Link>
+        ) : (
+          APPROVABLE_STATUSES.has(sellerLead.status) && (
+            <Link
+              href={`/admin/properties/new?fromSellerLead=${sellerLead.id}`}
+              className="inline-flex items-center justify-center rounded bg-moss-600 px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
+            >
+              Approve &amp; Create Property
+            </Link>
+          )
+        )}
+      </div>
 
       <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[1fr_1.4fr]">
         <div className="space-y-6">
