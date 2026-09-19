@@ -3,23 +3,35 @@
 // -----------------------------------------------------------------------------
 // This is the URL Supabase Auth's emails link to — NOT a page a user
 // navigates to directly. Handles every email-based verification type
-// through one generic handler:
-//   - type=signup        -> new account email confirmation (password flow)
-//   - type=recovery       -> password reset link (password flow)
-//   - type=email_change   -> confirming a newly linked/changed email
-//   - type=magiclink/email -> Phase 5 passwordless customer login
+// through one generic handler, across TWO possible Supabase Auth link
+// shapes:
+//   - Implicit/OTP flow: ?token_hash=...&type=...  -> verifyOtp()
+//       type=signup        -> new account email confirmation (password flow)
+//       type=recovery      -> password reset link (password flow)
+//       type=email_change  -> confirming a newly linked/changed email
+//       type=magiclink/email -> Phase 5 passwordless customer login
+//   - PKCE flow: ?code=...  -> exchangeCodeForSession()
+//       Supabase's project-wide "Auth Flow Type" setting decides which
+//       shape EVERY email link uses (not chosen per-call by this app) —
+//       PRODUCTION FIX: a live magic-link test landed at "/?code=..."
+//       instead of "/auth/confirm?...", which is the unambiguous signature
+//       of PKCE. This route previously only handled the token_hash/type
+//       shape, so a PKCE `code` arriving here would have fallen straight
+//       through to "invalid or expired" without ever establishing a
+//       session — the flow was broken end-to-end, not just missing a UI
+//       indicator. (Landing on "/" instead of "/auth/confirm" is a
+//       SEPARATE, still-outstanding issue: Supabase falls back to its
+//       Dashboard-configured Site URL when `emailRedirectTo` isn't in the
+//       allow-listed Redirect URLs — that's a Dashboard config change, not
+//       something this file can fix.)
 //
-// Supabase's verifyOtp() (the same method used for phone codes) also
-// handles these email link types via a token_hash rather than a 6-digit
-// code — still entirely Supabase's own verification, nothing custom here.
-//
-// Phase 5 addition: for magiclink/email specifically (and ONLY those —
-// signup/recovery/email_change are unrelated to customer login and must
-// never trigger this), resolveCustomerForAuthUser() links the now-
-// authenticated user to their customers row, and the redirect gains a
-// `welcome=new|back` param so /account can show "Your account has been
-// created" vs "Welcome back" — decided here, after verification, never
-// before it (see requestEmailMagicLink's own comment for why).
+// Under PKCE, `type` is never present — only `code`. In this codebase's
+// current reachable UI, a `code` arriving here can only come from the
+// Phase 5 magic-link flow: admin auth is signInWithPassword only (never an
+// email link, see lib/auth/admin-actions.ts), and the password-based email
+// actions in lib/auth/actions.ts are unreferenced by any live page. So a
+// successful PKCE exchange is treated the same as a magiclink/email
+// verification for customer-linking purposes below.
 //
 // IMPORTANT: this route builds its own request/response-bound Supabase
 // client (mirroring lib/supabase/middleware.ts's already-working pattern)
@@ -58,9 +70,13 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const token_hash = searchParams.get("token_hash");
   const type = searchParams.get("type") as EmailOtpType | null;
+  const code = searchParams.get("code");
   const next = safeNextPath(searchParams.get("next"));
 
-  if (token_hash && type) {
+  const hasOtpParams = Boolean(token_hash && type);
+  const hasPkceCode = Boolean(code);
+
+  if (hasOtpParams || hasPkceCode) {
     // Built from the incoming request's own origin, which — because
     // Supabase's confirmation link is generated from whatever
     // NEXT_PUBLIC_SITE_URL was passed as emailRedirectTo at signup time —
@@ -89,10 +105,14 @@ export async function GET(request: NextRequest) {
       }
     );
 
-    const { error } = await supabase.auth.verifyOtp({ type, token_hash });
+    const { error } = hasPkceCode
+      ? await supabase.auth.exchangeCodeForSession(code!)
+      : await supabase.auth.verifyOtp({ type: type!, token_hash: token_hash! });
 
     if (!error) {
-      if (CUSTOMER_LOGIN_EMAIL_TYPES.has(type)) {
+      const isCustomerLoginEvent = hasPkceCode || CUSTOMER_LOGIN_EMAIL_TYPES.has(type as string);
+
+      if (isCustomerLoginEvent) {
         const {
           data: { user },
         } = await supabase.auth.getUser();
