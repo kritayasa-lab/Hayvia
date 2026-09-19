@@ -264,10 +264,29 @@ export async function verifyPhoneOtp(
 // lib/customers/link-auth-user.ts), never at send time.
 // -----------------------------------------------------------------------
 
-async function sendEmailMagicLinkInternal(email: string, captchaToken?: string): Promise<ActionState> {
+// Phase 6 — only a relative, same-site path is ever accepted for `next`,
+// mirroring app/auth/confirm/route.ts's own safeNextPath() exactly, backslash
+// check included (WHATWG URL parsing normalizes "\" to "/" for special
+// schemes, so "/\evil.com" would otherwise resolve externally once that
+// route builds a URL from it) — that route re-validates independently
+// regardless; this is defense in depth on the sending side, not the only
+// gate. Falls back to the existing default of /account when absent or unsafe.
+function safeNext(rawNext?: string): string {
+  if (!rawNext) return "/account";
+  if (!rawNext.startsWith("/") || rawNext.startsWith("//") || rawNext.includes("\\")) return "/account";
+  return rawNext;
+}
+
+async function sendEmailMagicLinkInternal(
+  email: string,
+  captchaToken?: string,
+  next?: string
+): Promise<ActionState> {
   if (!email || !email.includes("@")) {
     return { error: "Please enter a valid email." };
   }
+
+  const redirectNext = safeNext(next);
 
   try {
     const supabase = createClient();
@@ -275,7 +294,7 @@ async function sendEmailMagicLinkInternal(email: string, captchaToken?: string):
       email,
       options: {
         shouldCreateUser: true,
-        emailRedirectTo: `${getSiteUrl()}/auth/confirm?next=/account`,
+        emailRedirectTo: `${getSiteUrl()}/auth/confirm?next=${encodeURIComponent(redirectNext)}`,
         captchaToken,
       },
     });
@@ -293,7 +312,8 @@ export async function requestEmailMagicLink(
   formData: FormData
 ): Promise<ActionState> {
   const email = String(formData.get("email") || "").trim();
-  return sendEmailMagicLinkInternal(email, getCaptchaToken(formData));
+  const next = String(formData.get("next") || "") || undefined;
+  return sendEmailMagicLinkInternal(email, getCaptchaToken(formData), next);
 }
 
 /**
@@ -308,8 +328,12 @@ export async function requestEmailMagicLink(
  * enforcement logic lives in this codebase either way — Supabase remains
  * the one that actually validates the token, exactly as before.
  */
-export async function resendEmailMagicLink(email: string, captchaToken?: string): Promise<ActionState> {
-  return sendEmailMagicLinkInternal(email.trim(), captchaToken);
+export async function resendEmailMagicLink(
+  email: string,
+  captchaToken?: string,
+  next?: string
+): Promise<ActionState> {
+  return sendEmailMagicLinkInternal(email.trim(), captchaToken, next);
 }
 
 // -----------------------------------------------------------------------

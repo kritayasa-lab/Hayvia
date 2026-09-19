@@ -11,7 +11,12 @@ export const metadata: Metadata = {
 // requestEmailMagicLink for why there's no separate register page and no
 // password field. `?error=` is populated by app/auth/confirm/route.ts's
 // GET handler when a magic link is missing/invalid/expired.
-export default function LoginPage({ searchParams }: { searchParams: { error?: string } }) {
+//
+// Phase 6 — `?next=` (e.g. from Get Matched's "Unlock Property Details")
+// is forwarded straight through to EmailOtpForm, which carries it into the
+// Magic Link's emailRedirectTo. Absent for every other entry point into
+// /login, which keeps today's default (/account) behavior unchanged.
+export default function LoginPage({ searchParams }: { searchParams: { error?: string; next?: string } }) {
   return (
     <Container className="flex min-h-[60vh] items-center justify-center py-14">
       <div className="w-full max-w-sm">
@@ -25,7 +30,7 @@ export default function LoginPage({ searchParams }: { searchParams: { error?: st
               {searchParams.error}
             </p>
           )}
-          <EmailOtpForm />
+          <EmailOtpForm next={searchParams.next} />
         </div>
       </div>
     </Container>

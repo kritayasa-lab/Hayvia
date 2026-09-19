@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Container from "@/components/ui/Container";
 import MatchingWizard from "@/components/matching/MatchingWizard";
 
@@ -20,7 +21,9 @@ export default function GetMatchedPage() {
       </div>
 
       <div className="mx-auto mt-10 max-w-4xl rounded border border-line bg-surface p-6 sm:p-10">
-        <MatchingWizard />
+        <Suspense fallback={null}>
+          <MatchingWizard />
+        </Suspense>
       </div>
 
       <p className="mx-auto mt-6 max-w-2xl text-center text-xs text-ink-faint">

@@ -18,8 +18,13 @@ const RESEND_COOLDOWN_SECONDS = 45;
  * manages is "entering an email" vs "link sent", plus a client-side resend
  * cooldown (pacing layer on top of, not instead of, Supabase's own rate
  * limits and Turnstile — same posture as the existing phone OTP flow).
+ *
+ * Phase 6 — optional `next` prop lets a caller (e.g. /login?next=...) carry
+ * the post-login destination through the Magic Link's emailRedirectTo, all
+ * the way to app/auth/confirm's existing safeNextPath() forwarding. Purely
+ * additive: omitted, this behaves exactly as before (defaults to /account).
  */
-export default function EmailOtpForm() {
+export default function EmailOtpForm({ next }: { next?: string } = {}) {
   const [state, formAction] = useFormState(requestEmailMagicLink, null);
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
@@ -68,7 +73,7 @@ export default function EmailOtpForm() {
     const tokenForThisRequest = captchaToken || undefined;
     setCaptchaToken("");
 
-    const result = await resendEmailMagicLink(email, tokenForThisRequest);
+    const result = await resendEmailMagicLink(email, tokenForThisRequest, next);
     turnstileRef.current?.reset();
 
     setResendState(result);
@@ -139,6 +144,7 @@ export default function EmailOtpForm() {
 
   return (
     <form action={formAction} className="space-y-4">
+      {next && <input type="hidden" name="next" value={next} />}
       <FieldWrapper label="Email" htmlFor="login-email" required>
         <TextInput
           id="login-email"

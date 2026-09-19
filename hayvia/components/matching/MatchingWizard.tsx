@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { CheckCircle2, Loader2, Mail, MessageCircle, RotateCcw } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { CheckCircle2, Loader2, Lock, Mail, MessageCircle, RotateCcw } from "lucide-react";
 import { districts, propertyTypes, type District, type PropertyType } from "@/data/properties";
 import {
   bedroomOptions,
@@ -12,9 +13,23 @@ import {
 import { supportedLifestyleTags, type LifestyleTag } from "@/lib/matching/types";
 import { FieldWrapper, TextInput, Select, RadioPillGroup } from "@/components/ui/FormField";
 import Button from "@/components/ui/Button";
-import PropertyCard from "@/components/property/PropertyCard";
+import MatchPreviewCard from "@/components/matching/MatchPreviewCard";
 import { contactConfig } from "@/config/contact";
-import type { Property } from "@/data/properties";
+import type { PropertyPreview } from "@/lib/matching/preview";
+
+// Phase 6 — the last completed run's preview + token, kept only in
+// sessionStorage (per-tab, cleared when the tab closes) so the results view
+// can be restored after a same-tab round trip through /login -> Magic Link
+// -> back. Never holds anything beyond what /api/match already sent the
+// browser — no full property data, no customer/session info.
+const LAST_RUN_KEY = "mw:lastRun";
+
+interface StoredRun {
+  contactToken: string;
+  results: MatchApiResult[];
+  totalCandidates: number;
+  saved: boolean;
+}
 
 const lifestyleLabels: Record<LifestyleTag, string> = {
   WIFI: "WiFi included",
@@ -61,7 +76,7 @@ const initialState: FormState = {
 };
 
 interface MatchApiResult {
-  property: Property;
+  property: PropertyPreview;
   overall: number;
   breakdown: {
     budget: number;
@@ -78,6 +93,9 @@ interface MatchApiResult {
 type Step = "form" | "loading" | "results" | "error";
 
 export default function MatchingWizard() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
   const [step, setStep] = useState<Step>("form");
   const [form, setForm] = useState<FormState>(initialState);
   const [results, setResults] = useState<MatchApiResult[]>([]);
@@ -89,6 +107,64 @@ export default function MatchingWizard() {
   const [contactToken, setContactToken] = useState<string | null>(null);
   const [contactEmail, setContactEmail] = useState("");
   const [contactState, setContactState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  // Phase 6 — "Unlock Property Details" state. `unlocked` gates nothing
+  // security-relevant by itself (full property detail is already public at
+  // /properties/[slug] regardless) — it only controls whether this page
+  // reveals the "View Full Details" links. The actual security boundary is
+  // server-side, in POST /api/matching/claim.
+  const [unlocked, setUnlocked] = useState(false);
+  const [unlocking, setUnlocking] = useState(false);
+  const [unlockError, setUnlockError] = useState<string | null>(null);
+
+  // On return from a Magic Link login (?claim=<contactToken> on this same
+  // page — see the redirect built in handleUnlock below), the browser's
+  // in-memory matching state was lost across the /login -> /auth/confirm ->
+  // back navigation. Restore the last run's PREVIEW data (already
+  // non-sensitive — the same fields /api/match already sent the browser)
+  // from sessionStorage, then re-confirm the claim server-side. Ownership
+  // is always decided by that server call's response, never by anything
+  // read from sessionStorage.
+  useEffect(() => {
+    const claimParam = searchParams.get("claim");
+    if (!claimParam) return;
+
+    let stored: StoredRun | null = null;
+    try {
+      const raw = sessionStorage.getItem(LAST_RUN_KEY);
+      stored = raw ? (JSON.parse(raw) as StoredRun) : null;
+    } catch {
+      stored = null;
+    }
+
+    if (stored && stored.contactToken === claimParam) {
+      setResults(stored.results);
+      setTotalCandidates(stored.totalCandidates);
+      setSaved(stored.saved);
+      setContactToken(stored.contactToken);
+      setStep("results");
+    }
+
+    setUnlocking(true);
+    fetch("/api/matching/claim", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ contactToken: claimParam }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setUnlocked(Boolean(data.success));
+        if (!data.success) {
+          setUnlockError("We couldn't unlock these matches. Please try again.");
+        }
+      })
+      .catch(() => setUnlockError("We couldn't unlock these matches. Please try again."))
+      .finally(() => setUnlocking(false));
+
+    // Drop `?claim=` from the URL so a refresh doesn't re-trigger this.
+    router.replace("/get-matched");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
@@ -147,16 +223,69 @@ export default function MatchingWizard() {
         return;
       }
 
+      const token = typeof data.contactToken === "string" ? data.contactToken : null;
       setResults(data.results);
       setSaved(Boolean(data.saved));
       setTotalCandidates(data.totalCandidates ?? 0);
-      setContactToken(typeof data.contactToken === "string" ? data.contactToken : null);
+      setContactToken(token);
       setContactEmail("");
       setContactState("idle");
+      setUnlocked(false);
+      setUnlockError(null);
       setStep("results");
+
+      if (token) {
+        try {
+          const stored: StoredRun = {
+            contactToken: token,
+            results: data.results,
+            totalCandidates: data.totalCandidates ?? 0,
+            saved: Boolean(data.saved),
+          };
+          sessionStorage.setItem(LAST_RUN_KEY, JSON.stringify(stored));
+        } catch {
+          // sessionStorage unavailable (private browsing, etc.) — the
+          // unlock flow still works without the round-trip restore, the
+          // guest just re-lands on an empty results view after login.
+        }
+      }
     } catch {
       setErrorMessage("Something went wrong. Please check your connection and try again.");
       setStep("error");
+    }
+  }
+
+  async function handleUnlock() {
+    if (!contactToken || unlocking) return;
+    setUnlocking(true);
+    setUnlockError(null);
+
+    try {
+      const response = await fetch("/api/matching/claim", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ contactToken }),
+      });
+
+      if (response.status === 401) {
+        // Not signed in — send to Magic Link login, carrying this exact
+        // matching context back via ?claim= on return. Email is only ever
+        // requested at this point, never before results are shown.
+        const next = `/get-matched?claim=${encodeURIComponent(contactToken)}`;
+        router.push(`/login?next=${encodeURIComponent(next)}`);
+        return;
+      }
+
+      const data = await response.json();
+      if (data.success) {
+        setUnlocked(true);
+      } else {
+        setUnlockError("We couldn't unlock these matches. Please try again.");
+      }
+    } catch {
+      setUnlockError("Something went wrong. Please check your connection and try again.");
+    } finally {
+      setUnlocking(false);
     }
   }
 
@@ -184,6 +313,8 @@ export default function MatchingWizard() {
     setContactToken(null);
     setContactEmail("");
     setContactState("idle");
+    setUnlocked(false);
+    setUnlockError(null);
     setStep("form");
   }
 
@@ -235,7 +366,7 @@ export default function MatchingWizard() {
             <div key={result.property.id} className="rounded-2xl border border-seashell bg-white p-5 sm:p-6">
               <div className="grid grid-cols-1 gap-6 lg:grid-cols-[280px_1fr]">
                 <div>
-                  <PropertyCard property={result.property} />
+                  <MatchPreviewCard property={result.property} unlocked={unlocked} />
                 </div>
 
                 <div>
@@ -283,6 +414,35 @@ export default function MatchingWizard() {
             </div>
           ))}
         </div>
+
+        {!unlocked && contactToken && (
+          <div className="mt-10 rounded-2xl border border-seashell bg-white p-6 text-center sm:p-8">
+            <span className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full bg-linden-leaf text-moss-700">
+              <Lock size={20} />
+            </span>
+            <p className="mt-4 font-display text-lg text-ink">Unlock Property Details</p>
+            <p className="mx-auto mt-1 max-w-sm text-sm text-ink-soft">
+              Sign in with a quick email link to see full details, photos and contact options for these
+              matches.
+            </p>
+            <Button
+              size="lg"
+              className="mt-5 bg-matcha-mist hover:opacity-90"
+              onClick={handleUnlock}
+              disabled={unlocking}
+            >
+              {unlocking ? "Unlocking..." : "Unlock Property Details"}
+            </Button>
+            {unlockError && <p className="mt-3 text-xs text-red-600">{unlockError}</p>}
+          </div>
+        )}
+
+        {unlocked && (
+          <p className="mt-10 flex items-center justify-center gap-2 text-center font-display text-lg text-moss-700">
+            <CheckCircle2 size={20} />
+            Unlocked — click any match above to view full details.
+          </p>
+        )}
 
         {contactToken && (
           <div className="mt-10 rounded-2xl border border-seashell bg-white p-6 text-center sm:p-8">
