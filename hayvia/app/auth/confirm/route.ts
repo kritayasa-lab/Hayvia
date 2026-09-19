@@ -109,6 +109,20 @@ export async function GET(request: NextRequest) {
       ? await supabase.auth.exchangeCodeForSession(code!)
       : await supabase.auth.verifyOtp({ type: type!, token_hash: token_hash! });
 
+    // TEMPORARY DIAGNOSTIC — safe to remove once the PKCE exchange failure
+    // mode is identified. Logs only non-sensitive metadata: no code, token,
+    // cookie, or email value is ever included.
+    if (error) {
+      // eslint-disable-next-line no-console
+      console.error("[AUTH_CONFIRM_PKCE_ERROR]", {
+        flow: hasPkceCode ? "pkce" : "otp",
+        name: error.name,
+        message: error.message,
+        status: (error as { status?: number }).status ?? null,
+        code: (error as { code?: string }).code ?? null,
+      });
+    }
+
     if (!error) {
       const isCustomerLoginEvent = hasPkceCode || CUSTOMER_LOGIN_EMAIL_TYPES.has(type as string);
 
