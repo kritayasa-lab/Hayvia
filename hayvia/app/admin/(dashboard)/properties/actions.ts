@@ -109,12 +109,19 @@ export async function createProperty(
   const slug = slugify(rawSlug || title);
   if (!slug) return { error: "Could not generate a URL slug from that title." };
 
+  // Phase 7 — set only at creation time from PropertyForm's own hidden
+  // field (see components/admin/PropertyForm.tsx), never part of
+  // buildPropertyRow(), so an edit-form resubmission can never alter an
+  // existing property's traceability link.
+  const sellerLeadId = optionalString(formData, "seller_lead_id");
+
   const supabase = createAdminClient();
   const { data, error } = await supabase
     .from("properties")
     .insert({
       ...buildPropertyRow(formData),
       slug,
+      seller_lead_id: sellerLeadId,
       created_by: admin.id,
       updated_by: admin.id,
     })
@@ -126,6 +133,24 @@ export async function createProperty(
       return { error: "A property with that URL slug already exists. Please choose another." };
     }
     return { error: error?.message || "Failed to create property." };
+  }
+
+  // Only after the property has actually been created successfully — never
+  // mark the seller lead CONVERTED on a failed create (see the early return
+  // above). Best-effort: a failure here must never make the property look
+  // like it wasn't created, since it demonstrably was.
+  if (sellerLeadId) {
+    const { error: sellerLeadError } = await supabase
+      .from("seller_leads")
+      .update({ status: "CONVERTED" })
+      .eq("id", sellerLeadId);
+    if (sellerLeadError) {
+      // eslint-disable-next-line no-console
+      console.error(
+        `[Subphiphat] Property ${data.id} created from seller lead ${sellerLeadId}, but marking it CONVERTED failed:`,
+        sellerLeadError
+      );
+    }
   }
 
   const backupStatus = await backupNewPropertyToSheets(data.id);

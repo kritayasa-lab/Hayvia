@@ -86,18 +86,31 @@ export default function PropertyForm({
   owners,
   agents,
   submitLabel,
+  sellerLeadId,
 }: {
   action: (state: PropertyActionState | null, formData: FormData) => Promise<PropertyActionState>;
   initial?: Partial<PropertyFormValues>;
   owners: { id: string; name: string }[];
   agents: { id: string; name: string }[];
   submitLabel: string;
+  /**
+   * Phase 7 — when creating a property from a Seller Lead's "Approve &
+   * Create Property" action, carries the seller lead's id through this
+   * form's own submission as a hidden field, so createProperty() can link
+   * properties.seller_lead_id and mark the seller lead CONVERTED without
+   * this form needing to know anything about that flow itself. Never
+   * rendered on the edit form (no caller passes it there today), so an
+   * existing property's traceability link can't be altered by resubmitting
+   * the edit form.
+   */
+  sellerLeadId?: string;
 }) {
   const [state, formAction] = useFormState(action, null);
   const values = { ...emptyValues, ...initial };
 
   return (
     <form action={formAction} className="space-y-8">
+      {sellerLeadId && <input type="hidden" name="seller_lead_id" value={sellerLeadId} />}
       <FormMessage state={state} />
 
       <section>
