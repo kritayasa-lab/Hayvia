@@ -224,25 +224,30 @@ export default async function CustomerDetailPage({ params }: { params: { id: str
             }
           >
             {matchingPreferences.length === 0 ? (
-              <p className="text-sm text-ink-faint">
-                No matching activity linked yet — the Get Matched quiz doesn&apos;t collect contact
-                information today, so its requests can&apos;t be matched to a customer automatically.
-                This isn&apos;t an error; it&apos;s expected until contact capture is added to Matching.
-              </p>
+              <p className="text-sm text-ink-faint">No matching requests yet.</p>
             ) : (
               <ul className="divide-y divide-line-soft">
                 {matchingPreferences.map((pref) => (
-                  <li key={pref.id} className="py-3">
-                    <p className="text-sm text-ink">
-                      {pref.purpose === "BUY" ? "Buy" : "Rent"} ·{" "}
-                      {[pref.district, pref.city, pref.province].filter(Boolean).join(", ") || "No location preference"}
-                    </p>
-                    {(pref.budget_min || pref.budget_max) && (
-                      <p className="text-xs text-ink-faint">
-                        Budget: {formatPriceRange(pref.budget_min ?? 0, pref.budget_max ?? undefined)}
+                  <li key={pref.id} className="flex items-center justify-between gap-4 py-3">
+                    <div className="min-w-0">
+                      <p className="text-sm text-ink">
+                        {pref.purpose === "BUY" ? "Buy" : "Rent"} ·{" "}
+                        {[pref.district, pref.city, pref.province].filter(Boolean).join(", ") ||
+                          "No location preference"}
                       </p>
-                    )}
-                    <p className="text-xs text-ink-faint">{formatDate(pref.created_at)}</p>
+                      {(pref.budget_min || pref.budget_max) && (
+                        <p className="text-xs text-ink-faint">
+                          Budget: {formatPriceRange(pref.budget_min ?? 0, pref.budget_max ?? undefined)}
+                        </p>
+                      )}
+                      <p className="text-xs text-ink-faint">{formatDate(pref.created_at)}</p>
+                    </div>
+                    <Link
+                      href={`/admin/matching/${pref.id}`}
+                      className="shrink-0 text-xs font-medium text-moss-700 hover:underline"
+                    >
+                      View
+                    </Link>
                   </li>
                 ))}
               </ul>
