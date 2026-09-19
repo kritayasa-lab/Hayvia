@@ -22,6 +22,7 @@ import { rankMatches } from "@/lib/matching/scoring";
 import { getActiveMatchWeights } from "@/lib/matching/weights";
 import { persistMatchingRun } from "@/lib/matching/persist";
 import { createContactToken } from "@/lib/matching/contact-token";
+import { toPropertyPreview } from "@/lib/matching/preview";
 import { forwardToGoogleAppsScript } from "@/lib/google-apps-script";
 import { supportedLifestyleTags, type LifestyleTag, type MatchCriteria } from "@/lib/matching/types";
 
@@ -163,8 +164,12 @@ export async function POST(request: Request) {
     saved,
     contactToken,
     totalCandidates: candidates.length,
+    // Phase 6 — preview only. The full Property object (still privacy-safe
+    // on its own, see lib/matching/preview.ts) is deliberately not sent here;
+    // full detail is reached via the property's own public detail page after
+    // "Unlock Property Details", never re-exposed through this response.
     results: results.map((r) => ({
-      property: r.property,
+      property: toPropertyPreview(r.property),
       overall: r.overall,
       breakdown: r.breakdown,
       reasons: r.reasons,
