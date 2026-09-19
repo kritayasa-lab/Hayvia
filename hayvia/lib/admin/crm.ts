@@ -148,6 +148,8 @@ export interface MatchingRunRow {
   property_type: string | null;
   bedrooms: number | null;
   created_at: string;
+  customer_id: string | null;
+  customer_name: string | null;
   topMatches: { propertyTitle: string; score: number }[];
 }
 
@@ -155,14 +157,16 @@ export async function fetchMatchingRuns(): Promise<MatchingRunRow[]> {
   const supabase = createAdminClient();
   const { data: preferences } = await supabase
     .from("matching_preferences")
-    .select("id, purpose, province, city, district, budget_min, budget_max, property_type, bedrooms, created_at")
+    .select(
+      "id, purpose, province, city, district, budget_min, budget_max, property_type, bedrooms, created_at, customer_id, customers(full_name, email)"
+    )
     .order("created_at", { ascending: false })
     .limit(50);
 
   if (!preferences || preferences.length === 0) return [];
 
   const results = await Promise.all(
-    preferences.map(async (pref) => {
+    preferences.map(async ({ customers, ...pref }) => {
       const { data: matches } = await supabase
         .from("matching_results")
         .select("match_score, properties(title)")
@@ -170,8 +174,11 @@ export async function fetchMatchingRuns(): Promise<MatchingRunRow[]> {
         .order("match_score", { ascending: false })
         .limit(3);
 
+      const customer = customers as unknown as { full_name: string | null; email: string | null } | null;
+
       return {
         ...pref,
+        customer_name: customer?.full_name || customer?.email || null,
         topMatches: (matches ?? []).map((m) => ({
           propertyTitle: (m.properties as unknown as { title?: string } | null)?.title ?? "—",
           score: Number(m.match_score),
@@ -181,4 +188,108 @@ export async function fetchMatchingRuns(): Promise<MatchingRunRow[]> {
   );
 
   return results;
+}
+
+export interface MatchingRunDetail {
+  preference: {
+    id: string;
+    purpose: string;
+    province: string | null;
+    city: string | null;
+    district: string | null;
+    budget_min: number | null;
+    budget_max: number | null;
+    property_type: string | null;
+    bedrooms: number | null;
+    bathrooms: number | null;
+    furnished: string | null;
+    parking: boolean | null;
+    min_size_sqm: number | null;
+    lifestyle_preferences: string[];
+    created_at: string;
+    customer_id: string | null;
+  } | null;
+  customer: {
+    id: string;
+    full_name: string | null;
+    email: string | null;
+    phone: string | null;
+    email_verified: boolean;
+    phone_verified: boolean;
+  } | null;
+  matches: { propertyId: string; propertyTitle: string; propertySlug: string; score: number }[];
+  hasInquiry: boolean;
+  hasViewing: boolean;
+}
+
+/**
+ * Everything the Admin Matching Request detail page needs, in one place.
+ * Reads only existing tables/columns — no invented lifecycle state.
+ * `hasInquiry`/`hasViewing` are a loose proxy (does this CUSTOMER have any
+ * inquiry/viewing at all, not necessarily for one of these exact matched
+ * properties) — the schema has no matching_preference_id link on those two
+ * tables, so this is the closest honest signal available without adding one.
+ */
+export async function fetchMatchingRunDetail(id: string): Promise<MatchingRunDetail> {
+  const supabase = createAdminClient();
+
+  const { data: preference } = await supabase
+    .from("matching_preferences")
+    .select(
+      "id, purpose, province, city, district, budget_min, budget_max, property_type, bedrooms, bathrooms, furnished, parking, min_size_sqm, lifestyle_preferences, created_at, customer_id"
+    )
+    .eq("id", id)
+    .maybeSingle();
+
+  if (!preference) {
+    return { preference: null, customer: null, matches: [], hasInquiry: false, hasViewing: false };
+  }
+
+  const [{ data: matches }, customerResult] = await Promise.all([
+    supabase
+      .from("matching_results")
+      .select("match_score, properties(id, title, slug)")
+      .eq("matching_preference_id", id)
+      .order("match_score", { ascending: false }),
+    preference.customer_id
+      ? supabase
+          .from("customers")
+          .select("id, full_name, email, phone, email_verified, phone_verified")
+          .eq("id", preference.customer_id)
+          .maybeSingle()
+      : Promise.resolve({ data: null }),
+  ]);
+
+  let hasInquiry = false;
+  let hasViewing = false;
+  if (preference.customer_id) {
+    const [{ count: inquiryCount }, { count: viewingCount }] = await Promise.all([
+      supabase
+        .from("inquiries")
+        .select("id", { count: "exact", head: true })
+        .eq("customer_id", preference.customer_id),
+      supabase
+        .from("viewings")
+        .select("id", { count: "exact", head: true })
+        .eq("customer_id", preference.customer_id),
+    ]);
+    hasInquiry = Boolean(inquiryCount);
+    hasViewing = Boolean(viewingCount);
+  }
+
+  return {
+    preference,
+    customer: customerResult.data,
+    matches: (matches ?? []).map((m) => {
+      const property = m.properties as unknown as { id: string; title: string; slug: string } | null;
+      return {
+        propertyId: property?.id ?? "",
+        propertyTitle: property?.title ?? "—",
+        propertySlug: property?.slug ?? "",
+        score: Number(m.match_score),
+      };
+    }),
+    hasInquiry,
+    hasViewing,
+  };
 }

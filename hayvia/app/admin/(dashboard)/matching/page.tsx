@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { fetchMatchingRuns } from "@/lib/admin/crm";
+import Badge from "@/components/ui/Badge";
 import { formatDate, formatPriceRange } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
@@ -20,7 +22,11 @@ export default async function AdminMatchingPage() {
           </div>
         ) : (
           runs.map((run) => (
-            <div key={run.id} className="rounded-lg border border-line bg-surface p-5">
+            <Link
+              key={run.id}
+              href={`/admin/matching/${run.id}`}
+              className="block rounded-lg border border-line bg-surface p-5 transition-colors hover:border-moss-500"
+            >
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
                   <p className="font-medium text-ink">
@@ -36,7 +42,12 @@ export default async function AdminMatchingPage() {
                     </p>
                   )}
                 </div>
-                <p className="text-xs text-ink-faint">{formatDate(run.created_at)}</p>
+                <div className="flex flex-col items-end gap-1.5">
+                  <p className="text-xs text-ink-faint">{formatDate(run.created_at)}</p>
+                  <Badge tone={run.customer_id ? "moss" : "neutral"}>
+                    {run.customer_id ? `Customer: ${run.customer_name || "Linked"}` : "Guest / Not yet claimed"}
+                  </Badge>
+                </div>
               </div>
 
               <div className="mt-3 border-t border-line-soft pt-3">
@@ -54,7 +65,7 @@ export default async function AdminMatchingPage() {
                   </ul>
                 )}
               </div>
-            </div>
+            </Link>
           ))
         )}
       </div>
