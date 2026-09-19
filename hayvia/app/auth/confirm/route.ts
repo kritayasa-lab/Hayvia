@@ -59,10 +59,17 @@ const CUSTOMER_LOGIN_EMAIL_TYPES = new Set(["magiclink", "email"]);
  * Only allow redirecting to a relative, same-site path. Rejects absolute
  * URLs and protocol-relative URLs (e.g. "//evil.com") to prevent this
  * public, unauthenticated endpoint from being used as an open redirect.
+ *
+ * Also rejects any backslash: WHATWG URL parsing (what `new URL(next,
+ * request.url)` below uses) normalizes "\" to "/" for special schemes, so
+ * "/\evil.com" — which passes a startsWith("//") check verbatim — resolves
+ * to the external host "https://evil.com" once parsed. Confirmed directly
+ * against Node's URL implementation before adding this check; a leading-
+ * slash check alone is not sufficient.
  */
 function safeNextPath(rawNext: string | null): string {
   if (!rawNext) return "/account";
-  if (!rawNext.startsWith("/") || rawNext.startsWith("//")) return "/account";
+  if (!rawNext.startsWith("/") || rawNext.startsWith("//") || rawNext.includes("\\")) return "/account";
   return rawNext;
 }
 

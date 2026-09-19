@@ -265,13 +265,15 @@ export async function verifyPhoneOtp(
 // -----------------------------------------------------------------------
 
 // Phase 6 — only a relative, same-site path is ever accepted for `next`,
-// mirroring app/auth/confirm/route.ts's own safeNextPath() exactly (that
-// route re-validates independently regardless; this is defense in depth on
-// the sending side, not the only gate). Falls back to the existing default
-// of /account when absent or unsafe.
+// mirroring app/auth/confirm/route.ts's own safeNextPath() exactly, backslash
+// check included (WHATWG URL parsing normalizes "\" to "/" for special
+// schemes, so "/\evil.com" would otherwise resolve externally once that
+// route builds a URL from it) — that route re-validates independently
+// regardless; this is defense in depth on the sending side, not the only
+// gate. Falls back to the existing default of /account when absent or unsafe.
 function safeNext(rawNext?: string): string {
   if (!rawNext) return "/account";
-  if (!rawNext.startsWith("/") || rawNext.startsWith("//")) return "/account";
+  if (!rawNext.startsWith("/") || rawNext.startsWith("//") || rawNext.includes("\\")) return "/account";
   return rawNext;
 }
 
