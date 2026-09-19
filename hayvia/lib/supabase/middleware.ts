@@ -4,19 +4,22 @@ import { NextResponse, type NextRequest } from "next/server";
 /**
  * Refreshes the Supabase session cookie on every request that passes through
  * middleware.ts. This is what keeps a user's session alive across page loads
- * without them noticing an access token silently expiring mid-visit — kept
- * because Supabase Auth itself is staying (admin authentication needs it),
- * even though the public site is guest-first and no longer has any
- * customer-facing login/account routes to protect.
+ * without them noticing an access token silently expiring mid-visit.
  *
- * /admin/* is the one route tree this file actually guards: unauthenticated
- * visitors are redirected to /admin/login, and authenticated non-admins are
- * denied (also redirected to /admin/login, with a generic reason — this is a
- * fast, cheap early-exit so protected content is never even rendered for the
- * wrong caller). This is defense-in-depth on top of, not instead of, the
- * authoritative check in app/admin/(dashboard)/layout.tsx (requireAdmin(),
- * lib/auth/admin.ts) — a redirect here is only a UX/performance win, never
- * the only thing standing between a non-admin and admin data.
+ * Two route trees this file guards:
+ * - /admin/*: unauthenticated visitors are redirected to /admin/login, and
+ *   authenticated non-admins are denied (also redirected to /admin/login,
+ *   with a generic reason — a fast, cheap early-exit so protected content is
+ *   never even rendered for the wrong caller). Defense-in-depth on top of,
+ *   not instead of, the authoritative check in
+ *   app/admin/(dashboard)/layout.tsx (requireAdmin(), lib/auth/admin.ts).
+ * - /account (Phase 5): unauthenticated visitors are redirected to /login.
+ *   Same defense-in-depth relationship to the authoritative check in
+ *   requireCustomerAccount() (lib/customers/account.ts) — this redirect is
+ *   a UX/performance win, never the only thing standing between a guest
+ *   and a customer's data. No role check here (unlike admin): any
+ *   authenticated user may reach /account, since which customer they are
+ *   is resolved by requireCustomerAccount() itself.
  */
 export async function updateSession(request: NextRequest) {
   let response = NextResponse.next({
@@ -56,6 +59,7 @@ export async function updateSession(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const isAdminRoute = pathname.startsWith("/admin");
   const isAdminLoginRoute = pathname === "/admin/login";
+  const isAccountRoute = pathname === "/account" || pathname.startsWith("/account/");
 
   if (isAdminRoute && !isAdminLoginRoute) {
     if (!user) {
@@ -71,6 +75,10 @@ export async function updateSession(request: NextRequest) {
     if (!profile || profile.role !== "ADMIN") {
       return NextResponse.redirect(new URL("/admin/login", request.url));
     }
+  }
+
+  if (isAccountRoute && !user) {
+    return NextResponse.redirect(new URL("/login", request.url));
   }
 
   return response;

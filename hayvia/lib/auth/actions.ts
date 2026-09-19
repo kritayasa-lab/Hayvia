@@ -249,7 +249,76 @@ export async function verifyPhoneOtp(
 }
 
 // -----------------------------------------------------------------------
-// Email + password
+// Email Magic Link — Phase 5. The ONLY customer-facing authentication
+// method: passwordless, single /login entry point for both new and
+// returning customers (see components/auth/EmailOtpForm.tsx).
+//
+// shouldCreateUser: true always — this is what unifies "register" and
+// "login" into one action. Supabase itself decides whether the email
+// belongs to an existing auth user (sends a login link) or not (creates
+// the user first, then sends the same-shaped link) — the response and the
+// UI copy are identical either way, so nothing here can be used to probe
+// whether an email has an account before the link is clicked. That
+// distinction is only ever shown AFTER verification (app/auth/confirm's
+// redirect carries a `welcome=new|back` param — see
+// lib/customers/link-auth-user.ts), never at send time.
+// -----------------------------------------------------------------------
+
+async function sendEmailMagicLinkInternal(email: string, captchaToken?: string): Promise<ActionState> {
+  if (!email || !email.includes("@")) {
+    return { error: "Please enter a valid email." };
+  }
+
+  try {
+    const supabase = createClient();
+    const { error } = await supabase.auth.signInWithOtp({
+      email,
+      options: {
+        shouldCreateUser: true,
+        emailRedirectTo: `${getSiteUrl()}/auth/confirm?next=/account`,
+        captchaToken,
+      },
+    });
+
+    if (error) return { error: mapAuthError(error.message) };
+  } catch {
+    return { error: NETWORK_ERROR };
+  }
+
+  return { success: "Check your email for a sign-in link." };
+}
+
+export async function requestEmailMagicLink(
+  _prevState: ActionState | null,
+  formData: FormData
+): Promise<ActionState> {
+  const email = String(formData.get("email") || "").trim();
+  return sendEmailMagicLinkInternal(email, getCaptchaToken(formData));
+}
+
+/**
+ * FIXED (Phase 5 pre-push security review): resend previously called
+ * requestEmailMagicLink again with no CAPTCHA token at all — its form had
+ * no Turnstile widget, so every resend went out uncaptcha'd regardless of
+ * Dashboard configuration. Mirrors resendPhoneOtp's exact shape: accepts a
+ * fresh token as a plain argument (captured imperatively by a dedicated
+ * Turnstile instance in EmailOtpForm.tsx — a Turnstile token is single-use,
+ * so the initial send's token can't be reused here), passed straight
+ * through to the same underlying Supabase call as the initial send. No
+ * enforcement logic lives in this codebase either way — Supabase remains
+ * the one that actually validates the token, exactly as before.
+ */
+export async function resendEmailMagicLink(email: string, captchaToken?: string): Promise<ActionState> {
+  return sendEmailMagicLinkInternal(email.trim(), captchaToken);
+}
+
+// -----------------------------------------------------------------------
+// Email + password — PRESENT BUT UNREACHABLE from any customer-facing UI
+// (see app/login/page.tsx, app/register/page.tsx). Kept, not deleted, per
+// the Phase 5 decision to leave existing password-auth code in place for
+// now. Do not wire this back into customer-facing pages without an
+// explicit decision to reintroduce password auth — Phase 5's login is
+// passwordless-only by design.
 // -----------------------------------------------------------------------
 
 export async function signUpWithEmail(
