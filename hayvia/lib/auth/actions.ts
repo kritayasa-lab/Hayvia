@@ -264,11 +264,7 @@ export async function verifyPhoneOtp(
 // lib/customers/link-auth-user.ts), never at send time.
 // -----------------------------------------------------------------------
 
-export async function requestEmailMagicLink(
-  _prevState: ActionState | null,
-  formData: FormData
-): Promise<ActionState> {
-  const email = String(formData.get("email") || "").trim();
+async function sendEmailMagicLinkInternal(email: string, captchaToken?: string): Promise<ActionState> {
   if (!email || !email.includes("@")) {
     return { error: "Please enter a valid email." };
   }
@@ -280,7 +276,7 @@ export async function requestEmailMagicLink(
       options: {
         shouldCreateUser: true,
         emailRedirectTo: `${getSiteUrl()}/auth/confirm?next=/account`,
-        captchaToken: getCaptchaToken(formData),
+        captchaToken,
       },
     });
 
@@ -290,6 +286,30 @@ export async function requestEmailMagicLink(
   }
 
   return { success: "Check your email for a sign-in link." };
+}
+
+export async function requestEmailMagicLink(
+  _prevState: ActionState | null,
+  formData: FormData
+): Promise<ActionState> {
+  const email = String(formData.get("email") || "").trim();
+  return sendEmailMagicLinkInternal(email, getCaptchaToken(formData));
+}
+
+/**
+ * FIXED (Phase 5 pre-push security review): resend previously called
+ * requestEmailMagicLink again with no CAPTCHA token at all — its form had
+ * no Turnstile widget, so every resend went out uncaptcha'd regardless of
+ * Dashboard configuration. Mirrors resendPhoneOtp's exact shape: accepts a
+ * fresh token as a plain argument (captured imperatively by a dedicated
+ * Turnstile instance in EmailOtpForm.tsx — a Turnstile token is single-use,
+ * so the initial send's token can't be reused here), passed straight
+ * through to the same underlying Supabase call as the initial send. No
+ * enforcement logic lives in this codebase either way — Supabase remains
+ * the one that actually validates the token, exactly as before.
+ */
+export async function resendEmailMagicLink(email: string, captchaToken?: string): Promise<ActionState> {
+  return sendEmailMagicLinkInternal(email.trim(), captchaToken);
 }
 
 // -----------------------------------------------------------------------
