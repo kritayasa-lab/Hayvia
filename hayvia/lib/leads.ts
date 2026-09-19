@@ -5,10 +5,11 @@
 // Real Estate's forms (Property Inquiry, Property Viewing, List Your
 // Property, Contact).
 //
-// Property Inquiry and Property Viewing are real Supabase-backed writes —
-// see app/api/inquiries/route.ts and app/api/viewings/route.ts (server-side,
-// service-role client; inquiries/viewings have RLS enabled with no
-// anon/authenticated policy, so this is the only path that can write them
+// Property Inquiry, Property Viewing, and List Your Property are real
+// Supabase-backed writes — see app/api/inquiries/route.ts,
+// app/api/viewings/route.ts, and app/api/leads/seller/route.ts (server-side,
+// service-role client; inquiries/viewings/seller_leads have RLS enabled with
+// no anon/authenticated policy, so this is the only path that can write them
 // today).
 //
 // Get Matched no longer goes through this file — the matching flow (real
@@ -16,11 +17,9 @@
 // is called directly by components/matching/MatchingWizard.tsx, since it
 // returns structured results, not a simple accept/reject lead submission.
 //
-// List Your Property and Contact still use a local mock handler — out of
-// this pass's scope (see supabase/DATABASE_SCHEMA.md: seller_leads already
-// has a real schema for List Your Property, but wiring it up is left for a
-// following pass). When ready, swap their block below for a real
-// integration the same way Inquiry/Viewing were.
+// Contact still uses a local mock handler — out of this pass's scope. When
+// ready, swap its block below for a real integration the same way Inquiry/
+// Viewing/List Your Property were.
 //
 // Every form in the app calls the same `submitLead` function, so this file
 // is the only place that needs to change to go live with a new integration.
@@ -59,6 +58,8 @@ export interface PropertyViewingLead extends BaseLead {
   message?: string;
 }
 
+export type PreferredContactMethod = "PHONE" | "LINE" | "WHATSAPP" | "EMAIL";
+
 export interface ListPropertyLead extends BaseLead {
   source: "list-your-property";
   name: string;
@@ -67,11 +68,16 @@ export interface ListPropertyLead extends BaseLead {
   email: string;
   propertyName: string;
   propertyType: string;
-  location: string;
-  monthlyRent: string;
+  district: string;
+  expectedPrice: string;
+  bedrooms?: string;
+  bathrooms?: string;
+  sizeSqm?: string;
   availableDate: string;
   description: string;
-  contactMethod: string;
+  preferredContactMethod: PreferredContactMethod;
+  lineId?: string;
+  whatsappNumber?: string;
 }
 
 export interface ContactLead extends BaseLead {
@@ -93,8 +99,9 @@ export interface SubmitLeadResult {
  *
  * - "property-inquiry" → real Supabase insert via /api/inquiries.
  * - "property-viewing" → real Supabase insert via /api/viewings.
- * - "list-your-property" / "contact" → still a local mock handler; replace
- *   their branch below to go live with a real integration.
+ * - "list-your-property" → real Supabase insert via /api/leads/seller.
+ * - "contact" → still a local mock handler; replace its branch below to go
+ *   live with a real integration.
  */
 export async function submitLead(lead: Lead): Promise<SubmitLeadResult> {
   if (lead.source === "property-inquiry") {
@@ -105,7 +112,11 @@ export async function submitLead(lead: Lead): Promise<SubmitLeadResult> {
     return submitToRoute("/api/viewings", lead);
   }
 
-  // Mock handler for List Your Property and Contact.
+  if (lead.source === "list-your-property") {
+    return submitToRoute("/api/leads/seller", lead);
+  }
+
+  // Mock handler for Contact.
   // Simulate network latency so the UI's loading state can be exercised.
   await new Promise((resolve) => setTimeout(resolve, 700));
 

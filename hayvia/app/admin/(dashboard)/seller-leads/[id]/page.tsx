@@ -13,6 +13,13 @@ export const dynamic = "force-dynamic";
 // CONVERTED one already has its property (see convertedProperty below).
 const APPROVABLE_STATUSES = new Set(["NEW", "CONTACTED", "QUALIFIED"]);
 
+const contactMethodLabels: Record<string, string> = {
+  PHONE: "Phone",
+  LINE: "LINE",
+  WHATSAPP: "WhatsApp",
+  EMAIL: "Email",
+};
+
 async function loadSellerLead(id: string) {
   const supabase = createAdminClient();
 
@@ -100,6 +107,20 @@ export default async function SellerLeadDetailPage({ params }: { params: { id: s
               <div>
                 <dt className="text-xs uppercase tracking-wide text-ink-faint">Phone</dt>
                 <dd className="text-ink">{sellerLead.phone || "—"}</dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-wide text-ink-faint">Preferred Contact Method</dt>
+                <dd className="text-ink">
+                  {sellerLead.preferred_contact_method
+                    ? contactMethodLabels[sellerLead.preferred_contact_method] ?? sellerLead.preferred_contact_method
+                    : "—"}
+                  {sellerLead.preferred_contact_method === "LINE" && sellerLead.line_id && (
+                    <span className="text-ink-soft"> · LINE ID: {sellerLead.line_id}</span>
+                  )}
+                  {sellerLead.preferred_contact_method === "WHATSAPP" && sellerLead.whatsapp_number && (
+                    <span className="text-ink-soft"> · WhatsApp: {sellerLead.whatsapp_number}</span>
+                  )}
+                </dd>
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-wide text-ink-faint">Property Type</dt>

@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { AlertCircle, CheckCircle2, ImagePlus, Loader2 } from "lucide-react";
+import { districts } from "@/data/properties";
 import { FieldWrapper, TextInput, TextArea, Select } from "@/components/ui/FormField";
 import Button from "@/components/ui/Button";
-import { submitLead, type ListPropertyLead } from "@/lib/leads";
+import { submitLead, type ListPropertyLead, type PreferredContactMethod } from "@/lib/leads";
 
 type FormState = Omit<ListPropertyLead, "source" | "submittedAt">;
 
@@ -15,11 +16,16 @@ const initialState: FormState = {
   email: "",
   propertyName: "",
   propertyType: "",
-  location: "",
-  monthlyRent: "",
+  district: "",
+  expectedPrice: "",
+  bedrooms: "",
+  bathrooms: "",
+  sizeSqm: "",
   availableDate: "",
   description: "",
-  contactMethod: "WhatsApp",
+  preferredContactMethod: "PHONE",
+  lineId: "",
+  whatsappNumber: "",
 };
 
 const requiredFields: Array<keyof FormState> = [
@@ -28,10 +34,17 @@ const requiredFields: Array<keyof FormState> = [
   "email",
   "propertyName",
   "propertyType",
-  "location",
-  "monthlyRent",
+  "district",
+  "expectedPrice",
   "description",
 ];
+
+const contactMethodLabels: Record<PreferredContactMethod, string> = {
+  PHONE: "Phone",
+  LINE: "LINE",
+  WHATSAPP: "WhatsApp",
+  EMAIL: "Email",
+};
 
 export default function ListPropertyForm() {
   const [form, setForm] = useState<FormState>(initialState);
@@ -52,6 +65,12 @@ export default function ListPropertyForm() {
     }
     if (form.email && !form.email.includes("@")) {
       nextErrors.email = "Please enter a valid email.";
+    }
+    if (form.preferredContactMethod === "LINE" && !form.lineId?.trim()) {
+      nextErrors.lineId = "Please enter your LINE ID.";
+    }
+    if (form.preferredContactMethod === "WHATSAPP" && !form.whatsappNumber?.trim()) {
+      nextErrors.whatsappNumber = "Please enter your WhatsApp number.";
     }
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
@@ -153,27 +172,61 @@ export default function ListPropertyForm() {
           </Select>
         </FieldWrapper>
 
-        <FieldWrapper label="Location" htmlFor="lp-location" required error={errors.location}>
+        <FieldWrapper label="District" htmlFor="lp-district" required error={errors.district}>
+          <Select
+            id="lp-district"
+            value={form.district}
+            onChange={(e) => update("district", e.target.value)}
+            error={Boolean(errors.district)}
+          >
+            <option value="">Select district</option>
+            {districts.map((d) => (
+              <option key={d}>{d}</option>
+            ))}
+          </Select>
+        </FieldWrapper>
+
+        <FieldWrapper label="Expected price (THB)" htmlFor="lp-price" required error={errors.expectedPrice}>
           <TextInput
-            id="lp-location"
-            value={form.location}
-            onChange={(e) => update("location", e.target.value)}
-            error={Boolean(errors.location)}
-            placeholder="e.g. Kho Hong, Hat Yai"
+            id="lp-price"
+            value={form.expectedPrice}
+            onChange={(e) => update("expectedPrice", e.target.value)}
+            error={Boolean(errors.expectedPrice)}
+            placeholder="e.g. 2500000"
           />
         </FieldWrapper>
 
-        <FieldWrapper label="Monthly rent" htmlFor="lp-rent" required error={errors.monthlyRent}>
+        <FieldWrapper label="Bedrooms" htmlFor="lp-bedrooms" hint="Optional">
           <TextInput
-            id="lp-rent"
-            value={form.monthlyRent}
-            onChange={(e) => update("monthlyRent", e.target.value)}
-            error={Boolean(errors.monthlyRent)}
-            placeholder="e.g. 12000"
+            id="lp-bedrooms"
+            type="number"
+            min={0}
+            value={form.bedrooms}
+            onChange={(e) => update("bedrooms", e.target.value)}
           />
         </FieldWrapper>
 
-        <FieldWrapper label="Available date" htmlFor="lp-available">
+        <FieldWrapper label="Bathrooms" htmlFor="lp-bathrooms" hint="Optional">
+          <TextInput
+            id="lp-bathrooms"
+            type="number"
+            min={0}
+            value={form.bathrooms}
+            onChange={(e) => update("bathrooms", e.target.value)}
+          />
+        </FieldWrapper>
+
+        <FieldWrapper label="Size (sqm)" htmlFor="lp-size" hint="Optional">
+          <TextInput
+            id="lp-size"
+            type="number"
+            min={0}
+            value={form.sizeSqm}
+            onChange={(e) => update("sizeSqm", e.target.value)}
+          />
+        </FieldWrapper>
+
+        <FieldWrapper label="Available date" htmlFor="lp-available" hint="Optional">
           <TextInput
             id="lp-available"
             type="date"
@@ -182,18 +235,41 @@ export default function ListPropertyForm() {
           />
         </FieldWrapper>
 
-        <FieldWrapper label="Preferred contact method" htmlFor="lp-contact-method">
+        <FieldWrapper label="Preferred contact method" htmlFor="lp-contact-method" required>
           <Select
             id="lp-contact-method"
-            value={form.contactMethod}
-            onChange={(e) => update("contactMethod", e.target.value)}
+            value={form.preferredContactMethod}
+            onChange={(e) => update("preferredContactMethod", e.target.value as PreferredContactMethod)}
           >
-            <option>WhatsApp</option>
-            <option>LINE</option>
-            <option>Email</option>
-            <option>Phone call</option>
+            {(Object.keys(contactMethodLabels) as PreferredContactMethod[]).map((method) => (
+              <option key={method} value={method}>
+                {contactMethodLabels[method]}
+              </option>
+            ))}
           </Select>
         </FieldWrapper>
+
+        {form.preferredContactMethod === "LINE" && (
+          <FieldWrapper label="LINE ID" htmlFor="lp-line-id" required error={errors.lineId}>
+            <TextInput
+              id="lp-line-id"
+              value={form.lineId}
+              onChange={(e) => update("lineId", e.target.value)}
+              error={Boolean(errors.lineId)}
+            />
+          </FieldWrapper>
+        )}
+
+        {form.preferredContactMethod === "WHATSAPP" && (
+          <FieldWrapper label="WhatsApp number" htmlFor="lp-whatsapp" required error={errors.whatsappNumber}>
+            <TextInput
+              id="lp-whatsapp"
+              value={form.whatsappNumber}
+              onChange={(e) => update("whatsappNumber", e.target.value)}
+              error={Boolean(errors.whatsappNumber)}
+            />
+          </FieldWrapper>
+        )}
       </div>
 
       <FieldWrapper
@@ -207,7 +283,7 @@ export default function ListPropertyForm() {
           value={form.description}
           onChange={(e) => update("description", e.target.value)}
           error={Boolean(errors.description)}
-          placeholder="Bedrooms, bathrooms, size, furnishing, amenities, anything a prospective tenant should know"
+          placeholder="Bedrooms, bathrooms, size, furnishing, amenities, anything a prospective buyer should know"
         />
       </FieldWrapper>
 
