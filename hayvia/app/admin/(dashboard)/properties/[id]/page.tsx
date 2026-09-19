@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { ArrowUp, ArrowDown, Star, Trash2 } from "lucide-react";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { fetchOwners, fetchAgents } from "@/lib/admin/people";
@@ -61,6 +62,14 @@ export default async function EditPropertyPage({
     <div>
       <h1 className="font-display text-2xl text-ink">{property.title}</h1>
       <p className="mt-1 text-sm text-ink-faint">Property ID: {property.id}</p>
+      {property.seller_lead_id && (
+        <Link
+          href={`/admin/seller-leads/${property.seller_lead_id}`}
+          className="mt-1 inline-block text-sm font-medium text-moss-700 hover:underline"
+        >
+          Created from Seller Lead &rarr; View Seller Lead
+        </Link>
+      )}
 
       <div className="mt-4">
         <SaveStatusBanner justCreated={searchParams.created === "1"} backupStatus={backupStatus} />
