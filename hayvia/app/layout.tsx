@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { contactConfig } from "@/config/contact";
+import { getCustomerHeaderInfo } from "@/lib/customers/account";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -43,15 +44,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Read once per request, never redirects (see getCustomerHeaderInfo's own
+  // comment) — safe to call unconditionally even though this layout wraps
+  // every route, /admin/** included.
+  const account = await getCustomerHeaderInfo();
+
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
       <body className="bg-paper text-ink font-sans antialiased">
-        <Header />
+        <Header account={account} />
         <main>{children}</main>
         <Footer />
       </body>

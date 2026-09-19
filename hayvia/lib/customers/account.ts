@@ -157,3 +157,42 @@ export async function requireCustomerAccount(): Promise<CustomerAccountData> {
     })),
   };
 }
+
+export interface CustomerHeaderInfo {
+  fullName: string | null;
+  email: string | null;
+  avatarUrl: string | null;
+}
+
+/**
+ * Lightweight, NEVER-REDIRECTING session summary for the public site
+ * header (components/layout/Header.tsx, read once per request from the
+ * root layout). Unlike requireCustomerAccount(), this must be safe to call
+ * on every page the root layout wraps — including /admin/** and
+ * /admin/login, since app/layout.tsx renders the public Header on every
+ * route — so it only ever returns null on "nothing to show," never
+ * redirects. An authenticated user with no linked customers row (e.g. an
+ * admin who has never gone through the magic-link flow) also gets null —
+ * there's no customer account to represent in this header.
+ */
+export async function getCustomerHeaderInfo(): Promise<CustomerHeaderInfo | null> {
+  const supabase = createClient();
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return null;
+
+  const [{ data: profile }, { data: customer }] = await Promise.all([
+    supabase.from("profiles").select("avatar_url").eq("id", user.id).maybeSingle(),
+    supabase.from("customers").select("full_name, email").eq("profile_id", user.id).maybeSingle(),
+  ]);
+
+  if (!customer) return null;
+
+  return {
+    fullName: customer.full_name,
+    email: customer.email,
+    avatarUrl: profile?.avatar_url ?? null,
+  };
+}
