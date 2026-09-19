@@ -75,12 +75,24 @@ export async function requireCustomerAccount(): Promise<CustomerAccountData> {
   const {
     data: { user },
   } = await supabase.auth.getUser();
+  // TEMPORARY DIAGNOSTIC — safe to remove once the /account redirect cause
+  // is identified. Logs a boolean only, never the user id or any PII.
+  // eslint-disable-next-line no-console
+  console.log("[ACCOUNT_AUTH_DIAG]", { userFound: Boolean(user) });
   if (!user) redirect("/login");
 
-  const [{ data: profile }, { data: customer }] = await Promise.all([
+  const [{ data: profile }, { data: customer, error: customerError }] = await Promise.all([
     supabase.from("profiles").select("email, email_verified, full_name").eq("id", user.id).single(),
     supabase.from("customers").select("id, full_name, email").eq("profile_id", user.id).maybeSingle(),
   ]);
+
+  // TEMPORARY DIAGNOSTIC — same rules as above: booleans only, never the
+  // customer id, email, or the raw Supabase error object.
+  // eslint-disable-next-line no-console
+  console.log("[ACCOUNT_AUTH_DIAG]", {
+    customerFound: Boolean(customer),
+    customerLookupError: Boolean(customerError),
+  });
 
   if (!customer) {
     // Session exists but the customer link hasn't completed yet (e.g. the
