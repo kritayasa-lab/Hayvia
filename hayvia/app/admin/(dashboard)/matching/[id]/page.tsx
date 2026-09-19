@@ -174,7 +174,10 @@ export default async function MatchingRequestDetailPage({ params }: { params: { 
                 {matches.map((match) => (
                   <li key={match.propertyId} className="flex items-center justify-between gap-4 py-3">
                     <div className="min-w-0">
-                      <p className="truncate text-sm text-ink">{match.propertyTitle}</p>
+                      <p className="truncate text-sm text-ink">
+                        {match.propertyCode ? `${match.propertyCode} · ` : ""}
+                        {match.propertyTitle}
+                      </p>
                       <p className="text-xs font-medium text-moss-700">{match.score}% match</p>
                     </div>
                     {match.propertySlug && (

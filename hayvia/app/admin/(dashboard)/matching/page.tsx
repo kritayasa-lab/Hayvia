@@ -58,7 +58,10 @@ export default async function AdminMatchingPage() {
                   <ul className="mt-2 space-y-1.5">
                     {run.topMatches.map((match, i) => (
                       <li key={i} className="flex items-center justify-between text-sm">
-                        <span className="text-ink-soft">{match.propertyTitle}</span>
+                        <span className="text-ink-soft">
+                          {match.propertyCode ? `${match.propertyCode} · ` : ""}
+                          {match.propertyTitle}
+                        </span>
                         <span className="font-medium text-moss-700">{match.score}% match</span>
                       </li>
                     ))}

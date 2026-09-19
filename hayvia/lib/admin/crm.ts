@@ -150,7 +150,7 @@ export interface MatchingRunRow {
   created_at: string;
   customer_id: string | null;
   customer_name: string | null;
-  topMatches: { propertyTitle: string; score: number }[];
+  topMatches: { propertyTitle: string; propertyCode: string | null; score: number }[];
 }
 
 export async function fetchMatchingRuns(): Promise<MatchingRunRow[]> {
@@ -169,7 +169,7 @@ export async function fetchMatchingRuns(): Promise<MatchingRunRow[]> {
     preferences.map(async ({ customers, ...pref }) => {
       const { data: matches } = await supabase
         .from("matching_results")
-        .select("match_score, properties(title)")
+        .select("match_score, properties(title, property_code)")
         .eq("matching_preference_id", pref.id)
         .order("match_score", { ascending: false })
         .limit(3);
@@ -179,10 +179,14 @@ export async function fetchMatchingRuns(): Promise<MatchingRunRow[]> {
       return {
         ...pref,
         customer_name: customer?.full_name || customer?.email || null,
-        topMatches: (matches ?? []).map((m) => ({
-          propertyTitle: (m.properties as unknown as { title?: string } | null)?.title ?? "—",
-          score: Number(m.match_score),
-        })),
+        topMatches: (matches ?? []).map((m) => {
+          const matchProperty = m.properties as unknown as { title?: string; property_code?: string } | null;
+          return {
+            propertyTitle: matchProperty?.title ?? "—",
+            propertyCode: matchProperty?.property_code ?? null,
+            score: Number(m.match_score),
+          };
+        }),
       };
     })
   );
@@ -217,7 +221,13 @@ export interface MatchingRunDetail {
     email_verified: boolean;
     phone_verified: boolean;
   } | null;
-  matches: { propertyId: string; propertyTitle: string; propertySlug: string; score: number }[];
+  matches: {
+    propertyId: string;
+    propertyCode: string | null;
+    propertyTitle: string;
+    propertySlug: string;
+    score: number;
+  }[];
   hasInquiry: boolean;
   hasViewing: boolean;
 }
@@ -248,7 +258,7 @@ export async function fetchMatchingRunDetail(id: string): Promise<MatchingRunDet
   const [{ data: matches }, customerResult] = await Promise.all([
     supabase
       .from("matching_results")
-      .select("match_score, properties(id, title, slug)")
+      .select("match_score, properties(id, title, slug, property_code)")
       .eq("matching_preference_id", id)
       .order("match_score", { ascending: false }),
     preference.customer_id
@@ -281,9 +291,12 @@ export async function fetchMatchingRunDetail(id: string): Promise<MatchingRunDet
     preference,
     customer: customerResult.data,
     matches: (matches ?? []).map((m) => {
-      const property = m.properties as unknown as { id: string; title: string; slug: string } | null;
+      const property = m.properties as unknown as
+        | { id: string; title: string; slug: string; property_code: string | null }
+        | null;
       return {
         propertyId: property?.id ?? "",
+        propertyCode: property?.property_code ?? null,
         propertyTitle: property?.title ?? "—",
         propertySlug: property?.slug ?? "",
         score: Number(m.match_score),

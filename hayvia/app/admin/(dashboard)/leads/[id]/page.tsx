@@ -25,7 +25,7 @@ async function loadLead(id: string) {
   const supabase = createAdminClient();
 
   const [{ data: lead }, { data: notes }, { data: history }] = await Promise.all([
-    supabase.from("leads").select("*, properties(title)").eq("id", id).single(),
+    supabase.from("leads").select("*, properties(title, property_code)").eq("id", id).single(),
     supabase
       .from("lead_notes")
       .select("id, note, created_at, profiles(full_name)")
@@ -45,7 +45,8 @@ export default async function LeadDetailPage({ params }: { params: { id: string 
   const { lead, notes, history } = await loadLead(params.id);
   if (!lead) notFound();
 
-  const propertyTitle = (lead.properties as unknown as { title?: string } | null)?.title ?? null;
+  const property = lead.properties as unknown as { title?: string; property_code?: string } | null;
+  const propertyTitle = property?.title ?? null;
 
   return (
     <div>
@@ -79,7 +80,16 @@ export default async function LeadDetailPage({ params }: { params: { id: string 
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-wide text-ink-faint">Property</dt>
-                <dd className="text-ink">{propertyTitle || "—"}</dd>
+                <dd className="text-ink">
+                  {propertyTitle ? (
+                    <Link href={`/admin/properties/${lead.property_id}`} className="hover:underline">
+                      {property?.property_code ? `${property.property_code} · ` : ""}
+                      {propertyTitle}
+                    </Link>
+                  ) : (
+                    "—"
+                  )}
+                </dd>
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-wide text-ink-faint">Follow-up Date</dt>

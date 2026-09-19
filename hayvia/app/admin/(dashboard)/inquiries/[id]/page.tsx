@@ -13,7 +13,7 @@ async function loadInquiry(id: string) {
 
   const { data: inquiry } = await supabase
     .from("inquiries")
-    .select("*, properties(title)")
+    .select("*, properties(title, property_code)")
     .eq("id", id)
     .single();
 
@@ -55,7 +55,8 @@ export default async function InquiryDetailPage({ params }: { params: { id: stri
   const { inquiry, notes, history, linkedLeadId } = await loadInquiry(params.id);
   if (!inquiry) notFound();
 
-  const propertyTitle = (inquiry.properties as unknown as { title?: string } | null)?.title ?? null;
+  const property = inquiry.properties as unknown as { title?: string; property_code?: string } | null;
+  const propertyTitle = property?.title ?? null;
 
   return (
     <div>
@@ -82,7 +83,16 @@ export default async function InquiryDetailPage({ params }: { params: { id: stri
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-wide text-ink-faint">Property</dt>
-                <dd className="text-ink">{propertyTitle || "—"}</dd>
+                <dd className="text-ink">
+                  {propertyTitle ? (
+                    <Link href={`/admin/properties/${inquiry.property_id}`} className="hover:underline">
+                      {property?.property_code ? `${property.property_code} · ` : ""}
+                      {propertyTitle}
+                    </Link>
+                  ) : (
+                    "—"
+                  )}
+                </dd>
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-wide text-ink-faint">Message</dt>
