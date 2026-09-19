@@ -82,7 +82,14 @@ export async function backupPropertyToSheets(propertyId: string): Promise<Backup
       .filter((name): name is string => Boolean(name));
 
     const sheetRow: Record<string, string> = {
+      // Phase 8A — existing legacy ID column, UNCHANGED. Do not repoint this
+      // at property_code; see the Phase 8 Blueprint's Google Sheets Strategy
+      // for why this is additive-only for now (Apps Script's own upsert-key
+      // behavior against this column is unverified from this repo).
       ID: property.external_ref || property.id,
+      "Property Code": property.property_code ?? "",
+      "Supabase ID": property.id,
+      "External Ref": property.external_ref ?? "",
       Status: statusToSheet[property.status] ?? "Hidden",
       Title: property.title ?? "",
       "Property Type": propertyTypeToSheet[property.property_type] ?? property.property_type ?? "",

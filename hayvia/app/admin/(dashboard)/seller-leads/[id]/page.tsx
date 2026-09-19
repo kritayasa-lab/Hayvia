@@ -33,7 +33,7 @@ async function loadSellerLead(id: string) {
   // every seller lead is guaranteed to have a linked CRM lead row.
   const [{ data: linkedLead }, { data: convertedProperty }] = await Promise.all([
     supabase.from("leads").select("id").eq("seller_lead_id", id).maybeSingle(),
-    supabase.from("properties").select("id, title").eq("seller_lead_id", id).maybeSingle(),
+    supabase.from("properties").select("id, title, property_code").eq("seller_lead_id", id).maybeSingle(),
   ]);
 
   if (!linkedLead) {
@@ -82,7 +82,7 @@ export default async function SellerLeadDetailPage({ params }: { params: { id: s
             href={`/admin/properties/${convertedProperty.id}`}
             className="inline-flex items-center justify-center rounded bg-moss-600 px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
-            Converted &rarr; View Property
+            Converted &rarr; View Property ({convertedProperty.property_code})
           </Link>
         ) : (
           APPROVABLE_STATUSES.has(sellerLead.status) && (

@@ -60,8 +60,13 @@ export default async function EditPropertyPage({
 
   return (
     <div>
-      <h1 className="font-display text-2xl text-ink">{property.title}</h1>
-      <p className="mt-1 text-sm text-ink-faint">Property ID: {property.id}</p>
+      <div className="flex flex-wrap items-center gap-2">
+        <h1 className="font-display text-2xl text-ink">{property.title}</h1>
+        <span className="rounded bg-moss-50 px-2 py-0.5 font-mono text-sm font-medium text-moss-700">
+          {property.property_code}
+        </span>
+      </div>
+      <p className="mt-1 text-sm text-ink-faint">Database ID: {property.id}</p>
       {property.seller_lead_id && (
         <Link
           href={`/admin/seller-leads/${property.seller_lead_id}`}

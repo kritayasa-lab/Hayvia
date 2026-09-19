@@ -36,7 +36,7 @@ export default function PropertiesTable({
               type="text"
               name="q"
               defaultValue={q}
-              placeholder="Search title, city, or ID..."
+              placeholder="Search Property Code, title, city, or ID..."
               className="w-64 rounded border border-line bg-surface py-2 pl-9 pr-3 text-sm text-ink placeholder:text-ink-faint focus:border-moss-500 focus:outline-none focus:ring-2 focus:ring-moss-500/30"
             />
           </div>
@@ -59,6 +59,7 @@ export default function PropertiesTable({
         <table className="w-full min-w-[720px] text-left text-sm">
           <thead className="bg-line-soft/60 text-xs uppercase tracking-wide text-ink-faint">
             <tr>
+              <th className="px-4 py-3 font-medium">Property Code</th>
               <th className="px-4 py-3 font-medium">Title</th>
               {showTypeColumn && <th className="px-4 py-3 font-medium">Type</th>}
               <th className="px-4 py-3 font-medium">Status</th>
@@ -71,13 +72,21 @@ export default function PropertiesTable({
           <tbody className="divide-y divide-line-soft">
             {rows.length === 0 ? (
               <tr>
-                <td colSpan={7} className="px-4 py-8 text-center text-ink-faint">
+                <td colSpan={8} className="px-4 py-8 text-center text-ink-faint">
                   No properties found.
                 </td>
               </tr>
             ) : (
               rows.map((property) => (
                 <tr key={property.id} className="hover:bg-line-soft/30">
+                  <td className="px-4 py-3">
+                    <Link
+                      href={`/admin/properties/${property.id}`}
+                      className="font-mono text-xs font-medium text-ink-soft hover:text-moss-700 hover:underline"
+                    >
+                      {property.property_code}
+                    </Link>
+                  </td>
                   <td className="px-4 py-3">
                     <Link
                       href={`/admin/properties/${property.id}`}

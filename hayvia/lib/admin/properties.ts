@@ -3,6 +3,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 
 export interface AdminPropertyRow {
   id: string;
+  property_code: string;
   title: string;
   slug: string;
   listing_type: string;
@@ -27,7 +28,7 @@ export async function fetchAdminProperties(filters: {
   let query = supabase
     .from("properties")
     .select(
-      "id, title, slug, listing_type, status, property_type, price, currency, city, district, featured, price_reduced, verified, view_count, created_at"
+      "id, property_code, title, slug, listing_type, status, property_type, price, currency, city, district, featured, price_reduced, verified, view_count, created_at"
     )
     .order("created_at", { ascending: false })
     .limit(200);
@@ -39,12 +40,20 @@ export async function fetchAdminProperties(filters: {
   if (filters.q) {
     const term = filters.q.trim();
     if (term) {
-      // Search by title, city/district ("location"), or a direct id match —
-      // matches the brief's "Search by title, ID, location".
+      // Search priority: exact Property Code (Phase 8A business identity,
+      // case-insensitive — "sp-000127" and "SP-000127" both match) > exact
+      // UUID > exact external_ref > free-text title/city/district.
       const isUuid = /^[0-9a-f-]{36}$/i.test(term);
-      query = isUuid
-        ? query.eq("id", term)
-        : query.or(`title.ilike.%${term}%,city.ilike.%${term}%,district.ilike.%${term}%`);
+      const isPropertyCode = /^SP-\d{6,}$/i.test(term);
+      if (isPropertyCode) {
+        query = query.ilike("property_code", term);
+      } else if (isUuid) {
+        query = query.eq("id", term);
+      } else {
+        query = query.or(
+          `title.ilike.%${term}%,city.ilike.%${term}%,district.ilike.%${term}%,external_ref.eq.${term}`
+        );
+      }
     }
   }
 

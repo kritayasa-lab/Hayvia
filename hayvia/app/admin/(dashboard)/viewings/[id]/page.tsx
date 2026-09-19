@@ -13,7 +13,7 @@ async function loadViewing(id: string) {
 
   const { data: viewing } = await supabase
     .from("viewings")
-    .select("*, properties(title)")
+    .select("*, properties(title, property_code)")
     .eq("id", id)
     .single();
 
@@ -47,7 +47,8 @@ export default async function ViewingDetailPage({ params }: { params: { id: stri
   const { viewing, notes, history } = await loadViewing(params.id);
   if (!viewing) notFound();
 
-  const propertyTitle = (viewing.properties as unknown as { title?: string } | null)?.title ?? null;
+  const property = viewing.properties as unknown as { title?: string; property_code?: string } | null;
+  const propertyTitle = property?.title ?? null;
 
   return (
     <div>
@@ -75,7 +76,16 @@ export default async function ViewingDetailPage({ params }: { params: { id: stri
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-wide text-ink-faint">Property</dt>
-                <dd className="text-ink">{propertyTitle || "—"}</dd>
+                <dd className="text-ink">
+                  {propertyTitle ? (
+                    <Link href={`/admin/properties/${viewing.property_id}`} className="hover:underline">
+                      {property?.property_code ? `${property.property_code} · ` : ""}
+                      {propertyTitle}
+                    </Link>
+                  ) : (
+                    "—"
+                  )}
+                </dd>
               </div>
               <div>
                 <dt className="text-xs uppercase tracking-wide text-ink-faint">Preferred Date</dt>
