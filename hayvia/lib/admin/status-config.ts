@@ -24,6 +24,17 @@ export interface StatusEntityConfig {
     /** Column on `history.table` that holds the entity's id, e.g. "lead_id". */
     idColumn: string;
   };
+  /**
+   * Static routes (no dynamic segment — the current entity's own detail
+   * page is already handled by the caller's own router.refresh()/redirect())
+   * whose rendered data depends on this entity's status, revalidated via
+   * next/cache's revalidatePath() after every successful update. Needed
+   * because a Server Action's redirect() only forces a fresh render of its
+   * own destination — any other route the browser already cached
+   * client-side (e.g. a list page visited earlier) keeps serving stale data
+   * otherwise. Omitted entirely for entities with no such page (unaffected).
+   */
+  revalidatePaths?: string[];
 }
 
 export const statusEntities: Record<string, StatusEntityConfig> = {
@@ -72,5 +83,6 @@ export const statusEntities: Record<string, StatusEntityConfig> = {
       "EXPIRED",
     ],
     history: { table: "radar_property_status_history", idColumn: "candidate_id" },
+    revalidatePaths: ["/admin/radar/properties", "/admin/radar"],
   },
 };

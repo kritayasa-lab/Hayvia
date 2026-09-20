@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 import { getAdminUser } from "@/lib/auth/admin";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { findOrCreateManualSource } from "@/lib/radar/sources";
@@ -159,6 +160,14 @@ export async function createManualCandidate(
     );
   }
 
+  // A new row changes what the list and overview pages show — revalidate
+  // both so a browser tab already sitting on either doesn't keep serving a
+  // stale (pre-creation) Router Cache entry on its next visit. The new
+  // candidate's own detail page needs no revalidation: it didn't exist
+  // before, so redirect() below renders it fresh with nothing stale to beat.
+  revalidatePath("/admin/radar/properties");
+  revalidatePath("/admin/radar");
+
   redirect(`/admin/radar/properties/${candidate.id}?created=1`);
 }
 
@@ -209,6 +218,15 @@ export async function markDuplicate(candidateId: string, formData: FormData) {
       changed_by: admin.id,
       note: `Marked duplicate of ${target.candidate_code}`,
     });
+
+    // Revalidate every route whose rendered data depends on this status
+    // change — the redirect below already forces a fresh render of this
+    // candidate's own page, but the list/overview pages (and any other tab
+    // already sitting on this exact candidate page) would otherwise keep
+    // serving the pre-DUPLICATE Router Cache entry until it expires.
+    revalidatePath(`/admin/radar/properties/${candidateId}`);
+    revalidatePath("/admin/radar/properties");
+    revalidatePath("/admin/radar");
   }
 
   redirect(`/admin/radar/properties/${candidateId}`);

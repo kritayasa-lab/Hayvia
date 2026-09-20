@@ -11,6 +11,7 @@
 // -----------------------------------------------------------------------------
 
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { getAdminUser } from "@/lib/auth/admin";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { statusEntities } from "@/lib/admin/status-config";
@@ -85,6 +86,17 @@ export async function PATCH(
       // over the history row, just surface it in server logs.
       // eslint-disable-next-line no-console
       console.error(`[Subphiphat Admin] Failed to write ${config.history.table} for ${params.id}:`, historyError);
+    }
+  }
+
+  // This route only ever returns JSON — it never renders a page itself, so
+  // the caller (StatusSelect) already re-fetches the *current* page via
+  // router.refresh(). revalidatePaths covers pages elsewhere in the app
+  // (list/overview) whose data also depends on this status and would
+  // otherwise keep serving a stale client-side Router Cache entry.
+  if (config.revalidatePaths) {
+    for (const path of config.revalidatePaths) {
+      revalidatePath(path);
     }
   }
 
