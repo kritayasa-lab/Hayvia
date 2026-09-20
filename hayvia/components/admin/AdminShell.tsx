@@ -20,6 +20,7 @@ import {
   LogOut,
   Menu,
   X,
+  Radar,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -49,6 +50,10 @@ const navSections: NavSection[] = [
       { href: "/admin/rent", label: "For Rent", icon: Home },
       { href: "/admin/buy", label: "For Sale", icon: Tag },
     ],
+  },
+  {
+    title: "Radar",
+    items: [{ href: "/admin/radar", label: "Radar", icon: Radar }],
   },
   {
     title: "CRM",
