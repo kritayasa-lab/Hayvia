@@ -114,14 +114,53 @@ export async function createProperty(
   // buildPropertyRow(), so an edit-form resubmission can never alter an
   // existing property's traceability link.
   const sellerLeadId = optionalString(formData, "seller_lead_id");
+  // Phase 8C — same pattern, for a Property Radar candidate conversion.
+  const radarCandidateId = optionalString(formData, "radar_property_candidate_id");
 
   const supabase = createAdminClient();
+
+  // Phase 8C — double-conversion protection, checked BEFORE creating
+  // anything. Two-part check: the candidate's own status, and (the more
+  // authoritative signal) whether a property already links to it — if a
+  // property already exists, that's ground truth regardless of what the
+  // candidate's status column says. Never creates a second property for an
+  // already-converted candidate, including on a double-submit.
+  let previousCandidateStatus: string | null = null;
+  if (radarCandidateId) {
+    const { data: existingCandidate } = await supabase
+      .from("radar_property_candidates")
+      .select("status")
+      .eq("id", radarCandidateId)
+      .maybeSingle();
+
+    if (!existingCandidate) {
+      return { error: "That Radar candidate could not be found." };
+    }
+    previousCandidateStatus = existingCandidate.status as string;
+
+    if (existingCandidate.status === "CONVERTED") {
+      const { data: existingProperty } = await supabase
+        .from("properties")
+        .select("id")
+        .eq("radar_property_candidate_id", radarCandidateId)
+        .maybeSingle();
+      if (existingProperty) {
+        redirect(`/admin/properties/${existingProperty.id}?alreadyConverted=1`);
+      }
+      return {
+        error:
+          "This Radar candidate is already marked as converted, but no linked property could be found. Please check manually.",
+      };
+    }
+  }
+
   const { data, error } = await supabase
     .from("properties")
     .insert({
       ...buildPropertyRow(formData),
       slug,
       seller_lead_id: sellerLeadId,
+      radar_property_candidate_id: radarCandidateId,
       created_by: admin.id,
       updated_by: admin.id,
     })
@@ -136,9 +175,9 @@ export async function createProperty(
   }
 
   // Only after the property has actually been created successfully — never
-  // mark the seller lead CONVERTED on a failed create (see the early return
-  // above). Best-effort: a failure here must never make the property look
-  // like it wasn't created, since it demonstrably was.
+  // mark the seller lead/Radar candidate CONVERTED on a failed create (see
+  // the early returns above). Best-effort: a failure here must never make
+  // the property look like it wasn't created, since it demonstrably was.
   if (sellerLeadId) {
     const { error: sellerLeadError } = await supabase
       .from("seller_leads")
@@ -150,6 +189,35 @@ export async function createProperty(
         `[Subphiphat] Property ${data.id} created from seller lead ${sellerLeadId}, but marking it CONVERTED failed:`,
         sellerLeadError
       );
+    }
+  }
+
+  if (radarCandidateId) {
+    const { error: candidateError } = await supabase
+      .from("radar_property_candidates")
+      .update({ status: "CONVERTED" })
+      .eq("id", radarCandidateId);
+    if (candidateError) {
+      // eslint-disable-next-line no-console
+      console.error(
+        `[Subphiphat] Property ${data.id} created from Radar candidate ${radarCandidateId}, but marking it CONVERTED failed:`,
+        candidateError
+      );
+    } else {
+      const { error: historyError } = await supabase.from("radar_property_status_history").insert({
+        candidate_id: radarCandidateId,
+        from_status: previousCandidateStatus,
+        to_status: "CONVERTED",
+        changed_by: admin.id,
+        note: `Converted to property ${data.id}`,
+      });
+      if (historyError) {
+        // eslint-disable-next-line no-console
+        console.error(
+          `[Subphiphat] Radar candidate ${radarCandidateId} marked CONVERTED, but its status history row failed:`,
+          historyError
+        );
+      }
     }
   }
 

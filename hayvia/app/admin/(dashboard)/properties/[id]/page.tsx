@@ -32,11 +32,25 @@ async function loadProperty(id: string) {
       supabase.from("property_amenities").select("amenity_id").eq("property_id", id),
     ]);
 
+  // Phase 8C — reverse traceability to the Property Radar candidate this
+  // property was converted from, if any. Same best-effort caveat as
+  // seller_lead_id: not every property has one.
+  let radarCandidate: { id: string; candidate_code: string } | null = null;
+  if (property?.radar_property_candidate_id) {
+    const { data } = await supabase
+      .from("radar_property_candidates")
+      .select("id, candidate_code")
+      .eq("id", property.radar_property_candidate_id)
+      .maybeSingle();
+    radarCandidate = data;
+  }
+
   return {
     property,
     images: images ?? [],
     amenities: amenities ?? [],
     selectedAmenityIds: new Set((selected ?? []).map((row) => row.amenity_id as string)),
+    radarCandidate,
   };
 }
 
@@ -47,7 +61,7 @@ export default async function EditPropertyPage({
   params: { id: string };
   searchParams: { created?: string; saved?: string; backup?: string };
 }) {
-  const [{ property, images, amenities, selectedAmenityIds }, owners, agents] = await Promise.all([
+  const [{ property, images, amenities, selectedAmenityIds, radarCandidate }, owners, agents] = await Promise.all([
     loadProperty(params.id),
     fetchOwners(),
     fetchAgents(),
@@ -73,6 +87,14 @@ export default async function EditPropertyPage({
           className="mt-1 inline-block text-sm font-medium text-moss-700 hover:underline"
         >
           Created from Seller Lead &rarr; View Seller Lead
+        </Link>
+      )}
+      {radarCandidate && (
+        <Link
+          href={`/admin/radar/properties/${radarCandidate.id}`}
+          className="mt-1 inline-block text-sm font-medium text-moss-700 hover:underline"
+        >
+          Discovered via Radar &rarr; {radarCandidate.candidate_code}
         </Link>
       )}
 

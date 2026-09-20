@@ -87,6 +87,7 @@ export default function PropertyForm({
   agents,
   submitLabel,
   sellerLeadId,
+  radarCandidateId,
 }: {
   action: (state: PropertyActionState | null, formData: FormData) => Promise<PropertyActionState>;
   initial?: Partial<PropertyFormValues>;
@@ -104,6 +105,14 @@ export default function PropertyForm({
    * the edit form.
    */
   sellerLeadId?: string;
+  /**
+   * Phase 8C — same pattern as sellerLeadId, for a property created from a
+   * Property Radar candidate's "Approve & Create Property" action. Carries
+   * the candidate's id so createProperty() can link
+   * properties.radar_property_candidate_id and mark the candidate CONVERTED.
+   * Never rendered on the edit form, for the same reason as sellerLeadId.
+   */
+  radarCandidateId?: string;
 }) {
   const [state, formAction] = useFormState(action, null);
   const values = { ...emptyValues, ...initial };
@@ -111,6 +120,7 @@ export default function PropertyForm({
   return (
     <form action={formAction} className="space-y-8">
       {sellerLeadId && <input type="hidden" name="seller_lead_id" value={sellerLeadId} />}
+      {radarCandidateId && <input type="hidden" name="radar_property_candidate_id" value={radarCandidateId} />}
       <FormMessage state={state} />
 
       <section>
