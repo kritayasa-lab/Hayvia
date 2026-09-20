@@ -45,15 +45,51 @@ function propertyInitialFromSellerLead(sellerLead: {
   };
 }
 
+/**
+ * Phase 8C — "Approve & Create Property" pre-fill from a Property Radar
+ * candidate. Same posture as the Seller Lead version: only property-shaped
+ * fields, `status` always DRAFT (never auto-published), admin reviews/edits
+ * before saving. radar_property_candidates has no listing_type of its own
+ * (a candidate doesn't yet capture rent-vs-sale intent), so that's left at
+ * PropertyForm's own default for the admin to set explicitly.
+ */
+function propertyInitialFromRadarCandidate(candidate: {
+  property_type: string | null;
+  province: string | null;
+  city: string | null;
+  district: string | null;
+  bedrooms: number | null;
+  bathrooms: number | null;
+  size_sqm: number | null;
+  price: number | null;
+  description: string | null;
+}): Partial<PropertyFormValues> {
+  return {
+    status: "DRAFT",
+    property_type: candidate.property_type ?? undefined,
+    province: candidate.province ?? undefined,
+    city: candidate.city ?? undefined,
+    district: candidate.district ?? undefined,
+    bedrooms: candidate.bedrooms ?? undefined,
+    bathrooms: candidate.bathrooms ?? undefined,
+    size_sqm: candidate.size_sqm ?? undefined,
+    // The candidate's own price facts — a starting point, not a verified
+    // final price. Admin can and should review/edit it before publishing.
+    price: candidate.price ?? undefined,
+    description: candidate.description ?? undefined,
+  };
+}
+
 export default async function NewPropertyPage({
   searchParams,
 }: {
-  searchParams: { fromSellerLead?: string };
+  searchParams: { fromSellerLead?: string; fromRadarCandidate?: string };
 }) {
   const [owners, agents] = await Promise.all([fetchOwners(), fetchAgents()]);
 
   let initial: Partial<PropertyFormValues> | undefined;
   let sellerLeadId: string | undefined;
+  let radarCandidateId: string | undefined;
 
   if (searchParams.fromSellerLead) {
     const supabase = createAdminClient();
@@ -67,6 +103,18 @@ export default async function NewPropertyPage({
       initial = propertyInitialFromSellerLead(sellerLead);
       sellerLeadId = sellerLead.id;
     }
+  } else if (searchParams.fromRadarCandidate) {
+    const supabase = createAdminClient();
+    const { data: candidate } = await supabase
+      .from("radar_property_candidates")
+      .select("id, property_type, province, city, district, bedrooms, bathrooms, size_sqm, price, description")
+      .eq("id", searchParams.fromRadarCandidate)
+      .maybeSingle();
+
+    if (candidate) {
+      initial = propertyInitialFromRadarCandidate(candidate);
+      radarCandidateId = candidate.id;
+    }
   }
 
   return (
@@ -75,7 +123,9 @@ export default async function NewPropertyPage({
       <p className="mt-1 text-sm text-ink-faint">
         {sellerLeadId
           ? "Pre-filled from a Seller Lead submission — review and edit before saving."
-          : "Images and amenities can be added once the property is created."}
+          : radarCandidateId
+            ? "Pre-filled from a Property Radar candidate — review and edit before saving."
+            : "Images and amenities can be added once the property is created."}
       </p>
       <div className="mt-6 max-w-3xl">
         <AdminCard>
@@ -86,6 +136,7 @@ export default async function NewPropertyPage({
             agents={agents}
             submitLabel="Create Property"
             sellerLeadId={sellerLeadId}
+            radarCandidateId={radarCandidateId}
           />
         </AdminCard>
       </div>

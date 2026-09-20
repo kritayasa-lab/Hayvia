@@ -44,17 +44,19 @@ export async function PATCH(
 
   const supabase = createAdminClient();
 
-  // Leads only (Phase 1 CRM): capture the prior status before updating so the
-  // transition can be recorded in lead_status_history below. Every other
-  // entity's update path is unchanged.
-  let previousLeadStatus: string | null = null;
-  if (params.entity === "leads") {
-    const { data: existingLead } = await supabase
-      .from("leads")
-      .select("status")
+  // Entities configured with `history` (leads, Radar property candidates):
+  // capture the prior status before updating so the transition can be
+  // recorded in that history table below. Every other entity's update path
+  // is unchanged. Generalized in Phase 8C from what was originally a
+  // leads-only special case — same guarantee, no second hardcoded branch.
+  let previousStatus: string | null = null;
+  if (config.history) {
+    const { data: existingRow } = await supabase
+      .from(config.table)
+      .select(config.column)
       .eq("id", params.id)
       .single();
-    previousLeadStatus = existingLead?.status ?? null;
+    previousStatus = (existingRow?.[config.column] as string | undefined) ?? null;
   }
 
   const { error } = await supabase
@@ -71,10 +73,10 @@ export async function PATCH(
     );
   }
 
-  if (params.entity === "leads" && previousLeadStatus !== null && previousLeadStatus !== payload.status) {
-    const { error: historyError } = await supabase.from("lead_status_history").insert({
-      lead_id: params.id,
-      from_status: previousLeadStatus,
+  if (config.history && previousStatus !== null && previousStatus !== payload.status) {
+    const { error: historyError } = await supabase.from(config.history.table).insert({
+      [config.history.idColumn]: params.id,
+      from_status: previousStatus,
       to_status: payload.status,
       changed_by: admin.id,
     });
@@ -82,7 +84,7 @@ export async function PATCH(
       // The status update itself already succeeded — never fail the request
       // over the history row, just surface it in server logs.
       // eslint-disable-next-line no-console
-      console.error(`[Subphiphat Admin] Failed to write lead_status_history for ${params.id}:`, historyError);
+      console.error(`[Subphiphat Admin] Failed to write ${config.history.table} for ${params.id}:`, historyError);
     }
   }
 

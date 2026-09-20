@@ -25,11 +25,28 @@ export interface RadarCandidateSummary {
   createdAt: string;
 }
 
+// Phase 8C — the named breakdown the Property Radar overview shows. Tallied
+// client-side from a single `select("status")` query rather than one count
+// query per status — simpler, and correct at the row volumes manual-first
+// intake produces; worth revisiting only if/when real ingestion (a later
+// phase) pushes candidate volume much higher.
+const PROPERTY_OVERVIEW_STATUSES = [
+  "DISCOVERED",
+  "AI_REVIEWED",
+  "QUALIFIED",
+  "CONTACT_PENDING",
+  "OWNER_INTERESTED",
+  "CONVERTED",
+] as const;
+
+export type PropertyOverviewStatusCounts = Record<(typeof PROPERTY_OVERVIEW_STATUSES)[number], number>;
+
 export interface RadarOverview {
   propertyCandidateCount: number;
   leadCandidateCount: number;
   propertyAwaitingReviewCount: number;
   leadAwaitingReviewCount: number;
+  propertyStatusCounts: PropertyOverviewStatusCounts;
   recentPropertyCandidates: RadarCandidateSummary[];
   recentLeadCandidates: RadarCandidateSummary[];
   recentlyQualifiedProperty: RadarCandidateSummary[];
@@ -44,6 +61,7 @@ export async function fetchRadarOverview(): Promise<RadarOverview> {
     leadCandidateCount,
     propertyAwaitingReviewCount,
     leadAwaitingReviewCount,
+    allPropertyStatuses,
     recentPropertyCandidates,
     recentLeadCandidates,
     recentlyQualifiedProperty,
@@ -59,6 +77,7 @@ export async function fetchRadarOverview(): Promise<RadarOverview> {
       .from("radar_lead_candidates")
       .select("id", { count: "exact", head: true })
       .in("status", LEAD_AWAITING_REVIEW_STATUSES),
+    supabase.from("radar_property_candidates").select("status"),
     supabase
       .from("radar_property_candidates")
       .select("id, candidate_code, status, city, district, property_type, created_at")
@@ -83,11 +102,23 @@ export async function fetchRadarOverview(): Promise<RadarOverview> {
       .limit(5),
   ]);
 
+  const propertyStatusCounts = PROPERTY_OVERVIEW_STATUSES.reduce((acc, status) => {
+    acc[status] = 0;
+    return acc;
+  }, {} as PropertyOverviewStatusCounts);
+  for (const row of allPropertyStatuses.data ?? []) {
+    const status = row.status as string;
+    if (status in propertyStatusCounts) {
+      propertyStatusCounts[status as (typeof PROPERTY_OVERVIEW_STATUSES)[number]] += 1;
+    }
+  }
+
   return {
     propertyCandidateCount: propertyCandidateCount.count ?? 0,
     leadCandidateCount: leadCandidateCount.count ?? 0,
     propertyAwaitingReviewCount: propertyAwaitingReviewCount.count ?? 0,
     leadAwaitingReviewCount: leadAwaitingReviewCount.count ?? 0,
+    propertyStatusCounts,
     recentPropertyCandidates: (recentPropertyCandidates.data ?? []).map(mapPropertyRow),
     recentLeadCandidates: (recentLeadCandidates.data ?? []).map(mapLeadRow),
     recentlyQualifiedProperty: (recentlyQualifiedProperty.data ?? []).map(mapPropertyRow),
