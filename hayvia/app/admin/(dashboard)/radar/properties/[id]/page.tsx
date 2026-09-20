@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import AdminCard from "@/components/admin/AdminCard";
 import StatusSelect from "@/components/admin/StatusSelect";
+import ConvertRadarCandidateButton from "@/components/admin/ConvertRadarCandidateButton";
 import Badge from "@/components/ui/Badge";
 import { statusEntities } from "@/lib/admin/status-config";
 import { formatDate, formatPrice } from "@/lib/utils";
@@ -10,13 +11,16 @@ import { markDuplicate, runAiAnalysisAction } from "@/app/admin/(dashboard)/rada
 
 export const dynamic = "force-dynamic";
 
-// Convertible only once the owner has actually confirmed interest, per the
-// Phase 8C pipeline (... -> Contact Owner -> Owner Interested -> Info
-// Collection -> Convert). QUALIFIED alone is deliberately excluded — that
-// only means "worth pursuing," not "ready to become a listing."
-const APPROVABLE_STATUSES = new Set(["OWNER_INTERESTED", "INFO_COLLECTION"]);
-
 const TERMINAL_STATUSES = new Set(["DUPLICATE", "CONVERTED"]);
+
+// A candidate can be converted into a real property from any status except
+// a closed one — matches lib/radar/dedup.ts's CLOSED_STATUSES exactly
+// (DISMISSED/EXPIRED aren't worth pursuing further, DUPLICATE/CONVERTED
+// already have a resolution). Deliberately broader than "the owner has
+// confirmed interest": staff routinely have enough off-pipeline information
+// (a direct referral, a first-hand site visit) to convert straight from
+// DISCOVERED, and the admin approving here is a human decision either way.
+const NON_CONVERTIBLE_STATUSES = new Set(["DISMISSED", "EXPIRED", "DUPLICATE", "CONVERTED"]);
 
 const dupErrorMessages: Record<string, string> = {
   missing: "Please enter the other candidate's code.",
@@ -63,13 +67,8 @@ export default async function RadarPropertyCandidateDetailPage({
             Converted &rarr; View Property ({convertedProperty.property_code})
           </Link>
         ) : (
-          APPROVABLE_STATUSES.has(candidate.status as string) && (
-            <Link
-              href={`/admin/properties/new?fromRadarCandidate=${candidate.id}`}
-              className="inline-flex items-center justify-center rounded bg-moss-600 px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
-            >
-              Approve &amp; Create Property
-            </Link>
+          !NON_CONVERTIBLE_STATUSES.has(candidate.status as string) && (
+            <ConvertRadarCandidateButton candidateId={candidate.id} />
           )
         )}
       </div>
