@@ -6,7 +6,7 @@ import { getAdminUser } from "@/lib/auth/admin";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { findOrCreateManualSource } from "@/lib/radar/sources";
 import { findPossibleDuplicateCandidates, type PossibleDuplicateCandidate } from "@/lib/radar/dedup";
-import { runPropertyAiAnalysis } from "@/lib/radar/ai-analysis";
+import { runPropertyAiAnalysis, isValidConfiguredResult } from "@/lib/radar/ai-analysis";
 
 export interface RadarCandidateActionState {
   error?: string;
@@ -285,33 +285,70 @@ export async function runAiAnalysisAction(candidateId: string) {
     redirect(`/admin/radar/properties/${candidateId}?aiStatus=not_configured`);
   }
 
+  // Malformed provider response: validate before persistence, reject rather
+  // than best-effort-repair. Nothing is written and the candidate is left
+  // exactly as it was — a bad/partial AI result must never become stored
+  // data. See lib/radar/ai-analysis.ts's isValidConfiguredResult().
+  if (!isValidConfiguredResult(result)) {
+    // eslint-disable-next-line no-console
+    console.error(
+      `[Subphiphat Admin] AI analysis for candidate ${candidateId} returned a malformed result — rejected, nothing persisted.`
+    );
+    redirect(`/admin/radar/properties/${candidateId}?aiStatus=invalid`);
+  }
+
   const { count } = await supabase
     .from("radar_property_analysis")
     .select("id", { count: "exact", head: true })
     .eq("candidate_id", candidateId);
   const nextVersion = (count ?? 0) + 1;
 
+  // poster/acquisition are classifications (inferences), not literal
+  // extracted facts — nested inside ai_inference alongside any other
+  // inference the model returns, keeping `facts` strictly limited to
+  // PropertyFacts. radar_property_analysis has no dedicated poster/
+  // acquisition columns by design (Phase 8D-1/8D-2) — the full,
+  // evidenced classification lives here; radar_property_candidates only
+  // gets the denormalized `.value` for list filtering (synced below).
   const { error: analysisError } = await supabase.from("radar_property_analysis").insert({
     candidate_id: candidateId,
     version: nextVersion,
     model_name: result.modelName ?? null,
     model_version: result.modelVersion ?? null,
-    facts: result.facts ?? {},
-    ai_inference: result.aiInference ?? {},
-    unknowns: result.unknowns ?? [],
-    confidence: result.confidence ?? null,
-    evidence: result.evidence ?? {},
+    facts: result.facts,
+    ai_inference: { ...(result.aiInference ?? {}), poster: result.poster, acquisition: result.acquisition },
+    unknowns: result.unknowns,
+    confidence: result.confidence,
+    evidence: result.evidence,
   });
 
-  if (!analysisError && candidate.status === "DISCOVERED") {
-    await supabase.from("radar_property_candidates").update({ status: "AI_REVIEWED" }).eq("id", candidateId);
-    await supabase.from("radar_property_status_history").insert({
-      candidate_id: candidateId,
-      from_status: "DISCOVERED",
-      to_status: "AI_REVIEWED",
-      changed_by: admin.id,
-      note: "AI analysis completed",
-    });
+  if (!analysisError) {
+    // Sync the denormalized query-convenience fields on the candidate from
+    // this (now latest) analysis — independent of the status transition
+    // below, since a re-analysis of a candidate already past DISCOVERED
+    // should still update these.
+    const candidateUpdate: Record<string, unknown> = {
+      poster_type: result.poster.value,
+      acquisition_type: result.acquisition.value,
+    };
+    if (candidate.status === "DISCOVERED") {
+      candidateUpdate.status = "AI_REVIEWED";
+    }
+
+    const { error: candidateUpdateError } = await supabase
+      .from("radar_property_candidates")
+      .update(candidateUpdate)
+      .eq("id", candidateId);
+
+    if (!candidateUpdateError && candidate.status === "DISCOVERED") {
+      await supabase.from("radar_property_status_history").insert({
+        candidate_id: candidateId,
+        from_status: "DISCOVERED",
+        to_status: "AI_REVIEWED",
+        changed_by: admin.id,
+        note: "AI analysis completed",
+      });
+    }
   }
 
   redirect(`/admin/radar/properties/${candidateId}?aiStatus=analyzed`);

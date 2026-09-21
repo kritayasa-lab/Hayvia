@@ -8,6 +8,23 @@ import { statusEntities } from "@/lib/admin/status-config";
 import { formatDate, formatPrice } from "@/lib/utils";
 import { fetchRadarPropertyCandidateDetail } from "@/lib/admin/radar-properties";
 import { markDuplicate, runAiAnalysisAction } from "@/app/admin/(dashboard)/radar/properties/actions";
+import type { ClassificationResult } from "@/lib/radar/ai-analysis";
+
+// Phase 8D-2 — same tone intent as the list page's acquisitionTone map: an
+// open opportunity reads as moss, a closed one as clay, UNKNOWN as neutral
+// (never "bad" — just unclassified or genuinely unclear).
+const posterTone: Record<string, "moss" | "clay" | "neutral"> = {
+  OWNER: "moss",
+  AGENT: "clay",
+  AGENCY: "clay",
+  UNKNOWN: "neutral",
+};
+const acquisitionTone: Record<string, "moss" | "clay" | "neutral"> = {
+  OWNER_DIRECT: "moss",
+  OPEN_CO_BROKER: "moss",
+  AGENT_ONLY: "clay",
+  UNKNOWN: "neutral",
+};
 
 export const dynamic = "force-dynamic";
 
@@ -81,6 +98,11 @@ export default async function RadarPropertyCandidateDetailPage({
       {searchParams.aiStatus === "not_configured" && (
         <p className="mt-4 rounded border border-clay-200 bg-clay-50 px-3.5 py-2.5 text-sm text-ink">
           AI analysis provider is not configured yet.
+        </p>
+      )}
+      {searchParams.aiStatus === "invalid" && (
+        <p className="mt-4 rounded border border-red-200 bg-red-50 px-3.5 py-2.5 text-sm text-red-600">
+          AI analysis returned an invalid result and was not saved.
         </p>
       )}
       {searchParams.dupError && (
@@ -242,6 +264,12 @@ export default async function RadarPropertyCandidateDetailPage({
                   {latestAnalysis.model_name && ` · ${latestAnalysis.model_name}`}
                   {latestAnalysis.confidence != null && ` · Confidence ${latestAnalysis.confidence}%`}
                 </p>
+                <ClassificationBlock label="Poster" classification={latestAnalysis.poster} toneMap={posterTone} />
+                <ClassificationBlock
+                  label="Acquisition"
+                  classification={latestAnalysis.acquisition}
+                  toneMap={acquisitionTone}
+                />
                 <AnalysisBlock label="Facts" value={latestAnalysis.facts} tone="moss" />
                 <AnalysisBlock label="AI Inference" value={latestAnalysis.ai_inference} tone="clay" />
                 <AnalysisBlock label="Unknown" value={latestAnalysis.unknowns} tone="neutral" />
@@ -280,6 +308,52 @@ export default async function RadarPropertyCandidateDetailPage({
           </AdminCard>
         </div>
       </div>
+    </div>
+  );
+}
+
+// Phase 8D-2 — same visual language as AnalysisBlock (a Badge + a content
+// area), but for a ClassificationResult specifically: shows the value,
+// confidence, and the verbatim evidence snippets that justify it, so a
+// UNKNOWN with no evidence looks visibly different from a confident
+// classification rather than just another JSON blob.
+function ClassificationBlock({
+  label,
+  classification,
+  toneMap,
+}: {
+  label: string;
+  classification: ClassificationResult<string> | null;
+  toneMap: Record<string, "moss" | "clay" | "neutral">;
+}) {
+  if (!classification) {
+    return (
+      <div>
+        <Badge tone="neutral">{label}</Badge>
+        <p className="mt-2 text-xs text-ink-faint">Not yet analyzed.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <div className="flex flex-wrap items-center gap-2">
+        <Badge tone={toneMap[classification.value] ?? "neutral"}>
+          {label}: {classification.value.replace(/_/g, " ")}
+        </Badge>
+        <span className="text-xs text-ink-faint">Confidence {classification.confidence}%</span>
+      </div>
+      {classification.evidence.length > 0 ? (
+        <ul className="mt-2 space-y-1">
+          {classification.evidence.map((snippet, index) => (
+            <li key={index} className="rounded bg-line-soft/40 px-2 py-1 text-xs text-ink-soft">
+              &ldquo;{snippet}&rdquo;
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="mt-2 text-xs text-ink-faint">No supporting evidence.</p>
+      )}
     </div>
   );
 }
