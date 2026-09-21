@@ -105,6 +105,11 @@ export default async function RadarPropertyCandidateDetailPage({
           AI analysis returned an invalid result and was not saved.
         </p>
       )}
+      {searchParams.aiStatus === "failed" && (
+        <p className="mt-4 rounded border border-red-200 bg-red-50 px-3.5 py-2.5 text-sm text-red-600">
+          AI analysis failed. Please try again.
+        </p>
+      )}
       {searchParams.dupError && (
         <p className="mt-4 rounded border border-red-200 bg-red-50 px-3.5 py-2.5 text-sm text-red-600">
           {dupErrorMessages[searchParams.dupError] || "Could not mark as duplicate."}
@@ -280,8 +285,9 @@ export default async function RadarPropertyCandidateDetailPage({
               </div>
             ) : (
               <p className="text-sm text-ink-faint">
-                No analysis has been run yet. AI analysis provider is not configured yet — running it will
-                clearly report that rather than fabricate a result.
+                No analysis has been run yet. Click &ldquo;Run AI Analysis&rdquo; to classify this candidate —
+                if no AI provider is configured, that will be clearly reported rather than fabricating a
+                result.
               </p>
             )}
           </AdminCard>

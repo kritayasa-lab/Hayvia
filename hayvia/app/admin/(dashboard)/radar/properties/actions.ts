@@ -6,7 +6,12 @@ import { getAdminUser } from "@/lib/auth/admin";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { findOrCreateManualSource } from "@/lib/radar/sources";
 import { findPossibleDuplicateCandidates, type PossibleDuplicateCandidate } from "@/lib/radar/dedup";
-import { runPropertyAiAnalysis, isValidConfiguredResult } from "@/lib/radar/ai-analysis";
+import {
+  runPropertyAiAnalysis,
+  isValidConfiguredResult,
+  InvalidAiOutputError,
+  type PropertyAiAnalysisResult,
+} from "@/lib/radar/ai-analysis";
 
 export interface RadarCandidateActionState {
   error?: string;
@@ -233,12 +238,15 @@ export async function markDuplicate(candidateId: string, formData: FormData) {
 }
 
 /**
- * Runs (or, in this phase, attempts to run) AI analysis for a candidate.
- * Never inserts a radar_property_analysis row unless
- * runPropertyAiAnalysis() reports `configured: true` — see
- * lib/radar/ai-analysis.ts, which always returns `configured: false` until
- * a real provider is wired up. The insert/status-transition path below is
- * unreachable today but is written correctly for when one is.
+ * Runs AI analysis for a candidate via the configured provider (see
+ * lib/radar/ai-analysis.ts — runPropertyAiAnalysis() returns
+ * `configured: false` when no provider is set up, e.g. no ANTHROPIC_API_KEY
+ * in this deployment). Never inserts a radar_property_analysis row unless
+ * the result is both `configured: true` and passes isValidConfiguredResult().
+ * A provider call that throws (network/auth/rate limit) or returns output
+ * that fails structured validation never reaches the database — the
+ * candidate is left exactly as it was, and the admin sees a specific error
+ * state for each case (not configured / analysis failed / invalid result).
  */
 export async function runAiAnalysisAction(candidateId: string) {
   const admin = await getAdminUser();
@@ -265,21 +273,38 @@ export async function runAiAnalysisAction(candidateId: string) {
     rawPayload = raw?.raw_payload ?? null;
   }
 
-  const result = await runPropertyAiAnalysis({
-    candidateId,
-    facts: {
-      propertyType: candidate.property_type,
-      province: candidate.province,
-      city: candidate.city,
-      district: candidate.district,
-      price: candidate.price,
-      bedrooms: candidate.bedrooms,
-      bathrooms: candidate.bathrooms,
-      sizeSqm: candidate.size_sqm,
-      description: candidate.description,
-    },
-    rawPayload,
-  });
+  let result: PropertyAiAnalysisResult;
+  try {
+    result = await runPropertyAiAnalysis({
+      candidateId,
+      facts: {
+        propertyType: candidate.property_type,
+        province: candidate.province,
+        city: candidate.city,
+        district: candidate.district,
+        price: candidate.price,
+        bedrooms: candidate.bedrooms,
+        bathrooms: candidate.bathrooms,
+        sizeSqm: candidate.size_sqm,
+        description: candidate.description,
+      },
+      rawPayload,
+    });
+  } catch (err) {
+    // Two distinct failure modes: the provider responded but its output
+    // failed structured validation (InvalidAiOutputError, thrown by
+    // lib/radar/ai-analysis.ts), vs. the call itself never completed
+    // (network/auth/rate limit — an Anthropic SDK error or anything else).
+    // Either way, nothing is persisted and the candidate is untouched.
+    if (err instanceof InvalidAiOutputError) {
+      // eslint-disable-next-line no-console
+      console.error(`[Subphiphat Admin] AI analysis for candidate ${candidateId} returned invalid output:`, err.message);
+      redirect(`/admin/radar/properties/${candidateId}?aiStatus=invalid`);
+    }
+    // eslint-disable-next-line no-console
+    console.error(`[Subphiphat Admin] AI analysis for candidate ${candidateId} failed:`, err);
+    redirect(`/admin/radar/properties/${candidateId}?aiStatus=failed`);
+  }
 
   if (!result.configured) {
     redirect(`/admin/radar/properties/${candidateId}?aiStatus=not_configured`);
@@ -288,7 +313,10 @@ export async function runAiAnalysisAction(candidateId: string) {
   // Malformed provider response: validate before persistence, reject rather
   // than best-effort-repair. Nothing is written and the candidate is left
   // exactly as it was — a bad/partial AI result must never become stored
-  // data. See lib/radar/ai-analysis.ts's isValidConfiguredResult().
+  // data. Re-checked here even though the Claude provider already validates
+  // via Zod (lib/radar/ai-analysis.ts) — never trust a single validation
+  // layer for a database write, and a future provider might not validate as
+  // strictly.
   if (!isValidConfiguredResult(result)) {
     // eslint-disable-next-line no-console
     console.error(
@@ -297,12 +325,6 @@ export async function runAiAnalysisAction(candidateId: string) {
     redirect(`/admin/radar/properties/${candidateId}?aiStatus=invalid`);
   }
 
-  const { count } = await supabase
-    .from("radar_property_analysis")
-    .select("id", { count: "exact", head: true })
-    .eq("candidate_id", candidateId);
-  const nextVersion = (count ?? 0) + 1;
-
   // poster/acquisition are classifications (inferences), not literal
   // extracted facts — nested inside ai_inference alongside any other
   // inference the model returns, keeping `facts` strictly limited to
@@ -310,45 +332,60 @@ export async function runAiAnalysisAction(candidateId: string) {
   // acquisition columns by design (Phase 8D-1/8D-2) — the full,
   // evidenced classification lives here; radar_property_candidates only
   // gets the denormalized `.value` for list filtering (synced below).
-  const { error: analysisError } = await supabase.from("radar_property_analysis").insert({
-    candidate_id: candidateId,
-    version: nextVersion,
-    model_name: result.modelName ?? null,
-    model_version: result.modelVersion ?? null,
-    facts: result.facts,
-    ai_inference: { ...(result.aiInference ?? {}), poster: result.poster, acquisition: result.acquisition },
-    unknowns: result.unknowns,
-    confidence: result.confidence,
-    evidence: result.evidence,
+  //
+  // Phase 8D-3 — version allocation moved into a single atomic RPC
+  // (insert_radar_property_analysis, see the migration of the same phase)
+  // instead of a separate `select count(*)` + `insert`, which raced under
+  // concurrent analysis requests for the same candidate: two callers could
+  // read the same count and both try to insert the same version. The RPC
+  // locks the candidate row for the duration of its transaction, so a
+  // concurrent second call simply waits and then correctly computes the
+  // next version after the first commits.
+  const { data: analysisRow, error: analysisError } = await supabase.rpc("insert_radar_property_analysis", {
+    p_candidate_id: candidateId,
+    p_model_name: result.modelName ?? null,
+    p_model_version: result.modelVersion ?? null,
+    p_facts: result.facts,
+    p_ai_inference: { ...(result.aiInference ?? {}), poster: result.poster, acquisition: result.acquisition },
+    p_unknowns: result.unknowns,
+    p_confidence: result.confidence,
+    p_evidence: result.evidence,
   });
 
-  if (!analysisError) {
-    // Sync the denormalized query-convenience fields on the candidate from
-    // this (now latest) analysis — independent of the status transition
-    // below, since a re-analysis of a candidate already past DISCOVERED
-    // should still update these.
-    const candidateUpdate: Record<string, unknown> = {
-      poster_type: result.poster.value,
-      acquisition_type: result.acquisition.value,
-    };
-    if (candidate.status === "DISCOVERED") {
-      candidateUpdate.status = "AI_REVIEWED";
-    }
+  if (analysisError || !analysisRow) {
+    // eslint-disable-next-line no-console
+    console.error(
+      `[Subphiphat Admin] AI analysis for candidate ${candidateId} passed validation but failed to persist:`,
+      analysisError
+    );
+    redirect(`/admin/radar/properties/${candidateId}?aiStatus=failed`);
+  }
 
-    const { error: candidateUpdateError } = await supabase
-      .from("radar_property_candidates")
-      .update(candidateUpdate)
-      .eq("id", candidateId);
+  // Sync the denormalized query-convenience fields on the candidate from
+  // this (now latest) analysis — independent of the status transition
+  // below, since a re-analysis of a candidate already past DISCOVERED
+  // should still update these.
+  const candidateUpdate: Record<string, unknown> = {
+    poster_type: result.poster.value,
+    acquisition_type: result.acquisition.value,
+  };
+  if (candidate.status === "DISCOVERED") {
+    candidateUpdate.status = "AI_REVIEWED";
+  }
 
-    if (!candidateUpdateError && candidate.status === "DISCOVERED") {
-      await supabase.from("radar_property_status_history").insert({
-        candidate_id: candidateId,
-        from_status: "DISCOVERED",
-        to_status: "AI_REVIEWED",
-        changed_by: admin.id,
-        note: "AI analysis completed",
-      });
-    }
+  const { error: candidateUpdateError } = await supabase
+    .from("radar_property_candidates")
+    .update(candidateUpdate)
+    .eq("id", candidateId);
+
+  if (!candidateUpdateError && candidate.status === "DISCOVERED") {
+    await supabase.from("radar_property_status_history").insert({
+      candidate_id: candidateId,
+      from_status: "DISCOVERED",
+      to_status: "AI_REVIEWED",
+      changed_by: admin.id,
+      note: "AI analysis completed",
+    });
   }
 
   redirect(`/admin/radar/properties/${candidateId}?aiStatus=analyzed`);
