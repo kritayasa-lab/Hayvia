@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 import { getAdminUser } from "@/lib/auth/admin";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { slugify } from "@/lib/utils";
@@ -211,6 +212,16 @@ export async function createProperty(
         changed_by: admin.id,
         note: `Converted to property ${data.id}`,
       });
+
+      // The redirect below already forces a fresh render of the new
+      // property's own page — but the candidate's own detail page (if the
+      // browser already had it cached from before conversion) and the
+      // Radar list/overview pages would otherwise keep showing the
+      // pre-CONVERTED Router Cache entry until it expires.
+      revalidatePath(`/admin/radar/properties/${radarCandidateId}`);
+      revalidatePath("/admin/radar/properties");
+      revalidatePath("/admin/radar");
+
       if (historyError) {
         // eslint-disable-next-line no-console
         console.error(
