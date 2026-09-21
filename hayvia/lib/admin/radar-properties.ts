@@ -1,5 +1,6 @@
 import "server-only";
 import { createAdminClient } from "@/lib/supabase/admin";
+import type { ClassificationResult, PosterType, AcquisitionType } from "@/lib/radar/ai-analysis";
 
 export interface RadarPropertyListRow {
   id: string;
@@ -15,6 +16,9 @@ export interface RadarPropertyListRow {
   bedrooms: number | null;
   discovered_at: string;
   last_seen_at: string;
+  /** Denormalized from the latest radar_property_analysis row — see Phase 8D-2. Null until the candidate has been analyzed. */
+  poster_type: string | null;
+  acquisition_type: string | null;
 }
 
 /**
@@ -26,18 +30,24 @@ export interface RadarPropertyListRow {
 export async function fetchRadarPropertyCandidates(filters: {
   status?: string;
   q?: string;
+  acquisitionType?: string;
 }): Promise<RadarPropertyListRow[]> {
   const supabase = createAdminClient();
   let query = supabase
     .from("radar_property_candidates")
     .select(
-      "id, candidate_code, status, province, city, district, property_type, price, bedrooms, discovered_at, last_seen_at, radar_sources(source_type, name)"
+      "id, candidate_code, status, province, city, district, property_type, price, bedrooms, discovered_at, last_seen_at, poster_type, acquisition_type, radar_sources(source_type, name)"
     )
     .order("discovered_at", { ascending: false })
     .limit(200);
 
   if (filters.status) {
     query = query.eq("status", filters.status);
+  }
+
+  // Uses ix_radar_property_candidates_acquisition_type (Phase 8D-2).
+  if (filters.acquisitionType) {
+    query = query.eq("acquisition_type", filters.acquisitionType);
   }
 
   if (filters.q) {
@@ -78,6 +88,8 @@ export async function fetchRadarPropertyCandidates(filters: {
       bedrooms: row.bedrooms as number | null,
       discovered_at: row.discovered_at as string,
       last_seen_at: row.last_seen_at as string,
+      poster_type: row.poster_type as string | null,
+      acquisition_type: row.acquisition_type as string | null,
     };
   });
 }
@@ -94,6 +106,41 @@ export interface RadarPropertyAnalysisRow {
   evidence: Record<string, unknown>;
   human_override: Record<string, unknown> | null;
   created_at: string;
+  /** Pulled out of ai_inference.poster/acquisition (Phase 8D-2) for direct UI access — not separate DB columns, see lib/radar/ai-analysis.ts. */
+  poster: ClassificationResult<PosterType> | null;
+  acquisition: ClassificationResult<AcquisitionType> | null;
+}
+
+function asClassificationResult<T extends string>(value: unknown): ClassificationResult<T> | null {
+  if (typeof value !== "object" || value === null) return null;
+  const v = value as Record<string, unknown>;
+  if (typeof v.value !== "string" || typeof v.confidence !== "number" || !Array.isArray(v.evidence)) return null;
+  return { value: v.value as T, confidence: v.confidence, evidence: v.evidence as string[] };
+}
+
+/**
+ * poster/acquisition aren't separate radar_property_analysis columns
+ * (Phase 8D-2 keeps that table's shape unchanged) — they're nested inside
+ * ai_inference by runAiAnalysisAction() and pulled back out here so the UI
+ * never has to reach into raw jsonb itself.
+ */
+function mapAnalysisRow(row: Record<string, unknown>): RadarPropertyAnalysisRow {
+  const aiInference = (row.ai_inference ?? {}) as Record<string, unknown>;
+  return {
+    id: row.id as string,
+    version: row.version as number,
+    model_name: row.model_name as string | null,
+    model_version: row.model_version as string | null,
+    facts: (row.facts ?? {}) as Record<string, unknown>,
+    ai_inference: aiInference,
+    unknowns: (row.unknowns ?? []) as unknown[],
+    confidence: row.confidence as number | null,
+    evidence: (row.evidence ?? {}) as Record<string, unknown>,
+    human_override: row.human_override as Record<string, unknown> | null,
+    created_at: row.created_at as string,
+    poster: asClassificationResult<PosterType>(aiInference.poster),
+    acquisition: asClassificationResult<AcquisitionType>(aiInference.acquisition),
+  };
 }
 
 export interface RadarPropertyStatusHistoryRow {
@@ -111,6 +158,8 @@ export interface RadarPropertyCandidateDetail {
     candidate_code: string;
     status: string;
     raw_id: string | null;
+    poster_type: string | null;
+    acquisition_type: string | null;
   };
   source: { source_type: string; name: string; source_url: string | null } | null;
   raw: { raw_payload: unknown; content_fingerprint: string | null } | null;
@@ -170,7 +219,7 @@ export async function fetchRadarPropertyCandidateDetail(
     candidate,
     source,
     raw: raw ?? null,
-    analyses: (analyses ?? []) as RadarPropertyAnalysisRow[],
+    analyses: (analyses ?? []).map(mapAnalysisRow),
     history: (history ?? []).map((row) => ({
       id: row.id as string,
       from_status: row.from_status as string | null,
