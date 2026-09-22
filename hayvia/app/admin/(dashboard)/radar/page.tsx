@@ -94,12 +94,20 @@ export default async function AdminRadarPage() {
           title="Lead Radar"
           description="Recently discovered candidates."
           action={
-            <Link
-              href="/admin/radar/leads/test"
-              className="rounded border border-line px-3 py-1.5 text-xs font-medium text-ink-soft hover:border-ink/20 hover:text-ink"
-            >
-              Test Extraction
-            </Link>
+            <div className="flex gap-2">
+              <Link
+                href="/admin/radar/leads/ingest-test"
+                className="rounded border border-line px-3 py-1.5 text-xs font-medium text-ink-soft hover:border-ink/20 hover:text-ink"
+              >
+                Test Ingestion
+              </Link>
+              <Link
+                href="/admin/radar/leads/test"
+                className="rounded border border-line px-3 py-1.5 text-xs font-medium text-ink-soft hover:border-ink/20 hover:text-ink"
+              >
+                Test Extraction
+              </Link>
+            </div>
           }
         >
           <CandidateList items={data.recentLeadCandidates} emptyLabel="No lead candidates yet." />
