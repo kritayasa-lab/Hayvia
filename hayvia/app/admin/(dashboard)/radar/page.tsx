@@ -45,7 +45,12 @@ export default async function AdminRadarPage() {
           href="/admin/radar/properties"
           icon={<Building2 size={16} />}
         />
-        <StatCard label="Lead Candidates" value={data.leadCandidateCount} icon={<Users size={16} />} />
+        <StatCard
+          label="Lead Candidates"
+          value={data.leadCandidateCount}
+          href="/admin/radar/leads"
+          icon={<Users size={16} />}
+        />
         <StatCard
           label="Property — Awaiting Review"
           value={data.propertyAwaitingReviewCount}
@@ -56,6 +61,7 @@ export default async function AdminRadarPage() {
         <StatCard
           label="Lead — Awaiting Review"
           value={data.leadAwaitingReviewCount}
+          href="/admin/radar/leads"
           icon={<Clock3 size={16} />}
           tone="accent"
         />
@@ -96,10 +102,10 @@ export default async function AdminRadarPage() {
           action={
             <div className="flex gap-2">
               <Link
-                href="/admin/radar/leads/ingest-test"
+                href="/admin/radar/leads/import"
                 className="rounded border border-line px-3 py-1.5 text-xs font-medium text-ink-soft hover:border-ink/20 hover:text-ink"
               >
-                Test Ingestion
+                Import Dataset
               </Link>
               <Link
                 href="/admin/radar/leads/test"
@@ -110,7 +116,11 @@ export default async function AdminRadarPage() {
             </div>
           }
         >
-          <CandidateList items={data.recentLeadCandidates} emptyLabel="No lead candidates yet." />
+          <CandidateList
+            items={data.recentLeadCandidates}
+            emptyLabel="No lead candidates yet."
+            hrefBase="/admin/radar/leads"
+          />
         </AdminCard>
 
         <AdminCard title="Recently Qualified — Property" description="Ready for the next review step.">
