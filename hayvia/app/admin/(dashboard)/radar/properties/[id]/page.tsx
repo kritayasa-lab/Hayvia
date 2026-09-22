@@ -7,24 +7,7 @@ import Badge from "@/components/ui/Badge";
 import { statusEntities } from "@/lib/admin/status-config";
 import { formatDate, formatPrice } from "@/lib/utils";
 import { fetchRadarPropertyCandidateDetail } from "@/lib/admin/radar-properties";
-import { markDuplicate, runAiAnalysisAction } from "@/app/admin/(dashboard)/radar/properties/actions";
-import type { ClassificationResult } from "@/lib/radar/ai-analysis";
-
-// Phase 8D-2 — same tone intent as the list page's acquisitionTone map: an
-// open opportunity reads as moss, a closed one as clay, UNKNOWN as neutral
-// (never "bad" — just unclassified or genuinely unclear).
-const posterTone: Record<string, "moss" | "clay" | "neutral"> = {
-  OWNER: "moss",
-  AGENT: "clay",
-  AGENCY: "clay",
-  UNKNOWN: "neutral",
-};
-const acquisitionTone: Record<string, "moss" | "clay" | "neutral"> = {
-  OWNER_DIRECT: "moss",
-  OPEN_CO_BROKER: "moss",
-  AGENT_ONLY: "clay",
-  UNKNOWN: "neutral",
-};
+import { markDuplicate } from "@/app/admin/(dashboard)/radar/properties/actions";
 
 export const dynamic = "force-dynamic";
 
@@ -50,13 +33,12 @@ export default async function RadarPropertyCandidateDetailPage({
   searchParams,
 }: {
   params: { id: string };
-  searchParams: { created?: string; aiStatus?: string; dupError?: string };
+  searchParams: { created?: string; dupError?: string };
 }) {
   const detail = await fetchRadarPropertyCandidateDetail(params.id);
   if (!detail) notFound();
 
-  const { candidate, source, raw, analyses, history, duplicateOf, convertedProperty } = detail;
-  const latestAnalysis = analyses[0] ?? null;
+  const { candidate, source, raw, history, duplicateOf, convertedProperty } = detail;
 
   return (
     <div>
@@ -93,21 +75,6 @@ export default async function RadarPropertyCandidateDetailPage({
       {searchParams.created === "1" && (
         <p className="mt-4 rounded border border-moss-100 bg-moss-50 px-3.5 py-2.5 text-sm text-moss-700">
           Candidate created.
-        </p>
-      )}
-      {searchParams.aiStatus === "not_configured" && (
-        <p className="mt-4 rounded border border-clay-200 bg-clay-50 px-3.5 py-2.5 text-sm text-ink">
-          AI analysis provider is not configured yet.
-        </p>
-      )}
-      {searchParams.aiStatus === "invalid" && (
-        <p className="mt-4 rounded border border-red-200 bg-red-50 px-3.5 py-2.5 text-sm text-red-600">
-          AI analysis returned an invalid result and was not saved.
-        </p>
-      )}
-      {searchParams.aiStatus === "failed" && (
-        <p className="mt-4 rounded border border-red-200 bg-red-50 px-3.5 py-2.5 text-sm text-red-600">
-          AI analysis failed. Please try again.
         </p>
       )}
       {searchParams.dupError && (
@@ -246,52 +213,6 @@ export default async function RadarPropertyCandidateDetailPage({
         </div>
 
         <div className="space-y-6">
-          <AdminCard
-            title="AI Analysis"
-            description={
-              analyses.length > 1 ? `${analyses.length} versions` : undefined
-            }
-            action={
-              <form action={runAiAnalysisAction.bind(null, candidate.id)}>
-                <button
-                  type="submit"
-                  className="rounded border border-line px-3 py-1.5 text-xs font-medium text-ink-soft hover:border-ink/20 hover:text-ink"
-                >
-                  Run AI Analysis
-                </button>
-              </form>
-            }
-          >
-            {latestAnalysis ? (
-              <div className="space-y-4">
-                <p className="text-xs text-ink-faint">
-                  Version {latestAnalysis.version} · {formatDate(latestAnalysis.created_at)}
-                  {latestAnalysis.model_name && ` · ${latestAnalysis.model_name}`}
-                  {latestAnalysis.confidence != null && ` · Confidence ${latestAnalysis.confidence}%`}
-                </p>
-                <ClassificationBlock label="Poster" classification={latestAnalysis.poster} toneMap={posterTone} />
-                <ClassificationBlock
-                  label="Acquisition"
-                  classification={latestAnalysis.acquisition}
-                  toneMap={acquisitionTone}
-                />
-                <AnalysisBlock label="Facts" value={latestAnalysis.facts} tone="moss" />
-                <AnalysisBlock label="AI Inference" value={latestAnalysis.ai_inference} tone="clay" />
-                <AnalysisBlock label="Unknown" value={latestAnalysis.unknowns} tone="neutral" />
-                <AnalysisBlock label="Evidence" value={latestAnalysis.evidence} tone="neutral" />
-                {latestAnalysis.human_override && (
-                  <AnalysisBlock label="Human Override" value={latestAnalysis.human_override} tone="neutral" />
-                )}
-              </div>
-            ) : (
-              <p className="text-sm text-ink-faint">
-                No analysis has been run yet. Click &ldquo;Run AI Analysis&rdquo; to classify this candidate —
-                if no AI provider is configured, that will be clearly reported rather than fabricating a
-                result.
-              </p>
-            )}
-          </AdminCard>
-
           <AdminCard title="Status History">
             {history.length === 0 ? (
               <p className="text-sm text-ink-faint">No status changes recorded yet.</p>
@@ -314,74 +235,6 @@ export default async function RadarPropertyCandidateDetailPage({
           </AdminCard>
         </div>
       </div>
-    </div>
-  );
-}
-
-// Phase 8D-2 — same visual language as AnalysisBlock (a Badge + a content
-// area), but for a ClassificationResult specifically: shows the value,
-// confidence, and the verbatim evidence snippets that justify it, so a
-// UNKNOWN with no evidence looks visibly different from a confident
-// classification rather than just another JSON blob.
-function ClassificationBlock({
-  label,
-  classification,
-  toneMap,
-}: {
-  label: string;
-  classification: ClassificationResult<string> | null;
-  toneMap: Record<string, "moss" | "clay" | "neutral">;
-}) {
-  if (!classification) {
-    return (
-      <div>
-        <Badge tone="neutral">{label}</Badge>
-        <p className="mt-2 text-xs text-ink-faint">Not yet analyzed.</p>
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      <div className="flex flex-wrap items-center gap-2">
-        <Badge tone={toneMap[classification.value] ?? "neutral"}>
-          {label}: {classification.value.replace(/_/g, " ")}
-        </Badge>
-        <span className="text-xs text-ink-faint">Confidence {classification.confidence}%</span>
-      </div>
-      {classification.evidence.length > 0 ? (
-        <ul className="mt-2 space-y-1">
-          {classification.evidence.map((snippet, index) => (
-            <li key={index} className="rounded bg-line-soft/40 px-2 py-1 text-xs text-ink-soft">
-              &ldquo;{snippet}&rdquo;
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p className="mt-2 text-xs text-ink-faint">No supporting evidence.</p>
-      )}
-    </div>
-  );
-}
-
-function AnalysisBlock({
-  label,
-  value,
-  tone,
-}: {
-  label: string;
-  value: unknown;
-  tone: "moss" | "clay" | "neutral";
-}) {
-  const isEmpty =
-    value == null || (Array.isArray(value) && value.length === 0) || (typeof value === "object" && Object.keys(value as object).length === 0);
-
-  return (
-    <div>
-      <Badge tone={tone}>{label}</Badge>
-      <pre className="mt-2 overflow-auto rounded bg-line-soft/40 p-3 text-xs text-ink-soft">
-        {isEmpty ? "—" : JSON.stringify(value, null, 2)}
-      </pre>
     </div>
   );
 }
