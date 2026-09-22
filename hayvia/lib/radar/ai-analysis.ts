@@ -141,12 +141,24 @@ function isClassificationResult<T extends string>(
 ): value is ClassificationResult<T> {
   if (typeof value !== "object" || value === null) return false;
   const v = value as Record<string, unknown>;
-  return (
-    typeof v.value === "string" &&
-    (allowed as readonly string[]).includes(v.value) &&
-    isConfidence(v.confidence) &&
-    isStringArray(v.evidence)
-  );
+  if (
+    typeof v.value !== "string" ||
+    !(allowed as readonly string[]).includes(v.value) ||
+    !isConfidence(v.confidence) ||
+    !isStringArray(v.evidence)
+  ) {
+    return false;
+  }
+  // Never accept a non-UNKNOWN classification with no supporting evidence —
+  // mirrors the same constraint the Zod schema enforces at the SDK boundary
+  // (see classificationShape() below). Kept here too since this is the
+  // last line of defense before a DB write: UNKNOWN may have empty
+  // evidence, but OWNER/AGENT/AGENCY/OWNER_DIRECT/OPEN_CO_BROKER/
+  // AGENT_ONLY must not.
+  if (v.value !== "UNKNOWN" && (v.evidence as string[]).length === 0) {
+    return false;
+  }
+  return true;
 }
 
 function isValidFacts(value: unknown): value is Partial<PropertyFacts> {
@@ -259,11 +271,16 @@ const PropertyFactsShape = z.object({
 });
 
 function classificationShape<T extends [string, ...string[]]>(values: T) {
-  return z.object({
-    value: z.enum(values),
-    confidence: z.number().min(0).max(100),
-    evidence: z.array(z.string()),
-  });
+  return z
+    .object({
+      value: z.enum(values),
+      confidence: z.number().min(0).max(100),
+      evidence: z.array(z.string()),
+    })
+    .refine((data) => data.value === "UNKNOWN" || data.evidence.length > 0, {
+      message: "A non-UNKNOWN classification must include at least one evidence item.",
+      path: ["evidence"],
+    });
 }
 
 const PropertyAiOutputSchema = z.object({
@@ -324,9 +341,30 @@ renovation") — never for anything that should have gone in \`facts\` or a clas
 \`confidence\` is your overall confidence in this analysis as a whole (0-100) — confidence in the \
 classification, never certainty that the underlying facts are true.`;
 
+// Fields that must never leave this system, even though they're harmless
+// to store in radar_property_raw itself — currently just `submittedBy`
+// (the admin's own profile UUID, written by createManualCandidate() in
+// app/admin/(dashboard)/radar/properties/actions.ts). It has no analytical
+// value to the model and no reason to be sent to an external provider. This
+// only affects what's serialized into the prompt below — the stored raw
+// row, and the admin-facing Raw Evidence viewer on the candidate detail
+// page, are untouched.
+const PROMPT_EXCLUDED_RAW_PAYLOAD_KEYS = ["submittedBy"];
+
+function sanitizeRawPayloadForPrompt(rawPayload: unknown): unknown {
+  if (typeof rawPayload !== "object" || rawPayload === null || Array.isArray(rawPayload)) {
+    return rawPayload;
+  }
+  const sanitized = { ...(rawPayload as Record<string, unknown>) };
+  for (const key of PROMPT_EXCLUDED_RAW_PAYLOAD_KEYS) {
+    delete sanitized[key];
+  }
+  return sanitized;
+}
+
 function buildUserPrompt(input: PropertyAiAnalysisInput): string {
   const knownFacts = JSON.stringify(input.facts, null, 2);
-  const rawPayload = JSON.stringify(input.rawPayload ?? null, null, 2);
+  const rawPayload = JSON.stringify(sanitizeRawPayloadForPrompt(input.rawPayload) ?? null, null, 2);
   return `Already-known structured facts for this candidate (from manual intake — treat as a starting \
 point, not ground truth; re-derive from the source text below where possible):
 ${knownFacts}
