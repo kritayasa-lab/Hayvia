@@ -90,7 +90,18 @@ export default async function AdminRadarPage() {
           />
         </AdminCard>
 
-        <AdminCard title="Lead Radar" description="Recently discovered candidates.">
+        <AdminCard
+          title="Lead Radar"
+          description="Recently discovered candidates."
+          action={
+            <Link
+              href="/admin/radar/leads/test"
+              className="rounded border border-line px-3 py-1.5 text-xs font-medium text-ink-soft hover:border-ink/20 hover:text-ink"
+            >
+              Test Extraction
+            </Link>
+          }
+        >
           <CandidateList items={data.recentLeadCandidates} emptyLabel="No lead candidates yet." />
         </AdminCard>
 
