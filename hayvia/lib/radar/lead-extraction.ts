@@ -67,7 +67,8 @@ Rules, no exceptions:
 8. confidence (0-100) is your overall confidence in the fields you DID fill in — not in whether the lead/listing is real. A post with one clear, unambiguous fact can have high confidence even if most other fields are null.
 9. "reason" is a short (one sentence) explanation of why you chose this category — the first thing a human reviewer reads.
 10. Never invent a location. Only fill province/city/district when a real place name is stated; keep it as the poster wrote it (do not translate or normalize it yourself — a separate deterministic step does that).
-11. Output must be valid JSON matching the provided schema exactly. Do not add commentary outside the JSON.`;
+11. Output must be valid JSON matching the provided schema exactly. Do not add commentary outside the JSON.
+12. If a post is clearly a demand ask (not a SELLER listing) but never states or implies buy vs. rent — no "ซื้อ"/"เช่า"/"ผ่อน", no per-month price, and no purchase-scale price (a price in ล้าน/million THB implies a purchase, never a rental) — default to category BUYER rather than RENTER: bare "หา" asks in these Hat Yai groups skew toward buy inquiries more often than rental ones. When you use this default, keep confidence and intent_score modest and add "buy vs. rent not stated" to unknowns. Do not use this default when the post gives ANY signal either way, however indirect — a per-month price means RENTER; installment/ownership-transfer language (e.g. "ผ่อนตรงกับเจ้าของ") or a purchase-scale price means BUYER via that actual signal, not this default.`;
 
 /**
  * Calls the configured OpenAI model to extract structured requirements from
