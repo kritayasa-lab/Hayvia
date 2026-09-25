@@ -47,6 +47,36 @@ export type ApifyFacebookPost = z.infer<typeof apifyFacebookPostSchema>;
 
 export type MapApifyItemResult = { ok: true; input: RawLeadSignalInput } | { ok: false; error: string };
 
+const NAMED_HTML_ENTITIES: Record<string, string> = {
+  amp: "&",
+  lt: "<",
+  gt: ">",
+  quot: '"',
+  apos: "'",
+};
+
+// This Apify actor's export HTML-entity-encodes non-ASCII characters in
+// group_name (e.g. one Thai character becomes "&#xe0b;") — a real ~20-80
+// character Thai group name balloons to 150-570 encoded characters, past
+// lead-ingestion.ts's source.name <=200-char limit (that limit itself is
+// out of scope here — see rawLeadSignalSchema). Decoding first, THEN
+// capping, fixes the actual root cause instead of just chopping the
+// symptom: every group_name observed in a real 58-post Apify dataset export
+// decodes to under 200 characters, so the slice below is a defensive floor,
+// not the primary fix.
+function decodeHtmlEntities(value: string): string {
+  return value
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex: string) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, dec: string) => String.fromCodePoint(parseInt(dec, 10)))
+    .replace(/&(amp|lt|gt|quot|apos);/g, (_, name: string) => NAMED_HTML_ENTITIES[name]);
+}
+
+// Only for source.name (Radar's own attribution field) — never applied to
+// post text, which must reach the AI extraction step exactly as scraped.
+function normalizeSourceName(groupName: string): string {
+  return decodeHtmlEntities(groupName).trim().slice(0, 200);
+}
+
 // Strips query string/fragment (tracking params Facebook/Apify sometimes
 // vary between scrapes of the same post) so the SAME post scraped twice
 // still produces the same sourceIdentifier and dedupes correctly via
@@ -80,7 +110,7 @@ export function mapApifyPostToRawLeadSignal(item: unknown): MapApifyItemResult {
   return {
     ok: true,
     input: {
-      source: { type: "FACEBOOK_GROUP", name: post.group_name },
+      source: { type: "FACEBOOK_GROUP", name: normalizeSourceName(post.group_name) },
       sourceUrl: post.post_url,
       sourceIdentifier: normalizePostUrl(post.post_url),
       // The full original item, unfiltered — preserves every field Apify
