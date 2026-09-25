@@ -15,6 +15,13 @@ const intentCategoryTone: Record<string, "moss" | "clay" | "neutral"> = {
   NOISE_SPAM: "neutral",
 };
 
+const categoryTone: Record<string, "moss" | "clay" | "neutral"> = {
+  BUYER: "moss",
+  RENTER: "moss",
+  SELLER: "clay",
+  NOISE: "neutral",
+};
+
 function Field({ label, value }: { label: string; value: string }) {
   return (
     <div>
@@ -53,18 +60,20 @@ export default function LeadExtractionTestForm() {
         <div className="space-y-6 border-t border-line-soft pt-6">
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-sm font-medium text-ink">{state.result.candidateCode}</span>
+            <Badge tone={categoryTone[state.result.extraction.category] ?? "neutral"}>{state.result.extraction.category}</Badge>
             <Badge tone={intentCategoryTone[state.result.extraction.intent_category] ?? "neutral"}>
               {state.result.extraction.intent_category.replace(/_/g, " ")}
             </Badge>
             <span className="text-xs text-ink-faint">
-              Confidence {state.result.extraction.confidence}% · Intent score {state.result.extraction.intent_score}%
+              Confidence {state.result.extraction.confidence}% · Lead quality {state.result.extraction.intent_score}%
             </span>
           </div>
+          <p className="text-sm text-ink-soft">{state.result.extraction.reason}</p>
 
           <section>
             <h3 className="font-display text-base text-ink">Extracted requirements</h3>
             <dl className="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-3">
-              <Field label="Intent" value={state.result.extraction.intent} />
+              <Field label="Category" value={state.result.extraction.category} />
               <Field label="Property type" value={state.result.extraction.property_type} />
               <Field
                 label="Location"
