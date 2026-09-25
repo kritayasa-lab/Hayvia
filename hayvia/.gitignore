@@ -14,3 +14,7 @@
 # Phase 5 backfill dry-run reports — contain real customer PII (email/phone),
 # must never be committed. See scripts/backfill-customers-dry-run.ts.
 /scripts/output/
+
+# Supabase CLI's own local cache (version-check marker, traces) — recreated
+# on every `supabase` invocation, never intentional repo content.
+/supabase/.temp/
