@@ -19,6 +19,8 @@ export interface RadarLeadListRow {
   candidate_code: string;
   status: string;
   lead_category: string | null;
+  poster_role: string | null;
+  qualification: string | null;
   source_type: string | null;
   source_name: string | null;
   province: string | null;
@@ -49,7 +51,7 @@ export async function fetchRadarLeadCandidates(filters: {
   let query = supabase
     .from("radar_lead_candidates")
     .select(
-      "id, candidate_code, status, lead_category, province, city, district, property_type, budget_min, budget_max, bedrooms, discovered_at, last_seen_at, radar_sources(source_type, name)"
+      "id, candidate_code, status, lead_category, poster_role, qualification, province, city, district, property_type, budget_min, budget_max, bedrooms, discovered_at, last_seen_at, radar_sources(source_type, name)"
     )
     .order("discovered_at", { ascending: false })
     .limit(200);
@@ -93,6 +95,8 @@ export async function fetchRadarLeadCandidates(filters: {
       candidate_code: row.candidate_code as string,
       status: row.status as string,
       lead_category: row.lead_category as string | null,
+      poster_role: row.poster_role as string | null,
+      qualification: row.qualification as string | null,
       source_type: source?.source_type ?? null,
       source_name: source?.name ?? null,
       province: row.province as string | null,

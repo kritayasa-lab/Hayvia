@@ -50,6 +50,36 @@ Step 1 — classify the post into exactly one "category":
 - SELLER: the poster is OFFERING a property — for sale, for rent, or "เจ้าของปล่อยเอง" (owner listing directly) — a supply signal, not a demand signal. A post describing a specific property's features/condition (e.g. "บ้านน้ำไม่ท่วม 100% บรรยากาศดี") with no indication the poster wants to acquire one is SELLER.
 - NOISE: not a real estate demand or supply signal at all (a general question to the group, a joke, an unrelated comment, an ad for something else).
 
+Step 2 — the Lead Qualification Gate. This determines whether the post gets
+retained as a Lead Radar record at all, so get it right rather than fast.
+Two more fields, on top of "category":
+
+"poster_role" — WHO is posting, not WHAT they're posting about:
+- SEEKER: the poster themselves wants to acquire or rent a property.
+- OWNER: the poster is the property's owner, offering it themselves (e.g. "เจ้าของปล่อยเอง", "เจ้าของขายเอง").
+- AGENT: the poster is a broker/agent/co-agent marketing property inventory — multiple listings, a business-style post, "รับฝากขาย", a phone/Line contact pitched as a professional service rather than a personal sale.
+- UNKNOWN: genuinely can't tell from the text — never guess between OWNER and AGENT (or either) when the evidence doesn't support one.
+
+"qualification" — the retained/discarded verdict:
+- QUALIFIED: a genuine SEEKER (category BUYER or RENTER) with enough signal (at minimum a real location or property-type constraint, ideally more) that this is worth surfacing as a real lead right away.
+- NEEDS_REVIEW: ambiguous — you cannot confidently tell whether this is a genuine seeker, or it's a genuine seeker but too thin to auto-qualify, or poster_role/category themselves are uncertain. This is the correct DEFAULT whenever you are not confident.
+- DISCARD: you are CONFIDENT this is not a genuine seeker — a SELLER/OWNER listing, an AGENT/broker inventory post, an advertisement, or NOISE. Only use DISCARD when the evidence clearly supports it, never as a default for "boring" or "low quality" content.
+
+The single most important rule of this gate: a false DISCARD (throwing away
+a real seeker) is far worse than a false NEEDS_REVIEW (a human spends 10
+seconds looking at something that turns out to be nothing). When genuinely
+uncertain, ALWAYS choose NEEDS_REVIEW over DISCARD — never guess toward
+DISCARD to seem decisive. poster_role=SEEKER must never be paired with
+qualification=DISCARD.
+
+Worked examples:
+- "เจ้าของปล่อยเอง คอนโดใกล้ ม.อ. 1 ห้องนอน 25 ตร.ม. 8000/เดือน" → poster_role OWNER, category SELLER, qualification DISCARD (confidently an owner's own listing).
+- "รับฝากขาย บ้านหลายหลังในหาดใหญ่ สนใจทักไลน์ได้เลยค่ะ" (an agent-style multi-listing post) → poster_role AGENT, category SELLER, qualification DISCARD.
+- "ตามหาบ้านในหาดใหญ่ ขอราคาไม่เกิน 2.5 ล้านค่ะ" → poster_role SEEKER, category BUYER, qualification QUALIFIED (clear seeker, real budget + location).
+- "หาคอนโดเช่าแถวคอหงส์ งบ 6000-8000" → poster_role SEEKER, category RENTER, qualification QUALIFIED.
+- A post that could be a seeker OR could be an agent quietly fishing for demand, with no decisive signal either way → poster_role UNKNOWN or best guess, qualification NEEDS_REVIEW.
+- A short, vague post where even category is unclear → qualification NEEDS_REVIEW, not DISCARD.
+
 Rules, no exceptions:
 1. Only extract what the text actually states or clearly implies. If a detail is not present, its field must be null (or, for property_type, "UNKNOWN") — never guess, estimate, or infer a plausible-sounding value.
    Example: "หาบ้านหาดใหญ่" mentions no budget and no flood requirement — budget_min, budget_max must be null, and no flood-related requirement should be invented.
@@ -67,8 +97,10 @@ Rules, no exceptions:
 8. confidence (0-100) is your overall confidence in the fields you DID fill in — not in whether the lead/listing is real. A post with one clear, unambiguous fact can have high confidence even if most other fields are null.
 9. "reason" is a short (one sentence) explanation of why you chose this category — the first thing a human reviewer reads.
 10. Never invent a location. Only fill province/city/district when a real place name is stated; keep it as the poster wrote it (do not translate or normalize it yourself — a separate deterministic step does that).
-11. Output must be valid JSON matching the provided schema exactly. Do not add commentary outside the JSON.
-12. If a post is clearly a demand ask (not a SELLER listing) but never states or implies buy vs. rent — no "ซื้อ"/"เช่า"/"ผ่อน", no per-month price, and no purchase-scale price (a price in ล้าน/million THB implies a purchase, never a rental) — default to category BUYER rather than RENTER: bare "หา" asks in these Hat Yai groups skew toward buy inquiries more often than rental ones. When you use this default, keep confidence and intent_score modest and add "buy vs. rent not stated" to unknowns. Do not use this default when the post gives ANY signal either way, however indirect — a per-month price means RENTER; installment/ownership-transfer language (e.g. "ผ่อนตรงกับเจ้าของ") or a purchase-scale price means BUYER via that actual signal, not this default.`;
+11. If a post is clearly a demand ask (not a SELLER listing) but never states or implies buy vs. rent — no "ซื้อ"/"เช่า"/"ผ่อน", no per-month price, and no purchase-scale price (a price in ล้าน/million THB implies a purchase, never a rental) — default to category BUYER rather than RENTER: bare "หา" asks in these Hat Yai groups skew toward buy inquiries more often than rental ones. When you use this default, keep confidence and intent_score modest and add "buy vs. rent not stated" to unknowns. Do not use this default when the post gives ANY signal either way, however indirect — a per-month price means RENTER; installment/ownership-transfer language (e.g. "ผ่อนตรงกับเจ้าของ") or a purchase-scale price means BUYER via that actual signal, not this default.
+12. A post using "หา"/"ตามหา"/"มองหา" language does NOT automatically mean poster_role=SEEKER — an OWNER or AGENT post can use the exact same words as marketing copy aimed at buyers ("ใครกำลังมองหาคอนโด... ห้องนี้น่าสนใจมากค่ะ" is an AGENT/OWNER post selling one specific unit, not a seeker's own demand ask). Read the WHOLE post: a specific unit description, a price, "พร้อมขาย"/"พร้อมโอน", furniture/amenity lists, or a contact-for-viewing pitch are supply-side signals regardless of what verb the post opens with.
+13. qualification is evaluated independently of intent_category/intent_score — a STRONG_INTENT SELLER post is still qualification DISCARD (it's confidently not a seeker), and a WEAK_INTENT/vague genuine seeker post is still qualification QUALIFIED or NEEDS_REVIEW (never DISCARD) depending on how confident you are it's really a seeker at all. Do not let a low intent_score push you toward DISCARD — those are different questions.
+14. Output must be valid JSON matching the provided schema exactly, including poster_role and qualification. Do not add commentary outside the JSON.`;
 
 /**
  * Calls the configured OpenAI model to extract structured requirements from

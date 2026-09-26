@@ -36,6 +36,12 @@ const categoryTone: Record<string, "moss" | "clay" | "neutral"> = {
   NOISE: "neutral",
 };
 
+const qualificationTone: Record<string, "moss" | "clay" | "neutral"> = {
+  QUALIFIED: "moss",
+  NEEDS_REVIEW: "clay",
+  DISCARDED: "neutral",
+};
+
 function ImportForm() {
   const [state, formAction] = useFormState<ImportDatasetState | null, FormData>(importApifyDataset, null);
 
@@ -85,9 +91,10 @@ function ClassifyForm() {
   return (
     <form action={formAction} className="space-y-4">
       <p className="text-sm text-ink-faint">
-        Runs AI classification on every imported raw signal that hasn&apos;t been classified yet — creates a candidate,
-        classifies it as BUYER / RENTER / SELLER / NOISE, extracts requirements, and (for BUYER/RENTER) runs the
-        existing matching engine. Each pending item is one AI call.
+        Runs the Lead Qualification Gate on every imported raw signal that hasn&apos;t been screened yet — one AI call
+        per item decides QUALIFIED, NEEDS_REVIEW, or DISCARD. A SELLER/OWNER listing, AGENT inventory post, or NOISE
+        the AI is confident about is discarded and never becomes a Lead Radar record. QUALIFIED and NEEDS_REVIEW
+        create a candidate and extract requirements; only QUALIFIED runs the existing matching engine right away.
       </p>
 
       <SubmitButton pendingLabel="Classifying...">Classify Pending</SubmitButton>
@@ -103,9 +110,15 @@ function ClassifyForm() {
         <div className="space-y-3 border-t border-line-soft pt-4">
           <p className="flex items-start gap-2 rounded border border-moss-100 bg-moss-50 px-3.5 py-2.5 text-sm text-moss-700">
             <CheckCircle2 size={16} className="mt-0.5 flex-shrink-0" />
-            {state.summary.processed} item{state.summary.processed === 1 ? "" : "s"} processed, {state.summary.matched} had
-            at least one property match, {state.summary.failed} failed.
+            {state.summary.processed} signal{state.summary.processed === 1 ? "" : "s"} scanned: {state.summary.qualified}{" "}
+            qualified, {state.summary.needsReview} needs review, {state.summary.discarded} discarded ·{" "}
+            {state.summary.matched} had at least one property match · {state.summary.failed} failed.
           </p>
+          <div className="flex flex-wrap gap-1.5">
+            <Badge tone={qualificationTone.QUALIFIED}>Qualified: {state.summary.qualified}</Badge>
+            <Badge tone={qualificationTone.NEEDS_REVIEW}>Needs Review: {state.summary.needsReview}</Badge>
+            <Badge tone={qualificationTone.DISCARDED}>Discarded: {state.summary.discarded}</Badge>
+          </div>
           <div className="flex flex-wrap gap-1.5">
             {Object.entries(state.summary.byCategory).map(([category, count]) => (
               <Badge key={category} tone={categoryTone[category] ?? "neutral"}>

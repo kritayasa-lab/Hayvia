@@ -15,7 +15,9 @@ import { createAdminClient } from "@/lib/supabase/admin";
 // Kept here (not duplicated at the call site) so the two lists — and any
 // future page that needs the same definition — can't drift apart.
 const PROPERTY_AWAITING_REVIEW_STATUSES = ["DISCOVERED", "AI_REVIEWED", "QUALIFIED"];
-const LEAD_AWAITING_REVIEW_STATUSES = ["DISCOVERED", "AI_REVIEWED", "QUALIFIED"];
+// NEEDS_REVIEW (Lead Qualification Gate) is definitionally "a human still
+// needs to look at this" — included alongside the pre-gate statuses.
+const LEAD_AWAITING_REVIEW_STATUSES = ["DISCOVERED", "AI_REVIEWED", "NEEDS_REVIEW", "QUALIFIED"];
 
 export interface RadarCandidateSummary {
   id: string;
