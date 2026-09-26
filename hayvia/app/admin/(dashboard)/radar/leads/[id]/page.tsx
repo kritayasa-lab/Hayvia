@@ -39,6 +39,14 @@ const leadQualityTone: Record<string, "moss" | "clay" | "neutral"> = {
   NOISE_SPAM: "neutral",
 };
 
+// Lead Qualification Gate — this candidate exists at all only because it
+// was screened QUALIFIED or NEEDS_REVIEW (a DISCARD never creates a row).
+// Null means a pre-gate candidate that hasn't been reprocessed yet.
+const qualificationTone: Record<string, "moss" | "clay" | "neutral"> = {
+  QUALIFIED: "moss",
+  NEEDS_REVIEW: "clay",
+};
+
 function Field({ label, value }: { label: string; value: string }) {
   return (
     <div>
@@ -85,6 +93,11 @@ export default async function RadarLeadCandidateDetailPage({
           <div className="flex flex-wrap items-center gap-2">
             <h1 className="font-display text-2xl text-ink">{candidate.candidate_code as string}</h1>
             <Badge tone="neutral">{(candidate.status as string).replace(/_/g, " ")}</Badge>
+            {candidate.qualification ? (
+              <Badge tone={qualificationTone[candidate.qualification as string] ?? "neutral"}>
+                {(candidate.qualification as string).replace(/_/g, " ")}
+              </Badge>
+            ) : null}
             {candidate.lead_category ? (
               <Badge tone={categoryTone[candidate.lead_category as string] ?? "neutral"}>{candidate.lead_category as string}</Badge>
             ) : null}
@@ -151,6 +164,7 @@ export default async function RadarLeadCandidateDetailPage({
 
           <AdminCard title="Extracted Requirements">
             <dl className="grid grid-cols-2 gap-4">
+              <Field label="Poster role" value={(candidate.poster_role as string) || "Not screened"} />
               <Field label="Category" value={(candidate.lead_category as string) || "Not classified"} />
               <Field label="Property type" value={(candidate.property_type as string) || ""} />
               <Field

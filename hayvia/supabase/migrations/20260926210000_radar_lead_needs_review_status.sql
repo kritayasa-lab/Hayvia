@@ -1,0 +1,21 @@
+-- =============================================================================
+-- 20260926210000_radar_lead_needs_review_status.sql
+-- =============================================================================
+-- Lead Qualification Gate — adds NEEDS_REVIEW to radar_lead_status_enum.
+--
+-- Kept in its OWN migration file/transaction deliberately: Postgres does not
+-- allow a newly-added enum value to be used by a statement in the same
+-- transaction that added it. The follow-up migration
+-- (20260926220000_radar_lead_qualification_gate.sql) adds the
+-- poster_role/qualification columns and the radar_lead_screening table that
+-- reference this concept — none of that SQL literally uses the enum value
+-- itself, but keeping the ADD VALUE isolated is the safe, standard practice
+-- regardless.
+--
+-- Rollback note: ALTER TYPE ... ADD VALUE has no DROP VALUE counterpart in
+-- Postgres. If this ever needs to be rolled back, leave the enum value in
+-- place (harmless unused) and revert the application code instead —
+-- removing it would require recreating radar_lead_status_enum entirely.
+-- =============================================================================
+
+alter type radar_lead_status_enum add value 'NEEDS_REVIEW';

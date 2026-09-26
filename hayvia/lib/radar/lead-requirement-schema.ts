@@ -40,6 +40,26 @@ import { z } from "zod";
 export const LEAD_CATEGORY_VALUES = ["BUYER", "RENTER", "SELLER", "NOISE"] as const;
 export type LeadCategory = (typeof LEAD_CATEGORY_VALUES)[number];
 
+// Lead Qualification Gate — WHO is posting, kept deliberately separate from
+// `category` (WHAT TYPE of post this is). A SEEKER is someone looking to
+// acquire/rent; OWNER/AGENT are supply-side posters (a SELLER category post
+// almost always pairs with OWNER or AGENT); UNKNOWN is the AI's own explicit
+// "can't tell" state, never guessed.
+export const POSTER_ROLE_VALUES = ["SEEKER", "OWNER", "AGENT", "UNKNOWN"] as const;
+export type PosterRole = (typeof POSTER_ROLE_VALUES)[number];
+
+// The Lead Qualification Gate's verdict. QUALIFIED/NEEDS_REVIEW are the only
+// two outcomes ever retained as a radar_lead_candidates row (see
+// 20260926220000_radar_lead_qualification_gate.sql's CHECK constraint, which
+// enforces this at the database level too) — DISCARD never creates a
+// candidate at all. False-DISCARD (a genuine seeker wrongly thrown away) is
+// the single most dangerous error this gate can make, since discarded
+// content is never fully retained for later recovery — see the two
+// .refine()s below, which encode this as a hard rule, not just a prompt
+// instruction.
+export const LEAD_QUALIFICATION_VALUES = ["QUALIFIED", "NEEDS_REVIEW", "DISCARD"] as const;
+export type LeadQualification = (typeof LEAD_QUALIFICATION_VALUES)[number];
+
 // Mirrors property_type_enum (20260912100001_extensions_and_enums.sql)
 // exactly, plus UNKNOWN — the AI's own explicit "not stated" state, never
 // written to the property_type_enum column itself.
@@ -75,6 +95,8 @@ const requirementItemSchema = z.object({
 export const leadRequirementSchema = z
   .object({
     category: z.enum(LEAD_CATEGORY_VALUES),
+    poster_role: z.enum(POSTER_ROLE_VALUES),
+    qualification: z.enum(LEAD_QUALIFICATION_VALUES),
     property_type: z.enum(LEAD_PROPERTY_TYPE_VALUES),
     location: z.object({
       province: z.string().min(1).max(120).nullable(),
@@ -115,6 +137,15 @@ export const leadRequirementSchema = z
     message:
       "SELLER posts must not populate budget_min/budget_max (that field means buyer/renter budget, never an asking price) — put any price mentioned in requirements[] instead",
     path: ["budget_min"],
+  })
+  .refine((v) => v.poster_role !== "SEEKER" || v.qualification !== "DISCARD", {
+    message:
+      "poster_role=SEEKER must never be paired with qualification=DISCARD — a genuine seeker is never discarded. Use NEEDS_REVIEW if uncertain, QUALIFIED if confident.",
+    path: ["qualification"],
+  })
+  .refine((v) => v.qualification !== "QUALIFIED" || v.category === "BUYER" || v.category === "RENTER", {
+    message: "qualification=QUALIFIED requires category BUYER or RENTER — a genuine seeker is never SELLER/NOISE.",
+    path: ["qualification"],
   });
 
 export type LeadRequirementExtraction = z.infer<typeof leadRequirementSchema>;
@@ -140,6 +171,8 @@ export const LEAD_REQUIREMENT_JSON_SCHEMA = {
     additionalProperties: false,
     properties: {
       category: { type: "string", enum: [...LEAD_CATEGORY_VALUES] },
+      poster_role: { type: "string", enum: [...POSTER_ROLE_VALUES] },
+      qualification: { type: "string", enum: [...LEAD_QUALIFICATION_VALUES] },
       property_type: { type: "string", enum: [...LEAD_PROPERTY_TYPE_VALUES] },
       location: {
         type: "object",
@@ -176,6 +209,8 @@ export const LEAD_REQUIREMENT_JSON_SCHEMA = {
     },
     required: [
       "category",
+      "poster_role",
+      "qualification",
       "property_type",
       "location",
       "budget_min",

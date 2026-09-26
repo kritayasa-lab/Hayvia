@@ -13,6 +13,7 @@ export const dynamic = "force-dynamic";
 const ALL_STATUSES = [
   "DISCOVERED",
   "AI_REVIEWED",
+  "NEEDS_REVIEW",
   "QUALIFIED",
   "DISMISSED",
   "CONTACT_PENDING",
@@ -31,6 +32,7 @@ const LEAD_CATEGORIES = ["BUYER", "RENTER", "SELLER", "NOISE"];
 const statusTone: Record<string, "moss" | "clay" | "neutral"> = {
   DISCOVERED: "neutral",
   AI_REVIEWED: "neutral",
+  NEEDS_REVIEW: "clay",
   QUALIFIED: "moss",
   QUALIFIED_LEAD: "moss",
   CONVERTED: "moss",
@@ -56,6 +58,15 @@ const leadQualityTone: Record<string, "moss" | "clay" | "neutral"> = {
   PROBABLE_INTENT: "moss",
   WEAK_INTENT: "clay",
   NOISE_SPAM: "neutral",
+};
+
+// Lead Qualification Gate — every candidate in this table was already
+// screened as QUALIFIED or NEEDS_REVIEW (a DISCARD never creates a row at
+// all), so this only ever renders those two values. Null means a pre-gate
+// candidate that hasn't been reprocessed yet.
+const qualificationTone: Record<string, "moss" | "clay" | "neutral"> = {
+  QUALIFIED: "moss",
+  NEEDS_REVIEW: "clay",
 };
 
 export default async function RadarLeadsPage({
@@ -128,10 +139,11 @@ export default async function RadarLeadsPage({
       </div>
 
       <div className="mt-4 overflow-x-auto rounded-lg border border-line">
-        <table className="w-full min-w-[1200px] text-left text-sm">
+        <table className="w-full min-w-[1300px] text-left text-sm">
           <thead className="bg-line-soft/60 text-xs uppercase tracking-wide text-ink-faint">
             <tr>
               <th className="px-4 py-3 font-medium">Candidate Code</th>
+              <th className="px-4 py-3 font-medium">Qualification</th>
               <th className="px-4 py-3 font-medium">Category</th>
               <th className="px-4 py-3 font-medium">Status</th>
               <th className="px-4 py-3 font-medium">Lead Quality</th>
@@ -145,7 +157,7 @@ export default async function RadarLeadsPage({
           <tbody className="divide-y divide-line-soft">
             {rows.length === 0 ? (
               <tr>
-                <td colSpan={9} className="px-4 py-8 text-center text-ink-faint">
+                <td colSpan={10} className="px-4 py-8 text-center text-ink-faint">
                   No Lead Radar candidates found.
                 </td>
               </tr>
@@ -163,6 +175,13 @@ export default async function RadarLeadsPage({
                     >
                       {row.candidate_code}
                     </Link>
+                  </td>
+                  <td className="px-4 py-3">
+                    {row.qualification ? (
+                      <Badge tone={qualificationTone[row.qualification] ?? "neutral"}>{row.qualification.replace(/_/g, " ")}</Badge>
+                    ) : (
+                      <span className="text-ink-faint">Pre-gate</span>
+                    )}
                   </td>
                   <td className="px-4 py-3">
                     {row.lead_category ? (
