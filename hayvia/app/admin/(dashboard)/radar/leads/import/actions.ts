@@ -113,19 +113,32 @@ export async function classifyPendingLeads(
 
   const supabase = createAdminClient();
 
-  // Every raw signal that has no candidate yet — left-anti-join done
-  // client-side (two small selects) rather than a raw SQL join, matching
-  // this codebase's existing supabase-js query style throughout Radar.
-  const [{ data: rawRows, error: rawError }, { data: promotedRows, error: promotedError }] = await Promise.all([
+  // "Pending" means not yet SUCCESSFULLY classified, not merely "no
+  // candidate yet" — left-anti-join done client-side (two small selects)
+  // rather than a raw SQL join, matching this codebase's existing
+  // supabase-js query style throughout Radar. runLeadIntelligenceForRaw()
+  // (lib/radar/lead-intelligence.ts) always promotes a raw row to a
+  // candidate FIRST, then attempts AI classification as a separate step; if
+  // that AI step fails or OPENAI_API_KEY isn't configured, the candidate
+  // exists but radar_lead_candidates.lead_category stays null (see that
+  // column's own migration comment: "Null until classified") and no
+  // radar_lead_analysis row is written. Such a row must stay in this pending
+  // queue so it's retried, not silently dropped because a candidate row
+  // happens to exist. promoteRawLeadToCandidate() is idempotent by raw_id,
+  // so retrying it below reuses that existing candidate rather than
+  // creating a second one.
+  const [{ data: rawRows, error: rawError }, { data: candidateRows, error: candidateError }] = await Promise.all([
     supabase.from("radar_lead_raw").select("id").order("created_at", { ascending: true }).limit(MAX_CLASSIFY_BATCH),
-    supabase.from("radar_lead_candidates").select("raw_id"),
+    supabase.from("radar_lead_candidates").select("raw_id, lead_category"),
   ]);
-  if (rawError || promotedError) {
-    return { error: rawError?.message || promotedError?.message || "Failed to read pending raw lead signals." };
+  if (rawError || candidateError) {
+    return { error: rawError?.message || candidateError?.message || "Failed to read pending raw lead signals." };
   }
 
-  const promotedIds = new Set((promotedRows ?? []).map((r) => r.raw_id as string).filter(Boolean));
-  const pending = (rawRows ?? []).filter((r) => !promotedIds.has(r.id as string));
+  const classifiedRawIds = new Set(
+    (candidateRows ?? []).filter((r) => r.lead_category != null).map((r) => r.raw_id as string).filter(Boolean)
+  );
+  const pending = (rawRows ?? []).filter((r) => !classifiedRawIds.has(r.id as string));
 
   if (pending.length === 0) {
     return { summary: { processed: 0, byCategory: {}, matched: 0, failed: 0, failedDetails: [] } };
