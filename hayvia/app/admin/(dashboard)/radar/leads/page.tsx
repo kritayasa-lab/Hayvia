@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Search } from "lucide-react";
 import Badge from "@/components/ui/Badge";
+import ClickableTableRow from "@/components/admin/ClickableTableRow";
 import { formatDate, formatPrice } from "@/lib/utils";
 import { fetchRadarLeadCandidates } from "@/lib/admin/radar-leads";
 
@@ -150,7 +151,11 @@ export default async function RadarLeadsPage({
               </tr>
             ) : (
               rows.map((row) => (
-                <tr key={row.id} className="align-top hover:bg-line-soft/30">
+                <ClickableTableRow
+                  key={row.id}
+                  href={`/admin/radar/leads/${row.id}`}
+                  className="cursor-pointer align-top hover:bg-line-soft/30"
+                >
                   <td className="px-4 py-3">
                     <Link
                       href={`/admin/radar/leads/${row.id}`}
@@ -189,7 +194,7 @@ export default async function RadarLeadsPage({
                   </td>
                   <td className="px-4 py-3 text-ink-soft">{row.confidence != null ? `${row.confidence}%` : "—"}</td>
                   <td className="px-4 py-3 whitespace-nowrap text-ink-soft">{formatDate(row.discovered_at)}</td>
-                </tr>
+                </ClickableTableRow>
               ))
             )}
           </tbody>

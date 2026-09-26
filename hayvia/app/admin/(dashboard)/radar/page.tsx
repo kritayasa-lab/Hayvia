@@ -88,7 +88,21 @@ export default async function AdminRadarPage() {
       </div>
 
       <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <AdminCard title="Property Radar" description="Recently discovered candidates.">
+        <AdminCard
+          title="Property Radar"
+          description={`${data.propertyCandidateCount} Property Candidates discovered — staging data, not real properties.`}
+          action={
+            <Link
+              href="/admin/radar/properties"
+              className="rounded bg-moss-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-moss-700"
+            >
+              View All Properties &rarr;
+            </Link>
+          }
+        >
+          <p className="mb-2 text-xs text-ink-faint">
+            Showing {data.recentPropertyCandidates.length} most recent — view all above.
+          </p>
           <CandidateList
             items={data.recentPropertyCandidates}
             emptyLabel="No property candidates yet."
@@ -98,9 +112,15 @@ export default async function AdminRadarPage() {
 
         <AdminCard
           title="Lead Radar"
-          description="Recently discovered candidates."
+          description={`${data.leadCandidateCount} Leads discovered — staging data, not CRM leads.`}
           action={
             <div className="flex gap-2">
+              <Link
+                href="/admin/radar/leads"
+                className="rounded bg-moss-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-moss-700"
+              >
+                View All Leads &rarr;
+              </Link>
               <Link
                 href="/admin/radar/leads/import"
                 className="rounded border border-line px-3 py-1.5 text-xs font-medium text-ink-soft hover:border-ink/20 hover:text-ink"
@@ -116,6 +136,9 @@ export default async function AdminRadarPage() {
             </div>
           }
         >
+          <p className="mb-2 text-xs text-ink-faint">
+            Showing {data.recentLeadCandidates.length} most recent — view all above.
+          </p>
           <CandidateList
             items={data.recentLeadCandidates}
             emptyLabel="No lead candidates yet."
