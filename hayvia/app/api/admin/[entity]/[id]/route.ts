@@ -45,11 +45,10 @@ export async function PATCH(
 
   const supabase = createAdminClient();
 
-  // Entities configured with `history` (leads, Radar property candidates):
-  // capture the prior status before updating so the transition can be
-  // recorded in that history table below. Every other entity's update path
-  // is unchanged. Generalized in Phase 8C from what was originally a
-  // leads-only special case — same guarantee, no second hardcoded branch.
+  // Entities configured with `history` (currently just "leads"): capture the
+  // prior status before updating so the transition can be recorded in that
+  // history table below. Every other entity's update path is unchanged.
+  // This mechanism is generic on purpose, not a leads-only special case.
   let previousStatus: string | null = null;
   if (config.history) {
     const { data: existingRow } = await supabase
