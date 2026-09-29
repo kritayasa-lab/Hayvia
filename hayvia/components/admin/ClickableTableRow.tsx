@@ -3,14 +3,12 @@
 import { useRouter } from "next/navigation";
 
 // Makes an entire table row a click target that navigates to `href`, while
-// leaving any real <a>/<button> inside the row (e.g. the candidate_code
-// link) to handle its own click — a click that starts inside one of those
-// is never intercepted, so Ctrl/Cmd-click, middle-click, and "open in new
-// tab" on that inner link keep working exactly as before. This is the one
-// new piece of navigation plumbing this change adds; everything else reuses
-// existing components/patterns (see ConvertRadarCandidateButton.tsx for the
-// same "use client" + useRouter() convention already used elsewhere in this
-// admin section).
+// leaving any real <a>/<button> inside the row to handle its own click — a
+// click that starts inside one of those is never intercepted, so Ctrl/Cmd-
+// click, middle-click, and "open in new tab" on that inner link keep
+// working exactly as before. Not currently used by any page (its original
+// call sites, the Radar list pages, were removed), but kept as a generic,
+// reusable component for a future clickable list.
 export default function ClickableTableRow({
   href,
   className,
