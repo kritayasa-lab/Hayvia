@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowUp, ArrowDown, Star, Trash2 } from "lucide-react";
+import { ArrowUp, ArrowDown, ExternalLink, Star, Trash2 } from "lucide-react";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { fetchOwners, fetchAgents } from "@/lib/admin/people";
 import PropertyForm from "@/components/admin/PropertyForm";
@@ -129,72 +129,88 @@ export default async function EditPropertyPage({
         <div className="space-y-6">
           <AdminCard title="Images" description="Upload files or add by URL, set the cover, and reorder.">
             <PropertyImageUpload propertyId={property.id} />
-            <ul className="space-y-2">
-              {images.map((image, index) => (
-                <li
-                  key={image.id}
-                  className="flex items-center gap-3 rounded border border-line-soft p-2"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={image.url}
-                    alt=""
-                    className="h-12 w-16 shrink-0 rounded object-cover"
-                  />
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate text-xs text-ink-soft">{image.url}</p>
-                    {image.is_cover && (
-                      <span className="text-xs font-medium text-moss-700">Cover image</span>
-                    )}
+
+            {images.length === 0 ? (
+              <p className="text-sm text-ink-faint">No images yet.</p>
+            ) : (
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
+                {images.map((image, index) => (
+                  <div
+                    key={image.id}
+                    className="overflow-hidden rounded-lg border border-line-soft bg-surface"
+                  >
+                    <div className="relative aspect-[4/3] w-full bg-line-soft">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={image.url} alt="" className="h-full w-full object-cover" />
+                      {image.is_cover && (
+                        <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-moss-600 px-2 py-1 text-xs font-semibold text-white shadow">
+                          <Star size={12} className="fill-current" /> Cover
+                        </span>
+                      )}
+                      <a
+                        href={image.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View full image"
+                        title="View full image"
+                        className="absolute right-2 top-2 rounded-full bg-ink/60 p-1.5 text-white hover:bg-ink/80"
+                      >
+                        <ExternalLink size={12} />
+                      </a>
+                    </div>
+
+                    <div className="space-y-1.5 p-2">
+                      {image.is_cover ? (
+                        <div className="flex items-center justify-center gap-1 rounded border border-moss-200 bg-moss-50 px-2 py-1.5 text-xs font-semibold text-moss-700">
+                          <Star size={12} className="fill-current" /> Cover
+                        </div>
+                      ) : (
+                        <form action={setCoverImage.bind(null, image.id, property.id)}>
+                          <button
+                            type="submit"
+                            className="w-full rounded border border-moss-600 px-2 py-1.5 text-xs font-medium text-moss-700 hover:bg-moss-50"
+                          >
+                            Set as Cover
+                          </button>
+                        </form>
+                      )}
+
+                      <div className="flex items-center gap-1">
+                        <form action={moveImage.bind(null, property.id, image.id, "up")} className="flex-1">
+                          <button
+                            type="submit"
+                            disabled={index === 0}
+                            className="flex w-full items-center justify-center rounded p-1.5 text-ink-faint hover:bg-line-soft disabled:opacity-30"
+                            aria-label="Move up"
+                          >
+                            <ArrowUp size={14} />
+                          </button>
+                        </form>
+                        <form action={moveImage.bind(null, property.id, image.id, "down")} className="flex-1">
+                          <button
+                            type="submit"
+                            disabled={index === images.length - 1}
+                            className="flex w-full items-center justify-center rounded p-1.5 text-ink-faint hover:bg-line-soft disabled:opacity-30"
+                            aria-label="Move down"
+                          >
+                            <ArrowDown size={14} />
+                          </button>
+                        </form>
+                        <form action={removePropertyImage.bind(null, image.id, property.id)} className="flex-1">
+                          <button
+                            type="submit"
+                            className="flex w-full items-center justify-center rounded p-1.5 text-red-400 hover:bg-red-50"
+                            aria-label="Delete image"
+                          >
+                            <Trash2 size={14} />
+                          </button>
+                        </form>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex shrink-0 items-center gap-1">
-                    <form action={moveImage.bind(null, property.id, image.id, "up")}>
-                      <button
-                        type="submit"
-                        disabled={index === 0}
-                        className="rounded p-1.5 text-ink-faint hover:bg-line-soft disabled:opacity-30"
-                        aria-label="Move up"
-                      >
-                        <ArrowUp size={14} />
-                      </button>
-                    </form>
-                    <form action={moveImage.bind(null, property.id, image.id, "down")}>
-                      <button
-                        type="submit"
-                        disabled={index === images.length - 1}
-                        className="rounded p-1.5 text-ink-faint hover:bg-line-soft disabled:opacity-30"
-                        aria-label="Move down"
-                      >
-                        <ArrowDown size={14} />
-                      </button>
-                    </form>
-                    {!image.is_cover && (
-                      <form action={setCoverImage.bind(null, image.id, property.id)}>
-                        <button
-                          type="submit"
-                          className="rounded p-1.5 text-ink-faint hover:bg-line-soft"
-                          aria-label="Set as cover"
-                        >
-                          <Star size={14} />
-                        </button>
-                      </form>
-                    )}
-                    <form action={removePropertyImage.bind(null, image.id, property.id)}>
-                      <button
-                        type="submit"
-                        className="rounded p-1.5 text-red-400 hover:bg-red-50"
-                        aria-label="Remove image"
-                      >
-                        <Trash2 size={14} />
-                      </button>
-                    </form>
-                  </div>
-                </li>
-              ))}
-              {images.length === 0 && (
-                <p className="text-sm text-ink-faint">No images yet.</p>
-              )}
-            </ul>
+                ))}
+              </div>
+            )}
 
             <p className="mt-3 text-xs font-medium text-ink-soft">Or add by URL</p>
             <form action={addPropertyImage.bind(null, property.id)} className="mt-1.5 flex gap-2">
