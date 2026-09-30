@@ -6,9 +6,11 @@
 // Two entry points:
 //   - importPropertyFromUrl: the primary path (paste URL -> fetch -> AI).
 //   - importPropertyFromManualContent: the fallback path used when the fetch
-//     step fails (paste page text and/or a screenshot -> AI). Never a dead
-//     end — see components/admin/ImportPropertyForm.tsx for the "Continue to
-//     manual property creation" escape hatch shown alongside this form.
+//     step fails (paste page text and/or up to MAX_SCREENSHOT_COUNT
+//     screenshots -> AI, all sent to Gemini together as one extraction).
+//     Never a dead end — see components/admin/ImportPropertyForm.tsx for
+//     the "Continue to manual property creation" escape hatch shown
+//     alongside this form.
 //
 // Both funnel into createDraftProperty(), a small, self-contained insert
 // (deliberately NOT a call into ../actions.ts's createProperty(), which
@@ -51,7 +53,9 @@ const VALID_PROPERTY_TYPES = new Set([
   "OTHER",
 ]);
 
-const MAX_SCREENSHOT_BYTES = 8 * 1024 * 1024;
+const MAX_SCREENSHOT_COUNT = 10;
+const MAX_SCREENSHOT_BYTES = 8 * 1024 * 1024; // per screenshot
+const MAX_TOTAL_SCREENSHOT_BYTES = 32 * 1024 * 1024; // combined, keeps the Gemini request body reasonable
 const MAX_IMAGES_PER_PROPERTY = 20;
 
 function randomSuffix(): string {
@@ -216,13 +220,19 @@ export async function importPropertyFromUrl(
 
 /**
  * Fallback path: used when the URL fetch failed. Accepts pasted listing
- * text and/or a single uploaded screenshot — at least one is required. The
- * screenshot is sent to the AI call as image input only (multimodal vision
- * request) and is never persisted anywhere (not to Supabase Storage, not to
- * property_images — it's a screenshot of a listing page, not a photo of the
- * property, so saving it as a property image would be wrong). No image URLs
- * are extracted in this path since there is no page to parse — the admin
- * adds real photos manually on the edit page afterward, same as always.
+ * text and/or up to MAX_SCREENSHOT_COUNT uploaded screenshots — e.g. several
+ * screenshots of one Facebook post — at least one of the two is required.
+ * All screenshots are sent to Gemini together in the SAME extraction call
+ * (see buildParts() in lib/ai/property-import.ts, which already loops over
+ * every imageDataUrls entry as its own inlineData part) — never one call
+ * per screenshot — and the result is still a single structured property
+ * object. Screenshots are image input only (multimodal vision request) and
+ * are never persisted anywhere (not to Supabase Storage, not to
+ * property_images — they're evidence for extraction, not photos of the
+ * property, so saving them as property images would be wrong). No image
+ * URLs are extracted in this path since there is no page to parse — the
+ * admin adds real photos manually on the edit page afterward, same as
+ * always.
  */
 export async function importPropertyFromManualContent(
   _prevState: ImportActionState | null,
@@ -233,22 +243,43 @@ export async function importPropertyFromManualContent(
 
   const pastedText = String(formData.get("pasted_text") || "").trim();
   const sourceUrlRaw = String(formData.get("source_url") || "").trim();
-  const screenshot = formData.get("screenshot");
+  const screenshots = formData
+    .getAll("screenshots")
+    .filter((entry): entry is File => entry instanceof File && entry.size > 0);
+
+  if (screenshots.length > MAX_SCREENSHOT_COUNT) {
+    return {
+      error: `Please upload ${MAX_SCREENSHOT_COUNT} screenshots or fewer (you selected ${screenshots.length}).`,
+      fallback: true,
+    };
+  }
 
   let imageDataUrls: string[] | undefined;
-  if (screenshot instanceof File && screenshot.size > 0) {
-    if (screenshot.size > MAX_SCREENSHOT_BYTES) {
-      return { error: "Screenshot is too large (max 8MB).", fallback: true };
+  if (screenshots.length > 0) {
+    const dataUrls: string[] = [];
+    let totalBytes = 0;
+    for (const screenshot of screenshots) {
+      if (!screenshot.type.startsWith("image/")) {
+        return { error: `"${screenshot.name}" isn't an image file.`, fallback: true };
+      }
+      if (screenshot.size > MAX_SCREENSHOT_BYTES) {
+        return { error: `"${screenshot.name}" is too large (max 8MB per screenshot).`, fallback: true };
+      }
+      totalBytes += screenshot.size;
+      if (totalBytes > MAX_TOTAL_SCREENSHOT_BYTES) {
+        return {
+          error: `Screenshots are too large together (max ${MAX_TOTAL_SCREENSHOT_BYTES / (1024 * 1024)}MB combined). Try fewer or smaller screenshots.`,
+          fallback: true,
+        };
+      }
+      const buffer = Buffer.from(await screenshot.arrayBuffer());
+      dataUrls.push(`data:${screenshot.type};base64,${buffer.toString("base64")}`);
     }
-    if (!screenshot.type.startsWith("image/")) {
-      return { error: "Please upload an image file.", fallback: true };
-    }
-    const buffer = Buffer.from(await screenshot.arrayBuffer());
-    imageDataUrls = [`data:${screenshot.type};base64,${buffer.toString("base64")}`];
+    imageDataUrls = dataUrls;
   }
 
   if (!pastedText && !imageDataUrls) {
-    return { error: "Please paste the listing text or upload a screenshot.", fallback: true };
+    return { error: "Please paste the listing text or upload at least one screenshot.", fallback: true };
   }
 
   let extraction: PropertyExtractionResult;

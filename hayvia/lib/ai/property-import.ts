@@ -160,8 +160,11 @@ interface GeminiGenerateContentResponse {
 }
 
 /**
- * One AI call: takes fetched/pasted text and/or an uploaded screenshot and
- * returns validated, provider-agnostic property fields. Never throws a raw
+ * One AI call: takes fetched/pasted text and/or one or more uploaded
+ * screenshots (buildParts() below sends every entry in imageDataUrls as its
+ * own inlineData part in the SAME request — Gemini reads them together as
+ * one combined source, never one call per screenshot) and returns a single
+ * validated, provider-agnostic property object. Never throws a raw
  * fetch/parse error — always throws PropertyImportAIError with a code the
  * caller can turn into a clear admin-facing message, or returns a value
  * that has already passed schema validation.
