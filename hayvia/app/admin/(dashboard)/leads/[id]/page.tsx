@@ -82,10 +82,14 @@ export default async function LeadDetailPage({ params }: { params: { id: string 
                 <dt className="text-xs uppercase tracking-wide text-ink-faint">Property</dt>
                 <dd className="text-ink">
                   {propertyTitle ? (
-                    <Link href={`/admin/properties/${lead.property_id}`} className="hover:underline">
+                    // Plain anchor, not next/link — forces a full
+                    // navigation so the property edit page always reads
+                    // fresh DB values instead of a stale Router Cache
+                    // snapshot (see PropertiesTable.tsx).
+                    <a href={`/admin/properties/${lead.property_id}`} className="hover:underline">
                       {property?.property_code ? `${property.property_code} · ` : ""}
                       {propertyTitle}
-                    </Link>
+                    </a>
                   ) : (
                     "—"
                   )}

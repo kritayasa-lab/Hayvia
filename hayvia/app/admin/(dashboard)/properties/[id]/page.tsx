@@ -80,7 +80,13 @@ export default async function EditPropertyPage({
         <SaveStatusBanner justCreated={searchParams.created === "1"} backupStatus={backupStatus} />
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[1.4fr_1fr]">
+      {/* Details and Images each get the full page width, stacked, rather
+          than sitting side-by-side in a narrow column split — a two-column
+          layout let the Images gallery squeeze the Details form into a
+          cramped column (and risked horizontal overflow on smaller
+          desktop/tablet widths). Stacking is simple, robust, and keeps
+          both sections comfortably usable at any viewport. */}
+      <div className="mt-6 space-y-6">
         <AdminCard title="Details">
           <PropertyForm
             action={updateProperty.bind(null, property.id)}
@@ -126,122 +132,131 @@ export default async function EditPropertyPage({
           />
         </AdminCard>
 
-        <div className="space-y-6">
-          <AdminCard title="Images" description="Upload files or add by URL, set the cover, and reorder.">
-            <PropertyImageUpload propertyId={property.id} />
-            <ul className="space-y-2">
-              {images.map((image, index) => (
-                <li
-                  key={image.id}
-                  className="flex items-center gap-3 rounded border border-line-soft p-2"
-                >
+        <AdminCard title="Images" description="Upload files or add by URL, set the cover, and reorder.">
+          <PropertyImageUpload propertyId={property.id} />
+          <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            {images.map((image, index) => (
+              <li key={image.id} className="group relative overflow-hidden rounded-lg border border-line-soft">
+                <div className="relative aspect-[4/3] w-full bg-line-soft/40">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={image.url}
-                    alt=""
-                    className="h-12 w-16 shrink-0 rounded object-cover"
-                  />
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate text-xs text-ink-soft">{image.url}</p>
-                    {image.is_cover && (
-                      <span className="text-xs font-medium text-moss-700">Cover image</span>
-                    )}
-                  </div>
-                  <div className="flex shrink-0 items-center gap-1">
-                    <form action={moveImage.bind(null, property.id, image.id, "up")}>
-                      <button
-                        type="submit"
-                        disabled={index === 0}
-                        className="rounded p-1.5 text-ink-faint hover:bg-line-soft disabled:opacity-30"
-                        aria-label="Move up"
-                      >
-                        <ArrowUp size={14} />
-                      </button>
-                    </form>
-                    <form action={moveImage.bind(null, property.id, image.id, "down")}>
-                      <button
-                        type="submit"
-                        disabled={index === images.length - 1}
-                        className="rounded p-1.5 text-ink-faint hover:bg-line-soft disabled:opacity-30"
-                        aria-label="Move down"
-                      >
-                        <ArrowDown size={14} />
-                      </button>
-                    </form>
-                    {!image.is_cover && (
-                      <form action={setCoverImage.bind(null, image.id, property.id)}>
+                  <img src={image.url} alt="" className="h-full w-full object-cover" />
+
+                  {image.is_cover && (
+                    <span className="absolute left-2 top-2 z-10 flex items-center gap-1 rounded-full bg-moss-600 px-2.5 py-1 text-xs font-semibold text-white shadow">
+                      <Star size={12} className="fill-current" /> Cover
+                    </span>
+                  )}
+
+                  {/*
+                    Action layer: on desktop (sm:+) it is hidden until the
+                    card is hovered or focused, per the "hover to reveal
+                    an explicit Set as Cover action" requirement. Below
+                    that breakpoint there is no hover, so it is visible by
+                    default -- the touch/mobile case gets the same "Set as
+                    Cover" button directly in the card's action area.
+                  */}
+                  <div className="absolute inset-0 flex flex-col justify-between bg-gradient-to-t from-black/70 via-black/10 to-transparent p-2 opacity-100 transition-opacity sm:opacity-0 sm:group-hover:opacity-100 sm:group-focus-within:opacity-100">
+                    <div className="flex items-center justify-end gap-1">
+                      <form action={moveImage.bind(null, property.id, image.id, "up")}>
                         <button
                           type="submit"
-                          className="rounded p-1.5 text-ink-faint hover:bg-line-soft"
-                          aria-label="Set as cover"
+                          disabled={index === 0}
+                          className="rounded bg-white/90 p-1.5 text-ink-soft shadow hover:bg-white disabled:opacity-30"
+                          aria-label="Move up"
                         >
-                          <Star size={14} />
+                          <ArrowUp size={14} />
                         </button>
                       </form>
-                    )}
-                    <form action={removePropertyImage.bind(null, image.id, property.id)}>
-                      <button
-                        type="submit"
-                        className="rounded p-1.5 text-red-400 hover:bg-red-50"
-                        aria-label="Remove image"
-                      >
-                        <Trash2 size={14} />
-                      </button>
-                    </form>
+                      <form action={moveImage.bind(null, property.id, image.id, "down")}>
+                        <button
+                          type="submit"
+                          disabled={index === images.length - 1}
+                          className="rounded bg-white/90 p-1.5 text-ink-soft shadow hover:bg-white disabled:opacity-30"
+                          aria-label="Move down"
+                        >
+                          <ArrowDown size={14} />
+                        </button>
+                      </form>
+                      <form action={removePropertyImage.bind(null, image.id, property.id)}>
+                        <button
+                          type="submit"
+                          className="rounded bg-white/90 p-1.5 text-red-500 shadow hover:bg-white"
+                          aria-label="Remove image"
+                        >
+                          <Trash2 size={14} />
+                        </button>
+                      </form>
+                    </div>
+
+                    <div>
+                      {image.is_cover ? (
+                        <span className="inline-flex items-center gap-1 rounded bg-white/90 px-2.5 py-1.5 text-xs font-semibold text-moss-700 shadow">
+                          <Star size={12} className="fill-current" /> Cover
+                        </span>
+                      ) : (
+                        <form action={setCoverImage.bind(null, image.id, property.id)}>
+                          <button
+                            type="submit"
+                            className="rounded bg-white px-2.5 py-1.5 text-xs font-semibold text-ink shadow hover:bg-moss-50"
+                          >
+                            Set as Cover
+                          </button>
+                        </form>
+                      )}
+                    </div>
                   </div>
-                </li>
-              ))}
-              {images.length === 0 && (
-                <p className="text-sm text-ink-faint">No images yet.</p>
-              )}
-            </ul>
+                </div>
+                <p className="truncate px-2 py-1.5 text-[11px] text-ink-faint">{image.url}</p>
+              </li>
+            ))}
+          </ul>
+          {images.length === 0 && <p className="text-sm text-ink-faint">No images yet.</p>}
 
-            <p className="mt-3 text-xs font-medium text-ink-soft">Or add by URL</p>
-            <form action={addPropertyImage.bind(null, property.id)} className="mt-1.5 flex gap-2">
-              <input
-                type="url"
-                name="url"
-                required
-                placeholder="https://..."
-                className="w-full rounded border border-line bg-surface px-3 py-2 text-sm text-ink placeholder:text-ink-faint focus:border-moss-500 focus:outline-none focus:ring-2 focus:ring-moss-500/30"
-              />
-              <button
-                type="submit"
-                className="shrink-0 rounded bg-moss-600 px-3 py-2 text-sm font-medium text-white hover:bg-moss-700"
-              >
-                Add
-              </button>
-            </form>
-          </AdminCard>
+          <p className="mt-3 text-xs font-medium text-ink-soft">Or add by URL</p>
+          <form action={addPropertyImage.bind(null, property.id)} className="mt-1.5 flex gap-2">
+            <input
+              type="url"
+              name="url"
+              required
+              placeholder="https://..."
+              className="w-full rounded border border-line bg-surface px-3 py-2 text-sm text-ink placeholder:text-ink-faint focus:border-moss-500 focus:outline-none focus:ring-2 focus:ring-moss-500/30"
+            />
+            <button
+              type="submit"
+              className="shrink-0 rounded bg-moss-600 px-3 py-2 text-sm font-medium text-white hover:bg-moss-700"
+            >
+              Add
+            </button>
+          </form>
+        </AdminCard>
 
-          <AdminCard title="Amenities">
-            <div className="flex flex-wrap gap-2">
-              {amenities.map((amenity) => {
-                const active = selectedAmenityIds.has(amenity.id);
-                return (
-                  <form
-                    key={amenity.id}
-                    action={toggleAmenity.bind(null, property.id, amenity.id, !active)}
+        <AdminCard title="Amenities">
+          <div className="flex flex-wrap gap-2">
+            {amenities.map((amenity) => {
+              const active = selectedAmenityIds.has(amenity.id);
+              return (
+                <form
+                  key={amenity.id}
+                  action={toggleAmenity.bind(null, property.id, amenity.id, !active)}
+                >
+                  <button
+                    type="submit"
+                    className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+                      active
+                        ? "border-moss-600 bg-moss-600 text-white"
+                        : "border-line text-ink-soft hover:border-moss-400"
+                    }`}
                   >
-                    <button
-                      type="submit"
-                      className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
-                        active
-                          ? "border-moss-600 bg-moss-600 text-white"
-                          : "border-line text-ink-soft hover:border-moss-400"
-                      }`}
-                    >
-                      {amenity.name}
-                    </button>
-                  </form>
-                );
-              })}
-              {amenities.length === 0 && (
-                <p className="text-sm text-ink-faint">No amenities defined yet.</p>
-              )}
-            </div>
-          </AdminCard>
-        </div>
+                    {amenity.name}
+                  </button>
+                </form>
+              );
+            })}
+            {amenities.length === 0 && (
+              <p className="text-sm text-ink-faint">No amenities defined yet.</p>
+            )}
+          </div>
+        </AdminCard>
       </div>
     </div>
   );
