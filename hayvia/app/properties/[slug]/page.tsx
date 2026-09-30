@@ -87,7 +87,7 @@ export default async function PropertyDetailPage({
                 )}
                 <FloodStatusBadge status={property.floodStatus} />
               </div>
-              {(property.floodStatus === "SAFE" || property.floodStatus === "RISK") && (
+              {property.floodStatus === "SAFE" && (
                 <p className="mt-1.5 max-w-md text-xs text-ink-faint">
                   Flood status is an admin-set classification based on property records — not a
                   government certification or guarantee.
