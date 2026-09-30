@@ -12,6 +12,7 @@
 // -----------------------------------------------------------------------------
 
 import { districts, propertyTypes, type District, type PropertyType } from "@/data/properties";
+import { PROVINCES } from "@/lib/locations/province-amphoe";
 
 export const budgetOptions = [
   { label: "Any budget", min: 0, max: Infinity },
@@ -38,9 +39,16 @@ export type SortOption = (typeof sortOptions)[number];
 export const listingTypeOptions = ["Any", "Rent", "Sale"] as const;
 export type ListingTypeOption = (typeof listingTypeOptions)[number];
 
+// "Any province" plus the two V1 target provinces -- deliberately separate
+// from `districts`/`District` above (the existing Hat Yai neighborhood
+// filter, which lib/matching/* also depends on and is left untouched).
+export const provinceOptions = ["Any province", ...PROVINCES] as const;
+export type ProvinceOption = (typeof provinceOptions)[number];
+
 export const defaultFilters = {
   listingType: "Any" as ListingTypeOption,
   location: "Any location",
+  province: "Any province" as ProvinceOption,
   propertyType: "Any type",
   budget: budgetOptions[0].label,
   bedrooms: "Any",
@@ -57,6 +65,7 @@ export type PropertiesFilters = typeof defaultFilters;
 export interface PropertiesSearchParams {
   listingType?: string;
   location?: string;
+  province?: string;
   type?: string;
   budget?: string;
   bedrooms?: string;
@@ -84,6 +93,10 @@ export function resolveInitialFilters(
     ? (searchParams.location as District)
     : defaultFilters.location;
 
+  const province = provinceOptions.includes(searchParams.province as ProvinceOption)
+    ? (searchParams.province as ProvinceOption)
+    : defaultFilters.province;
+
   const propertyType = propertyTypes.includes(searchParams.type as PropertyType)
     ? (searchParams.type as PropertyType)
     : defaultFilters.propertyType;
@@ -96,5 +109,5 @@ export function resolveInitialFilters(
     ? (searchParams.bedrooms as string)
     : defaultFilters.bedrooms;
 
-  return { ...defaultFilters, listingType, location, propertyType, budget, bedrooms };
+  return { ...defaultFilters, listingType, location, province, propertyType, budget, bedrooms };
 }

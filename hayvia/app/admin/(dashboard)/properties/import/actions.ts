@@ -118,6 +118,10 @@ async function createDraftProperty(params: {
       city,
       district: extraction.district?.trim() || null,
       subdistrict: extraction.subdistrict?.trim() || null,
+      // Always UNKNOWN, never taken from the AI's output -- its extraction
+      // schema has no flood-related key at all (see lib/ai/property-import.ts).
+      // A human admin decides SAFE/RISK later, on the edit page.
+      flood_status: "UNKNOWN",
       bedrooms: numOrNull(extraction.bedrooms),
       bathrooms: numOrNull(extraction.bathrooms),
       size_sqm: numOrNull(extraction.size_sqm),

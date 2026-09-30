@@ -115,6 +115,7 @@ export default async function EditPropertyPage({
               district: property.district ?? "",
               subdistrict: property.subdistrict ?? "",
               google_maps_url: property.google_maps_url ?? "",
+              flood_status: property.flood_status ?? "UNKNOWN",
               verified: property.verified,
               featured: property.featured,
               price_reduced: property.price_reduced,

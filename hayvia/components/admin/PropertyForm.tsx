@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { useFormState } from "react-dom";
 import { FieldWrapper, TextInput, TextArea, Select } from "@/components/ui/FormField";
 import SubmitButton from "@/components/auth/SubmitButton";
 import FormMessage from "@/components/auth/FormMessage";
+import { PROVINCES, PROVINCE_AMPHOE, isKnownProvince } from "@/lib/locations/province-amphoe";
 import type { PropertyActionState } from "@/app/admin/(dashboard)/properties/actions";
 
 export interface PropertyFormValues {
@@ -31,6 +33,7 @@ export interface PropertyFormValues {
   district: string;
   subdistrict: string;
   google_maps_url: string;
+  flood_status: string;
   verified: boolean;
   featured: boolean;
   price_reduced: boolean;
@@ -68,6 +71,7 @@ const emptyValues: PropertyFormValues = {
   district: "",
   subdistrict: "",
   google_maps_url: "",
+  flood_status: "UNKNOWN",
   verified: false,
   featured: false,
   price_reduced: false,
@@ -107,6 +111,28 @@ export default function PropertyForm({
 }) {
   const [state, formAction] = useFormState(action, null);
   const values = { ...emptyValues, ...initial };
+
+  // province/city ("Amphoe") are a dependent pair, so unlike every other
+  // field in this form (all uncontrolled, via defaultValue) these two need
+  // controlled state to re-derive the Amphoe option list when province
+  // changes. A historical value outside the known province/Amphoe lists is
+  // preserved exactly as-is (never silently cleared or rewritten) -- it
+  // just falls back to a plain text input (province) or gets added as an
+  // extra selectable option (city), so opening an existing property never
+  // changes what's stored, only actively picking a new province can.
+  const [province, setProvince] = useState(values.province);
+  const [city, setCity] = useState(values.city);
+
+  const amphoeOptions = isKnownProvince(province) ? PROVINCE_AMPHOE[province] : [];
+  const cityOptions = city && !amphoeOptions.includes(city) ? [city, ...amphoeOptions] : amphoeOptions;
+
+  function handleProvinceChange(next: string) {
+    setProvince(next);
+    const nextAmphoe = isKnownProvince(next) ? PROVINCE_AMPHOE[next] : [];
+    if (!nextAmphoe.includes(city)) {
+      setCity("");
+    }
+  }
 
   return (
     <form action={formAction} className="space-y-8">
@@ -236,16 +262,64 @@ export default function PropertyForm({
           <FieldWrapper label="Country" htmlFor="country" required>
             <TextInput id="country" name="country" defaultValue={values.country} required />
           </FieldWrapper>
-          <FieldWrapper label="Province" htmlFor="province" required>
-            <TextInput id="province" name="province" defaultValue={values.province} required />
+          <FieldWrapper label="Province (จังหวัด)" htmlFor="province" required>
+            {isKnownProvince(province) ? (
+              <Select
+                id="province"
+                name="province"
+                value={province}
+                onChange={(e) => handleProvinceChange(e.target.value)}
+                required
+              >
+                {PROVINCES.map((p) => (
+                  <option key={p} value={p}>
+                    {p}
+                  </option>
+                ))}
+              </Select>
+            ) : (
+              // A province outside the two V1 targets (Songkhla/Phuket) --
+              // e.g. historical data. Kept editable as free text under the
+              // same "province" field name rather than forced into the
+              // dropdown or silently changed.
+              <TextInput
+                id="province"
+                name="province"
+                value={province}
+                onChange={(e) => handleProvinceChange(e.target.value)}
+                required
+              />
+            )}
           </FieldWrapper>
-          <FieldWrapper label="City" htmlFor="city" required>
-            <TextInput id="city" name="city" defaultValue={values.city} required />
+          <FieldWrapper
+            label="Amphoe (อำเภอ)"
+            htmlFor="city"
+            required
+            hint="Populated from the selected province's district (Amphoe) list."
+          >
+            <Select
+              id="city"
+              name="city"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              required
+            >
+              <option value="">— Select —</option>
+              {cityOptions.map((c) => (
+                <option key={c} value={c}>
+                  {c}
+                </option>
+              ))}
+            </Select>
           </FieldWrapper>
-          <FieldWrapper label="District / Area" htmlFor="district">
+          <FieldWrapper
+            label="Area / Neighborhood (พื้นที่ / ย่าน)"
+            htmlFor="district"
+            hint="Free text -- e.g. a neighborhood or sub-area, not an administrative division."
+          >
             <TextInput id="district" name="district" defaultValue={values.district} />
           </FieldWrapper>
-          <FieldWrapper label="Subdistrict" htmlFor="subdistrict">
+          <FieldWrapper label="Subdistrict (ตำบล)" htmlFor="subdistrict">
             <TextInput id="subdistrict" name="subdistrict" defaultValue={values.subdistrict} />
           </FieldWrapper>
           <FieldWrapper label="Google Maps URL" htmlFor="google_maps_url" className="sm:col-span-3">
@@ -256,6 +330,17 @@ export default function PropertyForm({
               defaultValue={values.google_maps_url}
               placeholder="https://www.google.com/maps/..."
             />
+          </FieldWrapper>
+          <FieldWrapper
+            label="Flood Status"
+            htmlFor="flood_status"
+            hint="Set only by an admin -- never inferred from location or listing text, and never set by AI Import."
+          >
+            <Select id="flood_status" name="flood_status" defaultValue={values.flood_status}>
+              <option value="UNKNOWN">Unknown</option>
+              <option value="SAFE">Safe</option>
+              <option value="RISK">Risk</option>
+            </Select>
           </FieldWrapper>
         </div>
       </section>

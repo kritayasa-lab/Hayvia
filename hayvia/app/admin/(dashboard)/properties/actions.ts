@@ -99,6 +99,7 @@ function buildPropertyRow(formData: FormData) {
     district: optionalString(formData, "district"),
     subdistrict: optionalString(formData, "subdistrict"),
     google_maps_url: optionalString(formData, "google_maps_url"),
+    flood_status: requireString(formData, "flood_status") || "UNKNOWN",
     verified: formData.get("verified") === "on",
     featured: formData.get("featured") === "on",
     price_reduced: formData.get("price_reduced") === "on",

@@ -2,13 +2,14 @@
 
 import { useMemo, useState } from "react";
 import { SlidersHorizontal, X } from "lucide-react";
-import type { Property } from "@/data/properties";
 import { districts, getListingType, propertyTypes } from "@/data/properties";
+import type { PropertyWithLocation } from "@/lib/properties-source";
 import {
   bathroomOptions,
   bedroomOptions,
   budgetOptions,
   defaultFilters,
+  provinceOptions,
   sortOptions,
   type PropertiesFilters,
   type SortOption,
@@ -21,7 +22,7 @@ export default function PropertiesExplorer({
   properties,
   initialFilters,
 }: {
-  properties: Property[];
+  properties: PropertyWithLocation[];
   initialFilters?: PropertiesFilters;
 }) {
   const [filters, setFilters] = useState(initialFilters ?? defaultFilters);
@@ -44,6 +45,7 @@ export default function PropertiesExplorer({
       if (filters.listingType !== "Any" && getListingType(p) !== filters.listingType.toLowerCase())
         return false;
       if (filters.location !== "Any location" && p.district !== filters.location) return false;
+      if (filters.province !== "Any province" && p.provinceName !== filters.province) return false;
       if (filters.propertyType !== "Any type" && p.propertyType !== filters.propertyType)
         return false;
       if (p.price < budget.min || p.price > budget.max) return false;
@@ -163,6 +165,17 @@ export default function PropertiesExplorer({
           )}
 
           <div className="space-y-6 rounded border border-seashell bg-white p-5">
+            <FilterField label="Province">
+              <Select
+                value={filters.province}
+                onChange={(e) => updateFilter("province", e.target.value)}
+              >
+                {provinceOptions.map((p) => (
+                  <option key={p}>{p}</option>
+                ))}
+              </Select>
+            </FilterField>
+
             <FilterField label="Location">
               <Select
                 value={filters.location}
