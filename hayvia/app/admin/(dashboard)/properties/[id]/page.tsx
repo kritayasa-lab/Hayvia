@@ -6,6 +6,7 @@ import { fetchOwners, fetchAgents } from "@/lib/admin/people";
 import PropertyForm from "@/components/admin/PropertyForm";
 import AdminCard from "@/components/admin/AdminCard";
 import SaveStatusBanner from "@/components/admin/SaveStatusBanner";
+import PropertyImageUpload from "@/components/admin/PropertyImageUpload";
 import {
   updateProperty,
   addPropertyImage,
@@ -126,7 +127,8 @@ export default async function EditPropertyPage({
         </AdminCard>
 
         <div className="space-y-6">
-          <AdminCard title="Images" description="Add by URL, set the cover, and reorder.">
+          <AdminCard title="Images" description="Upload files or add by URL, set the cover, and reorder.">
+            <PropertyImageUpload propertyId={property.id} />
             <ul className="space-y-2">
               {images.map((image, index) => (
                 <li
@@ -194,7 +196,8 @@ export default async function EditPropertyPage({
               )}
             </ul>
 
-            <form action={addPropertyImage.bind(null, property.id)} className="mt-3 flex gap-2">
+            <p className="mt-3 text-xs font-medium text-ink-soft">Or add by URL</p>
+            <form action={addPropertyImage.bind(null, property.id)} className="mt-1.5 flex gap-2">
               <input
                 type="url"
                 name="url"
