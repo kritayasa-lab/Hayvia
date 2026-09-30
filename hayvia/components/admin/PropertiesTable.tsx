@@ -88,20 +88,27 @@ export default function PropertiesTable({
               rows.map((property) => (
                 <tr key={property.id} className="hover:bg-line-soft/30">
                   <td className="px-4 py-3">
-                    <Link
+                    {/* Plain anchor, not next/link — always does a full
+                        browser navigation into the property edit page,
+                        bypassing the App Router's client Router Cache.
+                        That cache can otherwise serve a stale RSC snapshot
+                        of this property from before an admin's last edit
+                        when they reopen it from this list. Same fix as
+                        AdminShell.tsx's sidebar nav. */}
+                    <a
                       href={`/admin/properties/${property.id}`}
                       className="font-mono text-xs font-medium text-ink-soft hover:text-moss-700 hover:underline"
                     >
                       {property.property_code}
-                    </Link>
+                    </a>
                   </td>
                   <td className="px-4 py-3">
-                    <Link
+                    <a
                       href={`/admin/properties/${property.id}`}
                       className="font-medium text-ink hover:text-moss-700 hover:underline"
                     >
                       {property.title}
-                    </Link>
+                    </a>
                     <p className="text-xs text-ink-faint">{property.property_type}</p>
                   </td>
                   {showTypeColumn && (

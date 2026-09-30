@@ -78,12 +78,15 @@ export default async function SellerLeadDetailPage({ params }: { params: { id: s
           <p className="mt-1 text-sm text-ink-faint">Submitted {formatDate(sellerLead.created_at)}</p>
         </div>
         {convertedProperty ? (
-          <Link
+          // Plain anchor, not next/link — forces a full navigation so the
+          // property edit page always reads fresh DB values instead of a
+          // stale Router Cache snapshot (see PropertiesTable.tsx).
+          <a
             href={`/admin/properties/${convertedProperty.id}`}
             className="inline-flex items-center justify-center rounded bg-moss-600 px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
             Converted &rarr; View Property ({convertedProperty.property_code})
-          </Link>
+          </a>
         ) : (
           APPROVABLE_STATUSES.has(sellerLead.status) && (
             <Link
