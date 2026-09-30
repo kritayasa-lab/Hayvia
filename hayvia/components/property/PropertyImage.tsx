@@ -7,11 +7,12 @@ import { cn } from "@/lib/utils";
 
 // Mirrors next.config.js's images.remotePatterns exactly. next/image throws
 // a hard render error for any hostname not in that allowlist, and property
-// photos can now come from arbitrary AI-imported source URLs (see
-// lib/admin/property-import-fetch.ts) that will never all be individually
-// allowlisted. Widening remotePatterns to a wildcard would reopen that
-// allowlist as a safety net for the whole app just to fix property photos
-// specifically, so instead this component falls back to a plain <img> for
+// photos can come from arbitrary external URLs an admin adds (via the
+// "Add Image by URL" control on a property's edit page) that will never
+// all be individually allowlisted. Widening remotePatterns to a wildcard
+// would reopen that allowlist as a safety net for the whole app just to
+// fix property photos specifically, so instead this component falls back
+// to a plain <img> for
 // exactly the hosts next/image can't safely optimize. That trades away
 // next/image's automatic resizing/format-conversion for arbitrary external
 // photos only — every other next/image use in the app (site-controlled
