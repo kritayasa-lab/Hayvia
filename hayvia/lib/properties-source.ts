@@ -324,6 +324,30 @@ function mapSupabaseRowToProperty(
 }
 
 /**
+ * Orders one property's images so the admin's explicit "Set as Cover"
+ * choice (property_images.is_cover) is always images[0] — the field every
+ * public rendering path (PropertyCard, the detail page's ImageGallery and
+ * generateMetadata) already treats as "the" primary image. Previously
+ * images[0] was always whichever image had the lowest sort_order,
+ * ignoring is_cover entirely — see PR #37's audit finding.
+ *
+ * - A property with a cover: that image moves to the front; every other
+ *   image keeps its existing relative sort_order among themselves.
+ * - A property with no is_cover row at all (nothing has ever explicitly
+ *   set one): returned completely unchanged, in plain sort_order order —
+ *   the exact original behavior, preserved for every property that
+ *   predates "Set as Cover" ever being used.
+ *
+ * Exported only for direct testing (this module otherwise only exposes
+ * getProperties() and the small lookup helpers below it).
+ */
+export function orderImagesByCover(images: { url: string; is_cover: boolean }[]): string[] {
+  const cover = images.find((image) => image.is_cover);
+  if (!cover) return images.map((image) => image.url);
+  return [cover.url, ...images.filter((image) => !image.is_cover).map((image) => image.url)];
+}
+
+/**
  * Reads every publicly-visible property directly from Supabase
  * (public_properties + property_images + property_amenities, via the
  * anon-key client — never service-role). Returns an empty array (not a
@@ -341,17 +365,24 @@ async function fetchPropertiesFromSupabase(): Promise<Property[]> {
     const [{ data: imageRows }, { data: amenityRows }] = await Promise.all([
       supabase
         .from("property_images")
-        .select("property_id, url, sort_order")
+        .select("property_id, url, sort_order, is_cover")
         .in("property_id", ids)
         .order("sort_order", { ascending: true }),
       supabase.from("property_amenities").select("property_id, amenities(name)").in("property_id", ids),
     ]);
 
-    const imagesByProperty = new Map<string, string[]>();
+    // Grouped in sort_order order first (unchanged from before) so
+    // orderImagesByCover() below has a stable base to work from.
+    const imageRowsByProperty = new Map<string, { url: string; is_cover: boolean }[]>();
     for (const image of imageRows ?? []) {
-      const list = imagesByProperty.get(image.property_id) ?? [];
-      list.push(image.url);
-      imagesByProperty.set(image.property_id, list);
+      const list = imageRowsByProperty.get(image.property_id) ?? [];
+      list.push({ url: image.url, is_cover: image.is_cover });
+      imageRowsByProperty.set(image.property_id, list);
+    }
+
+    const imagesByProperty = new Map<string, string[]>();
+    for (const [propertyId, list] of imageRowsByProperty) {
+      imagesByProperty.set(propertyId, orderImagesByCover(list));
     }
 
     const amenitiesByProperty = new Map<string, string[]>();
