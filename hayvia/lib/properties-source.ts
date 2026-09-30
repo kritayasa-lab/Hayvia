@@ -39,6 +39,19 @@ import { createClient } from "@/lib/supabase/server";
 
 export type PropertiesSource = "supabase" | "fallback";
 
+// Additive-only extension of data/properties.ts's `Property` type, kept
+// local to this file rather than added to data/properties.ts itself (that
+// file's existing `Property`/`District`/`districts` exports are left
+// untouched -- lib/matching/* and app/api/match/route.ts depend on them
+// for an unrelated purpose and must not be affected, even indirectly).
+// provinceName/cityName are both optional so the hardcoded demoProperties
+// fallback (plain `Property[]`, no location fields) satisfies this type
+// with no changes needed there either.
+export type PropertyWithLocation = Property & {
+  provinceName?: string;
+  cityName?: string;
+};
+
 interface RawSheetRow {
   [header: string]: unknown;
 }
@@ -278,6 +291,8 @@ interface SupabasePropertyRow {
   available_date: string | null;
   minimum_rental: string | null;
   deposit: string | null;
+  province: string | null;
+  city: string | null;
   district: string | null;
   location: string | null;
   google_maps_url: string | null;
@@ -291,7 +306,7 @@ function mapSupabaseRowToProperty(
   row: SupabasePropertyRow,
   images: string[],
   amenities: string[]
-): Property {
+): PropertyWithLocation {
   return {
     id: row.external_ref || row.id,
     supabaseId: row.id,
@@ -299,6 +314,8 @@ function mapSupabaseRowToProperty(
     title: row.title,
     location: row.location || row.district || "Hat Yai",
     district: (row.district || "Central Hat Yai") as Property["district"],
+    provinceName: row.province || undefined,
+    cityName: row.city || undefined,
     price: row.price,
     propertyType: supabasePropertyTypeMap[row.property_type] ?? "Condo",
     bedrooms: row.bedrooms ?? 0,
@@ -354,7 +371,7 @@ export function orderImagesByCover(images: { url: string; is_cover: boolean }[])
  * throw) on any failure or when there simply are no properties yet, so
  * `getProperties()` below can fall through to Sheets cleanly either way.
  */
-async function fetchPropertiesFromSupabase(): Promise<Property[]> {
+async function fetchPropertiesFromSupabase(): Promise<PropertyWithLocation[]> {
   try {
     const supabase = createClient();
     const { data: rows, error } = await supabase.from("public_properties").select("*");
@@ -423,7 +440,7 @@ async function fetchPropertiesFromSupabase(): Promise<Property[]> {
  *      a broken/blank page. This does NOT fall back to Google Sheets.
  */
 export const getProperties = cache(async (): Promise<{
-  properties: Property[];
+  properties: PropertyWithLocation[];
   source: PropertiesSource;
 }> => {
   const supabaseProperties = await fetchPropertiesFromSupabase();
