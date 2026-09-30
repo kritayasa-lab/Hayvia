@@ -349,6 +349,7 @@ export default function PropertyForm({
               max={90}
               defaultValue={values.latitude}
               placeholder="e.g. 7.0084"
+              autoComplete="off"
             />
           </FieldWrapper>
           <FieldWrapper label="Longitude" htmlFor="longitude">
@@ -361,6 +362,7 @@ export default function PropertyForm({
               max={180}
               defaultValue={values.longitude}
               placeholder="e.g. 100.4747"
+              autoComplete="off"
             />
           </FieldWrapper>
           <FieldWrapper
