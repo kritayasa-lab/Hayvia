@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import PropertyImage from "@/components/property/PropertyImage";
 import { cn } from "@/lib/utils";
 
 export default function ImageGallery({
@@ -16,7 +16,7 @@ export default function ImageGallery({
   return (
     <div>
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded border border-seashell bg-line-soft sm:aspect-[16/10]">
-        <Image
+        <PropertyImage
           src={images[active]}
           alt={`${title} — photo ${active + 1}`}
           fill
@@ -39,7 +39,7 @@ export default function ImageGallery({
                 active === index ? "border-matcha-mist" : "border-seashell hover:border-ink/30"
               )}
             >
-              <Image src={image} alt="" fill sizes="120px" className="object-cover" />
+              <PropertyImage src={image} alt="" fill sizes="120px" className="object-cover" />
             </button>
           ))}
         </div>

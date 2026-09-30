@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Plus, Search } from "lucide-react";
+import { Plus, Search, Sparkles } from "lucide-react";
 import Badge from "@/components/ui/Badge";
 import { formatPrice } from "@/lib/utils";
 import type { AdminPropertyRow } from "@/lib/admin/properties";
@@ -47,12 +47,20 @@ export default function PropertiesTable({
             Search
           </button>
         </form>
-        <Link
-          href="/admin/properties/new"
-          className="flex items-center gap-1.5 rounded bg-moss-600 px-4 py-2 text-sm font-medium text-white hover:bg-moss-700"
-        >
-          <Plus size={15} /> New Property
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link
+            href="/admin/properties/import"
+            className="flex items-center gap-1.5 rounded border border-line px-4 py-2 text-sm font-medium text-ink-soft hover:border-ink/20 hover:text-ink"
+          >
+            <Sparkles size={15} /> Import from URL
+          </Link>
+          <Link
+            href="/admin/properties/new"
+            className="flex items-center gap-1.5 rounded bg-moss-600 px-4 py-2 text-sm font-medium text-white hover:bg-moss-700"
+          >
+            <Plus size={15} /> New Property
+          </Link>
+        </div>
       </div>
 
       <div className="mt-4 overflow-x-auto rounded-lg border border-line">
