@@ -14,6 +14,23 @@ function requireString(formData: FormData, key: string): string {
   return String(formData.get(key) || "").trim();
 }
 
+// A submitted image URL ending in a normal image extension is trusted at
+// face value — this is deliberately not a real "is this actually an image"
+// check (no fetch, no content-type sniff: AI Property Import never fetches
+// anything, and this repo has no image-processing infra to add just for a
+// HEAD-request check). It exists only to distinguish an ordinary photo
+// link from a bare listing-page link (e.g. a Facebook share URL) for the
+// guard below. .pathname is already query-string/fragment-free.
+const IMAGE_EXTENSION_PATTERN = /\.(jpe?g|png|gif|webp|avif|bmp|svg)$/i;
+
+function looksLikeImageUrl(url: string): boolean {
+  try {
+    return IMAGE_EXTENSION_PATTERN.test(new URL(url).pathname);
+  } catch {
+    return false;
+  }
+}
+
 /**
  * Best-effort Supabase -> Sheets backup after an admin create/edit. Never
  * throws (backupPropertyToSheets already catches everything internally and
@@ -216,6 +233,22 @@ export async function addPropertyImage(propertyId: string, formData: FormData) {
   if (!url) redirect(`/admin/properties/${propertyId}?imageError=1`);
 
   const supabase = createAdminClient();
+
+  // Guards against the exact bug seen in Production: an AI-imported
+  // property's `source_url` (the listing page itself — e.g. a Facebook
+  // share link, never an image) is visible in the "Source URL" field on
+  // this same edit page and was mistakenly pasted here too, which this
+  // form had no way to catch. Only blocks an EXACT match with no
+  // recognizable image extension — a source_url that genuinely is a direct
+  // image link is still allowed through.
+  const { data: property } = await supabase
+    .from("properties")
+    .select("source_url")
+    .eq("id", propertyId)
+    .maybeSingle();
+  if (property?.source_url && url === property.source_url && !looksLikeImageUrl(url)) {
+    redirect(`/admin/properties/${propertyId}?imageError=source_url`);
+  }
 
   const { count } = await supabase
     .from("property_images")
