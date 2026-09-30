@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
 import { BedDouble, Bath, Ruler, Car, ShieldCheck, Sparkles } from "lucide-react";
 import { getListingType, type Property } from "@/data/properties";
 import { formatPrice, formatDate } from "@/lib/utils";
 import Badge from "@/components/ui/Badge";
+import PropertyImage from "@/components/property/PropertyImage";
 
 export default function PropertyCard({ property }: { property: Property }) {
   const bedroomLabel = property.bedrooms === 0 ? "Studio" : `${property.bedrooms} bed`;
@@ -15,7 +15,7 @@ export default function PropertyCard({ property }: { property: Property }) {
       className="group flex h-full flex-col overflow-hidden rounded border border-seashell bg-white shadow-card transition-shadow hover:shadow-lg"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-line-soft">
-        <Image
+        <PropertyImage
           src={property.images[0]}
           alt={property.title}
           fill
