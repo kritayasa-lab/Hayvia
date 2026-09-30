@@ -2,15 +2,17 @@
 // AI Property Import — provider layer
 // -----------------------------------------------------------------------------
 // The ONLY file in the Property CMS that knows anything about a specific AI
-// provider. Everything else (the import server action, the fetch/HTML
-// extraction step) calls extractPropertyFromContent() and only ever sees the
-// provider-agnostic PropertyExtractionResult shape below — swapping
-// providers means changing this one file, nothing else in app/admin or
-// lib/admin. Previously OpenAI; now Google Gemini (gemini-3.5-flash-lite),
-// switched because the OpenAI account has no Production credits. There is
-// no multi-provider abstraction — this file talks to exactly one provider
-// via a plain REST call (no SDK dependency added for this), one model, one
-// call per import.
+// provider. Everything else (the import server action) calls
+// extractPropertyFromContent() and only ever sees the provider-agnostic
+// PropertyExtractionResult shape below — swapping providers means changing
+// this one file, nothing else in app/admin. Google Gemini
+// (gemini-3.5-flash-lite), via a plain REST call (no SDK dependency), one
+// provider, one call per import.
+//
+// TEXT ONLY. Property Import V1 reads the admin's pasted listing text —
+// there is no image/screenshot input anywhere in this file. A pasted
+// source URL is stored only as provenance by the caller and is never sent
+// to this function at all.
 // -----------------------------------------------------------------------------
 
 import { z } from "zod";
@@ -45,8 +47,8 @@ const PropertyExtractionSchema = z.object({
 export type PropertyExtractionResult = z.infer<typeof PropertyExtractionSchema>;
 
 // Exported for verification only (asserting the schema has no status/
-// flood_status escape hatch, and that malformed output is rejected) — not
-// used by any other application code, which only ever sees
+// flood_status/coordinate escape hatch, and that malformed output is
+// rejected) — not used by any other application code, which only ever sees
 // PropertyExtractionResult via extractPropertyFromContent().
 export { PropertyExtractionSchema };
 
@@ -107,48 +109,28 @@ export class PropertyImportAIError extends Error {
   }
 }
 
-const SYSTEM_INSTRUCTION = `You are a property-listing data extractor for a real estate company in Thailand. You will be given the visible text of a property listing (fetched from a page, pasted by an admin, or read from a screenshot). Extract ONLY property information that is explicitly present, matching the provided response schema exactly.
+const SYSTEM_INSTRUCTION = `You are a property-listing data extractor for a real estate company in Thailand. You will be given the full text of a property listing, pasted by an admin (often copied from a Facebook post or other listing site). Extract ONLY property information that is explicitly present, matching the provided response schema exactly.
 
 Rules:
 - If a field is not clearly stated in the content, output null for it. Never guess, infer, or estimate a value that isn't explicitly present.
 - Do not include a "status" field under any name — you never decide publish status.
 - Do not include any flood-safety/flood-risk field under any name, and never infer flood safety from location, description, or anything else. That is decided by a human, separately, later.
+- Do not include or infer any latitude/longitude/coordinates field under any name.
 - You are not being asked about images — never mention, generate, or suggest image URLs or image edits.
-- "price" must be a plain number (strip currency symbols/commas/words).`;
+- "price" must be a plain number (strip currency symbols/commas/words — e.g. "3.29 ล้านบาท" is 3290000).`;
 
 interface ExtractionInput {
   sourceUrl?: string;
-  text?: string;
-  imageDataUrls?: string[];
+  text: string;
 }
 
-interface GeminiInlineImagePart {
-  inlineData: { mimeType: string; data: string };
-}
-
-function dataUrlToInlinePart(dataUrl: string): GeminiInlineImagePart | null {
-  const match = /^data:([^;]+);base64,(.+)$/.exec(dataUrl);
-  if (!match) return null;
-  return { inlineData: { mimeType: match[1], data: match[2] } };
-}
-
-function buildParts(input: ExtractionInput): Array<{ text: string } | GeminiInlineImagePart> {
-  const parts: Array<{ text: string } | GeminiInlineImagePart> = [];
-
-  const header = input.sourceUrl ? `Source URL: ${input.sourceUrl}\n\n` : "";
-  const text = (input.text ?? "").slice(0, MAX_TEXT_LENGTH);
-  parts.push({
-    text: text
-      ? `${header}Listing content:\n${text}`
-      : `${header}No readable text was available — extract only from the attached image(s), if any.`,
-  });
-
-  for (const dataUrl of input.imageDataUrls ?? []) {
-    const part = dataUrlToInlinePart(dataUrl);
-    if (part) parts.push(part);
-  }
-
-  return parts;
+function buildContents(input: ExtractionInput): { role: string; parts: Array<{ text: string }> } {
+  const header = input.sourceUrl ? `Source URL (provenance only, not part of the listing): ${input.sourceUrl}\n\n` : "";
+  const text = input.text.slice(0, MAX_TEXT_LENGTH);
+  return {
+    role: "user",
+    parts: [{ text: `${header}Listing text:\n${text}` }],
+  };
 }
 
 interface GeminiGenerateContentResponse {
@@ -160,14 +142,15 @@ interface GeminiGenerateContentResponse {
 }
 
 /**
- * One AI call: takes fetched/pasted text and/or one or more uploaded
- * screenshots (buildParts() below sends every entry in imageDataUrls as its
- * own inlineData part in the SAME request — Gemini reads them together as
- * one combined source, never one call per screenshot) and returns a single
- * validated, provider-agnostic property object. Never throws a raw
- * fetch/parse error — always throws PropertyImportAIError with a code the
- * caller can turn into a clear admin-facing message, or returns a value
- * that has already passed schema validation.
+ * One AI call: takes the admin's pasted listing text (and, purely as
+ * provenance context in the prompt, an optional source URL — never
+ * fetched, never itself extracted from) and returns a single validated,
+ * provider-agnostic property object. Never throws a raw fetch/parse error
+ * — always throws PropertyImportAIError with a code the caller can turn
+ * into a clear admin-facing message, or returns a value that has already
+ * passed schema validation. The request has a hard timeout
+ * (REQUEST_TIMEOUT_MS) so the caller's UI can never be stuck waiting
+ * indefinitely.
  */
 export async function extractPropertyFromContent(
   input: ExtractionInput
@@ -180,15 +163,12 @@ export async function extractPropertyFromContent(
     );
   }
 
-  if (!input.text?.trim() && (!input.imageDataUrls || input.imageDataUrls.length === 0)) {
-    throw new PropertyImportAIError(
-      "Nothing to extract from — provide page text or a screenshot.",
-      "REQUEST_FAILED"
-    );
+  if (!input.text.trim()) {
+    throw new PropertyImportAIError("Nothing to extract from — paste the listing text.", "REQUEST_FAILED");
   }
 
   const body = {
-    contents: [{ role: "user", parts: buildParts(input) }],
+    contents: [buildContents(input)],
     systemInstruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
     generationConfig: {
       temperature: 0,
@@ -215,8 +195,11 @@ export async function extractPropertyFromContent(
       clearTimeout(timeout);
     }
   } catch (error) {
+    const timedOut = error instanceof Error && error.name === "AbortError";
     throw new PropertyImportAIError(
-      `AI extraction request failed: ${error instanceof Error ? error.message : "unknown error"}`,
+      timedOut
+        ? "AI extraction timed out. Please try again."
+        : `AI extraction request failed: ${error instanceof Error ? error.message : "unknown error"}`,
       "REQUEST_FAILED"
     );
   }
