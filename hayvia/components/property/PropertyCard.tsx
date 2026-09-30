@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { BedDouble, Bath, Ruler, Car, ShieldCheck, Sparkles } from "lucide-react";
-import { getListingType, type Property } from "@/data/properties";
+import { getListingType } from "@/data/properties";
+import type { PropertyWithLocation } from "@/lib/properties-source";
 import { formatPrice, formatDate } from "@/lib/utils";
 import Badge from "@/components/ui/Badge";
 import PropertyImage from "@/components/property/PropertyImage";
+import FloodStatusBadge from "@/components/property/FloodStatusBadge";
 
-export default function PropertyCard({ property }: { property: Property }) {
+export default function PropertyCard({ property }: { property: PropertyWithLocation }) {
   const bedroomLabel = property.bedrooms === 0 ? "Studio" : `${property.bedrooms} bed`;
   const forSale = getListingType(property) === "sale";
 
@@ -33,6 +35,7 @@ export default function PropertyCard({ property }: { property: Property }) {
               Reserved
             </Badge>
           )}
+          <FloodStatusBadge status={property.floodStatus} />
         </div>
         {property.featured && (
           <div className="absolute right-3 top-3">

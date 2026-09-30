@@ -33,6 +33,8 @@ export interface PropertyFormValues {
   district: string;
   subdistrict: string;
   google_maps_url: string;
+  latitude: number | string;
+  longitude: number | string;
   flood_status: string;
   verified: boolean;
   featured: boolean;
@@ -71,6 +73,8 @@ const emptyValues: PropertyFormValues = {
   district: "",
   subdistrict: "",
   google_maps_url: "",
+  latitude: "",
+  longitude: "",
   flood_status: "UNKNOWN",
   verified: false,
   featured: false,
@@ -329,6 +333,34 @@ export default function PropertyForm({
               type="url"
               defaultValue={values.google_maps_url}
               placeholder="https://www.google.com/maps/..."
+            />
+          </FieldWrapper>
+          <FieldWrapper
+            label="Latitude"
+            htmlFor="latitude"
+            hint="Used by the public property map. Leave blank if unknown -- never guess a coordinate."
+          >
+            <TextInput
+              id="latitude"
+              name="latitude"
+              type="number"
+              step="0.000001"
+              min={-90}
+              max={90}
+              defaultValue={values.latitude}
+              placeholder="e.g. 7.0084"
+            />
+          </FieldWrapper>
+          <FieldWrapper label="Longitude" htmlFor="longitude">
+            <TextInput
+              id="longitude"
+              name="longitude"
+              type="number"
+              step="0.000001"
+              min={-180}
+              max={180}
+              defaultValue={values.longitude}
+              placeholder="e.g. 100.4747"
             />
           </FieldWrapper>
           <FieldWrapper

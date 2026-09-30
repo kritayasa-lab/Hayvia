@@ -44,13 +44,27 @@ export type PropertiesSource = "supabase" | "fallback";
 // file's existing `Property`/`District`/`districts` exports are left
 // untouched -- lib/matching/* and app/api/match/route.ts depend on them
 // for an unrelated purpose and must not be affected, even indirectly).
-// provinceName/cityName are both optional so the hardcoded demoProperties
-// fallback (plain `Property[]`, no location fields) satisfies this type
+// Every field here is optional so the hardcoded demoProperties fallback
+// (plain `Property[]`, no location/coordinate fields) satisfies this type
 // with no changes needed there either.
 export type PropertyWithLocation = Property & {
   provinceName?: string;
   cityName?: string;
+  subdistrictName?: string;
+  // Only set once an admin has entered real coordinates -- never invented.
+  // A property without both is simply omitted from map markers (still
+  // shown in List) by the caller.
+  latitude?: number;
+  longitude?: number;
+  // SAFE/RISK/UNKNOWN -- admin-set only, see properties.flood_status.
+  floodStatus?: string;
 };
+
+// The Songkhla flood-safe house rule needs property_type = HOUSE exactly.
+// `Property["propertyType"] === "House"` is safe to use for this (no other
+// raw DB enum value maps to "House" in supabasePropertyTypeMap below --
+// only VILLA/LAND/COMMERCIAL/OTHER collapse ambiguously, and none of them
+// collapse *into* "House"), so no separate raw-type field is needed.
 
 interface RawSheetRow {
   [header: string]: unknown;
@@ -294,12 +308,16 @@ interface SupabasePropertyRow {
   province: string | null;
   city: string | null;
   district: string | null;
+  subdistrict: string | null;
   location: string | null;
   google_maps_url: string | null;
+  latitude: number | null;
+  longitude: number | null;
   contact_type: string | null;
   verified: boolean;
   featured: boolean;
   view_count: number;
+  flood_status: string | null;
 }
 
 function mapSupabaseRowToProperty(
@@ -316,6 +334,12 @@ function mapSupabaseRowToProperty(
     district: (row.district || "Central Hat Yai") as Property["district"],
     provinceName: row.province || undefined,
     cityName: row.city || undefined,
+    subdistrictName: row.subdistrict || undefined,
+    // Never invented -- undefined (not 0/null coerced) when the admin
+    // hasn't entered coordinates, so the map can cleanly omit the marker.
+    latitude: typeof row.latitude === "number" ? row.latitude : undefined,
+    longitude: typeof row.longitude === "number" ? row.longitude : undefined,
+    floodStatus: row.flood_status || undefined,
     price: row.price,
     propertyType: supabasePropertyTypeMap[row.property_type] ?? "Condo",
     bedrooms: row.bedrooms ?? 0,
@@ -455,15 +479,18 @@ export const getProperties = cache(async (): Promise<{
   return { properties: demoProperties, source: "fallback" };
 });
 
-export function findPropertyBySlug(list: Property[], slug: string): Property | undefined {
+export function findPropertyBySlug(
+  list: PropertyWithLocation[],
+  slug: string
+): PropertyWithLocation | undefined {
   return list.find((p) => p.slug === slug);
 }
 
 export function findRelatedProperties(
-  list: Property[],
-  current: Property,
+  list: PropertyWithLocation[],
+  current: PropertyWithLocation,
   limit = 3
-): Property[] {
+): PropertyWithLocation[] {
   return list
     .filter((p) => p.id !== current.id && p.district === current.district)
     .slice(0, limit)
