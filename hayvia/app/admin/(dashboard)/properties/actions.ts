@@ -5,6 +5,9 @@ import { getAdminUser } from "@/lib/auth/admin";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { slugify } from "@/lib/utils";
 import { backupPropertyToSheets } from "@/lib/admin/sheets-backup";
+import { buildStorageObjectKey, validateImageUpload } from "@/lib/admin/property-image-upload";
+
+const PROPERTY_IMAGES_BUCKET = "property-images";
 
 export interface PropertyActionState {
   error?: string;
@@ -265,6 +268,93 @@ export async function addPropertyImage(propertyId: string, formData: FormData) {
   if (error) redirect(`/admin/properties/${propertyId}?imageError=1`);
 
   redirect(`/admin/properties/${propertyId}?imageAdded=1`);
+}
+
+export interface UploadImageResult {
+  success: boolean;
+  error?: string;
+  image?: { id: string; url: string; is_cover: boolean };
+}
+
+/**
+ * Uploads ONE original image file to Storage and records it as an ordinary
+ * property_images row — same cover-assignment rule as addPropertyImage()
+ * above (first image for this property becomes cover, an existing cover is
+ * never replaced automatically). Called directly (not via <form action>)
+ * from components/admin/PropertyImageUpload.tsx, once per selected file,
+ * so the client can show per-file progress and reveal each thumbnail as
+ * its own upload finishes — returns a result object instead of redirecting.
+ *
+ * No resizing/compression/format conversion: the uploaded bytes are stored
+ * exactly as received. Content type is never trusted from the client —
+ * validateImageUpload() sniffs the real file signature.
+ */
+export async function uploadPropertyImage(
+  propertyId: string,
+  formData: FormData
+): Promise<UploadImageResult> {
+  const admin = await getAdminUser();
+  if (!admin) return { success: false, error: "Not authorized." };
+
+  const file = formData.get("file");
+  if (!(file instanceof File) || file.size === 0) {
+    return { success: false, error: "No file provided." };
+  }
+
+  const buffer = Buffer.from(await file.arrayBuffer());
+  const validation = validateImageUpload(file.name, file.size, buffer);
+  if (!validation.ok) {
+    return { success: false, error: validation.error };
+  }
+
+  const supabase = createAdminClient();
+
+  const { data: property } = await supabase
+    .from("properties")
+    .select("id")
+    .eq("id", propertyId)
+    .maybeSingle();
+  if (!property) {
+    return { success: false, error: "Property not found." };
+  }
+
+  const objectKey = buildStorageObjectKey(propertyId, file.name, validation.mimeType, crypto.randomUUID());
+
+  const { error: uploadError } = await supabase.storage
+    .from(PROPERTY_IMAGES_BUCKET)
+    .upload(objectKey, buffer, { contentType: validation.mimeType, upsert: false });
+  if (uploadError) {
+    return { success: false, error: `Upload failed: ${uploadError.message}` };
+  }
+
+  const {
+    data: { publicUrl },
+  } = supabase.storage.from(PROPERTY_IMAGES_BUCKET).getPublicUrl(objectKey);
+
+  const { count } = await supabase
+    .from("property_images")
+    .select("id", { count: "exact", head: true })
+    .eq("property_id", propertyId);
+
+  const { data: inserted, error: insertError } = await supabase
+    .from("property_images")
+    .insert({
+      property_id: propertyId,
+      url: publicUrl,
+      sort_order: count ?? 0,
+      is_cover: (count ?? 0) === 0, // first image uploaded becomes the cover automatically
+    })
+    .select("id, url, is_cover")
+    .single();
+
+  if (insertError || !inserted) {
+    // The row failed to save — remove the now-orphaned Storage object
+    // rather than leaving a file with nothing pointing to it.
+    await supabase.storage.from(PROPERTY_IMAGES_BUCKET).remove([objectKey]);
+    return { success: false, error: insertError?.message || "Failed to save the uploaded image." };
+  }
+
+  return { success: true, image: inserted };
 }
 
 export async function removePropertyImage(imageId: string, propertyId: string) {

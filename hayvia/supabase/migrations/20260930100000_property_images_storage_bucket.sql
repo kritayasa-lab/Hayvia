@@ -1,0 +1,47 @@
+-- =============================================================================
+-- 20260930100000_property_images_storage_bucket.sql
+-- =============================================================================
+-- Creates the Storage bucket for locally-uploaded property photos (V1 of
+-- the "Upload Images" control on /admin/properties/[id] — see
+-- app/admin/(dashboard)/properties/actions.ts's uploadPropertyImage()).
+--
+-- `property_images.url` already accepts any URL (that's exactly how "Add
+-- by URL" has always worked) — this migration only adds somewhere for
+-- admin-uploaded ORIGINAL files to actually live, keyed as
+-- {propertyId}/{uuid}-{sanitized filename}. No new table: uploaded photos
+-- are recorded as ordinary public.property_images rows, identical in shape
+-- to a URL-added one.
+--
+-- BUCKET IS PUBLIC — objects are servable via a stable public URL
+-- (https://<project>.supabase.co/storage/v1/object/public/property-images/...)
+-- with no signed-URL/expiry handling needed for V1, matching the
+-- recommendation to keep published-property images plainly readable. Each
+-- object's path includes a random uuid, so it is not enumerable/guessable
+-- without already having the URL — the same practical exposure as any
+-- other URL an admin could type into "Add by URL" today, which this
+-- migration does not change or tighten.
+--
+-- NO RLS POLICIES ARE ADDED ON storage.objects FOR THIS BUCKET, deliberately:
+--   - Reads: the bucket's `public = true` flag serves objects via the
+--     public object endpoint without consulting RLS at all (a Storage-API
+--     behavior, not a Postgres grant) — no SELECT policy is needed or
+--     added.
+--   - Writes (upload/delete): every write happens through
+--     uploadPropertyImage()/removePropertyImage() in
+--     app/admin/(dashboard)/properties/actions.ts, which — like every
+--     other admin write in this schema — calls getAdminUser() (session-
+--     respecting, RLS-checked) to confirm profiles.role = 'ADMIN' BEFORE
+--     ever touching lib/supabase/admin.ts's service-role client, which
+--     then bypasses RLS entirely for the actual write. Storage's
+--     storage.objects table has RLS enabled by the platform by default;
+--     with zero policies for anon/authenticated, any direct
+--     upload/delete attempt using those roles is denied outright — the
+--     exact same "deny-all, service-role-after-app-check" posture
+--     property_images itself already uses for its own writes (see
+--     migration 10, "rls_enable.sql": no anon/authenticated write policy
+--     exists there either).
+-- =============================================================================
+
+insert into storage.buckets (id, name, public)
+values ('property-images', 'property-images', true)
+on conflict (id) do nothing;
