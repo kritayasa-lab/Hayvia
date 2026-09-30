@@ -20,6 +20,7 @@ import {
   LogOut,
   Menu,
   X,
+  ExternalLink,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -188,8 +189,46 @@ export default function AdminShell({
             >
               <Menu size={20} />
             </button>
-            <div className="hidden lg:block" />
+            {/* Simple top-level nav -- always visible regardless of which
+                admin page (or the public site) the admin is looking at, so
+                it never feels like leaving Admin just by clicking into a
+                property. Plain anchors, not next/link, for the same
+                Router-Cache-safety reason as the sidebar nav below. */}
+            <div className="hidden items-center gap-1 lg:flex">
+              <a
+                href="/admin"
+                className="flex items-center gap-1.5 rounded px-3 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:bg-line-soft hover:text-ink"
+              >
+                <Home size={15} />
+                Home
+              </a>
+              <a
+                href="/admin/properties"
+                className="flex items-center gap-1.5 rounded px-3 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:bg-line-soft hover:text-ink"
+              >
+                <Building2 size={15} />
+                Properties
+              </a>
+            </div>
             <div className="flex items-center gap-3">
+              {/* Opens the real public site in a new tab -- this Admin tab
+                  must stay exactly where it is. */}
+              <a
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden items-center gap-1.5 rounded border border-line px-3 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink/20 hover:text-ink lg:flex"
+              >
+                <ExternalLink size={14} />
+                Preview Website
+              </a>
+              <a
+                href="/admin/settings"
+                className="hidden items-center gap-1.5 rounded px-3 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:bg-line-soft hover:text-ink lg:flex"
+              >
+                <Settings size={14} />
+                Settings
+              </a>
               <span className="text-sm text-ink-soft">
                 {admin.fullName || admin.email || "Admin"}
               </span>
