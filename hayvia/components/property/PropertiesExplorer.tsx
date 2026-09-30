@@ -1,8 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { SlidersHorizontal, X } from "lucide-react";
+import dynamic from "next/dynamic";
+import { SlidersHorizontal, X, List as ListIcon, Map as MapIcon } from "lucide-react";
 import { districts, getListingType, propertyTypes } from "@/data/properties";
+import { isKnownProvince, PROVINCE_AMPHOE } from "@/lib/locations/province-amphoe";
 import type { PropertyWithLocation } from "@/lib/properties-source";
 import {
   bathroomOptions,
@@ -18,6 +20,18 @@ import { Select, TextInput } from "@/components/ui/FormField";
 import PropertyGrid from "@/components/property/PropertyGrid";
 import { cn } from "@/lib/utils";
 
+// Leaflet touches `window` at import time, so the actual map component
+// must never be part of the server-rendered tree -- ssr: false is required
+// here, not optional. See PropertyMapView.tsx's own header comment.
+const PropertyMapView = dynamic(() => import("@/components/property/PropertyMapView"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-[420px] items-center justify-center rounded border border-seashell bg-white text-sm text-ink-faint sm:h-[520px]">
+      Loading map…
+    </div>
+  ),
+});
+
 export default function PropertiesExplorer({
   properties,
   initialFilters,
@@ -28,15 +42,38 @@ export default function PropertiesExplorer({
   const [filters, setFilters] = useState(initialFilters ?? defaultFilters);
   const [sort, setSort] = useState<SortOption>("Recommended");
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [view, setView] = useState<"list" | "map">("list");
 
   function updateFilter(key: keyof typeof defaultFilters, value: string) {
     setFilters((prev) => ({ ...prev, [key]: value }));
+  }
+
+  // Province and Amphoe are a dependent pair here too (same pattern as the
+  // admin Property Form). Changing province also resets the flood-safe
+  // toggle whenever it moves off Songkhla -- that filter must never stay
+  // silently active once its only supported province is no longer selected.
+  function handleProvinceChange(next: string) {
+    setFilters((prev) => {
+      const nextAmphoeOptions = isKnownProvince(next) ? PROVINCE_AMPHOE[next] : [];
+      return {
+        ...prev,
+        province: next as PropertiesFilters["province"],
+        amphoe: nextAmphoeOptions.includes(prev.amphoe) ? prev.amphoe : defaultFilters.amphoe,
+        floodSafeOnly: next === "Songkhla" ? prev.floodSafeOnly : false,
+      };
+    });
+  }
+
+  function toggleFloodSafeOnly() {
+    setFilters((prev) => ({ ...prev, floodSafeOnly: !prev.floodSafeOnly }));
   }
 
   function resetFilters() {
     setFilters(defaultFilters);
     setSort("Recommended");
   }
+
+  const amphoeOptions = isKnownProvince(filters.province) ? PROVINCE_AMPHOE[filters.province] : [];
 
   const filtered = useMemo(() => {
     const budget = budgetOptions.find((b) => b.label === filters.budget) ?? budgetOptions[0];
@@ -46,9 +83,25 @@ export default function PropertiesExplorer({
         return false;
       if (filters.location !== "Any location" && p.district !== filters.location) return false;
       if (filters.province !== "Any province" && p.provinceName !== filters.province) return false;
+      if (filters.amphoe !== "Any amphoe" && p.cityName !== filters.amphoe) return false;
       if (filters.propertyType !== "Any type" && p.propertyType !== filters.propertyType)
         return false;
       if (p.price < budget.min || p.price > budget.max) return false;
+
+      // Songkhla flood-safe house inventory -- an additional constraint on
+      // top of whatever else is selected, applied ONLY when explicitly
+      // toggled on (never filters out UNKNOWN/RISK from normal browsing).
+      // Exactly: province = Songkhla AND property_type = HOUSE AND
+      // status = PUBLISHED (mapped to "available") AND flood_status = SAFE.
+      // Never applied to Phuket -- the toggle itself is only reachable when
+      // province = Songkhla (see the Songkhla-gated filter field below and
+      // handleProvinceChange, which clears it the moment province changes).
+      if (filters.floodSafeOnly) {
+        if (p.provinceName !== "Songkhla") return false;
+        if (p.propertyType !== "House") return false;
+        if (p.status !== "available") return false;
+        if (p.floodStatus !== "SAFE") return false;
+      }
 
       if (filters.bedrooms !== "Any") {
         if (filters.bedrooms === "Studio" && p.bedrooms !== 0) return false;
@@ -115,6 +168,31 @@ export default function PropertiesExplorer({
         ))}
       </div>
 
+      <div
+        role="tablist"
+        aria-label="View mode"
+        className="mb-6 ml-2 inline-flex gap-1 rounded-full border border-seashell bg-white p-1 shadow-card"
+      >
+        {([
+          { key: "list", label: "List", Icon: ListIcon },
+          { key: "map", label: "Map", Icon: MapIcon },
+        ] as const).map(({ key, label, Icon }) => (
+          <button
+            key={key}
+            type="button"
+            role="tab"
+            aria-selected={view === key}
+            onClick={() => setView(key)}
+            className={cn(
+              "flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition-colors",
+              view === key ? "bg-matcha-mist text-white" : "text-ink-soft hover:bg-kiwi-cream"
+            )}
+          >
+            <Icon size={15} /> {label}
+          </button>
+        ))}
+      </div>
+
       <div className="flex items-center justify-between gap-4 lg:hidden">
         <button
           type="button"
@@ -166,15 +244,43 @@ export default function PropertiesExplorer({
 
           <div className="space-y-6 rounded border border-seashell bg-white p-5">
             <FilterField label="Province">
-              <Select
-                value={filters.province}
-                onChange={(e) => updateFilter("province", e.target.value)}
-              >
+              <Select value={filters.province} onChange={(e) => handleProvinceChange(e.target.value)}>
                 {provinceOptions.map((p) => (
                   <option key={p}>{p}</option>
                 ))}
               </Select>
             </FilterField>
+
+            <FilterField label="Amphoe">
+              <Select
+                value={filters.amphoe}
+                onChange={(e) => updateFilter("amphoe", e.target.value)}
+                disabled={amphoeOptions.length === 0}
+              >
+                <option>Any amphoe</option>
+                {amphoeOptions.map((a) => (
+                  <option key={a}>{a}</option>
+                ))}
+              </Select>
+            </FilterField>
+
+            {filters.province === "Songkhla" && (
+              <FilterField label="Songkhla Flood-Safe Houses">
+                <label className="flex items-center gap-2 text-sm text-ink-soft">
+                  <input
+                    type="checkbox"
+                    checked={filters.floodSafeOnly}
+                    onChange={toggleFloodSafeOnly}
+                    className="h-4 w-4 rounded border-line text-moss-600 focus:ring-moss-500/30"
+                  />
+                  Show flood-safe houses only
+                </label>
+                <p className="mt-1.5 text-xs text-ink-faint">
+                  Published Songkhla houses an admin has classified as Flood Status: Safe. Not a
+                  government certification.
+                </p>
+              </FilterField>
+            )}
 
             <FilterField label="Location">
               <Select
@@ -307,17 +413,21 @@ export default function PropertiesExplorer({
             {filtered.length === 1 ? "property" : "properties"} found
           </p>
 
-          <PropertyGrid
-            properties={filtered}
-            emptyTitle={
-              filters.listingType === "Sale" ? "Sale listings are on the way" : undefined
-            }
-            emptyDescription={
-              filters.listingType === "Sale"
-                ? "We don't have properties for sale listed yet. Browse rentals in the meantime, or list your own property to be added once sale listings open."
-                : undefined
-            }
-          />
+          {view === "map" ? (
+            <PropertyMapView properties={filtered} />
+          ) : (
+            <PropertyGrid
+              properties={filtered}
+              emptyTitle={
+                filters.listingType === "Sale" ? "Sale listings are on the way" : undefined
+              }
+              emptyDescription={
+                filters.listingType === "Sale"
+                  ? "We don't have properties for sale listed yet. Browse rentals in the meantime, or list your own property to be added once sale listings open."
+                  : undefined
+              }
+            />
+          )}
         </div>
       </div>
     </div>

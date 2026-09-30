@@ -99,6 +99,11 @@ function buildPropertyRow(formData: FormData) {
     district: optionalString(formData, "district"),
     subdistrict: optionalString(formData, "subdistrict"),
     google_maps_url: optionalString(formData, "google_maps_url"),
+    // Never invented -- optionalNumber() returns null for a blank input, so
+    // a property with no coordinates entered simply has none (remains in
+    // List, omitted from Map markers). See lib/properties-source.ts.
+    latitude: optionalNumber(formData, "latitude"),
+    longitude: optionalNumber(formData, "longitude"),
     flood_status: requireString(formData, "flood_status") || "UNKNOWN",
     verified: formData.get("verified") === "on",
     featured: formData.get("featured") === "on",

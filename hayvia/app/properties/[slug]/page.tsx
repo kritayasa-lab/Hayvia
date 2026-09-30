@@ -10,6 +10,7 @@ import InquiryPanel from "@/components/property/InquiryPanel";
 import PropertyLocationMap, { formatLocationSummary } from "@/components/property/PropertyLocationMap";
 import PropertyGrid from "@/components/property/PropertyGrid";
 import ViewTracker from "@/components/property/ViewTracker";
+import FloodStatusBadge from "@/components/property/FloodStatusBadge";
 import { getProperties, findPropertyBySlug, findRelatedProperties } from "@/lib/properties-source";
 import { getListingType } from "@/data/properties";
 import { formatPrice, formatDate } from "@/lib/utils";
@@ -84,7 +85,14 @@ export default async function PropertyDetailPage({
                     Reserved
                   </Badge>
                 )}
+                <FloodStatusBadge status={property.floodStatus} />
               </div>
+              {property.floodStatus === "SAFE" && (
+                <p className="mt-1.5 max-w-md text-xs text-ink-faint">
+                  Flood status is an admin-set classification based on property records — not a
+                  government certification or guarantee.
+                </p>
+              )}
               <h1 className="mt-2 font-display text-2xl text-ink sm:text-3xl">
                 {property.title}
               </h1>
