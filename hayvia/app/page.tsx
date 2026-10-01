@@ -7,15 +7,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import SearchBar from "@/components/ui/SearchBar";
 import HeroVideo from "@/components/home/HeroVideo";
 import PropertyGrid from "@/components/property/PropertyGrid";
-import GuideCard from "@/components/guide/GuideCard";
 import { districts, propertyTypes, type Property, type PropertyType } from "@/data/properties";
-import { guides } from "@/data/guides";
 import { contactConfig } from "@/config/contact";
-import {
-  getProperties,
-  getMostViewedProperties,
-  getLatestProperties,
-} from "@/lib/properties-source";
+import { getProperties, getFeaturedProperties } from "@/lib/properties-source";
 
 const propertyTypeIcons: Record<PropertyType, typeof Building2> = {
   Condo: Building2,
@@ -50,15 +44,9 @@ function getPopularLocations(properties: Property[], limit = 4) {
 
 export default async function HomePage() {
   const { properties } = await getProperties();
-  const featured = getMostViewedProperties(properties, 6);
-  const latest = getLatestProperties(
-    properties,
-    featured.map((p) => p.id),
-    6
-  );
+  const featured = getFeaturedProperties(properties, 12);
   const typeCounts = getPropertyTypeCounts(properties);
   const popularLocations = getPopularLocations(properties);
-  const latestGuides = guides.slice(0, 3);
 
   return (
     <>
@@ -97,7 +85,7 @@ export default async function HomePage() {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <SectionHeading
               eyebrow="Featured"
-              title="Selected properties in Hat Yai"
+              title="Featured properties in Songkhla & Phuket"
               description="A sample of the kind of listings we work with — furnished condos, family houses and everything in between."
             />
             <Link
@@ -112,23 +100,6 @@ export default async function HomePage() {
           </div>
         </Container>
       </section>
-
-      {/* Latest Listings — real data: soonest-available properties not
-          already shown above, so this genuinely differs from Featured. */}
-      {latest.length > 0 && (
-        <section className="border-b border-line bg-surface py-14 sm:py-20">
-          <Container>
-            <SectionHeading
-              eyebrow="New"
-              title="Latest listings"
-              description="Recently available properties, freshest first."
-            />
-            <div className="mt-10">
-              <PropertyGrid properties={latest} />
-            </div>
-          </Container>
-        </section>
-      )}
 
       {/* Property Types */}
       {typeCounts.length > 0 && (
@@ -166,17 +137,16 @@ export default async function HomePage() {
         Friendly / Investment / Foreign Ownership) and Recently Reduced are
         intentionally omitted. None of these tags or a sale-price-reduction
         field exist anywhere in the Property schema or the Google Sheets
-        integration yet — every property in the current dataset is a Hat Yai
-        rental. Fabricating tag counts or "reduced" badges would violate the
-        no-invented-data requirement. Both are real, buildable sections once
-        the schema carries this data (tracked as Pass 2/3 work).
+        integration yet. Fabricating tag counts or "reduced" badges would
+        violate the no-invented-data requirement. Both are real, buildable
+        sections once the schema carries this data (tracked as Pass 2/3 work).
       */}
 
       {/* Popular Locations */}
       {popularLocations.length > 0 && (
         <section className="border-t border-line bg-kiwi-cream/40 py-14 sm:py-20">
           <Container>
-            <SectionHeading eyebrow="Areas" title="Popular locations in Hat Yai" />
+            <SectionHeading eyebrow="Areas" title="Popular locations" />
             <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-5">
               {popularLocations.map(({ district, count }) => (
                 <Link
@@ -237,32 +207,6 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      {/* Property Insights / News & Guides */}
-      {latestGuides.length > 0 && (
-        <section className="border-t border-line bg-surface py-14 sm:py-20">
-          <Container>
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-              <SectionHeading
-                eyebrow="Insights"
-                title="Hat Yai property guides"
-                description="Practical, beginner-friendly reading on neighbourhoods, costs and what to check before you sign a lease."
-              />
-              <Link
-                href="/guide"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-moss-700 hover:underline"
-              >
-                View all guides <ArrowRight size={15} />
-              </Link>
-            </div>
-            <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {latestGuides.map((article) => (
-                <GuideCard key={article.slug} article={article} />
-              ))}
-            </div>
-          </Container>
-        </section>
-      )}
-
       {/*
         Sell / List Your Property CTA. Uses Old Copper as this section's
         accent — deliberately the one place on the page that departs from
@@ -273,7 +217,7 @@ export default async function HomePage() {
       <section className="border-t border-line bg-old-copper py-16 sm:py-20">
         <Container className="text-center">
           <h2 className="font-display text-3xl text-white sm:text-4xl">
-            Have a property in Hat Yai?
+            Have a property in Songkhla or Phuket?
           </h2>
           <p className="mx-auto mt-3 max-w-md text-white/80">
             List it with us and reach tenants and buyers looking for exactly what you

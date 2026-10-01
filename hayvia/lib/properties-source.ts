@@ -499,32 +499,36 @@ export function findRelatedProperties(
 }
 
 /**
- * Returns the top `limit` properties by view count (descending), used for
- * the homepage's "Most Viewed" section. Ties are broken by each property's
- * original position in `list` — Array.prototype.sort is stable in modern JS
- * engines (Node 18+/V8), so equal view counts never get randomly reordered.
+ * Returns up to `limit` properties for the homepage's single Featured
+ * section -- replaces the old separate "Most Viewed" (6) + "Latest" (6)
+ * split with one list, explicitly-featured properties first.
+ *
+ * `list` is always whatever getProperties() returned (the public
+ * `public_properties` view, or the demo fallback) -- both already contain
+ * only publicly-eligible properties (PUBLISHED/RESERVED/RENTED; see the
+ * view's own WHERE clause), so this function never needs its own
+ * published/private check and never invents or duplicates a property.
+ *
+ * If fewer than `limit` properties are marked `featured`, the remaining
+ * slots are filled from the rest of `list`, most-viewed first (the same
+ * signal the old "Most Viewed" section used) -- a sensible default so the
+ * homepage can still show close to `limit` properties even before an
+ * admin has flagged many as Featured. Ties are broken by each property's
+ * original position in `list` -- Array.prototype.sort is stable in modern
+ * JS engines (Node 18+/V8).
  */
-export function getMostViewedProperties(list: Property[], limit = 6): Property[] {
-  return [...list]
-    .sort((a, b) => (b.viewCount ?? 0) - (a.viewCount ?? 0))
-    .slice(0, limit);
-}
+export function getFeaturedProperties(
+  list: PropertyWithLocation[],
+  limit = 12
+): PropertyWithLocation[] {
+  const featured = list.filter((p) => p.featured);
+  if (featured.length >= limit) return featured.slice(0, limit);
 
-/**
- * Returns the `limit` properties with the soonest `availableDate` (i.e. the
- * newest listings coming onto the market), used for the homepage's "Latest
- * Listings" section. Properties whose id is in `excludeIds` are skipped so
- * this section doesn't just repeat whatever "Featured" already showed.
- */
-export function getLatestProperties(
-  list: Property[],
-  excludeIds: string[] = [],
-  limit = 6
-): Property[] {
-  const exclude = new Set(excludeIds);
-  return [...list]
-    .filter((p) => !exclude.has(p.id))
-    .sort((a, b) => new Date(b.availableDate).getTime() - new Date(a.availableDate).getTime())
-    .slice(0, limit);
+  const featuredIds = new Set(featured.map((p) => p.id));
+  const rest = list
+    .filter((p) => !featuredIds.has(p.id))
+    .sort((a, b) => (b.viewCount ?? 0) - (a.viewCount ?? 0));
+
+  return [...featured, ...rest.slice(0, limit - featured.length)];
 }
 

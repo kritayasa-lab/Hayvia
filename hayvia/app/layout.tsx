@@ -22,15 +22,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(contactConfig.siteUrl),
   title: {
-    default: "Subphiphat Real Estate | Find Your Home in Hat Yai",
+    default: "Subphiphat Real Estate | Songkhla & Phuket Properties",
     template: "%s | Subphiphat Real Estate",
   },
   description:
-    "Subphiphat Real Estate helps you discover selected rental properties in Hat Yai, Thailand, and get matched with a home that fits your budget, location and lifestyle.",
+    "Subphiphat Real Estate helps you discover selected properties in Songkhla and Phuket, Thailand, and get matched with a home that fits your budget, location and lifestyle.",
   openGraph: {
-    title: "Subphiphat Real Estate | Find Your Home in Hat Yai",
+    title: "Subphiphat Real Estate | Songkhla & Phuket Properties",
     description:
-      "Discover selected rental properties in Hat Yai and get matched with a home that fits your budget, location and lifestyle.",
+      "Discover selected properties in Songkhla and Phuket and get matched with a home that fits your budget, location and lifestyle.",
     url: contactConfig.siteUrl,
     siteName: "Subphiphat Real Estate",
     locale: "en_US",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Subphiphat Real Estate | Find Your Home in Hat Yai",
+    title: "Subphiphat Real Estate | Songkhla & Phuket Properties",
     description:
-      "Discover selected rental properties in Hat Yai and get matched with a home that fits your budget, location and lifestyle.",
+      "Discover selected properties in Songkhla and Phuket and get matched with a home that fits your budget, location and lifestyle.",
   },
 };
 
