@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, ArrowUp, ArrowDown, ExternalLink, Star, Trash2 } from "lucide-react";
+import { ArrowLeft, ArrowUp, ArrowDown, Star, Trash2 } from "lucide-react";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { fetchOwners, fetchAgents } from "@/lib/admin/people";
 import PropertyForm from "@/components/admin/PropertyForm";
@@ -17,14 +17,6 @@ import {
 } from "@/app/admin/(dashboard)/properties/actions";
 
 export const dynamic = "force-dynamic";
-
-// Matches the public_properties view's own WHERE clause exactly (see
-// supabase/migrations/20260930110000_property_flood_status.sql) -- these
-// are the only statuses the public site actually serves. Used only to
-// decide whether to show a "View on Website" link at all, so it never
-// points an admin at a 404. No new query: property.status is already
-// loaded by loadProperty() below.
-const PUBLICLY_VISIBLE_STATUSES = new Set(["PUBLISHED", "RESERVED", "RENTED"]);
 
 async function loadProperty(id: string) {
   const supabase = createAdminClient();
@@ -67,8 +59,6 @@ export default async function EditPropertyPage({
   const backupStatus =
     searchParams.backup === "success" || searchParams.backup === "pending" ? searchParams.backup : null;
 
-  const isPubliclyVisible = PUBLICLY_VISIBLE_STATUSES.has(property.status);
-
   return (
     <div>
       <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-sm text-ink-faint">
@@ -83,26 +73,18 @@ export default async function EditPropertyPage({
         <span className="text-ink-soft">{property.title}</span>
       </nav>
 
-      <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
+      <div className="mt-2">
         {/* Plain anchor, not next/link -- same Router-Cache-safety reason
             as every other admin nav link fixed this session (see
-            PropertiesTable.tsx / AdminShell.tsx). */}
+            PropertiesTable.tsx / AdminShell.tsx). Previewing the public
+            site is the single "Preview Website" action in the sidebar now
+            (see AdminShell.tsx) -- not duplicated here. */}
         <a
           href="/admin/properties"
           className="inline-flex items-center gap-1.5 text-sm font-medium text-moss-700 hover:underline"
         >
           <ArrowLeft size={14} /> Back to Properties
         </a>
-        {isPubliclyVisible && (
-          <a
-            href={`/properties/${property.slug}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-moss-700 hover:underline"
-          >
-            View on Website <ExternalLink size={14} />
-          </a>
-        )}
       </div>
 
       <div className="mt-4 flex flex-wrap items-center gap-2">
