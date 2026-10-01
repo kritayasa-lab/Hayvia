@@ -15,6 +15,9 @@ import {
   Briefcase,
   MapPin,
   Newspaper,
+  LayoutTemplate,
+  Info,
+  Phone,
   BarChart3,
   Settings,
   LogOut,
@@ -74,6 +77,9 @@ const navSections: NavSection[] = [
     items: [
       { href: "/admin/locations", label: "Locations", icon: MapPin },
       { href: "/admin/news", label: "News & Guides", icon: Newspaper },
+      { href: "/admin/content/homepage", label: "Homepage", icon: LayoutTemplate },
+      { href: "/admin/content/about", label: "About", icon: Info },
+      { href: "/admin/content/contact", label: "Contact", icon: Phone },
     ],
   },
   {
