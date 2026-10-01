@@ -100,6 +100,36 @@ export default function AdminShell({
   const pathname = usePathname();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
+  // Single central preview action (sidebar, not a second header bar) and
+  // the account/sign-out block -- both shared between the desktop sidebar
+  // and the mobile drawer, same pattern as `nav` below.
+  const previewLink = (
+    <a
+      href="/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-4 flex items-center justify-center gap-1.5 rounded border border-line px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:border-ink/20 hover:text-ink"
+    >
+      <ExternalLink size={14} />
+      Preview Website
+    </a>
+  );
+
+  const accountSection = (
+    <div className="mt-8 border-t border-line pt-4">
+      <p className="px-3 text-sm text-ink-soft">{admin.fullName || admin.email || "Admin"}</p>
+      <form action={signOutAdmin} className="mt-2">
+        <button
+          type="submit"
+          className="flex w-full items-center gap-2.5 rounded px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-line-soft hover:text-ink"
+        >
+          <LogOut size={16} />
+          Sign Out
+        </button>
+      </form>
+    </div>
+  );
+
   const nav = (
     <nav className="space-y-6">
       {navSections.map((section) => (
@@ -148,7 +178,9 @@ export default function AdminShell({
             <p className="font-display text-lg text-ink">Subphiphat</p>
             <p className="text-xs text-ink-faint">Admin Dashboard</p>
           </a>
+          {previewLink}
           <div className="mt-8">{nav}</div>
+          {accountSection}
         </aside>
 
         {/* Mobile sidebar overlay */}
@@ -174,74 +206,27 @@ export default function AdminShell({
                   <X size={18} />
                 </button>
               </div>
+              {previewLink}
               <div className="mt-8">{nav}</div>
+              {accountSection}
             </aside>
           </div>
         )}
 
         <div className="min-w-0 flex-1">
-          <header className="flex items-center justify-between gap-3 border-b border-line bg-surface px-4 py-3 sm:px-6">
+          {/* Mobile-only utility bar -- just the menu toggle. No nav
+              links/account content here: that all lives in the sidebar
+              above (desktop) / drawer (mobile) now, so Admin never shows a
+              second navigation bar stacked under the public site header. */}
+          <header className="flex items-center border-b border-line bg-surface px-4 py-3 lg:hidden">
             <button
               type="button"
               onClick={() => setMobileNavOpen(true)}
-              className="rounded p-1.5 text-ink-soft hover:bg-line-soft lg:hidden"
+              className="rounded p-1.5 text-ink-soft hover:bg-line-soft"
               aria-label="Open menu"
             >
               <Menu size={20} />
             </button>
-            {/* Simple top-level nav -- always visible regardless of which
-                admin page (or the public site) the admin is looking at, so
-                it never feels like leaving Admin just by clicking into a
-                property. Plain anchors, not next/link, for the same
-                Router-Cache-safety reason as the sidebar nav below. */}
-            <div className="hidden items-center gap-1 lg:flex">
-              <a
-                href="/admin"
-                className="flex items-center gap-1.5 rounded px-3 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:bg-line-soft hover:text-ink"
-              >
-                <Home size={15} />
-                Home
-              </a>
-              <a
-                href="/admin/properties"
-                className="flex items-center gap-1.5 rounded px-3 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:bg-line-soft hover:text-ink"
-              >
-                <Building2 size={15} />
-                Properties
-              </a>
-            </div>
-            <div className="flex items-center gap-3">
-              {/* Opens the real public site in a new tab -- this Admin tab
-                  must stay exactly where it is. */}
-              <a
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden items-center gap-1.5 rounded border border-line px-3 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink/20 hover:text-ink lg:flex"
-              >
-                <ExternalLink size={14} />
-                Preview Website
-              </a>
-              <a
-                href="/admin/settings"
-                className="hidden items-center gap-1.5 rounded px-3 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:bg-line-soft hover:text-ink lg:flex"
-              >
-                <Settings size={14} />
-                Settings
-              </a>
-              <span className="text-sm text-ink-soft">
-                {admin.fullName || admin.email || "Admin"}
-              </span>
-              <form action={signOutAdmin}>
-                <button
-                  type="submit"
-                  className="flex items-center gap-1.5 rounded border border-line px-3 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink/20 hover:text-ink"
-                >
-                  <LogOut size={14} />
-                  Sign Out
-                </button>
-              </form>
-            </div>
           </header>
 
           <main className="px-4 py-6 sm:px-6 sm:py-8">{children}</main>
