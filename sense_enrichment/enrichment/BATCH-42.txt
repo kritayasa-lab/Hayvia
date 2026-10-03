@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B5-0855^noun@E^high^หมี; ดุว่า^动物园里有两只熊。^Dòngwùyuán li yǒu liǎng zhī xióng.^ในสวนสัตว์มีหมีสองตัว^low^polysemy: noun "bear" vs. dialect verb "scold" vs. adjective "cowardly; useless" — unrelated senses; example shows "bear"
+B5-0856^verb@L^medium^พักผ่อนหย่อนใจ; เวลาว่าง^周末我喜欢在家休闲。^Zhōumò wǒ xǐhuan zài jiā xiūxián.^สุดสัปดาห์ฉันชอบพักผ่อนอยู่บ้าน^medium^pos_doubtful: gloss "Leisure time" is a noun; 休闲 is a verb "relax" mostly used attributively (休闲服)
+B5-0857^verb@E^high^ซ่อมแซม; บูรณะ^这座古建筑已经修复了。^Zhè zuò gǔ jiànzhù yǐjīng xiūfù le.^สิ่งก่อสร้างโบราณแห่งนี้ได้รับการบูรณะแล้ว^high^
+B5-0858^verb@E^high^ก่อสร้าง^这里正在修建一座大桥。^Zhèlǐ zhèngzài xiūjiàn yí zuò dà qiáo.^ที่นี่กำลังก่อสร้างสะพานใหญ่^high^
+B5-0859^noun@E^medium^การอบรมบ่มนิสัย; ความรู้ความสามารถ^他是一个很有修养的人。^Tā shì yí ge hěn yǒu xiūyǎng de rén.^เขาเป็นคนที่มีกิริยามารยาทดีงาม^medium^source_gloss: "training, mastery" is loose; 修养 means "self-cultivation; refinement; accomplishment"
+B5-0860^adjective@E^high^ถ่อมตัว; ใจกว้างรับฟัง^他很虚心地听取别人的意见。^Tā hěn xūxīn de tīngqǔ biérén de yìjiàn.^เขารับฟังความคิดเห็นของผู้อื่นอย่างถ่อมตัว^high^
+B5-0861^verb@E^medium^อนุญาต; ใบอนุญาต^没有许可，不能进入。^Méiyǒu xǔkě, bù néng jìnrù.^ไม่มีการอนุญาต ห้ามเข้า^medium^pos_doubtful: 许可 is both verb "permit" and noun "permission"; example shows the noun
+B5-0862^verb@E^high^เลือกเรียน (วิชาเลือก)^我这学期选修了一门法语课。^Wǒ zhè xuéqī xuǎnxiū le yì mén Fǎyǔ kè.^ภาคเรียนนี้ฉันเลือกเรียนวิชาภาษาฝรั่งเศส^medium^polysemy: verb "take as an elective" vs. attributive "elective" (选修课)
+B5-0863^noun@E^high^สาขาวิชา^数学是一门重要的学科。^Shùxué shì yì mén zhòngyào de xuékē.^คณิตศาสตร์เป็นสาขาวิชาที่สำคัญ^high^
+B5-0864^noun@E^high^ปริญญา^他获得了博士学位。^Tā huòdé le bóshì xuéwèi.^เขาได้รับปริญญาเอก^high^
+B5-0865^noun@E^high^นักวิชาการ^他是一位有名的学者。^Tā shì yí wèi yǒumíng de xuézhě.^เขาเป็นนักวิชาการที่มีชื่อเสียง^high^
+B5-0866^verb@E^high^แสวงหา^他在寻求帮助。^Tā zài xúnqiú bāngzhù.^เขากำลังแสวงหาความช่วยเหลือ^high^
+B5-0867^verb@L^medium^สอบถาม^他向服务员询问了价格。^Tā xiàng fúwùyuán xúnwèn le jiàgé.^เขาสอบถามราคาจากพนักงาน^medium^source_gloss: "inquiry" is a noun; 询问 is mainly the verb "ask about"
+B5-0868^noun@E^high^เงินมัดจำ^租房子要交押金。^Zū fángzi yào jiāo yājīn.^เช่าบ้านต้องจ่ายเงินมัดจำ^high^
+B5-0869^noun@E^high^เป็ด^河里有几只鸭子。^Hé li yǒu jǐ zhī yāzi.^ในแม่น้ำมีเป็ดอยู่สองสามตัว^high^
+B5-0870^noun@E^high^รองชนะเลิศ^他在比赛中获得了亚军。^Tā zài bǐsài zhōng huòdé le yàjūn.^เขาได้รองชนะเลิศในการแข่งขัน^high^
+B5-0871^verb@E^high^ยืดออกไป; ขยายออก^这条路一直延伸到海边。^Zhè tiáo lù yìzhí yánshēn dào hǎibiān.^ถนนสายนี้ทอดยาวไปจนถึงชายทะเล^high^
+B5-0872^adjective@E^high^เข้มงวด; ดุดัน^老师严厉地批评了他。^Lǎoshī yánlì de pīpíng le tā.^ครูตำหนิเขาอย่างรุนแรง^high^
+B5-0873^adjective@E^high^จริงจัง; เคร่งขรึม^这是一个很严肃的问题。^Zhè shì yí ge hěn yánsù de wèntí.^นี่เป็นปัญหาที่จริงจังมาก^medium^polysemy: adjective "serious; solemn" vs. verb "enforce strictly" (严肃纪律)
+B5-0874^noun@E^high^คำพูด; วาจา^他的言语很有礼貌。^Tā de yányǔ hěn yǒu lǐmào.^คำพูดของเขาสุภาพมาก^medium^variant: 言语 yányǔ (speech) vs. 言语 yányu (dialect verb "speak up")
+B5-0875^noun@E^high^สถาบันวิจัย^他在一家研究所工作。^Tā zài yì jiā yánjiūsuǒ gōngzuò.^เขาทำงานที่สถาบันวิจัยแห่งหนึ่ง^medium^polysemy: "research institute" vs. (Taiwan) "graduate school"
+B5-0876^noun@E^medium^วิสัยทัศน์; สายตา^他看问题的眼光很独到。^Tā kàn wèntí de yǎnguāng hěn dúdào.^เขามีวิสัยทัศน์ในการมองปัญหาที่ลึกซึ้ง^medium^source_gloss: "Eye" is loose; 眼光 means "insight; vision; taste" (also "gaze")
+B5-0877^verb@E^medium^เชิญ; คำเชิญ^他邀请我参加他的生日晚会。^Tā yāoqǐng wǒ cānjiā tā de shēngrì wǎnhuì.^เขาเชิญฉันไปงานเลี้ยงวันเกิดของเขา^medium^pos_doubtful: gloss "Invitation" is a noun; 邀请 is both verb and noun; example shows the verb
+B5-0878^verb@E^high^ส่ายหัว^他摇头表示不同意。^Tā yáotóu biǎoshì bù tóngyì.^เขาส่ายหัวแสดงว่าไม่เห็นด้วย^high^
+B5-0879^verb@E^high^กัด^小狗咬了我一口。^Xiǎo gǒu yǎo le wǒ yì kǒu.^ลูกหมากัดฉันไปหนึ่งที^high^
+B5-0880^particle@L^low^ก็ดี; ไม่ว่าจะ...หรือ...^你去也好，不去也好，都要告诉我。^Nǐ qù yěhǎo, bú qù yěhǎo, dōu yào gàosu wǒ.^ไม่ว่าคุณจะไปหรือไม่ไป ก็ต้องบอกฉัน^low^polysemy: "may as well; it's fine" vs. paired 也好…也好… "whether…or…"; pos_doubtful: no clean POS
+B5-0881^noun@E^high^ธุรกิจ; งาน (ด้านวิชาชีพ)^他的业务能力很强。^Tā de yèwù nénglì hěn qiáng.^ความสามารถในการทำงานของเขาสูงมาก^high^
+B5-0882^noun@E^high^เวลากลางคืน^夜间开车要注意安全。^Yèjiān kāichē yào zhùyì ānquán.^การขับรถตอนกลางคืนต้องระวังความปลอดภัย^high^
+B5-0883^adjective@E^high^ชั้นหนึ่ง; ชั้นนำ^这是一所一流的大学。^Zhè shì yì suǒ yīliú de dàxué.^นี่เป็นมหาวิทยาลัยชั้นนำ^high^
+B5-0884^adverb@L^medium^ตามกฎหมาย^我们要依法办事。^Wǒmen yào yīfǎ bànshì.^พวกเราต้องดำเนินการตามกฎหมาย^medium^source_gloss: "legal" is adjectival; 依法 is an adverbial phrase "in accordance with the law"
+B5-0885^adverb@E^high^ยังคง^多年不见，他依旧那么年轻。^Duō nián bú jiàn, tā yījiù nàme niánqīng.^ไม่ได้เจอกันหลายปี เขายังคงดูหนุ่มเหมือนเดิม^high^
+B5-0886^noun@E^medium^หลักฐาน; พื้นฐาน; อ้างอิง^你这样说有什么依据？^Nǐ zhèyàng shuō yǒu shénme yījù?^คุณพูดแบบนี้มีหลักฐานอะไร?^medium^polysemy: noun "basis; grounds" vs. preposition "according to" (依据规定)
+B5-0887^preposition@E^high^ตาม^请依照说明书使用。^Qǐng yīzhào shuōmíngshū shǐyòng.^กรุณาใช้งานตามคู่มือ^high^
+B5-0888^noun@E^high^ชั่วชีวิต^我一辈子都不会忘记你。^Wǒ yíbèizi dōu bú huì wàngjì nǐ.^ฉันจะไม่ลืมคุณไปชั่วชีวิต^high^
+B5-0889^noun@E^high^แถบ; บริเวณ^这一带有很多饭馆。^Zhè yídài yǒu hěn duō fànguǎn.^แถบนี้มีร้านอาหารมากมาย^high^
+B5-0890^conjunction@L^medium^เมื่อใดที่; หากว่า^一旦发生火灾，要马上报警。^Yídàn fāshēng huǒzāi, yào mǎshàng bàojǐng.^หากเกิดไฟไหม้ ต้องแจ้งตำรวจทันที^medium^pos_doubtful: 一旦 is adverb/conjunction "once; in case" and noun "one day"
+B5-0891^other^low^พูดง่ายๆ; โดยสรุป; หนึ่งประโยค^一句话，我不同意。^Yí jù huà, wǒ bù tóngyì.^พูดง่ายๆ คือฉันไม่เห็นด้วย^medium^polysemy: discourse "in a word" vs. literal "one sentence"; pos_doubtful: phrase
+B5-0892^adverb@L^medium^ตลอดทาง; ไปทางเดียวกัน^他一路上都在唱歌。^Tā yílù shang dōu zài chànggē.^เขาร้องเพลงตลอดทาง^medium^polysemy: "all the way" vs. "take the same route" (我们一路走); pos_doubtful
+B5-0894^adverb@L^medium^ทันทีทันใด; ชั่วครู่^他一下子就明白了。^Tā yíxiàzi jiù míngbai le.^เขาเข้าใจทันที^medium^polysemy: "all of a sudden; at once" vs. "for a while"
+B5-0895^adverb@E^high^เสมอมา; ตลอดมา^他一向很准时。^Tā yíxiàng hěn zhǔnshí.^เขาตรงต่อเวลาเสมอมา^high^
+B5-0896^noun@E^high^ที่สอง; ลำดับที่สอง (อี่)^甲队和乙队进行比赛。^Jiǎ duì hé yǐ duì jìnxíng bǐsài.^ทีม ก. แข่งกับทีม ข.^medium^polysemy: ordinal "second; B" vs. "second Heavenly Stem"
+B5-0897^conjunction@E^high^เพื่อที่จะ^请留下电话，以便联系。^Qǐng liúxià diànhuà, yǐbiàn liánxì.^กรุณาให้เบอร์โทรไว้ เพื่อที่จะติดต่อได้^high^
+B5-0898^noun@E^high^ในอดีต; แต่ก่อน^今年的收入比以往高。^Jīnnián de shōurù bǐ yǐwǎng gāo.^รายได้ปีนี้สูงกว่าในอดีต^high^
+B5-0899^adverb@L^medium^รวดเดียว; ลมหายใจเดียว^他一口气跑到了山顶。^Tā yìkǒuqì pǎo dào le shāndǐng.^เขาวิ่งรวดเดียวถึงยอดเขา^medium^polysemy: "one breath" (noun) vs. "in one go" (adverbial); example shows adverbial
+B5-0900^noun@E^high^ทั้งตัว^他淋了一身雨。^Tā lín le yì shēn yǔ.^เขาเปียกฝนไปทั้งตัว^medium^polysemy: "the whole body" vs. measure "a suit of (clothes)" (一身衣服)
+B5-0901^noun@E^medium^จิตสำนึก; ตระหนัก^我们要有环保意识。^Wǒmen yào yǒu huánbǎo yìshi.^พวกเราต้องมีจิตสำนึกด้านสิ่งแวดล้อม^medium^pos_doubtful: 意识 is both noun "consciousness; awareness" and verb "realize" (意识到)
+B5-0902^verb@E^high^หมายความว่า; บ่งบอก^这意味着我们要更加努力。^Zhè yìwèizhe wǒmen yào gèngjiā nǔlì.^นี่หมายความว่าพวกเราต้องพยายามมากขึ้น^high^
+B5-0903^noun@E^high^เจตจำนง; ความมุ่งมั่น^他有很强的意志。^Tā yǒu hěn qiáng de yìzhì.^เขามีเจตจำนงที่แข็งแกร่งมาก^medium^source_gloss: English "will" is ambiguous (future marker); 意志 = willpower
+B5-0904^conjunction@E^high^ดังนั้น; จึง^他很努力，因而进步很快。^Tā hěn nǔlì, yīn'ér jìnbù hěn kuài.^เขาขยันมาก จึงก้าวหน้าเร็ว^high^
+B5-0905^noun@E^high^เครื่องดื่ม^你想喝什么饮料？^Nǐ xiǎng hē shénme yǐnliào?^คุณอยากดื่มเครื่องดื่มอะไร?^high^
+B5-0906^noun@E^high^อาหารการกิน^我们要注意饮食健康。^Wǒmen yào zhùyì yǐnshí jiànkāng.^พวกเราต้องใส่ใจเรื่องอาหารการกินเพื่อสุขภาพ^high^
+B5-0907^verb@L^medium^พิมพ์ (สิ่งพิมพ์)^这本书印刷得很好。^Zhè běn shū yìnshuā de hěn hǎo.^หนังสือเล่มนี้พิมพ์ได้ดีมาก^medium^pos_doubtful: gloss "printing" is a noun; 印刷 is both verb and noun
+B5-0908^verb@E^low^ตอบรับ; เห็นด้วย; ควร^他应了一声就走了。^Tā yìng le yì shēng jiù zǒu le.^เขาขานรับคำหนึ่งแล้วก็ไป^low^variant: same form/gloss as B4-0885 (应 "should; answer"); merges 应 yīng (should) and 应 yìng (answer) under pinyin yīng; example shows yìng "answer"
+B5-0909^adjective@E^high^แข็ง^这个面包太硬了。^Zhège miànbāo tài yìng le.^ขนมปังนี้แข็งเกินไป^medium^polysemy: adjective "hard" vs. adverb "manage with difficulty; obstinately" (硬撑)
+B5-0910^noun@E^high^ฮาร์ดแวร์^电脑硬件出了问题。^Diànnǎo yìngjiàn chū le wèntí.^ฮาร์ดแวร์คอมพิวเตอร์มีปัญหา^high^
+B5-0911^verb@E^high^สวมกอด^妈妈紧紧地拥抱了我。^Māma jǐnjǐn de yōngbào le wǒ.^แม่กอดฉันไว้แน่น^high^
+B5-0912^verb@E^high^ครอบครอง; มี^他拥有一家大公司。^Tā yōngyǒu yì jiā dà gōngsī.^เขาเป็นเจ้าของบริษัทใหญ่แห่งหนึ่ง^high^
+B5-0913^verb@L^medium^ไม่จำเป็นต้อง; ไม่ได้ใช้^这些东西用不着了，扔了吧。^Zhèxiē dōngxi yòngbuzháo le, rēng le ba.^ของพวกนี้ไม่ได้ใช้แล้ว ทิ้งเถอะ^medium^polysemy: "no need to" vs. "have no use for"; example shows the latter
+B5-0914^noun@E^high^ผู้ใช้^这个软件有很多用户。^Zhège ruǎnjiàn yǒu hěn duō yònghù.^ซอฟต์แวร์นี้มีผู้ใช้มากมาย^high^
+B5-0915^verb@E^high^ใช้สำหรับ^这个房间用来开会。^Zhège fángjiān yònglái kāihuì.^ห้องนี้ใช้สำหรับประชุม^high^
+B5-0916^verb@E^high^ใช้ใน; ใช้กับ^这笔钱用于建学校。^Zhè bǐ qián yòngyú jiàn xuéxiào.^เงินก้อนนี้ใช้สร้างโรงเรียน^high^
+B5-0917^adjective@E^high^พิเศษ (ส่วนลด); ได้สิทธิพิเศษ^现在买有优惠。^Xiànzài mǎi yǒu yōuhuì.^ซื้อตอนนี้มีส่วนลดพิเศษ^medium^polysemy: adjective "preferential" vs. noun "discount; offer"
+B5-0918^verb@L^medium^ให้ความสำคัญก่อน; มาก่อน^老人和孩子优先上车。^Lǎorén hé háizi yōuxiān shàng chē.^ผู้สูงอายุและเด็กขึ้นรถก่อน^medium^source_gloss: "first" is loose; 优先 means "have priority; take precedence"
+B5-0919^adjective@L^medium^มีอารมณ์ขัน^他是一个很幽默的人。^Tā shì yí ge hěn yōumò de rén.^เขาเป็นคนมีอารมณ์ขันมาก^medium^source_gloss: "Humor" is a noun; 幽默 is mainly the adjective "humorous"
+B5-0920^adverb@E^high^โดยเฉพาะ^我喜欢水果，尤其是苹果。^Wǒ xǐhuan shuǐguǒ, yóuqí shì píngguǒ.^ฉันชอบผลไม้ โดยเฉพาะแอปเปิล^high^
+B5-0921^adverb@L^medium^จากนี้; ด้วยเหตุนี้^由此可见，他是对的。^Yóu cǐ kě jiàn, tā shì duì de.^จากนี้เห็นได้ว่าเขาถูก^medium^pos_doubtful: prepositional phrase (由 + 此) used adverbially
+B5-0922^verb@E^high^ลังเล^他犹豫了一下，还是答应了。^Tā yóuyù le yí xià, háishi dāying le.^เขาลังเลอยู่ครู่หนึ่ง แต่สุดท้ายก็ตกลง^high^
+B5-0923^noun@E^high^สระว่ายน้ำ^学校有一个游泳池。^Xuéxiào yǒu yí ge yóuyǒngchí.^โรงเรียนมีสระว่ายน้ำหนึ่งสระ^high^
+B5-0924^noun@E^high^มิตรภาพ^我们的友谊很深。^Wǒmen de yǒuyì hěn shēn.^มิตรภาพของเราลึกซึ้งมาก^high^
+B5-0925^adjective@E^high^มีพิษ^这种植物有毒。^Zhè zhǒng zhíwù yǒu dú.^พืชชนิดนี้มีพิษ^high^
+B5-0926^adjective@E^high^เป็นอันตราย^抽烟对身体有害。^Chōuyān duì shēntǐ yǒuhài.^การสูบบุหรี่เป็นอันตรายต่อร่างกาย^high^
+B5-0927^adjective@E^high^ทรงพลัง; หนักแน่น^他的发言很有力。^Tā de fāyán hěn yǒulì.^คำกล่าวของเขาหนักแน่นมาก^high^
+B5-0928^verb@E^high^เป็นประโยชน์ต่อ^多运动有利于健康。^Duō yùndòng yǒulìyú jiànkāng.^การออกกำลังกายมากๆ เป็นประโยชน์ต่อสุขภาพ^high^
+B5-0929^verb@E^high^มี (ภาษาเขียน)^中国有着悠久的历史。^Zhōngguó yǒuzhe yōujiǔ de lìshǐ.^จีนมีประวัติศาสตร์อันยาวนาน^high^
+B5-0930^noun@E^high^แบดมินตัน^我们去打羽毛球吧。^Wǒmen qù dǎ yǔmáoqiú ba.^พวกเราไปตีแบดมินตันกันเถอะ^high^
+B5-0931^noun@E^high^เสื้อขนเป็ด^冬天我穿羽绒服。^Dōngtiān wǒ chuān yǔróngfú.^ฤดูหนาวฉันใส่เสื้อขนเป็ด^high^
+B5-0932^noun@E^high^น้ำฝน^今年的雨水很多。^Jīnnián de yǔshuǐ hěn duō.^ปีนี้ฝนตกมาก^medium^variant: 雨水 is also the solar term "Rain Water" (二十四节气)
+B5-0933^verb@E^medium^เตรียม; การเตรียมการ^预备，开始！^Yùbèi, kāishǐ!^เตรียมตัว เริ่ม!^medium^pos_doubtful: 预备 is verb "prepare" and noun "preparation"; example shows the command use
+B5-0934^verb@E^high^คาดหวัง; คาดการณ์^结果比预期的好。^Jiéguǒ bǐ yùqī de hǎo.^ผลลัพธ์ดีกว่าที่คาดไว้^high^
+B5-0935^noun@E^high^วันขึ้นปีใหม่ (1 มกราคม)^元旦我们放三天假。^Yuándàn wǒmen fàng sān tiān jià.^วันขึ้นปีใหม่พวกเราหยุดสามวัน^medium^source_gloss: source pinyin "uándàn" is missing the initial y (yuándàn); source not changed
+B5-0936^noun@E^high^อุทยาน; สวน^苏州的园林很有名。^Sūzhōu de yuánlín hěn yǒumíng.^สวนของซูโจวมีชื่อเสียงมาก^high^
+B5-0937^noun@E^high^หลักการ^你懂这个原理吗？^Nǐ dǒng zhège yuánlǐ ma?^คุณเข้าใจหลักการนี้ไหม?^high^
+B5-0938^adjective@E^medium^ดั้งเดิม; ปฐมภูมิ; บรรพกาล^这是一片原始森林。^Zhè shì yí piàn yuánshǐ sēnlín.^นี่เป็นป่าดึกดำบรรพ์^medium^source_gloss: "Original" is loose; 原始 means "primitive; primeval; firsthand (data)"
+B5-0939^noun@L^medium^เดิมที; แต่ก่อน^原先这里是一片农田。^Yuánxiān zhèlǐ shì yí piàn nóngtián.^แต่ก่อนที่นี่เป็นทุ่งนา^medium^source_gloss: "Original" is adjectival; 原先 is a time noun/adverb "formerly"
+B5-0940^adjective@L^medium^ที่มีอยู่เดิม^我们要保护原有的建筑。^Wǒmen yào bǎohù yuányǒu de jiànzhù.^พวกเราต้องอนุรักษ์อาคารที่มีอยู่เดิม^high^
+B5-0941^noun@E^high^ที่ไกลๆ^远处有一座山。^Yuǎnchù yǒu yí zuò shān.^ไกลออกไปมีภูเขาอยู่ลูกหนึ่ง^high^
+B5-0942^verb@E^high^โทษ; บ่น; ความแค้น^这件事不能怨他。^Zhè jiàn shì bù néng yuàn tā.^เรื่องนี้จะโทษเขาไม่ได้^medium^polysemy: verb "blame; complain" vs. noun "resentment; enmity"
+B5-0943^noun@E^medium^ความปรารถนา; ยินดี; ปรารถนา^祝你心愿成真。^Zhù nǐ xīnyuàn chéng zhēn.^ขอให้ความปรารถนาของคุณเป็นจริง^low^polysemy: noun "wish; hope" vs. auxiliary "be willing"; example: bare 愿 is bound/literary, sentence uses 心愿
+B5-0944^verb@E^medium^ผูกมัด; ควบคุม; ข้อจำกัด^我们要约束自己的行为。^Wǒmen yào yuēshù zìjǐ de xíngwéi.^พวกเราต้องควบคุมพฤติกรรมของตนเอง^medium^pos_doubtful: 约束 is both verb "restrain" and noun "restraint"
+B5-0945^noun@E^high^ขนมไหว้พระจันทร์^中秋节我们吃月饼。^Zhōngqiū Jié wǒmen chī yuèbǐng.^เทศกาลไหว้พระจันทร์พวกเรากินขนมไหว้พระจันทร์^high^
+B5-0946^noun@E^high^ดวงจันทร์ (ทางดาราศาสตร์)^人类已经登上了月球。^Rénlèi yǐjīng dēngshàng le yuèqiú.^มนุษย์ได้เหยียบดวงจันทร์แล้ว^high^
+B5-0947^noun@E^high^ห้องอ่านหนังสือ^图书馆的阅览室很安静。^Túshūguǎn de yuèlǎnshì hěn ānjìng.^ห้องอ่านหนังสือของห้องสมุดเงียบมาก^high^
+B5-0948^verb@E^high^ขนส่ง; ดวง; โชค^这些货物要运到上海。^Zhèxiē huòwù yào yùn dào Shànghǎi.^สินค้าเหล่านี้ต้องขนส่งไปเซี่ยงไฮ้^low^polysemy: verb "transport; carry; wield" vs. noun "luck; fortune" — unrelated senses; example shows "transport"
+B5-0949^verb@E^high^ทำงาน; เดินเครื่อง; โคจร^这台机器运行正常。^Zhè tái jīqì yùnxíng zhèngcháng.^เครื่องนี้ทำงานปกติ^medium^polysemy: "run (machine/system)" vs. "move along an orbit"
+B5-0950^noun@E^high^ภัยพิบัติ^今年这里遭了灾。^Jīnnián zhèlǐ zāo le zāi.^ปีนี้ที่นี่ประสบภัยพิบัติ^high^
+B5-0951^noun@E^high^ภัยพิบัติ^台风是一种自然灾害。^Táifēng shì yì zhǒng zìrán zāihài.^พายุไต้ฝุ่นเป็นภัยธรรมชาติชนิดหนึ่ง^high^
+B5-0952^noun@E^high^หายนะ; ภัยพิบัติ^这场战争给人们带来了灾难。^Zhè chǎng zhànzhēng gěi rénmen dàilai le zāinàn.^สงครามครั้งนี้นำหายนะมาสู่ผู้คน^high^
+B5-0953^noun@E^high^พื้นที่ประสบภัย^很多志愿者去了灾区。^Hěn duō zhìyuànzhě qù le zāiqū.^อาสาสมัครจำนวนมากไปยังพื้นที่ประสบภัย^high^
+B5-0954^adverb@E^high^อีกครั้ง^再次感谢大家的帮助。^Zàicì gǎnxiè dàjiā de bāngzhù.^ขอบคุณทุกคนอีกครั้งสำหรับความช่วยเหลือ^high^
+B5-0955^adverb@L^medium^ไม่...อีกเลย^他走了以后，再也没回来。^Tā zǒu le yǐhòu, zài yě méi huílai.^หลังจากเขาไป ก็ไม่ได้กลับมาอีกเลย^medium^pos_doubtful: 再也 is an adverb combination used only with negation
