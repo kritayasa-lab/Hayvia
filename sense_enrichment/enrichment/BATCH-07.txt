@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B2-0005^adjective@L^medium^ปลอดภัย; ความปลอดภัย^晚上一个人回家不太安全。^Wǎnshang yí ge rén huí jiā bú tài ānquán.^กลับบ้านคนเดียวตอนกลางคืนไม่ค่อยปลอดภัย^medium^pos_doubtful: gloss "security" is a noun, but 安全 is used mainly as the adjective "safe"
+B2-0006^noun@E^high^สีขาว^我喜欢白色。^Wǒ xǐhuan báisè.^ฉันชอบสีขาว^high^
+B2-0007^noun@E^high^หัวหน้าห้อง; หัวหน้าหมู่^他是我们的班长。^Tā shì wǒmen de bānzhǎng.^เขาเป็นหัวหน้าห้องของพวกเรา^high^
+B2-0008^verb@E^high^ทำ; จัดการ^这件事我来办。^Zhè jiàn shì wǒ lái bàn.^เรื่องนี้ฉันจัดการเอง^high^
+B2-0009^noun@E^high^วิธี; วิธีการ^我有一个好办法。^Wǒ yǒu yí ge hǎo bànfǎ.^ฉันมีวิธีดีๆ อยู่วิธีหนึ่ง^high^
+B2-0010^noun@E^high^สำนักงาน; ห้องทำงาน^王老师在办公室。^Wáng lǎoshī zài bàngōngshì.^ครูหวังอยู่ที่ห้องทำงาน^high^
+B2-0011^noun@E^high^กลางดึก; เที่ยงคืน^他半夜才回家。^Tā bànyè cái huí jiā.^เขากลับบ้านตอนกลางดึก^high^
+B2-0012^verb@E^medium^ช่วยเหลือ; ความช่วยเหลือ^谢谢你帮助我。^Xièxie nǐ bāngzhù wǒ.^ขอบคุณที่ช่วยเหลือฉัน^medium^pos_doubtful: "Help" is both verb and noun (得到帮助); example shows the verb
+B2-0013^adjective@E^high^อิ่ม^我吃饱了。^Wǒ chī bǎo le.^ฉันกินอิ่มแล้ว^high^
+B2-0014^verb@E^high^ลงทะเบียน; สมัคร^我报名参加了比赛。^Wǒ bàomíng cānjiā le bǐsài.^ฉันสมัครเข้าร่วมการแข่งขันแล้ว^high^
+B2-0015^noun@E^high^หนังสือพิมพ์^爸爸在看报纸。^Bàba zài kàn bàozhǐ.^พ่อกำลังอ่านหนังสือพิมพ์^high^
+B2-0016^noun@E^high^ภาคเหนือ; ทางเหนือ^北方的冬天很冷。^Běifāng de dōngtiān hěn lěng.^ฤดูหนาวทางภาคเหนือหนาวมาก^high^
+B2-0018^conjunction@L^medium^เช่น; ยกตัวอย่างเช่น^我喜欢很多水果，比如苹果和香蕉。^Wǒ xǐhuan hěn duō shuǐguǒ, bǐrú píngguǒ hé xiāngjiāo.^ฉันชอบผลไม้หลายอย่าง เช่น แอปเปิลและกล้วย^high^
+B2-0019^conjunction@L^medium^ยกตัวอย่างเช่น^比如说，你可以坐地铁去。^Bǐrú shuō, nǐ kěyǐ zuò dìtiě qù.^ยกตัวอย่างเช่น คุณนั่งรถไฟใต้ดินไปก็ได้^high^
+B2-0020^noun@E^high^ปากกา; เครื่องเขียน^我的笔不见了。^Wǒ de bǐ bú jiàn le.^ปากกาของฉันหายไป^high^
+B2-0021^noun@E^high^บันทึก; โน้ต^上课的时候要记笔记。^Shàngkè de shíhou yào jì bǐjì.^ระหว่างเรียนต้องจดบันทึก^high^
+B2-0022^noun@E^high^สมุดบันทึก; โน้ตบุ๊ก^我买了一个新笔记本。^Wǒ mǎi le yí ge xīn bǐjìběn.^ฉันซื้อสมุดบันทึกเล่มใหม่^medium^polysemy: 笔记本 is both "notebook (paper)" and "laptop"; example ambiguous between them
+B2-0023^adverb@L^high^ต้อง; จำเป็นต้อง^你必须早点儿来。^Nǐ bìxū zǎo diǎnr lái.^คุณต้องมาเร็วหน่อย^high^
+B2-0024^noun@E^high^ข้าง; ด้าน; ขอบ^河边有很多树。^Hé biān yǒu hěn duō shù.^ริมแม่น้ำมีต้นไม้มากมาย^high^
+B2-0025^verb@E^high^เปลี่ยน; เปลี่ยนแปลง^你变了很多。^Nǐ biàn le hěn duō.^คุณเปลี่ยนไปมาก^high^
+B2-0026^verb@E^high^กลายเป็น; เปลี่ยนเป็น^天气变成了晴天。^Tiānqì biànchéng le qíngtiān.^อากาศเปลี่ยนเป็นท้องฟ้าแจ่มใส^high^
+B2-0027^measure_word@L^high^รอบ; เที่ยว; ครั้ง (ตั้งแต่ต้นจนจบ)^这本书我看了两遍。^Zhè běn shū wǒ kàn le liǎng biàn.^หนังสือเล่มนี้ฉันอ่านมาสองรอบ^high^
+B2-0028^noun@E^high^นาฬิกาข้อมือ; ตาราง^我的表慢了五分钟。^Wǒ de biǎo màn le wǔ fēnzhōng.^นาฬิกาของฉันช้าไปห้านาที^medium^polysemy: 表 is also "form; table (chart)"; gloss gives only "watch"
+B2-0029^verb@E^high^แสดง; แสดงออก^他点头表示同意。^Tā diǎntóu biǎoshì tóngyì.^เขาพยักหน้าแสดงว่าเห็นด้วย^high^
+B2-0030^adjective@E^high^ไม่เลว; ดีทีเดียว^你的汉语说得很不错。^Nǐ de Hànyǔ shuō de hěn búcuò.^คุณพูดภาษาจีนได้ดีทีเดียว^high^
+B2-0031^conjunction@E^high^ไม่เพียงแต่^他不但会说汉语，还会说日语。^Tā búdàn huì shuō Hànyǔ, hái huì shuō Rìyǔ.^เขาไม่เพียงแต่พูดภาษาจีนได้ ยังพูดภาษาญี่ปุ่นได้ด้วย^high^
+B2-0032^adjective@E^medium^ไม่พอ^我的钱不够。^Wǒ de qián bú gòu.^เงินของฉันไม่พอ^high^
+B2-0033^conjunction@E^high^แต่; อย่างไรก็ตาม^这件衣服很好看，不过有点儿贵。^Zhè jiàn yīfu hěn hǎokàn, búguò yǒudiǎnr guì.^เสื้อตัวนี้สวยมาก แต่แพงไปหน่อย^high^
+B2-0034^adverb@E^high^ไม่ค่อย^我不太喜欢吃辣的。^Wǒ bú tài xǐhuan chī là de.^ฉันไม่ค่อยชอบกินเผ็ด^high^
+B2-0035^adverb@E^high^อย่า^上课不要玩手机。^Shàngkè búyào wán shǒujī.^ระหว่างเรียนอย่าเล่นโทรศัพท์^medium^polysemy: 不要 is also "not want" (我不要这个); gloss gives "don't"
+B2-0036^adjective@L^medium^ขอโทษ; รู้สึกเกรงใจ/อาย^不好意思，我来晚了。^Bù hǎoyìsi, wǒ lái wǎn le.^ขอโทษนะ ฉันมาสาย^medium^polysemy: apology "sorry" vs. "feel embarrassed" combined; pos_doubtful: set expression
+B2-0037^adjective@L^medium^ไม่นาน; ไม่ช้า^不久以后，他就回来了。^Bùjiǔ yǐhòu, tā jiù huílai le.^ไม่นานหลังจากนั้น เขาก็กลับมา^high^
+B2-0038^adjective@E^high^ไม่พอใจ^他对这个结果很不满。^Tā duì zhège jiéguǒ hěn bùmǎn.^เขาไม่พอใจกับผลลัพธ์นี้มาก^high^
+B2-0039^verb@L^medium^สู้ไม่ได้; ไม่ดีเท่า^坐公交车不如坐地铁快。^Zuò gōngjiāochē bùrú zuò dìtiě kuài.^นั่งรถเมล์ไม่เร็วเท่านั่งรถไฟใต้ดิน^high^
+B2-0040^adjective@E^high^ไม่น้อย; มากมาย^今天来了不少人。^Jīntiān lái le bù shǎo rén.^วันนี้มีคนมาไม่น้อย^high^
+B2-0041^adjective@E^high^แตกต่าง; ไม่เหมือนกัน^我们的想法不同。^Wǒmen de xiǎngfǎ bùtóng.^ความคิดของพวกเราแตกต่างกัน^high^
+B2-0042^adjective@L^medium^ไม่ได้; ไม่ไหว^A：我可以用你的电脑吗？B：不行。^A: Wǒ kěyǐ yòng nǐ de diànnǎo ma? B: Bùxíng.^A: ฉันขอใช้คอมพิวเตอร์ของคุณได้ไหม? B: ไม่ได้^medium^pos_doubtful: no source POS; response formula, could be verb or adjective
+B2-0043^adverb@L^medium^ไม่แน่เสมอไป; ไม่แน่นอน^他不一定会来。^Tā bù yídìng huì lái.^เขาไม่แน่ว่าจะมา^high^
+B2-0044^adverb@L^medium^ไม่นาน; ครู่เดียว^不一会儿，雨就停了。^Bù yíhuìr, yǔ jiù tíng le.^ไม่นานนัก ฝนก็หยุดตก^high^
+B2-0045^noun@E^high^ส่วน; บางส่วน^这部分内容很重要。^Zhè bùfen nèiróng hěn zhòngyào.^เนื้อหาส่วนนี้สำคัญมาก^high^
+B2-0047^noun@E^high^เมนู; รายการอาหาร^服务员，请给我菜单。^Fúwùyuán, qǐng gěi wǒ càidān.^พนักงานครับ ขอเมนูหน่อย^high^
+B2-0048^verb@E^high^เยี่ยมชม; ทัศนศึกษา^我们明天去参观博物馆。^Wǒmen míngtiān qù cānguān bówùguǎn.^พรุ่งนี้พวกเราจะไปเยี่ยมชมพิพิธภัณฑ์^high^
+B2-0049^verb@E^high^เข้าร่วม^你参加明天的会吗？^Nǐ cānjiā míngtiān de huì ma?^คุณจะเข้าร่วมประชุมพรุ่งนี้ไหม?^high^
+B2-0050^noun@E^high^หญ้า^地上的草很绿。^Dì shang de cǎo hěn lǜ.^หญ้าบนพื้นเขียวมาก^high^
+B2-0051^noun@E^high^สนามหญ้า; ทุ่งหญ้า^孩子们在草地上玩儿。^Háizimen zài cǎodì shang wánr.^เด็กๆ เล่นอยู่บนสนามหญ้า^high^
+B2-0052^measure_word@L^medium^ชั้น^这座楼有二十层。^Zhè zuò lóu yǒu èrshí céng.^ตึกนี้มียี่สิบชั้น^medium^pos_doubtful: gloss "layer" reads as noun; 层 is mostly a measure word (floors, layers)
+B2-0053^verb@E^high^ค้นหา; ตรวจสอบ^我查一下明天的天气。^Wǒ chá yí xià míngtiān de tiānqì.^ฉันขอเช็กสภาพอากาศพรุ่งนี้หน่อย^high^
+B2-0054^adverb@E^medium^เกือบ; พอๆ กัน^我们差不多到了。^Wǒmen chàbuduō dào le.^พวกเราเกือบจะถึงแล้ว^medium^polysemy: adverb "almost" vs. adjective "about the same"; example shows "almost"
+B2-0055^adjective@E^high^ยาว^她的头发很长。^Tā de tóufa hěn cháng.^ผมของเธอยาวมาก^high^
+B2-0056^adjective@E^high^พบเห็นบ่อย; ทั่วไป^这是一种常见的病。^Zhè shì yì zhǒng chángjiàn de bìng.^นี่เป็นโรคที่พบบ่อยชนิดหนึ่ง^high^
+B2-0057^adjective@E^high^ใช้บ่อย; ใช้กันทั่วไป^这些是常用的汉字。^Zhèxiē shì chángyòng de Hànzì.^พวกนี้เป็นอักษรจีนที่ใช้บ่อย^high^
+B2-0058^noun@E^low^สนาม; สถานที่; รอบ (ลักษณนาม)^我们去看了一场电影。^Wǒmen qù kàn le yì chǎng diànyǐng.^พวกเราไปดูหนังมาหนึ่งรอบ^low^source_gloss: gloss "site" omits the common measure-word use (一场比赛/电影); pos_doubtful: noun vs. measure word; example shows measure word
+B2-0059^verb@E^high^เกิน; เหนือกว่า^今天的温度超过了三十度。^Jīntiān de wēndù chāoguò le sānshí dù.^อุณหภูมิวันนี้เกินสามสิบองศา^high^
+B2-0060^noun@E^high^ซูเปอร์มาร์เก็ต^我去超市买水果。^Wǒ qù chāoshì mǎi shuǐguǒ.^ฉันไปซื้อผลไม้ที่ซูเปอร์มาร์เก็ต^high^
+B2-0061^noun@E^high^ยานพาหนะ; รถ^路上的车辆很多。^Lù shang de chēliàng hěn duō.^บนถนนมีรถมาก^high^
+B2-0064^noun@E^high^ผลการเรียน; คะแนน; ผลงาน^他这次考试的成绩很好。^Tā zhè cì kǎoshì de chéngjì hěn hǎo.^ผลสอบครั้งนี้ของเขาดีมาก^medium^source_gloss: gloss "achievement" — at this level 成绩 mostly means "grades; results"
+B2-0065^verb@E^high^กลายเป็น; เป็น^他想成为一名医生。^Tā xiǎng chéngwéi yì míng yīshēng.^เขาอยากเป็นหมอ^high^
+B2-0066^verb@E^high^ทำซ้ำ; พูดซ้ำ^请你重复一遍。^Qǐng nǐ chóngfù yí biàn.^กรุณาพูดซ้ำอีกครั้ง^high^
+B2-0067^adverb@E^high^ใหม่; อีกครั้ง^这个字写错了，请重新写。^Zhège zì xiě cuò le, qǐng chóngxīn xiě.^ตัวอักษรนี้เขียนผิด กรุณาเขียนใหม่^high^
+B2-0068^verb@E^high^ออกเดินทาง^我们早上八点出发。^Wǒmen zǎoshang bā diǎn chūfā.^พวกเราออกเดินทางตอนแปดโมงเช้า^high^
+B2-0069^verb@E^high^ไปต่างประเทศ^她明年要出国留学。^Tā míngnián yào chūguó liúxué.^ปีหน้าเธอจะไปเรียนต่อต่างประเทศ^high^
+B2-0071^verb@E^high^ออกจากบ้าน; ออกไปข้างนอก^今天下雨，我不想出门。^Jīntiān xià yǔ, wǒ bù xiǎng chūmén.^วันนี้ฝนตก ฉันไม่อยากออกจากบ้าน^high^
+B2-0072^verb@E^medium^เกิด^我出生在北京。^Wǒ chūshēng zài Běijīng.^ฉันเกิดที่ปักกิ่ง^medium^pos_doubtful: gloss "Birth" is a noun, but 出生 is used mainly as the verb "be born"
+B2-0073^verb@E^high^ปรากฏ; เกิดขึ้น^天上出现了一道彩虹。^Tiān shang chūxiàn le yí dào cǎihóng.^บนท้องฟ้าปรากฏรุ้งกินน้ำ^high^
+B2-0074^verb@E^high^ออกจากโรงพยาบาล^他明天就可以出院了。^Tā míngtiān jiù kěyǐ chūyuàn le.^พรุ่งนี้เขาก็ออกจากโรงพยาบาลได้แล้ว^high^
+B2-0075^verb@E^high^ให้เช่า^这个房子出租。^Zhège fángzi chūzū.^บ้านหลังนี้ให้เช่า^medium^source_gloss: "rent" is ambiguous in English; 出租 means "rent out / let" (not "rent from")
+B2-0076^noun@E^high^รถแท็กซี่^我们坐出租车去机场吧。^Wǒmen zuò chūzūchē qù jīchǎng ba.^พวกเรานั่งแท็กซี่ไปสนามบินกันเถอะ^high^
+B2-0077^noun@E^high^เรือ^我们坐船去上海。^Wǒmen zuò chuán qù Shànghǎi.^พวกเรานั่งเรือไปเซี่ยงไฮ้^high^
+B2-0078^verb@E^high^เป่า; (ลม) พัด^风吹得我很冷。^Fēng chuī de wǒ hěn lěng.^ลมพัดจนฉันหนาวมาก^high^
+B2-0079^noun@E^high^เทศกาลตรุษจีน^春节的时候，大家都回家过年。^Chūnjié de shíhou, dàjiā dōu huí jiā guònián.^ช่วงตรุษจีน ทุกคนกลับบ้านไปฉลองปีใหม่^high^
+B2-0080^noun@E^high^ฤดูใบไม้ผลิ^春天来了，花都开了。^Chūntiān lái le, huā dōu kāi le.^ฤดูใบไม้ผลิมาแล้ว ดอกไม้บานหมดแล้ว^high^
+B2-0081^noun@E^high^คำ; ศัพท์^这个词是什么意思？^Zhège cí shì shénme yìsi?^คำนี้หมายความว่าอะไร?^high^
+B2-0082^noun@E^high^พจนานุกรม^我查了一下词典。^Wǒ chá le yí xià cídiǎn.^ฉันเปิดพจนานุกรมดูแล้ว^high^
+B2-0083^noun@E^high^คำศัพท์; ถ้อยคำ^请用这些词语造句。^Qǐng yòng zhèxiē cíyǔ zàojù.^กรุณาใช้คำศัพท์เหล่านี้แต่งประโยค^high^
+B2-0084^adverb@L^medium^ตั้งแต่เด็ก^我从小就喜欢唱歌。^Wǒ cóngxiǎo jiù xǐhuan chànggē.^ฉันชอบร้องเพลงมาตั้งแต่เด็ก^high^
+B2-0085^verb@E^high^รับปาก; ตกลง; สัญญา^他答应明天来帮我。^Tā dāying míngtiān lái bāng wǒ.^เขารับปากว่าพรุ่งนี้จะมาช่วยฉัน^high^
+B2-0086^verb@E^medium^ทำงานพิเศษ; ทำงานรับจ้าง^他暑假在饭店打工。^Tā shǔjià zài fàndiàn dǎgōng.^ช่วงปิดเทอมหน้าร้อนเขาทำงานพิเศษที่ร้านอาหาร^medium^source_gloss: "Work" is too general; 打工 means part-time / casual (often migrant) work
+B2-0087^verb@E^medium^วางแผน; ตั้งใจ; แผนการ^你打算什么时候去？^Nǐ dǎsuan shénme shíhou qù?^คุณวางแผนจะไปเมื่อไร?^medium^pos_doubtful: "Plan" is both verb and noun; example shows the verb
+B2-0088^verb@E^high^พิมพ์ (ด้วยเครื่องพิมพ์)^请帮我打印这份文件。^Qǐng bāng wǒ dǎyìn zhè fèn wénjiàn.^กรุณาช่วยพิมพ์เอกสารฉบับนี้ให้ฉันหน่อย^high^
+B2-0089^noun@L^medium^ส่วนใหญ่^大部分学生都来了。^Dàbùfen xuésheng dōu lái le.^นักเรียนส่วนใหญ่มากันหมดแล้ว^high^
+B2-0090^adverb@E^high^อย่างมาก; อย่างมหาศาล^这个办法大大提高了效率。^Zhège bànfǎ dàdà tígāo le xiàolǜ.^วิธีนี้ช่วยเพิ่มประสิทธิภาพได้อย่างมาก^high^
+B2-0091^noun@L^medium^ส่วนใหญ่; คนส่วนมาก^大多数人同意这个办法。^Dàduōshù rén tóngyì zhège bànfǎ.^คนส่วนใหญ่เห็นด้วยกับวิธีนี้^high^
+B2-0092^noun@E^high^ทะเล^我想去看大海。^Wǒ xiǎng qù kàn dàhǎi.^ฉันอยากไปดูทะเล^high^
+B2-0093^pronoun@L^high^ทุกคน^大家好！^Dàjiā hǎo!^สวัสดีทุกคน!^high^
+B2-0094^adjective@E^high^จำนวนมาก^他买了大量的水果。^Tā mǎi le dàliàng de shuǐguǒ.^เขาซื้อผลไม้มาจำนวนมาก^high^
+B2-0095^noun@E^high^ประตูใหญ่; ประตูหน้า^学校的大门开着。^Xuéxiào de dàmén kāi zhe.^ประตูใหญ่ของโรงเรียนเปิดอยู่^high^
+B2-0096^noun@E^high^ผู้ใหญ่^小孩儿要听大人的话。^Xiǎoháir yào tīng dàrén de huà.^เด็กต้องเชื่อฟังผู้ใหญ่^high^
+B2-0097^adverb@L^medium^เสียงดัง^请大声说。^Qǐng dàshēng shuō.^กรุณาพูดเสียงดังๆ^medium^pos_doubtful: gloss "loud" is adjectival; 大声 is mostly used adverbially ("loudly")
+B2-0098^noun@E^high^ขนาด^这双鞋大小正好。^Zhè shuāng xié dàxiǎo zhènghǎo.^รองเท้าคู่นี้ขนาดพอดี^high^
+B2-0099^noun@E^high^เสื้อโค้ท^天冷了，穿上大衣吧。^Tiān lěng le, chuānshang dàyī ba.^อากาศหนาวแล้ว ใส่เสื้อโค้ทเถอะ^high^
+B2-0100^noun@E^high^ธรรมชาติ^我们要保护大自然。^Wǒmen yào bǎohù dàzìrán.^พวกเราต้องปกป้องธรรมชาติ^high^
+B2-0101^noun@E^low^เข็มขัด; สายรัด^这条带子太长了。^Zhè tiáo dàizi tài cháng le.^สายรัดเส้นนี้ยาวเกินไป^low^source_gloss: gloss "belt" omits the core band-2 verb sense "bring; take along" (带来 is B2-0102); example uses 带子 because bare 带 rarely means "belt"
+B2-0102^verb@E^high^นำมา; พามา^他给我带来了一本书。^Tā gěi wǒ dàilai le yì běn shū.^เขานำหนังสือมาให้ฉันหนึ่งเล่ม^high^
+B2-0103^noun@E^medium^หน่วยงาน; ที่ทำงาน^你在哪个单位工作？^Nǐ zài nǎge dānwèi gōngzuò?^คุณทำงานอยู่หน่วยงานไหน?^medium^polysemy: 单位 is also "unit (of measurement)"; gloss "Company" is a loose rendering of "work unit"
+B2-0104^conjunction@E^high^แต่^他很累，但还在工作。^Tā hěn lèi, dàn hái zài gōngzuò.^เขาเหนื่อยมาก แต่ยังทำงานอยู่^high^
+B2-0105^conjunction@E^high^แต่; อย่างไรก็ตาม^我想去，但是没有时间。^Wǒ xiǎng qù, dànshì méiyǒu shíjiān.^ฉันอยากไป แต่ไม่มีเวลา^high^
+B2-0106^noun@E^high^ไข่^我早上吃了两个蛋。^Wǒ zǎoshang chī le liǎng ge dàn.^ตอนเช้าฉันกินไข่สองฟอง^high^
+B2-0107^preposition@L^medium^เมื่อ; ขณะที่^当我到家的时候，天已经黑了。^Dāng wǒ dào jiā de shíhou, tiān yǐjīng hēi le.^เมื่อฉันถึงบ้าน ฟ้าก็มืดแล้ว^medium^polysemy: 当 dāng also means "serve as; work as" (当老师), common at this level; gloss gives only "When"
+B2-0108^noun@E^high^ตอนนั้น; ในเวลานั้น^当时我不在家。^Dāngshí wǒ bú zài jiā.^ตอนนั้นฉันไม่อยู่บ้าน^high^
+B2-0109^verb@E^high^ล้ม; พังทลาย; ล้มเหลว^大风把树吹倒了。^Dà fēng bǎ shù chuī dǎo le.^ลมแรงพัดต้นไม้ล้ม^medium^polysemy: "fall, topple" and "fail" combined; example shows "topple"

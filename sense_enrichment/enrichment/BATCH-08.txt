@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B2-0110^adverb@L^medium^ทุกหนทุกแห่ง^春天到了，到处都是花。^Chūntiān dào le, dàochù dōu shì huā.^ฤดูใบไม้ผลิมาถึงแล้ว มีดอกไม้อยู่ทุกหนทุกแห่ง^high^
+B2-0111^verb@L^medium^กลับหัว; ทำให้กลับด้าน; เท (น้ำ)^这张画挂倒了。^Zhè zhāng huà guà dào le.^รูปภาพนี้แขวนกลับหัว^medium^pos_doubtful: gloss "inverted" is adjectival; 倒 dào is mainly a verb ("turn upside down; pour") and an adverb ("on the contrary")
+B2-0112^noun@E^high^ทาง; ถนน; เส้นทาง^山上有一条小道。^Shān shang yǒu yì tiáo xiǎo dào.^บนภูเขามีทางเดินเล็กๆ สายหนึ่ง^medium^polysemy: 道 is also a measure word (一道题) and verb "say" at higher levels; gloss gives "road; way; path"
+B2-0113^noun@E^medium^เหตุผล; หลักการ^你说的很有道理。^Nǐ shuō de hěn yǒu dàolǐ.^สิ่งที่คุณพูดมีเหตุผลมาก^medium^source_gloss: "truth" is loose; 道理 means "reason; sense; principle"
+B2-0114^noun@E^high^ถนน; เส้นทาง^这条道路很宽。^Zhè tiáo dàolù hěn kuān.^ถนนสายนี้กว้างมาก^high^
+B2-0115^verb@E^high^ได้; ได้รับ^他这次考试得了一百分。^Tā zhè cì kǎoshì dé le yì bǎi fēn.^การสอบครั้งนี้เขาได้หนึ่งร้อยคะแนน^high^
+B2-0116^verb@E^high^ได้ผลลัพธ์; สรุปได้^我们得出了一个结论。^Wǒmen déchū le yí ge jiélùn.^พวกเราได้ข้อสรุปมาข้อหนึ่ง^high^
+B2-0117^particle@L^medium^ถ้า...ละก็^明天下雨的话，我就不去了。^Míngtiān xià yǔ dehuà, wǒ jiù bú qù le.^ถ้าพรุ่งนี้ฝนตกละก็ ฉันจะไม่ไป^medium^pos_doubtful: clause-final conditional 的话 is classed variously as particle or conjunction
+B2-0118^particle@L^low^(คำช่วยเชื่อมกริยากับส่วนเสริมบอกระดับ/ผล)^他跑得很快。^Tā pǎo de hěn kuài.^เขาวิ่งเร็วมาก^low^source_gloss: "auxiliary verb" is wrong for 得 de; it is the structural particle introducing a complement (auxiliary 得 is děi "must")
+B2-0119^noun@E^high^โคมไฟ; ไฟ^请把灯打开。^Qǐng bǎ dēng dǎkāi.^กรุณาเปิดไฟ^high^
+B2-0120^particle@L^medium^เป็นต้น; และอื่นๆ^我喜欢苹果、香蕉等水果。^Wǒ xǐhuan píngguǒ, xiāngjiāo děng shuǐguǒ.^ฉันชอบผลไม้ เช่น แอปเปิล กล้วย เป็นต้น^medium^pos_doubtful: enumerative 等 is classed variously as particle or auxiliary
+B2-0121^verb@E^high^รอจนกระทั่ง; พอถึงตอนที่^等到明天再说吧。^Děngdào míngtiān zài shuō ba.^รอจนถึงพรุ่งนี้ค่อยว่ากันเถอะ^high^
+B2-0122^verb@E^high^เท่ากับ^一加一等于二。^Yī jiā yī děngyú èr.^หนึ่งบวกหนึ่งเท่ากับสอง^high^
+B2-0123^adjective@E^high^ต่ำ^这张桌子太低了。^Zhè zhāng zhuōzi tài dī le.^โต๊ะตัวนี้เตี้ยเกินไป^high^
+B2-0124^noun@E^high^โลก^地球是圆的。^Dìqiú shì yuán de.^โลกกลม^high^
+B2-0125^noun@E^high^รถไฟใต้ดิน^我每天坐地铁上班。^Wǒ měitiān zuò dìtiě shàngbān.^ฉันนั่งรถไฟใต้ดินไปทำงานทุกวัน^high^
+B2-0126^noun@E^high^สถานีรถไฟใต้ดิน^地铁站就在前边。^Dìtiězhàn jiù zài qiánbian.^สถานีรถไฟใต้ดินอยู่ข้างหน้านี่เอง^high^
+B2-0127^verb@E^high^พยักหน้า^他笑着点了点头。^Tā xiào zhe diǎn le diǎn tóu.^เขายิ้มพลางพยักหน้า^high^
+B2-0128^noun@E^high^ร้าน; ร้านค้า^这家店的东西很便宜。^Zhè jiā diàn de dōngxi hěn piányi.^ของในร้านนี้ราคาถูกมาก^high^
+B2-0129^verb@E^high^ตก; หล่น^书从桌子上掉下来了。^Shū cóng zhuōzi shang diào xiàlai le.^หนังสือหล่นลงมาจากโต๊ะ^high^
+B2-0130^noun@E^high^ทิศตะวันออกเฉียงเหนือ^哈尔滨在中国的东北。^Hā'ěrbīn zài Zhōngguó de dōngběi.^ฮาร์บินอยู่ทางตะวันออกเฉียงเหนือของจีน^high^
+B2-0131^noun@E^high^ทิศตะวันออก; ตะวันออก^太阳从东方升起。^Tàiyáng cóng dōngfāng shēngqǐ.^ดวงอาทิตย์ขึ้นทางทิศตะวันออก^high^
+B2-0132^noun@E^high^ทิศตะวันออกเฉียงใต้^福建在中国的东南。^Fújiàn zài Zhōngguó de dōngnán.^ฝูเจี้ยนอยู่ทางตะวันออกเฉียงใต้ของจีน^high^
+B2-0133^noun@E^high^ฤดูหนาว^北京的冬天常常下雪。^Běijīng de dōngtiān chángcháng xià xuě.^ฤดูหนาวที่ปักกิ่งหิมะตกบ่อย^high^
+B2-0134^verb@E^high^เข้าใจ^你懂我的意思吗？^Nǐ dǒng wǒ de yìsi ma?^คุณเข้าใจความหมายของฉันไหม?^high^
+B2-0135^verb@E^high^รู้; เข้าใจ; รู้จัก (ว่าควรทำ)^他懂得怎么照顾自己。^Tā dǒngde zěnme zhàogù zìjǐ.^เขารู้วิธีดูแลตัวเอง^high^
+B2-0136^noun@E^high^สัตว์^你喜欢什么动物？^Nǐ xǐhuan shénme dòngwù?^คุณชอบสัตว์อะไร?^high^
+B2-0137^noun@E^high^สวนสัตว์^周末我们去动物园吧。^Zhōumò wǒmen qù dòngwùyuán ba.^สุดสัปดาห์พวกเราไปสวนสัตว์กันเถอะ^high^
+B2-0138^noun@E^high^การออกเสียง; เสียงอ่าน^这个字有两个读音。^Zhège zì yǒu liǎng ge dúyīn.^ตัวอักษรนี้มีเสียงอ่านสองเสียง^high^
+B2-0139^measure_word@L^medium^องศา; ระดับ; ขีดจำกัด^今天三十五度，太热了。^Jīntiān sānshíwǔ dù, tài rè le.^วันนี้สามสิบห้าองศา ร้อนเกินไป^medium^polysemy: "degree" (unit) and "limit" combined; pos_doubtful: measure word vs. noun
+B2-0140^adjective@E^high^สั้น^她的头发很短。^Tā de tóufa hěn duǎn.^ผมของเธอสั้นมาก^high^
+B2-0141^noun@E^high^ข้อความสั้น; SMS^我给你发了一条短信。^Wǒ gěi nǐ fā le yì tiáo duǎnxìn.^ฉันส่งข้อความหาคุณไปหนึ่งข้อความ^high^
+B2-0142^measure_word@L^medium^ตอน; ช่วง; ท่อน (ลักษณนาม)^请读一下这段课文。^Qǐng dú yí xià zhè duàn kèwén.^กรุณาอ่านบทเรียนตอนนี้หน่อย^medium^pos_doubtful: gloss "paragraph" reads as noun; 段 is mostly a measure word (paragraph, section, period)
+B2-0143^noun@E^high^ทีม; แถว^我们队赢了。^Wǒmen duì yíng le.^ทีมของพวกเราชนะแล้ว^high^
+B2-0144^noun@E^high^หัวหน้าทีม; กัปตัน^他是我们的队长。^Tā shì wǒmen de duìzhǎng.^เขาเป็นกัปตันทีมของพวกเรา^high^
+B2-0145^preposition@L^low^ต่อ; กับ; หันหน้าไปทาง; ตรงข้าม; ตอบ^他对我很好。^Tā duì wǒ hěn hǎo.^เขาดีกับฉันมาก^low^polysemy: preposition "to; at" and verbs "face; be opposite; answer" combined; pos_doubtful: no source POS; example shows preposition "to"
+B2-0146^noun@E^high^บทสนทนา^请大家读一下这段对话。^Qǐng dàjiā dú yí xià zhè duàn duìhuà.^ขอให้ทุกคนอ่านบทสนทนานี้หน่อย^high^
+B2-0147^noun@E^high^ฝั่งตรงข้าม^银行在学校对面。^Yínháng zài xuéxiào duìmiàn.^ธนาคารอยู่ฝั่งตรงข้ามโรงเรียน^high^
+B2-0149^pronoun@L^medium^นานเท่าไร^你学汉语多久了？^Nǐ xué Hànyǔ duōjiǔ le?^คุณเรียนภาษาจีนมานานเท่าไรแล้ว?^high^
+B2-0150^adverb@L^medium^ช่าง...เหลือเกิน; แค่ไหน^这里的风景多么美啊！^Zhèlǐ de fēngjǐng duōme měi a!^ทิวทัศน์ที่นี่ช่างสวยเหลือเกิน!^medium^source_gloss: "what" is a loose gloss; 多么 is the exclamatory adverb "how (beautiful)!"
+B2-0151^noun@E^high^ส่วนมาก; เสียงข้างมาก^多数同学都同意。^Duōshù tóngxué dōu tóngyì.^เพื่อนนักเรียนส่วนมากเห็นด้วย^high^
+B2-0152^adjective@E^high^มีเมฆมาก^明天多云，不会下雨。^Míngtiān duōyún, bú huì xià yǔ.^พรุ่งนี้มีเมฆมาก ฝนจะไม่ตก^high^
+B2-0153^conjunction@E^high^และ; อีกทั้ง^这家饭馆的菜很好吃，而且很便宜。^Zhè jiā fànguǎn de cài hěn hǎochī, érqiě hěn piányi.^อาหารร้านนี้อร่อยมาก อีกทั้งยังราคาถูกด้วย^high^
+B2-0154^verb@E^high^ส่ง; ปล่อยออก^我给你发了一封电子邮件。^Wǒ gěi nǐ fā le yì fēng diànzǐ yóujiàn.^ฉันส่งอีเมลถึงคุณหนึ่งฉบับ^medium^polysemy: 发 also "issue; develop; get (a fever)"; gloss gives "send out"
+B2-0155^verb@E^high^พบ; ค้นพบ^我发现我的钱包不见了。^Wǒ fāxiàn wǒ de qiánbāo bú jiàn le.^ฉันพบว่ากระเป๋าสตางค์ของฉันหายไป^high^
+B2-0156^noun@E^high^ร้านอาหาร^学校旁边有一个小饭馆。^Xuéxiào pángbiān yǒu yí ge xiǎo fànguǎn.^ข้างโรงเรียนมีร้านอาหารเล็กๆ ร้านหนึ่ง^high^
+B2-0157^adjective@E^high^สะดวก^这里买东西很方便。^Zhèlǐ mǎi dōngxi hěn fāngbiàn.^ที่นี่ซื้อของสะดวกมาก^high^
+B2-0158^noun@E^high^บะหมี่กึ่งสำเร็จรูป^我晚饭吃了一包方便面。^Wǒ wǎnfàn chī le yì bāo fāngbiànmiàn.^มื้อเย็นฉันกินบะหมี่กึ่งสำเร็จรูปไปหนึ่งห่อ^high^
+B2-0159^noun@E^high^วิธี; วิธีการ^学习汉语有很多方法。^Xuéxí Hànyǔ yǒu hěn duō fāngfǎ.^การเรียนภาษาจีนมีหลายวิธี^high^
+B2-0160^noun@E^high^ด้าน; แง่มุม^在学习方面，他做得很好。^Zài xuéxí fāngmiàn, tā zuò de hěn hǎo.^ในด้านการเรียน เขาทำได้ดีมาก^high^
+B2-0161^noun@E^high^ทิศทาง^我们走错方向了。^Wǒmen zǒu cuò fāngxiàng le.^พวกเราเดินผิดทิศทางแล้ว^high^
+B2-0162^verb@E^high^วางลง; ปล่อยลง^请把东西放下。^Qǐng bǎ dōngxi fàngxia.^กรุณาวางของลง^high^
+B2-0163^verb@L^medium^วางใจ; ไม่ต้องห่วง^放心吧，我会照顾好自己的。^Fàngxīn ba, wǒ huì zhàogù hǎo zìjǐ de.^วางใจเถอะ ฉันจะดูแลตัวเองให้ดี^medium^source_gloss: gloss "Don't worry" is a usage; 放心 is the verb "feel relieved; be at ease"
+B2-0165^verb@E^high^แยก; แยกจากกัน^我们分开走吧。^Wǒmen fēnkāi zǒu ba.^พวกเราแยกกันไปเถอะ^high^
+B2-0166^noun@E^high^คะแนน; เศษส่วน^这次考试的分数很高。^Zhè cì kǎoshì de fēnshù hěn gāo.^คะแนนสอบครั้งนี้สูงมาก^medium^polysemy: "score; mark" and "fraction" (math) combined; example shows "score"
+B2-0167^noun@E^high^นาที^我等了你二十分钟。^Wǒ děng le nǐ èrshí fēnzhōng.^ฉันรอคุณมายี่สิบนาที^high^
+B2-0168^measure_word@L^low^ส่วน; ฉบับ; ชุด (ลักษณนาม)^我买了一份报纸。^Wǒ mǎi le yí fèn bàozhǐ.^ฉันซื้อหนังสือพิมพ์มาหนึ่งฉบับ^medium^source_gloss: gloss "share" reads as a noun; 份 is mostly a measure word (portion, copy); pos_doubtful: no source POS
+B2-0170^verb@L^medium^บริการ; การบริการ^这家饭店的服务很好。^Zhè jiā fàndiàn de fúwù hěn hǎo.^การบริการของร้านอาหารนี้ดีมาก^medium^pos_doubtful: gloss "service" and example are nominal, but 服务 is also a verb (为人民服务); normalized as verb per common dictionary label
+B2-0171^verb@E^high^ทบทวน^明天考试，今天晚上要复习。^Míngtiān kǎoshì, jīntiān wǎnshang yào fùxí.^พรุ่งนี้สอบ คืนนี้ต้องทบทวน^high^
+B2-0173^verb@E^high^เปลี่ยน; แก้ไข; ปรับปรุง^老师帮我改了作文。^Lǎoshī bāng wǒ gǎi le zuòwén.^ครูช่วยแก้เรียงความให้ฉัน^medium^polysemy: change / correct / revise / switch over combined; example shows "correct"
+B2-0174^verb@E^high^เปลี่ยนแปลง^这件事改变了他的生活。^Zhè jiàn shì gǎibiàn le tā de shēnghuó.^เรื่องนี้เปลี่ยนแปลงชีวิตของเขา^high^
+B2-0175^interjection@L^medium^ชนแก้ว^为我们的友谊干杯！^Wèi wǒmen de yǒuyì gānbēi!^ชนแก้วเพื่อมิตรภาพของพวกเรา!^medium^pos_doubtful: 干杯 is a verb ("drink a toast") used as an exclamation "Cheers!"
+B2-0176^verb@E^high^รู้สึก^我感到很高兴。^Wǒ gǎndào hěn gāoxìng.^ฉันรู้สึกดีใจมาก^high^
+B2-0177^verb@E^medium^ซาบซึ้ง; ประทับใจจนตื้นตัน^这个故事让我很感动。^Zhège gùshi ràng wǒ hěn gǎndòng.^เรื่องเล่านี้ทำให้ฉันซาบซึ้งใจมาก^high^
+B2-0178^verb@E^medium^รู้สึก; ความรู้สึก^我感觉有点儿冷。^Wǒ gǎnjué yǒudiǎnr lěng.^ฉันรู้สึกหนาวนิดหน่อย^medium^pos_doubtful: 感觉 is both verb "feel" and noun "feeling"; example shows the verb
+B2-0179^verb@E^high^ขอบคุณ^感谢你的帮助。^Gǎnxiè nǐ de bāngzhù.^ขอบคุณสำหรับความช่วยเหลือของคุณ^high^
+B2-0180^verb@E^high^ทำงาน (ใช้แรง)^他每天在地里干活儿。^Tā měitiān zài dì li gànhuór.^เขาทำงานในไร่ทุกวัน^high^
+B2-0181^adverb@E^high^เพิ่ง^我刚到家。^Wǒ gāng dào jiā.^ฉันเพิ่งถึงบ้าน^high^
+B2-0182^noun@L^medium^เมื่อกี้; เมื่อครู่^刚才有人找你。^Gāngcái yǒu rén zhǎo nǐ.^เมื่อกี้มีคนมาหาคุณ^medium^source_gloss: gloss "just" blurs 刚才 (time noun "a moment ago") with adverb 刚
+B2-0183^adverb@E^high^เพิ่ง; พอดี; เมื่อครู่^电影刚刚开始。^Diànyǐng gānggāng kāishǐ.^หนังเพิ่งเริ่มฉาย^medium^polysemy: "just (now)" and "only; exactly" combined; example shows "just now"
+B2-0184^adjective@E^high^ระดับสูง; อาวุโส^这是一家高级饭店。^Zhè shì yì jiā gāojí fàndiàn.^นี่คือโรงแรมระดับสูง^medium^source_gloss: "senior" — 高级 mainly means "high-level; advanced; high-end"
+B2-0185^noun@E^high^มัธยมปลาย^我哥哥在上高中。^Wǒ gēge zài shàng gāozhōng.^พี่ชายของฉันเรียนอยู่ชั้นมัธยมปลาย^high^
+B2-0186^noun@E^high^ส่วนสูง; รูปร่าง^他个子很高。^Tā gèzi hěn gāo.^เขาตัวสูงมาก^high^
+B2-0187^adverb@E^high^ยิ่ง; ยิ่งขึ้น^今天比昨天更冷。^Jīntiān bǐ zuótiān gèng lěng.^วันนี้หนาวกว่าเมื่อวานยิ่งขึ้น^high^
+B2-0188^noun@E^high^รถโดยสารประจำทาง; รถเมล์^我坐公共汽车去学校。^Wǒ zuò gōnggòng qìchē qù xuéxiào.^ฉันนั่งรถเมล์ไปโรงเรียน^high^
+B2-0189^noun@E^high^รถเมล์^公交车来了。^Gōngjiāochē lái le.^รถเมล์มาแล้ว^high^
+B2-0190^measure_word@L^high^กิโลกรัม^我买了两公斤苹果。^Wǒ mǎi le liǎng gōngjīn píngguǒ.^ฉันซื้อแอปเปิลสองกิโลกรัม^high^
+B2-0191^measure_word@L^high^กิโลเมตร^我家离学校三公里。^Wǒ jiā lí xuéxiào sān gōnglǐ.^บ้านฉันห่างจากโรงเรียนสามกิโลเมตร^high^
+B2-0192^noun@E^high^ทางหลวง; ถนนสายหลัก^这条公路通到北京。^Zhè tiáo gōnglù tōng dào Běijīng.^ทางหลวงสายนี้ไปถึงปักกิ่ง^high^
+B2-0193^adjective@E^high^ยุติธรรม^这样做不公平。^Zhèyàng zuò bù gōngpíng.^ทำแบบนี้ไม่ยุติธรรม^high^
+B2-0194^noun@E^high^บริษัท^我在一家公司工作。^Wǒ zài yì jiā gōngsī gōngzuò.^ฉันทำงานอยู่ที่บริษัทแห่งหนึ่ง^high^
+B2-0195^noun@E^high^สวนสาธารณะ^我们去公园散步吧。^Wǒmen qù gōngyuán sànbù ba.^พวกเราไปเดินเล่นที่สวนสาธารณะกันเถอะ^high^
+B2-0196^noun@E^high^สุนัข; หมา^我家有一只小狗。^Wǒ jiā yǒu yì zhī xiǎo gǒu.^บ้านฉันมีลูกหมาหนึ่งตัว^high^
+B2-0197^adjective@E^high^พอ; เพียงพอ^这些菜够我们吃了。^Zhèxiē cài gòu wǒmen chī le.^อาหารพวกนี้พอให้พวกเรากินแล้ว^medium^pos_doubtful: 够 is used both as adjective and verb ("be enough for"); example shows the verbal use
+B2-0198^noun@E^high^เรื่องเล่า; นิทาน^奶奶给我讲了一个故事。^Nǎinai gěi wǒ jiǎng le yí ge gùshi.^คุณย่าเล่านิทานให้ฉันฟังเรื่องหนึ่ง^high^
+B2-0199^adverb@E^high^จงใจ; ตั้งใจ^对不起，我不是故意的。^Duìbuqǐ, wǒ bú shì gùyì de.^ขอโทษนะ ฉันไม่ได้ตั้งใจ^high^
+B2-0200^noun@E^high^ลูกค้า^这家店的顾客很多。^Zhè jiā diàn de gùkè hěn duō.^ร้านนี้มีลูกค้ามาก^high^
+B2-0201^verb@E^high^ปิดเครื่อง^上课的时候请关机。^Shàngkè de shíhou qǐng guānjī.^ระหว่างเรียนกรุณาปิดเครื่อง^high^
+B2-0202^verb@E^high^เอาใจใส่; ห่วงใย^妈妈很关心我的学习。^Māma hěn guānxīn wǒ de xuéxí.^แม่ใส่ใจเรื่องการเรียนของฉันมาก^high^
+B2-0203^noun@E^high^ทัศนะ; มุมมอง^我同意你的观点。^Wǒ tóngyì nǐ de guāndiǎn.^ฉันเห็นด้วยกับมุมมองของคุณ^high^
+B2-0204^noun@E^high^จัตุรัส; ลาน^晚上很多人在广场上跳舞。^Wǎnshang hěn duō rén zài guǎngchǎng shang tiàowǔ.^ตอนเย็นมีคนมากมายเต้นรำอยู่ที่ลานกว้าง^high^
+B2-0205^noun@E^high^โฆษณา^电视上的广告太多了。^Diànshì shang de guǎnggào tài duō le.^โฆษณาในทีวีมากเกินไป^high^
+B2-0206^adjective@E^high^ระหว่างประเทศ; นานาชาติ^这是一个国际会议。^Zhè shì yí ge guójì huìyì.^นี่เป็นการประชุมระดับนานาชาติ^high^
+B2-0207^verb@E^high^มา; มาทางนี้^你过来一下。^Nǐ guòlai yí xià.^คุณมาทางนี้หน่อย^high^
+B2-0208^verb@E^high^ฉลองปีใหม่ (ตรุษจีน)^我们回老家过年。^Wǒmen huí lǎojiā guònián.^พวกเรากลับบ้านเกิดไปฉลองตรุษจีน^high^
+B2-0210^verb@E^high^ข้าม; ผ่าน; ใช้ (เวลา); ใช้ชีวิต^你周末过得怎么样？^Nǐ zhōumò guò de zěnmeyàng?^สุดสัปดาห์ของคุณเป็นอย่างไรบ้าง?^medium^polysemy: cross / pass / spend (time) / live combined; example shows "spend"
+B2-0211^noun@E^high^ทะเล^海里有很多鱼。^Hǎi li yǒu hěn duō yú.^ในทะเลมีปลามากมาย^high^
+B2-0212^noun@E^high^ชายทะเล; ริมทะเล^夏天我们去海边玩儿。^Xiàtiān wǒmen qù hǎibiān wánr.^หน้าร้อนพวกเราไปเที่ยวชายทะเล^high^
+B2-0213^verb@E^high^ตะโกน; ร้องเรียก^妈妈在外边喊我。^Māma zài wàibian hǎn wǒ.^แม่ตะโกนเรียกฉันอยู่ข้างนอก^high^
+B2-0215^noun@E^high^ประโยชน์; ข้อดี^多运动对身体有好处。^Duō yùndòng duì shēntǐ yǒu hǎochu.^ออกกำลังกายมากๆ มีประโยชน์ต่อร่างกาย^high^
