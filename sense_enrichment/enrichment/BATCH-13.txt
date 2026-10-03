@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B2-0637^noun@E^high^ท่าทาง; รูปลักษณ์; ลักษณะ^他高兴的样子很可爱。^Tā gāoxìng de yàngzi hěn kě'ài.^ท่าทางดีใจของเขาน่ารักมาก^high^
+B2-0638^noun@E^medium^ข้อกำหนด; ความต้องการ; เรียกร้อง^老师对我们的要求很高。^Lǎoshī duì wǒmen de yāoqiú hěn gāo.^ครูมีข้อกำหนดกับพวกเราสูงมาก^medium^pos_doubtful: 要求 is both noun "requirement" and verb "demand"; example shows the noun
+B2-0639^noun@E^high^ยา^你吃药了吗？^Nǐ chī yào le ma?^คุณกินยาแล้วหรือยัง?^high^
+B2-0640^noun@E^high^ร้านขายยา^药店就在医院对面。^Yàodiàn jiù zài yīyuàn duìmiàn.^ร้านขายยาอยู่ตรงข้ามโรงพยาบาลนี่เอง^high^
+B2-0641^noun@E^high^ยาเม็ด^这种药片一天吃三次。^Zhè zhǒng yàopiàn yì tiān chī sān cì.^ยาเม็ดชนิดนี้กินวันละสามครั้ง^high^
+B2-0642^noun@E^high^ยาน้ำ^这瓶药水是治咳嗽的。^Zhè píng yàoshuǐ shì zhì késou de.^ยาน้ำขวดนี้ใช้รักษาอาการไอ^high^
+B2-0643^adverb@E^high^บางที; อาจจะ^他也许不来了。^Tā yěxǔ bù lái le.^บางทีเขาอาจจะไม่มาแล้ว^high^
+B2-0644^noun@E^high^กลางคืน^夜很深了，快睡吧。^Yè hěn shēn le, kuài shuì ba.^ดึกมากแล้ว รีบนอนเถอะ^high^
+B2-0645^noun@E^high^ตอนกลางคืน^夜里下了一场大雨。^Yèli xià le yì chǎng dà yǔ.^เมื่อคืนฝนตกหนักไปหนึ่งครั้ง^high^
+B2-0646^noun@E^high^ส่วนหนึ่ง^我只看了一部分。^Wǒ zhǐ kàn le yí bùfen.^ฉันดูไปเพียงส่วนหนึ่ง^high^
+B2-0647^adverb@L^medium^แน่นอน; ต้อง^我一定会来的。^Wǒ yídìng huì lái de.^ฉันจะมาแน่นอน^medium^polysemy: adverb "surely; must" vs. adjective "certain; fixed" (一定的); gloss "Certain" is ambiguous; example shows adverb
+B2-0648^adverb@E^high^ทั้งหมด; รวมทั้งสิ้น^一共多少钱？^Yígòng duōshao qián?^ทั้งหมดเท่าไร?^high^
+B2-0650^other^low^เดินทางโดยสวัสดิภาพ^祝你一路平安！^Zhù nǐ yílù píng'ān!^ขอให้เดินทางโดยสวัสดิภาพ!^high^pos_doubtful: four-character set phrase (idiom) with no single POS
+B2-0651^other^low^ขอให้เดินทางราบรื่น^祝你一路顺风！^Zhù nǐ yílù shùnfēng!^ขอให้เดินทางราบรื่นนะ!^high^pos_doubtful: four-character set phrase (idiom) with no single POS
+B2-0652^adverb@E^high^แล้ว; เรียบร้อยแล้ว^我已经吃过饭了。^Wǒ yǐjīng chī guo fàn le.^ฉันกินข้าวแล้ว^high^
+B2-0653^noun@L^high^หลังจาก; ภายหลัง; ต่อไป^下课以后我们去打球吧。^Xiàkè yǐhòu wǒmen qù dǎqiú ba.^หลังเลิกเรียนพวกเราไปเล่นบอลกันเถอะ^high^
+B2-0654^noun@L^high^ก่อน; แต่ก่อน^以前我不喜欢吃辣的。^Yǐqián wǒ bù xǐhuan chī là de.^แต่ก่อนฉันไม่ชอบกินเผ็ด^high^
+B2-0655^noun@L^high^ขึ้นไป; มากกว่า^十八岁以上的人可以参加。^Shíbā suì yǐshàng de rén kěyǐ cānjiā.^คนอายุสิบแปดปีขึ้นไปเข้าร่วมได้^high^
+B2-0656^noun@L^medium^นอกจาก; ภายนอก^除了他以外，大家都来了。^Chúle tā yǐwài, dàjiā dōu lái le.^นอกจากเขาแล้ว ทุกคนมากันหมด^medium^polysemy: "beyond; outside" (spatial) vs. "other than; except"; example shows "except"
+B2-0657^verb@E^medium^นึกว่า; เข้าใจว่า (แต่ผิด)^我以为你不来了。^Wǒ yǐwéi nǐ bù lái le.^ฉันนึกว่าคุณจะไม่มาแล้ว^medium^source_gloss: "Think" misses that 以为 usually means a mistaken belief ("thought wrongly")
+B2-0658^noun@L^high^ต่ำกว่า; ลงไป^五岁以下的孩子不用买票。^Wǔ suì yǐxià de háizi búyòng mǎi piào.^เด็กอายุต่ำกว่าห้าขวบไม่ต้องซื้อตั๋ว^high^
+B2-0659^noun@E^high^เก้าอี้^这把椅子很舒服。^Zhè bǎ yǐzi hěn shūfu.^เก้าอี้ตัวนี้นั่งสบายมาก^high^
+B2-0660^adjective@L^medium^ทั่วไป; ธรรมดา; โดยทั่วไป^我一般七点起床。^Wǒ yìbān qī diǎn qǐchuáng.^โดยทั่วไปฉันตื่นนอนเจ็ดโมง^medium^pos_doubtful: gloss "commonly" is adverbial, but 一般 is also adjective "ordinary"; example shows adverbial use
+B2-0661^other^low^นิดหน่อย; เล็กน้อย^我只会说一点点汉语。^Wǒ zhǐ huì shuō yìdiǎndiǎn Hànyǔ.^ฉันพูดภาษาจีนได้แค่นิดหน่อย^high^pos_doubtful: reduplicated quantity phrase (一 + 点点) with no single POS
+B2-0662^noun@E^high^ชั่วชีวิต; ตลอดชีวิต^我一生都不会忘记这件事。^Wǒ yìshēng dōu bú huì wàngjì zhè jiàn shì.^ตลอดชีวิตฉันจะไม่มีวันลืมเรื่องนี้^high^
+B2-0663^adverb@E^high^ตลอด; เรื่อยมา; ตรงไป^他一直在等你。^Tā yìzhí zài děng nǐ.^เขารอคุณมาตลอด^medium^polysemy: "always; all along" vs. "straight (ahead)" (一直走); gloss gives "always"
+B2-0664^numeral@E^medium^ร้อยล้าน^中国有十四亿人。^Zhōngguó yǒu shísì yì rén.^จีนมีประชากรหนึ่งพันสี่ร้อยล้านคน^medium^source_gloss: "Billion" is wrong in value; 亿 = 100 million (一亿 = 100,000,000)
+B2-0665^noun@E^high^ความคิดเห็น; ข้อเสนอแนะ^你有什么意见？^Nǐ yǒu shénme yìjiàn?^คุณมีความคิดเห็นอะไรไหม?^high^
+B2-0666^noun@E^high^ความหมาย^这个词是什么意思？^Zhège cí shì shénme yìsi?^คำนี้หมายความว่าอะไร?^medium^polysemy: 意思 also "interest; fun" (有意思) and "token of appreciation"; gloss gives "meaning"
+B2-0667^conjunction@E^high^เพราะ; เนื่องจาก^因为下雨，所以我没去。^Yīnwèi xià yǔ, suǒyǐ wǒ méi qù.^เพราะฝนตก ฉันจึงไม่ได้ไป^high^
+B2-0668^adjective@L^low^(อากาศ) ครึ้ม; หยิน^今天天阴了，可能要下雨。^Jīntiān tiān yīn le, kěnéng yào xià yǔ.^วันนี้ฟ้าครึ้ม อาจจะมีฝนตก^low^source_gloss: gloss "Yin" (philosophy) omits the band-2 weather sense "overcast"; polysemy: unrelated senses; example shows "overcast"
+B2-0669^noun@E^high^วันที่ฟ้าครึ้ม^今天是阴天。^Jīntiān shì yīntiān.^วันนี้ฟ้าครึ้ม^high^
+B2-0670^noun@E^high^พยางค์^“朋友”有两个音节。^“Péngyou” yǒu liǎng ge yīnjié.^คำว่า “朋友” มีสองพยางค์^high^
+B2-0671^noun@E^high^ดนตรี; เพลง^我喜欢听音乐。^Wǒ xǐhuan tīng yīnyuè.^ฉันชอบฟังเพลง^high^
+B2-0672^noun@E^high^คอนเสิร์ต^明天晚上有一场音乐会。^Míngtiān wǎnshang yǒu yì chǎng yīnyuèhuì.^พรุ่งนี้ตอนค่ำมีคอนเสิร์ตหนึ่งรอบ^high^
+B2-0673^noun@E^high^ธนาคาร^我去银行取钱。^Wǒ qù yínháng qǔ qián.^ฉันไปถอนเงินที่ธนาคาร^high^
+B2-0674^noun@E^high^บัตรธนาคาร^我的银行卡不见了。^Wǒ de yínhángkǎ bú jiàn le.^บัตรธนาคารของฉันหายไป^high^
+B2-0675^auxiliary@L^high^ควร; ควรจะ^你应该早点儿休息。^Nǐ yīnggāi zǎo diǎnr xiūxi.^คุณควรพักผ่อนเร็วหน่อย^high^
+B2-0676^noun@E^high^ภาษาอังกฤษ (ภาษาเขียน)^这本书是英文的。^Zhè běn shū shì Yīngwén de.^หนังสือเล่มนี้เป็นภาษาอังกฤษ^high^
+B2-0677^noun@E^high^ภาษาอังกฤษ^他的英语很好。^Tā de Yīngyǔ hěn hǎo.^ภาษาอังกฤษของเขาดีมาก^high^
+B2-0678^noun@E^high^ภาพยนตร์^这部影片很受欢迎。^Zhè bù yǐngpiàn hěn shòu huānyíng.^ภาพยนตร์เรื่องนี้ได้รับความนิยมมาก^high^
+B2-0679^verb@E^medium^มีผลต่อ; อิทธิพล^玩手机会影响学习。^Wán shǒujī huì yǐngxiǎng xuéxí.^การเล่นโทรศัพท์จะส่งผลต่อการเรียน^medium^pos_doubtful: 影响 is both verb "affect" and noun "influence"; example shows the verb
+B2-0680^adverb@E^high^ตลอดไป^我永远不会忘记你。^Wǒ yǒngyuǎn bú huì wàngjì nǐ.^ฉันจะไม่มีวันลืมคุณตลอดไป^high^
+B2-0681^noun@E^high^น้ำมัน; ไขมัน^这个菜油太多了。^Zhège cài yóu tài duō le.^อาหารจานนี้น้ำมันเยอะเกินไป^high^
+B2-0682^noun@E^high^นักท่องเที่ยว^这里每天都有很多游客。^Zhèlǐ měitiān dōu yǒu hěn duō yóukè.^ที่นี่มีนักท่องเที่ยวมากมายทุกวัน^high^
+B2-0683^adjective@E^high^เป็นมิตร^这里的人对我们很友好。^Zhèlǐ de rén duì wǒmen hěn yǒuhǎo.^คนที่นี่เป็นมิตรกับพวกเรามาก^high^
+B2-0684^verb@L^medium^ว่าง; มีเวลาว่าง^你明天有空儿吗？^Nǐ míngtiān yǒu kòngr ma?^พรุ่งนี้คุณว่างไหม?^high^
+B2-0685^other^low^มีคน; มีใครบางคน^门外有人找你。^Mén wài yǒu rén zhǎo nǐ.^นอกประตูมีคนมาหาคุณ^high^pos_doubtful: phrase (有 + 人) with no single POS
+B2-0686^adverb@L^medium^นิดหน่อย; ค่อนข้าง^今天有点儿冷。^Jīntiān yǒudiǎnr lěng.^วันนี้หนาวนิดหน่อย^medium^variant: pinyin "yǒu（yì）diǎnr" encodes optional 一 (有点儿 / 有一点儿)
+B2-0687^adjective@E^high^น่าสนใจ; สนุก; มีความหมาย^这本书很有意思。^Zhè běn shū hěn yǒu yìsi.^หนังสือเล่มนี้น่าสนใจมาก^high^
+B2-0688^adverb@E^medium^อีก; ทั้ง...และ...^他又迟到了。^Tā yòu chídào le.^เขามาสายอีกแล้ว^medium^source_gloss: "also" is loose; 又 mainly means "again" (repetition) and "both…and…"
+B2-0689^noun@E^high^ปลา^我喜欢吃鱼。^Wǒ xǐhuan chī yú.^ฉันชอบกินปลา^high^
+B2-0690^noun@E^high^ภาษา^他会说三种语言。^Tā huì shuō sān zhǒng yǔyán.^เขาพูดได้สามภาษา^high^
+B2-0691^adverb@L^low^เดิมที; ที่แท้; ดั้งเดิม^原来是你啊！^Yuánlái shì nǐ a!^ที่แท้ก็เป็นคุณนี่เอง!^medium^polysemy: adjective "original" vs. adverb "formerly" vs. discovery "so it turns out"; example shows "it turns out"
+B2-0692^noun@E^high^สาเหตุ; เหตุผล^你迟到的原因是什么？^Nǐ chídào de yuányīn shì shénme?^สาเหตุที่คุณมาสายคืออะไร?^high^
+B2-0693^noun@E^high^ลานบ้าน; บริเวณ; วิทยาลัย^院里有一棵大树。^Yuàn li yǒu yì kē dà shù.^ในลานบ้านมีต้นไม้ใหญ่ต้นหนึ่ง^medium^polysemy: yard / courtyard vs. institution / college combined; example shows "yard"
+B2-0694^noun@E^high^คณบดี; ผู้อำนวยการ (สถาบัน/โรงพยาบาล)^他是医学院的院长。^Tā shì yīxuéyuàn de yuànzhǎng.^เขาเป็นคณบดีคณะแพทยศาสตร์^high^
+B2-0695^noun@E^high^ลานบ้าน; สนามหน้าบ้าน^孩子们在院子里玩儿。^Háizimen zài yuànzi li wánr.^เด็กๆ เล่นอยู่ในลานบ้าน^high^
+B2-0696^auxiliary@L^medium^เต็มใจ; ยินดี^你愿意跟我一起去吗？^Nǐ yuànyì gēn wǒ yìqǐ qù ma?^คุณยินดีไปกับฉันไหม?^high^
+B2-0697^noun@E^high^เดือน (ในปี)^七月份我要去旅游。^Qīyuèfèn wǒ yào qù lǚyóu.^เดือนกรกฎาคมฉันจะไปเที่ยว^high^
+B2-0698^noun@E^high^ดวงจันทร์^今天晚上的月亮很圆。^Jīntiān wǎnshang de yuèliang hěn yuán.^คืนนี้พระจันทร์กลมมาก^high^
+B2-0699^adverb@L^medium^ยิ่ง...ยิ่ง...^雨越下越大。^Yǔ yuè xià yuè dà.^ฝนยิ่งตกยิ่งหนัก^medium^polysemy: verb "cross; exceed" vs. pattern 越…越… ("the more…"); example shows the pattern
+B2-0700^adverb@L^high^ยิ่งขึ้นเรื่อยๆ; มากขึ้นเรื่อยๆ^天气越来越冷了。^Tiānqì yuè lái yuè lěng le.^อากาศหนาวขึ้นเรื่อยๆ^high^
+B2-0701^noun@E^high^เมฆ^天上有很多白云。^Tiān shang yǒu hěn duō bái yún.^บนท้องฟ้ามีเมฆสีขาวมากมาย^high^
+B2-0702^noun@E^low^การออกกำลังกาย; กีฬา; การเคลื่อนไหว^多做运动对身体好。^Duō zuò yùndòng duì shēntǐ hǎo.^ออกกำลังกายมากๆ ดีต่อร่างกาย^medium^source_gloss: gloss "motion" (physics) omits the core band-2 sense "sport; exercise"; polysemy: noun vs. verb "exercise"; example shows "exercise"
+B2-0703^pronoun@E^high^เรา (รวมผู้ฟัง)^咱俩一起去吧。^Zán liǎ yìqǐ qù ba.^เราสองคนไปด้วยกันเถอะ^high^
+B2-0704^pronoun@E^high^พวกเรา (รวมผู้ฟัง)^咱们走吧。^Zánmen zǒu ba.^พวกเราไปกันเถอะ^high^
+B2-0705^adjective@E^high^สกปรก^你的衣服脏了。^Nǐ de yīfu zāng le.^เสื้อของคุณสกปรกแล้ว^high^
+B2-0706^noun@E^high^อาหารเช้า^酒店的早餐很好吃。^Jiǔdiàn de zǎocān hěn hǎochī.^อาหารเช้าของโรงแรมอร่อยมาก^high^
+B2-0707^noun@E^high^ตอนเช้า; รุ่งเช้า^每天早晨他都去跑步。^Měitiān zǎochen tā dōu qù pǎobù.^ทุกเช้าเขาไปวิ่ง^high^
+B2-0708^adverb@L^medium^นานแล้ว; ตั้งนานแล้ว^我早就知道了。^Wǒ zǎo jiù zhīdào le.^ฉันรู้ตั้งนานแล้ว^high^
+B2-0709^other^low^จะทำอย่างไรดี^下雨了，怎么办？^Xià yǔ le, zěnme bàn?^ฝนตกแล้ว จะทำอย่างไรดี?^high^pos_doubtful: question phrase (怎么 + 办) with no single POS
+B2-0710^pronoun@L^medium^เป็นอย่างไร; ...ดีไหม^我们明天去，怎么样？^Wǒmen míngtiān qù, zěnmeyàng?^พวกเราไปพรุ่งนี้ ดีไหม?^high^
+B2-0711^pronoun@L^high^อย่างไร^这个菜怎样做？^Zhège cài zěnyàng zuò?^อาหารจานนี้ทำอย่างไร?^high^
+B2-0712^verb@E^high^ครอบครอง; ยึด; กินพื้นที่^这张桌子太占地方了。^Zhè zhāng zhuōzi tài zhàn dìfang le.^โต๊ะตัวนี้กินที่มากเกินไป^high^
+B2-0714^verb@E^high^หยุด; ยืนนิ่ง^站住！别跑！^Zhànzhù! Bié pǎo!^หยุด! อย่าวิ่ง!^high^
+B2-0715^verb@E^high^เติบโต; งอก; มี (หน้าตา)^这棵树长得很快。^Zhè kē shù zhǎng de hěn kuài.^ต้นไม้ต้นนี้โตเร็วมาก^high^
+B2-0716^verb@E^high^เติบโตขึ้น; โตขึ้น^我是在北京长大的。^Wǒ shì zài Běijīng zhǎngdà de.^ฉันเติบโตที่ปักกิ่ง^high^
+B2-0717^verb@E^high^หาออกมา; ค้นพบ^请找出句子中的错误。^Qǐng zhǎochū jùzi zhōng de cuòwù.^กรุณาหาข้อผิดพลาดในประโยค^high^
+B2-0718^verb@E^high^ดูแล^她在家照顾妈妈。^Tā zài jiā zhàogù māma.^เธอดูแลแม่อยู่ที่บ้าน^high^
+B2-0719^noun@E^high^รูปถ่าย^这是我们的全家照片。^Zhè shì wǒmen de quánjiā zhàopiàn.^นี่คือรูปถ่ายครอบครัวของเรา^high^
+B2-0720^verb@E^high^ถ่ายรูป^我们在这儿照相吧。^Wǒmen zài zhèr zhàoxiàng ba.^พวกเราถ่ายรูปตรงนี้กันเถอะ^high^
+B2-0721^pronoun@L^high^อย่างนี้; ขนาดนี้^今天怎么这么热？^Jīntiān zěnme zhème rè?^ทำไมวันนี้ร้อนขนาดนี้?^high^
+B2-0722^noun@L^high^ตอนนี้; ในขณะนี้^这时候，电话响了。^Zhè shíhou, diànhuà xiǎng le.^ในขณะนั้นเอง โทรศัพท์ก็ดังขึ้น^high^
+B2-0723^pronoun@L^high^แบบนี้; อย่างนี้^你不应该这样做。^Nǐ bù yīnggāi zhèyàng zuò.^คุณไม่ควรทำแบบนี้^high^
+B2-0724^adjective@E^high^แท้จริง; จริงๆ^他是我真正的朋友。^Tā shì wǒ zhēnzhèng de péngyou.^เขาเป็นเพื่อนแท้ของฉัน^high^
+B2-0725^adjective@E^high^ปกติ^他的体温很正常。^Tā de tǐwēn hěn zhèngcháng.^อุณหภูมิร่างกายของเขาปกติดี^high^
+B2-0726^adjective@L^medium^พอดี; ประจวบเหมาะ^这双鞋我穿正好。^Zhè shuāng xié wǒ chuān zhènghǎo.^รองเท้าคู่นี้ฉันใส่พอดี^medium^polysemy: adjective "just right" vs. adverb "happen to; as it happens"; example shows "just right"
+B2-0727^adjective@E^high^ถูกต้อง^你的答案是正确的。^Nǐ de dá'àn shì zhèngquè de.^คำตอบของคุณถูกต้อง^high^
+B2-0728^adverb@L^medium^ตรงกับ...พอดี; นั่นแหละ^这正是我想要的。^Zhè zhèng shì wǒ xiǎng yào de.^นี่แหละคือสิ่งที่ฉันต้องการ^high^
+B2-0729^adjective@E^medium^โดยตรง^你可以直接去找他。^Nǐ kěyǐ zhíjiē qù zhǎo tā.^คุณไปหาเขาโดยตรงได้เลย^medium^pos_doubtful: 直接 is adjective "direct" and often adverbial "directly"; example shows adverbial use
+B2-0730^adverb@E^high^เพียง; แค่^我只有十块钱。^Wǒ zhǐ yǒu shí kuài qián.^ฉันมีเงินแค่สิบหยวน^high^
+B2-0731^other^low^ทำได้เพียง; ได้แค่^没有车了，我们只能走回去。^Méiyǒu chē le, wǒmen zhǐ néng zǒu huíqu.^ไม่มีรถแล้ว พวกเราทำได้แค่เดินกลับ^high^pos_doubtful: phrase (只 + 能) with no single POS
+B2-0732^conjunction@E^high^ขอเพียงแค่; ตราบใดที่^只要你努力，就一定能学好。^Zhǐyào nǐ nǔlì, jiù yídìng néng xué hǎo.^ขอเพียงคุณพยายาม ก็ต้องเรียนได้ดีแน่นอน^high^
+B2-0733^noun@E^high^กระดาษ^请给我一张纸。^Qǐng gěi wǒ yì zhāng zhǐ.^กรุณาให้กระดาษฉันหนึ่งแผ่น^high^
+B2-0734^noun@E^high^อาหารจีน^今天中午我们吃中餐。^Jīntiān zhōngwǔ wǒmen chī zhōngcān.^เที่ยงวันนี้พวกเรากินอาหารจีน^high^
+B2-0735^adjective@E^high^ระดับกลาง^我在学中级汉语。^Wǒ zài xué zhōngjí Hànyǔ.^ฉันกำลังเรียนภาษาจีนระดับกลาง^high^
+B2-0736^noun@E^high^วัยกลางคน^他是一位中年人。^Tā shì yí wèi zhōngniánrén.^เขาเป็นคนวัยกลางคน^high^
+B2-0737^noun@E^high^โรงเรียนประถมและมัธยม^中小学生都放假了。^Zhōngxiǎoxuéshēng dōu fàngjià le.^นักเรียนประถมและมัธยมปิดเทอมกันหมดแล้ว^high^
+B2-0738^noun@E^medium^ศูนย์กลาง; ใจกลาง; ศูนย์^我家在市中心。^Wǒ jiā zài shì zhōngxīn.^บ้านฉันอยู่ใจกลางเมือง^medium^source_gloss: "core" is loose; 中心 means "centre" (city centre, service centre)
