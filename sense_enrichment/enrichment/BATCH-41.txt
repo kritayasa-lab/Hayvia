@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B5-0755^verb@E^high^พูดถึง; กล่าวถึง; ยกขึ้น^一提起这件事，他就生气。^Yì tíqǐ zhè jiàn shì, tā jiù shēngqì.^พอพูดถึงเรื่องนี้ เขาก็โกรธ^medium^polysemy: "mention" vs. "lift; raise" (提起箱子); example shows "mention"
+B5-0756^noun@E^medium^คำใบ้; ข้อแนะนำ; บอกใบ้^老师给了我们一个提示。^Lǎoshī gěi le wǒmen yí ge tíshì.^ครูให้คำใบ้แก่พวกเรา^medium^pos_doubtful: 提示 is both noun "hint" and verb "prompt"
+B5-0757^noun@E^high^วัตถุดิบเรื่อง; แนวเรื่อง^这部电影的题材很新。^Zhè bù diànyǐng de tícái hěn xīn.^แนวเรื่องของภาพยนตร์เรื่องนี้แปลกใหม่มาก^high^
+B5-0758^noun@E^high^ปริมาตร^这个箱子的体积很大。^Zhège xiāngzi de tǐjī hěn dà.^กล่องใบนี้มีปริมาตรใหญ่มาก^high^
+B5-0759^noun@E^high^พละกำลัง^爬山需要很好的体力。^Páshān xūyào hěn hǎo de tǐlì.^การปีนเขาต้องใช้พละกำลังมาก^high^
+B5-0760^noun@E^high^อัจฉริยะ; พรสวรรค์^他是一个音乐天才。^Tā shì yí ge yīnyuè tiāncái.^เขาเป็นอัจฉริยะทางดนตรี^high^
+B5-0761^noun@E^high^ก๊าซธรรมชาติ^我们家用天然气做饭。^Wǒmen jiā yòng tiānránqì zuòfàn.^บ้านเราใช้ก๊าซธรรมชาติทำอาหาร^high^
+B5-0762^noun@E^high^ดาราศาสตร์^他对天文很感兴趣。^Tā duì tiānwén hěn gǎn xìngqù.^เขาสนใจดาราศาสตร์มาก^high^
+B5-0763^verb@E^high^ปรับ (ให้เหมาะสม)^空调可以调节温度。^Kōngtiáo kěyǐ tiáojié wēndù.^เครื่องปรับอากาศปรับอุณหภูมิได้^high^
+B5-0764^verb@E^high^ไกล่เกลี่ย^老师帮他们调解了矛盾。^Lǎoshī bāng tāmen tiáojiě le máodùn.^ครูช่วยไกล่เกลี่ยความขัดแย้งของพวกเขา^high^
+B5-0765^noun@E^high^ห้องโถง; สำนักงาน (ระดับมณฑล)^我们在客厅里看电视。^Wǒmen zài kètīng li kàn diànshì.^พวกเราดูทีวีอยู่ในห้องรับแขก^medium^polysemy: "hall; room" (客厅) vs. "provincial department" (教育厅); example: bare 厅 is bound, sentence uses 客厅
+B5-0766^verb@E^high^อยู่; หยุดพัก^我们在北京停留了三天。^Wǒmen zài Běijīng tíngliú le sān tiān.^พวกเราพักอยู่ที่ปักกิ่งสามวัน^high^
+B5-0767^adjective@L^low^ใช้ได้ทั่วไป; ใช้ร่วมกัน^这种充电器是通用的。^Zhè zhǒng chōngdiànqì shì tōngyòng de.^ที่ชาร์จแบบนี้ใช้ได้ทั่วไป^low^source_gloss: gloss "currency" (in the sense "be current") is misleading; 通用 means "in common use; universal"
+B5-0768^verb@E^high^ขโมย^他的手机被人偷了。^Tā de shǒujī bèi rén tōu le.^โทรศัพท์มือถือของเขาถูกขโมย^high^
+B5-0769^adverb@E^high^แอบ; อย่างลับๆ^他偷偷地看了我一眼。^Tā tōutōu de kàn le wǒ yì yǎn.^เขาแอบมองฉันแวบหนึ่ง^high^
+B5-0770^verb@E^medium^บุกทะลวง; ก้าวข้าม; ความก้าวหน้า^这项研究取得了重大突破。^Zhè xiàng yánjiū qǔdé le zhòngdà tūpò.^งานวิจัยนี้มีความก้าวหน้าครั้งสำคัญ^medium^polysemy: verb "break through" vs. noun "breakthrough"; source_gloss: "Breach" is narrow
+B5-0771^noun@E^high^มันฝรั่ง^我喜欢吃土豆。^Wǒ xǐhuan chī tǔdòu.^ฉันชอบกินมันฝรั่ง^high^
+B5-0772^verb@E^high^คาย; ถ่ม; เอ่ย^请不要随地吐痰。^Qǐng búyào suídì tǔ tán.^กรุณาอย่าถ่มน้ำลายเรี่ยราด^medium^polysemy: "spit" vs. "say; tell" (吐露); variant: 吐 tǔ vs. 吐 tù (B5-0773, vomit)
+B5-0773^verb@E^high^อาเจียน^他吃坏了肚子，吐了。^Tā chī huài le dùzi, tù le.^เขากินของเสียจนท้องไส้ปั่นป่วนแล้วอาเจียน^medium^variant: 吐 tù (vomit) vs. 吐 tǔ (B5-0772, spit) split by tone
+B5-0774^noun@E^high^กระต่าย^小兔吃胡萝卜。^Xiǎo tù chī húluóbo.^กระต่ายน้อยกินแครอท^medium^example: bare 兔 is less common than 兔子
+B5-0775^noun@E^high^ผู้บังคับกรม; หัวหน้าคณะ^他是我们代表团的团长。^Tā shì wǒmen dàibiǎotuán de tuánzhǎng.^เขาเป็นหัวหน้าคณะผู้แทนของเรา^medium^polysemy: military "regimental commander" vs. "head of a delegation/troupe"
+B5-0776^verb@E^high^ดำเนินการ; บังคับใช้^政府推行了新的政策。^Zhèngfǔ tuīxíng le xīn de zhèngcè.^รัฐบาลบังคับใช้นโยบายใหม่^high^
+B5-0777^verb@E^medium^แยกตัวออก; หลุดพ้น^他终于脱离了危险。^Tā zhōngyú tuōlí le wēixiǎn.^ในที่สุดเขาก็พ้นอันตรายแล้ว^medium^source_gloss: "Be divorced from" is figurative; 脱离 means "break away from; get out of"
+B5-0778^noun@E^high^โลกภายนอก^他不太关心外界的看法。^Tā bú tài guānxīn wàijiè de kànfǎ.^เขาไม่ค่อยสนใจความเห็นของคนภายนอก^high^
+B5-0779^verb@L^medium^จบ; เสร็จสิ้น; แย่แล้ว^电影完了，我们走吧。^Diànyǐng wán le, wǒmen zǒu ba.^หนังจบแล้ว พวกเราไปกันเถอะ^medium^polysemy: "be over" vs. exclamation "it's over (we're done for)!" (完了，我忘带钥匙了)
+B5-0780^noun@E^high^เวยปั๋ว (โซเชียลมีเดียจีน)^他每天都刷微博。^Tā měitiān dōu shuā Wēibó.^เขาเล่นเวยปั๋วทุกวัน^high^
+B5-0781^adjective@E^medium^ลำบากใจ; ทำให้ลำบากใจ^这件事让我很为难。^Zhè jiàn shì ràng wǒ hěn wéinán.^เรื่องนี้ทำให้ฉันลำบากใจมาก^medium^polysemy: adjective "feel awkward" vs. verb "make things difficult for" (为难别人)
+B5-0782^verb@E^high^มีกำหนดระยะเวลา^这次培训为期一个月。^Zhè cì péixùn wéiqī yí ge yuè.^การอบรมครั้งนี้มีกำหนดหนึ่งเดือน^medium^source_gloss: "by a definite date" is loose; 为期 = "last for (a period)"
+B5-0783^verb@L^medium^จนถึง; จน^到今天为止，我们已经学了十课。^Dào jīntiān wéizhǐ, wǒmen yǐjīng xué le shí kè.^จนถึงวันนี้ พวกเราเรียนไปแล้วสิบบท^medium^pos_doubtful: 为止 is a post-positional verb in 到…为止
+B5-0784^verb@L^medium^เป็นหลัก^这里的学生以中国人为主。^Zhèlǐ de xuésheng yǐ Zhōngguórén wéizhǔ.^นักเรียนที่นี่ส่วนใหญ่เป็นคนจีน^medium^pos_doubtful: 为主 is a verb phrase in 以…为主 ("take as main")
+B5-0785^verb@E^high^ละเมิดกฎหมาย; ผิดกฎหมาย^这样做是违法的。^Zhèyàng zuò shì wéifǎ de.^ทำแบบนี้ผิดกฎหมาย^high^
+B5-0786^verb@L^medium^ละเมิด; ฝ่าฝืน^他违反了交通规则。^Tā wéifǎn le jiāotōng guīzé.^เขาฝ่าฝืนกฎจราจร^medium^source_gloss: "Violation" is a noun; 违反 is the verb "violate"
+B5-0787^verb@E^medium^ฝ่าฝืนกฎ; การละเมิดกฎ^这个司机违规停车了。^Zhège sījī wéiguī tíngchē le.^คนขับคนนี้จอดรถผิดกฎ^medium^pos_doubtful: 违规 is verb "break the rules" and noun "violation"
+B5-0788^verb@L^medium^รอบ; โคจรรอบ; เกี่ยวกับ^大家围绕这个问题展开了讨论。^Dàjiā wéirào zhège wèntí zhǎnkāi le tǎolùn.^ทุกคนเปิดการอภิปรายรอบประเด็นนี้^medium^source_gloss: "around" is a preposition; 围绕 is the verb "revolve around; centre on"
+B5-0789^adjective@E^high^เพียงหนึ่งเดียว^他是我唯一的朋友。^Tā shì wǒ wéiyī de péngyou.^เขาเป็นเพื่อนเพียงคนเดียวของฉัน^high^
+B5-0790^verb@E^high^มอบหมาย; ฝาก^我委托朋友帮我买票。^Wǒ wěituō péngyou bāng wǒ mǎi piào.^ฉันฝากเพื่อนช่วยซื้อตั๋วให้^high^
+B5-0791^noun@E^high^ดาวเทียม^中国发射了一颗卫星。^Zhōngguó fāshè le yì kē wèixīng.^จีนปล่อยดาวเทียมหนึ่งดวง^high^
+B5-0792^noun@E^high^กระเพาะอาหาร^我胃不舒服。^Wǒ wèi bù shūfu.^ฉันไม่สบายท้อง^high^
+B5-0793^verb@L^medium^เยี่ยมเยียนให้กำลังใจ^领导去医院慰问病人。^Lǐngdǎo qù yīyuàn wèiwèn bìngrén.^ผู้นำไปเยี่ยมให้กำลังใจผู้ป่วยที่โรงพยาบาล^medium^source_gloss: "Condolences" is a noun and narrow; 慰问 is the verb "express sympathy; visit and comfort"
+B5-0794^adjective@E^high^อ่อนโยน; อบอุ่น (อากาศ)^这里的气候很温和。^Zhèlǐ de qìhòu hěn wēnhé.^สภาพอากาศที่นี่อบอุ่นสบาย^medium^polysemy: "mild (climate)" vs. "gentle (character)"
+B5-0795^noun@E^high^วรรณกรรมและศิลปะ^学校今晚有文艺演出。^Xuéxiào jīnwǎn yǒu wényì yǎnchū.^คืนนี้โรงเรียนมีการแสดงศิลปวัฒนธรรม^medium^source_gloss: "literature" is narrow; 文艺 = literature and the arts (performances)
+B5-0796^noun@E^high^ห้องนอน^我的卧室很小。^Wǒ de wòshì hěn xiǎo.^ห้องนอนของฉันเล็กมาก^high^
+B5-0797^verb@E^high^จับ; กุม^他紧紧地握着我的手。^Tā jǐnjǐn de wò zhe wǒ de shǒu.^เขากุมมือฉันไว้แน่น^high^
+B5-0798^verb@L^medium^ทำให้เป็นมลพิษ; มลพิษ^工厂污染了这条河。^Gōngchǎng wūrǎn le zhè tiáo hé.^โรงงานทำให้แม่น้ำสายนี้เป็นมลพิษ^medium^source_gloss: "contaminated" is a participle; 污染 is verb "pollute" and noun "pollution"
+B5-0799^noun@E^high^น้ำเสีย^工厂不能随便排放污水。^Gōngchǎng bù néng suíbiàn páifàng wūshuǐ.^โรงงานห้ามปล่อยน้ำเสียตามใจชอบ^high^
+B5-0800^noun@E^high^บ้าน; ห้อง^外面冷，快进屋吧。^Wàimian lěng, kuài jìn wū ba.^ข้างนอกหนาว รีบเข้าบ้านเถอะ^high^
+B5-0801^adjective@L^medium^จนปัญญา; จำใจ^他无奈地摇了摇头。^Tā wúnài de yáo le yáo tóu.^เขาส่ายหัวอย่างจนปัญญา^medium^pos_doubtful: gloss "cannot help but" is verbal; 无奈 is adjective "helpless" and conjunction "but unfortunately"
+B5-0802^adverb@L^medium^ไม่ต้องสงสัย^这无疑是最好的办法。^Zhè wúyí shì zuì hǎo de bànfǎ.^นี่เป็นวิธีที่ดีที่สุดอย่างไม่ต้องสงสัย^high^
+B5-0803^verb@E^medium^เต้นรำ; ระบำ; โบก^她跳了一支舞。^Tā tiào le yì zhī wǔ.^เธอเต้นรำไปหนึ่งเพลง^medium^polysemy: noun "dance" vs. verb "dance; brandish" (舞剑); pos_doubtful: example shows the noun in 跳舞
+B5-0804^noun@E^high^ราคาสินค้า^最近物价上涨了。^Zuìjìn wùjià shàngzhǎng le.^ช่วงนี้ราคาสินค้าสูงขึ้น^high^
+B5-0805^noun@E^medium^นิติบุคคลอาคาร; ทรัพย์สิน^有问题可以找物业。^Yǒu wèntí kěyǐ zhǎo wùyè.^มีปัญหาให้ติดต่อฝ่ายนิติบุคคล^medium^polysemy: "property (real estate)" vs. "property management office"; example shows management
+B5-0806^noun@E^high^วัตถุ; สสาร^人们的物质生活越来越好了。^Rénmen de wùzhì shēnghuó yuè lái yuè hǎo le.^ชีวิตด้านวัตถุของผู้คนดีขึ้นเรื่อยๆ^medium^polysemy: physics "matter; substance" vs. "material (vs. spiritual)"
+B5-0807^verb@E^medium^เข้าใจผิด; ความเข้าใจผิด^你误解了我的意思。^Nǐ wùjiě le wǒ de yìsi.^คุณเข้าใจความหมายของฉันผิดแล้ว^high^
+B5-0808^noun@E^high^มะเขือเทศ^我喜欢吃西红柿炒鸡蛋。^Wǒ xǐhuan chī xīhóngshì chǎo jīdàn.^ฉันชอบกินไข่ผัดมะเขือเทศ^high^
+B5-0809^noun@E^high^ชุดสูท^他穿了一套黑西装。^Tā chuān le yí tào hēi xīzhuāng.^เขาสวมชุดสูทสีดำ^high^
+B5-0810^noun@E^high^ละครตลก; คอมเมดี้^我喜欢看喜剧电影。^Wǒ xǐhuan kàn xǐjù diànyǐng.^ฉันชอบดูภาพยนตร์ตลก^high^
+B5-0811^noun@E^high^ละคร; การแสดง; ล้อเล่น^我们去看戏吧。^Wǒmen qù kàn xì ba.^พวกเราไปดูงิ้วกันเถอะ^medium^polysemy: noun "play; drama; opera" vs. verb "play; joke; make fun of"; example shows "drama"
+B5-0812^noun@E^high^การละคร^她在大学学习戏剧。^Tā zài dàxué xuéxí xìjù.^เธอเรียนการละครที่มหาวิทยาลัย^high^
+B5-0813^verb@E^high^ทำให้ตกใจ^你吓了我一跳。^Nǐ xià le wǒ yí tiào.^คุณทำให้ฉันตกใจ^high^
+B5-0814^adverb@E^high^ตามลำดับ; ทยอย^他先后去过三个国家。^Tā xiānhòu qù guo sān ge guójiā.^เขาเคยไปมาแล้วสามประเทศตามลำดับ^medium^polysemy: adverb "successively" vs. noun "order; priority" (有先后)
+B5-0815^noun@L^medium^ก่อนหน้านี้^他比先前瘦多了。^Tā bǐ xiānqián shòu duō le.^เขาผอมกว่าก่อนหน้านี้มาก^high^
+B5-0816^adjective@E^high^สีสดใส^她穿着一件鲜艳的裙子。^Tā chuān zhe yí jiàn xiānyàn de qúnzi.^เธอสวมกระโปรงสีสดใส^high^
+B5-0817^adjective@E^high^ว่าง; ไม่ยุ่ง^我今天很闲。^Wǒ jīntiān hěn xián.^วันนี้ฉันว่างมาก^medium^polysemy: adjective "idle; not busy" vs. noun "leisure" vs. verb "stay idle" (闲着)
+B5-0818^verb@E^high^แสดง; ปรากฏ; ทำให้ดู...^这件衣服很显瘦。^Zhè jiàn yīfu hěn xiǎn shòu.^เสื้อตัวนี้ใส่แล้วดูผอม^medium^polysemy: verb "show; appear" vs. adjective "obvious; illustrious"; example shows "make (sb) look"
+B5-0819^adjective@L^medium^ที่มีอยู่ในปัจจุบัน^我们要利用好现有的资源。^Wǒmen yào lìyòng hǎo xiànyǒu de zīyuán.^พวกเราต้องใช้ทรัพยากรที่มีอยู่ให้เป็นประโยชน์^medium^pos_doubtful: 现有 is attributive ("existing"); no clean POS
+B5-0820^noun@E^high^สภาพปัจจุบัน^我们要改变现状。^Wǒmen yào gǎibiàn xiànzhuàng.^พวกเราต้องเปลี่ยนแปลงสภาพปัจจุบัน^high^
+B5-0821^noun@E^low^เบาะแส^警察找到了重要的线索。^Jǐngchá zhǎodào le zhòngyào de xiànsuǒ.^ตำรวจพบเบาะแสสำคัญ^medium^source_gloss: gloss "Clue offer; present; dedicate; donate; show; put on;" merges the next entry (献); only "Clue" belongs to 线索
+B5-0822^verb@E^low^มอบ; อุทิศ; บริจาค; แสดง^他为国家献出了生命。^Tā wèi guójiā xiànchū le shēngmìng.^เขาอุทิศชีวิตให้ชาติ^low^source_gloss: this row's gloss "display country; countryside; village; rural area; home" mixes the tail of 献 with the start of 乡; core senses "offer; dedicate; donate" are in the 线索 row
+B5-0823^noun@E^low^หมู่บ้าน; ชนบท; ตำบล^他回乡下看望父母。^Tā huí xiāngxia kànwàng fùmǔ.^เขากลับไปเยี่ยมพ่อแม่ที่ชนบท^medium^source_gloss: the fuller gloss "country; countryside; village; rural area; home" spilled into the 献 row; example: bare 乡 is mostly bound (乡下)
+B5-0824^noun@E^high^ชนบท; หมู่บ้าน^乡村的空气很新鲜。^Xiāngcūn de kōngqì hěn xīnxiān.^อากาศในชนบทสดชื่นมาก^high^
+B5-0825^verb@L^medium^เท่ากัน^这两个数相等。^Zhè liǎng ge shù xiāngděng.^ตัวเลขสองตัวนี้เท่ากัน^medium^source_gloss: "Equal" is ambiguous; 相等 is the verb "be equal"
+B5-0826^verb@L^medium^สอดคล้อง; ตามที่เหมาะสม^我们要采取相应的措施。^Wǒmen yào cǎiqǔ xiāngyìng de cuòshī.^พวกเราต้องใช้มาตรการที่เหมาะสมตามนั้น^medium^source_gloss: "Corresponding" is a participle; 相应 is verb "correspond" used attributively
+B5-0827^noun@E^high^ไส้กรอก^我早上吃了两根香肠。^Wǒ zǎoshang chī le liǎng gēn xiāngcháng.^ตอนเช้าฉันกินไส้กรอกสองชิ้น^high^
+B5-0828^adjective@E^high^ละเอียด^请你详细地说一说。^Qǐng nǐ xiángxì de shuō yi shuō.^กรุณาเล่าอย่างละเอียดหน่อย^high^
+B5-0829^verb@E^high^เพลิดเพลิน; ได้รับ (สิทธิ)^我们要享受生活。^Wǒmen yào xiǎngshòu shēnghuó.^พวกเราต้องใช้ชีวิตให้มีความสุข^medium^polysemy: "enjoy (life)" vs. "be entitled to (benefits)" (享受福利)
+B5-0830^noun@E^high^มัคคุเทศก์; ผู้นำทาง^我们请了一个当地的向导。^Wǒmen qǐng le yí ge dāngdì de xiàngdǎo.^พวกเราจ้างผู้นำทางท้องถิ่นมาหนึ่งคน^medium^pos_doubtful: 向导 is noun "guide" and verb "act as a guide"
+B5-0831^verb@L^medium^ไปข้างหน้า^请大家向前走。^Qǐng dàjiā xiàng qián zǒu.^ขอให้ทุกคนเดินไปข้างหน้า^medium^pos_doubtful: phrase (向 + 前) used adverbially ("forward")
+B5-0832^verb@L^medium^ขึ้นข้างบน; ก้าวหน้า^每个人都有向上的愿望。^Měi ge rén dōu yǒu xiàngshàng de yuànwàng.^ทุกคนล้วนมีความปรารถนาที่จะก้าวหน้า^medium^polysemy: literal "upward" vs. figurative "make progress"; pos_doubtful: phrase (向 + 上)
+B5-0833^noun@E^high^เซี่ยงเซิง (ศิลปะการพูดตลกจีน)^我很喜欢听相声。^Wǒ hěn xǐhuan tīng xiàngsheng.^ฉันชอบฟังเซี่ยงเซิงมาก^high^
+B5-0834^verb@E^medium^เป็นสัญลักษณ์; สัญลักษณ์^红色象征着幸福。^Hóngsè xiàngzhēng zhe xìngfú.^สีแดงเป็นสัญลักษณ์ของความสุข^medium^pos_doubtful: 象征 is both verb "symbolize" and noun "symbol"
+B5-0835^verb@E^high^ขจัด; กำจัด^我们要消除误会。^Wǒmen yào xiāochú wùhuì.^พวกเราต้องขจัดความเข้าใจผิด^high^
+B5-0836^verb@L^medium^ฆ่าเชื้อ^医生在给工具消毒。^Yīshēng zài gěi gōngjù xiāodú.^หมอกำลังฆ่าเชื้ออุปกรณ์^medium^source_gloss: "Disinfection" is a noun; 消毒 is the verb "disinfect"
+B5-0837^noun@E^high^การดับเพลิงและป้องกันอัคคีภัย^消防人员很快赶到了现场。^Xiāofáng rényuán hěn kuài gǎndào le xiànchǎng.^เจ้าหน้าที่ดับเพลิงรีบมาถึงที่เกิดเหตุ^high^
+B5-0838^noun@E^high^ผู้บริโภค^我们要保护消费者的权利。^Wǒmen yào bǎohù xiāofèizhě de quánlì.^พวกเราต้องคุ้มครองสิทธิของผู้บริโภค^high^
+B5-0839^adjective@E^high^เชิงลบ; เฉื่อยชา^你不要这么消极。^Nǐ búyào zhème xiāojí.^คุณอย่าคิดในแง่ลบขนาดนี้^high^
+B5-0840^noun@E^high^ขโมย^小偷儿偷了我的钱包。^Xiǎotōur tōu le wǒ de qiánbāo.^ขโมยขโมยกระเป๋าสตางค์ของฉันไป^high^
+B5-0841^verb@E^high^พัก; หยุดพัก^走累了，我们歇一会儿吧。^Zǒu lèi le, wǒmen xiē yíhuìr ba.^เดินจนเหนื่อยแล้ว พวกเราพักสักครู่เถอะ^high^
+B5-0842^noun@E^high^ข้อตกลง^双方签订了协议。^Shuāngfāng qiāndìng le xiéyì.^ทั้งสองฝ่ายลงนามในข้อตกลง^high^
+B5-0843^noun@E^high^หนังสือสัญญา; เอกสารข้อตกลง^请在协议书上签字。^Qǐng zài xiéyìshū shang qiānzì.^กรุณาลงนามในหนังสือข้อตกลง^high^
+B5-0844^adjective@E^high^เอียง; เฉียง^这张画挂斜了。^Zhè zhāng huà guà xié le.^ภาพนี้แขวนเอียงไป^high^
+B5-0845^noun@E^high^ทัศนคติ; สภาพจิตใจ^保持良好的心态很重要。^Bǎochí liánghǎo de xīntài hěn zhòngyào.^การรักษาทัศนคติที่ดีเป็นเรื่องสำคัญ^high^
+B5-0846^verb@E^medium^สงสาร; เสียดาย; ปวดใจ^看到孩子生病，妈妈很心疼。^Kàndào háizi shēngbìng, māma hěn xīnténg.^เห็นลูกป่วย แม่ปวดใจมาก^medium^polysemy: "love dearly; feel sorry for" vs. "begrudge (money)"; source_gloss: "Distressed" is loose
+B5-0847^adjective@E^high^เหนื่อยยาก; ลำบาก^你辛苦了！^Nǐ xīnkǔ le!^คุณเหนื่อยมากแล้ว!^medium^polysemy: adjective "hard; laborious" vs. polite verb "trouble (sb) to do" (辛苦你了)
+B5-0848^verb@E^high^ชื่นชม; ดื่มด่ำ^我们一起欣赏音乐吧。^Wǒmen yìqǐ xīnshǎng yīnyuè ba.^พวกเรามาดื่มด่ำกับดนตรีด้วยกันเถอะ^medium^polysemy: "enjoy; admire (art)" vs. "appreciate; think highly of (a person)"
+B5-0849^noun@E^high^ความเชื่อมั่น; ความเชื่อ^他有坚定的信念。^Tā yǒu jiāndìng de xìnniàn.^เขามีความเชื่อมั่นอันแน่วแน่^high^
+B5-0850^noun@E^high^ตู้จดหมาย; กล่องรับจดหมาย^请把信放进信箱。^Qǐng bǎ xìn fàng jìn xìnxiāng.^กรุณาใส่จดหมายลงในตู้จดหมาย^high^
+B5-0851^verb@E^high^แล่น; วิ่ง (ยานพาหนะ)^汽车在公路上行驶。^Qìchē zài gōnglù shang xíngshǐ.^รถยนต์แล่นอยู่บนทางหลวง^high^
+B5-0852^noun@E^high^รูปแบบ; รูปลักษณ์^这种动物的形态很特别。^Zhè zhǒng dòngwù de xíngtài hěn tèbié.^รูปลักษณ์ของสัตว์ชนิดนี้แปลกมาก^high^
+B5-0853^noun@E^medium^สมรรถนะ; ประสิทธิภาพ^这辆车的性能很好。^Zhè liàng chē de xìngnéng hěn hǎo.^สมรรถนะของรถคันนี้ดีมาก^medium^source_gloss: English "performance" is ambiguous (also 表演); 性能 = (machine) performance
+B5-0854^adjective@E^high^ยิ่งใหญ่ตระการตา^长城非常雄伟。^Chángchéng fēicháng xióngwěi.^กำแพงเมืองจีนยิ่งใหญ่ตระการตามาก^high^
