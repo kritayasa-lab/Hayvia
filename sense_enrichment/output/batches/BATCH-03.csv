@@ -1,0 +1,101 @@
+batch_id,source_id,sense_group_id,band,source_number,canonical_word,variants,pinyin,meaning_english,source_pos_label,part_of_speech_normalized,pos_basis,pos_confidence,cross_band_status,same_written_form_cross_band_flag,sense_group_size,priority,thai_meaning,example_zh,example_pinyin,example_thai,enrichment_confidence,review_flag,review_reason
+BATCH-03,B1-0085,S-00085,1,85,东边,东边,dōng biān,east side,,noun,source_english,high,unique,False,1,P1,ทางทิศตะวันออก; ด้านตะวันออก,医院在学校东边。,Yīyuàn zài xuéxiào dōngbian.,โรงพยาบาลอยู่ทางทิศตะวันออกของโรงเรียน,high,false,
+BATCH-03,B1-0086,S-00086,1,86,东西,东西,dōngxi,thing,,noun,source_english,high,unique,False,1,P1,สิ่งของ; ของ,我去超市买东西。,Wǒ qù chāoshì mǎi dōngxi.,ฉันไปซื้อของที่ซูเปอร์มาร์เก็ต,high,false,
+BATCH-03,B1-0087,S-00087,1,87,动,动,dòng,move,,verb,source_english,high,unique,False,1,P1,ขยับ; เคลื่อนไหว,别动！,Bié dòng!,อย่าขยับ!,high,false,
+BATCH-03,B1-0088,S-00088,1,88,动作,动作,dòngzuò,action,,noun,source_english,high,unique,False,1,P1,ท่าทาง; การเคลื่อนไหว,这个动作很难。,Zhège dòngzuò hěn nán.,ท่านี้ยากมาก,high,false,
+BATCH-03,B1-0089,S-00089,1,89,都,都,dōu,all,,adverb,lexical_inference,high,unique,False,1,P1,ทั้งหมด; ล้วน,我们都是学生。,Wǒmen dōu shì xuésheng.,พวกเราเป็นนักเรียนทั้งหมด,high,false,
+BATCH-03,B1-0090,S-00090,1,90,读,读,dú,read,,verb,source_english,high,unique,False,1,P1,อ่าน (ออกเสียง),请读一下这个句子。,Qǐng dú yí xià zhège jùzi.,กรุณาอ่านประโยคนี้หน่อย,high,false,
+BATCH-03,B1-0091,S-00091,1,91,读书,读书,dúshū,reading; study,,verb,lexical_inference,medium,unique,False,1,P1,อ่านหนังสือ; เรียนหนังสือ,他在大学读书。,Tā zài dàxué dúshū.,เขาเรียนหนังสืออยู่ที่มหาวิทยาลัย,medium,true,"polysemy: ""reading"" and ""study (at school)"" combined; example shows ""study"""
+BATCH-03,B1-0093,S-00093,1,93,对不起,对不起,duìbuqǐ,I’m sorry.,,interjection,lexical_inference,medium,unique,False,1,P1,ขอโทษ,对不起，我来晚了。,"Duìbuqǐ, wǒ lái wǎn le.",ขอโทษ ฉันมาสาย,high,true,pos_doubtful: set phrase; could be classed as verb (对不起他) or interjection
+BATCH-03,B1-0094,S-00094,1,94,多,多,duō,many; much; more,,adjective,source_english,high,same_form_different_sense_or_pos,False,1,P1,มาก; หลาย,他有很多朋友。,Tā yǒu hěn duō péngyou.,เขามีเพื่อนมาก,high,false,
+BATCH-03,B1-0095,S-00095,1,95,多少,多少,duōshao,how much,,pronoun,lexical_inference,high,unique,False,1,P1,เท่าไร; จำนวนเท่าไร,这个多少钱？,Zhège duōshao qián?,อันนี้ราคาเท่าไร?,high,false,
+BATCH-03,B1-0096,S-00096,1,96,饿,饿,è,hungry,,adjective,source_english,high,unique,False,1,P1,หิว,我饿了。,Wǒ è le.,ฉันหิวแล้ว,high,false,
+BATCH-03,B1-0097,S-00097,1,97,儿子,儿子,érzi,Son,,noun,source_english,high,unique,False,1,P1,ลูกชาย,他儿子五岁了。,Tā érzi wǔ suì le.,ลูกชายของเขาอายุห้าขวบแล้ว,high,false,
+BATCH-03,B1-0098,S-00098,1,98,二,二,èr,Two,,numeral,source_english,high,unique,False,1,P1,สอง,我住在二楼。,Wǒ zhù zài èr lóu.,ฉันอยู่ชั้นสอง,high,false,
+BATCH-03,B1-0099,S-00099,1,99,饭,饭,fàn,rice; meal,,noun,source_english,high,unique,False,1,P1,ข้าว; อาหาร; มื้ออาหาร,饭做好了，快来吃吧。,"Fàn zuò hǎo le, kuài lái chī ba.",อาหารทำเสร็จแล้ว รีบมากินเถอะ,high,false,
+BATCH-03,B1-0100,S-00100,1,100,饭店,饭店,fàndiàn,restaurant,,noun,source_english,high,unique,False,1,P1,ร้านอาหาร; โรงแรม,我们在饭店吃晚饭。,Wǒmen zài fàndiàn chī wǎnfàn.,พวกเรากินข้าวเย็นที่ร้านอาหาร,medium,true,"polysemy: 饭店 is both ""restaurant"" and ""hotel""; gloss gives only ""restaurant"""
+BATCH-03,B1-0101,S-00101,1,101,房间,房间,fángjiān,Room,,noun,source_english,high,unique,False,1,P1,ห้อง,我的房间很小。,Wǒ de fángjiān hěn xiǎo.,ห้องของฉันเล็กมาก,high,false,
+BATCH-03,B1-0102,S-00102,1,102,房子,房子,fángzi,house; building,,noun,source_english,high,unique,False,1,P1,บ้าน; อาคาร,他们买了一个新房子。,Tāmen mǎi le yí ge xīn fángzi.,พวกเขาซื้อบ้านหลังใหม่หลังหนึ่ง,high,false,
+BATCH-03,B1-0103,S-00103,1,103,放,放,fàng,discharge,,verb,source_english,low,unique,False,1,P1,วาง; ปล่อย; ระบาย,请把书放在桌子上。,Qǐng bǎ shū fàng zài zhuōzi shang.,กรุณาวางหนังสือไว้บนโต๊ะ,low,true,"source_gloss: ""discharge"" is a rare sense at band 1; core sense is ""put/place""; Thai and example follow the core sense"
+BATCH-03,B1-0104,S-00104,1,104,放假,放假,fàngjià,holiday; have a holiday,,verb,source_english,high,unique,False,1,P1,หยุดเรียน/หยุดงาน (ตามวันหยุด); ปิดภาคเรียน,我们下个星期放假。,Wǒmen xià ge xīngqī fàngjià.,พวกเราจะหยุดยาวสัปดาห์หน้า,high,false,
+BATCH-03,B1-0105,S-00105,1,105,放学,放学,fàng xué,off school,,verb,source_english,high,unique,False,1,P1,เลิกเรียน,我四点放学。,Wǒ sì diǎn fàngxué.,ฉันเลิกเรียนตอนสี่โมง,high,false,
+BATCH-03,B1-0106,S-00106,1,106,飞,飞,fēi,fly,,verb,source_english,high,unique,False,1,P1,บิน,小鸟在天上飞。,Xiǎo niǎo zài tiān shang fēi.,นกน้อยบินอยู่บนฟ้า,high,false,
+BATCH-03,B1-0107,S-00107,1,107,飞机,飞机,fēijī,aircraft,,noun,source_english,high,unique,False,1,P1,เครื่องบิน,我坐飞机去上海。,Wǒ zuò fēijī qù Shànghǎi.,ฉันนั่งเครื่องบินไปเซี่ยงไฮ้,high,false,
+BATCH-03,B1-0108,S-00108,1,108,非常,非常,fēicháng,very,,adverb,source_english,high,unique,False,1,P1,มาก; อย่างยิ่ง,今天非常热。,Jīntiān fēicháng rè.,วันนี้ร้อนมาก,high,false,
+BATCH-03,B1-0110,S-00110,1,110,风,风,fēng,wind,,noun,source_english,high,unique,False,1,P1,ลม,今天风很大。,Jīntiān fēng hěn dà.,วันนี้ลมแรงมาก,high,false,
+BATCH-03,B1-0111,S-00111,1,111,干,干,gān,dry,,adjective,source_english,high,unique,False,1,P1,แห้ง,衣服已经干了。,Yīfu yǐjīng gān le.,เสื้อผ้าแห้งแล้ว,high,false,
+BATCH-03,B1-0112,S-00112,1,112,干净,干净,gānjìng,clean,,adjective,source_english,high,unique,False,1,P1,สะอาด,他的房间很干净。,Tā de fángjiān hěn gānjìng.,ห้องของเขาสะอาดมาก,high,false,
+BATCH-03,B1-0113,S-00113,1,113,干,干,gàn,do,,verb,source_english,high,unique,False,1,P1,ทำ,你在干什么？,Nǐ zài gàn shénme?,คุณกำลังทำอะไรอยู่?,high,false,
+BATCH-03,B1-0114,S-00114,1,114,干什么,干什么,gànshénme,What to do,,other,ambiguous,low,unique,False,1,P1,ทำอะไร; จะทำอะไร,你明天干什么？,Nǐ míngtiān gàn shénme?,พรุ่งนี้คุณจะทำอะไร?,high,true,"pos_doubtful: verb phrase (干 + 什么) with no single POS; source_gloss: ""What to do"" — usual sense is ""what are you doing / why"""
+BATCH-03,B1-0115,S-00115,1,115,高,高,gāo,high,,adjective,source_english,high,unique,False,1,P1,สูง,他很高。,Tā hěn gāo.,เขาสูงมาก,high,false,
+BATCH-03,B1-0116,S-00116,1,116,高兴,高兴,gāoxìng,happy,,adjective,source_english,high,unique,False,1,P1,ดีใจ; มีความสุข,见到你我很高兴。,Jiàndào nǐ wǒ hěn gāoxìng.,ฉันดีใจมากที่ได้เจอคุณ,high,false,
+BATCH-03,B1-0117,S-00117,1,117,告诉,告诉,gàosu,tell,,verb,source_english,high,unique,False,1,P1,บอก,请告诉我你的名字。,Qǐng gàosu wǒ nǐ de míngzi.,กรุณาบอกชื่อของคุณให้ฉันหน่อย,high,false,
+BATCH-03,B1-0118,S-00118,1,118,哥哥,哥哥 | 哥,gē ge ｜ gē,elder brother,,noun,source_english,high,unique,False,1,P1,พี่ชาย,我哥哥在北京工作。,Wǒ gēge zài Běijīng gōngzuò.,พี่ชายของฉันทำงานอยู่ที่ปักกิ่ง,high,false,
+BATCH-03,B1-0119,S-00119,1,119,歌,歌,gē,song,,noun,source_english,high,unique,False,1,P1,เพลง,这首歌很好听。,Zhè shǒu gē hěn hǎotīng.,เพลงนี้เพราะมาก,high,false,
+BATCH-03,B1-0120,S-00120,1,120,个,个,gè,individual,,measure_word,lexical_inference,medium,unique,False,1,P1,อัน; คน; ลูก (ลักษณนามทั่วไป),我有一个妹妹。,Wǒ yǒu yí ge mèimei.,ฉันมีน้องสาวหนึ่งคน,medium,true,"source_gloss: ""individual"" — at this level 个 is the general measure word"
+BATCH-03,B1-0121,S-00121,1,121,给,给,gěi,give,,verb,source_english,high,unique,False,1,P1,ให้,妈妈给了我一本书。,Māma gěi le wǒ yì běn shū.,แม่ให้หนังสือฉันหนึ่งเล่ม,high,false,
+BATCH-03,B1-0122,S-00122,1,122,跟,跟,gēn,with,,preposition,source_english,high,unique,False,1,P1,กับ,我跟朋友去看电影。,Wǒ gēn péngyou qù kàn diànyǐng.,ฉันไปดูหนังกับเพื่อน,high,false,
+BATCH-03,B1-0123,S-00123,1,123,工人,工人,gōngrén,Worker,,noun,source_english,high,unique,False,1,P1,คนงาน; กรรมกร,他爸爸是工人。,Tā bàba shì gōngrén.,พ่อของเขาเป็นคนงาน,high,false,
+BATCH-03,B1-0124,S-00124,1,124,工作,工作,gōngzuò,work,,verb,source_english,medium,unique,False,1,P1,ทำงาน; งาน,我在银行工作。,Wǒ zài yínháng gōngzuò.,ฉันทำงานที่ธนาคาร,medium,true,"pos_doubtful: ""work"" is both verb and noun (找工作); example shows the verb"
+BATCH-03,B1-0126,S-00126,1,126,关上,关上,guānshàng,close;shut to; turn off,,verb,source_english,high,unique,False,1,P1,ปิด (ให้สนิท),请关上窗户。,Qǐng guānshang chuānghu.,กรุณาปิดหน้าต่าง,high,false,
+BATCH-03,B1-0127,S-00127,1,127,贵,贵,guì,noble,,adjective,source_english,low,unique,False,1,P1,แพง; มีค่า; สูงศักดิ์,这件衣服太贵了。,Zhè jiàn yīfu tài guì le.,เสื้อตัวนี้แพงเกินไป,low,true,"source_gloss: gloss ""noble"" omits the core band-1 sense ""expensive""; Thai/example show ""expensive"""
+BATCH-03,B1-0128,S-00128,1,128,国,国,guó,country; state; nation,,noun,source_english,high,unique,False,1,P1,ประเทศ; รัฐ; ชาติ,你是哪国人？,Nǐ shì nǎ guó rén?,คุณเป็นคนประเทศไหน?,high,false,
+BATCH-03,B1-0129,S-00129,1,129,国家,国家,guójiā,Country,,noun,source_english,high,unique,False,1,P1,ประเทศ,中国是一个很大的国家。,Zhōngguó shì yí ge hěn dà de guójiā.,จีนเป็นประเทศที่ใหญ่มาก,high,false,
+BATCH-03,B1-0130,S-00130,1,130,国外,国外,guó wài,foreign; oversea; abroad,,noun,source_english,medium,unique,False,1,P1,ต่างประเทศ,他在国外工作。,Tā zài guówài gōngzuò.,เขาทำงานอยู่ต่างประเทศ,high,false,
+BATCH-03,B1-0131,S-00131,1,131,过,过,guò,pass,,verb,source_english,high,same_form_different_sense_or_pos,False,1,P1,ผ่าน; ข้าม,过了这条路就是学校。,Guò le zhè tiáo lù jiù shì xuéxiào.,ข้ามถนนสายนี้ไปก็เป็นโรงเรียน,high,false,
+BATCH-03,B1-0132,S-00132,1,132,还,还,hái,also; still; yet,,adverb,source_english,high,unique,False,1,P1,ยัง; อีก; ยังคง,他还在睡觉。,Tā hái zài shuìjiào.,เขายังนอนอยู่,high,false,
+BATCH-03,B1-0133,S-00133,1,133,还是,还是,háishi,still,,adverb,source_english,medium,unique,False,1,P1,ยังคง; หรือ,你喝茶还是喝咖啡？,Nǐ hē chá háishi hē kāfēi?,คุณดื่มชาหรือกาแฟ?,low,true,"source_gloss: gloss ""still"" omits the core band-1 sense ""or"" (questions); polysemy: adverb ""still"" vs. conjunction ""or""; example shows ""or"""
+BATCH-03,B1-0134,S-00134,1,134,还有,还有,háiyǒu,also; in addition; besides,,conjunction,lexical_inference,medium,unique,False,1,P1,นอกจากนี้; ยังมี,我有一个哥哥，还有一个妹妹。,"Wǒ yǒu yí ge gēge, hái yǒu yí ge mèimei.",ฉันมีพี่ชายหนึ่งคน และยังมีน้องสาวอีกหนึ่งคน,medium,true,pos_doubtful: 还有 is often 还 + 有 (verb phrase) rather than a conjunction
+BATCH-03,B1-0135,S-00135,1,135,孩子,孩子,háizi,Children,,noun,source_english,high,unique,False,1,P1,เด็ก; ลูก,这个孩子很聪明。,Zhège háizi hěn cōngming.,เด็กคนนี้ฉลาดมาก,high,false,
+BATCH-03,B1-0136,S-00136,1,136,汉语,汉语,hànyǔ,Chinese,,noun,source_english,high,unique,False,1,P1,ภาษาจีน,我在学习汉语。,Wǒ zài xuéxí Hànyǔ.,ฉันกำลังเรียนภาษาจีน,high,false,
+BATCH-03,B1-0137,S-00137,1,137,汉字,汉字,hàn zì,Chinese character,,noun,source_english,high,unique,False,1,P1,อักษรจีน; ตัวอักษรฮั่น,这个汉字怎么读？,Zhège Hànzì zěnme dú?,ตัวอักษรจีนตัวนี้อ่านว่าอย่างไร?,high,false,
+BATCH-03,B1-0139,S-00139,1,139,好吃,好吃,hǎochī,Yummy,,adjective,source_english,high,unique,False,1,P1,อร่อย,妈妈做的菜很好吃。,Māma zuò de cài hěn hǎochī.,อาหารที่แม่ทำอร่อยมาก,high,false,
+BATCH-03,B1-0140,S-00140,1,140,好看,好看,hǎokàn,good looking,,adjective,source_english,high,unique,False,1,P1,สวย; น่าดู,这件衣服很好看。,Zhè jiàn yīfu hěn hǎokàn.,เสื้อตัวนี้สวยมาก,high,false,
+BATCH-03,B1-0141,S-00141,1,141,好听,好听,hǎotīng,pleasant to hear,,adjective,source_english,high,unique,False,1,P1,ไพเราะ; น่าฟัง,她的声音很好听。,Tā de shēngyīn hěn hǎotīng.,เสียงของเธอไพเราะมาก,high,false,
+BATCH-03,B1-0142,S-00142,1,142,好玩儿,好玩儿,hǎowánr,fun; interesting,,adjective,source_english,high,unique,False,1,P1,สนุก; น่าเล่น,这个游戏很好玩儿。,Zhège yóuxì hěn hǎowánr.,เกมนี้สนุกมาก,high,false,
+BATCH-03,B1-0143,S-00143,1,143,号,号,hào,Number/date,,noun,source_english,high,unique,False,1,P1,เลขที่; หมายเลข; วันที่,今天是五月十号。,Jīntiān shì wǔ yuè shí hào.,วันนี้วันที่สิบพฤษภาคม,medium,true,"polysemy: ""number"" and ""date (day of month)"" combined; example shows ""date"""
+BATCH-03,B1-0144,S-00144,1,144,喝,喝,hē,drink,,verb,source_english,high,unique,False,1,P1,ดื่ม,你想喝什么？,Nǐ xiǎng hē shénme?,คุณอยากดื่มอะไร?,high,false,
+BATCH-03,B1-0145,S-00145,1,145,和,和,hé,and,,conjunction,source_english,high,unique,False,1,P1,และ; กับ,我和他是朋友。,Wǒ hé tā shì péngyou.,ฉันกับเขาเป็นเพื่อนกัน,high,false,
+BATCH-03,B1-0146,S-00146,1,146,很,很,hěn,very,,adverb,source_english,high,unique,False,1,P1,มาก,我很好。,Wǒ hěn hǎo.,ฉันสบายดีมาก,high,false,
+BATCH-03,B1-0147,S-00147,1,147,后,后,hòu,back; behind; after; later,,noun,lexical_inference,medium,unique,False,1,P1,หลัง; ข้างหลัง; ภายหลัง,三天后我回国。,Sān tiān hòu wǒ huí guó.,สามวันหลังจากนี้ฉันจะกลับประเทศ,medium,true,"polysemy: spatial ""behind"" and temporal ""after; later"" combined; example shows ""after"""
+BATCH-03,B1-0148,S-00148,1,148,后边,后边,hòu biān,behind; back,,noun,source_english,high,unique,False,1,P1,ข้างหลัง; ด้านหลัง,学校后边有一个公园。,Xuéxiào hòubian yǒu yí ge gōngyuán.,ข้างหลังโรงเรียนมีสวนสาธารณะแห่งหนึ่ง,high,false,
+BATCH-03,B1-0149,S-00149,1,149,后天,后天,hòu tiān,day after tomorrow,,noun,source_english,high,unique,False,1,P1,มะรืนนี้,后天是星期六。,Hòutiān shì xīngqīliù.,มะรืนนี้เป็นวันเสาร์,high,false,
+BATCH-03,B1-0151,S-00151,1,151,话,话,huà,word; words,,noun,source_english,high,unique,False,1,P1,คำพูด,他的话很有意思。,Tā de huà hěn yǒu yìsi.,คำพูดของเขาน่าสนใจมาก,high,false,
+BATCH-03,B1-0152,S-00152,1,152,坏,坏,huài,bad,,adjective,source_english,high,unique,False,1,P1,เลว; เสีย; ไม่ดี,我的手机坏了。,Wǒ de shǒujī huài le.,โทรศัพท์มือถือของฉันเสียแล้ว,high,false,
+BATCH-03,B1-0153,S-00153,1,153,还,还,huán,return; pay back,,verb,source_english,high,unique,False,1,P1,คืน; ชดใช้,明天我还你钱。,Míngtiān wǒ huán nǐ qián.,พรุ่งนี้ฉันจะคืนเงินคุณ,high,false,
+BATCH-03,B1-0155,S-00155,1,155,回答,回答,huídá,Answer,,verb,source_english,medium,unique,False,1,P1,ตอบ; คำตอบ,请回答我的问题。,Qǐng huídá wǒ de wèntí.,กรุณาตอบคำถามของฉัน,medium,true,"pos_doubtful: ""Answer"" is both verb and noun; example shows the verb"
+BATCH-03,B1-0156,S-00156,1,156,回到,回到,huí dào,back to,,verb,lexical_inference,high,unique,False,1,P1,กลับมาถึง; กลับไปยัง,他十点回到家。,Tā shí diǎn huídào jiā.,เขากลับถึงบ้านตอนสิบโมง,high,false,
+BATCH-03,B1-0157,S-00157,1,157,回家,回家,huíjiā,go home; return home,,verb,source_english,high,unique,False,1,P1,กลับบ้าน,下课以后我回家。,Xiàkè yǐhòu wǒ huíjiā.,หลังเลิกเรียนฉันกลับบ้าน,high,false,
+BATCH-03,B1-0158,S-00158,1,158,回来,回来,huí lái,come back; return,,verb,source_english,high,unique,False,1,P1,กลับมา,爸爸什么时候回来？,Bàba shénme shíhou huílai?,พ่อจะกลับมาเมื่อไร?,high,false,
+BATCH-03,B1-0159,S-00159,1,159,回去,回去,huí qù,go back,,verb,source_english,high,unique,False,1,P1,กลับไป,太晚了，你回去吧。,"Tài wǎn le, nǐ huíqu ba.",ดึกมากแล้ว คุณกลับไปเถอะ,high,false,
+BATCH-03,B1-0161,S-00161,1,161,火车,火车,huǒchē,train,,noun,source_english,high,unique,False,1,P1,รถไฟ,我们坐火车去吧。,Wǒmen zuò huǒchē qù ba.,พวกเรานั่งรถไฟไปกันเถอะ,high,false,
+BATCH-03,B1-0162,S-00162,1,162,机场,机场,jīchǎng,Airport,,noun,source_english,high,unique,False,1,P1,สนามบิน,我去机场接朋友。,Wǒ qù jīchǎng jiē péngyou.,ฉันไปรับเพื่อนที่สนามบิน,high,false,
+BATCH-03,B1-0163,S-00163,1,163,机票,机票,jī piào,air ticket,,noun,source_english,high,unique,False,1,P1,ตั๋วเครื่องบิน,我买好机票了。,Wǒ mǎi hǎo jīpiào le.,ฉันซื้อตั๋วเครื่องบินเรียบร้อยแล้ว,high,false,
+BATCH-03,B1-0164,S-00164,1,164,鸡蛋,鸡蛋,jīdàn,Egg,,noun,source_english,high,unique,False,1,P1,ไข่ไก่,早上我吃了一个鸡蛋。,Zǎoshang wǒ chī le yí ge jīdàn.,ตอนเช้าฉันกินไข่ไก่หนึ่งฟอง,high,false,
+BATCH-03,B1-0165,S-00165,1,165,几,几,jǐ,several,,numeral,lexical_inference,medium,unique,False,1,P1,หลาย; กี่,你家有几口人？,Nǐ jiā yǒu jǐ kǒu rén?,บ้านคุณมีกี่คน?,medium,true,"polysemy: ""several"" vs. question word ""how many""; gloss gives ""several"" but example shows ""how many"""
+BATCH-03,B1-0166,S-00166,1,166,记,记,jì,remember,,verb,source_english,high,unique,False,1,P1,จำ; จดบันทึก,请把电话号码记下来。,Qǐng bǎ diànhuà hàomǎ jì xiàlai.,กรุณาจดเบอร์โทรศัพท์ไว้,medium,true,"polysemy: gloss ""remember"" but 记 is also ""write down""; example shows ""note down"""
+BATCH-03,B1-0167,S-00167,1,167,记得,记得,jìdé,remember,,verb,source_english,high,unique,False,1,P1,จำได้,你还记得我吗？,Nǐ hái jìde wǒ ma?,คุณยังจำฉันได้ไหม?,high,false,
+BATCH-03,B1-0168,S-00168,1,168,记住,记住,jì zhù,remember; keep in mind,,verb,source_english,high,unique,False,1,P1,จำไว้; จดจำให้ขึ้นใจ,请记住我的话。,Qǐng jìzhù wǒ de huà.,กรุณาจำคำพูดของฉันไว้,high,false,
+BATCH-03,B1-0169,S-00169,1,169,家,家,jiā,home,,noun,source_english,high,same_form_different_sense_or_pos,False,1,P1,บ้าน; ครอบครัว,我家在北京。,Wǒ jiā zài Běijīng.,บ้านของฉันอยู่ที่ปักกิ่ง,high,false,
+BATCH-03,B1-0170,S-00170,1,170,家里,家里,jiālǐ,In the home,,noun,lexical_inference,high,unique,False,1,P1,ในบ้าน; ทางบ้าน,家里没有人。,Jiā li méiyǒu rén.,ในบ้านไม่มีใครอยู่,high,false,
+BATCH-03,B1-0171,S-00171,1,171,家人,家人,jiārén,family,,noun,source_english,high,unique,False,1,P1,คนในครอบครัว,我很想我的家人。,Wǒ hěn xiǎng wǒ de jiārén.,ฉันคิดถึงครอบครัวมาก,high,false,
+BATCH-03,B1-0172,S-00172,1,172,间,间,jiān,between; measure word for rooms,,measure_word,lexical_inference,medium,unique,False,1,P1,ห้อง (ลักษณนามของห้อง); ระหว่าง,这个房子有三间卧室。,Zhège fángzi yǒu sān jiān wòshì.,บ้านหลังนี้มีห้องนอนสามห้อง,medium,true,"polysemy: ""between"" (noun/locative) and measure word for rooms combined; example shows the measure word"
+BATCH-03,B1-0173,S-00173,1,173,见,见,jiàn,see; meet,,verb,source_english,high,unique,False,1,P1,เห็น; พบ,明天见！,Míngtiān jiàn!,พรุ่งนี้เจอกัน!,high,false,
+BATCH-03,B1-0174,S-00174,1,174,见面,见面,jiànmiàn,meet,,verb,source_english,high,unique,False,1,P1,พบกัน; เจอหน้า,我们在哪儿见面？,Wǒmen zài nǎr jiànmiàn?,พวกเราจะเจอกันที่ไหน?,high,false,
+BATCH-03,B1-0175,S-00175,1,175,教,教,jiāo,teach,,verb,source_english,high,unique,False,1,P1,สอน,王老师教我们汉语。,Wáng lǎoshī jiāo wǒmen Hànyǔ.,ครูหวังสอนภาษาจีนพวกเรา,high,false,
+BATCH-03,B1-0177,S-00177,1,177,教学楼,教学楼,jiàoxué lóu,teaching building,,noun,source_english,high,unique,False,1,P1,อาคารเรียน,教学楼在图书馆旁边。,Jiàoxuélóu zài túshūguǎn pángbiān.,อาคารเรียนอยู่ข้างห้องสมุด,high,false,
+BATCH-03,B1-0178,S-00178,1,178,姐姐,姐姐 | 姐,jiě jie ｜ jiě,elder sister,,noun,source_english,high,unique,False,1,P1,พี่สาว,我姐姐是医生。,Wǒ jiějie shì yīshēng.,พี่สาวของฉันเป็นหมอ,high,false,
+BATCH-03,B1-0179,S-00179,1,179,介绍,介绍,jièshào,introduce,,verb,source_english,high,unique,False,1,P1,แนะนำ,我来介绍一下，这是我的朋友。,"Wǒ lái jièshào yí xià, zhè shì wǒ de péngyou.",ขอแนะนำหน่อย นี่คือเพื่อนของฉัน,high,false,
+BATCH-03,B1-0180,S-00180,1,180,今年,今年,jīn nián,this year,,noun,source_english,high,unique,False,1,P1,ปีนี้,我今年二十岁。,Wǒ jīnnián èrshí suì.,ปีนี้ฉันอายุยี่สิบปี,high,false,
+BATCH-03,B1-0181,S-00181,1,181,今天,今天,jīntiān,Today,,noun,source_english,high,unique,False,1,P1,วันนี้,今天是星期一。,Jīntiān shì xīngqīyī.,วันนี้วันจันทร์,high,false,
+BATCH-03,B1-0182,S-00182,1,182,进,进,jìn,enter,,verb,source_english,high,unique,False,1,P1,เข้า,请进！,Qǐng jìn!,เชิญเข้ามา!,high,false,
+BATCH-03,B1-0183,S-00183,1,183,进来,进来,jìn lái,come in,,verb,source_english,high,unique,False,1,P1,เข้ามา,外面很冷，快进来吧。,"Wàimian hěn lěng, kuài jìnlai ba.",ข้างนอกหนาวมาก รีบเข้ามาเถอะ,high,false,
+BATCH-03,B1-0184,S-00184,1,184,进去,进去,jìn qù,go in,,verb,source_english,high,unique,False,1,P1,เข้าไป,他进去了。,Tā jìnqu le.,เขาเข้าไปแล้ว,high,false,
+BATCH-03,B1-0185,S-00185,1,185,九,九,jiǔ,Nine,,numeral,source_english,high,unique,False,1,P1,เก้า,我九点上课。,Wǒ jiǔ diǎn shàngkè.,ฉันเข้าเรียนตอนเก้าโมง,high,false,
+BATCH-03,B1-0186,S-00186,1,186,就,就,jiù,as soon as; right away; then,,adverb,lexical_inference,high,unique,False,1,P1,ทันที; ก็; ก็จะ,我马上就来。,Wǒ mǎshàng jiù lái.,ฉันจะมาเดี๋ยวนี้เลย,medium,true,"polysemy: ""as soon as / right away / then"" are distinct uses; example shows ""right away"""
+BATCH-03,B1-0187,S-00187,1,187,觉得,觉得,juéde,Think,,verb,source_english,high,unique,False,1,P1,รู้สึก; คิดว่า,我觉得这个电影很好看。,Wǒ juéde zhège diànyǐng hěn hǎokàn.,ฉันคิดว่าหนังเรื่องนี้สนุกมาก,high,false,
+BATCH-03,B1-0188,S-00188,1,188,开,开,kāi,open,,verb,source_english,high,unique,False,1,P1,เปิด,请开门。,Qǐng kāi mén.,กรุณาเปิดประตู,high,false,
+BATCH-03,B1-0189,S-00189,1,189,开车,开车,kāichē,drive; drive a car,,verb,source_english,high,unique,False,1,P1,ขับรถ,我爸爸会开车。,Wǒ bàba huì kāichē.,พ่อของฉันขับรถเป็น,high,false,
+BATCH-03,B1-0190,S-00190,1,190,开会,开会,kāihuì,have a meeting,,verb,source_english,high,unique,False,1,P1,ประชุม; เข้าประชุม,老师们在开会。,Lǎoshīmen zài kāihuì.,ครูๆ กำลังประชุมกันอยู่,high,false,
+BATCH-03,B1-0191,S-00191,1,191,开玩笑,开玩笑,kāiwánxiào,Make fun of,,verb,lexical_inference,medium,unique,False,1,P1,พูดเล่น; ล้อเล่น,别生气，我跟你开玩笑呢。,"Bié shēngqì, wǒ gēn nǐ kāi wánxiào ne.",อย่าโกรธนะ ฉันล้อเล่นกับคุณเฉยๆ,medium,true,"source_gloss: ""Make fun of"" leans to mocking; 开玩笑 usually means ""to joke"""
+BATCH-03,B1-0192,S-00192,1,192,看,看,kàn,see,,verb,source_english,high,unique,False,1,P1,ดู; มอง,你看，那是我们的学校。,"Nǐ kàn, nà shì wǒmen de xuéxiào.",คุณดูสิ นั่นคือโรงเรียนของพวกเรา,high,false,

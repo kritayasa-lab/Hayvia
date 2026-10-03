@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B1-0193^verb@E^high^ไปหาหมอ; (หมอ) ตรวจรักษา^我今天去医院看病。^Wǒ jīntiān qù yīyuàn kànbìng.^วันนี้ฉันไปหาหมอที่โรงพยาบาล^high^
+B1-0194^verb@E^high^เห็น; มองเห็น^我看到他了。^Wǒ kàndào tā le.^ฉันเห็นเขาแล้ว^high^
+B1-0195^verb@E^high^เห็น; มองเห็น^你看见我的手机了吗？^Nǐ kànjiàn wǒ de shǒujī le ma?^คุณเห็นโทรศัพท์มือถือของฉันไหม?^high^
+B1-0196^verb@E^high^สอบ; ทดสอบ^明天老师要考我们。^Míngtiān lǎoshī yào kǎo wǒmen.^พรุ่งนี้ครูจะสอบพวกเรา^high^
+B1-0197^noun@E^medium^การสอบ; สอบ^明天有汉语考试。^Míngtiān yǒu Hànyǔ kǎoshì.^พรุ่งนี้มีสอบภาษาจีน^high^
+B1-0198^adjective@E^high^กระหายน้ำ^我渴了，想喝水。^Wǒ kě le, xiǎng hē shuǐ.^ฉันกระหายน้ำ อยากดื่มน้ำ^high^
+B1-0199^noun@E^high^บทเรียน; วิชา; คาบเรียน^我们上午有两节课。^Wǒmen shàngwǔ yǒu liǎng jié kè.^ตอนเช้าพวกเรามีเรียนสองคาบ^high^
+B1-0200^noun@E^high^หนังสือเรียน; ตำราเรียน^请打开课本。^Qǐng dǎkāi kèběn.^กรุณาเปิดหนังสือเรียน^high^
+B1-0201^noun@E^high^บทเรียน (เนื้อหาบทอ่าน)^请读一下课文。^Qǐng dú yí xià kèwén.^กรุณาอ่านบทเรียนหน่อย^high^
+B1-0202^noun@E^high^ปาก^请张开口。^Qǐng zhāngkāi kǒu.^กรุณาอ้าปาก^medium^polysemy: 口 is also a measure word for family members (几口人), common at this level
+B1-0203^measure_word@L^low^ก้อน; ชิ้น; หยวน (ลักษณนาม)^这个苹果两块钱。^Zhège píngguǒ liǎng kuài qián.^แอปเปิลลูกนี้ราคาสองหยวน^low^source_gloss: "block" — at band 1 块 is mainly the measure word for pieces and colloquial "yuan"; pos_doubtful: no source POS
+B1-0204^adjective@E^high^เร็ว^他跑得很快。^Tā pǎo de hěn kuài.^เขาวิ่งเร็วมาก^high^
+B1-0205^verb@E^high^มา^你什么时候来？^Nǐ shénme shíhou lái?^คุณจะมาเมื่อไร?^high^
+B1-0206^verb@E^high^มาถึง^我们来到了北京。^Wǒmen láidào le Běijīng.^พวกเรามาถึงปักกิ่งแล้ว^high^
+B1-0208^noun@E^high^ผู้สูงอายุ; คนแก่^我们要帮助老人。^Wǒmen yào bāngzhù lǎorén.^พวกเราควรช่วยเหลือผู้สูงอายุ^high^
+B1-0209^noun@E^high^ครู^她是我们的汉语老师。^Tā shì wǒmen de Hànyǔ lǎoshī.^เธอเป็นครูภาษาจีนของพวกเรา^high^
+B1-0211^adjective@E^high^เหนื่อย^今天我很累。^Jīntiān wǒ hěn lèi.^วันนี้ฉันเหนื่อยมาก^high^
+B1-0212^adjective@E^high^หนาว; เย็น^北京的冬天很冷。^Běijīng de dōngtiān hěn lěng.^ฤดูหนาวของปักกิ่งหนาวมาก^high^
+B1-0213^noun@L^medium^ใน; ข้างใน^书包里有三本书。^Shūbāo li yǒu sān běn shū.^ในกระเป๋านักเรียนมีหนังสือสามเล่ม^medium^pos_doubtful: locative 里 has no exact enum value; normalized as noun (localizer)
+B1-0214^noun@E^high^ข้างใน^里边有人吗？^Lǐbian yǒu rén ma?^ข้างในมีคนไหม?^high^
+B1-0216^numeral@E^high^ศูนย์^我的房间号是三零五。^Wǒ de fángjiān hào shì sān líng wǔ.^หมายเลขห้องของฉันคือสามศูนย์ห้า^high^variant: variants/pinyin list "líng ｜ líng" (identical), likely 零 / 〇
+B1-0217^numeral@E^high^หก^我早上六点起床。^Wǒ zǎoshang liù diǎn qǐchuáng.^ตอนเช้าฉันตื่นนอนตอนหกโมง^high^
+B1-0218^noun@E^medium^ตึก; ชั้น (ของอาคาร)^我住在三楼。^Wǒ zhù zài sān lóu.^ฉันอยู่ชั้นสาม^medium^polysemy: 楼 means both "building" and "floor/storey"; gloss gives "floor"
+B1-0219^noun@E^high^ชั้นบน^我住楼上，他住楼下。^Wǒ zhù lóushàng, tā zhù lóuxià.^ฉันอยู่ชั้นบน เขาอยู่ชั้นล่าง^high^
+B1-0220^noun@E^high^ชั้นล่าง; ข้างล่างตึก^我在楼下等你。^Wǒ zài lóuxià děng nǐ.^ฉันรอคุณอยู่ชั้นล่าง^high^
+B1-0221^noun@E^high^ถนน; ทาง^这条路很长。^Zhè tiáo lù hěn cháng.^ถนนสายนี้ยาวมาก^high^
+B1-0222^noun@E^high^ทางแยก; สี่แยก^在前边的路口往左走。^Zài qiánbian de lùkǒu wǎng zuǒ zǒu.^ที่ทางแยกข้างหน้าให้เลี้ยวซ้าย^high^
+B1-0223^noun@L^high^ระหว่างทาง; บนถนน^路上车很多。^Lù shang chē hěn duō.^บนถนนมีรถเยอะมาก^high^
+B1-0224^noun@E^high^แม่^我妈妈是医生。^Wǒ māma shì yīshēng.^แม่ของฉันเป็นหมอ^high^
+B1-0225^noun@E^high^ถนน (ใหญ่)^过马路的时候要小心。^Guò mǎlù de shíhou yào xiǎoxīn.^ตอนข้ามถนนต้องระวัง^high^
+B1-0226^adverb@E^high^ทันที; เดี๋ยวนี้^我马上就到。^Wǒ mǎshàng jiù dào.^ฉันจะถึงเดี๋ยวนี้แหละ^high^
+B1-0227^particle@L^high^ไหม (คำลงท้ายประโยคคำถาม)^你是中国人吗？^Nǐ shì Zhōngguórén ma?^คุณเป็นคนจีนไหม?^high^source_gloss: "auxiliary word" is vague; 吗 is the yes/no question particle
+B1-0228^verb@E^high^ซื้อ^我想买一件衣服。^Wǒ xiǎng mǎi yí jiàn yīfu.^ฉันอยากซื้อเสื้อหนึ่งตัว^high^
+B1-0229^adjective@E^high^ช้า^请说慢一点儿。^Qǐng shuō màn yìdiǎnr.^กรุณาพูดช้าลงหน่อย^high^
+B1-0230^adjective@E^high^ยุ่ง^最近我很忙。^Zuìjìn wǒ hěn máng.^ช่วงนี้ฉันยุ่งมาก^high^
+B1-0232^adverb@L^medium^ไม่ (ได้); ไม่มี^我昨天没去学校。^Wǒ zuótiān méi qù xuéxiào.^เมื่อวานฉันไม่ได้ไปโรงเรียน^medium^polysemy: 没 is both the adverb "did not" and the verb "not have"; example shows the adverb
+B1-0233^interjection@L^medium^ไม่เป็นไร^A：对不起！B：没关系。^A: Duìbuqǐ! B: Méi guānxi.^A: ขอโทษ! B: ไม่เป็นไร^high^pos_doubtful: set phrase; POS chosen as interjection by convention
+B1-0234^interjection@L^medium^ไม่มีอะไร; ไม่เป็นไร^A：你怎么了？B：没什么。^A: Nǐ zěnme le? B: Méi shénme.^A: คุณเป็นอะไรไป? B: ไม่มีอะไร^high^pos_doubtful: set phrase; POS chosen as interjection by convention
+B1-0235^interjection@L^medium^ไม่เป็นไร; ไม่มีอะไร^别担心，我没事儿。^Bié dānxīn, wǒ méishìr.^ไม่ต้องห่วง ฉันไม่เป็นไร^high^pos_doubtful: set phrase; POS chosen as interjection by convention
+B1-0236^verb@E^medium^ไม่มี; ไม่ได้^我没有哥哥。^Wǒ méiyǒu gēge.^ฉันไม่มีพี่ชาย^medium^polysemy: verb "not have" and adverb "have not (done)" combined; example shows "not have"
+B1-0237^noun@E^high^น้องสาว^我妹妹很可爱。^Wǒ mèimei hěn kě'ài.^น้องสาวของฉันน่ารักมาก^high^
+B1-0238^noun@E^high^ประตู^请关门。^Qǐng guān mén.^กรุณาปิดประตู^high^
+B1-0239^noun@E^high^หน้าประตู; ทางเข้า^我在学校门口等你。^Wǒ zài xuéxiào ménkǒu děng nǐ.^ฉันรอคุณอยู่ที่หน้าประตูโรงเรียน^high^
+B1-0240^noun@E^high^ตั๋วเข้าชม; บัตรผ่านประตู^公园的门票多少钱？^Gōngyuán de ménpiào duōshao qián?^ตั๋วเข้าสวนสาธารณะราคาเท่าไร?^high^
+B1-0241^particle@L^medium^พวก; ...ทั้งหลาย (คำเติมท้ายแสดงพหูพจน์)^朋友们，你们好！^Péngyoumen, nǐmen hǎo!^สวัสดีเพื่อนๆ ทุกคน!^medium^source_gloss: pinyin field contains the meaning and an inline example ("men （péng yǒu men）plural marker…(fr"), meaning_english is empty — source row is malformed
+B1-0242^noun@E^high^ข้าวสวย^我每天都吃米饭。^Wǒ měitiān dōu chī mǐfàn.^ฉันกินข้าวสวยทุกวัน^high^
+B1-0243^noun@E^high^ขนมปัง^早上我吃面包。^Zǎoshang wǒ chī miànbāo.^ตอนเช้าฉันกินขนมปัง^high^
+B1-0244^noun@E^high^บะหมี่; ก๋วยเตี๋ยว^我想吃面条儿。^Wǒ xiǎng chī miàntiáor.^ฉันอยากกินบะหมี่^high^
+B1-0245^noun@E^high^ชื่อ^你叫什么名字？^Nǐ jiào shénme míngzi?^คุณชื่ออะไร?^high^
+B1-0246^adjective@E^medium^ชัดเจน; เข้าใจ^老师讲得很明白。^Lǎoshī jiǎng de hěn míngbai.^ครูอธิบายได้ชัดเจนมาก^medium^polysemy: adjective "clear" and very common verb "understand" (我明白了); gloss gives "clear"
+B1-0247^noun@E^high^ปีหน้า^明年我想去中国。^Míngnián wǒ xiǎng qù Zhōngguó.^ปีหน้าฉันอยากไปจีน^high^
+B1-0248^noun@E^high^พรุ่งนี้^明天我们去公园吧。^Míngtiān wǒmen qù gōngyuán ba.^พรุ่งนี้พวกเราไปสวนสาธารณะกันเถอะ^high^
+B1-0249^verb@E^high^หยิบ; ถือ; เอา^请帮我拿一下这个包。^Qǐng bāng wǒ ná yí xià zhège bāo.^ช่วยถือกระเป๋าใบนี้ให้ฉันหน่อย^high^
+B1-0251^pronoun@E^high^ที่ไหน^你家在哪里？^Nǐ jiā zài nǎlǐ?^บ้านของคุณอยู่ที่ไหน?^high^
+B1-0252^pronoun@E^high^ที่ไหน^你去哪儿？^Nǐ qù nǎr?^คุณจะไปไหน?^high^
+B1-0253^pronoun@E^high^อันไหนบ้าง; อะไรบ้าง^你有哪些中国朋友？^Nǐ yǒu nǎxiē Zhōngguó péngyou?^คุณมีเพื่อนชาวจีนคนไหนบ้าง?^high^
+B1-0255^pronoun@E^high^ทางนั้น; ตรงนั้น^洗手间在那边。^Xǐshǒujiān zài nàbian.^ห้องน้ำอยู่ทางโน้น^high^
+B1-0256^pronoun@E^high^ที่นั่น^那里的东西很便宜。^Nàlǐ de dōngxi hěn piányi.^ของที่นั่นราคาถูกมาก^high^
+B1-0257^pronoun@E^high^ที่นั่น^我明天去那儿。^Wǒ míngtiān qù nàr.^พรุ่งนี้ฉันจะไปที่นั่น^high^
+B1-0258^pronoun@E^high^เหล่านั้น; พวกนั้น^那些书是我的。^Nàxiē shū shì wǒ de.^หนังสือพวกนั้นเป็นของฉัน^high^
+B1-0259^noun@E^high^นม^孩子每天都要喝奶。^Háizi měitiān dōu yào hē nǎi.^เด็กต้องดื่มนมทุกวัน^high^
+B1-0260^noun@E^high^ย่า (แม่ของพ่อ)^我奶奶今年七十岁了。^Wǒ nǎinai jīnnián qīshí suì le.^ย่าของฉันปีนี้อายุเจ็ดสิบปีแล้ว^high^
+B1-0261^adjective@L^medium^ชาย; เพศชาย^我们班有十个男学生。^Wǒmen bān yǒu shí ge nán xuésheng.^ห้องเรามีนักเรียนชายสิบคน^medium^pos_doubtful: gloss "Man" suggests noun, but 男 is mostly used attributively ("male")
+B1-0262^noun@E^high^เด็กผู้ชาย^那个男孩儿是我弟弟。^Nàge nánháir shì wǒ dìdi.^เด็กผู้ชายคนนั้นเป็นน้องชายของฉัน^high^
+B1-0263^noun@E^high^แฟน (ผู้ชาย)^她有男朋友了。^Tā yǒu nánpéngyou le.^เธอมีแฟนแล้ว^high^
+B1-0264^noun@E^high^ผู้ชาย^那个男人是谁？^Nàge nánrén shì shéi?^ผู้ชายคนนั้นเป็นใคร?^high^
+B1-0265^noun@E^high^นักเรียนชาย; เด็กผู้ชาย^我们班男生比女生多。^Wǒmen bān nánshēng bǐ nǚshēng duō.^ห้องเรามีนักเรียนชายมากกว่านักเรียนหญิง^high^
+B1-0266^noun@E^high^ทิศใต้^从这儿往南走就是公园。^Cóng zhèr wǎng nán zǒu jiù shì gōngyuán.^จากตรงนี้เดินไปทางใต้ก็จะถึงสวนสาธารณะ^high^
+B1-0267^noun@E^high^ทางทิศใต้; ด้านใต้^学校南边有一个超市。^Xuéxiào nánbian yǒu yí ge chāoshì.^ทางทิศใต้ของโรงเรียนมีซูเปอร์มาร์เก็ตแห่งหนึ่ง^high^
+B1-0268^adjective@L^low^ยาก^汉语难不难？^Hànyǔ nán bu nán?^ภาษาจีนยากไหม?^low^source_mismatch: gloss "disaster; blame" belongs to 难 nàn, but pinyin is nán ("difficult"); Thai/example follow the pinyin and band-1 level
+B1-0269^particle@L^high^ล่ะ; (คำลงท้ายประโยคคำถาม/แสดงการดำเนินอยู่)^我很好，你呢？^Wǒ hěn hǎo, nǐ ne?^ฉันสบายดี แล้วคุณล่ะ?^high^source_gloss: "auxiliary word" is vague; 呢 is a sentence-final modal particle
+B1-0270^auxiliary@L^high^สามารถ; ทำได้^你明天能来吗？^Nǐ míngtiān néng lái ma?^พรุ่งนี้คุณมาได้ไหม?^high^
+B1-0271^pronoun@E^high^คุณ; เธอ^你好！^Nǐ hǎo!^สวัสดี!^high^
+B1-0272^pronoun@E^high^พวกคุณ^你们是学生吗？^Nǐmen shì xuésheng ma?^พวกคุณเป็นนักเรียนใช่ไหม?^high^source_gloss: gloss "you" does not mark the plural
+B1-0273^noun@E^high^ปี^我学了一年汉语。^Wǒ xué le yì nián Hànyǔ.^ฉันเรียนภาษาจีนมาหนึ่งปี^high^
+B1-0274^pronoun@E^high^ท่าน; คุณ (คำสุภาพ)^您好，请坐。^Nín hǎo, qǐng zuò.^สวัสดีครับ เชิญนั่ง^high^
+B1-0275^noun@E^high^นมวัว^我每天早上喝牛奶。^Wǒ měitiān zǎoshang hē niúnǎi.^ฉันดื่มนมทุกเช้า^high^
+B1-0276^adjective@L^medium^หญิง; เพศหญิง^我们的老师是女的。^Wǒmen de lǎoshī shì nǚ de.^ครูของพวกเราเป็นผู้หญิง^medium^pos_doubtful: gloss "woman" suggests noun, but 女 is mostly used attributively ("female")
+B1-0277^noun@E^high^ลูกสาว^他有一个女儿。^Tā yǒu yí ge nǚ'ér.^เขามีลูกสาวหนึ่งคน^high^
+B1-0278^noun@E^high^เด็กผู้หญิง^那个女孩儿很漂亮。^Nàge nǚháir hěn piàoliang.^เด็กผู้หญิงคนนั้นสวยมาก^high^
+B1-0279^noun@E^high^แฟน (ผู้หญิง)^这是我的女朋友。^Zhè shì wǒ de nǚpéngyou.^นี่คือแฟนของผม^high^
+B1-0280^noun@E^high^ผู้หญิง^那个女人是我们的经理。^Nàge nǚrén shì wǒmen de jīnglǐ.^ผู้หญิงคนนั้นเป็นผู้จัดการของพวกเรา^high^
+B1-0281^noun@E^high^นักเรียนหญิง; เด็กผู้หญิง^我们班有十五个女生。^Wǒmen bān yǒu shíwǔ ge nǚshēng.^ห้องเรามีนักเรียนหญิงสิบห้าคน^high^
+B1-0282^noun@E^high^ข้างๆ; ด้านข้าง^银行就在学校旁边。^Yínháng jiù zài xuéxiào pángbiān.^ธนาคารอยู่ข้างๆ โรงเรียนนี่เอง^high^
+B1-0283^verb@E^high^วิ่ง^孩子们在操场上跑。^Háizimen zài cāochǎng shang pǎo.^เด็กๆ วิ่งอยู่ในสนาม^high^
+B1-0284^noun@E^high^เพื่อน^他是我的好朋友。^Tā shì wǒ de hǎo péngyou.^เขาเป็นเพื่อนสนิทของฉัน^high^
+B1-0285^noun@E^high^ตั๋ว; บัตร^我买了两张票。^Wǒ mǎi le liǎng zhāng piào.^ฉันซื้อตั๋วสองใบ^high^
+B1-0286^numeral@E^high^เจ็ด^一个星期有七天。^Yí ge xīngqī yǒu qī tiān.^หนึ่งสัปดาห์มีเจ็ดวัน^high^
+B1-0287^verb@E^high^ลุกขึ้น; เริ่ม; ขึ้น^你明天几点起？^Nǐ míngtiān jǐ diǎn qǐ?^พรุ่งนี้คุณจะตื่นกี่โมง?^medium^polysemy: get up / start / rise combined; example shows "get up"
+B1-0288^verb@E^high^ตื่นนอน; ลุกจากเตียง^我每天七点起床。^Wǒ měitiān qī diǎn qǐchuáng.^ฉันตื่นนอนทุกวันตอนเจ็ดโมง^high^
+B1-0289^verb@E^high^ลุกขึ้น; ตื่น^快起来，要迟到了！^Kuài qǐlai, yào chídào le!^รีบลุกขึ้น จะสายแล้ว!^high^
+B1-0290^noun@E^high^รถยนต์^他开汽车去上班。^Tā kāi qìchē qù shàngbān.^เขาขับรถยนต์ไปทำงาน^high^
+B1-0291^noun@E^high^ข้างหน้า; ก่อน^一直往前走。^Yìzhí wǎng qián zǒu.^เดินตรงไปข้างหน้า^high^
+B1-0292^noun@E^high^ข้างหน้า^前边有一家咖啡店。^Qiánbian yǒu yì jiā kāfēidiàn.^ข้างหน้ามีร้านกาแฟร้านหนึ่ง^high^
+B1-0293^noun@E^high^เมื่อวานซืน^前天我去看电影了。^Qiántiān wǒ qù kàn diànyǐng le.^เมื่อวานซืนฉันไปดูหนัง^high^
+B1-0294^noun@E^high^เงิน^我没有钱了。^Wǒ méiyǒu qián le.^ฉันไม่มีเงินแล้ว^high^
+B1-0295^noun@E^high^กระเป๋าสตางค์^我的钱包不见了。^Wǒ de qiánbāo bú jiàn le.^กระเป๋าสตางค์ของฉันหายไป^high^
+B1-0296^verb@L^medium^กรุณา; เชิญ; เลี้ยง^请坐。^Qǐng zuò.^เชิญนั่ง^medium^polysemy: "please" vs. verb senses "invite; treat" (我请你吃饭); pos_doubtful: "please" use is often treated as an adverb/politeness marker
+B1-0297^verb@E^high^ลา (หยุดงาน/เรียน)^我明天要请假。^Wǒ míngtiān yào qǐngjià.^พรุ่งนี้ฉันจะขอลาหยุด^high^
+B1-0298^interjection@L^medium^เชิญเข้ามา^请进，请坐。^Qǐng jìn, qǐng zuò.^เชิญเข้ามา เชิญนั่ง^high^pos_doubtful: set phrase (请 + 进); POS chosen as interjection by convention

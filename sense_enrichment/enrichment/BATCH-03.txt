@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B1-0085^noun@E^high^ทางทิศตะวันออก; ด้านตะวันออก^医院在学校东边。^Yīyuàn zài xuéxiào dōngbian.^โรงพยาบาลอยู่ทางทิศตะวันออกของโรงเรียน^high^
+B1-0086^noun@E^high^สิ่งของ; ของ^我去超市买东西。^Wǒ qù chāoshì mǎi dōngxi.^ฉันไปซื้อของที่ซูเปอร์มาร์เก็ต^high^
+B1-0087^verb@E^high^ขยับ; เคลื่อนไหว^别动！^Bié dòng!^อย่าขยับ!^high^
+B1-0088^noun@E^high^ท่าทาง; การเคลื่อนไหว^这个动作很难。^Zhège dòngzuò hěn nán.^ท่านี้ยากมาก^high^
+B1-0089^adverb@L^high^ทั้งหมด; ล้วน^我们都是学生。^Wǒmen dōu shì xuésheng.^พวกเราเป็นนักเรียนทั้งหมด^high^
+B1-0090^verb@E^high^อ่าน (ออกเสียง)^请读一下这个句子。^Qǐng dú yí xià zhège jùzi.^กรุณาอ่านประโยคนี้หน่อย^high^
+B1-0091^verb@L^medium^อ่านหนังสือ; เรียนหนังสือ^他在大学读书。^Tā zài dàxué dúshū.^เขาเรียนหนังสืออยู่ที่มหาวิทยาลัย^medium^polysemy: "reading" and "study (at school)" combined; example shows "study"
+B1-0093^interjection@L^medium^ขอโทษ^对不起，我来晚了。^Duìbuqǐ, wǒ lái wǎn le.^ขอโทษ ฉันมาสาย^high^pos_doubtful: set phrase; could be classed as verb (对不起他) or interjection
+B1-0094^adjective@E^high^มาก; หลาย^他有很多朋友。^Tā yǒu hěn duō péngyou.^เขามีเพื่อนมาก^high^
+B1-0095^pronoun@L^high^เท่าไร; จำนวนเท่าไร^这个多少钱？^Zhège duōshao qián?^อันนี้ราคาเท่าไร?^high^
+B1-0096^adjective@E^high^หิว^我饿了。^Wǒ è le.^ฉันหิวแล้ว^high^
+B1-0097^noun@E^high^ลูกชาย^他儿子五岁了。^Tā érzi wǔ suì le.^ลูกชายของเขาอายุห้าขวบแล้ว^high^
+B1-0098^numeral@E^high^สอง^我住在二楼。^Wǒ zhù zài èr lóu.^ฉันอยู่ชั้นสอง^high^
+B1-0099^noun@E^high^ข้าว; อาหาร; มื้ออาหาร^饭做好了，快来吃吧。^Fàn zuò hǎo le, kuài lái chī ba.^อาหารทำเสร็จแล้ว รีบมากินเถอะ^high^
+B1-0100^noun@E^high^ร้านอาหาร; โรงแรม^我们在饭店吃晚饭。^Wǒmen zài fàndiàn chī wǎnfàn.^พวกเรากินข้าวเย็นที่ร้านอาหาร^medium^polysemy: 饭店 is both "restaurant" and "hotel"; gloss gives only "restaurant"
+B1-0101^noun@E^high^ห้อง^我的房间很小。^Wǒ de fángjiān hěn xiǎo.^ห้องของฉันเล็กมาก^high^
+B1-0102^noun@E^high^บ้าน; อาคาร^他们买了一个新房子。^Tāmen mǎi le yí ge xīn fángzi.^พวกเขาซื้อบ้านหลังใหม่หลังหนึ่ง^high^
+B1-0103^verb@E^low^วาง; ปล่อย; ระบาย^请把书放在桌子上。^Qǐng bǎ shū fàng zài zhuōzi shang.^กรุณาวางหนังสือไว้บนโต๊ะ^low^source_gloss: "discharge" is a rare sense at band 1; core sense is "put/place"; Thai and example follow the core sense
+B1-0104^verb@E^high^หยุดเรียน/หยุดงาน (ตามวันหยุด); ปิดภาคเรียน^我们下个星期放假。^Wǒmen xià ge xīngqī fàngjià.^พวกเราจะหยุดยาวสัปดาห์หน้า^high^
+B1-0105^verb@E^high^เลิกเรียน^我四点放学。^Wǒ sì diǎn fàngxué.^ฉันเลิกเรียนตอนสี่โมง^high^
+B1-0106^verb@E^high^บิน^小鸟在天上飞。^Xiǎo niǎo zài tiān shang fēi.^นกน้อยบินอยู่บนฟ้า^high^
+B1-0107^noun@E^high^เครื่องบิน^我坐飞机去上海。^Wǒ zuò fēijī qù Shànghǎi.^ฉันนั่งเครื่องบินไปเซี่ยงไฮ้^high^
+B1-0108^adverb@E^high^มาก; อย่างยิ่ง^今天非常热。^Jīntiān fēicháng rè.^วันนี้ร้อนมาก^high^
+B1-0110^noun@E^high^ลม^今天风很大。^Jīntiān fēng hěn dà.^วันนี้ลมแรงมาก^high^
+B1-0111^adjective@E^high^แห้ง^衣服已经干了。^Yīfu yǐjīng gān le.^เสื้อผ้าแห้งแล้ว^high^
+B1-0112^adjective@E^high^สะอาด^他的房间很干净。^Tā de fángjiān hěn gānjìng.^ห้องของเขาสะอาดมาก^high^
+B1-0113^verb@E^high^ทำ^你在干什么？^Nǐ zài gàn shénme?^คุณกำลังทำอะไรอยู่?^high^
+B1-0114^other^low^ทำอะไร; จะทำอะไร^你明天干什么？^Nǐ míngtiān gàn shénme?^พรุ่งนี้คุณจะทำอะไร?^high^pos_doubtful: verb phrase (干 + 什么) with no single POS; source_gloss: "What to do" — usual sense is "what are you doing / why"
+B1-0115^adjective@E^high^สูง^他很高。^Tā hěn gāo.^เขาสูงมาก^high^
+B1-0116^adjective@E^high^ดีใจ; มีความสุข^见到你我很高兴。^Jiàndào nǐ wǒ hěn gāoxìng.^ฉันดีใจมากที่ได้เจอคุณ^high^
+B1-0117^verb@E^high^บอก^请告诉我你的名字。^Qǐng gàosu wǒ nǐ de míngzi.^กรุณาบอกชื่อของคุณให้ฉันหน่อย^high^
+B1-0118^noun@E^high^พี่ชาย^我哥哥在北京工作。^Wǒ gēge zài Běijīng gōngzuò.^พี่ชายของฉันทำงานอยู่ที่ปักกิ่ง^high^
+B1-0119^noun@E^high^เพลง^这首歌很好听。^Zhè shǒu gē hěn hǎotīng.^เพลงนี้เพราะมาก^high^
+B1-0120^measure_word@L^medium^อัน; คน; ลูก (ลักษณนามทั่วไป)^我有一个妹妹。^Wǒ yǒu yí ge mèimei.^ฉันมีน้องสาวหนึ่งคน^medium^source_gloss: "individual" — at this level 个 is the general measure word
+B1-0121^verb@E^high^ให้^妈妈给了我一本书。^Māma gěi le wǒ yì běn shū.^แม่ให้หนังสือฉันหนึ่งเล่ม^high^
+B1-0122^preposition@E^high^กับ^我跟朋友去看电影。^Wǒ gēn péngyou qù kàn diànyǐng.^ฉันไปดูหนังกับเพื่อน^high^
+B1-0123^noun@E^high^คนงาน; กรรมกร^他爸爸是工人。^Tā bàba shì gōngrén.^พ่อของเขาเป็นคนงาน^high^
+B1-0124^verb@E^medium^ทำงาน; งาน^我在银行工作。^Wǒ zài yínháng gōngzuò.^ฉันทำงานที่ธนาคาร^medium^pos_doubtful: "work" is both verb and noun (找工作); example shows the verb
+B1-0126^verb@E^high^ปิด (ให้สนิท)^请关上窗户。^Qǐng guānshang chuānghu.^กรุณาปิดหน้าต่าง^high^
+B1-0127^adjective@E^low^แพง; มีค่า; สูงศักดิ์^这件衣服太贵了。^Zhè jiàn yīfu tài guì le.^เสื้อตัวนี้แพงเกินไป^low^source_gloss: gloss "noble" omits the core band-1 sense "expensive"; Thai/example show "expensive"
+B1-0128^noun@E^high^ประเทศ; รัฐ; ชาติ^你是哪国人？^Nǐ shì nǎ guó rén?^คุณเป็นคนประเทศไหน?^high^
+B1-0129^noun@E^high^ประเทศ^中国是一个很大的国家。^Zhōngguó shì yí ge hěn dà de guójiā.^จีนเป็นประเทศที่ใหญ่มาก^high^
+B1-0130^noun@E^medium^ต่างประเทศ^他在国外工作。^Tā zài guówài gōngzuò.^เขาทำงานอยู่ต่างประเทศ^high^
+B1-0131^verb@E^high^ผ่าน; ข้าม^过了这条路就是学校。^Guò le zhè tiáo lù jiù shì xuéxiào.^ข้ามถนนสายนี้ไปก็เป็นโรงเรียน^high^
+B1-0132^adverb@E^high^ยัง; อีก; ยังคง^他还在睡觉。^Tā hái zài shuìjiào.^เขายังนอนอยู่^high^
+B1-0133^adverb@E^medium^ยังคง; หรือ^你喝茶还是喝咖啡？^Nǐ hē chá háishi hē kāfēi?^คุณดื่มชาหรือกาแฟ?^low^source_gloss: gloss "still" omits the core band-1 sense "or" (questions); polysemy: adverb "still" vs. conjunction "or"; example shows "or"
+B1-0134^conjunction@L^medium^นอกจากนี้; ยังมี^我有一个哥哥，还有一个妹妹。^Wǒ yǒu yí ge gēge, hái yǒu yí ge mèimei.^ฉันมีพี่ชายหนึ่งคน และยังมีน้องสาวอีกหนึ่งคน^medium^pos_doubtful: 还有 is often 还 + 有 (verb phrase) rather than a conjunction
+B1-0135^noun@E^high^เด็ก; ลูก^这个孩子很聪明。^Zhège háizi hěn cōngming.^เด็กคนนี้ฉลาดมาก^high^
+B1-0136^noun@E^high^ภาษาจีน^我在学习汉语。^Wǒ zài xuéxí Hànyǔ.^ฉันกำลังเรียนภาษาจีน^high^
+B1-0137^noun@E^high^อักษรจีน; ตัวอักษรฮั่น^这个汉字怎么读？^Zhège Hànzì zěnme dú?^ตัวอักษรจีนตัวนี้อ่านว่าอย่างไร?^high^
+B1-0139^adjective@E^high^อร่อย^妈妈做的菜很好吃。^Māma zuò de cài hěn hǎochī.^อาหารที่แม่ทำอร่อยมาก^high^
+B1-0140^adjective@E^high^สวย; น่าดู^这件衣服很好看。^Zhè jiàn yīfu hěn hǎokàn.^เสื้อตัวนี้สวยมาก^high^
+B1-0141^adjective@E^high^ไพเราะ; น่าฟัง^她的声音很好听。^Tā de shēngyīn hěn hǎotīng.^เสียงของเธอไพเราะมาก^high^
+B1-0142^adjective@E^high^สนุก; น่าเล่น^这个游戏很好玩儿。^Zhège yóuxì hěn hǎowánr.^เกมนี้สนุกมาก^high^
+B1-0143^noun@E^high^เลขที่; หมายเลข; วันที่^今天是五月十号。^Jīntiān shì wǔ yuè shí hào.^วันนี้วันที่สิบพฤษภาคม^medium^polysemy: "number" and "date (day of month)" combined; example shows "date"
+B1-0144^verb@E^high^ดื่ม^你想喝什么？^Nǐ xiǎng hē shénme?^คุณอยากดื่มอะไร?^high^
+B1-0145^conjunction@E^high^และ; กับ^我和他是朋友。^Wǒ hé tā shì péngyou.^ฉันกับเขาเป็นเพื่อนกัน^high^
+B1-0146^adverb@E^high^มาก^我很好。^Wǒ hěn hǎo.^ฉันสบายดีมาก^high^
+B1-0147^noun@L^medium^หลัง; ข้างหลัง; ภายหลัง^三天后我回国。^Sān tiān hòu wǒ huí guó.^สามวันหลังจากนี้ฉันจะกลับประเทศ^medium^polysemy: spatial "behind" and temporal "after; later" combined; example shows "after"
+B1-0148^noun@E^high^ข้างหลัง; ด้านหลัง^学校后边有一个公园。^Xuéxiào hòubian yǒu yí ge gōngyuán.^ข้างหลังโรงเรียนมีสวนสาธารณะแห่งหนึ่ง^high^
+B1-0149^noun@E^high^มะรืนนี้^后天是星期六。^Hòutiān shì xīngqīliù.^มะรืนนี้เป็นวันเสาร์^high^
+B1-0151^noun@E^high^คำพูด^他的话很有意思。^Tā de huà hěn yǒu yìsi.^คำพูดของเขาน่าสนใจมาก^high^
+B1-0152^adjective@E^high^เลว; เสีย; ไม่ดี^我的手机坏了。^Wǒ de shǒujī huài le.^โทรศัพท์มือถือของฉันเสียแล้ว^high^
+B1-0153^verb@E^high^คืน; ชดใช้^明天我还你钱。^Míngtiān wǒ huán nǐ qián.^พรุ่งนี้ฉันจะคืนเงินคุณ^high^
+B1-0155^verb@E^medium^ตอบ; คำตอบ^请回答我的问题。^Qǐng huídá wǒ de wèntí.^กรุณาตอบคำถามของฉัน^medium^pos_doubtful: "Answer" is both verb and noun; example shows the verb
+B1-0156^verb@L^high^กลับมาถึง; กลับไปยัง^他十点回到家。^Tā shí diǎn huídào jiā.^เขากลับถึงบ้านตอนสิบโมง^high^
+B1-0157^verb@E^high^กลับบ้าน^下课以后我回家。^Xiàkè yǐhòu wǒ huíjiā.^หลังเลิกเรียนฉันกลับบ้าน^high^
+B1-0158^verb@E^high^กลับมา^爸爸什么时候回来？^Bàba shénme shíhou huílai?^พ่อจะกลับมาเมื่อไร?^high^
+B1-0159^verb@E^high^กลับไป^太晚了，你回去吧。^Tài wǎn le, nǐ huíqu ba.^ดึกมากแล้ว คุณกลับไปเถอะ^high^
+B1-0161^noun@E^high^รถไฟ^我们坐火车去吧。^Wǒmen zuò huǒchē qù ba.^พวกเรานั่งรถไฟไปกันเถอะ^high^
+B1-0162^noun@E^high^สนามบิน^我去机场接朋友。^Wǒ qù jīchǎng jiē péngyou.^ฉันไปรับเพื่อนที่สนามบิน^high^
+B1-0163^noun@E^high^ตั๋วเครื่องบิน^我买好机票了。^Wǒ mǎi hǎo jīpiào le.^ฉันซื้อตั๋วเครื่องบินเรียบร้อยแล้ว^high^
+B1-0164^noun@E^high^ไข่ไก่^早上我吃了一个鸡蛋。^Zǎoshang wǒ chī le yí ge jīdàn.^ตอนเช้าฉันกินไข่ไก่หนึ่งฟอง^high^
+B1-0165^numeral@L^medium^หลาย; กี่^你家有几口人？^Nǐ jiā yǒu jǐ kǒu rén?^บ้านคุณมีกี่คน?^medium^polysemy: "several" vs. question word "how many"; gloss gives "several" but example shows "how many"
+B1-0166^verb@E^high^จำ; จดบันทึก^请把电话号码记下来。^Qǐng bǎ diànhuà hàomǎ jì xiàlai.^กรุณาจดเบอร์โทรศัพท์ไว้^medium^polysemy: gloss "remember" but 记 is also "write down"; example shows "note down"
+B1-0167^verb@E^high^จำได้^你还记得我吗？^Nǐ hái jìde wǒ ma?^คุณยังจำฉันได้ไหม?^high^
+B1-0168^verb@E^high^จำไว้; จดจำให้ขึ้นใจ^请记住我的话。^Qǐng jìzhù wǒ de huà.^กรุณาจำคำพูดของฉันไว้^high^
+B1-0169^noun@E^high^บ้าน; ครอบครัว^我家在北京。^Wǒ jiā zài Běijīng.^บ้านของฉันอยู่ที่ปักกิ่ง^high^
+B1-0170^noun@L^high^ในบ้าน; ทางบ้าน^家里没有人。^Jiā li méiyǒu rén.^ในบ้านไม่มีใครอยู่^high^
+B1-0171^noun@E^high^คนในครอบครัว^我很想我的家人。^Wǒ hěn xiǎng wǒ de jiārén.^ฉันคิดถึงครอบครัวมาก^high^
+B1-0172^measure_word@L^medium^ห้อง (ลักษณนามของห้อง); ระหว่าง^这个房子有三间卧室。^Zhège fángzi yǒu sān jiān wòshì.^บ้านหลังนี้มีห้องนอนสามห้อง^medium^polysemy: "between" (noun/locative) and measure word for rooms combined; example shows the measure word
+B1-0173^verb@E^high^เห็น; พบ^明天见！^Míngtiān jiàn!^พรุ่งนี้เจอกัน!^high^
+B1-0174^verb@E^high^พบกัน; เจอหน้า^我们在哪儿见面？^Wǒmen zài nǎr jiànmiàn?^พวกเราจะเจอกันที่ไหน?^high^
+B1-0175^verb@E^high^สอน^王老师教我们汉语。^Wáng lǎoshī jiāo wǒmen Hànyǔ.^ครูหวังสอนภาษาจีนพวกเรา^high^
+B1-0177^noun@E^high^อาคารเรียน^教学楼在图书馆旁边。^Jiàoxuélóu zài túshūguǎn pángbiān.^อาคารเรียนอยู่ข้างห้องสมุด^high^
+B1-0178^noun@E^high^พี่สาว^我姐姐是医生。^Wǒ jiějie shì yīshēng.^พี่สาวของฉันเป็นหมอ^high^
+B1-0179^verb@E^high^แนะนำ^我来介绍一下，这是我的朋友。^Wǒ lái jièshào yí xià, zhè shì wǒ de péngyou.^ขอแนะนำหน่อย นี่คือเพื่อนของฉัน^high^
+B1-0180^noun@E^high^ปีนี้^我今年二十岁。^Wǒ jīnnián èrshí suì.^ปีนี้ฉันอายุยี่สิบปี^high^
+B1-0181^noun@E^high^วันนี้^今天是星期一。^Jīntiān shì xīngqīyī.^วันนี้วันจันทร์^high^
+B1-0182^verb@E^high^เข้า^请进！^Qǐng jìn!^เชิญเข้ามา!^high^
+B1-0183^verb@E^high^เข้ามา^外面很冷，快进来吧。^Wàimian hěn lěng, kuài jìnlai ba.^ข้างนอกหนาวมาก รีบเข้ามาเถอะ^high^
+B1-0184^verb@E^high^เข้าไป^他进去了。^Tā jìnqu le.^เขาเข้าไปแล้ว^high^
+B1-0185^numeral@E^high^เก้า^我九点上课。^Wǒ jiǔ diǎn shàngkè.^ฉันเข้าเรียนตอนเก้าโมง^high^
+B1-0186^adverb@L^high^ทันที; ก็; ก็จะ^我马上就来。^Wǒ mǎshàng jiù lái.^ฉันจะมาเดี๋ยวนี้เลย^medium^polysemy: "as soon as / right away / then" are distinct uses; example shows "right away"
+B1-0187^verb@E^high^รู้สึก; คิดว่า^我觉得这个电影很好看。^Wǒ juéde zhège diànyǐng hěn hǎokàn.^ฉันคิดว่าหนังเรื่องนี้สนุกมาก^high^
+B1-0188^verb@E^high^เปิด^请开门。^Qǐng kāi mén.^กรุณาเปิดประตู^high^
+B1-0189^verb@E^high^ขับรถ^我爸爸会开车。^Wǒ bàba huì kāichē.^พ่อของฉันขับรถเป็น^high^
+B1-0190^verb@E^high^ประชุม; เข้าประชุม^老师们在开会。^Lǎoshīmen zài kāihuì.^ครูๆ กำลังประชุมกันอยู่^high^
+B1-0191^verb@L^medium^พูดเล่น; ล้อเล่น^别生气，我跟你开玩笑呢。^Bié shēngqì, wǒ gēn nǐ kāi wánxiào ne.^อย่าโกรธนะ ฉันล้อเล่นกับคุณเฉยๆ^medium^source_gloss: "Make fun of" leans to mocking; 开玩笑 usually means "to joke"
+B1-0192^verb@E^high^ดู; มอง^你看，那是我们的学校。^Nǐ kàn, nà shì wǒmen de xuéxiào.^คุณดูสิ นั่นคือโรงเรียนของพวกเรา^high^
