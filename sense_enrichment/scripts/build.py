@@ -8,7 +8,8 @@ fields separated by "^", columns:
   source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^
   example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
 
-- One line per sense group is enough: rows sharing a sense_group_id reuse it.
+- One line per sense group is enough: rows sharing a sense_group_id reuse it,
+  including groups first enriched in an earlier batch.
 - `pos` blank keeps the queue's part_of_speech_normalized (or a sense-group
   sibling's source-labelled POS). Otherwise `pos` is a POS value with an
   optional basis suffix: "@E" source_english (default), "@L" lexical_inference.
@@ -142,14 +143,26 @@ def resolve_pos(r, e, sibling_pos):
     return pos, BASIS_SUFFIX[suffix or "E"]
 
 
+def earlier_groups(batch, queue):
+    """Sense-group enrichments authored in batches before this one."""
+    sid_group = {r["source_id"]: r["sense_group_id"] for r in queue}
+    groups = {}
+    for b in sorted({r["batch_id"] for r in queue}):
+        if b >= batch or not os.path.exists(os.path.join(ENRICH_DIR, f"{b}.txt")):
+            continue
+        for sid, rec in load_enrichment(b).items():
+            groups.setdefault(sid_group[sid], rec)
+    return groups
+
+
 def build_batch(batch, queue, sibling_pos, schema, enums):
     rows = [r for r in queue if r["batch_id"] == batch]
     if not rows:
         sys.exit(f"no rows for {batch}")
     enrich = load_enrichment(batch)
-    by_group = {}
+    by_group = earlier_groups(batch, queue)
     for r in rows:
-        if r["source_id"] in enrich:
+        if r["source_id"] in enrich and r["sense_group_id"] not in by_group:
             by_group.setdefault(r["sense_group_id"], enrich[r["source_id"]])
     unknown = set(enrich) - {r["source_id"] for r in rows}
     if unknown:

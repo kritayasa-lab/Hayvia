@@ -1,0 +1,97 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+# Reused from BATCH-01 by sense group: B4-0364 系, B4-0441 空, B4-0531 哪, B4-0935 着, B4-0964 种
+B4-0340^^high^ร้อนแรง; ลุกโชน; เร่งด่วน^这件事很火，你快去办吧。^Zhè jiàn shì hěn huǒ, nǐ kuài qù bàn ba.^เรื่องนี้ด่วนมาก รีบไปจัดการเถอะ^low^polysemy: "fiery; flaming" vs. "urgent" combined; example: adjective 火 = "urgent" is uncommon, modern usage "popular" (很火) may confuse
+B4-0422^^high^สำนัก; กรม; ส่วน; เกม/กระดาน (ในการแข่งขัน); งานชุมนุม^他在公安局工作。^Tā zài gōng'ānjú gōngzuò.^เขาทำงานที่สำนักงานตำรวจ^medium^polysemy: bureau / portion / innings / gathering are distinct senses; example shows "bureau"
+B4-0548^^high^ถาด; จาน; ราคาตลาด; เกม; (ลักษณนามของอาหารจาน/เกมกระดาน)^我们下了一盘棋。^Wǒmen xià le yì pán qí.^พวกเราเล่นหมากรุกกันหนึ่งกระดาน^medium^polysemy: tray / plate / current price / game / measure word combined; example shows the measure word for a game
+B4-0555^^high^วิจารณ์; ตำหนิ; อนุมัติ^老师批了他一顿。^Lǎoshī pī le tā yí dùn.^ครูตำหนิเขาไปชุดใหญ่^medium^source_gloss: "batch" is a measure-word/noun sense (see B4-0556) listed under a verb entry
+B4-0556^^high^ชุด; กลุ่ม; ล็อต (ลักษณนาม)^工厂来了一批新工人。^Gōngchǎng lái le yì pī xīn gōngrén.^โรงงานมีคนงานใหม่มาหนึ่งกลุ่ม^medium^source_gloss: gloss is only "(measure word)" without saying what it counts
+B4-0660^^high^บท; เพลง (ลักษณนามของบทกวี/เพลง)^她唱了一首歌。^Tā chàng le yì shǒu gē.^เธอร้องเพลงหนึ่งเพลง^medium^source_gloss: gloss is only "(measure word)" without saying what it counts
+B4-0718^^high^ยืดตรง; อดทน; ยื่นออกมา^再挺一下，马上就到了。^Zài tǐng yí xià, mǎshàng jiù dào le.^อดทนอีกนิด เดี๋ยวก็ถึงแล้ว^medium^polysemy: stand straight / hold out / stick out combined; example shows "hold out"
+B4-0760^^high^ป้อน; ให้อาหาร^妈妈在喂孩子吃饭。^Māma zài wèi háizi chīfàn.^แม่กำลังป้อนข้าวลูก^high^
+B4-0860^^high^ถ้า; หาก^要下雨，我们就不去了。^Yào xià yǔ, wǒmen jiù bú qù le.^ถ้าฝนตก เราก็จะไม่ไป^medium^example: conditional 要 is easily read as "will/want"; 要是 is the clearer form
+B4-0952^^high^ค้ำ; ยัน; กาง; ยื่นออก; ไล่ไป^他用手支着头。^Tā yòng shǒu zhī zhe tóu.^เขาใช้มือเท้าคาง^medium^polysemy: put up / protrude / support / send away are distinct senses; example shows "support"
+B5-0101^^high^เรียก; ขนานนาม; ชมเชย; ชั่งน้ำหนัก^请帮我称一下这些苹果。^Qǐng bāng wǒ chēng yí xià zhèxiē píngguǒ.^ช่วยชั่งแอปเปิลพวกนี้ให้หน่อย^low^polysemy: call / name / commend / weigh are distinct senses; variant: 称² overlaps 称¹ (B2-0062, "call; say") — homograph split unclear
+B5-0153^^high^ตั้งแต่; จาก^他打小就喜欢画画。^Tā dǎ xiǎo jiù xǐhuan huà huà.^เขาชอบวาดรูปมาตั้งแต่เด็ก^high^
+B5-0246^^high^ปิดผนึก; แต่งตั้ง (ยศ); ห่อหุ้ม^大雪封了山路。^Dà xuě fēng le shānlù.^หิมะตกหนักปิดทางขึ้นเขา^medium^polysemy: seal / confer (a title) / envelop combined; example shows "seal"
+B5-0295^^high^โทษ; ตำหนิ^这件事不能怪他。^Zhè jiàn shì bù néng guài tā.^เรื่องนี้จะโทษเขาไม่ได้^high^
+B5-0441^^high^แกะสลัก; สลัก; ตัด^他在石头上刻了一个字。^Tā zài shítou shang kè le yí ge zì.^เขาสลักตัวอักษรตัวหนึ่งไว้บนก้อนหิน^high^
+B5-0530^^medium^ดื้อ; กล้า; เจ๋ง (ภาษาพูด)^你真牛！^Nǐ zhēn niú!^คุณเจ๋งจริงๆ!^medium^polysemy: stubborn / brave / awesome (slang) combined; example shows "awesome"
+B5-0579^^high^ลงนาม; เซ็นชื่อ^请在这里签名字。^Qǐng zài zhèlǐ qiān míngzi.^กรุณาเซ็นชื่อตรงนี้^high^
+B5-0893^^high^สักหน่อย; สักครู่^请你等一下儿。^Qǐng nǐ děng yíxiàr.^กรุณารอสักครู่^medium^pos_doubtful: labelled adverb, but 一下儿 after a verb is usually analysed as a verbal measure/complement
+B1-0001^verb@E^medium^รัก^我爱我的妈妈。^Wǒ ài wǒ de māma.^ฉันรักแม่ของฉัน^high^
+B1-0002^noun@E^high^งานอดิเรก^你的爱好是什么？^Nǐ de àihào shì shénme?^งานอดิเรกของคุณคืออะไร?^high^
+B1-0003^numeral@E^high^แปด^我家有八口人。^Wǒ jiā yǒu bā kǒu rén.^บ้านฉันมีแปดคน^high^
+B1-0004^noun@E^high^พ่อ^我爸爸是老师。^Wǒ bàba shì lǎoshī.^พ่อของฉันเป็นครู^high^
+B1-0005^particle@L^high^(คำลงท้ายแสดงการชักชวน/คาดคะเน) นะ; เถอะ^我们走吧。^Wǒmen zǒu ba.^พวกเราไปกันเถอะ^high^source_gloss: "(interjection particle)" — 吧 is a sentence-final modal particle, not an interjection
+B1-0007^noun@E^high^กลางวัน; ตอนกลางวัน^他白天工作，晚上学习。^Tā báitiān gōngzuò, wǎnshang xuéxí.^เขาทำงานตอนกลางวันและเรียนตอนกลางคืน^high^source_gloss: "day" — 白天 specifically means daytime (as opposed to night)
+B1-0008^numeral@E^high^ร้อย^这本书一百块钱。^Zhè běn shū yì bǎi kuài qián.^หนังสือเล่มนี้ราคาหนึ่งร้อยหยวน^high^
+B1-0009^noun@E^high^ชั้นเรียน; ห้องเรียน^我们班有二十个学生。^Wǒmen bān yǒu èrshí ge xuésheng.^ห้องเรียนของเรามีนักเรียนยี่สิบคน^high^
+B1-0010^numeral@L^medium^ครึ่ง^现在是八点半。^Xiànzài shì bā diǎn bàn.^ตอนนี้แปดโมงครึ่ง^high^
+B1-0011^noun@E^high^ครึ่งปี^我在中国学了半年汉语。^Wǒ zài Zhōngguó xué le bàn nián Hànyǔ.^ฉันเรียนภาษาจีนที่ประเทศจีนครึ่งปี^high^
+B1-0012^noun@E^high^ครึ่งวัน; นานมาก^我等了你半天。^Wǒ děng le nǐ bàntiān.^ฉันรอคุณตั้งนานแล้ว^medium^polysemy: literal "half a day" vs. common colloquial "a long time"; example reads as "a long time"
+B1-0013^verb@E^high^ช่วย^你能帮我吗？^Nǐ néng bāng wǒ ma?^คุณช่วยฉันได้ไหม?^high^
+B1-0014^verb@L^high^ช่วยเหลือ; ช่วยทำ^我能帮忙吗？^Wǒ néng bāngmáng ma?^ฉันช่วยได้ไหม?^high^
+B1-0015^noun@E^high^ห่อ; กระเป๋า; พัสดุ^这是你的包吗？^Zhè shì nǐ de bāo ma?^นี่คือกระเป๋าของคุณใช่ไหม?^medium^polysemy: "package" vs. common "bag" (and verb "wrap"); example shows "bag"
+B1-0016^noun@E^high^ซาลาเปา^我早上吃了两个包子。^Wǒ zǎoshang chī le liǎng ge bāozi.^ตอนเช้าฉันกินซาลาเปาสองลูก^high^
+B1-0017^measure_word@L^medium^ถ้วย; แก้ว (ลักษณนาม)^我想喝一杯水。^Wǒ xiǎng hē yì bēi shuǐ.^ฉันอยากดื่มน้ำหนึ่งแก้ว^medium^pos_doubtful: gloss "cup" reads as a noun, but 杯 alone is mainly a measure word (noun is 杯子)
+B1-0018^noun@E^high^ถ้วย; แก้ว^这个杯子很好看。^Zhège bēizi hěn hǎokàn.^แก้วใบนี้สวยมาก^high^
+B1-0019^noun@E^high^ทิศเหนือ^从这儿往北走十分钟就到了。^Cóng zhèr wǎng běi zǒu shí fēnzhōng jiù dào le.^จากตรงนี้เดินไปทางเหนือสิบนาทีก็ถึงแล้ว^high^
+B1-0020^noun@E^high^ทางทิศเหนือ; ด้านเหนือ^银行在学校北边。^Yínháng zài xuéxiào běibian.^ธนาคารอยู่ทางทิศเหนือของโรงเรียน^high^
+B1-0021^noun@E^high^ปักกิ่ง^我想去北京。^Wǒ xiǎng qù Běijīng.^ฉันอยากไปปักกิ่ง^high^
+B1-0023^noun@E^high^สมุด; สมุดบันทึก^我的本子在桌子上。^Wǒ de běnzi zài zhuōzi shang.^สมุดของฉันอยู่บนโต๊ะ^high^source_gloss: "book" — 本子 means notebook/exercise book
+B1-0024^preposition@L^high^กว่า (บุพบทใช้เปรียบเทียบ)^哥哥比我高。^Gēge bǐ wǒ gāo.^พี่ชายสูงกว่าฉัน^high^source_gloss: "particle used for comparison" — 比 is a comparative preposition, not a particle
+B1-0026^pronoun@L^medium^อื่น; อย่างอื่น^你还要别的吗？^Nǐ hái yào biéde ma?^คุณต้องการอย่างอื่นอีกไหม?^high^
+B1-0027^pronoun@L^medium^คนอื่น^别人都走了。^Biérén dōu zǒu le.^คนอื่นไปกันหมดแล้ว^high^
+B1-0028^noun@E^high^โรค; ความเจ็บป่วย^他的病好了。^Tā de bìng hǎo le.^อาการป่วยของเขาหายแล้ว^high^
+B1-0029^noun@E^high^ผู้ป่วย; คนไข้^医生在看病人。^Yīshēng zài kàn bìngrén.^หมอกำลังตรวจคนไข้^high^
+B1-0030^adjective@E^medium^ไม่ค่อย; ไม่ใหญ่; ไม่มาก^这个房间不大。^Zhège fángjiān bú dà.^ห้องนี้ไม่ใหญ่^medium^pos_doubtful: 不大 is a phrase (不 + 大) and also an adverb "not very" (不大好)
+B1-0031^adjective@E^high^ไม่ถูก; ผิด^你说得不对。^Nǐ shuō de bú duì.^คุณพูดไม่ถูก^high^
+B1-0032^interjection@L^medium^ไม่เป็นไร; ด้วยความยินดี^A：谢谢你！B：不客气。^A: Xièxie nǐ! B: Bú kèqi.^A: ขอบคุณ! B: ไม่เป็นไร^high^pos_doubtful: set phrase; POS chosen as interjection by convention
+B1-0033^adverb@L^medium^ไม่ต้อง^你不用来了。^Nǐ búyòng lái le.^คุณไม่ต้องมาแล้ว^high^
+B1-0034^adverb@L^high^ไม่^我不喝咖啡。^Wǒ bù hē kāfēi.^ฉันไม่ดื่มกาแฟ^high^source_gloss: "No" as an answer word; 不 is the negation adverb "not"
+B1-0035^noun@E^high^อาหาร (เป็นจาน); ผัก^这个菜很好吃。^Zhège cài hěn hǎochī.^อาหารจานนี้อร่อยมาก^high^
+B1-0036^noun@E^high^ชา^你喝茶吗？^Nǐ hē chá ma?^คุณดื่มชาไหม?^high^
+B1-0037^verb@L^low^ต่างกัน; แย่; ขาด^现在差五分八点。^Xiànzài chà wǔ fēn bā diǎn.^ตอนนี้อีกห้านาทีแปดโมง^medium^polysemy: "differ from; bad; short of" mixes verb and adjective senses; example shows "short of"
+B1-0038^adverb@E^high^บ่อย^他常来我家。^Tā cháng lái wǒ jiā.^เขามาบ้านฉันบ่อย^high^
+B1-0039^adverb@E^high^บ่อยๆ^我常常去图书馆。^Wǒ chángcháng qù túshūguǎn.^ฉันไปห้องสมุดบ่อยๆ^high^
+B1-0040^verb@E^high^ร้อง (เพลง)^她唱得很好听。^Tā chàng de hěn hǎotīng.^เธอร้องเพลงเพราะมาก^high^
+B1-0041^verb@E^high^ร้องเพลง^我喜欢唱歌。^Wǒ xǐhuan chànggē.^ฉันชอบร้องเพลง^high^
+B1-0042^noun@E^high^รถ^他的车是新的。^Tā de chē shì xīn de.^รถของเขาเป็นรถใหม่^high^
+B1-0043^noun@E^high^ตั๋วรถ^我买了两张车票。^Wǒ mǎi le liǎng zhāng chēpiào.^ฉันซื้อตั๋วรถสองใบ^high^
+B1-0044^noun@L^medium^บนรถ^车上人很多。^Chē shang rén hěn duō.^บนรถคนเยอะมาก^high^
+B1-0045^noun@E^high^สถานี; ป้ายรถ^车站离这儿不远。^Chēzhàn lí zhèr bù yuǎn.^สถานีอยู่ไม่ไกลจากที่นี่^high^
+B1-0046^verb@E^high^กิน^我想吃米饭。^Wǒ xiǎng chī mǐfàn.^ฉันอยากกินข้าวสวย^high^
+B1-0047^verb@E^high^กินข้าว; รับประทานอาหาร^我们一起去吃饭吧。^Wǒmen yìqǐ qù chīfàn ba.^เราไปกินข้าวด้วยกันเถอะ^high^
+B1-0048^verb@L^medium^ออก^他出门了。^Tā chū mén le.^เขาออกจากบ้านไปแล้ว^medium^source_gloss: "out" is a direction word; 出 is the verb "go/come out"
+B1-0049^verb@E^medium^ออกมา^你快出来吧！^Nǐ kuài chūlai ba!^คุณรีบออกมาเถอะ!^medium^source_gloss: "come" — 出来 means "come out"
+B1-0050^verb@E^high^ออกไป^我们出去走走吧。^Wǒmen chūqu zǒuzou ba.^พวกเราออกไปเดินเล่นกันเถอะ^high^
+B1-0051^verb@E^high^สวม; ใส่ (เสื้อผ้า รองเท้า)^今天很冷，多穿点儿衣服。^Jīntiān hěn lěng, duō chuān diǎnr yīfu.^วันนี้หนาวมาก ใส่เสื้อผ้าเยอะๆ หน่อย^high^
+B1-0052^noun@E^high^เตียง^我的床很大。^Wǒ de chuáng hěn dà.^เตียงของฉันใหญ่มาก^high^
+B1-0054^preposition@E^high^จาก; ตั้งแต่^我从北京来。^Wǒ cóng Běijīng lái.^ฉันมาจากปักกิ่ง^high^
+B1-0055^adjective@E^high^ผิด^这个字写错了。^Zhège zì xiě cuò le.^ตัวอักษรตัวนี้เขียนผิด^high^
+B1-0057^verb@E^high^เรียกแท็กซี่; นั่งแท็กซี่^我们打车去吧。^Wǒmen dǎchē qù ba.^พวกเรานั่งแท็กซี่ไปกันเถอะ^high^
+B1-0058^verb@E^high^โทรศัพท์^晚上我给你打电话。^Wǎnshang wǒ gěi nǐ dǎ diànhuà.^ตอนเย็นฉันจะโทรหาคุณ^high^
+B1-0059^verb@E^high^เปิด^请打开电视。^Qǐng dǎkāi diànshì.^กรุณาเปิดโทรทัศน์^medium^polysemy: gloss "turn on" covers only one use; 打开 also means "open" (a door, a book)
+B1-0060^verb@E^high^เล่นบอล^下午我们去打球。^Xiàwǔ wǒmen qù dǎqiú.^ตอนบ่ายพวกเราไปเล่นบอลกัน^high^
+B1-0061^adjective@E^high^ใหญ่^他家的房子很大。^Tā jiā de fángzi hěn dà.^บ้านของเขาใหญ่มาก^high^
+B1-0062^noun@E^high^มหาวิทยาลัย^他在北京上大学。^Tā zài Běijīng shàng dàxué.^เขาเรียนมหาวิทยาลัยที่ปักกิ่ง^high^
+B1-0063^noun@E^high^นักศึกษามหาวิทยาลัย^我哥哥是大学生。^Wǒ gēge shì dàxuéshēng.^พี่ชายของฉันเป็นนักศึกษามหาวิทยาลัย^high^
+B1-0064^verb@E^high^ถึง; ไปถึง^我们到学校了。^Wǒmen dào xuéxiào le.^พวกเรามาถึงโรงเรียนแล้ว^high^
+B1-0065^verb@E^high^ได้รับ^他得到了老师的帮助。^Tā dédào le lǎoshī de bāngzhù.^เขาได้รับความช่วยเหลือจากครู^high^
+B1-0066^particle@L^high^(คำช่วยเชื่อมคำขยายกับกริยา) อย่าง...^他高兴地笑了。^Tā gāoxìng de xiào le.^เขายิ้มอย่างดีใจ^high^source_gloss: "auxiliary word" is vague; 地 is the structural particle linking an adverbial to a verb
+B1-0067^particle@L^high^ของ; (คำช่วยเชื่อมคำขยายกับคำนาม)^这是我的书。^Zhè shì wǒ de shū.^นี่คือหนังสือของฉัน^high^source_gloss: "(aux.)" is vague; 的 is the structural/possessive particle
+B1-0069^noun@E^high^พื้น; พื้นดิน^地很干净。^Dì hěn gānjìng.^พื้นสะอาดมาก^high^
+B1-0070^noun@E^high^สถานที่; จุดที่ตั้ง^请告诉我见面的地点。^Qǐng gàosu wǒ jiànmiàn de dìdiǎn.^กรุณาบอกสถานที่นัดพบให้ฉันหน่อย^high^
+B1-0072^noun@L^high^บนพื้น^地上有一本书。^Dì shang yǒu yì běn shū.^บนพื้นมีหนังสืออยู่เล่มหนึ่ง^high^
+B1-0073^noun@E^high^แผนที่^我买了一张北京地图。^Wǒ mǎi le yì zhāng Běijīng dìtú.^ฉันซื้อแผนที่ปักกิ่งหนึ่งแผ่น^high^
+B1-0074^noun@E^high^น้องชาย^我弟弟今年八岁。^Wǒ dìdi jīnnián bā suì.^น้องชายของฉันปีนี้อายุแปดขวบ^high^
+B1-0075^other^low^ที่ (คำนำหน้าเลขแสดงลำดับ)^我是第一个到的。^Wǒ shì dì yī ge dào de.^ฉันเป็นคนแรกที่มาถึง^medium^pos_doubtful: ordinal prefix 第 has no matching POS in the enum (often called a prefix); source_gloss: pinyin field carries an inline example "（dì èr）"
+B1-0076^noun@E^medium^จุด; แต้ม^他的衣服上有一个红点。^Tā de yīfu shang yǒu yí ge hóng diǎn.^บนเสื้อของเขามีจุดสีแดงจุดหนึ่ง^medium^polysemy: 点 at this level is more often "o'clock" or "a little"; gloss "spot" kept as given
+B1-0077^noun@E^high^ไฟฟ้า^停电了。^Tíng diàn le.^ไฟดับแล้ว^high^
+B1-0078^noun@E^high^โทรศัพท์^我的电话号码是多少？^Wǒ de diànhuà hàomǎ shì duōshao?^เบอร์โทรศัพท์ของฉันคืออะไรนะ?^high^
+B1-0079^noun@E^high^คอมพิวเตอร์^我用电脑写作业。^Wǒ yòng diànnǎo xiě zuòyè.^ฉันใช้คอมพิวเตอร์ทำการบ้าน^high^
+B1-0080^noun@E^high^โทรทัศน์; ทีวี^我晚上看电视。^Wǒ wǎnshang kàn diànshì.^ตอนเย็นฉันดูทีวี^high^
+B1-0081^noun@E^high^เครื่องโทรทัศน์^我家买了一台新电视机。^Wǒ jiā mǎi le yì tái xīn diànshìjī.^บ้านฉันซื้อเครื่องโทรทัศน์ใหม่หนึ่งเครื่อง^high^
+B1-0082^noun@E^high^ภาพยนตร์^这个电影很有意思。^Zhège diànyǐng hěn yǒu yìsi.^ภาพยนตร์เรื่องนี้น่าสนใจมาก^high^
+B1-0083^noun@E^high^โรงภาพยนตร์^我们去电影院看电影吧。^Wǒmen qù diànyǐngyuàn kàn diànyǐng ba.^พวกเราไปดูหนังที่โรงภาพยนตร์กันเถอะ^high^
+B1-0084^noun@E^high^ทิศตะวันออก^一直往东走就是火车站。^Yìzhí wǎng dōng zǒu jiù shì huǒchēzhàn.^เดินตรงไปทางทิศตะวันออกก็จะถึงสถานีรถไฟ^high^
