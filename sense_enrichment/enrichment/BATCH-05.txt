@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B1-0299^verb@L^medium^ขอถามหน่อย; ขอโทษนะ (ใช้ก่อนถามคำถาม)^请问，火车站在哪儿？^Qǐngwèn, huǒchēzhàn zài nǎr?^ขอถามหน่อย สถานีรถไฟอยู่ที่ไหน?^high^pos_doubtful: polite set phrase used before a question; no clean single POS
+B1-0300^interjection@L^medium^เชิญนั่ง^请坐，请喝茶。^Qǐng zuò, qǐng hē chá.^เชิญนั่ง เชิญดื่มชา^high^pos_doubtful: set phrase (请 + 坐); POS chosen as interjection by convention
+B1-0301^noun@E^high^ลูกบอล^这个球是我的。^Zhège qiú shì wǒ de.^ลูกบอลลูกนี้เป็นของฉัน^high^
+B1-0302^verb@E^high^ไป^我明天去上海。^Wǒ míngtiān qù Shànghǎi.^พรุ่งนี้ฉันจะไปเซี่ยงไฮ้^high^
+B1-0303^noun@E^high^ปีที่แล้ว^我去年来的中国。^Wǒ qùnián lái de Zhōngguó.^ฉันมาจีนเมื่อปีที่แล้ว^high^
+B1-0304^adjective@L^medium^ร้อน^今天太热了。^Jīntiān tài rè le.^วันนี้ร้อนเกินไป^medium^source_gloss: gloss "heat" (noun) but band-1 热 is the adjective "hot"
+B1-0305^noun@E^high^คน^教室里有很多人。^Jiàoshì li yǒu hěn duō rén.^ในห้องเรียนมีคนเยอะมาก^high^
+B1-0306^verb@E^high^รู้จัก^认识你很高兴。^Rènshi nǐ hěn gāoxìng.^ยินดีที่ได้รู้จักคุณ^high^
+B1-0307^adjective@E^high^ตั้งใจ; จริงจัง^他学习很认真。^Tā xuéxí hěn rènzhēn.^เขาตั้งใจเรียนมาก^high^
+B1-0308^noun@E^medium^วันที่; วัน^今天是十月一日。^Jīntiān shì shíyuè yī rì.^วันนี้วันที่หนึ่งตุลาคม^high^
+B1-0309^noun@E^high^วันที่^请写上今天的日期。^Qǐng xiěshang jīntiān de rìqī.^กรุณาเขียนวันที่ของวันนี้ลงไป^high^
+B1-0310^noun@E^high^เนื้อ (สัตว์)^我不吃肉。^Wǒ bù chī ròu.^ฉันไม่กินเนื้อสัตว์^high^
+B1-0311^numeral@E^high^สาม^我有三个朋友。^Wǒ yǒu sān ge péngyou.^ฉันมีเพื่อนสามคน^high^
+B1-0312^noun@E^high^ภูเขา^这座山很高。^Zhè zuò shān hěn gāo.^ภูเขาลูกนี้สูงมาก^high^
+B1-0313^noun@E^high^ห้างสรรพสินค้า^周末我们去商场吧。^Zhōumò wǒmen qù shāngchǎng ba.^สุดสัปดาห์นี้พวกเราไปห้างกันเถอะ^high^
+B1-0314^noun@E^high^ร้านค้า^这个商店几点开门？^Zhège shāngdiàn jǐ diǎn kāi mén?^ร้านนี้เปิดกี่โมง?^high^
+B1-0315^noun@L^low^บน; ข้างบน; ขึ้น^书在桌子上。^Shū zài zhuōzi shang.^หนังสืออยู่บนโต๊ะ^medium^polysemy: 上 covers locative "on/above", verb "go up/attend", and "previous"; gloss "upper" is vague; pos_doubtful: no source POS
+B1-0316^verb@E^high^ไปทำงาน; เข้างาน^我爸爸八点上班。^Wǒ bàba bā diǎn shàngbān.^พ่อของฉันเข้างานแปดโมง^high^
+B1-0317^noun@E^high^ข้างบน; บน^桌子上边有一本书。^Zhuōzi shàngbian yǒu yì běn shū.^บนโต๊ะมีหนังสือเล่มหนึ่ง^high^
+B1-0318^verb@E^high^ขึ้นรถ^车来了，快上车吧。^Chē lái le, kuài shàngchē ba.^รถมาแล้ว รีบขึ้นรถเถอะ^high^
+B1-0319^noun@E^high^ครั้งที่แล้ว^上次我们在哪儿见的面？^Shàngcì wǒmen zài nǎr jiàn de miàn?^ครั้งที่แล้วพวกเราเจอกันที่ไหน?^high^
+B1-0320^verb@E^high^เข้าเรียน; มีเรียน^我们八点上课。^Wǒmen bā diǎn shàngkè.^พวกเราเข้าเรียนแปดโมง^high^
+B1-0321^verb@E^high^เล่นอินเทอร์เน็ต; ออนไลน์^我每天晚上上网。^Wǒ měitiān wǎnshang shàngwǎng.^ฉันเล่นอินเทอร์เน็ตทุกคืน^high^
+B1-0322^noun@E^high^ช่วงเช้า (ก่อนเที่ยง)^我上午有课。^Wǒ shàngwǔ yǒu kè.^ช่วงเช้าฉันมีเรียน^high^
+B1-0323^verb@E^high^ไปโรงเรียน^我弟弟每天走路上学。^Wǒ dìdi měitiān zǒulù shàngxué.^น้องชายของฉันเดินไปโรงเรียนทุกวัน^high^
+B1-0324^adjective@L^medium^น้อย^今天人很少。^Jīntiān rén hěn shǎo.^วันนี้คนน้อยมาก^medium^source_gloss: "less" is comparative; 少 is the plain adjective "few; little"
+B1-0325^pronoun@E^high^ใคร^他是谁？^Tā shì shéi?^เขาเป็นใคร?^high^
+B1-0326^noun@E^high^ตามตัว; ติดตัว^我身上没带钱。^Wǒ shēnshang méi dài qián.^ฉันไม่ได้พกเงินติดตัวมา^high^
+B1-0327^noun@E^high^ร่างกาย; สุขภาพ^爷爷身体很好。^Yéye shēntǐ hěn hǎo.^คุณปู่สุขภาพแข็งแรงมาก^high^
+B1-0328^pronoun@E^high^อะไร^这是什么？^Zhè shì shénme?^นี่คืออะไร?^high^
+B1-0329^verb@E^high^ป่วย; ไม่สบาย^他生病了，今天没来。^Tā shēngbìng le, jīntiān méi lái.^เขาป่วย วันนี้เลยไม่ได้มา^high^
+B1-0330^verb@E^high^โกรธ^别生气了。^Bié shēngqì le.^อย่าโกรธเลยนะ^high^
+B1-0331^noun@E^high^วันเกิด^祝你生日快乐！^Zhù nǐ shēngrì kuàilè!^สุขสันต์วันเกิด!^high^
+B1-0332^numeral@E^high^สิบ^我有十块钱。^Wǒ yǒu shí kuài qián.^ฉันมีเงินสิบหยวน^high^
+B1-0333^noun@E^high^เวลา; ตอน; ขณะ^你什么时候回家？^Nǐ shénme shíhou huí jiā?^คุณจะกลับบ้านเมื่อไร?^high^
+B1-0334^noun@E^high^เวลา^我没有时间。^Wǒ méiyǒu shíjiān.^ฉันไม่มีเวลา^high^
+B1-0335^noun@E^high^เรื่อง; ธุระ^你找我有什么事？^Nǐ zhǎo wǒ yǒu shénme shì?^คุณมาหาฉันมีธุระอะไร?^high^
+B1-0336^verb@E^high^ลอง^你试一下这件衣服吧。^Nǐ shì yí xià zhè jiàn yīfu ba.^คุณลองเสื้อตัวนี้ดูสิ^high^
+B1-0337^verb@L^low^เป็น; คือ; ใช่^我是学生。^Wǒ shì xuésheng.^ฉันเป็นนักเรียน^medium^source_gloss: gloss "yes" covers only the reply use; core sense is the copula "to be"
+B1-0338^other^low^ใช่ไหม; หรือเปล่า^你是不是中国人？^Nǐ shì bu shì Zhōngguórén?^คุณเป็นคนจีนใช่ไหม?^high^pos_doubtful: A-not-A question form (是+不+是) has no single POS
+B1-0339^noun@E^high^มือ^请洗手。^Qǐng xǐ shǒu.^กรุณาล้างมือ^high^
+B1-0340^noun@E^high^โทรศัพท์มือถือ^我的手机没电了。^Wǒ de shǒujī méi diàn le.^โทรศัพท์มือถือของฉันแบตหมดแล้ว^high^
+B1-0341^noun@E^high^หนังสือ^这是一本中文书。^Zhè shì yì běn Zhōngwén shū.^นี่คือหนังสือภาษาจีนเล่มหนึ่ง^high^
+B1-0342^noun@E^high^กระเป๋านักเรียน^我的书包很重。^Wǒ de shūbāo hěn zhòng.^กระเป๋านักเรียนของฉันหนักมาก^high^
+B1-0343^noun@E^high^ร้านหนังสือ^学校旁边有一家书店。^Xuéxiào pángbiān yǒu yì jiā shūdiàn.^ข้างโรงเรียนมีร้านหนังสือร้านหนึ่ง^high^
+B1-0344^noun@E^high^ต้นไม้^门口有一棵大树。^Ménkǒu yǒu yì kē dà shù.^หน้าประตูมีต้นไม้ใหญ่ต้นหนึ่ง^high^
+B1-0345^noun@E^high^น้ำ^我想喝水。^Wǒ xiǎng hē shuǐ.^ฉันอยากดื่มน้ำ^high^
+B1-0346^noun@E^high^ผลไม้^多吃水果对身体好。^Duō chī shuǐguǒ duì shēntǐ hǎo.^กินผลไม้มากๆ ดีต่อสุขภาพ^high^
+B1-0347^verb@E^high^นอน; หลับ^我昨天睡了十个小时。^Wǒ zuótiān shuì le shí ge xiǎoshí.^เมื่อวานฉันนอนไปสิบชั่วโมง^high^
+B1-0348^verb@E^high^นอนหลับ; เข้านอน^我十一点睡觉。^Wǒ shíyī diǎn shuìjiào.^ฉันเข้านอนตอนห้าทุ่ม^high^
+B1-0349^verb@E^high^พูด^他会说英语。^Tā huì shuō Yīngyǔ.^เขาพูดภาษาอังกฤษได้^high^
+B1-0350^verb@E^high^พูด; คุยกัน^上课的时候不要说话。^Shàngkè de shíhou búyào shuōhuà.^ระหว่างเรียนอย่าคุยกัน^high^
+B1-0351^numeral@E^high^สี่^我家有四口人。^Wǒ jiā yǒu sì kǒu rén.^บ้านฉันมีสี่คน^high^
+B1-0352^verb@E^high^ให้ (ของขวัญ); ส่ง^我送你一本书。^Wǒ sòng nǐ yì běn shū.^ฉันให้หนังสือคุณหนึ่งเล่ม^medium^polysemy: 送 also means "see off; deliver" (送朋友去机场); gloss gives only "give"
+B1-0353^measure_word@L^medium^ขวบ; ปี (อายุ)^我女儿三岁了。^Wǒ nǚ'ér sān suì le.^ลูกสาวของฉันอายุสามขวบแล้ว^high^
+B1-0354^pronoun@E^high^เขา (ผู้ชาย)^他是我哥哥。^Tā shì wǒ gēge.^เขาเป็นพี่ชายของฉัน^high^
+B1-0355^pronoun@E^high^พวกเขา^他们都是学生。^Tāmen dōu shì xuésheng.^พวกเขาเป็นนักเรียนทั้งหมด^high^
+B1-0356^pronoun@E^high^เธอ (ผู้หญิง)^她是我的老师。^Tā shì wǒ de lǎoshī.^เธอเป็นครูของฉัน^high^
+B1-0357^pronoun@E^high^พวกเธอ (ผู้หญิง)^她们是我的同学。^Tāmen shì wǒ de tóngxué.^พวกเธอเป็นเพื่อนร่วมชั้นของฉัน^high^
+B1-0358^adverb@E^high^เกินไป; มาก^这个太贵了。^Zhège tài guì le.^อันนี้แพงเกินไป^high^
+B1-0359^noun@E^high^วัน; ท้องฟ้า^我在北京住了三天。^Wǒ zài Běijīng zhù le sān tiān.^ฉันพักอยู่ที่ปักกิ่งสามวัน^high^
+B1-0360^noun@E^high^อากาศ; สภาพอากาศ^今天天气很好。^Jīntiān tiānqì hěn hǎo.^วันนี้อากาศดีมาก^high^
+B1-0361^verb@E^high^ฟัง; ได้ยิน^我喜欢听音乐。^Wǒ xǐhuan tīng yīnyuè.^ฉันชอบฟังเพลง^high^
+B1-0362^verb@E^high^ได้ยิน^我听到有人叫我。^Wǒ tīngdào yǒu rén jiào wǒ.^ฉันได้ยินมีคนเรียกฉัน^high^
+B1-0363^verb@E^high^ได้ยิน^你听见了吗？^Nǐ tīngjiàn le ma?^คุณได้ยินไหม?^high^
+B1-0364^verb@E^medium^เขียนตามคำบอก^老师让我们听写生词。^Lǎoshī ràng wǒmen tīngxiě shēngcí.^ครูให้พวกเราเขียนคำศัพท์ใหม่ตามคำบอก^medium^pos_doubtful: "dictation; dictate" is both noun and verb; example shows the verb
+B1-0365^noun@E^high^เพื่อนร่วมชั้น^他是我的同学。^Tā shì wǒ de tóngxué.^เขาเป็นเพื่อนร่วมชั้นของฉัน^high^
+B1-0366^noun@E^high^ห้องสมุด^我去图书馆借书。^Wǒ qù túshūguǎn jiè shū.^ฉันไปยืมหนังสือที่ห้องสมุด^high^
+B1-0367^noun@L^medium^ข้างนอก; ต่างประเทศ^门外有人。^Mén wài yǒu rén.^นอกประตูมีคน^medium^polysemy: "outside" and "abroad/foreign" combined; example shows "outside"
+B1-0368^noun@E^high^ข้างนอก^外边下雨了。^Wàibian xià yǔ le.^ข้างนอกฝนตกแล้ว^high^
+B1-0369^noun@E^high^ต่างประเทศ^他去过很多外国。^Tā qù guo hěn duō wàiguó.^เขาเคยไปต่างประเทศมาหลายประเทศ^high^
+B1-0370^noun@E^high^ภาษาต่างประเทศ^你会说几种外语？^Nǐ huì shuō jǐ zhǒng wàiyǔ?^คุณพูดภาษาต่างประเทศได้กี่ภาษา?^high^
+B1-0371^verb@E^high^เล่น; เที่ยว^孩子们在外边玩儿。^Háizimen zài wàibian wánr.^เด็กๆ กำลังเล่นอยู่ข้างนอก^high^
+B1-0372^adjective@E^high^สาย; ดึก^对不起，我来晚了。^Duìbuqǐ, wǒ lái wǎn le.^ขอโทษ ฉันมาสาย^high^
+B1-0373^noun@E^high^อาหารเย็น^我们七点吃晚饭。^Wǒmen qī diǎn chī wǎnfàn.^พวกเรากินข้าวเย็นตอนหนึ่งทุ่ม^high^
+B1-0374^noun@E^high^ตอนเย็น; ตอนกลางคืน^晚上我在家看书。^Wǎnshang wǒ zài jiā kàn shū.^ตอนเย็นฉันอ่านหนังสืออยู่ที่บ้าน^high^
+B1-0375^noun@E^high^ออนไลน์; ในอินเทอร์เน็ต^我常常在网上买东西。^Wǒ chángcháng zài wǎngshang mǎi dōngxi.^ฉันซื้อของออนไลน์บ่อยๆ^high^
+B1-0376^noun@E^high^เพื่อนในอินเทอร์เน็ต^我和网友见面了。^Wǒ hé wǎngyǒu jiànmiàn le.^ฉันได้เจอกับเพื่อนที่รู้จักทางอินเทอร์เน็ตแล้ว^high^
+B1-0377^verb@E^high^ลืม^别忘了带钥匙。^Bié wàng le dài yàoshi.^อย่าลืมพกกุญแจนะ^high^
+B1-0378^verb@E^high^ลืม^我忘记他的名字了。^Wǒ wàngjì tā de míngzi le.^ฉันลืมชื่อของเขาแล้ว^high^
+B1-0379^verb@E^high^ถาม^我可以问你一个问题吗？^Wǒ kěyǐ wèn nǐ yí ge wèntí ma?^ฉันขอถามคำถามคุณข้อหนึ่งได้ไหม?^high^
+B1-0380^pronoun@E^high^ฉัน; ผม^我是泰国人。^Wǒ shì Tàiguórén.^ฉันเป็นคนไทย^high^
+B1-0381^pronoun@E^high^พวกเรา^我们一起去吧。^Wǒmen yìqǐ qù ba.^พวกเราไปด้วยกันเถอะ^high^
+B1-0382^numeral@E^high^ห้า^我五点下班。^Wǒ wǔ diǎn xiàbān.^ฉันเลิกงานห้าโมงเย็น^high^
+B1-0383^noun@E^high^อาหารกลางวัน^你午饭吃什么？^Nǐ wǔfàn chī shénme?^มื้อกลางวันคุณกินอะไร?^high^
+B1-0384^noun@E^high^ทิศตะวันตก^往西走五分钟就到了。^Wǎng xī zǒu wǔ fēnzhōng jiù dào le.^เดินไปทางทิศตะวันตกห้านาทีก็ถึงแล้ว^high^
+B1-0385^noun@E^high^ทางทิศตะวันตก; ด้านตะวันตก^公园在学校西边。^Gōngyuán zài xuéxiào xībian.^สวนสาธารณะอยู่ทางทิศตะวันตกของโรงเรียน^high^
+B1-0386^verb@E^high^ล้าง; ซัก^吃饭前要洗手。^Chīfàn qián yào xǐ shǒu.^ก่อนกินข้าวต้องล้างมือ^high^
+B1-0387^noun@E^high^ห้องน้ำ; ห้องสุขา^请问，洗手间在哪儿？^Qǐngwèn, xǐshǒujiān zài nǎr?^ขอถามหน่อย ห้องน้ำอยู่ที่ไหน?^high^
+B1-0388^verb@E^high^ชอบ^我喜欢吃中国菜。^Wǒ xǐhuan chī Zhōngguó cài.^ฉันชอบกินอาหารจีน^high^
+B1-0389^verb@L^low^ล่าง; ใต้; ถัดไป; ลง; ลงจาก (รถ)^我们下个星期见。^Wǒmen xià ge xīngqī jiàn.^พวกเราเจอกันสัปดาห์หน้า^low^polysemy: below / under / next / go down / get off mix locative, attributive and verb senses; pos_doubtful: no source POS; example shows "next"
+B1-0390^verb@E^high^เลิกงาน^你几点下班？^Nǐ jǐ diǎn xiàbān?^คุณเลิกงานกี่โมง?^high^
+B1-0391^noun@E^high^ข้างล่าง; ใต้^桌子下边有一只猫。^Zhuōzi xiàbian yǒu yì zhī māo.^ใต้โต๊ะมีแมวอยู่ตัวหนึ่ง^high^
+B1-0392^verb@E^high^ลงจากรถ^到了，我们下车吧。^Dào le, wǒmen xiàchē ba.^ถึงแล้ว พวกเราลงรถกันเถอะ^high^
+B1-0393^noun@E^high^ครั้งหน้า^下次我请你吃饭。^Xiàcì wǒ qǐng nǐ chīfàn.^ครั้งหน้าฉันจะเลี้ยงข้าวคุณ^high^
+B1-0394^verb@E^high^เลิกเรียน; หมดคาบ^下课以后我们去打球。^Xiàkè yǐhòu wǒmen qù dǎqiú.^หลังเลิกเรียนพวกเราไปเล่นบอลกัน^high^
+B1-0395^noun@E^high^ช่วงบ่าย^下午我要去图书馆。^Xiàwǔ wǒ yào qù túshūguǎn.^ตอนบ่ายฉันจะไปห้องสมุด^high^
+B1-0396^verb@E^high^ฝนตก^外边下雨了，别出去了。^Wàibian xiàyǔ le, bié chūqu le.^ข้างนอกฝนตกแล้ว อย่าออกไปเลย^high^
+B1-0397^adverb@L^medium^ก่อน^你先走吧，我等一会儿。^Nǐ xiān zǒu ba, wǒ děng yíhuìr.^คุณไปก่อนเถอะ ฉันจะรออีกสักครู่^medium^source_gloss: "before" — 先 is the adverb "first; in advance", not the preposition "before"
+B1-0398^noun@E^high^คุณ (ผู้ชาย); สามี^王先生，您好！^Wáng xiānsheng, nín hǎo!^สวัสดีครับคุณหวัง^high^
