@@ -1,0 +1,96 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B1-0006^^high^สีขาว; ขาว^她穿了一件白衣服。^Tā chuān le yí jiàn bái yīfu.^เธอสวมเสื้อสีขาวตัวหนึ่ง^high^
+B1-0022^^high^เล่ม (ลักษณนามของหนังสือ)^我买了两本书。^Wǒ mǎi le liǎng běn shū.^ฉันซื้อหนังสือสองเล่ม^high^
+B1-0025^^high^อย่า^别说话！^Bié shuōhuà!^อย่าพูด!^high^
+B1-0053^^high^ครั้ง (ลักษณนามบอกจำนวนครั้ง)^我去过北京三次。^Wǒ qù guo Běijīng sān cì.^ฉันเคยไปปักกิ่งสามครั้ง^high^
+B1-0056^^high^ตี; เอา; ถือ^他打了我一下。^Tā dǎ le wǒ yí xià.^เขาตีฉันทีหนึ่ง^medium^polysemy: "hit, take" covers two unrelated senses (strike vs. take/fetch); example shows "hit" only
+B1-0068^^high^รอ; คอย^请等我一下。^Qǐng děng wǒ yí xià.^กรุณารอฉันสักครู่^high^
+B1-0071^adjective@E^low^ท้องถิ่น^这是我们这儿的地方菜。^Zhè shì wǒmen zhèr de dìfang cài.^นี่คืออาหารท้องถิ่นของที่นี่^low^source_mismatch: pinyin dìfang (neutral tone) normally means "place", while gloss "local" matches dìfāng; pos_doubtful: no source POS, "local" used attributively
+B1-0092^^high^ถูก; ถูกต้อง^你说得对。^Nǐ shuō de duì.^คุณพูดถูก^high^
+B1-0109^^high^นาที; คะแนน; ส่วน; (ลักษณนาม)^现在是八点十分。^Xiànzài shì bā diǎn shí fēn.^ตอนนี้แปดโมงสิบนาที^medium^polysemy: minute / point / part / measure word in one entry; example shows "minute" only
+B1-0125^^high^ปิด^请关门。^Qǐng guān mén.^กรุณาปิดประตู^high^
+B1-0138^^high^ดี^这本书很好。^Zhè běn shū hěn hǎo.^หนังสือเล่มนี้ดีมาก^high^
+B1-0150^^high^ดอกไม้^她喜欢花。^Tā xǐhuan huā.^เธอชอบดอกไม้^high^
+B1-0154^^high^กลับ; กลับไป^我明天回家。^Wǒ míngtiān huí jiā.^พรุ่งนี้ฉันจะกลับบ้าน^high^
+B1-0160^^high^เป็น; ทำได้ (ทักษะที่เรียนมา)^我会说汉语。^Wǒ huì shuō Hànyǔ.^ฉันพูดภาษาจีนได้^high^pos_doubtful: source label 动 (verb) but this sense is usually classed as an auxiliary/modal verb
+B1-0176^^high^เรียก; ชื่อว่า^我叫王明。^Wǒ jiào Wáng Míng.^ฉันชื่อหวังหมิง^high^
+B1-0207^^high^แก่; เก่า; อายุมาก^我爷爷很老了。^Wǒ yéye hěn lǎo le.^คุณปู่ของฉันแก่มากแล้ว^high^
+B1-0210^particle@L^high^(คำช่วยแสดงว่าการกระทำเสร็จสิ้นแล้ว)^我吃了饭。^Wǒ chī le fàn.^ฉันกินข้าวแล้ว^medium^source_gloss: "past tense marker" simplifies 了 (perfective aspect / change of state), not true tense
+B1-0215^^high^สอง (ใช้หน้าลักษณนาม)^我有两个哥哥。^Wǒ yǒu liǎng ge gēge.^ฉันมีพี่ชายสองคน^high^
+B1-0231^^high^เหมา (หน่วยเงินจีน = 1/10 หยวน)^这个苹果五毛钱。^Zhège píngguǒ wǔ máo qián.^แอปเปิลลูกนี้ราคาห้าเหมา^high^
+B1-0250^pronoun@L^high^ไหน; อันไหน^你是哪国人？^Nǐ shì nǎ guó rén?^คุณเป็นคนชาติไหน?^high^
+B1-0254^^high^นั้น; โน้น^那是我的书。^Nà shì wǒ de shū.^นั่นคือหนังสือของฉัน^high^
+B1-0416^adjective@L^medium^ได้; โอเค; ใช้ได้^A：明天见，行吗？ B：行！^A: Míngtiān jiàn, xíng ma? B: Xíng!^A: พรุ่งนี้เจอกัน ได้ไหม? B: ได้!^medium^pos_doubtful: no source POS; "That's ok" is a response formula, POS could be adjective or verb
+B1-0423^^high^ต้องการ; อยาก^我要一杯茶。^Wǒ yào yì bēi chá.^ฉันต้องการชาหนึ่งถ้วย^high^
+B1-0461^^high^สถานี; ป้าย^我在火车站等你。^Wǒ zài huǒchēzhàn děng nǐ.^ฉันรอคุณที่สถานีรถไฟ^high^
+B1-0469^particle@L^high^(คำช่วยแสดงว่ากำลังอยู่ในสภาพหรือการกระทำต่อเนื่อง)^门开着。^Mén kāi zhe.^ประตูเปิดอยู่^medium^source_gloss: "in process of" loosely describes durative 着; it mostly marks a continuing state
+B1-0472^^high^กำลัง; พอดี; ตรงกับ^我到的时候，他正在吃饭。^Wǒ dào de shíhou, tā zhèng zài chīfàn.^ตอนที่ฉันไปถึง เขากำลังกินข้าวอยู่พอดี^high^
+B1-0483^adjective@E^high^หนัก^这个箱子很重。^Zhège xiāngzi hěn zhòng.^กล่องใบนี้หนักมาก^high^
+B2-0017^^high^แบก; สะพาย (บนหลัง)^他背着一个大包。^Tā bēi zhe yí ge dà bāo.^เขาสะพายกระเป๋าใบใหญ่ใบหนึ่ง^high^
+B2-0046^^high^เพียง; แค่; เพิ่งจะ^他才十岁。^Tā cái shí suì.^เขาอายุแค่สิบขวบ^high^
+B2-0062^^high^เรียก; เรียกว่า^大家都称他“老王”。^Dàjiā dōu chēng tā “Lǎo Wáng”.^ทุกคนเรียกเขาว่า “เหล่าหวัง”^medium^variant: superscript ¹ marks a homograph split (称¹ chēng vs. other 称); gloss "say" is weakly supported
+B2-0063^^high^กลายเป็น; สำเร็จ^他成了一名医生。^Tā chéng le yì míng yīshēng.^เขากลายเป็นหมอคนหนึ่ง^medium^polysemy: "become" and "finish/accomplish" combined; example shows "become"
+B2-0070^^medium^การส่งออก^这家公司的出口很多。^Zhè jiā gōngsī de chūkǒu hěn duō.^บริษัทนี้มีการส่งออกมาก^medium^pos_doubtful: labelled noun but 出口 "export" is also commonly a verb; 出口 also means "exit"
+B2-0148^^medium^มากกว่ามาก; ...กว่ามาก (หลังคำคุณศัพท์เปรียบเทียบ)^今天比昨天冷多了。^Jīntiān bǐ zuótiān lěng duō le.^วันนี้หนาวกว่าเมื่อวานมาก^medium^pos_doubtful: in "冷多了" 多 functions as a degree complement rather than a pre-verbal adverb
+B2-0164^^high^แบ่ง; แจก; แยก^妈妈把蛋糕分成四块。^Māma bǎ dàngāo fēn chéng sì kuài.^แม่แบ่งเค้กเป็นสี่ชิ้น^high^
+B2-0169^^high^ฉบับ (ลักษณนามของจดหมาย)^我给他写了一封信。^Wǒ gěi tā xiě le yì fēng xìn.^ฉันเขียนจดหมายถึงเขาหนึ่งฉบับ^high^
+B2-0172^^high^ควร; สมควร; ติดค้าง^时间不早了，我该走了。^Shíjiān bù zǎo le, wǒ gāi zǒu le.^สายแล้ว ฉันควรไปแล้ว^medium^polysemy: "deserve; should; owe" are distinct senses; example shows "should"; pos_doubtful: "should" sense is usually auxiliary
+B2-0209^^high^ข้ามไป; ผ่านไป^你过去看看吧。^Nǐ guòqù kànkan ba.^คุณลองเดินไปดูหน่อยสิ^high^
+B2-0214^^low^ดีแล้ว; โอเค; ตกลง^好，我们走吧。^Hǎo, wǒmen zǒu ba.^โอเค เราไปกันเถอะ^low^source_gloss: label 副 (adverb) conflicts with gloss "well; fine; okay" (adverbial 好 usually means "very/quite"); example shows the interjection-like "okay"
+B2-0232^^high^ใช้ (เงิน/เวลา)^我花了一百块钱。^Wǒ huā le yì bǎi kuài qián.^ฉันใช้เงินไปหนึ่งร้อยหยวน^high^
+B2-0243^^high^ครั้ง; หน (ลักษณนามบอกจำนวนครั้ง)^这本书我看过两回。^Zhè běn shū wǒ kàn guo liǎng huí.^หนังสือเล่มนี้ฉันเคยอ่านสองครั้ง^medium^source_gloss: gloss is only "(measure word)" without saying what it counts
+B2-0245^^high^การประชุม; งานชุมนุม; สมาคม; งานเลี้ยง^下午我们要开会。^Xiàwǔ wǒmen yào kāi huì.^ตอนบ่ายเราจะประชุม^medium^polysemy: meeting / conference / union / party combined; example shows "meeting"
+B2-0288^^high^เทศกาล; วันหยุด; ข้อต่อ; คาบ (ลักษณนาม)^春节是中国最重要的节日。^Chūnjié shì Zhōngguó zuì zhòngyào de jiérì.^ตรุษจีนเป็นเทศกาลที่สำคัญที่สุดของจีน^medium^polysemy: festival / joint / measure word (class period) combined; example shows "festival"
+B2-0324^^high^สิบห้านาที (หนึ่งในสี่ของชั่วโมง)^现在是三点一刻。^Xiànzài shì sān diǎn yí kè.^ตอนนี้บ่ายสามโมงสิบห้านาที^high^
+B2-0339^^high^มักจะ; ตลอด; คอย...อยู่เรื่อย^他老迟到。^Tā lǎo chídào.^เขามาสายอยู่เรื่อย^high^
+B2-0356^^high^เหลียง (หน่วยน้ำหนักจีน = 50 กรัม)^我要二两饺子。^Wǒ yào èr liǎng jiǎozi.^ฉันขอเกี๊ยวสองเหลียง^high^
+B2-0376^^high^เมตร^这条路长一百米。^Zhè tiáo lù cháng yì bǎi mǐ.^ถนนสายนี้ยาวหนึ่งร้อยเมตร^high^
+B2-0377^^high^(ลักษณนามของสิ่งแบน); ด้าน; แง่มุม^墙上有一面镜子。^Qiáng shang yǒu yí miàn jìngzi.^บนผนังมีกระจกบานหนึ่ง^medium^polysemy: measure word / side / aspect combined; example shows the measure word
+B2-0378^^high^หน้า; ผิวหน้า; ด้านนอก; ด้าน; ขนาด; แป้ง^桌面很干净。^Zhuōmiàn hěn gānjìng.^พื้นผิวโต๊ะสะอาดมาก^medium^polysemy: face / surface / side / scale / flour are unrelated senses; variant: "flour" belongs to traditional 麵, merged under 面²
+B2-0387^^high^ถ้าอย่างนั้น; งั้น^那我们明天再去吧。^Nà wǒmen míngtiān zài qù ba.^งั้นพรุ่งนี้เราค่อยไปกันเถอะ^high^
+B2-0406^^high^กลัว^我怕狗。^Wǒ pà gǒu.^ฉันกลัวสุนัข^high^
+B2-0407^^high^แถว; แนว^我坐在第一排。^Wǒ zuò zài dì yī pái.^ฉันนั่งแถวแรก^high^
+B2-0477^^high^คลอด; เกิด^她生了一个女儿。^Tā shēng le yí ge nǚ'ér.^เธอคลอดลูกสาวคนหนึ่ง^high^
+B2-0481^^high^มณฑล^广东省在中国南方。^Guǎngdōng Shěng zài Zhōngguó nánfāng.^มณฑลกวางตุ้งอยู่ทางตอนใต้ของจีน^high^
+B2-0482^^high^ประหยัด; ละ; ตัดออก^坐地铁可以省很多时间。^Zuò dìtiě kěyǐ shěng hěn duō shíjiān.^นั่งรถไฟใต้ดินช่วยประหยัดเวลาได้มาก^medium^polysemy: "economize/save" and "omit/leave out" combined; example shows "save"
+B2-0541^^high^ค่อนข้าง; ทีเดียว^这个菜挺好吃的。^Zhège cài tǐng hǎochī de.^อาหารจานนี้อร่อยทีเดียว^high^
+B2-0549^^high^หัว; ศีรษะ; ต้น/ปลาย; ด้าน; ตัว (ลักษณนามของสัตว์ใหญ่)^我头很疼。^Wǒ tóu hěn téng.^ฉันปวดหัวมาก^medium^polysemy: head / beginning or end / side / measure word combined; example shows "head"
+B2-0589^^high^ที; ครั้ง (ลักษณนามบอกจำนวนครั้งของการกระทำสั้นๆ)^他敲了三下门。^Tā qiāo le sān xià mén.^เขาเคาะประตูสามที^medium^source_gloss: gloss is only "(measure word)" without saying what it counts
+B2-0601^^high^เหมือน; คล้าย; เช่น^她长得很像她妈妈。^Tā zhǎng de hěn xiàng tā māma.^เธอหน้าตาเหมือนแม่ของเธอมาก^high^
+B2-0617^^high^จดหมาย; ความเชื่อ^我收到了一封信。^Wǒ shōudào le yì fēng xìn.^ฉันได้รับจดหมายฉบับหนึ่ง^medium^polysemy: "letter; mail" and "faith" are distinct senses; example shows "letter"
+B2-0649^^high^สักครู่; ประเดี๋ยว; อีกไม่นาน^我一会儿就回来。^Wǒ yíhuìr jiù huílai.^ฉันจะกลับมาในอีกสักครู่^high^
+B2-0713^^high^ยืน; หยุด^他站在门口。^Tā zhàn zài ménkǒu.^เขายืนอยู่ที่ประตู^medium^polysemy: "stand" and "stop; halt" combined; example shows "stand"
+B3-0006^^medium^(คำบุพบทนำกรรมมาไว้หน้ากริยา)^请把门关上。^Qǐng bǎ mén guānshang.^กรุณาปิดประตูด้วย^medium^source_gloss: meaning_english "direct object)" is truncated; read as the 把 preposition that fronts the object
+B3-0007^^high^ด้าม; คัน; ตัว (ลักษณนามของสิ่งที่มีด้ามจับ)^我买了一把伞。^Wǒ mǎi le yì bǎ sǎn.^ฉันซื้อร่มคันหนึ่ง^medium^source_gloss: gloss is only "(measure word)" without saying what it counts
+B3-0009^^high^เปล่าประโยชน์; เสียแรงเปล่า^他没来，我白等了一个小时。^Tā méi lái, wǒ bái děng le yí ge xiǎoshí.^เขาไม่มา ฉันรอเปล่าไปหนึ่งชั่วโมง^high^
+B3-0024^^high^หนังสือพิมพ์; วารสาร; รายงาน^爸爸每天早上看报。^Bàba měitiān zǎoshang kàn bào.^พ่ออ่านหนังสือพิมพ์ทุกเช้า^medium^polysemy: newspaper / periodical / report combined; source_gloss: trailing ";" suggests truncated gloss
+B3-0030^^high^หลัง; ด้านหลัง^我的背有点儿疼。^Wǒ de bèi yǒudiǎnr téng.^หลังของฉันปวดนิดหน่อย^high^
+B3-0279^^high^อดีต; ในอดีต^过去我不喜欢吃鱼。^Guòqù wǒ bù xǐhuan chī yú.^ในอดีตฉันไม่ชอบกินปลา^high^
+B3-0311^^high^ไฟ; ความโกรธ; อารมณ์ร้อน^天冷了，我们生个火吧。^Tiān lěng le, wǒmen shēng ge huǒ ba.^อากาศหนาวแล้ว เราก่อไฟกันเถอะ^medium^polysemy: "fire" and "anger; temper" combined; example shows "fire"
+B3-0355^^low^ถูก...(บุพบทแสดงประโยคถูกกระทำ)^我的自行车叫人偷了。^Wǒ de zìxíngchē jiào rén tōu le.^จักรยานของฉันถูกคนขโมยไป^low^source_mismatch: gloss "compare; comparatively; relatively; fairly" belongs to 较 jiào, not 叫; Thai/example follow the 介 label (passive-marking 叫); source not changed
+B3-0420^adjective@E^high^ว่าง; ว่างเปล่า^冰箱里是空的。^Bīngxiāng li shì kōng de.^ในตู้เย็นว่างเปล่า^high^
+B3-0475^^high^ขน; ผม; เหมา (หน่วยเงิน)^这只猫的毛很长。^Zhè zhī māo de máo hěn cháng.^ขนของแมวตัวนี้ยาวมาก^medium^polysemy: "hair; fur" and money unit (overlaps with 毛 measure word B1-0231) combined; example shows "fur"
+B3-0487^^high^เมตร; ข้าวสาร^我买了五斤米。^Wǒ mǎi le wǔ jīn mǐ.^ฉันซื้อข้าวสารห้าชั่ง^medium^polysemy: "meter" and "rice" combined (meter also listed as B2-0376); example shows "rice"
+B3-0515^^high^วัว^草地上有很多牛。^Cǎodì shang yǒu hěn duō niú.^บนทุ่งหญ้ามีวัวมากมาย^high^
+B3-0521^^medium^เกรงว่า; อาจจะ^天这么黑，怕是要下雨了。^Tiān zhème hēi, pà shì yào xià yǔ le.^ฟ้ามืดขนาดนี้ เกรงว่าฝนจะตก^medium^source_gloss: "perhaps; afraid" mixes the adverb "I'm afraid/probably" with the verb "fear" (B2-0406)
+B3-0523^^high^จัดเรียง; จัดลำดับ; กีดกัน; ซ้อม^老师把我们排成两队。^Lǎoshī bǎ wǒmen pái chéng liǎng duì.^ครูจัดพวกเราเป็นสองแถว^medium^polysemy: arrange / exclude / rehearse are distinct senses; example shows "arrange"
+B3-0598^^high^แต่งตั้ง; มอบหมาย^公司任他为经理。^Gōngsī rèn tā wéi jīnglǐ.^บริษัทแต่งตั้งเขาเป็นผู้จัดการ^high^
+B3-0599^^medium^ไม่ว่า (อย่างไร/อะไร)^任你怎么说，他都不听。^Rèn nǐ zěnme shuō, tā dōu bù tīng.^ไม่ว่าคุณจะพูดอย่างไร เขาก็ไม่ฟัง^medium^example: conjunction 任 is literary; learners more often meet 不管/无论
+B3-0628^^high^ดิบ; ยังไม่สุก; มีชีวิต; ไม่คุ้นเคย^这个苹果还是生的。^Zhège píngguǒ hái shì shēng de.^แอปเปิลลูกนี้ยังดิบอยู่^medium^polysemy: unripe / living / raw / unfamiliar combined; example shows "unripe"
+B3-0691^^high^สถานที่; สำนักงาน; หลัง (ลักษณนามของอาคาร/สถานศึกษา)^这是一所很好的大学。^Zhè shì yì suǒ hěn hǎo de dàxué.^นี่คือมหาวิทยาลัยที่ดีมากแห่งหนึ่ง^medium^polysemy: place / office / measure word combined; example shows the measure word
+B3-0722^^high^เจ็บ; ปวด; เศร้า^我的腿很痛。^Wǒ de tuǐ hěn tòng.^ขาของฉันเจ็บมาก^high^
+B3-0724^^low^แรก; อันดับแรก; หัวหน้า^这是我头一次来中国。^Zhè shì wǒ tóu yí cì lái Zhōngguó.^นี่เป็นครั้งแรกที่ฉันมาจีน^low^source_gloss: adjective 头 usually means "first" (头一次); gloss "lead; head" is unclear for an adjective
+B3-0730^^high^ดิน^花盆里的土很干。^Huāpén li de tǔ hěn gān.^ดินในกระถางแห้งมาก^high^
+B3-0751^^high^เป็น; ทำหน้าที่เป็น; กลายเป็น^大家选他为班长。^Dàjiā xuǎn tā wéi bānzhǎng.^ทุกคนเลือกเขาเป็นหัวหน้าห้อง^medium^polysemy: act as / become / be / mean combined; example shows "act as"
+B3-0752^^medium^เพื่อ; ให้; สำหรับ (บุพบท)^妈妈为我做了一个蛋糕。^Māma wèi wǒ zuò le yí ge dàngāo.^แม่ทำเค้กให้ฉันหนึ่งก้อน^medium^source_gloss: gloss is only "(preposition)"; Thai covers the common "for / for the sake of" use
+B3-0772^noun@E^high^ภาควิชา; คณะ^我是中文系的学生。^Wǒ shì Zhōngwén xì de xuésheng.^ฉันเป็นนักศึกษาภาควิชาภาษาจีน^high^
+B3-0800^^high^เชื่อ; ไว้ใจ^我信你。^Wǒ xìn nǐ.^ฉันเชื่อคุณ^high^
+B3-0896^^high^ตรง; ตั้งตรง; บวก; ถูกต้อง; หลัก^请把画挂正。^Qǐng bǎ huà guà zhèng.^กรุณาแขวนรูปให้ตรง^medium^polysemy: straight / positive / correct / main combined; example shows "straight"
+B3-0902^^high^แท่ง; ด้าม; กอง; เพลง (ลักษณนาม)^我有一支笔。^Wǒ yǒu yì zhī bǐ.^ฉันมีปากกาหนึ่งด้าม^medium^source_gloss: gloss is only "(measure word)" without saying what it counts
+B3-0931^noun@E^medium^ชนิด; สายพันธุ์^这种鸟很少见。^Zhè zhǒng niǎo hěn shǎo jiàn.^นกชนิดนี้หาดูได้ยาก^medium^pos_doubtful: gloss "species" says noun, but 种 zhǒng is mostly used as a measure word "kind"; example uses 这种
+B4-0046^^high^อย่า; จากไป; แยก; กลัด (ด้วยเข็ม)^她把花别在头发上。^Tā bǎ huā bié zài tóufa shang.^เธอกลัดดอกไม้ไว้บนผม^low^polysemy: do not / leave / separate / pin are unrelated senses; pos_doubtful: "do not" is adverbial (cf. B1-0025); example shows "pin"
+B4-0051^^high^รวม; ผนวก^这两家公司并成了一家。^Zhè liǎng jiā gōngsī bìng chéng le yì jiā.^บริษัททั้งสองแห่งนี้รวมเป็นแห่งเดียว^high^
+B4-0059^^high^ความสามารถ; พรสวรรค์^他很有才。^Tā hěn yǒu cái.^เขามีความสามารถมาก^high^
+B4-0124^^high^ด้อยกว่า; รอง; คุณภาพต่ำ^这家店的东西太次了。^Zhè jiā diàn de dōngxi tài cì le.^ของร้านนี้คุณภาพแย่เกินไป^high^
+B4-0288^^high^ด่าน; ศุลกากร; กลไก; อุปสรรค^过了这一关就好了。^Guò le zhè yì guān jiù hǎo le.^ผ่านด่านนี้ไปได้ก็ดีแล้ว^medium^polysemy: pass / checkpoint / customhouse / mechanism / barrier combined; example shows "pass; barrier"
+B4-0327^^high^ลาย; หลากสี; ดอกดวง^她穿了一条花裙子。^Tā chuān le yì tiáo huā qúnzi.^เธอสวมกระโปรงลายดอกตัวหนึ่ง^high^

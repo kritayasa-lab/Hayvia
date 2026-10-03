@@ -1,0 +1,37 @@
+{
+  "description": "AI Sense Enrichment result schema. Source fields are immutable; AI fills only enrichment fields.",
+  "required": [
+    "source_id",
+    "sense_group_id",
+    "thai_meaning",
+    "part_of_speech_normalized",
+    "pos_basis",
+    "pos_confidence",
+    "example_zh",
+    "example_pinyin",
+    "example_thai",
+    "enrichment_confidence",
+    "review_flag"
+  ],
+  "fields": {
+    "source_id": "string",
+    "sense_group_id": "string",
+    "thai_meaning": "string",
+    "part_of_speech_normalized": "enum: noun, verb, adjective, adverb, pronoun, preposition, conjunction, particle, auxiliary, numeral, measure_word, classifier, interjection, complement, other",
+    "pos_basis": "enum: source_label, source_english, lexical_inference, ambiguous",
+    "pos_confidence": "enum: high, medium, low",
+    "example_zh": "string",
+    "example_pinyin": "string",
+    "example_thai": "string",
+    "enrichment_confidence": "enum: high, medium, low",
+    "review_flag": "boolean",
+    "review_reason": "string|null"
+  },
+  "rules": [
+    "Never modify source_id, band, source_number, canonical_word, pinyin, meaning_english, or sense_group_id.",
+    "Do not create a new sense unless the source meaning/pinyin/POS clearly requires it.",
+    "When meaning is ambiguous, preserve source wording and set review_flag=true.",
+    "Examples must use the target sense naturally and not introduce advanced vocabulary unnecessarily.",
+    "Use simplified Chinese matching the source vocabulary."
+  ]
+}
