@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B3-0584^measure_word@L^medium^ฝูง; กลุ่ม (ลักษณนาม)^一群孩子在公园里玩儿。^Yì qún háizi zài gōngyuán li wánr.^เด็กกลุ่มหนึ่งเล่นอยู่ในสวนสาธารณะ^medium^pos_doubtful: gloss "group" reads as noun; 群 is mostly a measure word (一群人)
+B3-0585^verb@E^high^รักอย่างแรงกล้า^我热爱我的祖国。^Wǒ rè'ài wǒ de zǔguó.^ฉันรักมาตุภูมิของฉันอย่างสุดหัวใจ^high^
+B3-0586^adjective@E^medium^อบอุ่น; คึกคัก; กระตือรือร้น^大家热烈欢迎新同学。^Dàjiā rèliè huānyíng xīn tóngxué.^ทุกคนต้อนรับเพื่อนใหม่อย่างอบอุ่น^medium^source_gloss: "warm" is loose; 热烈 means "enthusiastic; ardent" (applause, welcome, discussion)
+B3-0587^noun@E^high^คนเก่ง; บุคลากรที่มีความสามารถ^公司需要更多的人才。^Gōngsī xūyào gèng duō de réncái.^บริษัทต้องการคนเก่งเพิ่มขึ้น^high^
+B3-0588^adjective@E^high^ประดิษฐ์; ที่มนุษย์สร้าง^这是一个人工湖。^Zhè shì yí ge réngōng hú.^นี่คือทะเลสาบที่มนุษย์สร้างขึ้น^medium^polysemy: adjective "artificial; manual" vs. noun "labour; man-power"; example shows "artificial"
+B3-0589^noun@E^high^มนุษยชาติ^人类只有一个地球。^Rénlèi zhǐ yǒu yí ge dìqiú.^มนุษยชาติมีโลกเพียงใบเดียว^high^
+B3-0590^noun@E^high^ประชาชน^人民的生活越来越好了。^Rénmín de shēnghuó yuè lái yuè hǎo le.^ชีวิตความเป็นอยู่ของประชาชนดีขึ้นเรื่อยๆ^high^
+B3-0591^noun@E^high^เงินหยวน (สกุลเงินจีน)^这件衣服一百元人民币。^Zhè jiàn yīfu yìbǎi yuán rénmínbì.^เสื้อตัวนี้ราคาหนึ่งร้อยหยวน^high^
+B3-0592^noun@E^high^ฝูงชน^他消失在人群中。^Tā xiāoshī zài rénqún zhōng.^เขาหายไปในฝูงชน^high^
+B3-0593^noun@E^high^ชีวิต (มนุษย์)^人生只有一次。^Rénshēng zhǐ yǒu yí cì.^ชีวิตคนเรามีเพียงครั้งเดียว^high^
+B3-0594^noun@E^high^บุคลากร; เจ้าหน้าที่^工作人员请到这边来。^Gōngzuò rényuán qǐng dào zhèbian lái.^เจ้าหน้าที่กรุณามาทางนี้^high^
+B3-0595^verb@E^high^จำได้; จำออก^我一眼就认出了他。^Wǒ yì yǎn jiù rènchū le tā.^ฉันจำเขาได้ตั้งแต่แวบแรก^high^
+B3-0596^verb@E^high^รู้จัก; จำได้^你还认得我吗？^Nǐ hái rènde wǒ ma?^คุณยังจำฉันได้ไหม?^high^
+B3-0597^verb@E^medium^ยอมรับ; รับรอง^他的能力得到了大家的认可。^Tā de nénglì dédào le dàjiā de rènkě.^ความสามารถของเขาได้รับการยอมรับจากทุกคน^medium^source_gloss: "certificate" is a noun not supported by usage; 认可 means "approve; recognize"
+B3-0600^pronoun@L^high^ใดๆ^有任何问题都可以问我。^Yǒu rènhé wèntí dōu kěyǐ wèn wǒ.^มีปัญหาใดๆ ก็ถามฉันได้^high^
+B3-0601^noun@E^high^ภารกิจ; หน้าที่^这是一个很重要的任务。^Zhè shì yí ge hěn zhòngyào de rènwu.^นี่เป็นภารกิจที่สำคัญมาก^high^
+B3-0602^adverb@E^high^ยังคง^他仍在等你。^Tā réng zài děng nǐ.^เขายังคงรอคุณอยู่^high^
+B3-0603^adverb@E^high^ยังคง^雨仍然下个不停。^Yǔ réngrán xià ge bù tíng.^ฝนยังคงตกไม่หยุด^high^
+B3-0604^adjective@E^high^ประจำวัน; ในชีวิตประจำวัน^这是日常生活中常用的词。^Zhè shì rìcháng shēnghuó zhōng chángyòng de cí.^นี่เป็นคำที่ใช้บ่อยในชีวิตประจำวัน^high^
+B3-0605^adjective@L^medium^ง่าย^这个问题很容易。^Zhège wèntí hěn róngyì.^ปัญหานี้ง่ายมาก^medium^source_gloss: "easily" is adverbial; 容易 is mainly the adjective "easy" (also "be liable to")
+B3-0606^pronoun@L^high^อย่างไร^你如何看这个问题？^Nǐ rúhé kàn zhège wèntí?^คุณมองปัญหานี้อย่างไร?^high^
+B3-0607^verb@E^high^เดินเล่น^晚饭后我们去散步吧。^Wǎnfàn hòu wǒmen qù sànbù ba.^หลังอาหารเย็นพวกเราไปเดินเล่นกันเถอะ^high^
+B3-0608^noun@E^high^โซฟา^他坐在沙发上看电视。^Tā zuò zài shāfā shang kàn diànshì.^เขานั่งดูทีวีอยู่บนโซฟา^high^
+B3-0609^noun@E^high^ทราย^鞋里进沙子了。^Xié li jìn shāzi le.^มีทรายเข้าไปในรองเท้า^high^
+B3-0610^verb@E^high^ทำให้บาดเจ็บ; ทำร้าย; เสียใจ^他的话伤了我的心。^Tā de huà shāng le wǒ de xīn.^คำพูดของเขาทำร้ายจิตใจฉัน^medium^polysemy: verb "hurt; harm" vs. noun "wound"; also "be distressed; get sick of"; example shows "hurt (feelings)"
+B3-0611^adjective@E^high^เสียใจ; เศร้าใจ^听到这个消息，她很伤心。^Tīngdào zhège xiāoxi, tā hěn shāngxīn.^พอได้ยินข่าวนี้ เธอเสียใจมาก^high^
+B3-0612^noun@E^high^สินค้า^这家超市的商品很多。^Zhè jiā chāoshì de shāngpǐn hěn duō.^ซูเปอร์มาร์เก็ตนี้มีสินค้ามากมาย^high^
+B3-0613^noun@E^high^การค้า; ธุรกิจ^这里是城市的商业中心。^Zhèlǐ shì chéngshì de shāngyè zhōngxīn.^ที่นี่เป็นศูนย์กลางการค้าของเมือง^high^
+B3-0614^verb@E^high^ขึ้นมา^你上来看看吧。^Nǐ shànglai kànkan ba.^คุณขึ้นมาดูหน่อยสิ^high^
+B3-0615^noun@E^high^ข้างบน; บน^桌子上面放着一本书。^Zhuōzi shàngmian fàng zhe yì běn shū.^บนโต๊ะมีหนังสือวางอยู่เล่มหนึ่ง^high^
+B3-0616^verb@E^high^ขึ้นไป^我们坐电梯上去吧。^Wǒmen zuò diàntī shàngqu ba.^พวกเรานั่งลิฟต์ขึ้นไปกันเถอะ^high^
+B3-0617^verb@E^high^สูงขึ้น; เพิ่มขึ้น^今天气温上升了。^Jīntiān qìwēn shàngshēng le.^วันนี้อุณหภูมิสูงขึ้น^high^
+B3-0618^noun@E^high^เสื้อตัวนอก; เสื้อแจ็กเก็ต^这件上衣很好看。^Zhè jiàn shàngyī hěn hǎokàn.^เสื้อตัวนี้สวยมาก^high^
+B3-0619^noun@E^high^อุปกรณ์^这家医院的设备很先进。^Zhè jiā yīyuàn de shèbèi hěn xiānjìn.^อุปกรณ์ของโรงพยาบาลนี้ทันสมัยมาก^high^
+B3-0620^verb@E^medium^ออกแบบ; การออกแบบ^这座楼是他设计的。^Zhè zuò lóu shì tā shèjì de.^ตึกนี้เขาเป็นคนออกแบบ^high^
+B3-0621^verb@E^high^จัดตั้ง; ก่อตั้ง^学校设立了一个新专业。^Xuéxiào shèlì le yí ge xīn zhuānyè.^โรงเรียนจัดตั้งสาขาวิชาใหม่ขึ้นหนึ่งสาขา^high^
+B3-0622^noun@E^high^สังคม^我们生活在一个现代社会。^Wǒmen shēnghuó zài yí ge xiàndài shèhuì.^พวกเราอาศัยอยู่ในสังคมสมัยใหม่^high^source_gloss: typo "Socioty" (society)
+B3-0623^noun@E^high^บัตรประจำตัวประชาชน^请出示你的身份证。^Qǐng chūshì nǐ de shēnfènzhèng.^กรุณาแสดงบัตรประจำตัวประชาชนของคุณ^high^
+B3-0624^adjective@E^high^ลึก; (สี) เข้ม^这条河很深。^Zhè tiáo hé hěn shēn.^แม่น้ำสายนี้ลึกมาก^high^
+B3-0625^adjective@E^high^ลึกซึ้ง^这本书给我留下了深刻的印象。^Zhè běn shū gěi wǒ liúxià le shēnkè de yìnxiàng.^หนังสือเล่มนี้ทิ้งความประทับใจอันลึกซึ้งไว้ให้ฉัน^high^
+B3-0626^verb@E^medium^เจาะลึก; ลงลึก; ลึกซึ้ง^我们要深入了解这个问题。^Wǒmen yào shēnrù liǎojiě zhège wèntí.^พวกเราต้องทำความเข้าใจปัญหานี้อย่างลึกซึ้ง^medium^polysemy: verb "go deep into" vs. adjective "thorough"; example shows adverbial "thoroughly"
+B3-0627^verb@E^high^ขึ้น; เลื่อนขึ้น^太阳升起来了。^Tàiyáng shēng qǐlai le.^ดวงอาทิตย์ขึ้นแล้ว^medium^polysemy: verb "rise; promote" vs. measure word "litre"; example shows "rise"
+B3-0629^verb@L^medium^ผลิต; การผลิต^这家工厂生产汽车。^Zhè jiā gōngchǎng shēngchǎn qìchē.^โรงงานนี้ผลิตรถยนต์^medium^source_gloss: "production" is a noun; 生产 is mainly the verb "produce"
+B3-0630^verb@L^medium^ดำรงชีวิต; อยู่รอด^没有水，人就不能生存。^Méiyǒu shuǐ, rén jiù bù néng shēngcún.^ไม่มีน้ำ คนก็อยู่รอดไม่ได้^medium^source_gloss: "Existence" is a noun; 生存 is mainly the verb "survive; exist"
+B3-0631^adjective@E^high^มีชีวิตชีวา; สดใส^他讲的故事很生动。^Tā jiǎng de gùshi hěn shēngdòng.^เรื่องที่เขาเล่ามีชีวิตชีวามาก^high^
+B3-0632^noun@E^high^ชีวิต^生命是最宝贵的。^Shēngmìng shì zuì bǎoguì de.^ชีวิตเป็นสิ่งที่มีค่าที่สุด^high^
+B3-0633^noun@E^high^ธุรกิจ; การค้าขาย^他在北京做生意。^Tā zài Běijīng zuò shēngyi.^เขาทำธุรกิจอยู่ที่ปักกิ่ง^high^
+B3-0634^verb@E^high^เจริญเติบโต^这种花生长得很快。^Zhè zhǒng huā shēngzhǎng de hěn kuài.^ดอกไม้ชนิดนี้เจริญเติบโตเร็วมาก^high^
+B3-0635^noun@E^medium^แถลงการณ์; ประกาศ^公司发表了一份声明。^Gōngsī fābiǎo le yí fèn shēngmíng.^บริษัทออกแถลงการณ์หนึ่งฉบับ^high^
+B3-0636^verb@E^high^ชนะ; เหนือกว่า; รับได้^我们队以三比一胜了对手。^Wǒmen duì yǐ sān bǐ yī shèng le duìshǒu.^ทีมของเราชนะคู่แข่งสามต่อหนึ่ง^medium^polysemy: win / defeat / can bear / be superior combined; example shows "win"
+B3-0637^noun@E^high^ชัยชนะ^我们取得了胜利。^Wǒmen qǔdé le shènglì.^พวกเราได้รับชัยชนะ^high^
+B3-0638^verb@E^high^สูญเสีย^他失去了工作。^Tā shīqù le gōngzuò.^เขาสูญเสียงาน^high^
+B3-0639^noun@E^high^หิน; ก้อนหิน^路上有一块大石头。^Lù shang yǒu yí kuài dà shítou.^บนถนนมีหินก้อนใหญ่อยู่ก้อนหนึ่ง^high^
+B3-0640^noun@E^high^ปิโตรเลียม; น้ำมันดิบ^这个国家有很多石油。^Zhège guójiā yǒu hěn duō shíyóu.^ประเทศนี้มีน้ำมันดิบมาก^high^
+B3-0641^noun@E^high^เวลา; ยุค; ชั่วโมง; ฤดู; กาล^上课时不要说话。^Shàngkè shí búyào shuōhuà.^ระหว่างเรียนอย่าคุยกัน^medium^polysemy: time / times / hour / season / tense combined; example shows "when (time)"
+B3-0642^noun@E^high^ยุคสมัย^我们生活在一个新时代。^Wǒmen shēnghuó zài yí ge xīn shídài.^พวกเราอาศัยอยู่ในยุคใหม่^high^
+B3-0643^noun@E^medium^ช่วงเวลา; ตลอดเวลา^我会时刻记住你的话。^Wǒ huì shíkè jìzhù nǐ de huà.^ฉันจะจดจำคำพูดของคุณไว้ตลอดเวลา^medium^polysemy: noun "moment" vs. adverb "constantly"; example shows adverbial use
+B3-0644^adverb@E^high^ที่จริงแล้ว^他看起来很年轻，实际上已经五十岁了。^Tā kàn qǐlai hěn niánqīng, shíjìshang yǐjīng wǔshí suì le.^เขาดูอายุน้อย แต่ที่จริงแล้วอายุห้าสิบแล้ว^high^
+B3-0645^noun@E^high^ความแข็งแกร่ง; ศักยภาพ^这支球队的实力很强。^Zhè zhī qiúduì de shílì hěn qiáng.^ทีมนี้มีศักยภาพสูงมาก^high^
+B3-0646^verb@E^high^ดำเนินการ; ปฏิบัติ^公司实行了新的制度。^Gōngsī shíxíng le xīn de zhìdù.^บริษัทนำระบบใหม่มาใช้แล้ว^high^
+B3-0647^noun@E^high^การทดลอง^我们今天做了一个化学实验。^Wǒmen jīntiān zuò le yí ge huàxué shíyàn.^วันนี้พวกเราทำการทดลองเคมี^high^
+B3-0648^noun@E^high^ห้องปฏิบัติการ^他每天都在实验室工作。^Tā měitiān dōu zài shíyànshì gōngzuò.^เขาทำงานในห้องปฏิบัติการทุกวัน^high^
+B3-0649^noun@E^high^อาหาร; ผลิตภัณฑ์อาหาร^要注意食品安全。^Yào zhùyì shípǐn ānquán.^ต้องใส่ใจความปลอดภัยของอาหาร^high^
+B3-0650^verb@E^high^ทำให้^这个消息使大家很高兴。^Zhège xiāoxi shǐ dàjiā hěn gāoxìng.^ข่าวนี้ทำให้ทุกคนดีใจมาก^high^
+B3-0651^adverb@E^high^ตลอดมา; ตั้งแต่ต้นจนจบ^他始终没有说话。^Tā shǐzhōng méiyǒu shuōhuà.^เขาไม่พูดอะไรเลยตั้งแต่ต้นจนจบ^high^
+B3-0652^noun@E^high^ศตวรรษ^现在是二十一世纪。^Xiànzài shì èrshíyī shìjì.^ตอนนี้เป็นศตวรรษที่ยี่สิบเอ็ด^high^
+B3-0653^noun@E^high^โลก^我想去世界各地旅游。^Wǒ xiǎng qù shìjiè gèdì lǚyóu.^ฉันอยากไปเที่ยวทั่วโลก^high^
+B3-0654^noun@E^high^ฟุตบอลโลก^他喜欢看世界杯。^Tā xǐhuan kàn Shìjièbēi.^เขาชอบดูฟุตบอลโลก^high^
+B3-0655^noun@E^high^ตลาด^这个产品的市场很大。^Zhège chǎnpǐn de shìchǎng hěn dà.^สินค้านี้มีตลาดใหญ่มาก^high^
+B3-0656^noun@E^high^อุบัติเหตุ^路上发生了交通事故。^Lù shang fāshēng le jiāotōng shìgù.^บนถนนเกิดอุบัติเหตุทางจราจร^high^
+B3-0657^noun@E^high^เหตุการณ์^这是一个重要的历史事件。^Zhè shì yí ge zhòngyào de lìshǐ shìjiàn.^นี่เป็นเหตุการณ์ทางประวัติศาสตร์ที่สำคัญ^high^
+B3-0658^noun@E^high^ข้อเท็จจริง^事实证明他是对的。^Shìshí zhèngmíng tā shì duì de.^ข้อเท็จจริงพิสูจน์แล้วว่าเขาถูก^high^
+B3-0659^adverb@E^high^ในความเป็นจริง^事实上，他早就知道了。^Shìshíshang, tā zǎo jiù zhīdào le.^ในความเป็นจริง เขารู้มาตั้งนานแล้ว^high^
+B3-0660^noun@E^high^อาชีพการงาน; กิจการ^他很重视自己的事业。^Tā hěn zhòngshì zìjǐ de shìyè.^เขาให้ความสำคัญกับอาชีพการงานของตัวเองมาก^high^
+B3-0661^noun@E^high^ข้อสอบ^这次的试题很难。^Zhè cì de shìtí hěn nán.^ข้อสอบครั้งนี้ยากมาก^high^
+B3-0662^verb@E^medium^ทดลอง; ทดสอบ^这种新药正在试验中。^Zhè zhǒng xīn yào zhèngzài shìyàn zhōng.^ยาชนิดใหม่นี้อยู่ระหว่างการทดสอบ^medium^variant: 试验 (trial; test) overlaps 实验 (B3-0647, experiment); pos_doubtful: verb vs. noun
+B3-0663^verb@E^high^เหมาะกับ^这件衣服很适合你。^Zhè jiàn yīfu hěn shìhé nǐ.^เสื้อตัวนี้เหมาะกับคุณมาก^high^
+B3-0664^verb@E^high^ปรับตัว^我已经适应了这里的生活。^Wǒ yǐjīng shìyìng le zhèlǐ de shēnghuó.^ฉันปรับตัวเข้ากับชีวิตที่นี่ได้แล้ว^high^
+B3-0665^verb@E^high^ใช้ได้กับ; เหมาะสม^这个方法适用于初学者。^Zhège fāngfǎ shìyòng yú chūxuézhě.^วิธีนี้ใช้ได้กับผู้เริ่มต้น^high^
+B3-0666^noun@E^medium^ห้อง^我们的办公室在三楼。^Wǒmen de bàngōngshì zài sān lóu.^ห้องทำงานของเราอยู่ชั้นสาม^medium^example: bare 室 is bound; sentence uses compound 办公室
+B3-0667^verb@E^high^เก็บค่าธรรมเนียม^这个公园不收费。^Zhège gōngyuán bù shōufèi.^สวนสาธารณะนี้ไม่เก็บค่าเข้า^high^
+B3-0668^verb@E^high^รับชม (โทรทัศน์)^欢迎收看今天的新闻。^Huānyíng shōukàn jīntiān de xīnwén.^ยินดีต้อนรับสู่การรับชมข่าววันนี้^high^
+B3-0669^verb@E^high^รับฟัง (วิทยุ)^我每天早上收听新闻。^Wǒ měitiān zǎoshang shōutīng xīnwén.^ฉันฟังข่าวทางวิทยุทุกเช้า^high^
+B3-0670^noun@E^high^วิทยุ (เครื่องรับ)^爷爷有一台旧收音机。^Yéye yǒu yì tái jiù shōuyīnjī.^คุณปู่มีวิทยุเก่าอยู่เครื่องหนึ่ง^high^
+B3-0671^noun@E^high^ขั้นตอน (ทางเอกสาร)^办护照需要什么手续？^Bàn hùzhào xūyào shénme shǒuxù?^ทำหนังสือเดินทางต้องใช้ขั้นตอนอะไรบ้าง?^high^
+B3-0672^noun@E^high^นิ้วมือ^我的手指受伤了。^Wǒ de shǒuzhǐ shòushāng le.^นิ้วมือของฉันได้รับบาดเจ็บ^high^
+B3-0673^noun@E^high^เมืองหลวง^北京是中国的首都。^Běijīng shì Zhōngguó de shǒudū.^ปักกิ่งเป็นเมืองหลวงของจีน^high^
+B3-0674^adverb@L^medium^ก่อนอื่น; ประการแรก^首先，我要感谢大家。^Shǒuxiān, wǒ yào gǎnxiè dàjiā.^ก่อนอื่น ฉันขอขอบคุณทุกคน^high^
+B3-0675^verb@E^high^ได้รับ; ประสบ; ทน^他受到了大家的欢迎。^Tā shòudào le dàjiā de huānyíng.^เขาได้รับการต้อนรับจากทุกคน^medium^polysemy: be subjected to / suffer / receive / accept / stand combined; source_gloss: typo "subjecte"
+B3-0676^verb@L^medium^ได้รับบาดเจ็บ^他在比赛中受伤了。^Tā zài bǐsài zhōng shòushāng le.^เขาได้รับบาดเจ็บระหว่างการแข่งขัน^high^
+B3-0677^noun@E^high^ชั้นวางหนังสือ^书架上有很多书。^Shūjià shang yǒu hěn duō shū.^บนชั้นวางหนังสือมีหนังสือมากมาย^high^
+B3-0678^verb@E^high^แพ้^我们队输了。^Wǒmen duì shū le.^ทีมของเราแพ้แล้ว^high^
+B3-0679^verb@E^high^ป้อนข้อมูล; นำเข้า^请输入你的密码。^Qǐng shūrù nǐ de mìmǎ.^กรุณาป้อนรหัสผ่านของคุณ^medium^polysemy: "input (data)" vs. "import"; example shows "input"
+B3-0680^noun@E^low^คนรู้จัก^他是我的熟人。^Tā shì wǒ de shúrén.^เขาเป็นคนรู้จักของฉัน^medium^source_gloss: gloss "acquaintance be born in the year of (one of the twelve" merges the next entry (属)
+B3-0681^verb@E^low^เกิดปี (นักษัตร); เป็นของ^我属龙。^Wǒ shǔ lóng.^ฉันเกิดปีมังกร^medium^source_gloss: gloss starts mid-phrase ("animals); belong") — the first half spilled into the 熟人 row; polysemy: "be born in the year of" vs. "belong to"
+B3-0682^verb@E^high^เป็นของ; จัดอยู่ใน^这本书属于我。^Zhè běn shū shǔyú wǒ.^หนังสือเล่มนี้เป็นของฉัน^high^
+B3-0683^measure_word@L^low^ช่อ; มัด; ลำ (ลักษณนาม)^他送了我一束花。^Tā sòng le wǒ yí shù huā.^เขาให้ดอกไม้ฉันหนึ่งช่อ^low^source_gloss: gloss "beam" (光束) is narrow; 束 is mainly a measure word "bunch; bundle"; pos_doubtful: no source POS
+B3-0684^noun@E^high^ปริมาณ; จำนวน^这家工厂产品的数量很大。^Zhè jiā gōngchǎng chǎnpǐn de shùliàng hěn dà.^สินค้าของโรงงานนี้มีปริมาณมาก^high^
+B3-0685^measure_word@L^medium^คู่ (ลักษณนาม); สอง; คู่^我买了一双鞋。^Wǒ mǎi le yì shuāng xié.^ฉันซื้อรองเท้ามาหนึ่งคู่^medium^polysemy: adjective "double; twin" vs. measure word "pair"; gloss gives "double"; example shows "pair"
+B3-0686^noun@E^high^ทั้งสองฝ่าย^双方都同意了。^Shuāngfāng dōu tóngyì le.^ทั้งสองฝ่ายเห็นด้วยแล้ว^high^
