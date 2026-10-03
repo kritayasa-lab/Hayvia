@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B4-0946^noun@E^high^รัฐบาล^政府很重视教育。^Zhèngfǔ hěn zhòngshì jiàoyù.^รัฐบาลให้ความสำคัญกับการศึกษามาก^high^
+B4-0947^noun@E^high^การเมือง^他对政治不感兴趣。^Tā duì zhèngzhì bù gǎn xìngqù.^เขาไม่สนใจการเมือง^high^
+B4-0948^noun@L^high^หลังจาก; ภายหลัง^吃完饭之后，我们去散步。^Chī wán fàn zhīhòu, wǒmen qù sànbù.^หลังกินข้าวเสร็จ พวกเราไปเดินเล่น^high^
+B4-0949^noun@L^high^ระหว่าง^我们之间没有秘密。^Wǒmen zhījiān méiyǒu mìmì.^ระหว่างพวกเราไม่มีความลับ^high^
+B4-0950^noun@L^high^ก่อน^睡觉之前要刷牙。^Shuìjiào zhīqián yào shuāyá.^ก่อนนอนต้องแปรงฟัน^high^
+B4-0951^other^low^หนึ่งใน^长城是世界七大奇迹之一。^Chángchéng shì shìjiè qī dà qíjì zhī yī.^กำแพงเมืองจีนเป็นหนึ่งในเจ็ดสิ่งมหัศจรรย์ของโลก^high^pos_doubtful: structural phrase (之 + 一) with no single POS
+B4-0953^noun@E^medium^พืช^这种植物喜欢阳光。^Zhè zhǒng zhíwù xǐhuan yángguāng.^พืชชนิดนี้ชอบแสงแดด^medium^source_gloss: "Botany" is the science; 植物 means "plant"
+B4-0954^verb@E^medium^บังคับบัญชา; ควบคุม; อำนวยเพลง^交警在路口指挥交通。^Jiāojǐng zài lùkǒu zhǐhuī jiāotōng.^ตำรวจจราจรอำนวยการจราจรอยู่ที่ทางแยก^medium^polysemy: verb "command; direct" vs. noun "conductor; commander"
+B4-0955^verb@E^high^กำหนด; วางแผน^我们制订了新的学习计划。^Wǒmen zhìdìng le xīn de xuéxí jìhuà.^พวกเราวางแผนการเรียนใหม่^medium^variant: 制订 overlaps 制定 (B3-0923, same reading and similar meaning)
+B4-0956^noun@E^high^คุณภาพ^这家店的东西质量很好。^Zhè jiā diàn de dōngxi zhìliàng hěn hǎo.^ของร้านนี้คุณภาพดีมาก^medium^polysemy: "quality" vs. physics "mass"
+B4-0957^verb@E^high^ปกครอง; จัดการ; รักษา (โรค)^这种病能治好吗？^Zhè zhǒng bìng néng zhì hǎo ma?^โรคนี้รักษาหายไหม?^medium^polysemy: rule / govern / manage vs. cure / treat combined; example shows "cure"
+B4-0958^verb@L^medium^รักษา; การรักษา^他在医院接受治疗。^Tā zài yīyuàn jiēshòu zhìliáo.^เขากำลังรับการรักษาที่โรงพยาบาล^medium^pos_doubtful: gloss "Treatment" is a noun; 治疗 is both verb and noun; example shows the noun use
+B4-0959^noun@E^high^สติปัญญา^这个游戏可以开发孩子的智力。^Zhège yóuxì kěyǐ kāifā háizi de zhìlì.^เกมนี้ช่วยพัฒนาสติปัญญาของเด็ก^high^
+B4-0960^adjective@L^medium^อัจฉริยะ; ปัญญา^现在很多人用智能手机。^Xiànzài hěn duō rén yòng zhìnéng shǒujī.^ตอนนี้หลายคนใช้สมาร์ทโฟน^medium^source_gloss: "Intelligence" is a noun; 智能 is mostly attributive "smart; intelligent"
+B4-0961^noun@E^high^นายหน้า; คนกลาง^我通过中介租了一套房子。^Wǒ tōngguò zhōngjiè zū le yí tào fángzi.^ฉันเช่าบ้านผ่านนายหน้า^high^
+B4-0962^noun@E^high^ชนิด; ประเภท^超市里水果的种类很多。^Chāoshì li shuǐguǒ de zhǒnglèi hěn duō.^ในซูเปอร์มาร์เก็ตมีผลไม้หลายชนิด^high^
+B4-0963^verb@E^high^ถูกรางวัล^他买彩票中奖了。^Tā mǎi cǎipiào zhòngjiǎng le.^เขาซื้อลอตเตอรี่แล้วถูกรางวัล^high^
+B4-0965^verb@E^high^ปลูก; เพาะปลูก^这里种植了很多水果。^Zhèlǐ zhòngzhí le hěn duō shuǐguǒ.^ที่นี่ปลูกผลไม้ไว้มากมาย^high^
+B4-0966^noun@E^high^น้ำหนัก^这个箱子的重量是二十公斤。^Zhège xiāngzi de zhòngliàng shì èrshí gōngjīn.^กล่องใบนี้หนักยี่สิบกิโลกรัม^high^
+B4-0967^adverb@E^high^ทีละขั้น; ค่อยเป็นค่อยไป^我们要逐步提高水平。^Wǒmen yào zhúbù tígāo shuǐpíng.^พวกเราต้องยกระดับทีละขั้น^high^
+B4-0968^adverb@E^high^ค่อยๆ^天气逐渐变冷了。^Tiānqì zhújiàn biàn lěng le.^อากาศค่อยๆ หนาวขึ้น^high^
+B4-0969^noun@E^high^หัวข้อหลัก; ธีม^这次活动的主题是环保。^Zhè cì huódòng de zhǔtí shì huánbǎo.^ธีมของกิจกรรมครั้งนี้คือการอนุรักษ์สิ่งแวดล้อม^high^
+B4-0970^noun@E^high^ประธาน^他是学生会主席。^Tā shì xuéshēnghuì zhǔxí.^เขาเป็นประธานสภานักเรียน^high^
+B4-0971^noun@E^medium^คำอวยพร; อวยพร^谢谢你的祝福。^Xièxie nǐ de zhùfú.^ขอบคุณสำหรับคำอวยพรของคุณ^medium^pos_doubtful: 祝福 is both noun "blessing" and verb "bless; wish well"
+B4-0972^adjective@E^high^มีชื่อเสียง^他是一位著名的作家。^Tā shì yí wèi zhùmíng de zuòjiā.^เขาเป็นนักเขียนที่มีชื่อเสียง^high^
+B4-0973^noun@E^high^ผลงานเขียน; บทประพันธ์^这是他最重要的著作。^Zhè shì tā zuì zhòngyào de zhùzuò.^นี่เป็นผลงานเขียนที่สำคัญที่สุดของเขา^high^
+B4-0974^verb@E^high^เร่ง; ฉวยโอกาส; ไม่ปล่อยให้เสียเวลา^我们要抓紧时间。^Wǒmen yào zhuājǐn shíjiān.^พวกเราต้องเร่งใช้เวลาให้คุ้ม^medium^polysemy: "grasp firmly" vs. "make the best use of (time)"; example shows the latter
+B4-0975^adjective@L^medium^ตั้งใจ; จดจ่อ^上课要专心听讲。^Shàngkè yào zhuānxīn tīngjiǎng.^ในชั้นเรียนต้องตั้งใจฟัง^medium^source_gloss: "Attentively" is adverbial; 专心 is the adjective "concentrated" used adverbially
+B4-0976^verb@E^high^หมุน; หันไป^他转动了一下钥匙。^Tā zhuàndòng le yí xià yàoshi.^เขาบิดกุญแจทีหนึ่ง^medium^variant: source pinyin zhuǎn dòng, but standard reading for "rotate" is zhuàndòng
+B4-0977^verb@E^high^บอกต่อ; ฝากบอก^请你转告他明天开会。^Qǐng nǐ zhuǎngào tā míngtiān kāihuì.^กรุณาฝากบอกเขาว่าพรุ่งนี้มีประชุม^high^
+B4-0978^verb@E^high^หันตัว; หันหลัง^他转身走了。^Tā zhuǎnshēn zǒu le.^เขาหันหลังเดินจากไป^high^
+B4-0979^verb@E^high^เลี้ยว^前面路口转弯就到了。^Qiánmiàn lùkǒu zhuǎnwān jiù dào le.^เลี้ยวที่ทางแยกข้างหน้าก็ถึงแล้ว^high^
+B4-0980^verb@E^high^ย้าย; โอน; เปลี่ยน (ความสนใจ)^他想转移大家的注意力。^Tā xiǎng zhuǎnyí dàjiā de zhùyìlì.^เขาอยากเบี่ยงเบนความสนใจของทุกคน^high^
+B4-0981^verb@E^high^ตกแต่งบ้าน; รีโนเวท^我们的新房子正在装修。^Wǒmen de xīn fángzi zhèngzài zhuāngxiū.^บ้านใหม่ของเรากำลังตกแต่ง^high^
+B4-0982^noun@E^high^อุปกรณ์; เครื่องมือ^这是一个安全装置。^Zhè shì yí ge ānquán zhuāngzhì.^นี่เป็นอุปกรณ์นิรภัย^medium^polysemy: noun "device" vs. verb "install"
+B4-0983^verb@L^medium^แสวงหา; ไล่ตาม (ความฝัน/ความรัก)^每个人都在追求幸福。^Měi ge rén dōu zài zhuīqiú xìngfú.^ทุกคนล้วนแสวงหาความสุข^medium^source_gloss: "Pursuit" is a noun; 追求 is mainly the verb "pursue; court"
+B4-0984^adjective@E^high^ตรงเวลา^火车准时到达了。^Huǒchē zhǔnshí dàodá le.^รถไฟมาถึงตรงเวลา^high^
+B4-0985^noun@E^high^ข้อมูล; เอกสาร^我在图书馆找资料。^Wǒ zài túshūguǎn zhǎo zīliào.^ฉันหาข้อมูลที่ห้องสมุด^high^
+B4-0986^noun@E^high^ทรัพยากร^我们要节约水资源。^Wǒmen yào jiéyuē shuǐ zīyuán.^พวกเราต้องประหยัดทรัพยากรน้ำ^high^
+B4-0987^preposition@L^low^จาก; ตั้งแต่; ตนเอง^他自小就喜欢画画。^Tā zì xiǎo jiù xǐhuan huà huà.^เขาชอบวาดรูปมาตั้งแต่เด็ก^low^polysemy: preposition "from; since" vs. pronoun-like "self; oneself"; pos_doubtful: no source POS; example shows "since"
+B4-0988^adjective@L^medium^มั่นใจในตัวเอง^她是一个很自信的女孩。^Tā shì yí ge hěn zìxìn de nǚhái.^เธอเป็นเด็กผู้หญิงที่มั่นใจในตัวเองมาก^medium^source_gloss: "self-confidence" is a noun; 自信 is mainly the adjective "self-confident"
+B4-0989^noun@E^high^ตัวอักษร (พยัญชนะ)^英语有二十六个字母。^Yīngyǔ yǒu èrshíliù ge zìmǔ.^ภาษาอังกฤษมียี่สิบหกตัวอักษร^medium^source_gloss: English "Letter" is ambiguous (also 信); 字母 = alphabet letter
+B4-0990^adjective@E^high^รอบด้าน; ผสมผสาน^这是一个综合性的大学。^Zhè shì yí ge zōnghéxìng de dàxué.^นี่เป็นมหาวิทยาลัยที่มีหลายสาขาวิชา^medium^polysemy: adjective "comprehensive" vs. verb "synthesize"
+B4-0991^adverb@E^high^ทั้งหมด; รวมทั้งสิ้น^我们班总共有四十个人。^Wǒmen bān zǒnggòng yǒu sìshí ge rén.^ห้องเรามีทั้งหมดสี่สิบคน^high^
+B4-0992^noun@E^high^นายกรัฐมนตรี^总理访问了几个国家。^Zǒnglǐ fǎngwèn le jǐ ge guójiā.^นายกรัฐมนตรีเยือนหลายประเทศ^high^
+B4-0993^noun@E^high^ประธานาธิบดี^他被选为总统。^Tā bèi xuǎn wéi zǒngtǒng.^เขาได้รับเลือกเป็นประธานาธิบดี^high^
+B4-0994^conjunction@E^high^โดยสรุป; สรุปแล้ว^总之，我们一定要努力。^Zǒngzhī, wǒmen yídìng yào nǔlì.^สรุปแล้ว พวกเราต้องพยายามให้เต็มที่^high^
+B4-0995^verb@E^high^ห้าม; ยับยั้ง^他想阻止我出去。^Tā xiǎng zǔzhǐ wǒ chūqu.^เขาอยากห้ามไม่ให้ฉันออกไป^high^
+B4-0996^noun@E^high^ปาก^请张开嘴巴。^Qǐng zhāngkāi zuǐba.^กรุณาอ้าปาก^high^
+B4-0997^noun@L^medium^แรกเริ่ม; ตอนแรก^最初我不太习惯这里的生活。^Zuìchū wǒ bú tài xíguàn zhèlǐ de shēnghuó.^ตอนแรกฉันไม่ค่อยคุ้นเคยกับชีวิตที่นี่^medium^source_gloss: "First" is loose; 最初 is a time noun "at first; initially"
+B4-0998^verb@E^high^ทำ (การตัดสินใจ); มอบ (ผลงาน)^他作出了一个重要的决定。^Tā zuòchū le yí ge zhòngyào de juédìng.^เขาได้ทำการตัดสินใจที่สำคัญ^high^
+B4-0999^preposition@L^medium^ในฐานะ; ถือว่าเป็น^作为学生，我们要努力学习。^Zuòwéi xuésheng, wǒmen yào nǔlì xuéxí.^ในฐานะนักเรียน พวกเราต้องตั้งใจเรียน^medium^polysemy: preposition "as" vs. verb "regard as" vs. noun "conduct; accomplishment" (有所作为)
+B4-1000^verb@E^high^ฝัน; ฝันกลางวัน^我昨天晚上做梦了。^Wǒ zuótiān wǎnshang zuòmèng le.^เมื่อคืนฉันฝัน^medium^polysemy: "dream (while asleep)" vs. "daydream; wishful thinking"
+B5-0001^verb@E^medium^ปลอบใจ; การปลอบใจ^朋友们都来安慰他。^Péngyoumen dōu lái ānwèi tā.^เพื่อนๆ ต่างมาปลอบใจเขา^high^
+B5-0002^noun@E^high^ฝั่ง; ตลิ่ง^船慢慢靠岸了。^Chuán mànmàn kào àn le.^เรือค่อยๆ เทียบฝั่ง^medium^source_gloss: English "bank" is ambiguous (also 银行); 岸 = shore; riverbank
+B5-0003^noun@E^high^บนฝั่ง^孩子们在岸上玩。^Háizimen zài àn shang wán.^เด็กๆ เล่นอยู่บนฝั่ง^high^
+B5-0004^verb@E^medium^นวด; การนวด^我想去按摩一下。^Wǒ xiǎng qù ànmó yí xià.^ฉันอยากไปนวดสักหน่อย^high^
+B5-0005^verb@E^high^ถอน; ดึงออก; คัดเลือก^医生帮我拔了一颗牙。^Yīshēng bāng wǒ bá le yì kē yá.^หมอถอนฟันให้ฉันหนึ่งซี่^medium^polysemy: pluck / pull out / extract vs. select / choose (选拔); example shows "extract"
+B5-0006^noun@E^high^เหล้าขาวจีน; ไป๋จิ่ว^他喜欢喝白酒。^Tā xǐhuan hē báijiǔ.^เขาชอบดื่มเหล้าขาวจีน^high^
+B5-0007^verb@E^high^ไปเยี่ยมคารวะ^明天我要去拜访一位老朋友。^Míngtiān wǒ yào qù bàifǎng yí wèi lǎo péngyou.^พรุ่งนี้ฉันจะไปเยี่ยมเพื่อนเก่าคนหนึ่ง^high^
+B5-0008^noun@E^high^แม่พิมพ์; ฉบับ; เวอร์ชัน^这本书出了第二版。^Zhè běn shū chū le dì èr bǎn.^หนังสือเล่มนี้ออกฉบับพิมพ์ครั้งที่สอง^medium^polysemy: printing plate / edition / version; also "page (of a newspaper)"; example shows "edition"
+B5-0009^verb@E^high^แสดงเป็น; รับบท^她在电影中扮演一位老师。^Tā zài diànyǐng zhōng bànyǎn yí wèi lǎoshī.^เธอรับบทเป็นครูในภาพยนตร์^high^
+B5-0010^adjective@E^medium^เยี่ยม; ไม้กระบอง^你的汉语说得真棒！^Nǐ de Hànyǔ shuō de zhēn bàng!^คุณพูดภาษาจีนได้เยี่ยมมาก!^medium^polysemy: noun "stick; club" vs. adjective "excellent"; example shows "excellent"
+B5-0011^verb@E^high^ล้อม; ปิดล้อม^警察包围了那座房子。^Jǐngchá bāowéi le nà zuò fángzi.^ตำรวจปิดล้อมบ้านหลังนั้น^high^
+B5-0012^noun@L^medium^บรรจุภัณฑ์; หีบห่อ; บรรจุ^这个礼物的包装很漂亮。^Zhège lǐwù de bāozhuāng hěn piàoliang.^บรรจุภัณฑ์ของของขวัญนี้สวยมาก^medium^pos_doubtful: gloss gives verbs ("pack; make up"); 包装 is also a very common noun "packaging"; example shows the noun
+B5-0013^verb@E^high^ปกป้อง; พิทักษ์^士兵们保卫着国家。^Shìbīngmen bǎowèi zhe guójiā.^ทหารปกป้องประเทศชาติ^high^
+B5-0014^verb@E^high^บำรุงรักษา^汽车要定期保养。^Qìchē yào dìngqī bǎoyǎng.^รถยนต์ต้องบำรุงรักษาเป็นประจำ^medium^polysemy: "maintain (machine)" vs. "take care of one's health/skin"
+B5-0015^verb@E^high^ตอบแทน (บุญคุณ)^我要好好报答父母。^Wǒ yào hǎohǎo bàodá fùmǔ.^ฉันต้องตอบแทนบุญคุณพ่อแม่ให้ดี^high^
+B5-0016^verb@E^high^แจ้งตำรวจ^有人偷东西，快报警！^Yǒu rén tōu dōngxi, kuài bàojǐng!^มีคนขโมยของ รีบแจ้งตำรวจ!^high^
+B5-0017^verb@E^high^บ่น^他总是抱怨工作太累。^Tā zǒngshì bàoyuàn gōngzuò tài lèi.^เขาบ่นตลอดว่างานเหนื่อยเกินไป^high^
+B5-0018^noun@E^high^กระเป๋าเป้^他背着一个大背包。^Tā bēi zhe yí ge dà bēibāo.^เขาสะพายเป้ใบใหญ่ใบหนึ่ง^high^
+B5-0019^noun@E^high^โศกนาฏกรรม^这是一部悲剧。^Zhè shì yí bù bēijù.^นี่เป็นละครโศกนาฏกรรมเรื่องหนึ่ง^high^
+B5-0020^adjective@E^high^เศร้าโศก^听到这个消息，她很悲伤。^Tīngdào zhège xiāoxi, tā hěn bēishāng.^พอได้ยินข่าวนี้ เธอเศร้าโศกมาก^high^
+B5-0021^noun@E^high^ขั้วโลกเหนือ^北极非常冷。^Běijí fēicháng lěng.^ขั้วโลกเหนือหนาวมาก^medium^source_gloss: "arctic" is adjectival; 北极 is the noun "North Pole; Arctic"
+B5-0022^adjective@E^high^เป็นฝ่ายรับ; เฉื่อยชา^他在工作中总是很被动。^Tā zài gōngzuò zhōng zǒngshì hěn bèidòng.^เขามักเป็นฝ่ายรับในการทำงาน^high^
+B5-0023^noun@E^medium^รุ่น (คน); ชั่วชีวิต^他比我大一辈。^Tā bǐ wǒ dà yí bèi.^เขาอยู่รุ่นสูงกว่าฉันหนึ่งรุ่น^medium^polysemy: "generation (in a family)" vs. "lifetime" (一辈子); pos_doubtful: often a measure word
+B5-0024^pronoun@L^medium^ตัวเอง; ข้าพเจ้า; ด้วยตนเอง^这件事需要你本人来办。^Zhè jiàn shì xūyào nǐ běnrén lái bàn.^เรื่องนี้ต้องให้คุณมาดำเนินการด้วยตัวเอง^medium^polysemy: "oneself; in person" vs. "I (myself)" (本人认为…)
+B5-0025^noun@E^high^จมูก^他的鼻子很高。^Tā de bízi hěn gāo.^จมูกของเขาโด่งมาก^high^
+B5-0026^noun@E^medium^ตัวอย่าง; อุปมา; ยกตัวอย่าง^打个比方，学习就像爬山。^Dǎ ge bǐfang, xuéxí jiù xiàng páshān.^ยกตัวอย่างเช่น การเรียนก็เหมือนการปีนเขา^medium^polysemy: noun "analogy; example" vs. verb-like "for instance" (比方说)
+B5-0027^noun@E^high^สัดส่วน; ความถ่วงจำเพาะ^女生在班里占的比重很大。^Nǚshēng zài bān li zhàn de bǐzhòng hěn dà.^นักเรียนหญิงมีสัดส่วนมากในห้องเรียน^medium^polysemy: physics "specific gravity" vs. "proportion; share"; example shows "proportion"
+B5-0028^pronoun@E^high^ซึ่งกันและกัน^我们彼此都很了解。^Wǒmen bǐcǐ dōu hěn liǎojiě.^พวกเรารู้จักซึ่งกันและกันดี^high^
+B5-0029^adverb@E^high^ต้อง; แน่นอน^言必信，行必果。^Yán bì xìn, xíng bì guǒ.^พูดแล้วต้องรักษาคำพูด ทำแล้วต้องให้ได้ผล^medium^example: classical saying; 必 is mostly literary in modern speech
+B5-0030^adjective@E^high^จำเป็น; ขาดไม่ได้^水是生活必需的东西。^Shuǐ shì shēnghuó bìxū de dōngxi.^น้ำเป็นสิ่งจำเป็นต่อการดำรงชีวิต^high^
+B5-0031^adverb@E^high^ยังไงก็ตาม; ท้ายที่สุดแล้ว^别怪他了，他毕竟还是个孩子。^Bié guài tā le, tā bìjìng hái shì ge háizi.^อย่าโทษเขาเลย ยังไงเขาก็ยังเป็นเด็ก^high^
+B5-0032^verb@E^high^ปิด (งาน); ปิดม่าน^运动会今天闭幕。^Yùndònghuì jīntiān bìmù.^งานกีฬาปิดวันนี้^high^
+B5-0033^noun@E^high^พิธีปิด^闭幕式非常精彩。^Bìmùshì fēicháng jīngcǎi.^พิธีปิดยอดเยี่ยมมาก^high^
+B5-0034^noun@E^high^ชายแดน^这个小镇在边境上。^Zhège xiǎozhèn zài biānjìng shang.^เมืองเล็กแห่งนี้อยู่ที่ชายแดน^high^
+B5-0035^verb@E^high^แก้ไขเรียบเรียง; บรรณาธิกรณ์^她负责编辑这本杂志。^Tā fùzé biānjí zhè běn zázhì.^เธอรับผิดชอบเรียบเรียงนิตยสารเล่มนี้^high^variant: 编辑 biānjí (verb "edit") vs. 编辑 biānji (B5-0036, noun "editor") split by tone
+B5-0036^noun@E^high^บรรณาธิการ^她是一名杂志编辑。^Tā shì yì míng zázhì biānji.^เธอเป็นบรรณาธิการนิตยสาร^high^variant: 编辑 biānji (noun "editor") vs. 编辑 biānjí (B5-0035, verb "edit"); neutral tone split is uncommon in dictionaries
+B5-0037^noun@E^medium^การเปลี่ยนแปลง; เปลี่ยนแปลง^人员有一些变动。^Rényuán yǒu yìxiē biàndòng.^มีการเปลี่ยนแปลงบุคลากรบางส่วน^medium^pos_doubtful: 变动 is both noun "change" and verb "change; alter"
+B5-0038^adjective@L^medium^สะดวก; อำนวยความสะดวก^这里交通很便利。^Zhèlǐ jiāotōng hěn biànlì.^การคมนาคมที่นี่สะดวกมาก^medium^pos_doubtful: gloss "facilitate" is a verb; 便利 is mainly the adjective "convenient"
+B5-0039^noun@E^high^บันทึกสั้นๆ; โน้ต^他给我留了一张便条。^Tā gěi wǒ liú le yì zhāng biàntiáo.^เขาทิ้งโน้ตไว้ให้ฉันหนึ่งแผ่น^high^
+B5-0040^verb@E^high^สะดวกต่อการ; ง่ายต่อการ^这种包便于携带。^Zhè zhǒng bāo biànyú xiédài.^กระเป๋าแบบนี้พกพาสะดวก^high^
+B5-0041^noun@E^high^โรงแรม^我们住在一家宾馆里。^Wǒmen zhù zài yì jiā bīnguǎn li.^พวกเราพักอยู่ที่โรงแรมแห่งหนึ่ง^high^
+B5-0042^noun@E^high^ขนมแป้งแผ่นกลม; แพนเค้ก^中秋节要吃月饼。^Zhōngqiū Jié yào chī yuèbǐng.^เทศกาลไหว้พระจันทร์ต้องกินขนมไหว้พระจันทร์^medium^example: bare 饼 is often in compounds (月饼, 煎饼); sentence uses 月饼
+B5-0043^noun@E^high^ขนมปังกรอบ; บิสกิต^我买了一盒饼干。^Wǒ mǎi le yì hé bǐnggān.^ฉันซื้อบิสกิตมาหนึ่งกล่อง^high^
+B5-0044^noun@E^high^ไวรัส^这种病毒传播得很快。^Zhè zhǒng bìngdú chuánbō de hěn kuài.^ไวรัสชนิดนี้แพร่กระจายเร็วมาก^medium^polysemy: biological virus vs. computer virus
+B5-0045^noun@E^high^แก้ว; กระจก^窗户上的玻璃破了。^Chuānghu shang de bōli pò le.^กระจกหน้าต่างแตกแล้ว^high^
+B5-0046^noun@E^high^บล็อก^她每天都写博客。^Tā měitiān dōu xiě bókè.^เธอเขียนบล็อกทุกวัน^high^
+B5-0047^noun@E^high^งานแสดงสินค้า; งานนิทรรศการ^我们去参观了汽车博览会。^Wǒmen qù cānguān le qìchē bólǎnhuì.^พวกเราไปชมงานแสดงรถยนต์^high^
