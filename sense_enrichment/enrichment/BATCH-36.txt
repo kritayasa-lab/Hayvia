@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B5-0251^measure_word@E^high^ภาพ; ผืน (ลักษณนามของภาพวาด/ผ้า)^墙上挂着一幅画。^Qiáng shang guà zhe yì fú huà.^บนผนังแขวนภาพวาดไว้หนึ่งภาพ^high^
+B5-0252^noun@E^high^ขอบเขต; ระดับ (การเปลี่ยนแปลง)^今年房价上涨的幅度很大。^Jīnnián fángjià shàngzhǎng de fúdù hěn dà.^ปีนี้ราคาบ้านขึ้นในระดับที่สูงมาก^high^
+B5-0253^noun@E^high^สวัสดิการ^这家公司的福利很好。^Zhè jiā gōngsī de fúlì hěn hǎo.^สวัสดิการของบริษัทนี้ดีมาก^high^
+B5-0254^adjective@E^medium^เสริม; ช่วยเหลือ^这是一种辅助工具。^Zhè shì yì zhǒng fǔzhù gōngjù.^นี่เป็นเครื่องมือเสริมชนิดหนึ่ง^medium^polysemy: adjective "auxiliary" vs. verb "assist"
+B5-0255^noun@E^high^ผู้รับผิดชอบ^请找你们的负责人来。^Qǐng zhǎo nǐmen de fùzérén lái.^กรุณาเรียกผู้รับผิดชอบของพวกคุณมา^high^
+B5-0256^noun@E^medium^ไฟล์แนบ; เอกสารแนบ^请查看邮件的附件。^Qǐng chákàn yóujiàn de fùjiàn.^กรุณาตรวจดูไฟล์แนบในอีเมล^medium^polysemy: "enclosure; attachment (document)" vs. "accessory (part)"
+B5-0257^verb@E^medium^ปฏิรูป; การปฏิรูป^我们要改革教育制度。^Wǒmen yào gǎigé jiàoyù zhìdù.^พวกเราต้องปฏิรูประบบการศึกษา^high^
+B5-0258^adverb@E^medium^ไปเลย; ตรงๆ; เด็ดขาด^太晚了，你干脆住在这儿吧。^Tài wǎn le, nǐ gāncuì zhù zài zhèr ba.^ดึกมากแล้ว คุณค้างที่นี่ไปเลยเถอะ^medium^polysemy: adverb "simply; just" vs. adjective "straightforward; decisive" (说话很干脆)
+B5-0259^verb@E^medium^รบกวน; แทรกแซง^请不要干扰我学习。^Qǐng búyào gānrǎo wǒ xuéxí.^กรุณาอย่ารบกวนการเรียนของฉัน^medium^polysemy: verb "interfere" vs. noun "interference (signal)"
+B5-0260^verb@E^high^แทรกแซง^父母不应该过多干预孩子的选择。^Fùmǔ bù yīnggāi guò duō gānyù háizi de xuǎnzé.^พ่อแม่ไม่ควรแทรกแซงการตัดสินใจของลูกมากเกินไป^high^
+B5-0261^noun@E^medium^ความรู้สึกนึกคิด; ความประทับใจ^看完这部电影，你有什么感想？^Kàn wán zhè bù diànyǐng, nǐ yǒu shénme gǎnxiǎng?^ดูหนังเรื่องนี้จบแล้ว คุณรู้สึกอย่างไร?^medium^source_gloss: "Feel" is a verb; 感想 is the noun "impressions; thoughts"
+B5-0262^noun@E^high^ปากกาหมึกซึม^我用钢笔写字。^Wǒ yòng gāngbǐ xiě zì.^ฉันใช้ปากกาหมึกซึมเขียนหนังสือ^high^
+B5-0263^noun@E^high^เปียโน^她弹钢琴弹得很好。^Tā tán gāngqín tán de hěn hǎo.^เธอเล่นเปียโนเก่งมาก^high^
+B5-0264^adjective@E^high^สูงใหญ่^他长得很高大。^Tā zhǎng de hěn gāodà.^เขารูปร่างสูงใหญ่^high^
+B5-0265^noun@E^medium^ความสูง; ระดับสูง; อย่างสูง^这座山的高度是三千米。^Zhè zuò shān de gāodù shì sānqiān mǐ.^ภูเขาลูกนี้สูงสามพันเมตร^medium^polysemy: noun "height; altitude" vs. adverb "highly" (高度重视); example shows "height"
+B5-0266^noun@E^high^รองเท้าส้นสูง^她今天穿了一双高跟鞋。^Tā jīntiān chuān le yì shuāng gāogēnxié.^วันนี้เธอใส่รองเท้าส้นสูงหนึ่งคู่^high^
+B5-0267^noun@E^high^อุณหภูมิสูง^这几天一直是高温天气。^Zhè jǐ tiān yìzhí shì gāowēn tiānqì.^ช่วงนี้อากาศร้อนจัดตลอด^high^
+B5-0268^verb@E^high^สูงกว่า^今年的收入高于去年。^Jīnnián de shōurù gāoyú qùnián.^รายได้ปีนี้สูงกว่าปีที่แล้ว^high^
+B5-0269^noun@E^high^ที่ราบสูง^西藏在青藏高原上。^Xīzàng zài Qīng-Zàng gāoyuán shang.^ทิเบตอยู่บนที่ราบสูงชิงไห่-ทิเบต^high^
+B5-0270^verb@E^medium^ทำ; จัดการ; หามา^你在搞什么？^Nǐ zài gǎo shénme?^คุณกำลังทำอะไรอยู่?^medium^source_gloss: "get" is narrow; 搞 is a catch-all verb "do; make; get; manage"; polysemy
+B5-0271^verb@E^high^ทำให้ดี^我们要搞好同学关系。^Wǒmen yào gǎohǎo tóngxué guānxì.^พวกเราต้องสร้างความสัมพันธ์ที่ดีกับเพื่อนร่วมชั้น^high^
+B5-0272^noun@E^high^เพลง^这首歌曲很好听。^Zhè shǒu gēqǔ hěn hǎotīng.^เพลงนี้เพราะมาก^high^
+B5-0273^noun@E^high^บ้านข้างๆ^隔壁住着一位老人。^Gébì zhù zhe yí wèi lǎorén.^บ้านข้างๆ มีผู้สูงอายุอาศัยอยู่ท่านหนึ่ง^high^
+B5-0274^noun@E^high^ส่วนสูง; ขนาด^这个孩子个儿不高。^Zhège háizi gèr bù gāo.^เด็กคนนี้ตัวไม่สูง^high^
+B5-0275^noun@E^high^ตรงหน้า; ใกล้ๆ^他走到我跟前。^Tā zǒu dào wǒ gēnqián.^เขาเดินมาถึงตรงหน้าฉัน^high^
+B5-0276^verb@E^high^ติดตาม; ตาม^他从小跟随父亲学画画。^Tā cóngxiǎo gēnsuí fùqīn xué huà huà.^เขาเรียนวาดรูปตามพ่อมาตั้งแต่เด็ก^high^
+B5-0277^verb@E^high^เปลี่ยน; แทนที่^请更换一下灯泡。^Qǐng gēnghuàn yí xià dēngpào.^กรุณาเปลี่ยนหลอดไฟหน่อย^high^
+B5-0278^verb@E^high^ปรับปรุง; อัปเดต^这个软件需要更新。^Zhège ruǎnjiàn xūyào gēngxīn.^ซอฟต์แวร์นี้ต้องอัปเดต^medium^source_gloss: "renovate" is loose; 更新 means "update; renew"
+B5-0279^noun@E^high^งานฝีมือ; เทคโนโลยีการผลิต^这件工艺品很精美。^Zhè jiàn gōngyìpǐn hěn jīngměi.^งานหัตถกรรมชิ้นนี้ประณีตมาก^medium^polysemy: "craft; handicraft" vs. "(industrial) process technology"; example uses 工艺品
+B5-0280^noun@E^high^วันทำงาน^一个星期有五个工作日。^Yí ge xīngqī yǒu wǔ ge gōngzuòrì.^หนึ่งสัปดาห์มีห้าวันทำงาน^high^
+B5-0281^noun@E^high^ประกาศ^学校贴出了一个公告。^Xuéxiào tiēchū le yí ge gōnggào.^โรงเรียนติดประกาศหนึ่งฉบับ^high^
+B5-0282^verb@L^medium^ยอมรับโดยทั่วไป^他是公认的好老师。^Tā shì gōngrèn de hǎo lǎoshī.^เขาเป็นครูที่ดีซึ่งทุกคนยอมรับ^medium^source_gloss: "Accepted" is a participle; 公认 is the verb "generally acknowledge"
+B5-0283^noun@E^high^สูตร^请记住这个数学公式。^Qǐng jìzhù zhège shùxué gōngshì.^กรุณาจำสูตรคณิตศาสตร์นี้ไว้^high^
+B5-0284^adjective@E^high^ยุติธรรม; เที่ยงธรรม^法官的判决很公正。^Fǎguān de pànjué hěn gōngzhèng.^คำตัดสินของผู้พิพากษายุติธรรมมาก^high^
+B5-0285^verb@E^high^รวมทั้งสิ้น^这次活动共计花了一万元。^Zhè cì huódòng gòngjì huā le yí wàn yuán.^กิจกรรมครั้งนี้ใช้เงินรวมทั้งสิ้นหนึ่งหมื่นหยวน^high^
+B5-0286^verb@E^high^ใช้ร่วมกัน; แบ่งปัน^现在很多人喜欢共享单车。^Xiànzài hěn duō rén xǐhuan gòngxiǎng dānchē.^ตอนนี้หลายคนชอบจักรยานแชร์^high^
+B5-0287^noun@E^high^คู; ร่อง; หุบ^路边有一条小沟。^Lù biān yǒu yì tiáo xiǎo gōu.^ข้างถนนมีคูเล็กๆ อยู่สายหนึ่ง^high^
+B5-0288^verb@E^high^สื่อสาร^父母要多和孩子沟通。^Fùmǔ yào duō hé háizi gōutōng.^พ่อแม่ควรสื่อสารกับลูกให้มาก^high^
+B5-0289^verb@E^high^ประมาณ; คาดว่า^我估计他今天不会来了。^Wǒ gūjì tā jīntiān bú huì lái le.^ฉันคาดว่าวันนี้เขาคงไม่มาแล้ว^high^
+B5-0290^adjective@E^high^เก่าแก่; โบราณ^这是一个古老的城市。^Zhè shì yí ge gǔlǎo de chéngshì.^นี่เป็นเมืองเก่าแก่^high^
+B5-0291^noun@E^high^กลอง; ตี (กลอง); ปลุกเร้า; โป่ง^他在敲鼓。^Tā zài qiāo gǔ.^เขากำลังตีกลอง^medium^polysemy: noun "drum" vs. verbs "beat; rouse" vs. adjective "bulging"; example shows "drum"
+B5-0292^verb@E^high^ให้กำลังใจ; ส่งเสริม^老师鼓励我们多说汉语。^Lǎoshī gǔlì wǒmen duō shuō Hànyǔ.^ครูสนับสนุนให้พวกเราพูดภาษาจีนมากๆ^high^
+B5-0293^verb@L^medium^ปรบมือ^大家热烈鼓掌。^Dàjiā rèliè gǔzhǎng.^ทุกคนปรบมืออย่างกึกก้อง^medium^source_gloss: "applause" is a noun; 鼓掌 is the verb "applaud"
+B5-0294^noun@E^high^ที่ปรึกษา^他是公司的法律顾问。^Tā shì gōngsī de fǎlǜ gùwèn.^เขาเป็นที่ปรึกษากฎหมายของบริษัท^high^
+B5-0296^verb@E^medium^ห่วงใย; เอาใจใส่^谢谢大家对我的关怀。^Xièxie dàjiā duì wǒ de guānhuái.^ขอบคุณทุกคนที่ห่วงใยฉัน^medium^pos_doubtful: 关怀 is both verb and noun "care"; example shows nominal use
+B5-0297^noun@E^high^จุดสำคัญ; กุญแจ^解决问题的关键是什么？^Jiějué wèntí de guānjiàn shì shénme?^กุญแจสำคัญในการแก้ปัญหาคืออะไร?^medium^polysemy: noun "crux; key" vs. adjective "crucial" (关键时刻)
+B5-0298^noun@E^high^แชมป์^他获得了比赛的冠军。^Tā huòdé le bǐsài de guànjūn.^เขาได้แชมป์การแข่งขัน^high^
+B5-0299^adjective@L^medium^เป็นเกียรติ; รุ่งโรจน์^能参加这次比赛，我感到很光荣。^Néng cānjiā zhè cì bǐsài, wǒ gǎndào hěn guāngróng.^ได้เข้าร่วมการแข่งขันครั้งนี้ ฉันรู้สึกเป็นเกียรติมาก^medium^source_gloss: "glory" is a noun; 光荣 is mainly adjective "glorious; honoured"
+B5-0300^noun@E^high^แสง^这里的光线太暗了。^Zhèlǐ de guāngxiàn tài àn le.^แสงที่นี่มืดเกินไป^high^
+B5-0301^adjective@E^high^กว้าง; กว้างขวาง^他的知识面很广。^Tā de zhīshi miàn hěn guǎng.^เขามีความรู้กว้างขวาง^medium^polysemy: broad / wide / vast vs. numerous vs. verb "spread"; also abbreviation for Guangdong (广东)
+B5-0302^adjective@L^medium^กว้างขวาง; แพร่หลาย^这首歌受到了广泛的欢迎。^Zhè shǒu gē shòudào le guǎngfàn de huānyíng.^เพลงนี้ได้รับความนิยมอย่างแพร่หลาย^medium^source_gloss: "widely" is adverbial; 广泛 is the adjective "extensive; wide-ranging"
+B5-0303^noun@E^medium^แผนการ; วางแผน^这是城市发展的规划。^Zhè shì chéngshì fāzhǎn de guīhuà.^นี่คือแผนการพัฒนาเมือง^medium^pos_doubtful: 规划 is both noun "plan" and verb "plan"
+B5-0304^noun@E^high^ผี; เล่ห์กล; แย่มาก^我不相信这个世界上有鬼。^Wǒ bù xiāngxìn zhège shìjiè shang yǒu guǐ.^ฉันไม่เชื่อว่าโลกนี้มีผี^medium^polysemy: "ghost" vs. "dirty trick" (捣鬼) vs. pejorative intensifier (鬼天气); example shows "ghost"
+B5-0305^noun@E^high^ตู้^衣服在柜子里。^Yīfu zài guìzi li.^เสื้อผ้าอยู่ในตู้^high^
+B5-0306^verb@L^medium^กลิ้ง; ไสหัวไป^球滚到桌子下面去了。^Qiú gǔn dào zhuōzi xiàmian qù le.^ลูกบอลกลิ้งไปอยู่ใต้โต๊ะ^medium^source_gloss: "rolling" is a participle; 滚 is the verb "roll" (also rude "get lost!")
+B5-0307^noun@E^high^หม้อ; กระทะ^锅里还有米饭。^Guō li hái yǒu mǐfàn.^ในหม้อยังมีข้าวอยู่^high^
+B5-0308^noun@E^high^สัญชาติ^你是什么国籍？^Nǐ shì shénme guójí?^คุณมีสัญชาติอะไร?^high^
+B5-0309^noun@E^medium^พลเมือง; ประชาชาติ^国民经济发展很快。^Guómín jīngjì fāzhǎn hěn kuài.^เศรษฐกิจของชาติพัฒนาอย่างรวดเร็ว^medium^source_gloss: "national" is adjectival; 国民 is the noun "citizens; nationals" used attributively
+B5-0310^adjective@E^high^มากเกินไป^过度劳累对身体不好。^Guòdù láolèi duì shēntǐ bù hǎo.^การเหนื่อยมากเกินไปไม่ดีต่อร่างกาย^high^
+B5-0311^verb@L^medium^แพ้ (อาการแพ้)^我对花粉过敏。^Wǒ duì huāfěn guòmǐn.^ฉันแพ้เกสรดอกไม้^medium^source_gloss: "allergy" is a noun; 过敏 is mainly the verb "be allergic"
+B5-0312^adverb@E^low^เกินไป^你过于担心了。^Nǐ guòyú dānxīn le.^คุณกังวลเกินไปแล้ว^medium^source_gloss: gloss "too; excessively evil; harm; calamity; harmful; destructive;" merges the next entry (害); only "too; excessively" belongs to 过于
+B5-0313^verb@E^low^ทำร้าย; เป็นอันตราย; ภัย^抽烟害了他的身体。^Chōuyān hài le tā de shēntǐ.^การสูบบุหรี่ทำร้ายร่างกายของเขา^medium^source_gloss: gloss "injurious; do harm" is the tail of a list that started in the 过于 row; polysemy: noun "harm" vs. verb "harm" vs. "feel (afraid)" (害怕)
+B5-0314^noun@E^high^เหงื่อ^他跑得满头大汗。^Tā pǎo de mǎntóu dà hàn.^เขาวิ่งจนเหงื่อท่วมหัว^high^
+B5-0315^noun@E^high^โชคดี^祝你好运！^Zhù nǐ hǎoyùn!^ขอให้โชคดี!^high^
+B5-0316^verb@E^medium^เรียกร้อง; รณรงค์^学校号召大家节约用水。^Xuéxiào hàozhào dàjiā jiéyuē yòng shuǐ.^โรงเรียนรณรงค์ให้ทุกคนประหยัดน้ำ^medium^source_gloss: "call" is vague; 号召 means "call on; appeal to (the public)"
+B5-0317^verb@E^high^รวมเข้าด้วยกัน; ควบรวม^两家公司合并了。^Liǎng jiā gōngsī hébìng le.^สองบริษัทควบรวมกันแล้ว^high^
+B5-0318^verb@L^medium^สังเคราะห์; ประกอบกัน^这张照片是合成的。^Zhè zhāng zhàopiàn shì héchéng de.^รูปนี้เป็นภาพตัดต่อ^medium^source_gloss: "Synthesis" is a noun; 合成 is the verb "synthesize; compose"
+B5-0319^measure_word@L^medium^กล่อง (ลักษณนาม)^我买了一盒巧克力。^Wǒ mǎi le yì hé qiǎokèlì.^ฉันซื้อช็อกโกแลตมาหนึ่งกล่อง^medium^pos_doubtful: gloss "box; case" reads as noun; bare 盒 is mostly a measure word (noun is 盒子)
+B5-0320^noun@E^high^ข้าวกล่อง^我中午吃了一份盒饭。^Wǒ zhōngwǔ chī le yí fèn héfàn.^ตอนเที่ยงฉันกินข้าวกล่องไปหนึ่งกล่อง^high^
+B5-0321^noun@E^high^กล่อง^这个盒子里有什么？^Zhège hézi li yǒu shénme?^ในกล่องนี้มีอะไร?^high^
+B5-0322^noun@E^high^การ์ดอวยพร^我给老师寄了一张贺卡。^Wǒ gěi lǎoshī jì le yì zhāng hèkǎ.^ฉันส่งการ์ดอวยพรให้ครูหนึ่งใบ^high^
+B5-0323^verb@E^high^เกลียด; แค้น^我不恨他。^Wǒ bú hèn tā.^ฉันไม่ได้เกลียดเขา^high^
+B5-0324^noun@E^high^ลิง^动物园里有很多猴。^Dòngwùyuán li yǒu hěn duō hóu.^ในสวนสัตว์มีลิงมากมาย^medium^example: bare 猴 is less common than 猴子
+B5-0325^verb@E^high^เสียใจภายหลัง^我很后悔没有好好学习。^Wǒ hěn hòuhuǐ méiyǒu hǎohǎo xuéxí.^ฉันเสียใจมากที่ไม่ได้ตั้งใจเรียน^high^
+B5-0326^noun@E^high^ซอย; ตรอก (ปักกิ่ง)^北京有很多老胡同儿。^Běijīng yǒu hěn duō lǎo hútòngr.^ปักกิ่งมีตรอกเก่ามากมาย^high^
+B5-0327^noun@E^high^หนวด; เครา^爷爷留着长胡子。^Yéye liú zhe cháng húzi.^คุณปู่ไว้เครายาว^high^
+B5-0328^noun@E^high^เสือ^今年是虎年。^Jīnnián shì hǔ nián.^ปีนี้เป็นปีเสือ^high^
+B5-0329^noun@E^high^ภาษาจีน (คำที่ใช้นอกจีนแผ่นดินใหญ่)^他会说华语。^Tā huì shuō Huáyǔ.^เขาพูดภาษาจีนได้^high^
+B5-0330^adjective@E^high^ลื่น^下雪了，路很滑。^Xià xuě le, lù hěn huá.^หิมะตก ถนนลื่นมาก^medium^polysemy: adjective "slippery" vs. verb "slide; slip" (滑倒) and "cunning" (很滑)
+B5-0331^noun@E^high^ฟอสซิล^这是一块恐龙化石。^Zhè shì yí kuài kǒnglóng huàshí.^นี่คือฟอสซิลไดโนเสาร์ชิ้นหนึ่ง^high^
+B5-0332^verb@E^high^แบ่ง; แบ่งเขต^这个城市划分为五个区。^Zhège chéngshì huàfēn wéi wǔ ge qū.^เมืองนี้แบ่งออกเป็นห้าเขต^high^
+B5-0333^noun@E^high^ภาพ (บนหน้าจอ); เฟรม^这部电影的画面很美。^Zhè bù diànyǐng de huàmiàn hěn měi.^ภาพในภาพยนตร์เรื่องนี้สวยมาก^high^
+B5-0334^noun@E^high^ขั้นตอน; ข้อต่อ^这是工作中最重要的环节。^Zhè shì gōngzuò zhōng zuì zhòngyào de huánjié.^นี่คือขั้นตอนที่สำคัญที่สุดในงาน^high^
+B5-0335^adjective@E^high^ลนลาน; ตื่นตระหนก^别慌，慢慢说。^Bié huāng, mànmàn shuō.^อย่าลนลาน ค่อยๆ พูด^medium^polysemy: "panic; flustered" vs. complement "awfully" (闷得慌)
+B5-0336^adjective@E^high^รีบร้อน; ลนลาน^他慌忙跑了出去。^Tā huāngmáng pǎo le chūqu.^เขารีบร้อนวิ่งออกไป^high^
+B5-0337^noun@E^high^สีเทา; มองโลกในแง่ร้าย^我喜欢灰色的衣服。^Wǒ xǐhuan huīsè de yīfu.^ฉันชอบเสื้อผ้าสีเทา^medium^polysemy: literal "grey" vs. figurative "pessimistic; gloomy"
+B5-0338^verb@L^medium^ฟื้นตัว; ฟื้นฟู^他的身体已经恢复了。^Tā de shēntǐ yǐjīng huīfù le.^ร่างกายของเขาฟื้นตัวแล้ว^medium^source_gloss: "recovery" is a noun; 恢复 is mainly the verb "recover; restore"
+B5-0339^verb@E^medium^ตอบแทน; ผลตอบแทน^我们要回报社会。^Wǒmen yào huíbào shèhuì.^พวกเราต้องตอบแทนสังคม^medium^polysemy: verb "repay" vs. noun "return (on investment)"; source_gloss: "Return" is ambiguous
+B5-0340^verb@E^medium^หลีกเลี่ยง; หลบเลี่ยง^他回避了这个问题。^Tā huíbì le zhège wèntí.^เขาหลบเลี่ยงคำถามนี้^medium^source_gloss: "obviate; slide over" are odd glosses; 回避 means "avoid; evade"
+B5-0341^verb@E^high^ทบทวน; มองย้อนกลับ^让我们回顾一下过去的一年。^Ràng wǒmen huígù yí xià guòqù de yì nián.^ให้เรามองย้อนกลับไปยังปีที่ผ่านมา^high^
+B5-0342^verb@L^medium^รีไซเคิล; เก็บคืน^这些瓶子可以回收。^Zhèxiē píngzi kěyǐ huíshōu.^ขวดเหล่านี้รีไซเคิลได้^medium^source_gloss: "recovery" is a noun; 回收 is the verb "recycle; reclaim"
+B5-0343^verb@E^high^หันหน้ากลับ; กลับตัว; ภายหลัง^他回头看了我一眼。^Tā huítóu kàn le wǒ yì yǎn.^เขาหันกลับมามองฉันแวบหนึ่ง^medium^polysemy: "turn one's head" vs. "repent" vs. adverb "later" (回头见)
+B5-0344^verb@E^medium^ตอบจดหมาย; จดหมายตอบ^收到信后请尽快回信。^Shōudào xìn hòu qǐng jǐnkuài huíxìn.^ได้รับจดหมายแล้วกรุณาตอบกลับโดยเร็ว^medium^pos_doubtful: 回信 is both verb "write back" and noun "reply letter"
+B5-0345^verb@L^medium^ระลึกถึง; ความทรงจำ^他常常回忆起小时候的事。^Tā chángcháng huíyì qǐ xiǎoshíhou de shì.^เขามักระลึกถึงเรื่องสมัยเด็ก^medium^pos_doubtful: gloss "Memory" is a noun; 回忆 is both verb "recall" and noun "memories"
+B5-0346^verb@E^medium^โอนเงิน; เงินที่โอน^我去银行给父母汇款。^Wǒ qù yínháng gěi fùmǔ huìkuǎn.^ฉันไปธนาคารเพื่อโอนเงินให้พ่อแม่^medium^pos_doubtful: 汇款 is both verb "remit" and noun "remittance"
+B5-0347^noun@E^medium^การเจรจา; เจรจา^两国领导人举行了会谈。^Liǎng guó lǐngdǎorén jǔxíng le huìtán.^ผู้นำสองประเทศจัดการเจรจา^medium^pos_doubtful: 会谈 is both noun "talks" and verb "hold talks"
+B5-0348^noun@E^high^พลัง; ความกระปรี้กระเปร่า^年轻人充满了活力。^Niánqīngrén chōngmǎn le huólì.^คนหนุ่มสาวเต็มไปด้วยพลัง^high^
+B5-0349^adjective@E^high^ร่าเริง; มีชีวิตชีวา^这个小女孩很活泼。^Zhège xiǎo nǚhái hěn huópō.^เด็กผู้หญิงคนนี้ร่าเริงมาก^high^
+B5-0350^noun@E^high^ไม้ขีดไฟ^请给我一盒火柴。^Qǐng gěi wǒ yì hé huǒchái.^ขอไม้ขีดไฟหนึ่งกล่อง^medium^source_gloss: English "Match" is ambiguous (also game 比赛); 火柴 = matchstick
+B5-0351^noun@E^high^แฮม^我早上吃了面包和火腿。^Wǒ zǎoshang chī le miànbāo hé huǒtuǐ.^ตอนเช้าฉันกินขนมปังกับแฮม^high^
