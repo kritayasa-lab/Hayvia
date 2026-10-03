@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B2-0739^noun@E^high^การแพทย์แผนจีน; แพทย์แผนจีน^我生病的时候喜欢看中医。^Wǒ shēngbìng de shíhou xǐhuan kàn zhōngyī.^เวลาป่วยฉันชอบไปหาหมอจีน^medium^polysemy: "Chinese medicine" vs. "doctor of Chinese medicine"; example reads as the doctor
+B2-0740^noun@E^high^จุดสำคัญ; ประเด็นหลัก^这是这课的重点。^Zhè shì zhè kè de zhòngdiǎn.^นี่คือประเด็นสำคัญของบทนี้^high^
+B2-0741^verb@E^high^ให้ความสำคัญ^父母很重视孩子的教育。^Fùmǔ hěn zhòngshì háizi de jiàoyù.^พ่อแม่ให้ความสำคัญกับการศึกษาของลูกมาก^high^
+B2-0742^noun@E^high^สัปดาห์^我每周去两次健身房。^Wǒ měi zhōu qù liǎng cì jiànshēnfáng.^ฉันไปฟิตเนสสัปดาห์ละสองครั้ง^high^
+B2-0743^noun@E^high^สุดสัปดาห์^周末你有什么打算？^Zhōumò nǐ yǒu shénme dǎsuan?^สุดสัปดาห์นี้คุณมีแผนอะไรไหม?^high^
+B2-0744^noun@E^high^วันครบรอบ^今天是我们结婚十周年。^Jīntiān shì wǒmen jiéhūn shí zhōunián.^วันนี้เป็นวันครบรอบแต่งงานสิบปีของเรา^high^
+B2-0745^noun@E^medium^เจ้าของ; เจ้าบ้าน; นาย^这只狗的主人是谁？^Zhè zhī gǒu de zhǔrén shì shéi?^ใครเป็นเจ้าของหมาตัวนี้?^medium^polysemy: "host" vs. "owner/master"; gloss "master" is narrow
+B2-0746^adjective@E^high^หลัก; สำคัญ^这是主要的问题。^Zhè shì zhǔyào de wèntí.^นี่คือปัญหาหลัก^high^
+B2-0747^noun@E^high^ที่อยู่อาศัย^这个城市的住房很贵。^Zhège chéngshì de zhùfáng hěn guì.^ที่อยู่อาศัยในเมืองนี้แพงมาก^high^
+B2-0748^verb@E^high^นอนโรงพยาบาล^他生病住院了。^Tā shēngbìng zhùyuàn le.^เขาป่วยเข้าโรงพยาบาล^high^
+B2-0749^verb@E^low^แกล้งทำ; บรรจุ; ติดตั้ง^他在装睡。^Tā zài zhuāng shuì.^เขากำลังแกล้งหลับ^low^polysemy: gloss "pretend" omits the common band-2 senses "load; pack; install"; example shows "pretend"
+B2-0750^adjective@L^medium^แม่นยำ; ถูกต้อง^他的发音很准确。^Tā de fāyīn hěn zhǔnquè.^การออกเสียงของเขาแม่นยำมาก^medium^pos_doubtful: gloss "accuracy" is a noun, but 准确 is the adjective "accurate"
+B2-0751^pronoun@E^high^ตัวเอง; ของตัวเอง^这件事我自己做。^Zhè jiàn shì wǒ zìjǐ zuò.^เรื่องนี้ฉันทำเอง^high^
+B2-0752^noun@E^high^จักรยาน^我骑自行车上学。^Wǒ qí zìxíngchē shàngxué.^ฉันขี่จักรยานไปโรงเรียน^high^
+B2-0753^adjective@E^high^อิสระ; เสรี^周末我的时间很自由。^Zhōumò wǒ de shíjiān hěn zìyóu.^สุดสัปดาห์ฉันมีเวลาอิสระมาก^medium^polysemy: adjective "free" vs. noun "freedom"; English "free" also means "gratis", which 自由 does not
+B2-0754^noun@E^high^พจนานุกรม (อักษร)^这个字我查了字典。^Zhège zì wǒ chá le zìdiǎn.^ตัวอักษรนี้ฉันเปิดพจนานุกรมดูแล้ว^high^
+B2-0755^verb@E^high^เดินผ่าน^他从我身边走过。^Tā cóng wǒ shēnbiān zǒuguò.^เขาเดินผ่านข้างตัวฉันไป^high^
+B2-0756^verb@E^high^เดินเข้าไป^老师走进了教室。^Lǎoshī zǒujìn le jiàoshì.^ครูเดินเข้าห้องเรียนไป^high^
+B2-0757^verb@E^high^ไปให้พ้น; ถอยไป^请你走开！^Qǐng nǐ zǒukāi!^กรุณาถอยไป!^high^
+B2-0758^verb@E^high^เช่า; ให้เช่า^我在学校旁边租了一个房间。^Wǒ zài xuéxiào pángbiān zū le yí ge fángjiān.^ฉันเช่าห้องอยู่ข้างโรงเรียนหนึ่งห้อง^high^
+B2-0759^noun@E^high^กลุ่ม; ชุด^我们分成三组。^Wǒmen fēnchéng sān zǔ.^พวกเราแบ่งเป็นสามกลุ่ม^medium^pos_doubtful: 组 is both noun "group" and measure word (一组); example shows the measure-word use
+B2-0760^verb@E^high^ประกอบเป็น; จัดตั้ง^我们班由三十个学生组成。^Wǒmen bān yóu sānshí ge xuésheng zǔchéng.^ห้องเราประกอบด้วยนักเรียนสามสิบคน^high^
+B2-0761^noun@E^high^หัวหน้ากลุ่ม^他是我们的组长。^Tā shì wǒmen de zǔzhǎng.^เขาเป็นหัวหน้ากลุ่มของเรา^high^
+B2-0762^noun@E^high^ปาก^请张开嘴。^Qǐng zhāngkāi zuǐ.^กรุณาอ้าปาก^high^
+B2-0763^noun@L^high^ช่วงนี้; เร็วๆ นี้^最近你忙吗？^Zuìjìn nǐ máng ma?^ช่วงนี้คุณยุ่งไหม?^high^
+B2-0764^noun@E^high^นักเขียน^他是一位有名的作家。^Tā shì yí wèi yǒumíng de zuòjiā.^เขาเป็นนักเขียนที่มีชื่อเสียง^high^
+B2-0765^noun@E^high^เรียงความ^老师让我们写一篇作文。^Lǎoshī ràng wǒmen xiě yì piān zuòwén.^ครูให้พวกเราเขียนเรียงความหนึ่งเรื่อง^high^
+B2-0766^noun@E^high^การบ้าน; งานที่ได้รับมอบหมาย^今天的作业很多。^Jīntiān de zuòyè hěn duō.^การบ้านวันนี้เยอะมาก^high^
+B2-0767^noun@E^high^บทบาท; ผล; ประโยชน์^这种药没有什么作用。^Zhè zhǒng yào méiyǒu shénme zuòyòng.^ยาชนิดนี้ไม่ค่อยได้ผล^high^
+B2-0768^measure_word@L^low^ที่นั่ง; หลัง; ลูก (ลักษณนามของภูเขา/อาคาร)^这座山很高。^Zhè zuò shān hěn gāo.^ภูเขาลูกนี้สูงมาก^low^source_gloss: gloss "Seat" (noun, cf. 座位) omits the core band-2 measure-word use for mountains/buildings; polysemy: noun vs. measure word; example shows measure word
+B2-0769^noun@E^high^ที่นั่ง^这个座位有人吗？^Zhège zuòwèi yǒu rén ma?^ที่นั่งนี้มีคนนั่งไหม?^high^
+B2-0770^verb@E^high^ทำได้สำเร็จ^说到就要做到。^Shuō dào jiù yào zuòdào.^พูดแล้วต้องทำให้ได้^high^
+B2-0771^noun@E^high^วิธีทำ; วิธีปฏิบัติ^你的做法不对。^Nǐ de zuòfǎ bú duì.^วิธีทำของคุณไม่ถูกต้อง^high^
+B2-0772^verb@E^high^ทำอาหาร^妈妈在厨房做饭。^Māma zài chúfáng zuòfàn.^แม่กำลังทำอาหารอยู่ในครัว^high^
+B3-0001^noun@E^high^ความรัก; ความเมตตา^她是一个很有爱心的人。^Tā shì yí ge hěn yǒu àixīn de rén.^เธอเป็นคนที่มีจิตใจเมตตามาก^medium^source_gloss: "love" is loose; 爱心 means "compassion; caring heart"
+B3-0002^verb@E^high^จัดการ; จัดเตรียม^公司安排我去北京出差。^Gōngsī ānpái wǒ qù Běijīng chūchāi.^บริษัทจัดให้ฉันไปทำงานที่ปักกิ่ง^high^
+B3-0003^verb@E^high^ติดตั้ง^工人来安装空调了。^Gōngrén lái ānzhuāng kōngtiáo le.^ช่างมาติดตั้งเครื่องปรับอากาศแล้ว^high^
+B3-0004^verb@E^high^กด; ดัน; ตรวจ; ระงับ^请按一下这个按钮。^Qǐng àn yí xià zhège ànniǔ.^กรุณากดปุ่มนี้หน่อย^medium^polysemy: press / check / restrain combined; also preposition "according to"; example shows "press"
+B3-0005^preposition@E^high^ตาม; โดยอาศัย^请按照老师说的做。^Qǐng ànzhào lǎoshī shuō de zuò.^กรุณาทำตามที่ครูบอก^high^source_gloss: gloss is truncated ("particle marking the following noun as a")
+B3-0008^verb@E^medium^เข้าใจอย่างถ่องแท้; คว้า; ความมั่นใจ^我们要把握好这个机会。^Wǒmen yào bǎwò hǎo zhège jīhuì.^พวกเราต้องคว้าโอกาสนี้ไว้ให้ดี^medium^polysemy: verb "grasp; seize" vs. noun "certainty" (有把握); example shows the verb
+B3-0010^noun@E^high^ผักกาดขาว^妈妈买了一棵白菜。^Māma mǎi le yì kē báicài.^แม่ซื้อผักกาดขาวมาหนึ่งหัว^high^
+B3-0011^noun@E^high^ชั้นเรียน; ห้องเรียน^我们班级有四十个学生。^Wǒmen bānjí yǒu sìshí ge xuésheng.^ชั้นเรียนของเรามีนักเรียนสี่สิบคน^high^
+B3-0012^verb@E^high^ขนย้าย; ย้าย^帮我把桌子搬到外面。^Bāng wǒ bǎ zhuōzi bān dào wàimian.^ช่วยฉันย้ายโต๊ะไปข้างนอกหน่อย^medium^source_gloss: "turn" is not a sense of 搬; core sense is "move; carry"
+B3-0013^verb@E^high^ย้ายบ้าน^我们下个月搬家。^Wǒmen xià ge yuè bānjiā.^พวกเราจะย้ายบ้านเดือนหน้า^high^
+B3-0014^noun@E^high^แผ่นกระดาน; ไม้กระดาน^桌子上有一块木板。^Zhuōzi shang yǒu yí kuài mùbǎn.^บนโต๊ะมีไม้กระดานอยู่แผ่นหนึ่ง^high^
+B3-0015^verb@E^high^ดำเนินการ; ทำเรื่อง^我去银行办理手续。^Wǒ qù yínháng bànlǐ shǒuxù.^ฉันไปดำเนินการเรื่องเอกสารที่ธนาคาร^high^
+B3-0016^verb@E^high^ปกป้อง; รักษา; รับรอง^我保你没事。^Wǒ bǎo nǐ méishì.^ฉันรับรองว่าคุณไม่เป็นไร^medium^polysemy: defend / protect / keep / guarantee combined; example shows "guarantee"
+B3-0017^noun@E^high^พนักงานรักษาความปลอดภัย; รปภ.^门口有一个保安。^Ménkǒu yǒu yí ge bǎo'ān.^หน้าประตูมี รปภ. อยู่คนหนึ่ง^medium^polysemy: "security guard" (noun) vs. "public security; ensure safety"; example shows the guard
+B3-0018^verb@E^high^รักษาไว้; คงไว้^请保持安静。^Qǐng bǎochí ānjìng.^กรุณารักษาความเงียบ^high^
+B3-0019^verb@L^medium^เก็บรักษา; บันทึก (ไฟล์)^请把文件保存好。^Qǐng bǎ wénjiàn bǎocún hǎo.^กรุณาบันทึกไฟล์ไว้ให้ดี^medium^pos_doubtful: gloss "Preservation" is a noun, but 保存 is the verb "preserve; save"
+B3-0020^verb@E^high^ปกป้อง; คุ้มครอง^我们要保护环境。^Wǒmen yào bǎohù huánjìng.^พวกเราต้องปกป้องสิ่งแวดล้อม^high^
+B3-0021^verb@E^high^สงวนไว้; เก็บไว้^他保留了这张旧照片。^Tā bǎoliú le zhè zhāng jiù zhàopiàn.^เขาเก็บรูปเก่าใบนี้ไว้^high^
+B3-0022^noun@E^high^ประกัน^我买了一份医疗保险。^Wǒ mǎi le yí fèn yīliáo bǎoxiǎn.^ฉันซื้อประกันสุขภาพไว้หนึ่งฉบับ^medium^polysemy: noun "insurance" vs. adjective "safe" (这样做比较保险)
+B3-0023^verb@E^high^รับประกัน; รับรอง^我保证明天不迟到。^Wǒ bǎozhèng míngtiān bù chídào.^ฉันรับรองว่าพรุ่งนี้จะไม่มาสาย^high^
+B3-0025^verb@E^high^รายงานตัว; ลงทะเบียน^新生九月一号来学校报到。^Xīnshēng jiǔ yuè yī hào lái xuéxiào bàodào.^นักเรียนใหม่มารายงานตัวที่โรงเรียนวันที่หนึ่งกันยายน^high^
+B3-0026^verb@E^medium^รายงานข่าว; ข่าว^电视上报道了这件事。^Diànshì shang bàodào le zhè jiàn shì.^โทรทัศน์รายงานข่าวเรื่องนี้แล้ว^medium^pos_doubtful: 报道 is both verb "report" and noun "news report"; example shows the verb
+B3-0027^noun@E^medium^รายงาน; การบรรยาย^我要写一份报告。^Wǒ yào xiě yí fèn bàogào.^ฉันต้องเขียนรายงานหนึ่งฉบับ^medium^source_gloss: "Presentation" is loose; 报告 is "report" (noun/verb), also "lecture"
+B3-0028^noun@E^low^หลัง; ด้านหลัง^他的背很直。^Tā de bèi hěn zhí.^หลังของเขาตรงมาก^low^variant: same word/pinyin/sense as B3-0030 (背 bèi "back of the body") but a different sense group; possibly the verb "recite" (背课文) was intended
+B3-0029^noun@E^high^ภาคเหนือ; ตอนเหนือ^他住在中国北部。^Tā zhù zài Zhōngguó běibù.^เขาอาศัยอยู่ทางภาคเหนือของจีน^high^
+B3-0031^noun@E^high^ข้างหลัง; เบื้องหลัง^房子背后有一条小河。^Fángzi bèihòu yǒu yì tiáo xiǎo hé.^ข้างหลังบ้านมีลำธารเล็กๆ อยู่สายหนึ่ง^high^
+B3-0032^preposition@L^low^ถูก (บุพบทแสดงประโยคถูกกระทำ); คลุม^我的钱包被偷了。^Wǒ de qiánbāo bèi tōu le.^กระเป๋าสตางค์ของฉันถูกขโมย^low^source_gloss: gloss "cover" (as in quilt 被子) omits the core band-3 passive marker "by"; polysemy: noun/verb "cover" vs. preposition; example shows passive
+B3-0033^noun@E^high^ผ้าห่ม^冬天要盖厚被子。^Dōngtiān yào gài hòu bèizi.^ฤดูหนาวต้องห่มผ้าห่มหนา^high^
+B3-0034^adverb@E^high^เดิมที; แต่แรก^我本来想去，后来没去。^Wǒ běnlái xiǎng qù, hòulái méi qù.^เดิมทีฉันอยากไป แต่ภายหลังก็ไม่ได้ไป^high^
+B3-0035^noun@E^high^ความสามารถ; ฝีมือ^他学会了很多本领。^Tā xuéhuì le hěn duō běnlǐng.^เขาเรียนรู้ทักษะมากมาย^high^
+B3-0036^noun@E^high^ความสามารถ; ฝีมือ^他很有本事。^Tā hěn yǒu běnshi.^เขามีความสามารถมาก^high^
+B3-0037^verb@E^medium^เปรียบเทียบ; ค่อนข้าง^今天比较冷。^Jīntiān bǐjiào lěng.^วันนี้ค่อนข้างหนาว^low^polysemy: verb "compare" vs. very common adverb "relatively; fairly"; example shows the adverb, which the gloss does not cover
+B3-0038^noun@E^high^อัตราส่วน; สัดส่วน^男女学生的比例是一比二。^Nán nǚ xuésheng de bǐlì shì yī bǐ èr.^สัดส่วนนักเรียนชายต่อหญิงคือหนึ่งต่อสอง^high^
+B3-0039^noun@E^high^การแข่งขัน^明天有一场足球比赛。^Míngtiān yǒu yì chǎng zúqiú bǐsài.^พรุ่งนี้มีการแข่งขันฟุตบอลหนึ่งนัด^high^
+B3-0040^adjective@E^high^หลีกเลี่ยงไม่ได้; แน่นอน^这是必然的结果。^Zhè shì bìrán de jiéguǒ.^นี่เป็นผลลัพธ์ที่หลีกเลี่ยงไม่ได้^high^
+B3-0041^adjective@E^high^จำเป็น^没有必要这么做。^Méiyǒu bìyào zhème zuò.^ไม่จำเป็นต้องทำแบบนี้^high^
+B3-0042^noun@E^medium^การเปลี่ยนแปลง; เปลี่ยนแปลง^这几年家乡的变化很大。^Zhè jǐ nián jiāxiāng de biànhuà hěn dà.^ไม่กี่ปีมานี้บ้านเกิดเปลี่ยนแปลงไปมาก^medium^pos_doubtful: 变化 is both noun and verb; example shows the noun
+B3-0043^verb@E^high^กลายเป็น; เปลี่ยนเป็น^冰变为水。^Bīng biànwéi shuǐ.^น้ำแข็งกลายเป็นน้ำ^high^
+B3-0044^noun@E^high^หัวข้อ; ชื่อเรื่อง^这篇文章的标题是什么？^Zhè piān wénzhāng de biāotí shì shénme?^บทความนี้มีชื่อเรื่องว่าอะไร?^high^
+B3-0045^noun@E^medium^มาตรฐาน; ได้มาตรฐาน^他的普通话很标准。^Tā de Pǔtōnghuà hěn biāozhǔn.^ภาษาจีนกลางของเขาได้มาตรฐานมาก^medium^pos_doubtful: 标准 is both noun "standard" and adjective "standard; correct"; example shows the adjective
+B3-0046^verb@L^medium^แสดงออก; สื่อ^他不太会表达自己的想法。^Tā bú tài huì biǎodá zìjǐ de xiǎngfǎ.^เขาไม่ค่อยเก่งในการแสดงความคิดของตัวเอง^medium^pos_doubtful: gloss "Expression" is a noun, but 表达 is mainly the verb "express"
+B3-0047^noun@E^high^แบบฟอร์ม; ตาราง^请填一下这张表格。^Qǐng tián yí xià zhè zhāng biǎogé.^กรุณากรอกแบบฟอร์มนี้หน่อย^high^
+B3-0048^noun@E^high^พื้นผิว; ผิวนอก^桌子表面很光滑。^Zhuōzi biǎomiàn hěn guānghuá.^พื้นผิวโต๊ะเรียบลื่นมาก^high^
+B3-0049^verb@E^high^แสดงให้เห็นชัด; บ่งชี้^调查表明，大家都很满意。^Diàochá biǎomíng, dàjiā dōu hěn mǎnyì.^ผลสำรวจแสดงให้เห็นว่าทุกคนพอใจมาก^high^
+B3-0050^noun@E^medium^ผลงาน; การแสดงออก; แสดงออก^他在比赛中的表现很好。^Tā zài bǐsài zhōng de biǎoxiàn hěn hǎo.^ผลงานของเขาในการแข่งขันดีมาก^medium^pos_doubtful: 表现 is both noun "performance" and verb "show; display"; example shows the noun
+B3-0051^verb@E^high^แสดง (การแสดง)^孩子们在台上表演节目。^Háizimen zài tái shang biǎoyǎn jiémù.^เด็กๆ แสดงอยู่บนเวที^high^
+B3-0052^conjunction@L^low^และ; อีกทั้ง; พร้อมกัน; เคียงข้าง^他同意了，并帮我们找到了地方。^Tā tóngyì le, bìng bāng wǒmen zhǎodào le dìfang.^เขาเห็นด้วย และยังช่วยพวกเราหาสถานที่ด้วย^medium^polysemy: conjunction "and" vs. adverbs "equally; simultaneously; side by side"; source_gloss: gloss truncated ("side by"); also adverb 并不 "not at all"
+B3-0053^conjunction@E^high^และ; อีกทั้ง^他会说汉语，并且说得很好。^Tā huì shuō Hànyǔ, bìngqiě shuō de hěn hǎo.^เขาพูดภาษาจีนได้ อีกทั้งยังพูดได้ดีมาก^high^
+B3-0054^verb@E^high^ออกอากาศ^这个节目每天晚上八点播出。^Zhège jiémù měitiān wǎnshang bā diǎn bōchū.^รายการนี้ออกอากาศทุกคืนตอนสองทุ่ม^high^
+B3-0055^verb@E^high^เล่น (สื่อ); ออกอากาศ^电视正在播放新闻。^Diànshì zhèngzài bōfàng xīnwén.^โทรทัศน์กำลังออกอากาศข่าว^high^
+B3-0056^adverb@E^high^ไม่จำเป็นต้อง^你不必担心。^Nǐ búbì dānxīn.^คุณไม่จำเป็นต้องกังวล^high^
+B3-0057^adverb@E^high^อย่างต่อเนื่อง; ไม่หยุด^他的汉语水平不断提高。^Tā de Hànyǔ shuǐpíng búduàn tígāo.^ระดับภาษาจีนของเขาพัฒนาขึ้นอย่างต่อเนื่อง^high^
+B3-0058^conjunction@E^high^ไม่ว่า^不论天气怎么样，他都去跑步。^Búlùn tiānqì zěnmeyàng, tā dōu qù pǎobù.^ไม่ว่าอากาศจะเป็นอย่างไร เขาก็ไปวิ่ง^high^
+B3-0059^verb@E^high^ซ่อม; ปะ; เพิ่มเติม; ชดเชย^妈妈在补衣服。^Māma zài bǔ yīfu.^แม่กำลังปะเสื้อ^medium^polysemy: repair / mend vs. supply / make up for (补课) combined; example shows "mend"
+B3-0060^verb@E^medium^เพิ่มเติม; เสริม^我再补充一点。^Wǒ zài bǔchōng yì diǎn.^ฉันขอเพิ่มเติมอีกนิดหนึ่ง^medium^pos_doubtful: "supplement" is both verb and noun; example shows the verb
+B3-0061^adjective@E^high^ไม่สบายใจ; กระวนกระวาย^他心里很不安。^Tā xīnli hěn bù'ān.^ในใจเขากระวนกระวายมาก^high^
+B3-0062^adverb@L^medium^จำต้อง; ไม่มีทางเลือกนอกจาก^下雨了，我们不得不回家。^Xià yǔ le, wǒmen bùdébù huí jiā.^ฝนตกแล้ว พวกเราจำต้องกลับบ้าน^high^
+B3-0063^conjunction@E^high^ไม่เพียงแต่^不光我去，他也去。^Bùguāng wǒ qù, tā yě qù.^ไม่ใช่แค่ฉันที่ไป เขาก็ไปด้วย^high^
+B3-0064^conjunction@E^high^ไม่เพียงแต่^他不仅聪明，而且很努力。^Tā bùjǐn cōngming, érqiě hěn nǔlì.^เขาไม่เพียงแต่ฉลาด แต่ยังขยันมากด้วย^high^
+B3-0065^noun@E^high^ผ้า^这块布很软。^Zhè kuài bù hěn ruǎn.^ผ้าผืนนี้นุ่มมาก^high^
+B3-0066^noun@E^high^ก้าว; ขั้นตอน^往前走两步。^Wǎng qián zǒu liǎng bù.^เดินไปข้างหน้าสองก้าว^medium^polysemy: step / stage / walk / foot combined; example shows "step"
+B3-0067^noun@E^high^หน่วย; กระทรวง; แผนก; ส่วน^他在教育部工作。^Tā zài Jiàoyùbù gōngzuò.^เขาทำงานที่กระทรวงศึกษาธิการ^medium^polysemy: unit / ministry / department / part / section combined; example shows "ministry"; 部 is also a common measure word for films (not in gloss)
+B3-0068^noun@E^high^แผนก; หน่วยงาน^他在销售部门工作。^Tā zài xiāoshòu bùmén gōngzuò.^เขาทำงานอยู่ในแผนกขาย^high^
+B3-0069^noun@E^high^รัฐมนตรี; หัวหน้าแผนก^他是教育部的部长。^Tā shì jiàoyùbù de bùzhǎng.^เขาเป็นรัฐมนตรีกระทรวงศึกษาธิการ^high^
+B3-0070^noun@E^high^พรสวรรค์; ความสามารถ^他很有音乐才能。^Tā hěn yǒu yīnyuè cáinéng.^เขามีพรสวรรค์ทางดนตรีมาก^high^
+B3-0071^verb@E^high^ใช้ (มาตรการ); นำมาใช้^我们必须采取措施。^Wǒmen bìxū cǎiqǔ cuòshī.^พวกเราต้องใช้มาตรการ^high^source_gloss: typo "adpopt" (adopt)
