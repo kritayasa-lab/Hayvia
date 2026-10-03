@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B3-0480^adjective@E^high^สวย; งดงาม^这里的风景很美。^Zhèlǐ de fēngjǐng hěn měi.^ทิวทัศน์ที่นี่สวยมาก^high^
+B3-0481^adjective@E^high^ดีงาม; สวยงาม; มีความสุข^祝你有一个美好的未来。^Zhù nǐ yǒu yí ge měihǎo de wèilái.^ขอให้คุณมีอนาคตที่สดใส^high^
+B3-0482^adjective@E^high^สวยงาม^杭州是一个美丽的城市。^Hángzhōu shì yí ge měilì de chéngshì.^หางโจวเป็นเมืองที่สวยงาม^high^
+B3-0483^noun@E^high^อาหารอร่อย^这条街上有很多美食。^Zhè tiáo jiē shang yǒu hěn duō měishí.^ถนนสายนี้มีอาหารอร่อยมากมาย^medium^polysemy: "delicious food" vs. "gourmet" (person); example shows "delicious food"
+B3-0484^noun@E^high^วิจิตรศิลป์; ศิลปะ^他在大学学习美术。^Tā zài dàxué xuéxí měishù.^เขาเรียนศิลปะที่มหาวิทยาลัย^high^
+B3-0485^noun@E^high^ดอลลาร์สหรัฐ^这个手机三百美元。^Zhège shǒujī sānbǎi měiyuán.^โทรศัพท์มือถือเครื่องนี้ราคาสามร้อยดอลลาร์สหรัฐ^high^
+B3-0486^noun@E^medium^แฟน (ผู้คลั่งไคล้); หลงใหล; สับสน^他是个电影迷。^Tā shì ge diànyǐng mí.^เขาเป็นคอหนัง^low^polysemy: noun "fan" vs. verb "be confused; be crazy about" (迷路, 迷上); pos_doubtful: no source POS
+B3-0488^verb@E^high^เผชิญหน้า^我们要勇敢地面对困难。^Wǒmen yào yǒnggǎn de miànduì kùnnan.^พวกเราต้องเผชิญหน้ากับความยากลำบากอย่างกล้าหาญ^high^
+B3-0489^noun@E^high^พื้นที่ (ขนาด)^这个房间的面积是二十平方米。^Zhège fángjiān de miànjī shì èrshí píngfāngmǐ.^ห้องนี้มีพื้นที่ยี่สิบตารางเมตร^high^
+B3-0490^noun@L^medium^พื้นบ้าน; ภาคประชาชน^这是一个民间故事。^Zhè shì yí ge mínjiān gùshi.^นี่เป็นนิทานพื้นบ้านเรื่องหนึ่ง^medium^source_gloss: "nongovernmental" covers one use; 民间 is mostly "folk; among the people"
+B3-0491^noun@E^high^ชนชาติ; ชาติพันธุ์^中国有五十六个民族。^Zhōngguó yǒu wǔshíliù ge mínzú.^จีนมีห้าสิบหกชนชาติ^high^
+B3-0492^verb@E^medium^ทำให้ชัดเจน; ชัดเจน^我们要明确工作目标。^Wǒmen yào míngquè gōngzuò mùbiāo.^พวกเราต้องกำหนดเป้าหมายการทำงานให้ชัดเจน^medium^pos_doubtful: 明确 is verb "make clear" and adjective "clear; definite"; example shows the verb
+B3-0493^adjective@E^high^ชัดเจน; เห็นได้ชัด^他的进步很明显。^Tā de jìnbù hěn míngxiǎn.^ความก้าวหน้าของเขาเห็นได้ชัด^high^
+B3-0494^noun@E^high^โชคชะตา^每个人都想改变自己的命运。^Měi ge rén dōu xiǎng gǎibiàn zìjǐ de mìngyùn.^ทุกคนล้วนอยากเปลี่ยนโชคชะตาของตัวเอง^high^
+B3-0495^pronoun@L^high^บาง; ใดใด (ที่ไม่ระบุ)^某天我在街上遇到了他。^Mǒu tiān wǒ zài jiē shang yùdào le tā.^วันหนึ่งฉันเจอเขาบนถนน^high^
+B3-0496^noun@E^high^มารดา; แม่^我母亲是一名医生。^Wǒ mǔqīn shì yì míng yīshēng.^มารดาของฉันเป็นแพทย์^high^
+B3-0497^noun@E^high^ไม้^这张桌子是木头做的。^Zhè zhāng zhuōzi shì mùtou zuò de.^โต๊ะตัวนี้ทำจากไม้^high^
+B3-0498^noun@E^high^เป้าหมาย^我的目标是考上大学。^Wǒ de mùbiāo shì kǎoshàng dàxué.^เป้าหมายของฉันคือสอบเข้ามหาวิทยาลัยให้ได้^high^
+B3-0499^noun@L^high^ปัจจุบัน; ขณะนี้^目前我还没有工作。^Mùqián wǒ hái méiyǒu gōngzuò.^ขณะนี้ฉันยังไม่มีงานทำ^high^
+B3-0500^noun@E^high^ชานม^我想喝一杯奶茶。^Wǒ xiǎng hē yì bēi nǎichá.^ฉันอยากดื่มชานมหนึ่งแก้ว^high^
+B3-0501^noun@E^high^ผู้ชาย; ชาย^他参加了男子一百米比赛。^Tā cānjiā le nánzǐ yìbǎi mǐ bǐsài.^เขาเข้าร่วมการแข่งขันวิ่งร้อยเมตรชาย^high^
+B3-0502^noun@E^high^ภาคใต้; ตอนใต้^海南在中国南部。^Hǎinán zài Zhōngguó nánbù.^ไหหลำอยู่ทางตอนใต้ของจีน^high^
+B3-0503^adverb@L^high^หรือว่า; ไม่ใช่ว่า... หรอกหรือ^难道你不知道吗？^Nándào nǐ bù zhīdào ma?^หรือว่าคุณไม่รู้?^high^
+B3-0504^noun@E^high^ระดับความยาก^这道题的难度很大。^Zhè dào tí de nándù hěn dà.^โจทย์ข้อนี้มีระดับความยากสูง^high^
+B3-0505^noun@L^medium^ภายใน^一个月内完成这个工作。^Yí ge yuè nèi wánchéng zhège gōngzuò.^ทำงานนี้ให้เสร็จภายในหนึ่งเดือน^medium^pos_doubtful: locative 内 has no exact enum value; normalized as noun (localizer)
+B3-0506^noun@E^high^เนื้อหา^这本书的内容很有意思。^Zhè běn shū de nèiróng hěn yǒu yìsi.^เนื้อหาของหนังสือเล่มนี้น่าสนใจมาก^high^
+B3-0507^noun@E^high^ภายในใจ; จิตใจ^他的内心很孤独。^Tā de nèixīn hěn gūdú.^ภายในใจของเขาเหงามาก^high^
+B3-0508^other^low^ได้หรือไม่ได้^你能不能帮我一下？^Nǐ néng bu néng bāng wǒ yí xià?^คุณช่วยฉันหน่อยได้ไหม?^high^pos_doubtful: A-not-A question form (能+不+能) with no single POS
+B3-0509^noun@E^high^ความสามารถ^他的工作能力很强。^Tā de gōngzuò nénglì hěn qiáng.^ความสามารถในการทำงานของเขาสูงมาก^high^
+B3-0510^noun@E^high^ต้นปี^我年初去了一趟上海。^Wǒ niánchū qù le yí tàng Shànghǎi.^ต้นปีฉันไปเซี่ยงไฮ้มาหนึ่งรอบ^high^
+B3-0511^noun@E^medium^ทศวรรษ; ยุคสมัย^这是八十年代的歌。^Zhè shì bāshí niándài de gē.^นี่เป็นเพลงยุคแปดสิบ^medium^source_gloss: "years" is loose; 年代 means "decade; era" (八十年代 = the 1980s)
+B3-0512^noun@E^high^ปลายปี; สิ้นปี^我们年底要放假。^Wǒmen niándǐ yào fàngjià.^ปลายปีพวกเราจะได้หยุด^high^
+B3-0513^noun@E^high^อายุ^您多大年纪了？^Nín duō dà niánjì le?^คุณอายุเท่าไรแล้วครับ?^high^
+B3-0514^verb@E^high^อ่าน (ออกเสียง); เรียน^请你念一下这个句子。^Qǐng nǐ niàn yí xià zhège jùzi.^กรุณาอ่านประโยคนี้หน่อย^medium^polysemy: "read aloud" vs. "study (at school)" (念大学) vs. "miss" (想念); example shows "read aloud"
+B3-0516^noun@E^high^ชนบท^他在农村长大。^Tā zài nóngcūn zhǎngdà.^เขาเติบโตในชนบท^high^
+B3-0517^noun@E^high^ชาวนา; เกษตรกร^农民在地里干活儿。^Nóngmín zài dì li gànhuór.^ชาวนากำลังทำงานอยู่ในไร่^high^
+B3-0518^noun@E^high^เกษตรกรรม^这个地区的农业很发达。^Zhège dìqū de nóngyè hěn fādá.^เกษตรกรรมในพื้นที่นี้พัฒนามาก^high^
+B3-0519^noun@E^high^ผู้หญิง; หญิง^她获得了女子跳高冠军。^Tā huòdé le nǚzǐ tiàogāo guànjūn.^เธอได้แชมป์กระโดดสูงหญิง^high^
+B3-0520^adjective@E^high^อบอุ่น^今天天气很暖和。^Jīntiān tiānqì hěn nuǎnhuo.^วันนี้อากาศอบอุ่น^high^
+B3-0522^verb@E^high^ตบ; ตี; ถ่าย (รูป)^他拍了拍我的肩膀。^Tā pāi le pāi wǒ de jiānbǎng.^เขาตบไหล่ฉันเบาๆ^medium^polysemy: "beat; pat; clap" vs. common "take (a photo); shoot (a film)"; example shows "pat"
+B3-0524^noun@E^medium^อันดับ; จัดอันดับ^他在比赛中排名第一。^Tā zài bǐsài zhōng páimíng dì yī.^เขาได้อันดับหนึ่งในการแข่งขัน^medium^pos_doubtful: 排名 is both verb "rank" and noun "ranking"; example shows the verb
+B3-0525^noun@E^high^ยี่ห้อ; ป้าย^你的手机是什么牌子的？^Nǐ de shǒujī shì shénme páizi de?^โทรศัพท์มือถือของคุณยี่ห้ออะไร?^medium^polysemy: "brand" vs. "sign; plate"; example shows "brand"
+B3-0526^verb@E^high^ส่ง (คนไป); มอบหมาย^公司派他去上海工作。^Gōngsī pài tā qù Shànghǎi gōngzuò.^บริษัทส่งเขาไปทำงานที่เซี่ยงไฮ้^medium^polysemy: verb "send; dispatch" vs. noun "school; faction"
+B3-0527^verb@E^medium^ตัดสิน; วินิจฉัย; การตัดสิน^你判断得很对。^Nǐ pànduàn de hěn duì.^คุณตัดสินได้ถูกต้องมาก^high^
+B3-0528^adjective@E^high^อ้วน^我最近胖了。^Wǒ zuìjìn pàng le.^ช่วงนี้ฉันอ้วนขึ้น^high^
+B3-0529^verb@E^high^วิ่ง (ออกกำลังกาย)^我每天早上跑步。^Wǒ měitiān zǎoshang pǎobù.^ฉันวิ่งทุกเช้า^high^
+B3-0530^verb@E^high^จับคู่; ผสม; เข้ากัน; คู่ควร^这件衣服配这条裤子很好看。^Zhè jiàn yīfu pèi zhè tiáo kùzi hěn hǎokàn.^เสื้อตัวนี้เข้ากับกางเกงตัวนี้ได้ดีมาก^medium^polysemy: match / mix / join / fit / deserve combined; example shows "match"
+B3-0531^verb@L^medium^ร่วมมือประสานงาน^大家配合得很好。^Dàjiā pèihé de hěn hǎo.^ทุกคนประสานงานกันได้ดีมาก^medium^source_gloss: "Coordination" is a noun; 配合 is mainly the verb "cooperate; coordinate"
+B3-0532^verb@L^medium^วิพากษ์วิจารณ์; ตำหนิ^老师批评了他。^Lǎoshī pīpíng le tā.^ครูตำหนิเขา^medium^pos_doubtful: gloss "criticism" is a noun, but 批评 is mostly the verb "criticize"
+B3-0533^verb@L^medium^อนุมัติ^经理批准了我的请假。^Jīnglǐ pīzhǔn le wǒ de qǐngjià.^ผู้จัดการอนุมัติการลาของฉันแล้ว^medium^source_gloss: "Approval" is a noun; 批准 is mainly the verb "approve"
+B3-0534^noun@E^high^ผิวหนัง; หนัง; เปลือก^苹果皮很有营养。^Píngguǒ pí hěn yǒu yíngyǎng.^เปลือกแอปเปิลมีคุณค่าทางอาหารมาก^medium^polysemy: skin / leather / fur / cover / sheet combined; also adjective "naughty" (很皮); example shows "peel"
+B3-0535^noun@E^high^กระเป๋าหนัง; กระเป๋าถือ^她买了一个新皮包。^Tā mǎi le yí ge xīn píbāo.^เธอซื้อกระเป๋าหนังใบใหม่^high^
+B3-0536^noun@E^high^เบียร์^我们去喝杯啤酒吧。^Wǒmen qù hē bēi píjiǔ ba.^พวกเราไปดื่มเบียร์กันสักแก้วเถอะ^high^
+B3-0537^noun@E^high^ราคาตั๋ว; ค่าโดยสาร^火车票价是多少？^Huǒchē piàojià shì duōshao?^ราคาตั๋วรถไฟเท่าไร?^high^
+B3-0538^noun@E^medium^การประเมิน; ประเมิน^老师对他的评价很高。^Lǎoshī duì tā de píngjià hěn gāo.^ครูประเมินเขาไว้สูงมาก^high^
+B3-0539^noun@E^high^แอปเปิล^我每天吃一个苹果。^Wǒ měitiān chī yí ge píngguǒ.^ฉันกินแอปเปิลวันละลูก^high^
+B3-0540^adjective@E^high^แตก; ขาด; เสียหาย^我的衣服破了。^Wǒ de yīfu pò le.^เสื้อของฉันขาดแล้ว^medium^polysemy: adjective "broken; torn" vs. verb "break; break (a record)"; example shows adjective
+B3-0541^verb@L^medium^ทำลาย; การทำลาย^不要破坏公共财产。^Búyào pòhuài gōnggòng cáichǎn.^อย่าทำลายทรัพย์สินสาธารณะ^medium^source_gloss: "Destruction" is a noun; 破坏 is mainly the verb "destroy; damage"
+B3-0542^adjective@E^high^แพร่หลาย; ทั่วไป^这种现象很普遍。^Zhè zhǒng xiànxiàng hěn pǔbiàn.^ปรากฏการณ์แบบนี้พบได้ทั่วไป^high^
+B3-0543^verb@L^low^แพร่หลาย; ทำให้แพร่หลาย^现在手机已经很普及了。^Xiànzài shǒujī yǐjīng hěn pǔjí le.^ตอนนี้โทรศัพท์มือถือแพร่หลายมากแล้ว^medium^source_gloss: "Universal" is adjectival; 普及 is verb "popularize" and adjective "widespread"; pos_doubtful: no source POS
+B3-0544^noun@E^medium^ช่วง; ระยะ; ภาค; ฉบับ; คาดหวัง^这本杂志每月出一期。^Zhè běn zázhì měi yuè chū yì qī.^นิตยสารนี้ออกเดือนละหนึ่งฉบับ^low^polysemy: period / term / issue (measure word) / verb "expect" combined; example shows "issue"
+B3-0545^adjective@E^high^ครบ; เรียบร้อย; พร้อมกัน^人都到齐了吗？^Rén dōu dào qí le ma?^คนมาครบกันหรือยัง?^medium^polysemy: together / uniform / neat / level with combined; example shows "all present"
+B3-0546^conjunction@L^medium^ประการที่สอง; รองลงมา^首先要努力，其次要有好方法。^Shǒuxiān yào nǔlì, qícì yào yǒu hǎo fāngfǎ.^ประการแรกต้องพยายาม ประการที่สองต้องมีวิธีที่ดี^medium^pos_doubtful: 其次 is pronoun/noun "next; secondary" used as a discourse connective
+B3-0547^adverb@E^high^ที่จริงแล้ว^其实我也不太懂。^Qíshí wǒ yě bú tài dǒng.^ที่จริงแล้วฉันก็ไม่ค่อยเข้าใจเหมือนกัน^high^
+B3-0548^adjective@E^high^แปลก^真奇怪，他怎么还没来？^Zhēn qíguài, tā zěnme hái méi lái?^แปลกจริง ทำไมเขายังไม่มา?^high^
+B3-0549^noun@E^high^ภูมิอากาศ^这里的气候很好。^Zhèlǐ de qìhòu hěn hǎo.^ภูมิอากาศที่นี่ดีมาก^high^
+B3-0550^adverb@L^medium^ต้อง...ให้ได้; อย่า...เด็ดขาด^你千万别忘了。^Nǐ qiānwàn bié wàng le.^คุณอย่าลืมเด็ดขาดนะ^medium^source_gloss: "Must" is loose; 千万 is an emphatic adverb "be sure to / by all means (not)"; also numeral "ten million"
+B3-0551^noun@E^medium^หน้าและหลัง; ตั้งแต่ต้นจนจบ; ราวๆ^春节前后火车票很难买。^Chūnjié qiánhòu huǒchēpiào hěn nán mǎi.^ช่วงก่อนและหลังตรุษจีนตั๋วรถไฟซื้อยากมาก^medium^polysemy: spatial "front and back" vs. temporal "around; from start to finish"; example shows "around (a time)"
+B3-0552^verb@E^high^เดินหน้า; ก้าวไปข้างหน้า^我们要继续前进。^Wǒmen yào jìxù qiánjìn.^พวกเราต้องเดินหน้าต่อไป^high^
+B3-0553^noun@E^high^ข้างหน้า^前面有一家银行。^Qiánmiàn yǒu yì jiā yínháng.^ข้างหน้ามีธนาคารแห่งหนึ่ง^high^
+B3-0554^verb@E^high^มุ่งหน้าไป; เดินทางไป^代表团明天前往北京。^Dàibiǎotuán míngtiān qiánwǎng Běijīng.^คณะผู้แทนจะเดินทางไปปักกิ่งพรุ่งนี้^high^
+B3-0555^adjective@E^high^แข็งแรง; มีพลัง; ดีกว่า^他的能力很强。^Tā de nénglì hěn qiáng.^ความสามารถของเขาสูงมาก^high^
+B3-0556^adjective@E^high^ทรงพลัง; เข้มแข็ง^我们的国家越来越强大。^Wǒmen de guójiā yuè lái yuè qiángdà.^ประเทศของเราเข้มแข็งขึ้นเรื่อยๆ^high^
+B3-0557^verb@E^high^เน้นย้ำ^老师强调了这个问题的重要性。^Lǎoshī qiángdiào le zhège wèntí de zhòngyàoxìng.^ครูเน้นย้ำถึงความสำคัญของปัญหานี้^high^
+B3-0558^adjective@E^high^รุนแรง; แรงกล้า^他有强烈的愿望去中国。^Tā yǒu qiángliè de yuànwàng qù Zhōngguó.^เขามีความปรารถนาอย่างแรงกล้าที่จะไปจีน^high^
+B3-0559^noun@E^high^สะพาน^河上有一座桥。^Hé shang yǒu yí zuò qiáo.^บนแม่น้ำมีสะพานอยู่แห่งหนึ่ง^high^
+B3-0560^adjective@L^medium^บังเอิญ; ประจวบเหมาะ; ชำนาญ; เจ้าเล่ห์^真巧，我也要去那儿。^Zhēn qiǎo, wǒ yě yào qù nàr.^บังเอิญจัง ฉันก็จะไปที่นั่นเหมือนกัน^medium^polysemy: opportune / skilful / deceitful combined; pos_doubtful: gloss "opportunely" is adverbial; example shows "coincidental"
+B3-0561^adjective@L^low^ใกล้ชิด; ที่รัก; ญาติ (สายเลือด)^他是我的亲哥哥。^Tā shì wǒ de qīn gēge.^เขาเป็นพี่ชายแท้ๆ ของฉัน^medium^polysemy: dear / close / intimate (adjective) vs. relative (noun) vs. verb "kiss"; pos_doubtful: no source POS; example shows "blood (relative)"
+B3-0562^adjective@E^high^อ่อนโยน; เป็นกันเอง^老师对我们很亲切。^Lǎoshī duì wǒmen hěn qīnqiè.^ครูเป็นกันเองกับพวกเรามาก^high^
+B3-0563^noun@E^high^ญาติ; คนในครอบครัว^过年的时候，我很想念亲人。^Guònián de shíhou, wǒ hěn xiǎngniàn qīnrén.^ช่วงตรุษจีนฉันคิดถึงครอบครัวมาก^high^
+B3-0564^adverb@E^high^ด้วยตัวเอง^校长亲自来看我们了。^Xiàozhǎng qīnzì lái kàn wǒmen le.^ครูใหญ่มาเยี่ยมพวกเราด้วยตัวเอง^high^
+B3-0565^noun@E^high^อารมณ์ความรู้สึก^他很少表达自己的情感。^Tā hěn shǎo biǎodá zìjǐ de qínggǎn.^เขาไม่ค่อยแสดงความรู้สึกของตัวเอง^high^
+B3-0566^noun@E^high^สถานการณ์^现在的情况怎么样？^Xiànzài de qíngkuàng zěnmeyàng?^ตอนนี้สถานการณ์เป็นอย่างไร?^high^
+B3-0567^verb@E^high^ขอคำแนะนำ; ปรึกษา^我想向您请教一个问题。^Wǒ xiǎng xiàng nín qǐngjiào yí ge wèntí.^ฉันอยากขอคำแนะนำจากคุณเรื่องหนึ่ง^high^
+B3-0568^verb@E^high^เฉลิมฉลอง^我们一起庆祝他的生日。^Wǒmen yìqǐ qìngzhù tā de shēngrì.^พวกเราเฉลิมฉลองวันเกิดของเขาด้วยกัน^high^
+B3-0569^noun@E^high^แฟนบอล; แฟนกีฬา^很多球迷来看比赛。^Hěn duō qiúmí lái kàn bǐsài.^แฟนบอลมากมายมาดูการแข่งขัน^high^
+B3-0570^noun@E^high^เขต; พื้นที่^我住在海淀区。^Wǒ zhù zài Hǎidiàn Qū.^ฉันอาศัยอยู่ในเขตไห่เตี้ยน^high^
+B3-0571^noun@E^medium^ความแตกต่าง; แยกแยะ^这两个词有什么区别？^Zhè liǎng ge cí yǒu shénme qūbié?^สองคำนี้มีความแตกต่างกันอย่างไร?^high^
+B3-0572^verb@E^high^ยกเลิก^因为下雨，比赛取消了。^Yīnwèi xià yǔ, bǐsài qǔxiāo le.^เพราะฝนตก การแข่งขันจึงถูกยกเลิก^high^
+B3-0573^verb@L^medium^เสียชีวิต; ถึงแก่กรรม^他爷爷去年去世了。^Tā yéye qùnián qùshì le.^คุณปู่ของเขาเสียชีวิตเมื่อปีที่แล้ว^medium^source_gloss: "Death" is a noun; 去世 is the verb "pass away"
+B3-0574^noun@E^high^ผู้ชมทั้งหมด; ทั้งสนาม^全场观众都站了起来。^Quánchǎng guānzhòng dōu zhàn le qǐlai.^ผู้ชมทั้งสนามลุกขึ้นยืน^high^
+B3-0575^adjective@E^high^รอบด้าน; ครอบคลุม^我们要全面地了解情况。^Wǒmen yào quánmiàn de liǎojiě qíngkuàng.^พวกเราต้องเข้าใจสถานการณ์อย่างรอบด้าน^high^
+B3-0576^noun@E^high^ทั่วโลก^这个问题引起了全球的关注。^Zhège wèntí yǐnqǐ le quánqiú de guānzhù.^ปัญหานี้ได้รับความสนใจจากทั่วโลก^high^
+B3-0577^verb@E^high^ขาด; ไม่พอ^我们还缺一个人。^Wǒmen hái quē yí ge rén.^พวกเรายังขาดอีกหนึ่งคน^high^
+B3-0578^noun@E^high^ข้อบกพร่อง^每个人都有缺点。^Měi ge rén dōu yǒu quēdiǎn.^ทุกคนล้วนมีข้อบกพร่อง^high^
+B3-0579^verb@E^high^ขาดแคลน^这里缺少水。^Zhèlǐ quēshǎo shuǐ.^ที่นี่ขาดแคลนน้ำ^high^
+B3-0580^verb@E^high^รับประกัน; ทำให้แน่ใจ^请确保所有门窗都关好。^Qǐng quèbǎo suǒyǒu ménchuāng dōu guān hǎo.^กรุณาตรวจให้แน่ใจว่าปิดประตูหน้าต่างทุกบานแล้ว^high^
+B3-0581^verb@E^high^กำหนดแน่นอน; ยืนยัน^开会的时间还没确定。^Kāihuì de shíjiān hái méi quèdìng.^เวลาประชุมยังไม่ได้กำหนดแน่นอน^high^
+B3-0582^adverb@L^medium^จริงๆ; แน่นอน^他确实很努力。^Tā quèshí hěn nǔlì.^เขาขยันจริงๆ^medium^source_gloss: "Exactly" is loose; 确实 means "indeed; truly" (adverb) / "true; reliable" (adjective)
+B3-0583^noun@E^high^กระโปรง^她穿了一条红裙子。^Tā chuān le yì tiáo hóng qúnzi.^เธอสวมกระโปรงสีแดงตัวหนึ่ง^high^
