@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B5-0554^noun@E^high^นักต้มตุ๋น; คนหลอกลวง^小心，那个人是骗子。^Xiǎoxīn, nàge rén shì piànzi.^ระวังนะ คนนั้นเป็นนักต้มตุ๋น^high^
+B5-0555^verb@E^high^ต่อ; สะกด; ทุ่มสุดตัว^为了考上大学，他拼了。^Wèile kǎoshàng dàxué, tā pīn le.^เพื่อสอบเข้ามหาวิทยาลัยให้ได้ เขาทุ่มสุดตัว^low^polysemy: "spell" (拼音) vs. "go all out" vs. "piece together" (拼图); example shows "go all out"
+B5-0556^noun@E^high^ช่อง (โทรทัศน์/วิทยุ)^这个频道有很多好节目。^Zhège píndào yǒu hěn duō hǎo jiémù.^ช่องนี้มีรายการดีๆ มากมาย^high^
+B5-0557^adjective@L^medium^บ่อยครั้ง; ถี่^最近他频繁地出差。^Zuìjìn tā pínfán de chūchāi.^ช่วงนี้เขาเดินทางไปทำงานบ่อยครั้ง^medium^source_gloss: "frequently" is adverbial; 频繁 is the adjective "frequent" used adverbially
+B5-0558^verb@E^high^ลิ้มรส; ชิม; ประเมิน; ระดับ; ชนิด^我们一起品一品这杯茶。^Wǒmen yìqǐ pǐn yi pǐn zhè bēi chá.^พวกเรามาลิ้มรสชาถ้วยนี้ด้วยกัน^low^polysemy: verb "savour; judge" vs. noun "grade; species; article" — very broad gloss; example shows "savour"
+B5-0559^other^low^สิ่งของ; ผลิตภัณฑ์ (ปัจจัย -ภัณฑ์)^这些工艺品是手工做的。^Zhèxiē gōngyìpǐn shì shǒugōng zuò de.^งานหัตถกรรมเหล่านี้ทำด้วยมือ^medium^pos_doubtful: suffix 品 has no matching POS in the enum; source_gloss: pinyin field carries an inline example "（gōng yì pǐn）"; variant: homograph split from B5-0558
+B5-0560^noun@E^high^พันธุ์; ชนิด^这种苹果是新品种。^Zhè zhǒng píngguǒ shì xīn pǐnzhǒng.^แอปเปิลชนิดนี้เป็นพันธุ์ใหม่^high^
+B5-0561^adjective@E^high^ราบเรียบ^这条路很平坦。^Zhè tiáo lù hěn píngtǎn.^ถนนสายนี้ราบเรียบมาก^high^
+B5-0562^noun@E^high^ที่ราบ^这里是一片大平原。^Zhèlǐ shì yí piàn dà píngyuán.^ที่นี่เป็นที่ราบกว้างใหญ่^high^
+B5-0563^verb@E^medium^ประเมิน; การประเมิน^我们需要评估一下风险。^Wǒmen xūyào pínggū yí xià fēngxiǎn.^พวกเราต้องประเมินความเสี่ยงหน่อย^high^
+B5-0564^verb@E^medium^วิจารณ์; ความคิดเห็น^大家都在评论这部电影。^Dàjiā dōu zài pínglùn zhè bù diànyǐng.^ทุกคนกำลังวิจารณ์ภาพยนตร์เรื่องนี้^medium^pos_doubtful: 评论 is both verb "comment" and noun "commentary"
+B5-0565^preposition@E^medium^อาศัย; โดย; ตาม^凭票入场。^Píng piào rùchǎng.^เข้างานโดยแสดงตั๋ว^medium^polysemy: preposition "by; based on" vs. verb "rely on" vs. conjunction "no matter" (凭你怎么说)
+B5-0566^verb@E^high^สาด^他把水泼在地上。^Tā bǎ shuǐ pō zài dì shang.^เขาสาดน้ำลงบนพื้น^medium^polysemy: verb "splash" vs. adjective "shrewish" (泼辣)
+B5-0567^noun@E^high^องุ่น^这串葡萄很甜。^Zhè chuàn pútao hěn tián.^องุ่นพวงนี้หวานมาก^high^
+B5-0568^noun@E^high^ไวน์องุ่น^我们喝一杯葡萄酒吧。^Wǒmen hē yì bēi pútaojiǔ ba.^พวกเราดื่มไวน์กันสักแก้วเถอะ^high^
+B5-0569^verb@E^medium^คาดหวัง; ความคาดหวัง^父母对孩子期望很高。^Fùmǔ duì háizi qīwàng hěn gāo.^พ่อแม่คาดหวังกับลูกไว้สูงมาก^medium^pos_doubtful: 期望 is both verb "hope; expect" and noun "expectation"
+B5-0570^adjective@E^high^ครบครัน^这家商店的商品很齐全。^Zhè jiā shāngdiàn de shāngpǐn hěn qíquán.^ร้านนี้มีสินค้าครบครัน^high^
+B5-0571^pronoun@E^high^ของเขา/เธอ/มัน; นั้น^这个问题我们要认真研究其原因。^Zhège wèntí wǒmen yào rènzhēn yánjiū qí yuányīn.^ปัญหานี้พวกเราต้องศึกษาสาเหตุของมันอย่างจริงจัง^medium^polysemy: possessive "his; her; its; their" vs. personal "he; it" vs. demonstrative "such; that"; literary
+B5-0572^verb@E^high^เริ่ม; เปิดเครื่อง^这个项目下个月启动。^Zhège xiàngmù xià ge yuè qǐdòng.^โครงการนี้จะเริ่มเดือนหน้า^medium^polysemy: "start (a machine)" vs. "launch (a project)"; example shows "launch"
+B5-0573^verb@E^medium^จุดประกาย; ให้แรงบันดาลใจ^他的话给了我很大的启发。^Tā de huà gěi le wǒ hěn dà de qǐfā.^คำพูดของเขาทำให้ฉันได้แง่คิดมาก^medium^pos_doubtful: 启发 is both verb "inspire" and noun "inspiration"; example shows the noun
+B5-0574^noun@E^high^ประกาศ (แจ้งความ)^墙上贴着一张招聘启事。^Qiáng shang tiē zhe yì zhāng zhāopìn qǐshì.^บนผนังติดประกาศรับสมัครงานไว้หนึ่งแผ่น^high^
+B5-0575^verb@E^high^มีบทบาท; ก่อให้เกิด (ผล)^这个方法起到了很好的作用。^Zhège fāngfǎ qǐdào le hěn hǎo de zuòyòng.^วิธีนี้มีบทบาทได้ผลดีมาก^high^
+B5-0576^adjective@E^medium^ขั้นต่ำ; อย่างน้อย^起码你应该说声谢谢。^Qǐmǎ nǐ yīnggāi shuō shēng xièxie.^อย่างน้อยคุณควรพูดขอบคุณสักคำ^medium^polysemy: adjective "minimum" vs. adverb "at least"; example shows the adverb
+B5-0577^noun@E^high^ก๊าซ^这种气体没有颜色。^Zhè zhǒng qìtǐ méiyǒu yánsè.^ก๊าซชนิดนี้ไม่มีสี^high^
+B5-0578^noun@E^medium^อุตุนิยมวิทยา; บรรยากาศ^他在气象台工作。^Tā zài qìxiàngtái gōngzuò.^เขาทำงานที่สถานีอุตุนิยมวิทยา^medium^source_gloss: "Meteorological" is adjectival; 气象 is the noun "meteorology; weather; atmosphere"
+B5-0580^verb@E^high^ลงนาม (สัญญา)^两家公司签订了合同。^Liǎng jiā gōngsī qiāndìng le hétong.^สองบริษัทลงนามในสัญญา^high^
+B5-0581^verb@E^medium^เซ็นชื่อ; ลายเซ็น^请在这里签名。^Qǐng zài zhèlǐ qiānmíng.^กรุณาเซ็นชื่อตรงนี้^medium^pos_doubtful: 签名 is both verb "sign" and noun "signature; autograph"
+B5-0582^verb@E^high^เซ็นสัญญา^他和这家公司签约了。^Tā hé zhè jiā gōngsī qiānyuē le.^เขาเซ็นสัญญากับบริษัทนี้แล้ว^high^
+B5-0583^noun@E^high^วีซ่า^我去中国需要办签证。^Wǒ qù Zhōngguó xūyào bàn qiānzhèng.^ฉันไปจีนต้องทำวีซ่า^high^
+B5-0584^verb@E^high^ลงลายมือชื่อ^请你在合同上签字。^Qǐng nǐ zài hétong shang qiānzì.^กรุณาลงลายมือชื่อในสัญญา^high^
+B5-0585^noun@E^high^อนาคต; ลู่ทาง^这个行业的前景很好。^Zhège hángyè de qiánjǐng hěn hǎo.^อุตสาหกรรมนี้มีลู่ทางที่ดี^high^
+B5-0586^noun@E^high^เงื่อนไขเบื้องต้น^健康是一切的前提。^Jiànkāng shì yíqiè de qiántí.^สุขภาพเป็นเงื่อนไขพื้นฐานของทุกสิ่ง^high^
+B5-0587^verb@E^high^ติดค้าง; เป็นหนี้^我还欠他一百块钱。^Wǒ hái qiàn tā yìbǎi kuài qián.^ฉันยังติดเงินเขาอยู่หนึ่งร้อยหยวน^high^
+B5-0588^noun@E^high^ปืน^警察手里拿着枪。^Jǐngchá shǒu li ná zhe qiāng.^ตำรวจถือปืนอยู่ในมือ^high^
+B5-0589^noun@E^high^ความแข็งแรง; ความเข้มข้น^这项工作的强度很大。^Zhè xiàng gōngzuò de qiángdù hěn dà.^งานนี้มีความหนักมาก^high^
+B5-0590^noun@E^high^ผนัง; กำแพง^墙壁上挂着一幅画。^Qiángbì shang guà zhe yì fú huà.^บนผนังแขวนภาพวาดไว้ภาพหนึ่ง^high^
+B5-0591^verb@E^high^ปล้น; แย่ง^他的包被人抢了。^Tā de bāo bèi rén qiǎng le.^กระเป๋าของเขาถูกคนกระชากไป^medium^polysemy: "rob" vs. "scramble for; rush" (抢着回答); variant: 抢 qiǎng
+B5-0592^verb@E^high^ช่วยชีวิต (ฉุกเฉิน)^医生正在抢救病人。^Yīshēng zhèngzài qiǎngjiù bìngrén.^หมอกำลังช่วยชีวิตผู้ป่วย^high^
+B5-0593^verb@E^high^บังคับ^你不能强迫他做不喜欢的事。^Nǐ bù néng qiǎngpò tā zuò bù xǐhuan de shì.^คุณบังคับให้เขาทำสิ่งที่ไม่ชอบไม่ได้^high^
+B5-0594^adverb@E^high^อย่างเงียบๆ^他悄悄地走了出去。^Tā qiāoqiāo de zǒu le chūqu.^เขาเดินออกไปอย่างเงียบๆ^high^
+B5-0595^verb@E^high^เคาะ^有人在敲窗户。^Yǒu rén zài qiāo chuānghu.^มีคนเคาะหน้าต่างอยู่^medium^polysemy: "knock; beat" vs. "rip off; overcharge" (敲竹杠)
+B5-0596^verb@E^high^เคาะประตู^进来之前请先敲门。^Jìnlai zhīqián qǐng xiān qiāomén.^ก่อนเข้ามากรุณาเคาะประตูก่อน^high^
+B5-0597^verb@E^low^ดู; มอง^你瞧，那是谁？^Nǐ qiáo, nà shì shéi?^คุณดูสิ นั่นใคร?^medium^source_gloss: gloss "look zither; a general name for certain musical" merges the next entry (琴); only "look" belongs to 瞧
+B5-0598^noun@E^low^เครื่องดนตรี (ประเภทพิณ เปียโน)^她每天练琴两个小时。^Tā měitiān liàn qín liǎng ge xiǎoshí.^เธอซ้อมเครื่องดนตรีวันละสองชั่วโมง^medium^source_gloss: gloss "instruments" is the tail of "zither; a general name for certain musical instruments" that spilled into the 瞧 row
+B5-0599^adjective@E^high^ขยันหมั่นเพียร^他是一个勤奋的学生。^Tā shì yí ge qínfèn de xuésheng.^เขาเป็นนักเรียนที่ขยันหมั่นเพียร^high^
+B5-0600^adjective@E^low^เขียว; คราม; หนุ่มสาว^他是一名青年教师。^Tā shì yì míng qīngnián jiàoshī.^เขาเป็นครูหนุ่ม^low^polysemy: colour "blue/green" vs. "young" (青年); source_gloss: "young" omits the colour sense; example uses compound 青年
+B5-0601^noun@E^high^รุ่งเช้า^每天清晨他都去跑步。^Měitiān qīngchén tā dōu qù pǎobù.^ทุกรุ่งเช้าเขาไปวิ่ง^high^
+B5-0602^verb@E^medium^จัดการ; เคลียร์; ทำความสะอาด^请把桌子上的东西清理一下。^Qǐng bǎ zhuōzi shang de dōngxi qīnglǐ yí xià.^กรุณาเคลียร์ของบนโต๊ะหน่อย^medium^source_gloss: "Clear" is ambiguous (adjective); 清理 is the verb "clear up; sort out"
+B5-0603^noun@E^high^โครงเรื่อง^这部小说的情节很复杂。^Zhè bù xiǎoshuō de qíngjié hěn fùzá.^โครงเรื่องของนวนิยายเล่มนี้ซับซ้อนมาก^medium^polysemy: "plot (of a story)" vs. "circumstances (of a case)"
+B5-0604^noun@E^high^สถานการณ์; สภาพ^当时的情形很危险。^Dāngshí de qíngxíng hěn wēixiǎn.^สถานการณ์ในตอนนั้นอันตรายมาก^high^
+B5-0605^adjective@E^high^แจ่มใส^今天天气晴朗。^Jīntiān tiānqì qínglǎng.^วันนี้อากาศแจ่มใส^high^
+B5-0606^noun@E^high^พื้นที่; ภูมิภาค^这个区域禁止停车。^Zhège qūyù jìnzhǐ tíngchē.^พื้นที่นี้ห้ามจอดรถ^high^
+B5-0607^adverb@E^high^ทั้งหมด; ทุกคน^他们全都来了。^Tāmen quán dōu lái le.^พวกเขามากันครบทุกคน^high^
+B5-0608^noun@E^high^ทั่วโลก^全世界的人都在关注这件事。^Quán shìjiè de rén dōu zài guānzhù zhè jiàn shì.^ผู้คนทั่วโลกต่างให้ความสนใจเรื่องนี้^high^
+B5-0609^noun@E^high^น้ำพุ; ตาน้ำ^山上有一眼清泉。^Shān shang yǒu yì yǎn qīngquán.^บนภูเขามีน้ำพุใสอยู่แห่งหนึ่ง^medium^example: bare 泉 is mostly bound (清泉, 泉水); sentence uses 清泉
+B5-0610^verb@E^high^ชักชวน; เกลี้ยกล่อม^我劝他别抽烟了。^Wǒ quàn tā bié chōuyān le.^ฉันเกลี้ยกล่อมให้เขาเลิกสูบบุหรี่^high^
+B5-0611^verb@E^high^ขาดแคลน^他缺乏工作经验。^Tā quēfá gōngzuò jīngyàn.^เขาขาดประสบการณ์การทำงาน^high^
+B5-0612^verb@E^high^สถาปนา; กำหนดให้มั่นคง^他确立了自己的目标。^Tā quèlì le zìjǐ de mùbiāo.^เขากำหนดเป้าหมายของตัวเองอย่างชัดเจน^high^
+B5-0613^noun@E^high^กลุ่ม (คน); ฝูง^年轻人是一个特殊的群体。^Niánqīngrén shì yí ge tèshū de qúntǐ.^คนหนุ่มสาวเป็นกลุ่มคนที่มีลักษณะพิเศษ^medium^polysemy: social "group" vs. biology "colony"
+B5-0614^noun@E^high^มวลชน^干部要多听群众的意见。^Gànbù yào duō tīng qúnzhòng de yìjiàn.^เจ้าหน้าที่ควรรับฟังความเห็นของมวลชนให้มาก^high^
+B5-0615^verb@E^high^ย้อม; ติด (โรค/นิสัย)^她把头发染成了红色。^Tā bǎ tóufa rǎn chéng le hóngsè.^เธอย้อมผมเป็นสีแดง^medium^polysemy: "dye" vs. "catch (a disease); acquire (a habit)" (染上)
+B5-0616^verb@L^medium^อ้อม; วน; พัน^前面在修路，我们得绕过去。^Qiánmiàn zài xiū lù, wǒmen děi rào guòqu.^ข้างหน้ากำลังซ่อมถนน พวกเราต้องอ้อมไป^medium^source_gloss: "Around" is a preposition; 绕 is the verb "go around; circle; wind"
+B5-0617^noun@E^high^แคลอรี; ปริมาณความร้อน^这种食物热量很高。^Zhè zhǒng shíwù rèliàng hěn gāo.^อาหารชนิดนี้มีแคลอรีสูง^high^
+B5-0618^adjective@E^medium^ฮิต; เป็นที่นิยม^这是今年最热门的专业。^Zhè shì jīnnián zuì rèmén de zhuānyè.^นี่เป็นสาขาวิชาที่ฮิตที่สุดในปีนี้^medium^source_gloss: English "Hot" is ambiguous (temperature); 热门 = popular; in demand
+B5-0619^noun@E^high^โลกมนุษย์^这里真是人间天堂。^Zhèlǐ zhēn shì rénjiān tiāntáng.^ที่นี่เป็นสวรรค์บนดินจริงๆ^high^
+B5-0620^noun@E^high^กำลังคน; แรงงานคน^这件事需要很多人力。^Zhè jiàn shì xūyào hěn duō rénlì.^เรื่องนี้ต้องใช้กำลังคนมาก^high^
+B5-0621^noun@E^high^บุคคล (ในวงการ)^各界人士都参加了会议。^Gèjiè rénshì dōu cānjiā le huìyì.^บุคคลจากทุกวงการเข้าร่วมการประชุม^high^
+B5-0622^noun@E^high^ตัวละคร; บุคคลสำคัญ^这部小说里的人物很生动。^Zhè bù xiǎoshuō li de rénwù hěn shēngdòng.^ตัวละครในนวนิยายเรื่องนี้มีชีวิตชีวามาก^medium^polysemy: "character (in fiction)" vs. "figure; personage"
+B5-0623^verb@E^high^อดทน; อดกลั้น^我实在忍不了了。^Wǒ shízài rěn bu liǎo le.^ฉันทนไม่ไหวแล้วจริงๆ^medium^polysemy: "endure; tolerate" vs. "have the heart to" (不忍心)
+B5-0624^verb@L^medium^อดไม่ได้; ทนไม่ไหว^听了这个笑话，大家都忍不住笑了。^Tīng le zhège xiàohua, dàjiā dōu rěnbuzhù xiào le.^พอฟังเรื่องตลกนี้ ทุกคนก็อดหัวเราะไม่ได้^high^
+B5-0625^verb@E^high^ทนรับ^我无法忍受这么吵的环境。^Wǒ wúfǎ rěnshòu zhème chǎo de huánjìng.^ฉันทนสภาพแวดล้อมที่เสียงดังแบบนี้ไม่ได้^high^
+B5-0626^verb@E^high^จำได้; รู้จัก; ยอมรับ; รับเป็น^我认不出他来了。^Wǒ rèn bu chū tā lái le.^ฉันจำเขาไม่ได้แล้ว^medium^polysemy: recognize / identify vs. adopt (认干妈) vs. admit (认错); example shows "recognize"
+B5-0627^verb@L^medium^ยืนยัน; วินิจฉัย; เชื่อมั่นว่า^大家认定他是最好的人选。^Dàjiā rèndìng tā shì zuì hǎo de rénxuǎn.^ทุกคนเชื่อมั่นว่าเขาเป็นผู้ที่เหมาะสมที่สุด^medium^source_gloss: "cognizance" is a rare noun; 认定 is the verb "firmly believe; determine"
+B5-0628^verb@E^high^โยน; ทิ้ง^不要乱扔垃圾。^Búyào luàn rēng lājī.^อย่าทิ้งขยะเกลื่อนกลาด^medium^polysemy: "throw; toss" vs. "throw away"
+B5-0629^adverb@E^high^ยังคง^他仍旧住在那里。^Tā réngjiù zhù zài nàlǐ.^เขายังคงอาศัยอยู่ที่นั่น^high^
+B5-0630^pronoun@L^medium^เช่นนี้; อย่างนี้^原来如此！^Yuánlái rúcǐ!^ที่แท้ก็เป็นอย่างนี้นี่เอง!^high^
+B5-0631^verb@E^high^ดุจ; เหมือนกับ^老师对我们如同对自己的孩子。^Lǎoshī duì wǒmen rútóng duì zìjǐ de háizi.^ครูดูแลพวกเราเหมือนกับลูกของตัวเอง^high^
+B5-0632^verb@L^medium^ดังต่อไปนี้^具体要求如下。^Jùtǐ yāoqiú rúxià.^ข้อกำหนดโดยละเอียดมีดังต่อไปนี้^medium^pos_doubtful: 如下 is a fixed verb phrase "be as follows"
+B5-0633^noun@E^medium^เบื้องต้น; ขั้นพื้นฐาน; เข้าใจพื้นฐาน^这是一本汉语入门书。^Zhè shì yì běn Hànyǔ rùmén shū.^นี่เป็นหนังสือภาษาจีนเบื้องต้น^medium^polysemy: noun "introduction; primer" vs. verb "learn the basics" (很快就入门了)
+B5-0634^adjective@E^high^นุ่ม; อ่อน^这张床很软。^Zhè zhāng chuáng hěn ruǎn.^เตียงนี้นุ่มมาก^medium^polysemy: "soft" vs. "weak; feeble" (腿软) vs. "soft-hearted"
+B5-0635^noun@E^high^ซอฟต์แวร์^我需要安装这个软件。^Wǒ xūyào ānzhuāng zhège ruǎnjiàn.^ฉันต้องติดตั้งซอฟต์แวร์นี้^high^
+B5-0636^verb@E^high^โปรย; พรม; หก^他在地上洒了一些水。^Tā zài dì shang sǎ le yìxiē shuǐ.^เขาพรมน้ำลงบนพื้นเล็กน้อย^medium^polysemy: "sprinkle" (on purpose) vs. "spill" (accidentally)
+B5-0637^adjective@E^high^หลวม; กระจัดกระจาย^书包带子散了。^Shūbāo dàizi sǎn le.^สายกระเป๋านักเรียนหลุดแล้ว^medium^variant: 散 sǎn (loose; fall apart) vs. 散 sàn (B4-0608, disperse) split by tone
+B5-0638^noun@E^high^ร้อยแก้ว; ความเรียง^他写了一篇散文。^Tā xiě le yì piān sǎnwén.^เขาเขียนความเรียงไว้หนึ่งเรื่อง^high^
+B5-0639^verb@E^high^ฆ่า^我们不应该杀动物。^Wǒmen bù yīnggāi shā dòngwù.^พวกเราไม่ควรฆ่าสัตว์^high^
+B5-0640^verb@E^high^กำจัดไวรัส^电脑需要杀毒。^Diànnǎo xūyào shādú.^คอมพิวเตอร์ต้องสแกนกำจัดไวรัส^high^
+B5-0641^noun@E^high^ทะเลทราย^沙漠里很少下雨。^Shāmò li hěn shǎo xià yǔ.^ในทะเลทรายฝนตกน้อยมาก^high^
+B5-0642^adjective@E^high^โง่; เซ่อ^你真傻！^Nǐ zhēn shǎ!^คุณนี่โง่จริงๆ!^high^
+B5-0643^noun@E^high^พื้นที่ภูเขา^他在山区当老师。^Tā zài shānqū dāng lǎoshī.^เขาเป็นครูอยู่ในพื้นที่ภูเขา^high^
+B5-0644^verb@E^high^พัด; ตบ; กระพือ^她用手扇了扇风。^Tā yòng shǒu shān le shān fēng.^เธอใช้มือพัดลม^medium^polysemy: "fan" vs. "slap" (扇耳光) vs. "flap"; variant: 扇 shān (verb) vs. 扇 shàn (B5-0645, noun/measure word)
+B5-0645^measure_word@L^medium^บาน (ลักษณนามของประตู/หน้าต่าง); พัด^请关上那扇门。^Qǐng guānshang nà shàn mén.^กรุณาปิดประตูบานนั้น^medium^polysemy: noun "fan" vs. measure word for doors/windows; variant: 扇 shàn vs. 扇 shān (B5-0644)
+B5-0646^noun@E^high^พัด^天太热了，给我一把扇子。^Tiān tài rè le, gěi wǒ yì bǎ shànzi.^อากาศร้อนเกินไป ขอพัดให้ฉันหนึ่งอัน^high^
+B5-0647^noun@E^high^เครื่องหมายการค้า^这是我们公司的商标。^Zhè shì wǒmen gōngsī de shāngbiāo.^นี่คือเครื่องหมายการค้าของบริษัทเรา^high^
+B5-0648^noun@E^low^ผู้บังคับบัญชา; หน่วยงานระดับสูง^这件事要请示上级。^Zhè jiàn shì yào qǐngshì shàngjí.^เรื่องนี้ต้องขอคำสั่งจากผู้บังคับบัญชา^medium^source_gloss: gloss "Superior up and down; top and bottom; high and low; old" merges the next entry (上下); only "Superior" belongs to 上级
+B5-0649^noun@E^low^บนล่าง; ขึ้นลง; ราวๆ^全家上下都很高兴。^Quánjiā shàngxià dōu hěn gāoxìng.^ทั้งครอบครัวตั้งแต่ผู้ใหญ่ถึงเด็กต่างดีใจ^medium^source_gloss: gloss "and young" is the tail of "old and young" that spilled into the 上级 row; polysemy: also "about; approximately" (四十岁上下)
+B5-0650^verb@E^high^ขึ้น (ราคา/ระดับน้ำ)^最近物价上涨了。^Zuìjìn wùjià shàngzhǎng le.^ช่วงนี้ราคาสินค้าขึ้น^high^
+B5-0651^adverb@E^high^เล็กน้อย; นิดหน่อย^请稍等一下。^Qǐng shāo děng yí xià.^กรุณารอสักครู่^high^
+B5-0652^adverb@E^high^เล็กน้อย^今天比昨天稍微暖和一点儿。^Jīntiān bǐ zuótiān shāowēi nuǎnhuo yìdiǎnr.^วันนี้อุ่นกว่าเมื่อวานเล็กน้อย^high^
+B5-0653^noun@E^high^งู^草地里有一条蛇。^Cǎodì li yǒu yì tiáo shé.^ในสนามหญ้ามีงูอยู่ตัวหนึ่ง^high^
+B5-0654^verb@E^high^เสียดาย (ไม่อยากจาก/ไม่อยากใช้)^我舍不得离开这里。^Wǒ shěbude líkāi zhèlǐ.^ฉันไม่อยากจากที่นี่ไป^medium^polysemy: "hate to part with" vs. "grudge spending/using" (舍不得花钱)
