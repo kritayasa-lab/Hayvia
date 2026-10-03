@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B3-0794^verb@E^high^หายไป; สูญหาย^他很快就消失在人群中了。^Tā hěn kuài jiù xiāoshī zài rénqún zhōng le.^ไม่นานเขาก็หายไปในฝูงชน^high^
+B3-0795^noun@E^high^ข่าว; ข่าวสาร; ข้อความ^我有一个好消息告诉你。^Wǒ yǒu yí ge hǎo xiāoxi gàosu nǐ.^ฉันมีข่าวดีจะบอกคุณ^medium^source_gloss: "message" is narrow; 消息 mainly means "news; information"
+B3-0796^noun@E^high^ผล; ประสิทธิผล^这种药的效果很好。^Zhè zhǒng yào de xiàoguǒ hěn hǎo.^ยาชนิดนี้ได้ผลดีมาก^high^
+B3-0797^verb@E^medium^การเขียน; เขียน (งานประพันธ์)^他的写作水平很高。^Tā de xiězuò shuǐpíng hěn gāo.^ทักษะการเขียนของเขาสูงมาก^medium^pos_doubtful: 写作 is verb "write (compositions)" and noun "writing"; example shows the noun
+B3-0798^noun@E^high^เลือด^他的手流血了。^Tā de shǒu liú xuè le.^มือของเขามีเลือดไหล^high^
+B3-0799^noun@E^high^หัวใจ; จิตใจ; ใจกลาง^她的心很善良。^Tā de xīn hěn shànliáng.^จิตใจของเธอดีงามมาก^medium^polysemy: heart / feeling / centre / core combined; example shows "heart (mind)"
+B3-0801^noun@E^high^ซองจดหมาย^请把信放进信封里。^Qǐng bǎ xìn fàng jìn xìnfēng li.^กรุณาใส่จดหมายลงในซอง^high^
+B3-0802^verb@E^medium^ไว้วางใจ; ความไว้วางใจ^我很信任他。^Wǒ hěn xìnrèn tā.^ฉันไว้ใจเขามาก^high^
+B3-0803^noun@E^high^กระเป๋าเดินทาง; สัมภาระ^你的行李太重了。^Nǐ de xíngli tài zhòng le.^สัมภาระของคุณหนักเกินไป^high^
+B3-0804^verb@L^medium^ก่อตัว; ก่อให้เกิด^好习惯是慢慢形成的。^Hǎo xíguàn shì mànmàn xíngchéng de.^นิสัยที่ดีค่อยๆ ก่อตัวขึ้นทีละน้อย^medium^source_gloss: "formation" is a noun; 形成 is mainly the verb "form; take shape"
+B3-0805^noun@E^high^รูปแบบ^这次考试的形式很新。^Zhè cì kǎoshì de xíngshì hěn xīn.^รูปแบบการสอบครั้งนี้ใหม่มาก^high^
+B3-0806^noun@E^high^ภาพลักษณ์^他很注意自己的形象。^Tā hěn zhùyì zìjǐ de xíngxiàng.^เขาใส่ใจภาพลักษณ์ของตัวเองมาก^high^
+B3-0807^noun@E^high^รูปร่าง; รูปทรง^这块石头的形状很奇怪。^Zhè kuài shítou de xíngzhuàng hěn qíguài.^หินก้อนนี้มีรูปร่างแปลกมาก^high^
+B3-0808^noun@E^medium^ความสุข; มีความสุข^祝你们幸福！^Zhù nǐmen xìngfú!^ขอให้พวกคุณมีความสุข!^medium^pos_doubtful: 幸福 is noun "happiness" and adjective "happy"; example is ambiguous between them
+B3-0809^adjective@E^high^โชคดี^你真幸运！^Nǐ zhēn xìngyùn!^คุณโชคดีจริงๆ!^high^
+B3-0810^other^low^-ภาพ; -นิยม; ลักษณะ (ปัจจัยสร้างคำนามนามธรรม)^他学习的积极性很高。^Tā xuéxí de jījíxìng hěn gāo.^ความกระตือรือร้นในการเรียนของเขาสูงมาก^medium^pos_doubtful: suffix has no matching POS in the enum; source_gloss: pinyin field carries an inline example "（jī jí xìng）"
+B3-0811^noun@E^high^เพศ^请在表上写你的性别。^Qǐng zài biǎo shang xiě nǐ de xìngbié.^กรุณาเขียนเพศของคุณลงในแบบฟอร์ม^high^
+B3-0812^noun@E^high^นิสัย; บุคลิก^她的性格很开朗。^Tā de xìnggé hěn kāilǎng.^เธอมีนิสัยร่าเริงมาก^high^
+B3-0813^verb@E^high^ซ่อม; สร้าง; ตกแต่ง; ศึกษา^我的自行车坏了，得去修一下。^Wǒ de zìxíngchē huài le, děi qù xiū yí xià.^จักรยานของฉันเสีย ต้องไปซ่อมหน่อย^medium^polysemy: repair / build / embellish / study combined; example shows "repair"
+B3-0814^verb@E^high^แก้ไข; ปรับปรุง^请修改一下你的文章。^Qǐng xiūgǎi yí xià nǐ de wénzhāng.^กรุณาแก้ไขบทความของคุณหน่อย^high^
+B3-0815^noun@E^high^ความต้องการ; อุปสงค์^市场需求越来越大。^Shìchǎng xūqiú yuè lái yuè dà.^ความต้องการของตลาดเพิ่มขึ้นเรื่อยๆ^high^
+B3-0816^verb@E^medium^ต้องการ; ความต้องการ^我需要你的帮助。^Wǒ xūyào nǐ de bāngzhù.^ฉันต้องการความช่วยเหลือของคุณ^high^
+B3-0817^verb@E^high^ประกาศ^老师宣布了考试成绩。^Lǎoshī xuānbù le kǎoshì chéngjì.^ครูประกาศผลสอบแล้ว^high^
+B3-0818^verb@L^medium^ประชาสัมพันธ์; โฆษณาเผยแพร่^我们要多宣传环保知识。^Wǒmen yào duō xuānchuán huánbǎo zhīshi.^พวกเราต้องประชาสัมพันธ์ความรู้ด้านสิ่งแวดล้อมให้มาก^medium^source_gloss: "Propaganda" carries a negative English connotation; 宣传 is neutral "publicize; promote"
+B3-0819^noun@E^high^ผู้เข้าแข่งขัน; นักกีฬา^这位选手跑得很快。^Zhè wèi xuǎnshǒu pǎo de hěn kuài.^ผู้เข้าแข่งขันคนนี้วิ่งเร็วมาก^high^
+B3-0820^noun@E^high^ค่าเล่าเรียน^这所大学的学费很贵。^Zhè suǒ dàxué de xuéfèi hěn guì.^ค่าเล่าเรียนของมหาวิทยาลัยนี้แพงมาก^high^
+B3-0821^verb@E^high^ฝึก; ฝึกซ้อม^运动员每天都要训练。^Yùndòngyuán měitiān dōu yào xùnliàn.^นักกีฬาต้องฝึกซ้อมทุกวัน^high^
+B3-0822^verb@E^high^กด; ทับ; ระงับ^别压坏了我的蛋糕。^Bié yā huài le wǒ de dàngāo.^อย่าทับเค้กของฉันจนเสีย^medium^polysemy: press / push / keep under control / bear down combined; example shows "press"
+B3-0823^noun@E^high^ความกดดัน; แรงดัน^最近工作压力很大。^Zuìjìn gōngzuò yālì hěn dà.^ช่วงนี้งานกดดันมาก^high^
+B3-0824^noun@E^high^ควัน; บุหรี่^他不抽烟。^Tā bù chōu yān.^เขาไม่สูบบุหรี่^medium^polysemy: smoke / tobacco (cigarette) / verb "be irritated by smoke" combined; example shows "cigarette"
+B3-0825^noun@E^high^ตรงหน้า; ขณะนี้^眼前最重要的是休息。^Yǎnqián zuì zhòngyào de shì xiūxi.^ขณะนี้สิ่งที่สำคัญที่สุดคือการพักผ่อน^medium^polysemy: spatial "before one's eyes" vs. temporal "at present"; example shows "at present"
+B3-0826^verb@E^high^แสดง^他在电影里演一个医生。^Tā zài diànyǐng li yǎn yí ge yīshēng.^เขาแสดงเป็นหมอในภาพยนตร์^high^
+B3-0827^verb@E^high^ร้องเพลง (บนเวที)^她演唱了一首中文歌。^Tā yǎnchàng le yì shǒu Zhōngwén gē.^เธอร้องเพลงภาษาจีนหนึ่งเพลง^high^
+B3-0828^noun@E^high^คอนเสิร์ต^我买了两张演唱会的票。^Wǒ mǎi le liǎng zhāng yǎnchànghuì de piào.^ฉันซื้อตั๋วคอนเสิร์ตสองใบ^high^
+B3-0829^noun@E^medium^การแสดง; แสดง^今晚的演出很精彩。^Jīnwǎn de yǎnchū hěn jīngcǎi.^การแสดงคืนนี้ยอดเยี่ยมมาก^high^
+B3-0830^noun@E^high^นักแสดง^她是一位有名的演员。^Tā shì yí wèi yǒumíng de yǎnyuán.^เธอเป็นนักแสดงที่มีชื่อเสียง^high^
+B3-0831^noun@E^high^แกะ; แพะ^山上有很多羊。^Shān shang yǒu hěn duō yáng.^บนภูเขามีแกะมากมาย^high^
+B3-0832^noun@E^high^แสงแดด^今天阳光很好。^Jīntiān yángguāng hěn hǎo.^วันนี้แดดดีมาก^high^
+B3-0833^conjunction@E^high^ถ้า^要是明天不下雨，我们就去爬山。^Yàoshi míngtiān bú xià yǔ, wǒmen jiù qù páshān.^ถ้าพรุ่งนี้ฝนไม่ตก พวกเราก็จะไปปีนเขา^high^
+B3-0834^noun@E^high^ไม้แขวนเสื้อ; ราวแขวนเสื้อ^请把衣服挂在衣架上。^Qǐng bǎ yīfu guà zài yījià shang.^กรุณาแขวนเสื้อไว้บนไม้แขวนเสื้อ^high^
+B3-0835^pronoun@L^high^ทุกสิ่ง; ทั้งหมด^祝你一切顺利！^Zhù nǐ yíqiè shùnlì!^ขอให้ทุกสิ่งราบรื่น!^high^
+B3-0836^adverb@E^high^แล้ว^他已离开北京。^Tā yǐ líkāi Běijīng.^เขาออกจากปักกิ่งไปแล้ว^medium^source_gloss: "afterwards" is a rare literary sense; core is "already"
+B3-0837^noun@L^medium^ตั้งแต่...มา^来中国以来，我交了很多朋友。^Lái Zhōngguó yǐlái, wǒ jiāo le hěn duō péngyou.^ตั้งแต่มาจีน ฉันได้เพื่อนมากมาย^medium^pos_doubtful: post-clausal 以来 is a locative/time noun ("since"), not a preposition
+B3-0838^conjunction@L^medium^ด้านหนึ่ง^一方面我想去，另一方面又没时间。^Yì fāngmiàn wǒ xiǎng qù, lìng yì fāngmiàn yòu méi shíjiān.^ด้านหนึ่งฉันอยากไป แต่อีกด้านหนึ่งก็ไม่มีเวลา^high^
+B3-0839^noun@E^high^ศิลปะ^他对艺术很感兴趣。^Tā duì yìshù hěn gǎn xìngqù.^เขาสนใจศิลปะมาก^high^
+B3-0840^noun@E^medium^อุบัติเหตุ; ไม่คาดคิด^他出了意外，住院了。^Tā chū le yìwài, zhùyuàn le.^เขาประสบอุบัติเหตุ ต้องเข้าโรงพยาบาล^medium^polysemy: noun "accident; mishap" vs. adjective "unexpected" (很意外)
+B3-0841^noun@E^high^ความหมาย; ความสำคัญ^这件事很有意义。^Zhè jiàn shì hěn yǒu yìyì.^เรื่องนี้มีความหมายมาก^high^
+B3-0842^conjunction@E^high^ดังนั้น^他生病了，因此没来上课。^Tā shēngbìng le, yīncǐ méi lái shàngkè.^เขาป่วย ดังนั้นจึงไม่ได้มาเรียน^high^
+B3-0843^noun@E^high^เงิน (โลหะ)^这个戒指是银的。^Zhège jièzhi shì yín de.^แหวนวงนี้เป็นเงิน^high^
+B3-0844^noun@E^high^เหรียญเงิน^他在比赛中得了银牌。^Tā zài bǐsài zhōng dé le yínpái.^เขาได้เหรียญเงินในการแข่งขัน^high^
+B3-0845^noun@E^high^ความประทับใจ^北京给我留下了很深的印象。^Běijīng gěi wǒ liúxià le hěn shēn de yìnxiàng.^ปักกิ่งทิ้งความประทับใจลึกซึ้งไว้ให้ฉัน^high^
+B3-0846^auxiliary@L^high^ควร; ควรจะ^我们应当遵守交通规则。^Wǒmen yīngdāng zūnshǒu jiāotōng guīzé.^พวกเราควรปฏิบัติตามกฎจราจร^high^
+B3-0847^verb@E^high^ต้อนรับ; ไปรับ^我们去机场迎接客人。^Wǒmen qù jīchǎng yíngjiē kèrén.^พวกเราไปต้อนรับแขกที่สนามบิน^medium^source_gloss: "meet, pick, welcome" is garbled ("pick" likely "pick up")
+B3-0848^noun@E^high^โภชนาการ; สารอาหาร^多吃蔬菜很有营养。^Duō chī shūcài hěn yǒu yíngyǎng.^กินผักมากๆ มีคุณค่าทางโภชนาการ^high^
+B3-0849^verb@E^high^ชนะ^我们队赢了比赛。^Wǒmen duì yíng le bǐsài.^ทีมของเราชนะการแข่งขัน^high^
+B3-0850^noun@E^high^ภาพยนตร์และโทรทัศน์^他在一家影视公司工作。^Tā zài yì jiā yǐngshì gōngsī gōngzuò.^เขาทำงานในบริษัทภาพยนตร์และโทรทัศน์^high^
+B3-0851^verb@E^medium^นำไปใช้; การประยุกต์ใช้; แอปพลิเคชัน^这项技术已经应用到生活中了。^Zhè xiàng jìshù yǐjīng yìngyòng dào shēnghuó zhōng le.^เทคโนโลยีนี้ถูกนำมาใช้ในชีวิตประจำวันแล้ว^medium^polysemy: verb "apply; use" vs. noun "application (incl. app)"; example shows the verb
+B3-0852^noun@E^high^ข้อดี; จุดเด่น^他的优点是很认真。^Tā de yōudiǎn shì hěn rènzhēn.^ข้อดีของเขาคือความตั้งใจจริง^high^
+B3-0853^noun@E^high^ความได้เปรียบ; จุดแข็ง^我们队有很大的优势。^Wǒmen duì yǒu hěn dà de yōushì.^ทีมของเรามีความได้เปรียบมาก^high^
+B3-0854^preposition@E^high^จาก; โดย^这件事由我负责。^Zhè jiàn shì yóu wǒ fùzé.^เรื่องนี้ฉันเป็นผู้รับผิดชอบ^medium^polysemy: preposition "from" vs. "by (agent)"; example shows "by", gloss gives "from"
+B3-0855^conjunction@E^high^เนื่องจาก^由于天气不好，比赛推迟了。^Yóuyú tiānqì bù hǎo, bǐsài tuīchí le.^เนื่องจากอากาศไม่ดี การแข่งขันจึงถูกเลื่อนออกไป^high^
+B3-0856^noun@E^high^ไปรษณียภัณฑ์; จดหมาย; อีเมล^我收到了一封邮件。^Wǒ shōudào le yì fēng yóujiàn.^ฉันได้รับจดหมายหนึ่งฉบับ^medium^polysemy: "postal mail" vs. modern "e-mail"; example ambiguous between them
+B3-0857^noun@E^high^แสตมป์^我喜欢集邮票。^Wǒ xǐhuan jí yóupiào.^ฉันชอบสะสมแสตมป์^high^
+B3-0858^noun@E^high^ตู้ไปรษณีย์; อีเมล (กล่องจดหมาย)^请告诉我你的邮箱地址。^Qǐng gàosu wǒ nǐ de yóuxiāng dìzhǐ.^กรุณาบอกที่อยู่อีเมลของคุณให้ฉันหน่อย^medium^polysemy: physical "postbox" vs. "e-mail inbox/address"; example shows e-mail
+B3-0859^verb@E^high^ว่ายน้ำ; ท่องเที่ยว^小鱼在水里游来游去。^Xiǎo yú zài shuǐ li yóu lái yóu qù.^ปลาตัวเล็กว่ายไปว่ายมาในน้ำ^medium^polysemy: swim / wander / travel / tour combined; example shows "swim"
+B3-0860^noun@E^high^เกม^孩子们在玩游戏。^Háizimen zài wán yóuxì.^เด็กๆ กำลังเล่นเกม^high^
+B3-0861^verb@L^medium^ว่ายน้ำ^我每个周末都去游泳。^Wǒ měi ge zhōumò dōu qù yóuyǒng.^ฉันไปว่ายน้ำทุกสุดสัปดาห์^medium^pos_doubtful: gloss "Swimming" is a noun; 游泳 is used as verb "swim" and noun "swimming"
+B3-0862^verb@E^high^มีเหลือเฟือ^时间有的是，别着急。^Shíjiān yǒudeshì, bié zháojí.^เวลามีเหลือเฟือ ไม่ต้องรีบ^high^
+B3-0863^adjective@E^high^เป็นประโยชน์; ได้เปรียบ^这个决定对我们很有利。^Zhège juédìng duì wǒmen hěn yǒulì.^การตัดสินใจนี้เป็นประโยชน์ต่อพวกเรามาก^high^
+B3-0864^adjective@E^high^ได้ผล; ใช้ได้ (มีผลบังคับ)^这张票三天内有效。^Zhè zhāng piào sān tiān nèi yǒuxiào.^ตั๋วใบนี้ใช้ได้ภายในสามวัน^medium^polysemy: "effective" vs. "valid"; example shows "valid"
+B3-0865^verb@L^medium^พยากรณ์; การพยากรณ์^天气预报说明天有雨。^Tiānqì yùbào shuō míngtiān yǒu yǔ.^พยากรณ์อากาศบอกว่าพรุ่งนี้ฝนตก^medium^pos_doubtful: 预报 is verb "forecast" and noun "forecast"; example uses compound noun 天气预报
+B3-0866^verb@L^medium^ป้องกัน^冬天要预防感冒。^Dōngtiān yào yùfáng gǎnmào.^ฤดูหนาวต้องป้องกันไข้หวัด^medium^source_gloss: "Prevention" is a noun; 预防 is mainly the verb "prevent"
+B3-0867^verb@E^high^คาดการณ์; ประมาณการ^预计明天下午到达。^Yùjì míngtiān xiàwǔ dàodá.^คาดว่าจะถึงบ่ายพรุ่งนี้^high^
+B3-0868^verb@E^low^เตรียมบทเรียนล่วงหน้า^上课前要预习课文。^Shàngkè qián yào yùxí kèwén.^ก่อนเรียนต้องเตรียมบทเรียนล่วงหน้า^medium^source_gloss: gloss "Preview a person engaged in some field of activity" merges the next entry (员); only "Preview" belongs to 预习
+B3-0869^other^low^ผู้ทำหน้าที่...; -กร (ปัจจัยบอกบุคคลในหน้าที่)^服务员，请给我一杯水。^Fúwùyuán, qǐng gěi wǒ yì bēi shuǐ.^พนักงานครับ ขอน้ำหนึ่งแก้ว^medium^pos_doubtful: suffix has no matching POS in the enum; source_gloss: pinyin carries the example "（fúwùyuán）" and the meaning spilled into the 预习 row
+B3-0870^noun@E^high^พนักงาน^公司有一百多名员工。^Gōngsī yǒu yìbǎi duō míng yuángōng.^บริษัทมีพนักงานกว่าหนึ่งร้อยคน^high^
+B3-0871^noun@E^high^ความปรารถนา^我的愿望是环游世界。^Wǒ de yuànwàng shì huányóu shìjiè.^ความปรารถนาของฉันคือการเดินทางรอบโลก^high^
+B3-0872^verb@E^high^นัดหมาย; ข้อตกลง; จำกัด^我约了朋友一起吃饭。^Wǒ yuē le péngyou yìqǐ chīfàn.^ฉันนัดเพื่อนไปกินข้าวด้วยกัน^medium^polysemy: appointment / agreement / arrange / restrict combined; also adverb "about" (约十人); example shows "arrange to meet"
+B3-0873^noun@E^high^วงดนตรี^他在乐队里弹吉他。^Tā zài yuèduì li tán jítā.^เขาเล่นกีตาร์ในวงดนตรี^high^
+B3-0874^verb@E^medium^ขนส่ง; การขนส่ง^这些货物用火车运输。^Zhèxiē huòwù yòng huǒchē yùnshū.^สินค้าเหล่านี้ขนส่งทางรถไฟ^high^
+B3-0875^noun@E^high^นิตยสาร^我每个月都买这本杂志。^Wǒ měi ge yuè dōu mǎi zhè běn zázhì.^ฉันซื้อนิตยสารเล่มนี้ทุกเดือน^high^
+B3-0876^adverb@E^high^นานมาแล้ว^我早已忘了这件事。^Wǒ zǎoyǐ wàng le zhè jiàn shì.^ฉันลืมเรื่องนี้ไปนานแล้ว^high^
+B3-0877^verb@E^high^สร้าง; ผลิต^这座桥是去年造的。^Zhè zuò qiáo shì qùnián zào de.^สะพานนี้สร้างเมื่อปีที่แล้ว^high^
+B3-0878^verb@E^high^ก่อให้เกิด (มักเป็นผลเสีย)^大雨造成了交通堵塞。^Dà yǔ zàochéng le jiāotōng dǔsè.^ฝนตกหนักทำให้การจราจรติดขัด^high^
+B3-0879^noun@E^high^ความรับผิดชอบ^这是我的责任。^Zhè shì wǒ de zérèn.^นี่เป็นความรับผิดชอบของฉัน^high^
+B3-0880^verb@E^high^เพิ่มขึ้น^学生人数增加了。^Xuésheng rénshù zēngjiā le.^จำนวนนักเรียนเพิ่มขึ้นแล้ว^high^
+B3-0881^verb@E^high^เพิ่มขึ้น; เติบโต^今年的收入增长了百分之十。^Jīnnián de shōurù zēngzhǎng le bǎi fēn zhī shí.^รายได้ปีนี้เพิ่มขึ้นร้อยละสิบ^high^
+B3-0882^verb@E^medium^คลี่ออก; เปิด (ฉาก); ดำเนินการ^讨论在大家之间展开了。^Tǎolùn zài dàjiā zhījiān zhǎnkāi le.^การอภิปรายเริ่มขึ้นระหว่างทุกคน^medium^source_gloss: "Open" is loose; 展开 means "unfold; spread out; launch (an activity)"
+B3-0883^measure_word@L^low^แผ่น; ใบ (ลักษณนามของสิ่งแบน); แซ่จาง^我买了两张电影票。^Wǒ mǎi le liǎng zhāng diànyǐng piào.^ฉันซื้อตั๋วหนังสองใบ^low^source_gloss: gloss "Zhang" (surname) omits the core measure word for flat objects and verb "open"; polysemy: unrelated senses
+B3-0884^verb@E^medium^สะท้อน; ส่อง; ถ่าย (รูป); ตาม^她在镜子前照了照。^Tā zài jìngzi qián zhào le zhào.^เธอส่องกระจกดูตัวเอง^medium^polysemy: reflect / shine / take (photo) / preposition "according to" combined; example shows "reflect (in a mirror)"
+B3-0885^other^low^ผู้...; (ปัจจัยบอกผู้กระทำ)^他是一名志愿者。^Tā shì yì míng zhìyuànzhě.^เขาเป็นอาสาสมัคร^medium^pos_doubtful: suffix has no matching POS in the enum; source_gloss: pinyin field holds "zhě （zhì yuàn zhě） suffix (volunteer)" and meaning_english is empty — malformed row
+B3-0886^adjective@E^high^จริง; แท้จริง^这是一个真实的故事。^Zhè shì yí ge zhēnshí de gùshi.^นี่เป็นเรื่องจริง^high^
+B3-0887^verb@E^high^แย่งชิง; โต้เถียง; ต่อสู้^两个孩子在争一个玩具。^Liǎng ge háizi zài zhēng yí ge wánjù.^เด็กสองคนกำลังแย่งของเล่นกัน^medium^polysemy: contend / dispute / fight / strive combined; example shows "fight over"
+B3-0888^verb@E^high^พยายามให้ได้มา^我们要争取更好的成绩。^Wǒmen yào zhēngqǔ gèng hǎo de chéngjì.^พวกเราต้องพยายามให้ได้ผลการเรียนที่ดียิ่งขึ้น^high^
+B3-0889^adjective@E^high^ทั้งหมด; เต็ม; ครบ^我等了你整整一个小时。^Wǒ děng le nǐ zhěngzhěng yí ge xiǎoshí.^ฉันรอคุณมาเต็มๆ หนึ่งชั่วโมง^medium^polysemy: adjective "whole" vs. verb "tidy; fix"; example uses reduplicated 整整
+B3-0890^adjective@L^medium^ทั้ง; ทั้งหมด^整个下午他都在睡觉。^Zhěnggè xiàwǔ tā dōu zài shuìjiào.^เขานอนตลอดทั้งบ่าย^high^
+B3-0891^verb@L^medium^จัดระเบียบ; จัดเก็บ^我在整理房间。^Wǒ zài zhěnglǐ fángjiān.^ฉันกำลังจัดห้อง^medium^source_gloss: "Arrangement" is a noun; 整理 is the verb "tidy up; sort out"
+B3-0892^adjective@E^high^เป็นระเบียบ^他的房间很整齐。^Tā de fángjiān hěn zhěngqí.^ห้องของเขาเป็นระเบียบมาก^high^
+B3-0893^noun@E^high^ภาพรวม; ทั้งหมด^从整体来看，这个计划不错。^Cóng zhěngtǐ lái kàn, zhège jìhuà búcuò.^ดูจากภาพรวมแล้ว แผนนี้ไม่เลว^high^
+B3-0894^noun@E^high^ตลอดทั้งวัน^他整天都在玩手机。^Tā zhěngtiān dōu zài wán shǒujī.^เขาเล่นโทรศัพท์ทั้งวัน^high^
