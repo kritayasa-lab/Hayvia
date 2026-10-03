@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B4-0129^adjective@E^high^สะเพร่า; ไม่รอบคอบ^他太粗心了，又写错了。^Tā tài cūxīn le, yòu xiě cuò le.^เขาสะเพร่าเกินไป เขียนผิดอีกแล้ว^high^
+B4-0130^verb@E^high^ส่งเสริม; ผลักดัน^体育运动可以促进健康。^Tǐyù yùndòng kěyǐ cùjìn jiànkāng.^การเล่นกีฬาช่วยส่งเสริมสุขภาพ^high^
+B4-0131^verb@E^high^กระตุ้นให้; ผลักดันให้^这件事促使他改变了想法。^Zhè jiàn shì cùshǐ tā gǎibiàn le xiǎngfǎ.^เรื่องนี้ทำให้เขาเปลี่ยนความคิด^high^
+B4-0132^verb@L^medium^ส่งเสริมการขาย; ลดราคาโปรโมชัน^超市正在搞促销活动。^Chāoshì zhèngzài gǎo cùxiāo huódòng.^ซูเปอร์มาร์เก็ตกำลังจัดโปรโมชันส่งเสริมการขาย^medium^pos_doubtful: gloss "promotion" is a noun; 促销 is verb "promote sales" used attributively
+B4-0133^noun@E^high^มาตรการ^政府采取了很多措施。^Zhèngfǔ cǎiqǔ le hěn duō cuòshī.^รัฐบาลใช้มาตรการหลายอย่าง^high^
+B4-0134^verb@E^high^ตี; ทุบ; ต่อสู้; สร้าง^两个孩子打起来了。^Liǎng ge háizi dǎ qǐlai le.^เด็กสองคนตีกันขึ้นมาแล้ว^medium^polysemy: strike / break / fight / build / beat combined; example shows "fight"
+B4-0135^noun@E^high^คำตอบ; เฉลย^这道题的答案是什么？^Zhè dào tí de dá'àn shì shénme?^คำตอบของโจทย์ข้อนี้คืออะไร?^high^
+B4-0136^verb@E^high^เอาชนะ; พ่ายแพ้^我们队打败了对手。^Wǒmen duì dǎbài le duìshǒu.^ทีมของเราเอาชนะคู่แข่งได้^medium^polysemy: "defeat" (transitive) vs. "be defeated" (intransitive) — opposite readings
+B4-0137^verb@L^medium^ฟ้าร้อง^外面打雷了。^Wàimian dǎléi le.^ข้างนอกฟ้าร้องแล้ว^high^
+B4-0138^verb@E^high^ทำความสะอาด^我每天都打扫房间。^Wǒ měitiān dōu dǎsǎo fángjiān.^ฉันทำความสะอาดห้องทุกวัน^high^
+B4-0139^verb@L^medium^ลดราคา^这家店的衣服都在打折。^Zhè jiā diàn de yīfu dōu zài dǎzhé.^เสื้อผ้าในร้านนี้ลดราคาทั้งหมด^medium^source_gloss: "Discount" may be read as noun; 打折 is the verb phrase "give a discount" (打八折 = 20% off)
+B4-0140^verb@E^high^ฉีดยา^护士给我打针。^Hùshi gěi wǒ dǎzhēn.^พยาบาลฉีดยาให้ฉัน^high^
+B4-0141^noun@E^high^รถบัส^我们坐大巴去旅游。^Wǒmen zuò dàbā qù lǚyóu.^พวกเรานั่งรถบัสไปเที่ยว^high^
+B4-0142^adverb@E^high^ส่วนใหญ่^来参加的大多是学生。^Lái cānjiā de dàduō shì xuésheng.^ผู้ที่มาเข้าร่วมส่วนใหญ่เป็นนักเรียน^high^
+B4-0143^adjective@E^high^ใจกว้าง; เป็นธรรมชาติ^他对朋友很大方。^Tā duì péngyou hěn dàfang.^เขาใจกว้างกับเพื่อนมาก^medium^polysemy: "generous" vs. "natural; poised" vs. "tasteful"; variant: 大方 dàfāng "experts"
+B4-0144^noun@E^high^พี่ชายคนโต; พี่ (เรียกผู้ชาย)^大哥，请问火车站怎么走？^Dàgē, qǐngwèn huǒchēzhàn zěnme zǒu?^พี่ครับ ขอถามทางไปสถานีรถไฟหน่อย^medium^polysemy: kinship "eldest brother" vs. polite address for men; example shows address
+B4-0145^adjective@E^high^ขนาดใหญ่^这里正在进行大规模的建设。^Zhèlǐ zhèngzài jìnxíng dàguīmó de jiànshè.^ที่นี่กำลังมีการก่อสร้างขนาดใหญ่^high^
+B4-0146^noun@E^high^การประชุมใหญ่; สมัชชา^学校明天开运动大会。^Xuéxiào míngtiān kāi yùndòng dàhuì.^พรุ่งนี้โรงเรียนจัดงานกีฬาใหญ่^high^
+B4-0147^noun@E^high^พี่สาวคนโต; พี่ (เรียกผู้หญิง)^大姐，这个多少钱？^Dàjiě, zhège duōshao qián?^พี่สาวคะ อันนี้เท่าไร?^medium^polysemy: kinship "eldest sister" vs. polite address for women; example shows address
+B4-0148^noun@E^high^อาคารสูง; ตึก^我们公司在这座大楼的十层。^Wǒmen gōngsī zài zhè zuò dàlóu de shí céng.^บริษัทเราอยู่ชั้นสิบของตึกนี้^high^
+B4-0149^noun@E^high^ทวีป; แผ่นดินใหญ่^他来自中国大陆。^Tā láizì Zhōngguó dàlù.^เขามาจากจีนแผ่นดินใหญ่^medium^polysemy: "continent" vs. "mainland (China)"; example shows "mainland"
+B4-0150^noun@E^high^ป้า (ภรรยาของลุง); ป้า (เรียกหญิงสูงวัย)^这位大妈每天早上都跳舞。^Zhè wèi dàmā měitiān zǎoshang dōu tiàowǔ.^คุณป้าท่านนี้เต้นรำทุกเช้า^medium^polysemy: kinship "father's elder brother's wife" vs. address term for older women; example shows address
+B4-0151^adjective@E^high^ขนาดใหญ่^这是一家大型超市。^Zhè shì yì jiā dàxíng chāoshì.^นี่เป็นซูเปอร์มาร์เก็ตขนาดใหญ่^high^
+B4-0152^noun@E^high^ลุง (พี่ชายพ่อ); ลุง (เรียกชายสูงวัย)^大爷，您身体真好！^Dàye, nín shēntǐ zhēn hǎo!^คุณลุง สุขภาพแข็งแรงจริงๆ!^medium^polysemy: kinship "father's elder brother" vs. address term for old men; example shows address
+B4-0153^noun@E^high^มหาชน; สาธารณชน^这种手机很受大众欢迎。^Zhè zhǒng shǒujī hěn shòu dàzhòng huānyíng.^โทรศัพท์รุ่นนี้ได้รับความนิยมจากมหาชน^high^
+B4-0154^verb@E^high^แทนที่^电脑不能完全代替人。^Diànnǎo bù néng wánquán dàitì rén.^คอมพิวเตอร์แทนที่คนไม่ได้ทั้งหมด^high^
+B4-0155^noun@E^high^การปฏิบัติ; สวัสดิการ; ค่าตอบแทน^这家公司的待遇很好。^Zhè jiā gōngsī de dàiyù hěn hǎo.^สวัสดิการของบริษัทนี้ดีมาก^medium^source_gloss: "treatment" is loose; 待遇 means "pay and benefits; treatment (received)"
+B4-0156^noun@E^high^ถุง; กระเป๋า^我买了一袋米。^Wǒ mǎi le yí dài mǐ.^ฉันซื้อข้าวสารมาหนึ่งถุง^medium^pos_doubtful: 袋 is noun "bag" and measure word; example shows the measure word
+B4-0157^verb@E^high^สวม (หมวก แว่น เครื่องประดับ)^他戴着一副眼镜。^Tā dài zhe yí fù yǎnjìng.^เขาสวมแว่นตาอยู่หนึ่งอัน^medium^source_gloss: "wear" is broad; 戴 is for accessories (hat, glasses), vs. 穿 for clothes
+B4-0158^verb@E^high^รับประกัน; ค้ำประกัน^我可以担保他是好人。^Wǒ kěyǐ dānbǎo tā shì hǎorén.^ฉันรับรองได้ว่าเขาเป็นคนดี^medium^polysemy: "assure; vouch" vs. "act as guarantor; pledge (collateral)"
+B4-0159^verb@E^high^ดำรงตำแหน่ง^他担任我们公司的经理。^Tā dānrèn wǒmen gōngsī de jīnglǐ.^เขาดำรงตำแหน่งผู้จัดการบริษัทเรา^high^
+B4-0160^verb@E^high^เป็นห่วง; กังวล^别担心，我很好。^Bié dānxīn, wǒ hěn hǎo.^ไม่ต้องห่วง ฉันสบายดี^high^
+B4-0161^adjective@E^high^เดี่ยว; คี่; บาง; เพียงแค่^这是单人房。^Zhè shì dānrén fáng.^นี่คือห้องเดี่ยว^medium^polysemy: single / odd / unlined / thin / only / alone combined; also noun "list; sheet" (菜单); example shows "single"
+B4-0162^adjective@E^high^ไร้เดียงสา; เรียบง่าย^这个孩子很单纯。^Zhège háizi hěn dānchún.^เด็กคนนี้ไร้เดียงสามาก^high^
+B4-0163^adjective@E^high^จืดชืด; ซ้ำซาก^这里的生活很单调。^Zhèlǐ de shēnghuó hěn dāndiào.^ชีวิตที่นี่จืดชืดมาก^high^
+B4-0164^adverb@L^medium^ตามลำพัง; แยกต่างหาก^我想和你单独谈谈。^Wǒ xiǎng hé nǐ dāndú tántan.^ฉันอยากคุยกับคุณตามลำพัง^medium^pos_doubtful: gloss "Alone" is ambiguous; 单独 is an adverb/adjective "alone; separately"
+B4-0165^adjective@E^high^จืด; อ่อน (สี); เบาบาง^这个菜太淡了。^Zhège cài tài dàn le.^อาหารจานนี้จืดเกินไป^medium^polysemy: "light (colour)" vs. "bland (taste)" vs. "indifferent"; example shows "bland"
+B4-0166^noun@E^medium^มัคคุเทศก์; ไกด์^导游带我们参观了故宫。^Dǎoyóu dài wǒmen cānguān le Gùgōng.^ไกด์พาเราเที่ยวชมพระราชวังต้องห้าม^high^
+B4-0167^verb@E^high^นำไปสู่; ก่อให้เกิด^粗心导致了这次错误。^Cūxīn dǎozhì le zhè cì cuòwù.^ความสะเพร่านำไปสู่ความผิดพลาดครั้งนี้^high^
+B4-0168^verb@L^medium^ล้มละลาย; ปิดกิจการ^那家公司去年倒闭了。^Nà jiā gōngsī qùnián dǎobì le.^บริษัทนั้นปิดกิจการไปเมื่อปีที่แล้ว^medium^source_gloss: "Collapse" is broad; 倒闭 specifically means "go bankrupt; close down"
+B4-0169^verb@E^high^เปลี่ยนรถ^去那儿要在北京站倒车。^Qù nàr yào zài Běijīng Zhàn dǎochē.^ไปที่นั่นต้องเปลี่ยนรถที่สถานีปักกิ่ง^high^variant: 倒车 dǎochē (change buses) vs. 倒车 dàochē (B4-0170, reverse a car) — homographs split by tone
+B4-0170^verb@E^high^ถอยรถ^倒车的时候要小心。^Dàochē de shíhou yào xiǎoxīn.^ตอนถอยรถต้องระวัง^high^variant: 倒车 dàochē (reverse) vs. 倒车 dǎochē (B4-0169, change buses) — homographs split by tone
+B4-0171^adjective@E^medium^ภูมิใจ; ได้ใจ (ลำพอง)^考了第一名，他很得意。^Kǎo le dì yī míng, tā hěn déyì.^สอบได้ที่หนึ่ง เขาเลยได้ใจมาก^medium^source_gloss: "Proud" lacks the frequent self-satisfied/smug nuance of 得意
+B4-0172^auxiliary@L^high^ต้อง; จำเป็นต้อง^时间不早了，我得走了。^Shíjiān bù zǎo le, wǒ děi zǒu le.^ดึกแล้ว ฉันต้องไปแล้ว^high^variant: 得 děi (must) is a homograph of 得 dé (get) and 得 de (particle)
+B4-0173^noun@E^high^แสงไฟ; การจัดแสง^舞台上的灯光很漂亮。^Wǔtái shang de dēngguāng hěn piàoliang.^แสงไฟบนเวทีสวยมาก^high^
+B4-0174^verb@E^high^ขึ้น; ปีน; เหยียบ; ตีพิมพ์^我们登上了山顶。^Wǒmen dēngshang le shāndǐng.^พวกเราขึ้นไปถึงยอดเขาแล้ว^medium^polysemy: ascend / step on / pedal / publish combined; example shows "ascend"
+B4-0175^verb@E^high^ลงทะเบียน^请先在这里登记。^Qǐng xiān zài zhèlǐ dēngjì.^กรุณาลงทะเบียนที่นี่ก่อน^high^
+B4-0176^verb@E^high^ล็อกอิน; เข้าสู่ระบบ^请输入密码登录。^Qǐng shūrù mìmǎ dēnglù.^กรุณาป้อนรหัสผ่านเพื่อเข้าสู่ระบบ^high^
+B4-0177^verb@E^medium^ปีนเขา; การปีนเขา^他喜欢登山。^Tā xǐhuan dēngshān.^เขาชอบปีนเขา^high^
+B4-0178^adverb@E^high^จริงๆ; แน่นอน^这个办法的确不错。^Zhège bànfǎ díquè búcuò.^วิธีนี้ไม่เลวจริงๆ^high^
+B4-0179^noun@E^high^ศัตรู^他们是我们的敌人。^Tāmen shì wǒmen de dírén.^พวกเขาเป็นศัตรูของเรา^high^
+B4-0180^noun@E^high^ก้น; ด้านล่าง; ปลาย (เดือน/ปี)^杯子底有一点儿水。^Bēizi dǐ yǒu yìdiǎnr shuǐ.^ที่ก้นแก้วมีน้ำอยู่นิดหน่อย^medium^polysemy: "bottom" vs. "end (of a month/year)" (月底); example shows "bottom"
+B4-0182^noun@E^high^พื้น; พื้นผิว^地面很滑，小心！^Dìmiàn hěn huá, xiǎoxīn!^พื้นลื่นมาก ระวังนะ!^high^
+B4-0183^noun@E^high^สถานะ; ตำแหน่ง^他在公司的地位很高。^Tā zài gōngsī de dìwèi hěn gāo.^เขามีสถานะสูงในบริษัท^high^
+B4-0184^noun@E^high^ใต้ดิน; ลับ^地下有一个停车场。^Dìxià yǒu yí ge tíngchēchǎng.^ใต้ดินมีลานจอดรถอยู่แห่งหนึ่ง^medium^polysemy: "underground (location)" vs. "secret; clandestine"; also 地下 dìxia "on the ground"
+B4-0185^noun@E^high^ที่อยู่^请写下你的地址。^Qǐng xiěxià nǐ de dìzhǐ.^กรุณาเขียนที่อยู่ของคุณ^high^
+B4-0186^adjective@E^high^เป็นแบบอย่าง; ตัวอย่างที่ชัดเจน^这是一个典型的例子。^Zhè shì yí ge diǎnxíng de lìzi.^นี่เป็นตัวอย่างที่ชัดเจน^high^
+B4-0187^verb@E^high^ขานชื่อ; เอ่ยชื่อ^老师上课前先点名。^Lǎoshī shàngkè qián xiān diǎnmíng.^ครูขานชื่อก่อนเริ่มเรียน^medium^polysemy: "take roll call" vs. "name (sb) explicitly"; example shows roll call
+B4-0188^noun@E^high^ไฟฟ้า; หลอดไฟ^请把电灯关了。^Qǐng bǎ diàndēng guān le.^กรุณาปิดไฟ^high^
+B4-0189^noun@E^medium^รถไฟฟ้า; จักรยานไฟฟ้า^他骑电动车去上班。^Tā qí diàndòngchē qù shàngbān.^เขาขี่จักรยานไฟฟ้าไปทำงาน^medium^source_gloss: "electric car" — in China 电动车 usually means an electric scooter/e-bike
+B4-0190^noun@E^high^ลิฟต์^我们坐电梯上去吧。^Wǒmen zuò diàntī shàngqu ba.^พวกเรานั่งลิฟต์ขึ้นไปกันเถอะ^high^
+B4-0191^noun@E^high^แหล่งจ่ายไฟ; ปลั๊กไฟ^请把电源关掉。^Qǐng bǎ diànyuán guāndiào.^กรุณาปิดสวิตช์ไฟหลัก^high^
+B4-0192^noun@E^high^ยอด; ส่วนบน^他爬到了山顶。^Tā pá dào le shāndǐng.^เขาปีนขึ้นไปถึงยอดเขา^medium^polysemy: noun "top" vs. verb "carry on the head; prop up" and measure word for hats; example uses compound 山顶
+B4-0193^verb@E^high^กำหนด; ตัดสิน; จอง; มั่นคง^我们定在明天见面。^Wǒmen dìng zài míngtiān jiànmiàn.^พวกเรานัดเจอกันพรุ่งนี้^medium^polysemy: decide / fix / book / order / calm / stable combined; example shows "fix (a time)"
+B4-0194^noun@E^high^ฤดูหนาว^冬季要注意保暖。^Dōngjì yào zhùyì bǎonuǎn.^ฤดูหนาวต้องระวังให้ร่างกายอบอุ่น^high^
+B4-0195^noun@E^high^การ์ตูนแอนิเมชัน^孩子们喜欢看动画片。^Háizimen xǐhuan kàn dònghuàpiàn.^เด็กๆ ชอบดูการ์ตูน^high^
+B4-0196^verb@E^high^สั่นคลอน; ลังเล^他的决心从来没有动摇过。^Tā de juéxīn cónglái méiyǒu dòngyáo guo.^ความตั้งใจของเขาไม่เคยสั่นคลอนเลย^high^
+B4-0197^noun@E^high^เต้าหู้^我喜欢吃豆腐。^Wǒ xǐhuan chī dòufu.^ฉันชอบกินเต้าหู้^high^
+B4-0198^adjective@E^high^เป็นอิสระ; ด้วยตัวเอง^孩子要学会独立生活。^Háizi yào xuéhuì dúlì shēnghuó.^เด็กต้องเรียนรู้ที่จะใช้ชีวิตอย่างอิสระ^medium^polysemy: adjective "independent" vs. verb "become independent; stand alone"
+B4-0199^adjective@E^high^มีเอกลักษณ์; พิเศษ^这里的建筑风格很独特。^Zhèlǐ de jiànzhù fēnggé hěn dútè.^รูปแบบสถาปัตยกรรมที่นี่มีเอกลักษณ์มาก^high^
+B4-0200^adverb@E^high^ตามลำพัง; คนเดียว^他独自去了北京。^Tā dúzì qù le Běijīng.^เขาไปปักกิ่งคนเดียว^high^
+B4-0201^verb@E^high^อุด; ปิดกั้น; อึดอัด^前面的路堵住了。^Qiánmiàn de lù dǔzhù le.^ถนนข้างหน้าถูกปิดกั้นแล้ว^medium^polysemy: verb "block up" vs. adjective "stifled; oppressed" (心里堵); example shows "block"
+B4-0202^verb@L^medium^รถติด^早上上班的时候经常堵车。^Zǎoshang shàngbān de shíhou jīngcháng dǔchē.^ตอนเช้าเวลาไปทำงานรถติดบ่อย^medium^source_gloss: "Traffic jam" is a noun; 堵车 is the verb phrase "be jammed"
+B4-0203^noun@E^high^ท้อง^我肚子疼。^Wǒ dùzi téng.^ฉันปวดท้อง^high^
+B4-0204^verb@E^high^ใช้ (เวลา); ผ่าน (ช่วงเวลา)^我们一起度过了一个愉快的周末。^Wǒmen yìqǐ dùguò le yí ge yúkuài de zhōumò.^พวกเราใช้เวลาสุดสัปดาห์ที่มีความสุขด้วยกัน^high^
+B4-0205^verb@L^medium^ออกกำลังกาย; ฝึกฝน^我每天早上锻炼身体。^Wǒ měitiān zǎoshang duànliàn shēntǐ.^ฉันออกกำลังกายทุกเช้า^medium^pos_doubtful: gloss "Physical exercise" is a noun; 锻炼 is mainly the verb "exercise; temper"
+B4-0206^verb@L^medium^เปรียบเทียบ; ความแตกต่าง^对比一下这两张照片。^Duìbǐ yí xià zhè liǎng zhāng zhàopiàn.^เปรียบเทียบรูปสองใบนี้ดูหน่อย^medium^pos_doubtful: 对比 is verb "contrast" and noun "contrast"; example shows the verb
+B4-0207^verb@E^high^รับมือ; จัดการ^这个问题不好对付。^Zhège wèntí bù hǎo duìfu.^ปัญหานี้รับมือยาก^medium^polysemy: "deal with; cope" vs. "make do" (对付着用)
+B4-0208^preposition@E^high^สำหรับ; เกี่ยวกับ^对于这个问题，我有不同的看法。^Duìyú zhège wèntí, wǒ yǒu bùtóng de kànfǎ.^สำหรับปัญหานี้ ฉันมีความเห็นที่แตกต่าง^high^
+B4-0209^adverb@L^medium^หลายครั้ง^他多次帮助过我。^Tā duō cì bāngzhù guo wǒ.^เขาเคยช่วยเหลือฉันหลายครั้ง^medium^pos_doubtful: numeral-measure phrase (多 + 次) used adverbially
+B4-0210^other^low^หลายปี^我们是多年的老朋友了。^Wǒmen shì duō nián de lǎo péngyou le.^พวกเราเป็นเพื่อนเก่ากันมาหลายปีแล้ว^high^pos_doubtful: numeral-noun phrase (多 + 年) with no single POS
+B4-0211^adjective@L^medium^หลากหลาย^这里的文化很多样。^Zhèlǐ de wénhuà hěn duōyàng.^วัฒนธรรมที่นี่หลากหลายมาก^medium^source_gloss: "diversity" is a noun; 多样 is the adjective "diverse"
+B4-0212^other^low^หลายชนิด; หลากหลาย^这里有多种水果。^Zhèlǐ yǒu duō zhǒng shuǐguǒ.^ที่นี่มีผลไม้หลายชนิด^high^pos_doubtful: numeral-measure phrase (多 + 种) with no single POS
+B4-0213^adjective@E^medium^น่าขยะแขยง; คลื่นไส้^我有点儿恶心，想吐。^Wǒ yǒudiǎnr ěxin, xiǎng tù.^ฉันรู้สึกคลื่นไส้นิดหน่อย อยากอาเจียน^medium^polysemy: "nauseous" (physical) vs. "disgusting"; gloss gives "disgusting", example shows "nauseous"
+B4-0214^noun@E^high^เด็ก^六月一日是儿童节。^Liùyuè yī rì shì Értóng Jié.^วันที่หนึ่งมิถุนายนเป็นวันเด็ก^high^
+B4-0215^conjunction@E^high^และ; แต่; จึง^这个房间小而干净。^Zhège fángjiān xiǎo ér gānjìng.^ห้องนี้เล็กแต่สะอาด^medium^polysemy: 而 links coordinate, contrastive and purpose clauses; gloss "and" covers only one
+B4-0216^conjunction@E^high^แต่เป็น^他不是老师，而是学生。^Tā bú shì lǎoshī, ér shì xuésheng.^เขาไม่ใช่ครู แต่เป็นนักเรียน^high^
+B4-0217^noun@E^high^หูฟัง^他戴着耳机听音乐。^Tā dài zhe ěrjī tīng yīnyuè.^เขาใส่หูฟังฟังเพลง^high^
+B4-0218^adjective@L^medium^มือสอง^我买了一辆二手车。^Wǒ mǎi le yí liàng èrshǒu chē.^ฉันซื้อรถมือสองมาคันหนึ่ง^high^
+B4-0219^verb@E^medium^แสดง (ศักยภาพ) ออกมา^他在比赛中发挥得很好。^Tā zài bǐsài zhōng fāhuī de hěn hǎo.^เขาแสดงฝีมือได้ดีมากในการแข่งขัน^medium^source_gloss: "Develop" is loose; 发挥 means "bring into play; perform (one's ability)"
+B4-0220^noun@E^high^ใบกำกับภาษี; ใบเสร็จ^请给我开一张发票。^Qǐng gěi wǒ kāi yì zhāng fāpiào.^กรุณาออกใบกำกับภาษีให้ฉันหนึ่งใบ^high^
+B4-0221^verb@E^high^มีไข้^孩子发烧了。^Háizi fāshāo le.^ลูกมีไข้^high^
+B4-0222^noun@E^high^กฎหมาย; วิธี; หลักเกณฑ์^我们要依法办事。^Wǒmen yào yīfǎ bànshì.^พวกเราต้องทำงานตามกฎหมาย^medium^polysemy: law / way / method / example / rule combined; example shows "law" in the set phrase 依法
+B4-0223^noun@E^high^ผู้พิพากษา^法官宣布了结果。^Fǎguān xuānbù le jiéguǒ.^ผู้พิพากษาประกาศผลการตัดสิน^high^
+B4-0224^noun@E^high^กฎหมาย^每个人都要遵守法律。^Měi ge rén dōu yào zūnshǒu fǎlǜ.^ทุกคนต้องปฏิบัติตามกฎหมาย^high^
+B4-0225^noun@E^high^ศาล^这件事已经告到法院了。^Zhè jiàn shì yǐjīng gào dào fǎyuàn le.^เรื่องนี้ฟ้องถึงศาลแล้ว^high^
+B4-0226^verb@E^high^พลิก; เปิด (หน้าหนังสือ); ข้าม^请把书翻到第十页。^Qǐng bǎ shū fān dào dì shí yè.^กรุณาเปิดหนังสือไปที่หน้าสิบ^medium^polysemy: 翻 also "climb over" and "translate"; gloss "Turn" covers only one use
+B4-0227^verb@E^medium^แปล; นักแปล^请把这句话翻译成英语。^Qǐng bǎ zhè jù huà fānyì chéng Yīngyǔ.^กรุณาแปลประโยคนี้เป็นภาษาอังกฤษ^medium^polysemy: verb "translate" vs. noun "translator; interpreter"
+B4-0228^verb@E^medium^รบกวน; รำคาญ^别烦我，我在工作。^Bié fán wǒ, wǒ zài gōngzuò.^อย่ารบกวนฉัน ฉันกำลังทำงาน^medium^polysemy: verb "bother" vs. adjective "annoyed; fed up" (很烦)
+B4-0229^verb@L^low^พลิก; ต่อต้าน; ตรงกันข้าม^他把衣服穿反了。^Tā bǎ yīfu chuān fǎn le.^เขาใส่เสื้อกลับด้าน^low^polysemy: turn over / rebel (verbs) vs. "on the contrary; instead" (adverb); pos_doubtful: no source POS; example shows "inside-out"
