@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B4-0230^adverb@E^high^กลับ...; ตรงกันข้าม^吃了药，病反而更重了。^Chī le yào, bìng fǎn'ér gèng zhòng le.^กินยาแล้ว อาการกลับหนักขึ้น^high^
+B4-0231^verb@E^high^สะท้อน; รายงาน^这部电影反映了农村的生活。^Zhè bù diànyǐng fǎnyìng le nóngcūn de shēnghuó.^ภาพยนตร์เรื่องนี้สะท้อนชีวิตในชนบท^medium^polysemy: "reflect; mirror" vs. "report (to superiors)" (向领导反映)
+B4-0232^adjective@E^high^สี่เหลี่ยม; ด้าน; ฝ่าย^这张桌子是方的。^Zhè zhāng zhuōzi shì fāng de.^โต๊ะตัวนี้เป็นทรงสี่เหลี่ยม^medium^polysemy: adjective "square" vs. noun "side; party; direction" (对方, 东方)
+B4-0233^noun@E^high^แผนการ; โครงการ^我们想出了一个新方案。^Wǒmen xiǎngchū le yí ge xīn fāng'àn.^พวกเราคิดแผนใหม่ขึ้นมาได้แผนหนึ่ง^high^
+B4-0234^noun@E^high^นโยบาย; แนวทาง^这是政府的基本方针。^Zhè shì zhèngfǔ de jīběn fāngzhēn.^นี่คือแนวทางพื้นฐานของรัฐบาล^high^
+B4-0235^verb@E^high^ผ่อนคลาย^考完试了，好好放松一下吧。^Kǎo wán shì le, hǎohǎo fàngsōng yí xià ba.^สอบเสร็จแล้ว ผ่อนคลายให้เต็มที่เถอะ^high^
+B4-0236^adjective@L^low^ผิด; ไม่ใช่; ต้อง (非…不可)^这件事非你去不可。^Zhè jiàn shì fēi nǐ qù bùkě.^เรื่องนี้ต้องให้คุณไปเท่านั้น^low^polysemy: "wrong" vs. prefix "non-; not" and the pattern 非…不可 "must"; source_gloss: "wrong" is rare at this level; example shows 非…不可
+B4-0237^adjective@E^high^อ้วน (สัตว์); มีไขมัน; อุดมสมบูรณ์^这块肉太肥了。^Zhè kuài ròu tài féi le.^เนื้อชิ้นนี้มันเกินไป^medium^polysemy: "fat (of meat/animals)" vs. "fertile (soil)" and "loose (clothes)"; example shows "fatty"
+B4-0238^verb@E^medium^กระจาย; การกระจายตัว^这种植物分布在南方。^Zhè zhǒng zhíwù fēnbù zài nánfāng.^พืชชนิดนี้กระจายอยู่ทางใต้^medium^pos_doubtful: 分布 is both verb "be distributed" and noun "distribution"; example shows the verb
+B4-0239^verb@L^medium^กระจาย; แยกย้าย^上课的时候不要分散注意力。^Shàngkè de shíhou búyào fēnsàn zhùyìlì.^ระหว่างเรียนอย่าทำให้สมาธิกระเจิง^medium^source_gloss: "Dispersed" is a participle; 分散 is verb "disperse; distract" and adjective "scattered"
+B4-0240^verb@E^high^เลิกกัน; แยกทาง^他们上个月分手了。^Tāmen shàng ge yuè fēnshǒu le.^พวกเขาเลิกกันเมื่อเดือนที่แล้ว^medium^polysemy: "break up (relationship)" vs. "part company; say goodbye"
+B4-0241^verb@E^high^แบ่งเป็น^一年分为四个季节。^Yì nián fēnwéi sì ge jìjié.^หนึ่งปีแบ่งเป็นสี่ฤดู^high^
+B4-0242^other^low^เศษส่วน (... ส่วน ...)^三分之一的学生是男生。^Sān fēn zhī yī de xuésheng shì nánshēng.^นักเรียนหนึ่งในสามเป็นผู้ชาย^high^pos_doubtful: fraction pattern …分之… has no single POS; variant: canonical word contains ellipses and padding spaces
+B4-0243^adverb@E^high^ต่อเนื่องกันไป; ทยอยกัน^下课了，同学们纷纷走出教室。^Xiàkè le, tóngxuémen fēnfēn zǒuchū jiàoshì.^เลิกเรียนแล้ว นักเรียนทยอยเดินออกจากห้อง^high^
+B4-0244^verb@E^medium^ต่อสู้ดิ้นรน; มุ่งมั่น^我们要为理想而奋斗。^Wǒmen yào wèi lǐxiǎng ér fèndòu.^พวกเราต้องมุ่งมั่นต่อสู้เพื่ออุดมการณ์^high^
+B4-0245^noun@E^high^สไตล์; รูปแบบ^我喜欢这种风格的衣服。^Wǒ xǐhuan zhè zhǒng fēnggé de yīfu.^ฉันชอบเสื้อผ้าสไตล์นี้^high^
+B4-0246^noun@E^high^ทิวทัศน์^这里的风景很美。^Zhèlǐ de fēngjǐng hěn měi.^ทิวทัศน์ที่นี่สวยงามมาก^high^
+B4-0247^noun@E^high^ขนบธรรมเนียม; ประเพณี^每个地方都有自己的风俗。^Měi ge dìfang dōu yǒu zìjǐ de fēngsú.^ทุกท้องที่ล้วนมีขนบธรรมเนียมของตัวเอง^high^
+B4-0248^verb@E^high^ปิด; ปิดกั้น^这条路已经封闭了。^Zhè tiáo lù yǐjīng fēngbì le.^ถนนสายนี้ถูกปิดแล้ว^medium^polysemy: verb "seal off; close" vs. adjective "closed-off; insular" (思想封闭)
+B4-0249^conjunction@E^high^มิฉะนั้น^快走吧，否则就赶不上车了。^Kuài zǒu ba, fǒuzé jiù gǎn bu shàng chē le.^รีบไปเถอะ มิฉะนั้นจะไม่ทันรถ^high^
+B4-0250^noun@E^high^สามีภรรยา (คู่)^这对夫妇很恩爱。^Zhè duì fūfù hěn ēn'ài.^สามีภรรยาคู่นี้รักกันมาก^high^
+B4-0251^noun@E^high^สามีภรรยา^他们夫妻俩都是老师。^Tāmen fūqī liǎ dōu shì lǎoshī.^สามีภรรยาคู่นี้เป็นครูทั้งคู่^high^
+B4-0252^noun@E^high^ภริยา; คุณนาย^这位是王先生的夫人。^Zhè wèi shì Wáng xiānsheng de fūrén.^ท่านนี้คือภริยาของคุณหวัง^medium^source_gloss: "Madam" is a form of address; 夫人 means "wife (formal); Mrs."
+B4-0253^noun@E^high^สัญลักษณ์; เครื่องหมาย^这个符号是什么意思？^Zhège fúhào shì shénme yìsi?^เครื่องหมายนี้หมายความว่าอะไร?^high^
+B4-0254^verb@E^high^สอดคล้อง; ตรงกับ^这个答案不符合要求。^Zhège dá'àn bù fúhé yāoqiú.^คำตอบนี้ไม่ตรงกับข้อกำหนด^high^
+B4-0255^verb@E^medium^ทุ่มเท; จ่ายออกไป^为了成功，他付出了很多努力。^Wèile chénggōng, tā fùchū le hěn duō nǔlì.^เพื่อความสำเร็จ เขาทุ่มเทความพยายามอย่างมาก^medium^polysemy: literal "pay out (money)" vs. figurative "devote (effort)"; example shows figurative
+B4-0256^noun@E^medium^ภาระ; รับภาระ^孩子的学费是一大负担。^Háizi de xuéfèi shì yí dà fùdān.^ค่าเล่าเรียนของลูกเป็นภาระใหญ่^medium^pos_doubtful: 负担 is both noun "burden" and verb "bear (costs)"; example shows the noun
+B4-0257^noun@E^high^บริเวณใกล้เคียง^附近有超市吗？^Fùjìn yǒu chāoshì ma?^แถวนี้มีซูเปอร์มาร์เก็ตไหม?^high^
+B4-0258^verb@E^high^คัดลอก; ทำสำเนา^请把这个文件复制一份。^Qǐng bǎ zhège wénjiàn fùzhì yí fèn.^กรุณาทำสำเนาไฟล์นี้หนึ่งชุด^high^
+B4-0259^verb@E^high^ปรับปรุงให้ดีขึ้น^我们的生活条件改善了。^Wǒmen de shēnghuó tiáojiàn gǎishàn le.^สภาพความเป็นอยู่ของเราดีขึ้นแล้ว^high^
+B4-0260^verb@L^medium^แก้ไขให้ถูก^请改正作业中的错误。^Qǐng gǎizhèng zuòyè zhōng de cuòwù.^กรุณาแก้ไขข้อผิดพลาดในการบ้าน^medium^source_gloss: "correction" is a noun; 改正 is the verb "correct"
+B4-0261^verb@E^high^ปิด; คลุม; สร้าง (บ้าน)^睡觉的时候要盖好被子。^Shuìjiào de shíhou yào gài hǎo bèizi.^เวลานอนต้องห่มผ้าห่มให้ดี^medium^polysemy: "cover" vs. "build (a house)" (盖房子) vs. noun "lid"; example shows "cover"
+B4-0262^verb@L^medium^สรุปรวบยอด^请概括一下这篇文章的意思。^Qǐng gàikuò yí xià zhè piān wénzhāng de yìsi.^กรุณาสรุปใจความของบทความนี้^medium^source_gloss: "Generalization" is a noun; 概括 is verb "summarize" (also adjective "brief")
+B4-0263^verb@L^medium^สนใจ^我对中国历史很感兴趣。^Wǒ duì Zhōngguó lìshǐ hěn gǎn xìngqù.^ฉันสนใจประวัติศาสตร์จีนมาก^medium^source_gloss: typo "intretested"; pos_doubtful: verb-object phrase 感 + 兴趣
+B4-0264^noun@E^high^จุดสุดยอด; ไคลแมกซ์^电影的高潮部分很精彩。^Diànyǐng de gāocháo bùfen hěn jīngcǎi.^ช่วงไคลแมกซ์ของภาพยนตร์สนุกมาก^high^
+B4-0265^noun@E^high^ราคาสูง^他高价买了这幅画。^Tā gāojià mǎi le zhè fú huà.^เขาซื้อภาพวาดนี้ในราคาสูง^high^
+B4-0266^adjective@E^high^สูงส่ง; มีคุณธรรม^他是一个品德高尚的人。^Tā shì yí ge pǐndé gāoshàng de rén.^เขาเป็นคนที่มีคุณธรรมสูงส่ง^high^
+B4-0267^noun@E^high^รถไฟความเร็วสูง^我们坐高铁去上海。^Wǒmen zuò gāotiě qù Shànghǎi.^พวกเรานั่งรถไฟความเร็วสูงไปเซี่ยงไฮ้^high^
+B4-0268^adverb@E^high^เป็นพิเศษ^今天的月亮格外圆。^Jīntiān de yuèliang géwài yuán.^พระจันทร์คืนนี้กลมเป็นพิเศษ^high^
+B4-0269^verb@E^high^กั้น; แยก; ห่าง^我们两家只隔一条街。^Wǒmen liǎng jiā zhǐ gé yì tiáo jiē.^บ้านเราสองหลังห่างกันแค่ถนนเส้นเดียว^medium^polysemy: "partition; separate" vs. "be at an interval of" (隔一天); example shows "be separated by"
+B4-0270^verb@E^high^แยกออก; กั้น^用一道墙把房间隔开。^Yòng yí dào qiáng bǎ fángjiān gékāi.^ใช้ผนังกั้นห้องแยกออกจากกัน^high^
+B4-0271^adjective@E^medium^เฉพาะราย; ส่วนน้อย^只有个别同学没来。^Zhǐyǒu gèbié tóngxué méi lái.^มีเพียงนักเรียนไม่กี่คนที่ไม่มา^medium^source_gloss: "individual" is loose; 个别 means "a very few; isolated (cases)"
+B4-0272^noun@E^high^ปัจเจกบุคคล; รายบุคคล^每个人都是一个独立的个体。^Měi ge rén dōu shì yí ge dúlì de gètǐ.^ทุกคนล้วนเป็นปัจเจกบุคคลที่เป็นอิสระ^medium^polysemy: "individual (person)" vs. "self-employed (business)" (个体户)
+B4-0273^pronoun@L^high^แต่ละ; ทุกๆ^各个班都参加了比赛。^Gègè bān dōu cānjiā le bǐsài.^ทุกห้องเรียนเข้าร่วมการแข่งขัน^high^
+B4-0274^noun@E^medium^ราก; (ลักษณนามของสิ่งยาวเรียว)^这棵树的根很深。^Zhè kē shù de gēn hěn shēn.^รากของต้นไม้ต้นนี้ลึกมาก^medium^polysemy: noun "root" vs. common measure word for long thin things (一根筷子); example shows "root"
+B4-0275^preposition@E^medium^ตาม; อ้างอิงจาก; หลักฐาน^根据天气预报，明天会下雨。^Gēnjù tiānqì yùbào, míngtiān huì xià yǔ.^ตามพยากรณ์อากาศ พรุ่งนี้ฝนจะตก^medium^polysemy: preposition "according to" vs. noun "basis; grounds"
+B4-0276^noun@E^high^วิศวกรรม; โครงการ^这是一项很大的工程。^Zhè shì yí xiàng hěn dà de gōngchéng.^นี่เป็นโครงการขนาดใหญ่^medium^polysemy: "engineering (field)" vs. "project (construction)"; example shows "project"
+B4-0277^noun@E^high^คริสต์ศักราช^这座寺庙建于公元六百年。^Zhè zuò sìmiào jiàn yú gōngyuán liùbǎi nián.^วัดนี้สร้างขึ้นในปีคริสต์ศักราช 600^high^
+B4-0278^verb@E^high^จัดหา; ส่งมอบ^这家公司供应新鲜蔬菜。^Zhè jiā gōngsī gōngyìng xīnxiān shūcài.^บริษัทนี้จัดหาผักสด^high^
+B4-0279^adverb@L^low^ร่วม; ทั้งหมด; รวมกัน^这个班共有三十个学生。^Zhège bān gòng yǒu sānshí ge xuésheng.^ห้องนี้มีนักเรียนทั้งหมดสามสิบคน^medium^polysemy: adjective "common" vs. verb "share" vs. adverbs "together; altogether"; pos_doubtful: no source POS; example shows "altogether"
+B4-0280^verb@E^high^ประกอบเป็น; ก่อให้เกิด^这些问题构成了很大的威胁。^Zhèxiē wèntí gòuchéng le hěn dà de wēixié.^ปัญหาเหล่านี้ก่อให้เกิดภัยคุกคามอย่างมาก^high^
+B4-0281^noun@E^high^โครงสร้าง^这台机器的构造很复杂。^Zhè tái jīqì de gòuzào hěn fùzá.^โครงสร้างของเครื่องนี้ซับซ้อนมาก^high^
+B4-0282^verb@E^high^ซื้อ; จัดซื้อ^他在网上购买了一台电脑。^Tā zài wǎngshang gòumǎi le yì tái diànnǎo.^เขาซื้อคอมพิวเตอร์ทางออนไลน์หนึ่งเครื่อง^high^
+B4-0283^verb@L^medium^ช้อปปิ้ง; ซื้อของ^周末我们去商场购物。^Zhōumò wǒmen qù shāngchǎng gòuwù.^สุดสัปดาห์พวกเราไปช้อปปิ้งที่ห้าง^medium^pos_doubtful: gloss "Shopping" is a gerund/noun; 购物 is the verb-object "shop"
+B4-0284^noun@E^high^กระดูก^小狗在啃骨头。^Xiǎo gǒu zài kěn gǔtou.^ลูกหมากำลังแทะกระดูก^high^
+B4-0285^adjective@E^high^คงที่; ประจำ^他没有固定的工作。^Tā méiyǒu gùdìng de gōngzuò.^เขาไม่มีงานประจำ^medium^polysemy: adjective "fixed" vs. verb "fix; secure" (把桌子固定好)
+B4-0286^noun@E^high^แตง; ผลไม้ตระกูลแตง^夏天吃瓜很解渴。^Xiàtiān chī guā hěn jiěkě.^หน้าร้อนกินแตงช่วยดับกระหายได้ดี^high^
+B4-0287^adjective@E^high^แปลก; ประหลาด; ค่อนข้าง^这个人真怪。^Zhège rén zhēn guài.^คนคนนี้แปลกจริงๆ^medium^polysemy: adjective "strange" vs. adverb "quite; rather" (怪不好意思的); also verb "blame" (B5-0295)
+B4-0289^verb@E^high^ปิด^商店晚上十点关闭。^Shāngdiàn wǎnshang shí diǎn guānbì.^ร้านค้าปิดตอนสี่ทุ่ม^high^
+B4-0290^preposition@E^high^เกี่ยวกับ^这是一本关于中国历史的书。^Zhè shì yì běn guānyú Zhōngguó lìshǐ de shū.^นี่เป็นหนังสือเกี่ยวกับประวัติศาสตร์จีน^high^
+B4-0291^noun@E^high^เจ้าหน้าที่ราชการ; ข้าราชการ^他在政府当官。^Tā zài zhèngfǔ dāng guān.^เขาเป็นข้าราชการในรัฐบาล^high^
+B4-0292^noun@E^medium^ทางการ; ฝ่ายรัฐบาล^这是官方的消息。^Zhè shì guānfāng de xiāoxi.^นี่เป็นข่าวจากทางการ^medium^source_gloss: "by the government official" is garbled; 官方 means "official; government (side)"
+B4-0293^verb@L^medium^การมาเยือน (คำสุภาพ)^欢迎光临！^Huānyíng guānglín!^ยินดีต้อนรับ!^medium^source_gloss: "presence" is a noun; 光临 is the honorific verb "honour with one's presence"
+B4-0294^noun@E^high^แผ่นซีดี^这张光盘里有很多歌。^Zhè zhāng guāngpán li yǒu hěn duō gē.^แผ่นซีดีนี้มีเพลงมากมาย^high^
+B4-0295^verb@E^high^เดินเล่น; เดินเที่ยว^周末我喜欢逛商店。^Zhōumò wǒ xǐhuan guàng shāngdiàn.^สุดสัปดาห์ฉันชอบเดินเที่ยวร้านค้า^high^
+B4-0296^verb@E^high^กลับ; คืน; เป็นของ^这本书归你了。^Zhè běn shū guī nǐ le.^หนังสือเล่มนี้เป็นของคุณแล้ว^medium^polysemy: "return; go back" vs. "belong to; be in charge of"; example shows "belong to"
+B4-0297^noun@E^medium^กฎเกณฑ์; ความสม่ำเสมอ^他的生活很有规律。^Tā de shēnghuó hěn yǒu guīlǜ.^ชีวิตของเขาเป็นไปอย่างสม่ำเสมอ^medium^source_gloss: "Law" (scientific law) is narrow; 规律 also "regular pattern; regularity"
+B4-0298^noun@E^high^ขนาด; ขอบเขต^这家公司规模很大。^Zhè jiā gōngsī guīmó hěn dà.^บริษัทนี้มีขนาดใหญ่มาก^high^
+B4-0299^noun@E^high^กฎ; ระเบียบ^我们要遵守比赛规则。^Wǒmen yào zūnshǒu bǐsài guīzé.^พวกเราต้องปฏิบัติตามกติกาการแข่งขัน^high^
+B4-0300^noun@E^high^ผลไม้; ผล (ของความพยายาม)^这是我们劳动的果实。^Zhè shì wǒmen láodòng de guǒshí.^นี่คือผลจากแรงงานของเรา^medium^polysemy: literal "fruit" vs. figurative "fruits (of labour)"; example shows figurative
+B4-0301^adjective@E^high^เกินไป; เกินเลย^你这样说太过分了。^Nǐ zhèyàng shuō tài guòfèn le.^คุณพูดแบบนี้เกินไปแล้ว^high^
+B4-0302^noun@E^high^น้ำทะเล^海水是咸的。^Hǎishuǐ shì xián de.^น้ำทะเลเค็ม^high^
+B4-0303^noun@E^high^อาหารทะเล^这家饭店的海鲜很新鲜。^Zhè jiā fàndiàn de hǎixiān hěn xīnxiān.^อาหารทะเลของร้านนี้สดมาก^high^
+B4-0304^verb@E^high^อม; บรรจุ; เก็บไว้^她眼里含着泪水。^Tā yǎn li hán zhe lèishuǐ.^ดวงตาของเธอคลอไปด้วยน้ำตา^medium^polysemy: "contain; hold in the mouth" vs. "cherish; nurse (feelings)"; example shows "hold"
+B4-0305^noun@E^high^ปริมาณที่มีอยู่^这种水果的维生素含量很高。^Zhè zhǒng shuǐguǒ de wéishēngsù hánliàng hěn gāo.^ผลไม้ชนิดนี้มีปริมาณวิตามินสูง^high^
+B4-0306^noun@E^high^ความหมาย^这个词有两个含义。^Zhège cí yǒu liǎng ge hányì.^คำนี้มีความหมายสองอย่าง^high^
+B4-0307^verb@E^high^ประกอบด้วย; มี^牛奶含有很多营养。^Niúnǎi hányǒu hěn duō yíngyǎng.^นมมีสารอาหารมากมาย^high^
+B4-0308^noun@E^high^ปิดภาคเรียนฤดูหนาว^寒假你打算去哪儿？^Hánjià nǐ dǎsuan qù nǎr?^ปิดเทอมฤดูหนาวคุณวางแผนจะไปไหน?^high^
+B4-0309^adjective@E^high^หนาวเหน็บ^北方的冬天很寒冷。^Běifāng de dōngtiān hěn hánlěng.^ฤดูหนาวทางเหนือหนาวเหน็บมาก^high^
+B4-0310^noun@E^high^อุตสาหกรรม; สายอาชีพ^你在哪个行业工作？^Nǐ zài nǎge hángyè gōngzuò?^คุณทำงานในสายอาชีพไหน?^high^
+B4-0311^noun@E^high^เที่ยวบิน^这个航班晚点了。^Zhège hángbān wǎndiǎn le.^เที่ยวบินนี้ล่าช้า^high^
+B4-0312^noun@E^high^การบิน^他在一家航空公司工作。^Tā zài yì jiā hángkōng gōngsī gōngzuò.^เขาทำงานที่สายการบินแห่งหนึ่ง^high^
+B4-0313^measure_word@L^high^มิลลิเมตร^这张纸厚一毫米。^Zhè zhāng zhǐ hòu yì háomǐ.^กระดาษแผ่นนี้หนาหนึ่งมิลลิเมตร^high^
+B4-0314^measure_word@L^high^มิลลิลิตร^这瓶水有五百毫升。^Zhè píng shuǐ yǒu wǔbǎi háoshēng.^น้ำขวดนี้มีห้าร้อยมิลลิลิตร^high^
+B4-0315^noun@E^high^เพื่อนสนิท^他是我的好友。^Tā shì wǒ de hǎoyǒu.^เขาเป็นเพื่อนสนิทของฉัน^high^
+B4-0316^noun@E^high^หมายเลข^你的电话号码是多少？^Nǐ de diànhuà hàomǎ shì duōshao?^เบอร์โทรศัพท์ของคุณคืออะไร?^high^
+B4-0318^noun@E^high^สัญญา^我们签了一份合同。^Wǒmen qiān le yí fèn hétong.^พวกเราเซ็นสัญญาไปหนึ่งฉบับ^high^
+B4-0319^adjective@E^medium^มืด; ความมืด^房间里一片黑暗。^Fángjiān li yí piàn hēi'àn.^ในห้องมืดสนิท^medium^polysemy: adjective "dark" vs. noun "darkness" (also figurative "corrupt")
+B4-0320^noun@E^high^อั่งเปา; ซองแดง^过年的时候，孩子们会收到红包。^Guònián de shíhou, háizimen huì shōudào hóngbāo.^ช่วงตรุษจีน เด็กๆ จะได้รับอั่งเปา^high^
+B4-0321^noun@E^high^ข้างหลัง; ภายหลัง^好戏还在后头呢。^Hǎo xì hái zài hòutou ne.^ของดียังอยู่ข้างหลังนะ^medium^polysemy: spatial "behind" vs. temporal "later on"; example shows "later"
+B4-0322^adjective@E^high^หนา^这本词典很厚。^Zhè běn cídiǎn hěn hòu.^พจนานุกรมเล่มนี้หนามาก^high^
+B4-0323^verb@E^medium^หายใจ; การหายใจ^请深呼吸。^Qǐng shēn hūxī.^กรุณาหายใจลึกๆ^high^
+B4-0324^verb@E^high^มองข้าม; ละเลย^我们不能忽视这个问题。^Wǒmen bù néng hūshì zhège wèntí.^พวกเราไม่ควรมองข้ามปัญหานี้^high^
+B4-0325^measure_word@L^low^ครัวเรือน; บ้าน; ประตู^这个村子有一百户人家。^Zhège cūnzi yǒu yìbǎi hù rénjiā.^หมู่บ้านนี้มีหนึ่งร้อยครัวเรือน^medium^polysemy: noun "household; door" vs. measure word for households; pos_doubtful: no source POS; example shows measure word
+B4-0326^noun@E^high^พยาบาล^她是一名护士。^Tā shì yì míng hùshi.^เธอเป็นพยาบาล^high^
+B4-0328^verb@E^high^พาย (เรือ); ขีด^他们在湖上划船。^Tāmen zài hú shang huáchuán.^พวกเขาพายเรืออยู่ในทะเลสาบ^medium^polysemy: "paddle; row" vs. "scratch; strike (a match)"; variant: 划 huá vs. 划 huà (B4-0329)
+B4-0329^verb@E^medium^แบ่งเขต; โอน; จัดสรร^这笔钱已经划到你的账户了。^Zhè bǐ qián yǐjīng huà dào nǐ de zhànghù le.^เงินจำนวนนี้โอนเข้าบัญชีของคุณแล้ว^medium^polysemy: transfer / assign / differentiate combined; source_gloss: typo "differenciate"; variant: 划 huà vs. 划 huá (B4-0328)
+B4-0330^verb@E^high^คิดถึง; รำลึกถึง^我很怀念大学生活。^Wǒ hěn huáiniàn dàxué shēnghuó.^ฉันคิดถึงชีวิตในมหาวิทยาลัยมาก^high^
+B4-0331^verb@E^high^สงสัย; ไม่แน่ใจ^我怀疑他说的不是真话。^Wǒ huáiyí tā shuō de bú shì zhēnhuà.^ฉันสงสัยว่าเขาไม่ได้พูดความจริง^medium^polysemy: "doubt (that sth is true)" vs. "suspect (that sth is true)" — opposite English readings
+B4-0332^verb@E^high^บรรเทา^这种药可以缓解头疼。^Zhè zhǒng yào kěyǐ huǎnjiě tóuténg.^ยาชนิดนี้ช่วยบรรเทาอาการปวดหัว^high^
