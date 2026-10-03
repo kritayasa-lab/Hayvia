@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B3-0377^adverb@L^medium^ยิ่งขึ้นไปอีก; อีกขั้นหนึ่ง^我们需要进一步讨论这个问题。^Wǒmen xūyào jìn yí bù tǎolùn zhège wèntí.^พวกเราต้องหารือปัญหานี้ให้ลึกขึ้นอีกขั้น^medium^pos_doubtful: 进一步 is verb phrase "go a step further" and adverb "further"; example shows adverb
+B3-0378^verb@E^medium^คืบหน้า; ความคืบหน้า^工作进展得很顺利。^Gōngzuò jìnzhǎn de hěn shùnlì.^งานคืบหน้าไปอย่างราบรื่น^medium^source_gloss: "evolve; get along" is loose; 进展 means "make progress" (verb) / "progress" (noun)
+B3-0379^noun@L^medium^ระยะใกล้นี้; เร็วๆ นี้^近期我没有出国的计划。^Jìnqī wǒ méiyǒu chūguó de jìhuà.^ระยะนี้ฉันไม่มีแผนไปต่างประเทศ^high^
+B3-0380^noun@E^high^งิ้วปักกิ่ง^我很喜欢看京剧。^Wǒ hěn xǐhuan kàn jīngjù.^ฉันชอบดูงิ้วปักกิ่งมาก^high^
+B3-0381^noun@E^medium^เศรษฐกิจ; เศรษฐศาสตร์; ประหยัด^这几年中国经济发展很快。^Zhè jǐ nián Zhōngguó jīngjì fāzhǎn hěn kuài.^ไม่กี่ปีมานี้เศรษฐกิจจีนพัฒนาอย่างรวดเร็ว^medium^polysemy: "economy" vs. "economics" vs. adjective "economical"; gloss "Economics" is the academic subject; example shows "economy"
+B3-0382^noun@E^medium^ประสบการณ์ (ที่ผ่านมา); ผ่านพบ^他的经历很丰富。^Tā de jīnglì hěn fēngfù.^เขาผ่านประสบการณ์มามาก^medium^variant: 经历 (things lived through) vs. 经验 (B3-0383, know-how) both glossed "experience"
+B3-0383^noun@E^medium^ประสบการณ์ (ความชำนาญ)^他有很多工作经验。^Tā yǒu hěn duō gōngzuò jīngyàn.^เขามีประสบการณ์การทำงานมาก^medium^variant: 经验 (know-how) vs. 经历 (B3-0382, life experiences) both glossed "experience"
+B3-0384^verb@L^medium^ดำเนินกิจการ; บริหาร^他经营着一家小饭馆。^Tā jīngyíng zhe yì jiā xiǎo fànguǎn.^เขาดำเนินกิจการร้านอาหารเล็กๆ อยู่ร้านหนึ่ง^medium^source_gloss: "Management" is a noun; 经营 is mainly the verb "run (a business)"
+B3-0385^adjective@E^high^ยอดเยี่ยม; สนุกตื่นเต้น^这场比赛很精彩。^Zhè chǎng bǐsài hěn jīngcǎi.^การแข่งขันนัดนี้สนุกมาก^high^
+B3-0386^noun@E^high^จิตใจ; จิตวิญญาณ; สภาพจิต^他的精神压力很大。^Tā de jīngshén yālì hěn dà.^เขามีความกดดันทางจิตใจมาก^high^variant: 精神 jīngshén (spirit) vs. 精神 jīngshen (B3-0387, lively) — homographs split by tone
+B3-0387^adjective@E^high^มีชีวิตชีวา; กระปรี้กระเปร่า^你今天看起来很精神。^Nǐ jīntiān kàn qǐlai hěn jīngshen.^วันนี้คุณดูกระปรี้กระเปร่ามาก^high^variant: 精神 jīngshen (lively) vs. 精神 jīngshén (B3-0386, spirit) — homographs split by tone
+B3-0388^noun@E^high^ทิวทัศน์^这里的景色真美。^Zhèlǐ de jǐngsè zhēn měi.^ทิวทัศน์ที่นี่สวยจริงๆ^high^
+B3-0389^noun@E^high^ตำรวจ^有问题可以找警察。^Yǒu wèntí kěyǐ zhǎo jǐngchá.^มีปัญหาก็ไปหาตำรวจได้^high^
+B3-0390^adjective@E^high^เงียบ; สงบ^夜里很静。^Yèli hěn jìng.^ตอนกลางคืนเงียบมาก^high^
+B3-0391^adjective@E^high^นาน^我们很久没见了。^Wǒmen hěn jiǔ méi jiàn le.^พวกเราไม่ได้เจอกันนานแล้ว^high^
+B3-0392^adjective@E^high^เก่า; ใช้แล้ว^这是一辆旧自行车。^Zhè shì yí liàng jiù zìxíngchē.^นี่คือจักรยานเก่าคันหนึ่ง^medium^source_gloss: "used" is narrow; 旧 means "old; worn; former"
+B3-0393^verb@E^high^ช่วยชีวิต; ช่วยเหลือ^医生救了他的命。^Yīshēng jiù le tā de mìng.^หมอช่วยชีวิตเขาไว้^high^
+B3-0394^adverb@L^medium^ก็คือ; นั่นแหละ; แม้ว่า^这就是我的家。^Zhè jiù shì wǒ de jiā.^นี่แหละคือบ้านของฉัน^medium^polysemy: emphatic "precisely; exactly" vs. conjunction "even if" (就是…也…); pos_doubtful: adverb + copula combination
+B3-0395^verb@E^medium^หางานทำ; มีงานทำ^大学毕业后他很快就业了。^Dàxué bìyè hòu tā hěn kuài jiùyè le.^หลังจบมหาวิทยาลัยเขาก็ได้งานทำอย่างรวดเร็ว^high^
+B3-0396^verb@E^high^จัด (งาน)^学校举办了一次运动会。^Xuéxiào jǔbàn le yí cì yùndònghuì.^โรงเรียนจัดงานกีฬาขึ้นหนึ่งครั้ง^high^
+B3-0397^adjective@E^high^เฉพาะเจาะจง; เป็นรูปธรรม^请说得具体一点儿。^Qǐng shuō de jùtǐ yìdiǎnr.^กรุณาพูดให้เฉพาะเจาะจงกว่านี้หน่อย^high^
+B3-0398^verb@E^high^มี; ประกอบด้วย^这个地方具有悠久的历史。^Zhège dìfang jùyǒu yōujiǔ de lìshǐ.^สถานที่แห่งนี้มีประวัติศาสตร์อันยาวนาน^high^
+B3-0399^noun@E^high^โรงละคร^今晚剧场有演出。^Jīnwǎn jùchǎng yǒu yǎnchū.^คืนนี้โรงละครมีการแสดง^high^
+B3-0400^adverb@L^medium^ได้ยินว่า; เขาว่ากันว่า^据说明天会下雪。^Jùshuō míngtiān huì xià xuě.^ได้ยินว่าพรุ่งนี้หิมะจะตก^high^
+B3-0401^noun@E^medium^การตัดสินใจ; ตัดสินใจ^这是一个很难的决定。^Zhè shì yí ge hěn nán de juédìng.^นี่เป็นการตัดสินใจที่ยากมาก^high^
+B3-0402^noun@E^high^รอบชิงชนะเลิศ^我们队进入了决赛。^Wǒmen duì jìnrù le juésài.^ทีมของเราเข้ารอบชิงชนะเลิศแล้ว^high^
+B3-0403^noun@E^high^ความตั้งใจแน่วแน่^他下决心学好汉语。^Tā xià juéxīn xué hǎo Hànyǔ.^เขาตั้งใจแน่วแน่ว่าจะเรียนภาษาจีนให้ดี^high^
+B3-0404^adverb@E^high^อย่างแน่นอน; โดยสิ้นเชิง^我绝对不会告诉别人。^Wǒ juéduì bú huì gàosu biérén.^ฉันจะไม่บอกคนอื่นอย่างแน่นอน^high^
+B3-0405^noun@E^high^กาแฟ^我每天早上喝一杯咖啡。^Wǒ měitiān zǎoshang hē yì bēi kāfēi.^ฉันดื่มกาแฟทุกเช้าวันละหนึ่งแก้ว^high^
+B3-0406^verb@L^medium^พัฒนา; บุกเบิก; การพัฒนา^这家公司在开发新产品。^Zhè jiā gōngsī zài kāifā xīn chǎnpǐn.^บริษัทนี้กำลังพัฒนาผลิตภัณฑ์ใหม่^medium^source_gloss: "Development" is a noun; 开发 is mainly the verb "develop; exploit"
+B3-0407^verb@E^high^เปิด (ให้บริการ/ต่อสาธารณะ); เปิดกว้าง^图书馆周末也开放。^Túshūguǎn zhōumò yě kāifàng.^ห้องสมุดเปิดให้บริการวันเสาร์อาทิตย์ด้วย^medium^polysemy: "open to the public" vs. "open up (policy)" vs. "(flowers) bloom"; example shows "open to the public"
+B3-0408^verb@E^high^เริ่ม^电影开始了。^Diànyǐng kāishǐ le.^หนังเริ่มฉายแล้ว^high^
+B3-0409^verb@E^high^เปิดกิจการ^这家商店明天开业。^Zhè jiā shāngdiàn míngtiān kāiyè.^ร้านนี้จะเปิดกิจการพรุ่งนี้^high^
+B3-0410^verb@E^high^ดำเนินการ; จัด (กิจกรรม)^学校开展了很多活动。^Xuéxiào kāizhǎn le hěn duō huódòng.^โรงเรียนจัดกิจกรรมมากมาย^medium^source_gloss: "Develop" is loose; 开展 means "launch; carry out (activities)"
+B3-0411^other^low^ดูเหมือน; ดูท่าว่า^他看起来很累。^Tā kàn qǐlai hěn lèi.^เขาดูเหนื่อยมาก^high^pos_doubtful: verb + directional complement phrase with no single POS
+B3-0412^other^low^ดูเหมือน; ดูแล้ว^这个苹果看上去很新鲜。^Zhège píngguǒ kàn shàngqu hěn xīnxiān.^แอปเปิลลูกนี้ดูสดมาก^high^pos_doubtful: verb + directional complement phrase with no single POS
+B3-0413^noun@E^medium^บททดสอบ; ทดสอบ^这对他是一次考验。^Zhè duì tā shì yí cì kǎoyàn.^นี่เป็นบททดสอบสำหรับเขา^high^
+B3-0414^noun@E^high^วิทยาศาสตร์และเทคโนโลยี^科技改变了生活。^Kējì gǎibiàn le shēnghuó.^วิทยาศาสตร์และเทคโนโลยีเปลี่ยนแปลงชีวิต^high^
+B3-0415^adjective@E^high^เชื่อถือได้; ไว้ใจได้^他是一个可靠的人。^Tā shì yí ge kěkào de rén.^เขาเป็นคนที่ไว้ใจได้^high^
+B3-0416^noun@E^high^โคล่า^我想喝一杯可乐。^Wǒ xiǎng hē yì bēi kělè.^ฉันอยากดื่มโคล่าหนึ่งแก้ว^high^
+B3-0417^verb@E^high^เอาชนะ (อุปสรรค)^我们要克服困难。^Wǒmen yào kèfú kùnnan.^พวกเราต้องเอาชนะความยากลำบาก^high^
+B3-0418^adjective@E^high^ตามความเป็นจริง; ไม่ลำเอียง^请你客观地看这个问题。^Qǐng nǐ kèguān de kàn zhège wèntí.^กรุณามองปัญหานี้อย่างเป็นกลาง^high^
+B3-0419^noun@E^high^หลักสูตร; วิชาเรียน^这学期的课程很多。^Zhè xuéqī de kèchéng hěn duō.^ภาคเรียนนี้มีวิชาเรียนมาก^high^
+B3-0421^noun@E^high^เครื่องปรับอากาศ; แอร์^房间里太热了，开空调吧。^Fángjiān li tài rè le, kāi kōngtiáo ba.^ในห้องร้อนเกินไป เปิดแอร์เถอะ^high^
+B3-0422^adverb@L^medium^เกรงว่า; คงจะ^恐怕他今天来不了了。^Kǒngpà tā jīntiān lái bu liǎo le.^เกรงว่าวันนี้เขาคงมาไม่ได้แล้ว^high^
+B3-0423^noun@E^high^เวลาว่าง^你有空儿吗？^Nǐ yǒu kòngr ma?^คุณมีเวลาว่างไหม?^high^
+B3-0424^noun@E^high^กางเกง^这条裤子有点儿长。^Zhè tiáo kùzi yǒudiǎnr cháng.^กางเกงตัวนี้ยาวไปนิด^high^
+B3-0425^adjective@E^high^รวดเร็ว; ความเร็วสูง^中国的经济快速发展。^Zhōngguó de jīngjì kuàisù fāzhǎn.^เศรษฐกิจจีนพัฒนาอย่างรวดเร็ว^high^
+B3-0426^adjective@E^high^ง่วง^我困了，想睡觉。^Wǒ kùn le, xiǎng shuìjiào.^ฉันง่วงแล้ว อยากนอน^high^
+B3-0427^noun@E^high^ความยากลำบาก^遇到困难不要怕。^Yùdào kùnnan búyào pà.^เจอความยากลำบากอย่ากลัว^medium^polysemy: noun "difficulty" vs. adjective "difficult" (生活困难); example shows noun
+B3-0428^verb@E^high^สิ้นเปลือง; ใช้อย่างสูญเปล่า^不要浪费时间。^Búyào làngfèi shíjiān.^อย่าเสียเวลาเปล่า^high^
+B3-0429^noun@E^high^ชาวบ้าน; ประชาชนทั่วไป^这是老百姓关心的问题。^Zhè shì lǎobǎixìng guānxīn de wèntí.^นี่เป็นปัญหาที่ชาวบ้านให้ความสนใจ^high^
+B3-0430^noun@E^high^เจ้านาย; เถ้าแก่^老板，这个多少钱？^Lǎobǎn, zhège duōshao qián?^เถ้าแก่ อันนี้เท่าไร?^high^
+B3-0431^noun@E^high^หญิงชรา; คุณยาย^那位老太太是我的邻居。^Nà wèi lǎotàitai shì wǒ de línjū.^คุณยายท่านนั้นเป็นเพื่อนบ้านของฉัน^high^
+B3-0432^noun@E^high^ชายชรา; ตาแก่^一个老头儿坐在门口。^Yí ge lǎotóur zuò zài ménkǒu.^ชายชราคนหนึ่งนั่งอยู่ที่หน้าประตู^high^
+B3-0433^adjective@E^high^ดีใจ; หัวเราะ; ร่าเริง^听了他的话，大家都乐了。^Tīng le tā de huà, dàjiā dōu lè le.^พอฟังคำพูดของเขา ทุกคนก็หัวเราะ^medium^polysemy: adjective "happy" vs. verb "laugh; be amused"; variant: 乐 lè vs. 乐 yuè (music)
+B3-0434^adjective@E^high^มองโลกในแง่ดี^他是一个很乐观的人。^Tā shì yí ge hěn lèguān de rén.^เขาเป็นคนมองโลกในแง่ดีมาก^high^
+B3-0435^noun@E^high^ประเภท; ชนิด^这类问题很常见。^Zhè lèi wèntí hěn chángjiàn.^ปัญหาประเภทนี้พบบ่อยมาก^high^
+B3-0436^adjective@E^high^คล้ายคลึง^我也遇到过类似的问题。^Wǒ yě yùdào guo lèisì de wèntí.^ฉันก็เคยเจอปัญหาคล้ายๆ กัน^high^
+B3-0437^verb@E^high^หย่าร้าง^他们去年离婚了。^Tāmen qùnián líhūn le.^พวกเขาหย่ากันเมื่อปีที่แล้ว^high^
+B3-0438^noun@E^high^ข้างใน; ภายใน^房间里面很干净。^Fángjiān lǐmiàn hěn gānjìng.^ข้างในห้องสะอาดมาก^high^
+B3-0439^verb@L^medium^ตัดผม^我明天要去理发。^Wǒ míngtiān yào qù lǐfà.^พรุ่งนี้ฉันจะไปตัดผม^high^
+B3-0440^verb@E^high^เข้าใจ^我理解你的心情。^Wǒ lǐjiě nǐ de xīnqíng.^ฉันเข้าใจความรู้สึกของคุณ^high^
+B3-0441^noun@E^high^ทฤษฎี^理论和实践要结合起来。^Lǐlùn hé shíjiàn yào jiéhé qǐlai.^ทฤษฎีกับการปฏิบัติต้องไปด้วยกัน^high^
+B3-0442^noun@E^high^เหตุผล; ข้ออ้าง^你有什么理由不来？^Nǐ yǒu shénme lǐyóu bù lái?^คุณมีเหตุผลอะไรที่ไม่มา?^high^
+B3-0443^noun@E^high^กำลัง; แรง^他用力推门。^Tā yòng lì tuī mén.^เขาออกแรงผลักประตู^high^
+B3-0444^noun@E^high^พลัง; กำลัง^团结就是力量。^Tuánjié jiù shì lìliang.^ความสามัคคีคือพลัง^high^
+B3-0445^adverb@E^high^ทันที^听到消息，他立刻回家了。^Tīngdào xiāoxi, tā lìkè huí jiā le.^พอได้ยินข่าว เขาก็กลับบ้านทันที^high^
+B3-0446^verb@E^high^ใช้ประโยชน์^我们要利用好时间。^Wǒmen yào lìyòng hǎo shíjiān.^พวกเราต้องใช้เวลาให้เป็นประโยชน์^high^
+B3-0447^preposition@L^medium^แม้แต่^他连饭都没吃就走了。^Tā lián fàn dōu méi chī jiù zǒu le.^เขาไปโดยแม้แต่ข้าวก็ยังไม่ได้กิน^medium^polysemy: 连 also verb "connect" and adverb "in succession"; gloss gives "even" (连…都/也)
+B3-0448^adverb@E^high^รีบ; โดยเร็ว^他连忙站起来。^Tā liánmáng zhàn qǐlai.^เขารีบลุกขึ้นยืน^high^
+B3-0449^adjective@L^medium^ต่อเนื่อง; ติดต่อกัน^他连续工作了十个小时。^Tā liánxù gōngzuò le shí ge xiǎoshí.^เขาทำงานต่อเนื่องสิบชั่วโมง^medium^source_gloss: "serial" is loose; 连续 means "continuous; in succession"
+B3-0450^noun@E^high^ละครชุด; ซีรีส์^我妈妈喜欢看电视连续剧。^Wǒ māma xǐhuan kàn diànshì liánxùjù.^แม่ของฉันชอบดูละครชุดทางโทรทัศน์^high^
+B3-0451^verb@L^low^ร่วมกัน; สหภาพ; รวมตัว^几家公司联合举办了这次活动。^Jǐ jiā gōngsī liánhé jǔbàn le zhè cì huódòng.^หลายบริษัทร่วมกันจัดกิจกรรมครั้งนี้^medium^source_gloss: "union" is a noun; 联合 is mainly verb/adverb "unite; jointly"; pos_doubtful: no source POS
+B3-0452^noun@E^high^สหประชาชาติ^联合国总部在纽约。^Liánhéguó zǒngbù zài Niǔyuē.^สำนักงานใหญ่สหประชาชาติอยู่ที่นิวยอร์ก^high^
+B3-0453^verb@E^high^ติดต่อ^到了北京请和我联系。^Dàole Běijīng qǐng hé wǒ liánxì.^ถึงปักกิ่งแล้วกรุณาติดต่อฉัน^medium^polysemy: verb "contact" vs. noun "connection; relation"; example shows the verb
+B3-0454^noun@E^high^น้ำเย็น; น้ำดิบ^不要喝凉水。^Búyào hē liángshuǐ.^อย่าดื่มน้ำดิบ^medium^polysemy: "cold water" vs. "unboiled water"; Thai example reads as unboiled
+B3-0456^verb@E^high^นำ; รับ; เข้าใจ^我去领工资。^Wǒ qù lǐng gōngzī.^ฉันไปรับเงินเดือน^medium^polysemy: lead / receive / understand combined; example shows "receive"
+B3-0457^noun@E^medium^ผู้นำ; หัวหน้า; นำ^他是我们的领导。^Tā shì wǒmen de lǐngdǎo.^เขาเป็นหัวหน้าของพวกเรา^high^
+B3-0458^verb@E^high^นำหน้า^我们队一直领先。^Wǒmen duì yìzhí lǐngxiān.^ทีมของเรานำมาตลอด^high^
+B3-0459^conjunction@L^medium^นอกจากนี้; อีกอย่าง^另外，我还想说一件事。^Lìngwài, wǒ hái xiǎng shuō yí jiàn shì.^นอกจากนี้ ฉันยังอยากพูดอีกเรื่องหนึ่ง^medium^pos_doubtful: 另外 is conjunction "in addition", pronoun "other" (另外一个) and adverb "separately"
+B3-0460^conjunction@L^medium^อีกด้านหนึ่ง^一方面要努力学习，另一方面要注意身体。^Yì fāngmiàn yào nǔlì xuéxí, lìng yì fāngmiàn yào zhùyì shēntǐ.^ด้านหนึ่งต้องตั้งใจเรียน อีกด้านหนึ่งต้องดูแลสุขภาพ^high^
+B3-0461^verb@L^medium^ไปเรียนต่างประเทศ^他打算去美国留学。^Tā dǎsuan qù Měiguó liúxué.^เขาวางแผนจะไปเรียนต่อที่อเมริกา^medium^source_gloss: "Overseas Study" is a noun; 留学 is mainly the verb "study abroad"
+B3-0462^noun@E^high^มังกร^龙是中国的象征。^Lóng shì Zhōngguó de xiàngzhēng.^มังกรเป็นสัญลักษณ์ของจีน^high^
+B3-0463^verb@E^high^บันทึก; จด; อัด^我把他的话录下来了。^Wǒ bǎ tā de huà lù xiàlai le.^ฉันอัดคำพูดของเขาไว้แล้ว^high^
+B3-0464^verb@L^medium^บันทึกเสียง; อัดเสียง^请不要录音。^Qǐng búyào lùyīn.^กรุณาอย่าบันทึกเสียง^medium^pos_doubtful: gloss "Sound recording" is a noun; 录音 is both verb and noun; example shows the verb
+B3-0465^noun@E^high^เส้นทาง; แนวทาง^我们换一条路线吧。^Wǒmen huàn yì tiáo lùxiàn ba.^พวกเราเปลี่ยนเส้นทางกันเถอะ^high^
+B3-0466^noun@E^high^โรงแรม; โรงแรมขนาดเล็ก^我们今晚住在旅馆里。^Wǒmen jīnwǎn zhù zài lǚguǎn li.^คืนนี้พวกเราพักที่โรงแรม^high^
+B3-0467^noun@E^high^บริษัทนำเที่ยว^我们通过旅行社去旅游。^Wǒmen tōngguò lǚxíngshè qù lǚyóu.^พวกเราไปเที่ยวผ่านบริษัทนำเที่ยว^high^
+B3-0468^noun@E^high^ชาเขียว^他每天都喝绿茶。^Tā měitiān dōu hē lǜchá.^เขาดื่มชาเขียวทุกวัน^high^
+B3-0469^adjective@L^medium^ยุ่งเหยิง; รก; สับสน^你的房间太乱了。^Nǐ de fángjiān tài luàn le.^ห้องของคุณรกเกินไป^medium^source_gloss: "chaos" is a noun; 乱 is mainly the adjective "messy" and adverb "randomly"
+B3-0470^adjective@E^high^ล้าหลัง; ตามหลัง^这个地区比较落后。^Zhège dìqū bǐjiào luòhòu.^พื้นที่นี้ค่อนข้างล้าหลัง^medium^polysemy: adjective "backward" vs. verb "fall behind"; example shows adjective
+B3-0471^noun@E^high^ความยุ่งยาก; รบกวน; ยุ่งยาก^给你添麻烦了。^Gěi nǐ tiān máfan le.^รบกวนคุณแล้ว^medium^polysemy: noun "trouble" vs. verb "bother" (麻烦你) and adjective "troublesome"
+B3-0472^noun@E^high^ม้า^他会骑马。^Tā huì qí mǎ.^เขาขี่ม้าเป็น^high^
+B3-0473^verb@E^high^ทำให้พอใจ; ตอบสนอง^我们会尽量满足你的要求。^Wǒmen huì jǐnliàng mǎnzú nǐ de yāoqiú.^พวกเราจะพยายามตอบสนองความต้องการของคุณ^high^
+B3-0474^adverb@E^high^ค่อยๆ; ช้าๆ^慢慢说，别着急。^Mànmàn shuō, bié zháojí.^ค่อยๆ พูด ไม่ต้องรีบ^high^
+B3-0476^noun@E^high^ข้อเสีย; อาการเสีย; โรค^我的电脑出毛病了。^Wǒ de diànnǎo chū máobìng le.^คอมพิวเตอร์ของฉันมีปัญหาแล้ว^medium^polysemy: "fault; defect" vs. "bad habit" vs. "illness"; gloss "Trouble" is vague
+B3-0477^adjective@E^high^ไร้ประโยชน์^哭也没用。^Kū yě méiyòng.^ร้องไห้ก็ไม่มีประโยชน์^high^
+B3-0478^noun@E^high^สื่อ^这件事引起了媒体的关注。^Zhè jiàn shì yǐnqǐ le méitǐ de guānzhù.^เรื่องนี้ได้รับความสนใจจากสื่อ^high^
+B3-0479^pronoun@L^high^แต่ละ; ทุก^我每天都学习汉语。^Wǒ měitiān dōu xuéxí Hànyǔ.^ฉันเรียนภาษาจีนทุกวัน^high^
