@@ -1,0 +1,17 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B5-1056^noun@E^high^กระสุนปืน^子弹打中了目标。^Zǐdàn dǎzhòng le mùbiāo.^กระสุนยิงถูกเป้า^high^
+B5-1057^adjective@E^high^ละเอียดรอบคอบ^请你仔细检查一下。^Qǐng nǐ zǐxì jiǎnchá yí xià.^กรุณาตรวจสอบอย่างละเอียด^high^
+B5-1058^adjective@E^high^สีม่วง^她穿了一件紫裙子。^Tā chuān le yí jiàn zǐ qúnzi.^เธอสวมกระโปรงสีม่วง^high^
+B5-1059^adjective@E^high^ภาคภูมิใจ^我为我的国家感到自豪。^Wǒ wèi wǒ de guójiā gǎndào zìháo.^ฉันภาคภูมิใจในประเทศของฉัน^high^
+B5-1060^verb@E^medium^ฆ่าตัวตาย^他曾经想过自杀。^Tā céngjīng xiǎng guo zìshā.^เขาเคยคิดฆ่าตัวตาย^medium^pos_doubtful: 自杀 is both verb "commit suicide" and noun "suicide"
+B5-1061^verb@L^medium^สมัครใจ^这次活动大家自愿参加。^Zhè cì huódòng dàjiā zìyuàn cānjiā.^กิจกรรมครั้งนี้ทุกคนเข้าร่วมโดยสมัครใจ^medium^source_gloss: "voluntarily" is adverbial; 自愿 is verb/adjective "volunteer; voluntary"
+B5-1062^noun@E^high^ประธานเจ้าหน้าที่บริหาร; ซีอีโอ^他是这家公司的总裁。^Tā shì zhè jiā gōngsī de zǒngcái.^เขาเป็นซีอีโอของบริษัทนี้^high^
+B5-1063^noun@E^high^จำนวนรวม^学生总数是五百人。^Xuésheng zǒngshù shì wǔbǎi rén.^จำนวนนักเรียนทั้งหมดคือห้าร้อยคน^high^
+B5-1064^adverb@E^high^ในที่สุด^我们总算到家了。^Wǒmen zǒngsuàn dào jiā le.^ในที่สุดพวกเราก็ถึงบ้าน^medium^polysemy: "finally; at last" vs. "on the whole" (这次考试总算不错)
+B5-1065^noun@E^high^ภาพรวม; ทั้งหมด^总体来说，这次活动很成功。^Zǒngtǐ lái shuō, zhè cì huódòng hěn chénggōng.^โดยภาพรวม กิจกรรมครั้งนี้ประสบความสำเร็จมาก^high^
+B5-1066^verb@E^high^ขัดขวาง^这些问题阻碍了经济的发展。^Zhèxiē wèntí zǔ'ài le jīngjì de fāzhǎn.^ปัญหาเหล่านี้ขัดขวางการพัฒนาเศรษฐกิจ^high^
+B5-1067^noun@E^medium^องค์กร; จัดตั้ง; จัด^他参加了一个环保组织。^Tā cānjiā le yí ge huánbǎo zǔzhī.^เขาเข้าร่วมองค์กรด้านสิ่งแวดล้อมแห่งหนึ่ง^medium^polysemy: noun "organization" vs. verb "organize" (组织活动)
+B5-1068^adjective@E^high^เมา^他喝醉了。^Tā hē zuì le.^เขาเมาแล้ว^medium^polysemy: "drunk" vs. figurative "be infatuated" (陶醉)
+B5-1069^verb@E^high^เคารพ^我们要尊敬老人。^Wǒmen yào zūnjìng lǎorén.^พวกเราต้องเคารพผู้สูงอายุ^medium^polysemy: verb "respect" vs. adjective "honourable" (尊敬的各位来宾)
+B5-1070^verb@E^high^เคารพ; ให้เกียรติ^我们要尊重别人的意见。^Wǒmen yào zūnzhòng biérén de yìjiàn.^พวกเราต้องเคารพความคิดเห็นของผู้อื่น^high^
+B5-1071^verb@E^high^ปฏิบัติตาม^请大家遵守规定。^Qǐng dàjiā zūnshǒu guīdìng.^ขอให้ทุกคนปฏิบัติตามข้อกำหนด^high^

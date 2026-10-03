@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B5-0956^verb@E^high^อยู่ในที่เกิดเหตุ; อยู่ ณ ที่นั้น^当时在场的人都看到了。^Dāngshí zàichǎng de rén dōu kàndào le.^คนที่อยู่ในที่นั้นตอนนั้นเห็นกันหมด^high^
+B5-0957^verb@L^medium^รวมอยู่ด้วย^包括我在内，一共有十个人。^Bāokuò wǒ zàinèi, yígòng yǒu shí ge rén.^รวมฉันด้วย ทั้งหมดมีสิบคน^medium^pos_doubtful: 在内 is a post-positional phrase in 包括…在内; no clean POS
+B5-0958^adjective@E^medium^ชั่วคราว^这只是暂时的困难。^Zhè zhǐ shì zànshí de kùnnan.^นี่เป็นเพียงความยากลำบากชั่วคราว^medium^pos_doubtful: 暂时 is adjective "temporary" and adverb/noun "for the time being"
+B5-0959^verb@E^high^หยุดชั่วคราว; ขอเวลานอก^比赛暂停十分钟。^Bǐsài zàntíng shí fēnzhōng.^การแข่งขันหยุดชั่วคราวสิบนาที^high^
+B5-0960^adjective@E^high^แย่; ยุ่งเหยิง; กาก^事情越来越糟了。^Shìqing yuè lái yuè zāo le.^เรื่องยิ่งแย่ลงเรื่อยๆ^low^polysemy: noun "dregs; waste" vs. verb "spoil" vs. adjective "bad; in a mess"; example shows "bad"
+B5-0961^adjective@E^high^แย่มาก; แย่แล้ว^糟糕，我忘带钥匙了！^Zāogāo, wǒ wàng dài yàoshi le!^แย่แล้ว ฉันลืมพกกุญแจ!^medium^polysemy: adjective "terrible" vs. interjection "oh no!"; example shows interjection use
+B5-0962^noun@E^high^ระยะแรก; ช่วงต้น^这是他早期的作品。^Zhè shì tā zǎoqī de zuòpǐn.^นี่เป็นผลงานช่วงแรกของเขา^high^
+B5-0963^verb@E^high^เพิ่ม^今年学生人数增了不少。^Jīnnián xuésheng rénshù zēng le bù shǎo.^ปีนี้จำนวนนักเรียนเพิ่มขึ้นไม่น้อย^high^
+B5-0964^verb@E^high^เพิ่มผลผลิต^今年粮食增产了。^Jīnnián liángshi zēngchǎn le.^ปีนี้ผลผลิตธัญพืชเพิ่มขึ้น^high^
+B5-0965^verb@E^high^เพิ่มขึ้น; ขยายใหญ่^他的压力越来越大，工作量也增大了。^Tā de yālì yuè lái yuè dà, gōngzuòliàng yě zēngdà le.^ความกดดันของเขามากขึ้นเรื่อยๆ ปริมาณงานก็เพิ่มขึ้นด้วย^high^
+B5-0966^verb@E^high^เพิ่มจำนวน^最近来这里旅游的人增多了。^Zuìjìn lái zhèlǐ lǚyóu de rén zēngduō le.^ช่วงนี้นักท่องเที่ยวที่มาที่นี่เพิ่มขึ้น^high^
+B5-0967^verb@E^high^เสริมสร้าง; เพิ่มพูน^运动可以增强体质。^Yùndòng kěyǐ zēngqiáng tǐzhì.^การออกกำลังกายช่วยเสริมสร้างร่างกาย^high^
+B5-0968^verb@E^high^มอบให้ (เป็นของขวัญ)^这本书是朋友赠给我的。^Zhè běn shū shì péngyou zèng gěi wǒ de.^หนังสือเล่มนี้เพื่อนมอบให้ฉัน^high^
+B5-0969^verb@E^high^มอบให้; แจก^买一送一，免费赠送。^Mǎi yī sòng yī, miǎnfèi zèngsòng.^ซื้อหนึ่งแถมหนึ่ง แจกฟรี^medium^source_gloss: "Give" is generic; 赠送 = give as a gift; give away free
+B5-0970^verb@E^high^เด็ด; เก็บ; ถอด^我们去果园摘苹果吧。^Wǒmen qù guǒyuán zhāi píngguǒ ba.^พวกเราไปเก็บแอปเปิลที่สวนผลไม้กันเถอะ^medium^polysemy: "pick (fruit)" vs. "take off (hat, glasses)" (摘眼镜) vs. "excerpt"
+B5-0971^noun@E^medium^นิทรรศการ; จัดแสดง^我们去看了一个画展览。^Wǒmen qù kàn le yí ge huà zhǎnlǎn.^พวกเราไปดูนิทรรศการภาพวาด^medium^pos_doubtful: 展览 is both noun "exhibition" and verb "exhibit"
+B5-0972^verb@E^high^จัดแสดง; แสดงให้เห็น^博物馆展示了很多文物。^Bówùguǎn zhǎnshì le hěn duō wénwù.^พิพิธภัณฑ์จัดแสดงโบราณวัตถุมากมาย^high^
+B5-0973^verb@E^high^แสดงให้เห็น^这部电影展现了农村的生活。^Zhè bù diànyǐng zhǎnxiàn le nóngcūn de shēnghuó.^ภาพยนตร์เรื่องนี้แสดงให้เห็นชีวิตในชนบท^high^
+B5-0974^verb@E^high^ยึดครอง^军队占领了这座城市。^Jūnduì zhànlǐng le zhè zuò chéngshì.^กองทัพยึดครองเมืองนี้^high^
+B5-0975^verb@E^high^ครอบครอง; ครอง^这家公司占有很大的市场份额。^Zhè jiā gōngsī zhànyǒu hěn dà de shìchǎng fèn'é.^บริษัทนี้ครองส่วนแบ่งตลาดขนาดใหญ่^high^
+B5-0976^verb@E^high^ขึ้น (ราคา/น้ำ)^今年房价又涨了。^Jīnnián fángjià yòu zhǎng le.^ปีนี้ราคาบ้านขึ้นอีกแล้ว^medium^variant: 涨 zhǎng (rise) vs. 涨 zhàng (swell)
+B5-0977^verb@E^high^ขึ้นราคา^最近蔬菜涨价了。^Zuìjìn shūcài zhǎngjià le.^ช่วงนี้ผักขึ้นราคา^high^
+B5-0978^verb@E^high^เชี่ยวชาญ; ควบคุม^他已经掌握了这门技术。^Tā yǐjīng zhǎngwò le zhè mén jìshù.^เขาเชี่ยวชาญเทคนิคนี้แล้ว^medium^polysemy: "master (a skill)" vs. "control; grasp (a situation)"
+B5-0979^verb@E^high^รับสมัครนักเรียน^这所大学今年招生两千人。^Zhè suǒ dàxué jīnnián zhāoshēng liǎngqiān rén.^มหาวิทยาลัยนี้รับนักศึกษาสองพันคนในปีนี้^high^
+B5-0980^verb@E^high^กวักมือ; โบกมือ^他向我招手。^Tā xiàng wǒ zhāoshǒu.^เขาโบกมือให้ฉัน^high^
+B5-0981^adjective@E^high^ล้ำค่า^这是一份珍贵的礼物。^Zhè shì yí fèn zhēnguì de lǐwù.^นี่เป็นของขวัญที่ล้ำค่า^high^
+B5-0982^verb@E^high^ทะนุถนอม; รู้คุณค่า^我们要珍惜时间。^Wǒmen yào zhēnxī shíjiān.^พวกเราต้องรู้คุณค่าของเวลา^high^
+B5-0983^noun@E^high^ไข่มุก^她戴着一条珍珠项链。^Tā dài zhe yì tiáo zhēnzhū xiàngliàn.^เธอสวมสร้อยไข่มุกเส้นหนึ่ง^high^
+B5-0984^adjective@E^high^จริงใจ^谢谢你真诚的帮助。^Xièxie nǐ zhēnchéng de bāngzhù.^ขอบคุณสำหรับความช่วยเหลืออย่างจริงใจของคุณ^high^
+B5-0985^noun@E^high^สัจธรรม; ความจริง^实践是检验真理的标准。^Shíjiàn shì jiǎnyàn zhēnlǐ de biāozhǔn.^การปฏิบัติคือเกณฑ์พิสูจน์สัจธรรม^high^
+B5-0986^noun@E^high^ความจริง (ข้อเท็จจริง)^大家都想知道事情的真相。^Dàjiā dōu xiǎng zhīdào shìqing de zhēnxiàng.^ทุกคนอยากรู้ความจริงของเรื่องนี้^high^
+B5-0987^verb@E^medium^วินิจฉัย; การวินิจฉัย^医生诊断他得了感冒。^Yīshēng zhěnduàn tā dé le gǎnmào.^หมอวินิจฉัยว่าเขาเป็นหวัด^medium^pos_doubtful: gloss "Diagnosis" is a noun; 诊断 is both verb and noun; example shows the verb
+B5-0988^verb@L^medium^สั่นสะเทือน^手机在桌子上振动。^Shǒujī zài zhuōzi shang zhèndòng.^โทรศัพท์มือถือสั่นอยู่บนโต๊ะ^medium^source_gloss: "Vibration" is a noun; 振动 is mainly the verb "vibrate"
+B5-0989^verb@E^medium^ตกตะลึง; ทำให้ตกใจ^这个消息让大家很震惊。^Zhège xiāoxi ràng dàjiā hěn zhènjīng.^ข่าวนี้ทำให้ทุกคนตกตะลึงมาก^medium^polysemy: verb "shock" vs. adjective "shocked"
+B5-0990^noun@E^medium^ข้อโต้แย้ง; โต้เถียง^这个问题还有争议。^Zhège wèntí hái yǒu zhēngyì.^ปัญหานี้ยังมีข้อโต้แย้งอยู่^medium^pos_doubtful: 争议 is both noun "dispute" and verb "dispute"
+B5-0991^adjective@L^medium^ลิขสิทธิ์แท้; ของแท้^请购买正版软件。^Qǐng gòumǎi zhèngbǎn ruǎnjiàn.^กรุณาซื้อซอฟต์แวร์ลิขสิทธิ์แท้^medium^pos_doubtful: 正版 is noun "legal copy" used attributively ("genuine")
+B5-0992^adjective@E^high^ได้มาตรฐาน; เป็นทางการ^这是一所正规的学校。^Zhè shì yì suǒ zhèngguī de xuéxiào.^นี่เป็นโรงเรียนที่ได้มาตรฐาน^medium^source_gloss: "regular" is loose; 正规 means "standard; formal; legitimate"
+B5-0993^verb@L^medium^ดังเช่นที่; เหมือนกับที่^正如老师所说，学习要靠自己。^Zhèngrú lǎoshī suǒ shuō, xuéxí yào kào zìjǐ.^ดังที่ครูกล่าวไว้ การเรียนต้องพึ่งตนเอง^medium^pos_doubtful: 正如 is a verb-like connective "just as"
+B5-0994^noun@E^high^ความยุติธรรม^正义一定会战胜邪恶。^Zhèngyì yídìng huì zhànshèng xié'è.^ความยุติธรรมต้องชนะความชั่วร้าย^medium^polysemy: noun "justice" vs. adjective "just; righteous"
+B5-0995^verb@E^high^ยืนยัน; พิสูจน์^这个消息已经被证实了。^Zhège xiāoxi yǐjīng bèi zhèngshí le.^ข่าวนี้ได้รับการยืนยันแล้ว^high^
+B5-0996^noun@E^high^ใบรับรอง; ประกาศนียบัตร^他获得了一张汉语水平证书。^Tā huòdé le yì zhāng Hànyǔ shuǐpíng zhèngshū.^เขาได้รับใบรับรองระดับภาษาจีนหนึ่งใบ^high^
+B5-0997^verb@E^high^หา (เงิน); ได้ (ค่าจ้าง)^他一个月挣五千块。^Tā yí ge yuè zhèng wǔqiān kuài.^เขาหาเงินได้เดือนละห้าพันหยวน^medium^variant: 挣 zhèng (earn) vs. 挣 zhēng (struggle, 挣扎)
+B5-0998^verb@E^high^หาเงิน^他很努力地工作挣钱。^Tā hěn nǔlì de gōngzuò zhèngqián.^เขาทำงานหาเงินอย่างขยันขันแข็ง^high^
+B5-0999^noun@L^high^ภายใน^三天之内完成任务。^Sān tiān zhīnèi wánchéng rènwu.^ทำภารกิจให้เสร็จภายในสามวัน^high^
+B5-1000^noun@L^medium^นอกเหนือ; นอกจาก^除此之外，我还想说一点。^Chú cǐ zhīwài, wǒ hái xiǎng shuō yì diǎn.^นอกจากนี้ ฉันยังอยากพูดอีกข้อหนึ่ง^medium^polysemy: spatial "outside" vs. "except; besides"; example shows "besides"
+B5-1001^noun@L^high^ภายใต้^在老师的帮助之下，他进步很快。^Zài lǎoshī de bāngzhù zhīxià, tā jìnbù hěn kuài.^ภายใต้ความช่วยเหลือของครู เขาก้าวหน้าอย่างรวดเร็ว^high^
+B5-1002^noun@L^high^ท่ามกลาง; ใน^他是我们之中最高的。^Tā shì wǒmen zhīzhōng zuì gāo de.^เขาสูงที่สุดในหมู่พวกเรา^high^
+B5-1003^noun@E^medium^รายจ่าย; จ่าย^这个月的支出比较多。^Zhège yuè de zhīchū bǐjiào duō.^เดือนนี้รายจ่ายค่อนข้างมาก^medium^pos_doubtful: 支出 is both noun "expenditure" and verb "pay out"
+B5-1004^verb@E^high^ควบคุม; ครอบงำ^不要被情绪支配。^Búyào bèi qíngxù zhīpèi.^อย่าให้อารมณ์ครอบงำ^medium^polysemy: "control; dominate" vs. "allocate; arrange" (支配时间)
+B5-1005^verb@E^high^ปฏิบัติ; ดำเนินการ^我们要认真执行这个计划。^Wǒmen yào rènzhēn zhíxíng zhège jìhuà.^พวกเราต้องดำเนินการตามแผนนี้อย่างจริงจัง^high^
+B5-1006^noun@E^high^เส้นตรง^两点之间直线最短。^Liǎng diǎn zhījiān zhíxiàn zuì duǎn.^ระหว่างสองจุด เส้นตรงสั้นที่สุด^high^
+B5-1007^verb@L^medium^เข้าเวร^今天晚上我值班。^Jīntiān wǎnshang wǒ zhíbān.^คืนนี้ฉันเข้าเวร^high^
+B5-1008^noun@E^high^หน้าที่; บทบาท^政府要转变职能。^Zhèngfǔ yào zhuǎnbiàn zhínéng.^รัฐบาลต้องปรับเปลี่ยนบทบาทหน้าที่^high^
+B5-1009^noun@E^high^ตำแหน่ง (งาน)^他申请了经理的职位。^Tā shēnqǐng le jīnglǐ de zhíwèi.^เขาสมัครตำแหน่งผู้จัดการ^high^
+B5-1010^noun@E^high^ตำแหน่งหน้าที่^他在公司担任重要职务。^Tā zài gōngsī dānrèn zhòngyào zhíwù.^เขาดำรงตำแหน่งสำคัญในบริษัท^high^
+B5-1011^adverb@E^high^เพียงแค่^我只不过是开个玩笑。^Wǒ zhǐbúguò shì kāi ge wánxiào.^ฉันแค่พูดเล่นเท่านั้น^high^
+B5-1012^verb@L^medium^เห็นเพียง; มองเห็นว่า^推开门，只见屋里没有人。^Tuīkāi mén, zhǐ jiàn wū li méiyǒu rén.^พอผลักประตูเข้าไป ก็เห็นว่าในห้องไม่มีใคร^medium^pos_doubtful: narrative connective 只见 ("one sees…") with no clean POS
+B5-1013^noun@E^high^ตัวชี้วัด; เป้าหมาย^今年的生产指标已经完成了。^Jīnnián de shēngchǎn zhǐbiāo yǐjīng wánchéng le.^เป้าหมายการผลิตของปีนี้สำเร็จแล้ว^medium^source_gloss: "index" is loose; 指标 means "target; quota; indicator"
+B5-1014^noun@E^high^เล็บ^你的指甲太长了。^Nǐ de zhǐjia tài cháng le.^เล็บของคุณยาวเกินไป^medium^source_gloss: English "nail" is ambiguous (also 钉子); 指甲 = fingernail
+B5-1015^noun@E^medium^คำสั่ง; ชี้แนะ; สั่ง^请按照指示操作。^Qǐng ànzhào zhǐshì cāozuò.^กรุณาปฏิบัติตามคำสั่ง^medium^pos_doubtful: 指示 is both noun "instruction" and verb "instruct; indicate"
+B5-1016^verb@E^high^กล่าวโทษ; ตำหนิ^别总是指责别人。^Bié zǒngshì zhǐzé biérén.^อย่ากล่าวโทษคนอื่นตลอด^high^
+B5-1017^preposition@L^low^ถึง; จนถึง; อย่างยิ่ง^每天上午九点至十二点上课。^Měitiān shàngwǔ jiǔ diǎn zhì shí'èr diǎn shàngkè.^ทุกวันเรียนตั้งแต่เก้าโมงถึงเที่ยง^medium^polysemy: "to; until" (preposition/verb) vs. adverb "extremely" (至关重要); pos_doubtful: no source POS
+B5-1018^verb@E^high^ทำเป็น; ทำจาก^这些家具是用竹子制成的。^Zhèxiē jiājù shì yòng zhúzi zhìchéng de.^เฟอร์นิเจอร์เหล่านี้ทำจากไม้ไผ่^high^
+B5-1019^verb@E^high^จำกัด; ควบคุม^经济发展受到很多因素的制约。^Jīngjì fāzhǎn shòudào hěn duō yīnsù de zhìyuē.^การพัฒนาเศรษฐกิจถูกจำกัดด้วยปัจจัยหลายอย่าง^high^
+B5-1020^noun@E^high^ความสงบเรียบร้อย^这个地区的治安很好。^Zhège dìqū de zhì'ān hěn hǎo.^ความสงบเรียบร้อยในพื้นที่นี้ดีมาก^high^
+B5-1021^verb@L^low^บริหาร; จัดการ; แก้ไขปัญหา^政府正在治理河水污染。^Zhèngfǔ zhèngzài zhìlǐ héshuǐ wūrǎn.^รัฐบาลกำลังแก้ไขปัญหามลพิษทางน้ำ^medium^source_gloss: "Government" is a noun (政府); 治理 is the verb "govern; administer; tackle (a problem)"
+B5-1022^verb@E^high^ขาดตอน; ขัดจังหวะ^电话突然中断了。^Diànhuà tūrán zhōngduàn le.^สายโทรศัพท์ขาดกะทันหัน^high^
+B5-1023^noun@E^high^เทศกาลไหว้พระจันทร์^中秋节我们一家人一起赏月。^Zhōngqiū Jié wǒmen yì jiā rén yìqǐ shǎng yuè.^เทศกาลไหว้พระจันทร์ครอบครัวเราชมจันทร์ด้วยกัน^high^
+B5-1024^noun@E^high^ศูนย์กลาง; ส่วนกลาง (รัฐบาล)^广场中央有一座雕像。^Guǎngchǎng zhōngyāng yǒu yí zuò diāoxiàng.^กลางจัตุรัสมีรูปปั้นอยู่หนึ่งองค์^medium^polysemy: spatial "centre" vs. political "central government; the Centre"
+B5-1025^noun@E^high^ยาจีน^他每天喝中药。^Tā měitiān hē zhōngyào.^เขาดื่มยาจีนทุกวัน^high^
+B5-1026^noun@E^high^จุดสิ้นสุด; เส้นชัย^他第一个跑到了终点。^Tā dì yī ge pǎo dào le zhōngdiǎn.^เขาวิ่งถึงเส้นชัยเป็นคนแรก^medium^polysemy: "finish line" vs. "terminus; end point"
+B5-1027^noun@E^medium^ตลอดชีวิต^他得到了终身成就奖。^Tā dédào le zhōngshēn chéngjiù jiǎng.^เขาได้รับรางวัลความสำเร็จตลอดชีวิต^medium^pos_doubtful: gloss "lifelong" is adjectival; 终身 is a noun used attributively
+B5-1028^verb@L^medium^ยุติ; สิ้นสุด^双方终止了合同。^Shuāngfāng zhōngzhǐ le hétong.^ทั้งสองฝ่ายยุติสัญญา^medium^source_gloss: "termination" is a noun; 终止 is the verb "terminate"
+B5-1029^verb@E^high^เป็นพิษ; ได้รับสารพิษ^他吃了不干净的东西，中毒了。^Tā chī le bù gānjìng de dōngxi, zhòngdú le.^เขากินของไม่สะอาดจนเกิดอาการเป็นพิษ^high^
+B5-1030^adjective@E^high^จำนวนมาก^中国人口众多。^Zhōngguó rénkǒu zhòngduō.^จีนมีประชากรจำนวนมาก^high^
+B5-1031^noun@E^high^รอบ; คาบ; วัฏจักร^这个项目的周期是两年。^Zhège xiàngmù de zhōuqī shì liǎng nián.^โครงการนี้มีรอบระยะเวลาสองปี^high^
+B5-1032^noun@E^high^ไม้ไผ่^熊猫喜欢吃竹子。^Xióngmāo xǐhuan chī zhúzi.^แพนด้าชอบกินไม้ไผ่^high^
+B5-1033^verb@E^medium^เป็นเจ้าภาพจัด^这次会议由我们公司主办。^Zhè cì huìyì yóu wǒmen gōngsī zhǔbàn.^การประชุมครั้งนี้บริษัทของเราเป็นเจ้าภาพจัด^medium^source_gloss: "Host" may be read as noun; 主办 is the verb "host; sponsor (an event)"
+B5-1034^adjective@L^medium^เป็นหลัก; นำ^教师在课堂上起主导作用。^Jiàoshī zài kètáng shang qǐ zhǔdǎo zuòyòng.^ครูมีบทบาทนำในชั้นเรียน^medium^pos_doubtful: 主导 is adjective "leading", verb "dominate" and noun "guiding factor"
+B5-1035^adjective@E^high^อัตวิสัย^这只是你的主观看法。^Zhè zhǐ shì nǐ de zhǔguān kànfǎ.^นี่เป็นเพียงความเห็นเชิงอัตวิสัยของคุณ^high^
+B5-1036^noun@E^medium^ผู้จัดการ; หัวหน้างาน; ดูแลรับผิดชอบ^他是我们部门的主管。^Tā shì wǒmen bùmén de zhǔguǎn.^เขาเป็นหัวหน้างานของแผนกเรา^medium^polysemy: noun "supervisor; person in charge" vs. verb "be in charge of"; source_gloss: "Executive director" is narrow
+B5-1037^noun@E^high^ส่วนหลัก; ตัวการ; ประธาน (ไวยากรณ์)^学生是学校的主体。^Xuésheng shì xuéxiào de zhǔtǐ.^นักเรียนเป็นส่วนหลักของโรงเรียน^medium^polysemy: "main body" vs. "subject (philosophy/law)"
+B5-1038^noun@E^high^ผู้ช่วย^她是经理的助理。^Tā shì jīnglǐ de zhùlǐ.^เธอเป็นผู้ช่วยผู้จัดการ^high^
+B5-1039^noun@E^high^ผู้ช่วย^他是我的好助手。^Tā shì wǒ de hǎo zhùshǒu.^เขาเป็นผู้ช่วยที่ดีของฉัน^high^
+B5-1040^verb@E^high^ลงทะเบียน^请先注册一个账号。^Qǐng xiān zhùcè yí ge zhànghào.^กรุณาลงทะเบียนบัญชีก่อน^high^
+B5-1041^verb@L^medium^ฉีด (ยา)^护士给病人注射药物。^Hùshi gěi bìngrén zhùshè yàowù.^พยาบาลฉีดยาให้ผู้ป่วย^medium^source_gloss: "injection" is a noun; 注射 is mainly the verb "inject"
+B5-1042^verb@L^medium^จ้องมอง^他注视着远方。^Tā zhùshì zhe yuǎnfāng.^เขาจ้องมองไปยังที่ไกล^medium^source_gloss: "Gaze" may be read as noun; 注视 is the verb "gaze at"
+B5-1043^verb@E^high^ให้ความสำคัญ^我们要注重学习方法。^Wǒmen yào zhùzhòng xuéxí fāngfǎ.^พวกเราต้องให้ความสำคัญกับวิธีการเรียน^high^
+B5-1044^verb@E^high^แสดงความยินดี^祝贺你考上了大学！^Zhùhè nǐ kǎoshàng le dàxué!^ยินดีด้วยที่คุณสอบเข้ามหาวิทยาลัยได้!^high^
+B5-1045^noun@E^high^อัลบั้ม^这是她的新专辑。^Zhè shì tā de xīn zhuānjí.^นี่คืออัลบั้มใหม่ของเธอ^medium^polysemy: "music album" vs. "special issue (publication)"
+B5-1046^noun@E^high^สิทธิบัตร^他申请了一项专利。^Tā shēnqǐng le yí xiàng zhuānlì.^เขายื่นขอสิทธิบัตรหนึ่งรายการ^high^
+B5-1047^verb@E^high^แปรเปลี่ยน^我们要把压力转化为动力。^Wǒmen yào bǎ yālì zhuǎnhuà wéi dònglì.^พวกเราต้องเปลี่ยนความกดดันให้เป็นแรงผลักดัน^high^
+B5-1048^verb@E^medium^เปลี่ยน; แปลง; การแปลง^请把文件转换成PDF格式。^Qǐng bǎ wénjiàn zhuǎnhuàn chéng PDF géshì.^กรุณาแปลงไฟล์เป็นรูปแบบ PDF^high^
+B5-1049^verb@E^high^โอน (สิทธิ/ทรัพย์สิน)^他把店转让给了朋友。^Tā bǎ diàn zhuǎnràng gěi le péngyou.^เขาโอนกิจการร้านให้เพื่อน^high^
+B5-1050^verb@E^high^หันไปทาง; เปลี่ยนทิศ^他转向我说话。^Tā zhuǎnxiàng wǒ shuōhuà.^เขาหันมาพูดกับฉัน^medium^variant: 转向 zhuǎnxiàng (turn towards) vs. 转向 zhuànxiàng (lose one's bearings)
+B5-1051^verb@E^medium^ตกแต่ง; ของตกแต่ง^我们用鲜花装饰房间。^Wǒmen yòng xiānhuā zhuāngshì fángjiān.^พวกเราใช้ดอกไม้สดตกแต่งห้อง^medium^pos_doubtful: 装饰 is both verb "decorate" and noun "decoration"
+B5-1052^verb@E^high^ชน; บังเอิญเจอ^他的车撞到了树上。^Tā de chē zhuàng dào le shù shang.^รถของเขาชนต้นไม้^medium^polysemy: "collide; bump into" vs. "run into (someone) by chance" (撞见)
+B5-1053^noun@E^high^ทุน^开公司需要资本。^Kāi gōngsī xūyào zīběn.^การเปิดบริษัทต้องใช้ทุน^medium^polysemy: economic "capital" vs. figurative "asset; advantage" (年轻是资本)
+B5-1054^noun@E^high^สินทรัพย์^这家公司的资产很多。^Zhè jiā gōngsī de zīchǎn hěn duō.^บริษัทนี้มีสินทรัพย์มาก^high^
+B5-1055^verb@E^high^ช่วยเหลือทางการเงิน^他资助了很多贫困学生。^Tā zīzhù le hěn duō pínkùn xuésheng.^เขาให้ทุนช่วยเหลือนักเรียนยากจนจำนวนมาก^high^
