@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B5-0655^verb@E^high^ยอมสละ; ไม่เสียดาย^他舍得花钱买书。^Tā shěde huā qián mǎi shū.^เขายอมจ่ายเงินซื้อหนังสือโดยไม่เสียดาย^high^
+B5-0656^verb@E^medium^จินตนาการ; คาดคิด; แนวคิด^这是我对未来的设想。^Zhè shì wǒ duì wèilái de shèxiǎng.^นี่คือแนวคิดของฉันเกี่ยวกับอนาคต^medium^pos_doubtful: 设想 is both verb "imagine; envisage" and noun "idea; tentative plan"; example shows the noun
+B5-0657^noun@E^high^สมาคม; องค์กร; สำนัก^他在一家出版社工作。^Tā zài yì jiā chūbǎnshè gōngzuò.^เขาทำงานที่สำนักพิมพ์แห่งหนึ่ง^medium^example: bare 社 is mostly bound (出版社, 旅行社); sentence uses 出版社
+B5-0658^noun@E^high^ชุมชน^我们社区有一个图书馆。^Wǒmen shèqū yǒu yí ge túshūguǎn.^ชุมชนของเรามีห้องสมุดแห่งหนึ่ง^high^
+B5-0659^verb@E^high^ยิง; พุ่ง; ฉายแสง^他一箭射中了目标。^Tā yí jiàn shè zhòng le mùbiāo.^เขายิงธนูทีเดียวถูกเป้า^medium^polysemy: shoot / fire vs. discharge in a jet vs. emit (light); example shows "shoot"
+B5-0660^noun@E^medium^การยิงปืน (กีฬา); ยิง^他是射击运动员。^Tā shì shèjī yùndòngyuán.^เขาเป็นนักกีฬายิงปืน^medium^pos_doubtful: 射击 is both verb "shoot" and noun "shooting (sport)"
+B5-0661^verb@L^medium^ถ่ายวิดีโอ^这里禁止摄像。^Zhèlǐ jìnzhǐ shèxiàng.^ที่นี่ห้ามถ่ายวิดีโอ^medium^source_gloss: "camera" is a noun (摄像机); 摄像 is the verb "film; videotape"
+B5-0662^noun@E^high^กล้องวิดีโอ^他买了一台摄像机。^Tā mǎi le yì tái shèxiàngjī.^เขาซื้อกล้องวิดีโอมาหนึ่งเครื่อง^high^
+B5-0663^noun@E^medium^การถ่ายภาพ; ถ่ายภาพ^他的爱好是摄影。^Tā de àihào shì shèyǐng.^งานอดิเรกของเขาคือการถ่ายภาพ^medium^pos_doubtful: 摄影 is both noun "photography" and verb "take photos"
+B5-0664^noun@E^high^ช่างภาพ^他是一名专业摄影师。^Tā shì yì míng zhuānyè shèyǐngshī.^เขาเป็นช่างภาพมืออาชีพ^high^
+B5-0665^verb@E^high^ยื่น; เหยียด^他伸出手来和我握手。^Tā shēnchū shǒu lái hé wǒ wòshǒu.^เขายื่นมือออกมาจับมือกับฉัน^high^
+B5-0666^noun@E^high^ส่วนลึก^我在心灵深处感谢他。^Wǒ zài xīnlíng shēnchù gǎnxiè tā.^ฉันขอบคุณเขาจากส่วนลึกของหัวใจ^high^
+B5-0667^noun@E^low^ความลึก^这条河的深度是五米。^Zhè tiáo hé de shēndù shì wǔ mǐ.^แม่น้ำสายนี้ลึกห้าเมตร^medium^source_gloss: gloss "depth; deepness god; deity; divinity; spirit; expression; look;" merges the next entry (神); only "depth; deepness" belongs to 深度
+B5-0668^adjective@L^low^เทพเจ้า; วิเศษ; มหัศจรรย์^这个魔术太神了！^Zhège móshù tài shén le!^มายากลนี้มหัศจรรย์มาก!^low^source_gloss: noun senses "god; deity; spirit; expression" spilled into the 深度 row; this row keeps only "supernatural; magical"; polysemy
+B5-0669^noun@E^high^เส้นประสาท^他的神经很敏感。^Tā de shénjīng hěn mǐngǎn.^ประสาทของเขาไวมาก^medium^polysemy: "nerve" vs. colloquial "crazy" (神经病)
+B5-0670^adjective@E^high^มหัศจรรย์^这是一个神奇的地方。^Zhè shì yí ge shénqí de dìfang.^นี่เป็นสถานที่มหัศจรรย์^high^
+B5-0671^noun@E^high^สีหน้า; ท่าทาง^他的神情很紧张。^Tā de shénqíng hěn jǐnzhāng.^สีหน้าของเขาดูตึงเครียดมาก^high^
+B5-0672^verb@E^high^สูงขึ้น; เพิ่มขึ้น^今天的气温升高了。^Jīntiān de qìwēn shēnggāo le.^อุณหภูมิวันนี้สูงขึ้น^high^
+B5-0673^verb@E^high^สร้างขึ้น; ก่อเกิด^电脑自动生成了报告。^Diànnǎo zìdòng shēngchéng le bàogào.^คอมพิวเตอร์สร้างรายงานขึ้นโดยอัตโนมัติ^high^
+B5-0674^noun@E^high^เสียง; ชื่อเสียง; วรรณยุกต์^我听见了几声鸟叫。^Wǒ tīngjiàn le jǐ shēng niǎo jiào.^ฉันได้ยินเสียงนกร้องสองสามเสียง^medium^polysemy: sound / voice / reputation / tone combined; also measure word for sounds (example shows this use)
+B5-0675^noun@E^high^แพ้ชนะ^比赛的胜负不重要。^Bǐsài de shèngfù bú zhòngyào.^ผลแพ้ชนะของการแข่งขันไม่สำคัญ^high^
+B5-0676^verb@L^medium^เหลือ^钱只剩一百块了。^Qián zhǐ shèng yìbǎi kuài le.^เงินเหลือแค่หนึ่งร้อยหยวน^medium^source_gloss: "Left" is ambiguous (direction 左); 剩 is the verb "remain; be left over"
+B5-0677^verb@E^high^เหลือไว้^吃剩下的菜放进冰箱吧。^Chī shèngxià de cài fàng jìn bīngxiāng ba.^อาหารที่กินเหลือเอาเข้าตู้เย็นเถอะ^high^
+B5-0678^noun@E^medium^ความผิดพลาด; พลาด^这次比赛他有一个失误。^Zhè cì bǐsài tā yǒu yí ge shīwù.^การแข่งขันครั้งนี้เขาพลาดไปหนึ่งครั้ง^medium^pos_doubtful: 失误 is both noun "mistake" and verb "make a mistake"
+B5-0679^noun@E^high^ช่างฝีมือ; อาจารย์; (เรียกผู้ชำนาญงาน)^师傅，去火车站多少钱？^Shīfu, qù huǒchēzhàn duōshao qián?^คุณครับ ไปสถานีรถไฟเท่าไร?^medium^polysemy: "master craftsman" vs. polite address for drivers/workers; example shows address
+B5-0680^noun@E^high^บทกวี^他很喜欢读诗歌。^Tā hěn xǐhuan dú shīgē.^เขาชอบอ่านบทกวีมาก^high^
+B5-0681^adjective@E^medium^เต็มเปี่ยม; ร้อยเปอร์เซ็นต์^他信心十足。^Tā xìnxīn shízú.^เขามั่นใจเต็มเปี่ยม^medium^source_gloss: "100 percent" is literal; 十足 means "full; complete; out-and-out"
+B5-0682^adverb@E^high^บ่อยๆ^他时常来看我。^Tā shícháng lái kàn wǒ.^เขามาเยี่ยมฉันบ่อยๆ^high^
+B5-0683^noun@E^high^เวลา; ช่วงเวลา^那是一段快乐的时光。^Nà shì yí duàn kuàilè de shíguāng.^นั่นเป็นช่วงเวลาที่มีความสุข^high^
+B5-0684^noun@E^high^จังหวะเวลา; โอกาส^现在是去旅游的最好时机。^Xiànzài shì qù lǚyóu de zuì hǎo shíjī.^ตอนนี้เป็นจังหวะเวลาที่ดีที่สุดในการไปเที่ยว^high^
+B5-0685^noun@E^high^เหตุการณ์ปัจจุบัน^他很关心国内外时事。^Tā hěn guānxīn guónèiwài shíshì.^เขาสนใจเหตุการณ์ปัจจุบันทั้งในและต่างประเทศ^high^
+B5-0686^adjective@E^medium^คุ้มค่า; ประโยชน์จริง^这家店的东西又好又实惠。^Zhè jiā diàn de dōngxi yòu hǎo yòu shíhuì.^ของร้านนี้ทั้งดีทั้งคุ้มค่า^medium^polysemy: adjective "affordable; good value" vs. noun "real benefit"; source_gloss: "substantial" is loose
+B5-0687^verb@E^high^เก็บ; หยิบขึ้นมา^他在路上拾到一个钱包。^Tā zài lù shang shídào yí ge qiánbāo.^เขาเก็บกระเป๋าสตางค์ได้บนถนน^medium^variant: 拾 shí is also the formal numeral "ten" (financial)
+B5-0688^verb@E^high^ทำให้^大雨使得比赛推迟了。^Dà yǔ shǐde bǐsài tuīchí le.^ฝนตกหนักทำให้การแข่งขันต้องเลื่อนออกไป^medium^polysemy: causative "make; cause" vs. "usable; workable" (这个办法使得)
+B5-0689^verb@E^high^สาธิต; ทำเป็นตัวอย่าง^老师给我们示范了一下。^Lǎoshī gěi wǒmen shìfàn le yí xià.^ครูสาธิตให้พวกเราดู^high^
+B5-0690^noun@E^high^แบบ; สไตล์; พิธี; สูตร^这是中式的房子。^Zhè shì zhōngshì de fángzi.^นี่เป็นบ้านแบบจีน^medium^polysemy: type / style / pattern vs. ceremony (开幕式) vs. formula (公式); example shows "style"
+B5-0691^noun@E^high^อิทธิพล; ขั้วอำนาจ^这股势力越来越强大。^Zhè gǔ shìlì yuè lái yuè qiángdà.^ขั้วอำนาจนี้แข็งแกร่งขึ้นเรื่อยๆ^high^
+B5-0692^verb@E^high^พยายาม; มุ่งหมาย^他试图说服我。^Tā shìtú shuōfú wǒ.^เขาพยายามโน้มน้าวฉัน^high^
+B5-0693^noun@E^high^วิดีโอ^他在网上看视频。^Tā zài wǎngshang kàn shìpín.^เขาดูวิดีโอทางอินเทอร์เน็ต^high^
+B5-0694^verb@E^high^ถือว่าเป็น^我们把他视为朋友。^Wǒmen bǎ tā shìwéi péngyou.^พวกเราถือว่าเขาเป็นเพื่อน^high^
+B5-0695^verb@E^medium^เข้าซื้อ; รับซื้อ; ควบรวมกิจการ^那家公司被收购了。^Nà jiā gōngsī bèi shōugòu le.^บริษัทนั้นถูกเข้าซื้อกิจการแล้ว^medium^polysemy: "purchase (goods)" vs. "acquire (a company)"
+B5-0696^verb@E^high^รวบรวม; สะสม^我在收集邮票。^Wǒ zài shōují yóupiào.^ฉันกำลังสะสมแสตมป์^high^
+B5-0697^verb@E^high^เก็บกวาด; จัดการ^请把房间收拾一下。^Qǐng bǎ fángjiān shōushi yí xià.^กรุณาเก็บกวาดห้องหน่อย^medium^polysemy: "tidy up; pack" vs. colloquial "punish; settle with" (收拾他)
+B5-0698^noun@E^high^วิธีการ; เล่ห์กล^他用了不正当的手段。^Tā yòng le bú zhèngdàng de shǒuduàn.^เขาใช้วิธีการที่ไม่ถูกต้อง^medium^polysemy: neutral "means; measure" vs. negative "trick; artifice"
+B5-0699^noun@E^high^เทคนิค; กลวิธี^这幅画的手法很独特。^Zhè fú huà de shǒufǎ hěn dútè.^เทคนิคของภาพวาดนี้มีเอกลักษณ์มาก^high^
+B5-0700^noun@E^high^ซูชิ^我喜欢吃寿司。^Wǒ xǐhuan chī shòusī.^ฉันชอบกินซูชิ^high^
+B5-0701^verb@L^medium^ประสบภัย^这个地区今年受灾很严重。^Zhège dìqū jīnnián shòuzāi hěn yánzhòng.^ปีนี้พื้นที่นี้ประสบภัยอย่างหนัก^medium^source_gloss: "disaster; the afflicted" are nouns; 受灾 is the verb "be hit by a disaster"
+B5-0702^adjective@E^high^ผอม^他太瘦了。^Tā tài shòu le.^เขาผอมเกินไป^medium^polysemy: "thin (person)" vs. "lean (meat)" vs. "tight (clothes)"
+B5-0703^noun@E^high^การเขียนพู่กันจีน^他的书法写得很好。^Tā de shūfǎ xiě de hěn hǎo.^ลายพู่กันจีนของเขาสวยมาก^high^
+B5-0704^noun@E^high^ตู้หนังสือ^书柜里放满了书。^Shūguì li fàng mǎn le shū.^ในตู้หนังสือเต็มไปด้วยหนังสือ^high^
+B5-0705^noun@E^high^โต๊ะหนังสือ^他坐在书桌前写作业。^Tā zuò zài shūzhuō qián xiě zuòyè.^เขานั่งทำการบ้านอยู่หน้าโต๊ะหนังสือ^high^
+B5-0706^verb@E^high^ส่งออก; เอาต์พุต^中国向很多国家输出产品。^Zhōngguó xiàng hěn duō guójiā shūchū chǎnpǐn.^จีนส่งออกสินค้าไปยังหลายประเทศ^medium^polysemy: "export" vs. "output (data/power)"
+B5-0707^noun@E^high^ผัก^多吃蔬菜对身体好。^Duō chī shūcài duì shēntǐ hǎo.^กินผักมากๆ ดีต่อสุขภาพ^high^
+B5-0708^verb@E^high^คุ้นเคย^我对这里很熟悉。^Wǒ duì zhèlǐ hěn shúxī.^ฉันคุ้นเคยกับที่นี่มาก^high^
+B5-0709^noun@E^high^หนู; ปีชวด^猫会捉鼠。^Māo huì zhuō shǔ.^แมวจับหนูได้^medium^polysemy: animal "mouse; rat" vs. zodiac Rat (鼠年); example: bare 鼠 is somewhat literary (老鼠 is usual)
+B5-0710^noun@E^high^เมาส์ (คอมพิวเตอร์)^我的鼠标坏了。^Wǒ de shǔbiāo huài le.^เมาส์ของฉันเสีย^high^
+B5-0711^noun@E^high^จำนวน^这个数目太大了。^Zhège shùmù tài dà le.^จำนวนนี้มากเกินไป^high^
+B5-0712^verb@E^high^ล้ม; หล่นแตก; ขว้าง^他不小心摔了一跤。^Tā bù xiǎoxīn shuāi le yì jiāo.^เขาเผลอหกล้มไปหนึ่งครั้ง^medium^polysemy: fall / lose balance vs. break (by dropping) vs. throw; example shows "fall"
+B5-0713^verb@E^high^หกล้ม^小心，别摔倒了。^Xiǎoxīn, bié shuāidǎo le.^ระวังนะ อย่าหกล้ม^high^
+B5-0714^verb@E^high^นำ (ทีม/กองทัพ)^他率领球队赢得了冠军。^Tā shuàilǐng qiúduì yíngdé le guànjūn.^เขานำทีมคว้าแชมป์^high^
+B5-0715^noun@E^high^สองมือ^他用双手捧着礼物。^Tā yòng shuāngshǒu pěng zhe lǐwù.^เขาใช้สองมือประคองของขวัญ^high^
+B5-0716^noun@E^high^ผลิตภัณฑ์สัตว์น้ำ^这里的水产品很新鲜。^Zhèlǐ de shuǐchǎnpǐn hěn xīnxiān.^ผลิตภัณฑ์สัตว์น้ำที่นี่สดมาก^high^
+B5-0717^noun@E^high^ความชื้น; น้ำ (ในสิ่งของ)^西瓜的水分很多。^Xīguā de shuǐfèn hěn duō.^แตงโมมีน้ำมาก^medium^polysemy: literal "moisture" vs. figurative "exaggeration; padding" (有水分)
+B5-0718^noun@E^high^อ่างเก็บน้ำ^这个水库很大。^Zhège shuǐkù hěn dà.^อ่างเก็บน้ำแห่งนี้ใหญ่มาก^high^
+B5-0719^noun@E^high^อุทกภัย; น้ำท่วม^今年这里发生了水灾。^Jīnnián zhèlǐ fāshēng le shuǐzāi.^ปีนี้ที่นี่เกิดน้ำท่วม^high^
+B5-0720^noun@E^high^การนอนหลับ^充足的睡眠对健康很重要。^Chōngzú de shuìmián duì jiànkāng hěn zhòngyào.^การนอนหลับที่เพียงพอสำคัญต่อสุขภาพมาก^high^
+B5-0721^noun@E^high^วิธีพูด; คำกล่าว; เวอร์ชัน^这种说法不太准确。^Zhè zhǒng shuōfǎ bú tài zhǔnquè.^คำพูดแบบนี้ไม่ค่อยถูกต้อง^medium^polysemy: "way of saying" vs. "statement; version" vs. "justification" (给个说法)
+B5-0722^noun@E^high^ปริญญาโท; มหาบัณฑิต^她是北京大学的硕士。^Tā shì Běijīng Dàxué de shuòshì.^เธอจบปริญญาโทจากมหาวิทยาลัยปักกิ่ง^medium^source_gloss: English "master" is ambiguous; 硕士 = master's degree holder
+B5-0723^adjective@E^medium^ส่วนตัว; เอกชน^这是我的私人电话。^Zhè shì wǒ de sīrén diànhuà.^นี่เป็นโทรศัพท์ส่วนตัวของฉัน^medium^pos_doubtful: 私人 is a noun ("private individual") mostly used attributively
+B5-0724^noun@E^high^การคิด; ความคิด^这个游戏可以训练孩子的思维。^Zhège yóuxì kěyǐ xùnliàn háizi de sīwéi.^เกมนี้ช่วยฝึกการคิดของเด็ก^high^
+B5-0725^noun@E^high^รอบๆ; โดยรอบ^房子四周都是树。^Fángzi sìzhōu dōu shì shù.^รอบบ้านเต็มไปด้วยต้นไม้^high^
+B5-0726^verb@E^high^ค้นหา; ตรวจค้น^你上网搜一下吧。^Nǐ shàngwǎng sōu yí xià ba.^คุณลองค้นหาในอินเทอร์เน็ตดูสิ^high^
+B5-0727^verb@E^high^ค้นหา^我在网上搜索资料。^Wǒ zài wǎngshang sōusuǒ zīliào.^ฉันค้นหาข้อมูลทางอินเทอร์เน็ต^high^
+B5-0728^noun@E^low^หอพัก^我住在学校宿舍。^Wǒ zhù zài xuéxiào sùshè.^ฉันพักอยู่ที่หอพักของโรงเรียน^medium^source_gloss: gloss "dormitory sour, sweet, bitter, hot ; ups and downs; joys and" merges the next entry (酸甜苦辣); only "dormitory" belongs to 宿舍
+B5-0729^other^low^เปรี้ยวหวานขมเผ็ด; สุขทุกข์ในชีวิต^人生的酸甜苦辣他都经历过。^Rénshēng de suān tián kǔ là tā dōu jīnglì guo.^เขาผ่านทั้งสุขและทุกข์ในชีวิตมาหมดแล้ว^low^source_gloss: gloss "sorrows of life" is the tail of the definition that spilled into the 宿舍 row; pos_doubtful: four-character idiom with no single POS; polysemy: literal flavours vs. figurative ups and downs
+B5-0730^adverb@E^high^หลังจากนั้นไม่นาน; ตามมา^你先走，我随后就到。^Nǐ xiān zǒu, wǒ suíhòu jiù dào.^คุณไปก่อน เดี๋ยวฉันตามไป^high^
+B5-0731^adjective@E^high^ตามสบาย; ตามใจ^请随意，不要客气。^Qǐng suíyì, búyào kèqi.^เชิญตามสบาย ไม่ต้องเกรงใจ^medium^source_gloss: "random" is loose; 随意 means "as one pleases; casual"
+B5-0732^preposition@E^high^ไปพร้อมกับ; ตาม^随着经济的发展，人们的生活越来越好。^Suízhe jīngjì de fāzhǎn, rénmen de shēnghuó yuè lái yuè hǎo.^ตามการพัฒนาทางเศรษฐกิจ ชีวิตผู้คนก็ดีขึ้นเรื่อยๆ^high^
+B5-0733^noun@E^high^กาลเวลา; ปีเดือน^岁月改变了他的样子。^Suìyuè gǎibiàn le tā de yàngzi.^กาลเวลาเปลี่ยนรูปลักษณ์ของเขาไป^high^
+B5-0734^adjective@E^high^แตก; ละเอียด; จุกจิก^杯子碎了。^Bēizi suì le.^แก้วแตกแล้ว^medium^polysemy: "broken" vs. "fragmentary" vs. "garrulous" (嘴碎)
+B5-0735^verb@E^high^ทำลาย; ทำให้เสียหาย^吸烟会损害健康。^Xīyān huì sǔnhài jiànkāng.^การสูบบุหรี่ทำลายสุขภาพ^high^
+B5-0736^noun@E^medium^ความเสียหาย; สูญเสีย^这次地震造成了很大的损失。^Zhè cì dìzhèn zàochéng le hěn dà de sǔnshī.^แผ่นดินไหวครั้งนี้ก่อให้เกิดความเสียหายอย่างมาก^medium^pos_doubtful: 损失 is both noun "loss" and verb "lose"
+B5-0737^noun@E^high^ที่ตั้ง; ที่ซึ่ง^这就是问题的所在。^Zhè jiù shì wèntí de suǒzài.^นี่คือจุดที่เป็นปัญหา^high^
+B5-0738^noun@E^medium^กุญแจ (แม่กุญแจ); ล็อก^门上有一把锁。^Mén shang yǒu yì bǎ suǒ.^ที่ประตูมีแม่กุญแจอยู่หนึ่งอัน^medium^pos_doubtful: 锁 is both noun "lock" and verb "lock"
+B5-0739^noun@E^high^พายุไต้ฝุ่น^台风明天要来了。^Táifēng míngtiān yào lái le.^พายุไต้ฝุ่นจะมาพรุ่งนี้^high^
+B5-0740^verb@E^high^ยก; หาม^我们一起把桌子抬过去。^Wǒmen yìqǐ bǎ zhuōzi tái guòqu.^พวกเราช่วยกันยกโต๊ะไป^high^
+B5-0741^verb@E^high^เงยหน้า; ฟื้นตัว^他抬头看了看天空。^Tā táitóu kàn le kàn tiānkōng.^เขาเงยหน้ามองท้องฟ้า^medium^polysemy: literal "raise one's head" vs. figurative "gain ground; rise"
+B5-0742^noun@E^high^อวกาศ^他梦想成为一名太空人。^Tā mèngxiǎng chéngwéi yì míng tàikōngrén.^เขาฝันอยากเป็นนักบินอวกาศ^medium^source_gloss: English "Space" is ambiguous (also 空间); 太空 = outer space
+B5-0743^verb@E^high^ดีด; เล่น (เครื่องสาย); เด้ง^她会弹钢琴。^Tā huì tán gāngqín.^เธอเล่นเปียโนเป็น^medium^polysemy: shoot / catapult / flick / play (an instrument) / spring combined; variant: 弹 tán vs. 弹 dàn (bullet)
+B5-0744^verb@E^high^หนี^小偷逃了。^Xiǎotōu táo le.^ขโมยหนีไปแล้ว^high^
+B5-0745^verb@E^high^วิ่งหนี; หลบหนี^看到警察，他马上逃跑了。^Kàndào jǐngchá, tā mǎshàng táopǎo le.^พอเห็นตำรวจ เขาก็วิ่งหนีทันที^high^
+B5-0746^verb@E^high^หลบหนี^那只小鸟从笼子里逃走了。^Nà zhī xiǎo niǎo cóng lóngzi li táozǒu le.^นกตัวนั้นหนีออกจากกรงไปแล้ว^high^
+B5-0747^noun@E^high^ลูกท้อ^这个桃很甜。^Zhège táo hěn tián.^ลูกท้อลูกนี้หวานมาก^high^
+B5-0748^noun@E^high^ดอกท้อ^春天到了，桃花开了。^Chūntiān dào le, táohuā kāi le.^ฤดูใบไม้ผลิมาถึง ดอกท้อบานแล้ว^high^
+B5-0749^noun@E^high^ต้นท้อ^院子里种着一棵桃树。^Yuànzi li zhòng zhe yì kē táoshù.^ในลานบ้านปลูกต้นท้อไว้หนึ่งต้น^high^
+B5-0750^verb@E^medium^เกลียด; น่ารำคาญ^我讨厌下雨天。^Wǒ tǎoyàn xià yǔ tiān.^ฉันเกลียดวันฝนตก^medium^polysemy: verb "dislike; hate" vs. adjective "annoying" (真讨厌)
+B5-0751^adjective@E^medium^เฉพาะ; ที่กำหนด^这种药要在特定的时间吃。^Zhè zhǒng yào yào zài tèdìng de shíjiān chī.^ยานี้ต้องกินในเวลาที่กำหนด^medium^source_gloss: "given" is loose; 特定 means "specific; specified"
+B5-0752^noun@E^high^คุณลักษณะเฉพาะ^这种材料有很多特性。^Zhè zhǒng cáiliào yǒu hěn duō tèxìng.^วัสดุชนิดนี้มีคุณลักษณะเฉพาะหลายอย่าง^high^
+B5-0753^adjective@E^high^มีเฉพาะ; เป็นลักษณะเฉพาะ^这是中国特有的动物。^Zhè shì Zhōngguó tèyǒu de dòngwù.^นี่เป็นสัตว์ที่มีเฉพาะในจีน^high^
+B5-0754^verb@E^high^ส่งเสริม; รณรงค์^我们提倡节约用水。^Wǒmen tíchàng jiéyuē yòng shuǐ.^พวกเรารณรงค์ให้ประหยัดน้ำ^high^
