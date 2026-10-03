@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B3-0687^noun@E^high^ความคิด; แนวคิด^他的思想很开放。^Tā de sīxiǎng hěn kāifàng.^ความคิดของเขาเปิดกว้างมาก^high^
+B3-0688^verb@E^high^ตาย^我的小狗死了。^Wǒ de xiǎo gǒu sǐ le.^ลูกหมาของฉันตายแล้ว^medium^polysemy: verb "die" vs. degree complement "extremely" (累死了); example shows "die"
+B3-0689^noun@E^high^ความเร็ว^请放慢速度。^Qǐng fàngmàn sùdù.^กรุณาลดความเร็ว^high^
+B3-0690^verb@E^high^ตาม; ทำตาม; ปรับตาม^我随你去。^Wǒ suí nǐ qù.^ฉันจะไปตามคุณ^medium^polysemy: follow / comply with / adapt combined; example shows "follow"
+B3-0692^noun@E^high^หัวหน้าสถาบัน; ผู้อำนวยการ^他是研究所的所长。^Tā shì yánjiūsuǒ de suǒzhǎng.^เขาเป็นผู้อำนวยการสถาบันวิจัย^high^
+B3-0693^noun@E^high^เวที; แท่น; (ลักษณนามของเครื่องจักร)^他走上台唱了一首歌。^Tā zǒu shàng tái chàng le yì shǒu gē.^เขาขึ้นเวทีไปร้องเพลงหนึ่งเพลง^medium^polysemy: noun "platform; stage" vs. common measure word for machines (一台电脑); example shows "stage"
+B3-0694^verb@E^high^พูดคุย; สนทนา^我们谈谈这个问题吧。^Wǒmen tántan zhège wèntí ba.^พวกเรามาคุยเรื่องนี้กันเถอะ^high^
+B3-0695^noun@E^medium^การสนทนา; พูดคุย^老师找我谈话。^Lǎoshī zhǎo wǒ tánhuà.^ครูเรียกฉันไปคุยด้วย^medium^pos_doubtful: 谈话 is both noun "conversation" and verb "have a talk"; example shows the verb
+B3-0696^noun@E^medium^การเจรจา; เจรจา^两国正在进行谈判。^Liǎng guó zhèngzài jìnxíng tánpàn.^สองประเทศกำลังดำเนินการเจรจา^high^
+B3-0697^noun@E^high^น้ำแกง; ซุป^这碗汤很好喝。^Zhè wǎn tāng hěn hǎohē.^ซุปถ้วยนี้อร่อยมาก^high^
+B3-0698^noun@E^high^น้ำตาล; ลูกอม^咖啡里不要放糖。^Kāfēi li búyào fàng táng.^ไม่ต้องใส่น้ำตาลในกาแฟ^high^
+B3-0699^noun@E^high^ลักษณะเฉพาะ; เอกลักษณ์^这道菜很有地方特色。^Zhè dào cài hěn yǒu dìfāng tèsè.^อาหารจานนี้มีเอกลักษณ์ท้องถิ่นมาก^high^
+B3-0700^verb@L^medium^ล่วงหน้า; เลื่อนให้เร็วขึ้น^会议提前了一个小时。^Huìyì tíqián le yí ge xiǎoshí.^การประชุมเลื่อนให้เร็วขึ้นหนึ่งชั่วโมง^medium^source_gloss: "Advance" is ambiguous; 提前 means "move up (in time); in advance"
+B3-0701^verb@E^high^ถามคำถาม^老师提问了几个学生。^Lǎoshī tíwèn le jǐ ge xuésheng.^ครูถามคำถามนักเรียนหลายคน^high^
+B3-0702^noun@E^high^หัวข้อ; โจทย์^这次作文的题目是“我的家”。^Zhè cì zuòwén de tímù shì “Wǒ de jiā”.^หัวข้อเรียงความครั้งนี้คือ “บ้านของฉัน”^high^
+B3-0703^verb@E^medium^เข้าใจจากประสบการณ์; ซึมซับ^我体会到了学习的快乐。^Wǒ tǐhuì dào le xuéxí de kuàilè.^ฉันได้สัมผัสถึงความสุขของการเรียนรู้^medium^pos_doubtful: 体会 is both verb "realize through experience" and noun "understanding"; example shows the verb
+B3-0704^verb@E^high^สะท้อน; แสดงให้เห็น^这件事体现了他的责任心。^Zhè jiàn shì tǐxiàn le tā de zérènxīn.^เรื่องนี้สะท้อนให้เห็นความรับผิดชอบของเขา^high^
+B3-0705^verb@E^medium^สัมผัส; ลองประสบการณ์^我想体验一下中国的生活。^Wǒ xiǎng tǐyàn yí xià Zhōngguó de shēnghuó.^ฉันอยากลองสัมผัสชีวิตในจีนดูสักครั้ง^high^
+B3-0706^noun@E^high^ท้องฟ้า^天空中有很多星星。^Tiānkōng zhōng yǒu hěn duō xīngxing.^บนท้องฟ้ามีดวงดาวมากมาย^high^
+B3-0707^adjective@E^high^หวาน^这个西瓜很甜。^Zhège xīguā hěn tián.^แตงโมลูกนี้หวานมาก^high^
+B3-0708^verb@E^high^ปรับ; ผสม; เหมาะเจาะ^请把空调温度调低一点儿。^Qǐng bǎ kōngtiáo wēndù tiáo dī yìdiǎnr.^กรุณาปรับอุณหภูมิแอร์ให้ต่ำลงหน่อย^medium^polysemy: suit well / mix / adjust combined; variant: 调 tiáo vs. 调 diào (B3-0153); example shows "adjust"
+B3-0709^verb@L^medium^ปรับ; การปรับ^我们需要调整一下计划。^Wǒmen xūyào tiáozhěng yí xià jìhuà.^พวกเราต้องปรับแผนกันหน่อย^medium^source_gloss: "adjustment" is a noun; 调整 is mainly the verb "adjust"
+B3-0710^verb@E^high^กระโดด; ข้าม; เด้ง^他跳得很高。^Tā tiào de hěn gāo.^เขากระโดดได้สูงมาก^high^
+B3-0711^noun@E^high^กระโดดสูง^他是跳高冠军。^Tā shì tiàogāo guànjūn.^เขาเป็นแชมป์กระโดดสูง^high^
+B3-0712^verb@E^high^เต้นรำ^她很喜欢跳舞。^Tā hěn xǐhuan tiàowǔ.^เธอชอบเต้นรำมาก^high^
+B3-0713^noun@E^high^กระโดดไกล^他参加了跳远比赛。^Tā cānjiā le tiàoyuǎn bǐsài.^เขาเข้าร่วมการแข่งขันกระโดดไกล^high^
+B3-0714^noun@E^high^เหล็ก^这扇门是铁做的。^Zhè shàn mén shì tiě zuò de.^ประตูบานนี้ทำจากเหล็ก^high^
+B3-0715^noun@E^high^ทางรถไฟ^这条铁路通到上海。^Zhè tiáo tiělù tōng dào Shànghǎi.^ทางรถไฟสายนี้ไปถึงเซี่ยงไฮ้^high^
+B3-0716^noun@E^high^การฟัง; ทักษะการฟัง^我的汉语听力不太好。^Wǒ de Hànyǔ tīnglì bú tài hǎo.^ทักษะการฟังภาษาจีนของฉันไม่ค่อยดี^medium^polysemy: "hearing (ability)" vs. "listening comprehension"; example shows comprehension
+B3-0717^noun@E^high^ผู้ฟัง^各位听众，晚上好！^Gèwèi tīngzhòng, wǎnshang hǎo!^ท่านผู้ฟังทุกท่าน สวัสดีตอนค่ำ!^high^
+B3-0718^verb@E^high^หยุด; ยุติ^比赛因为下雨停止了。^Bǐsài yīnwèi xià yǔ tíngzhǐ le.^การแข่งขันหยุดเพราะฝนตก^high^
+B3-0719^adjective@L^medium^โดยปกติ; ตามปกติ^我通常七点起床。^Wǒ tōngcháng qī diǎn qǐchuáng.^โดยปกติฉันตื่นนอนเจ็ดโมง^medium^pos_doubtful: gloss "usually" is adverbial; 通常 is classed as adjective/noun used adverbially
+B3-0720^verb@E^high^ติดต่อสื่อสาร; ติดต่อทางจดหมาย^我们经常通信。^Wǒmen jīngcháng tōngxìn.^พวกเราติดต่อกันทางจดหมายเป็นประจำ^medium^polysemy: "correspond by letter" vs. "telecommunications" (通信技术)
+B3-0721^verb@E^high^เห็นด้วย; ยินยอม^我同意你的看法。^Wǒ tóngyì nǐ de kànfǎ.^ฉันเห็นด้วยกับความคิดเห็นของคุณ^high^
+B3-0723^adjective@L^medium^ทุกข์ทรมาน; ความเจ็บปวด^他看起来很痛苦。^Tā kàn qǐlai hěn tòngkǔ.^เขาดูทุกข์ทรมานมาก^medium^pos_doubtful: gloss "Pain" is a noun; 痛苦 is mostly the adjective "painful; suffering"
+B3-0725^noun@E^high^สมอง; ความคิด^他很有头脑。^Tā hěn yǒu tóunǎo.^เขาหัวไวมาก^high^
+B3-0726^adjective@E^high^โดดเด่น^他的成绩很突出。^Tā de chéngjì hěn tūchū.^ผลการเรียนของเขาโดดเด่นมาก^medium^polysemy: adjective "prominent" vs. verb "highlight; stress"
+B3-0727^adverb@E^high^ทันใดนั้น; กะทันหัน^突然下起了大雨。^Tūrán xià qǐ le dà yǔ.^จู่ๆ ฝนก็ตกลงมาอย่างหนัก^medium^pos_doubtful: 突然 is adjective "sudden" and adverb "suddenly"
+B3-0728^noun@E^high^ภาพ; แผนภูมิ; แผนผัง; เจตนา^请看这张图。^Qǐng kàn zhè zhāng tú.^กรุณาดูภาพนี้^medium^polysemy: picture / chart / scheme / intention combined; example shows "picture; chart"
+B3-0729^noun@E^high^ภาพวาด^墙上挂着一幅图画。^Qiáng shang guà zhe yì fú túhuà.^บนผนังแขวนภาพวาดอยู่ภาพหนึ่ง^high^
+B3-0731^noun@E^high^คณะ; กลุ่ม^他跟着旅游团去了北京。^Tā gēn zhe lǚyóutuán qù le Běijīng.^เขาไปปักกิ่งกับคณะทัวร์^medium^example: bare 团 usually appears in compounds (旅游团); also measure word "a ball of"
+B3-0732^verb@E^high^สามัคคี; รวมพลัง^我们要团结起来。^Wǒmen yào tuánjié qǐlai.^พวกเราต้องสามัคคีกัน^high^
+B3-0733^noun@E^high^กลุ่ม; องค์กร^我们是一个团体，要互相帮助。^Wǒmen shì yí ge tuántǐ, yào hùxiāng bāngzhù.^พวกเราเป็นกลุ่มเดียวกัน ต้องช่วยเหลือกัน^high^
+B3-0734^verb@E^high^ผลักดัน; ส่งเสริม^科技推动了社会发展。^Kējì tuīdòng le shèhuì fāzhǎn.^เทคโนโลยีผลักดันการพัฒนาสังคม^high^
+B3-0735^verb@L^low^เผยแพร่; ส่งเสริมให้แพร่หลาย^我们要推广普通话。^Wǒmen yào tuīguǎng Pǔtōnghuà.^พวกเราต้องส่งเสริมให้ภาษาจีนกลางแพร่หลาย^medium^source_gloss: gloss "Extension advance; carry forward; push on; give" merges the next entry (推进); only "Extension" relates to 推广
+B3-0736^verb@L^low^ผลักดันไปข้างหน้า; เดินหน้า^工作正在顺利推进。^Gōngzuò zhèngzài shùnlì tuījìn.^งานกำลังเดินหน้าไปอย่างราบรื่น^medium^source_gloss: gloss "impetus to" is the tail of a phrase that spilled into the 推广 row
+B3-0737^verb@E^high^ผลักออก; ผลักเปิด^他推开门走了进来。^Tā tuīkāi mén zǒu le jìnlai.^เขาผลักประตูเปิดแล้วเดินเข้ามา^high^
+B3-0738^verb@E^high^ถอย; คืน; ถอนตัว^请往后退一步。^Qǐng wǎng hòu tuì yí bù.^กรุณาถอยหลังหนึ่งก้าว^medium^polysemy: 退 also "return (goods); refund" (退货); gloss gives "retreat"
+B3-0739^verb@E^high^ถอนตัว; ออกจาก^他退出了比赛。^Tā tuìchū le bǐsài.^เขาถอนตัวจากการแข่งขัน^high^
+B3-0740^verb@E^high^เกษียณ^我爷爷去年退休了。^Wǒ yéye qùnián tuìxiū le.^คุณปู่ของฉันเกษียณเมื่อปีที่แล้ว^high^
+B3-0741^noun@E^high^การทูต^他在外交部工作。^Tā zài Wàijiāobù gōngzuò.^เขาทำงานที่กระทรวงการต่างประเทศ^high^
+B3-0742^noun@E^high^ข้างนอก; ภายนอก^外面下雪了。^Wàimian xià xuě le.^ข้างนอกหิมะตกแล้ว^high^
+B3-0743^noun@E^high^ภาษาต่างประเทศ (ตัวเขียน)^他看得懂外文书。^Tā kàn de dǒng wàiwén shū.^เขาอ่านหนังสือภาษาต่างประเทศเข้าใจ^high^
+B3-0744^adjective@E^high^สมบูรณ์แบบ^世界上没有完美的人。^Shìjiè shang méiyǒu wánměi de rén.^ในโลกนี้ไม่มีใครสมบูรณ์แบบ^high^
+B3-0745^adjective@E^medium^สมบูรณ์; ปรับปรุงให้สมบูรณ์^这个制度还不够完善。^Zhège zhìdù hái bú gòu wánshàn.^ระบบนี้ยังไม่สมบูรณ์พอ^medium^polysemy: adjective "perfect; complete" vs. verb "improve; perfect" (完善制度)
+B3-0746^adjective@E^high^ครบถ้วน; สมบูรณ์^这本书很完整。^Zhè běn shū hěn wánzhěng.^หนังสือเล่มนี้ครบถ้วนสมบูรณ์^high^
+B3-0747^noun@E^high^ของเล่น^孩子们在玩玩具。^Háizimen zài wán wánjù.^เด็กๆ กำลังเล่นของเล่น^high^
+B3-0748^adverb@E^high^มักจะ^周末他往往在家休息。^Zhōumò tā wǎngwǎng zài jiā xiūxi.^สุดสัปดาห์เขามักจะพักผ่อนอยู่บ้าน^high^
+B3-0749^verb@E^medium^เป็นอันตราย; ทำร้าย; ความเสียหาย^吸烟危害健康。^Xīyān wēihài jiànkāng.^การสูบบุหรี่เป็นอันตรายต่อสุขภาพ^medium^pos_doubtful: 危害 is verb "harm" and noun "harm"; example shows the verb
+B3-0750^adjective@L^medium^อันตราย^在河边玩儿很危险。^Zài hé biān wánr hěn wēixiǎn.^เล่นที่ริมแม่น้ำอันตรายมาก^medium^pos_doubtful: gloss "danger" is a noun; 危险 is both adjective "dangerous" and noun "danger"
+B3-0753^verb@E^high^ล้อม; รายล้อม^大家围在一起聊天。^Dàjiā wéi zài yìqǐ liáotiān.^ทุกคนล้อมวงคุยกัน^high^
+B3-0754^adjective@E^high^ยิ่งใหญ่^长城是一个伟大的工程。^Chángchéng shì yí ge wěidà de gōngchéng.^กำแพงเมืองจีนเป็นสิ่งก่อสร้างที่ยิ่งใหญ่^high^
+B3-0755^noun@E^high^สุขอนามัย; ความสะอาด^我们要注意个人卫生。^Wǒmen yào zhùyì gèrén wèishēng.^พวกเราต้องใส่ใจสุขอนามัยส่วนบุคคล^high^
+B3-0756^noun@E^high^ห้องน้ำ^请问，卫生间在哪儿？^Qǐngwèn, wèishēngjiān zài nǎr?^ขอถามหน่อย ห้องน้ำอยู่ที่ไหน?^high^
+B3-0757^preposition@L^high^เพื่อ; เพื่อที่จะ^为了学好汉语，他每天都练习。^Wèile xué hǎo Hànyǔ, tā měitiān dōu liànxí.^เพื่อที่จะเรียนภาษาจีนให้เก่ง เขาฝึกทุกวัน^high^
+B3-0758^adjective@E^high^อบอุ่น^妈妈的怀抱很温暖。^Māma de huáibào hěn wēnnuǎn.^อ้อมกอดของแม่อบอุ่นมาก^high^
+B3-0759^noun@E^high^วัฒนธรรม^我对中国文化很感兴趣。^Wǒ duì Zhōngguó wénhuà hěn gǎn xìngqù.^ฉันสนใจวัฒนธรรมจีนมาก^high^
+B3-0760^noun@E^high^เอกสาร; ไฟล์^请把文件发给我。^Qǐng bǎ wénjiàn fā gěi wǒ.^กรุณาส่งเอกสารมาให้ฉัน^high^
+B3-0761^noun@E^high^อารยธรรม; ความมีอารยะ^中国有五千年的文明。^Zhōngguó yǒu wǔqiān nián de wénmíng.^จีนมีอารยธรรมห้าพันปี^medium^polysemy: noun "civilization" vs. adjective "civilized; polite" (文明礼貌)
+B3-0762^noun@E^high^วรรณกรรม^他喜欢中国文学。^Tā xǐhuan Zhōngguó wénxué.^เขาชอบวรรณกรรมจีน^high^
+B3-0763^noun@E^high^บทความ^这篇文章写得很好。^Zhè piān wénzhāng xiě de hěn hǎo.^บทความนี้เขียนได้ดีมาก^high^
+B3-0764^noun@E^high^ตัวอักษร; ภาษาเขียน^汉字是一种古老的文字。^Hànzì shì yì zhǒng gǔlǎo de wénzì.^อักษรจีนเป็นระบบตัวอักษรที่เก่าแก่^high^
+B3-0765^verb@L^medium^จับมือ^他们见面时握手。^Tāmen jiànmiàn shí wòshǒu.^พวกเขาจับมือกันตอนพบกัน^medium^source_gloss: "Handshake" is a noun; 握手 is mainly the verb "shake hands"
+B3-0766^noun@E^medium^ห้อง^屋子里很暖和。^Wūzi li hěn nuǎnhuo.^ในห้องอบอุ่นมาก^medium^source_gloss: "House" — 屋子 means "room" (northern usage)
+B3-0767^noun@E^high^อาวุธ^这些武器很危险。^Zhèxiē wǔqì hěn wēixiǎn.^อาวุธเหล่านี้อันตรายมาก^high^
+B3-0768^noun@E^high^ศิลปะการต่อสู้; วูซู^他从小学习武术。^Tā cóngxiǎo xuéxí wǔshù.^เขาเรียนศิลปะการต่อสู้มาตั้งแต่เด็ก^high^
+B3-0769^noun@E^high^เวที^演员们在舞台上表演。^Yǎnyuánmen zài wǔtái shang biǎoyǎn.^นักแสดงกำลังแสดงอยู่บนเวที^high^
+B3-0770^noun@E^high^ภาคตะวันตก^他去中国西部旅游了。^Tā qù Zhōngguó xībù lǚyóu le.^เขาไปเที่ยวภาคตะวันตกของจีน^high^
+B3-0771^verb@E^medium^หวัง; ความหวัง^我希望你能来。^Wǒ xīwàng nǐ néng lái.^ฉันหวังว่าคุณจะมาได้^high^
+B3-0773^verb@E^high^ลงมา^你快下来吧。^Nǐ kuài xiàlai ba.^คุณรีบลงมาเถอะ^high^
+B3-0774^noun@E^high^ข้างล่าง; ต่อไป^下面请王老师讲话。^Xiàmian qǐng Wáng lǎoshī jiǎnghuà.^ต่อไปขอเชิญครูหวังกล่าว^medium^polysemy: spatial "below" vs. sequential "next"; example shows "next"
+B3-0775^verb@E^high^ลงไป; ทำต่อไป^请你继续说下去。^Qǐng nǐ jìxù shuō xiàqu.^กรุณาพูดต่อไป^medium^polysemy: "go down" vs. "continue" (说下去); example shows "continue"
+B3-0776^adjective@E^high^ทันสมัย; ก้าวหน้า^这是最先进的技术。^Zhè shì zuì xiānjìn de jìshù.^นี่คือเทคโนโลยีที่ทันสมัยที่สุด^high^
+B3-0777^verb@E^high^ดูเหมือน; ดู...^他今天显得很高兴。^Tā jīntiān xiǎnde hěn gāoxìng.^วันนี้เขาดูดีใจมาก^high^
+B3-0778^adverb@L^medium^เห็นได้ชัด^显然，他不同意这个计划。^Xiǎnrán, tā bù tóngyì zhège jìhuà.^เห็นได้ชัดว่าเขาไม่เห็นด้วยกับแผนนี้^high^
+B3-0779^verb@E^high^แสดง; แสดงผล^屏幕上显示了时间。^Píngmù shang xiǎnshì le shíjiān.^บนหน้าจอแสดงเวลา^high^
+B3-0780^noun@E^high^ที่เกิดเหตุ; สถานที่จริง^警察很快到了现场。^Jǐngchá hěn kuài dào le xiànchǎng.^ตำรวจมาถึงที่เกิดเหตุอย่างรวดเร็ว^high^
+B3-0781^adjective@E^high^ทันสมัย; สมัยใหม่^这是一座现代化的城市。^Zhè shì yí zuò xiàndàihuà de chéngshì.^นี่เป็นเมืองที่ทันสมัย^medium^polysemy: noun "modern times" vs. adjective "modern"; example uses 现代化
+B3-0782^noun@E^high^เงินสด^我身上没有现金。^Wǒ shēnshang méiyǒu xiànjīn.^ฉันไม่มีเงินสดติดตัว^high^
+B3-0783^noun@E^high^ความเป็นจริง^我们要面对现实。^Wǒmen yào miànduì xiànshí.^พวกเราต้องเผชิญหน้ากับความเป็นจริง^medium^polysemy: noun "reality" vs. adjective "realistic" (很现实)
+B3-0784^noun@E^high^ปรากฏการณ์^这是一种自然现象。^Zhè shì yì zhǒng zìrán xiànxiàng.^นี่เป็นปรากฏการณ์ทางธรรมชาติ^high^
+B3-0785^noun@E^high^เส้นด้าย; สาย; เส้น; เส้นทาง^请在这条线上签名。^Qǐng zài zhè tiáo xiàn shang qiānmíng.^กรุณาเซ็นชื่อบนเส้นนี้^medium^polysemy: thread / string / wire / line / route combined; example shows "line"
+B3-0786^verb@E^high^เปรียบเทียบกับ^和去年相比，今年冷多了。^Hé qùnián xiāngbǐ, jīnnián lěng duō le.^เมื่อเปรียบเทียบกับปีที่แล้ว ปีนี้หนาวกว่ามาก^high^
+B3-0787^adverb@E^medium^ค่อนข้าง; เท่ากับ; เหมาะสม^这个问题相当难。^Zhège wèntí xiāngdāng nán.^ปัญหานี้ค่อนข้างยาก^medium^polysemy: adverb "quite" vs. verb "be equal to" (相当于) and adjective "suitable"
+B3-0788^verb@E^high^เกี่ยวข้อง; สัมพันธ์กัน^这两件事密切相关。^Zhè liǎng jiàn shì mìqiè xiāngguān.^สองเรื่องนี้เกี่ยวข้องกันอย่างใกล้ชิด^high^
+B3-0789^adjective@L^high^ซึ่งกันและกัน^我们要相互帮助。^Wǒmen yào xiānghù bāngzhù.^พวกเราต้องช่วยเหลือซึ่งกันและกัน^high^
+B3-0790^adjective@L^medium^คล้ายกัน^这两个字很相似。^Zhè liǎng ge zì hěn xiāngsì.^ตัวอักษรสองตัวนี้คล้ายกันมาก^high^
+B3-0791^adjective@E^high^หอม; อร่อย^这朵花真香。^Zhè duǒ huā zhēn xiāng.^ดอกไม้ดอกนี้หอมจริงๆ^medium^polysemy: "fragrant" vs. "tasty (of food)" (饭很香) and "sound (sleep)"; example shows "fragrant"
+B3-0792^noun@E^high^กล้วย^我喜欢吃香蕉。^Wǒ xǐhuan chī xiāngjiāo.^ฉันชอบกินกล้วย^high^
+B3-0793^noun@E^medium^การบริโภค; ใช้จ่าย^年轻人的消费习惯变了。^Niánqīngrén de xiāofèi xíguàn biàn le.^พฤติกรรมการใช้จ่ายของคนหนุ่มสาวเปลี่ยนไปแล้ว^high^
