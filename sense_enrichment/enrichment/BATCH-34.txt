@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B5-0048^noun@E^medium^ปริญญาเอก; ดุษฎีบัณฑิต^他是北京大学的博士。^Tā shì Běijīng Dàxué de bóshì.^เขาเป็นดุษฎีบัณฑิตจากมหาวิทยาลัยปักกิ่ง^medium^source_gloss: English "doctor" is ambiguous (medical doctor is 医生); 博士 = PhD
+B5-0049^noun@E^high^พิพิธภัณฑ์^周末我们去参观博物馆。^Zhōumò wǒmen qù cānguān bówùguǎn.^สุดสัปดาห์พวกเราไปชมพิพิธภัณฑ์^high^
+B5-0050^adjective@E^high^อ่อนแอ; เปราะบาง^他的数学基础比较薄弱。^Tā de shùxué jīchǔ bǐjiào bóruò.^พื้นฐานคณิตศาสตร์ของเขาค่อนข้างอ่อน^high^
+B5-0051^verb@E^low^ไม่คำนึงถึง; ไม่สนใจ^他不顾危险，跳进河里救人。^Tā búgù wēixiǎn, tiào jìn hé li jiù rén.^เขาไม่สนใจอันตราย กระโดดลงแม่น้ำไปช่วยคน^medium^source_gloss: gloss "disregard unfavourable; disadvantageous; harmful;" merges the next entry (不利); only "disregard" belongs to 不顾
+B5-0052^adjective@E^low^ไม่เป็นผลดี; เสียเปรียบ^天气对比赛不利。^Tiānqì duì bǐsài búlì.^สภาพอากาศไม่เป็นผลดีต่อการแข่งขัน^medium^source_gloss: the "unfavourable; disadvantageous; harmful" part of this sense spilled into the 不顾 row
+B5-0053^adjective@E^high^หมดความอดทน; รำคาญ^他等得有点儿不耐烦了。^Tā děng de yǒudiǎnr bú nàifán le.^เขารอจนเริ่มหมดความอดทน^high^
+B5-0054^noun@E^medium^โชคร้าย; น่าเสียดาย^这真是一个不幸的消息。^Zhè zhēn shì yí ge búxìng de xiāoxi.^นี่เป็นข่าวร้ายจริงๆ^medium^polysemy: noun "misfortune" vs. adjective "unfortunate" vs. adverb "unfortunately"; source_gloss: typo "unfortunat"
+B5-0055^adjective@E^high^ไม่ง่าย^学好一门外语很不易。^Xué hǎo yì mén wàiyǔ hěn búyì.^การเรียนภาษาต่างประเทศให้เก่งไม่ใช่เรื่องง่าย^high^
+B5-0056^verb@E^high^ชดเชย^公司会补偿你的损失。^Gōngsī huì bǔcháng nǐ de sǔnshī.^บริษัทจะชดเชยความเสียหายให้คุณ^high^
+B5-0057^noun@E^medium^เงินอุดหนุน; อุดหนุน^政府给农民发放补贴。^Zhèngfǔ gěi nóngmín fāfàng bǔtiē.^รัฐบาลจ่ายเงินอุดหนุนให้ชาวนา^medium^pos_doubtful: 补贴 is both noun "subsidy" and verb "subsidize"
+B5-0058^adverb@E^high^ไม่เคย^我不曾去过那个地方。^Wǒ bùcéng qù guo nàge dìfang.^ฉันไม่เคยไปที่นั่น^high^
+B5-0059^adjective@L^low^มาก; ร้ายแรง; ไม่ธรรมดา^今天热得不得了。^Jīntiān rè de bùdéliǎo.^วันนี้ร้อนสุดๆ^medium^source_gloss: "Very" is an adverb; 不得了 is an adjective/complement "extremely; terrible; amazing"; polysemy
+B5-0060^other^low^ไม่กล้ารับ (คำถ่อมตน)^A：你真厉害！B：不敢当，不敢当。^A: Nǐ zhēn lìhai! B: Bù gǎndāng, bù gǎndāng.^A: คุณเก่งจริงๆ! B: ไม่กล้ารับคำชมหรอกครับ^high^pos_doubtful: polite set phrase with no single POS
+B5-0061^adjective@E^high^ไม่ดี; เป็นอันตราย^他有一些不良习惯。^Tā yǒu yìxiē bùliáng xíguàn.^เขามีนิสัยไม่ดีบางอย่าง^high^
+B5-0062^adverb@L^medium^ย่อมจะ; อดไม่ได้ที่จะ^第一次上台，他不免有点儿紧张。^Dì yī cì shàng tái, tā bùmiǎn yǒudiǎnr jǐnzhāng.^ขึ้นเวทีครั้งแรก เขาก็อดตื่นเต้นไม่ได้^medium^source_gloss: "unavoidable" is adjectival; 不免 is an adverb "inevitably"
+B5-0063^other^low^ต้อง; ไม่...ไม่ได้^这件事我不能不管。^Zhè jiàn shì wǒ bù néng bù guǎn.^เรื่องนี้ฉันจะไม่ยุ่งไม่ได้^high^pos_doubtful: double-negative phrase (不能 + 不) with no single POS
+B5-0064^adverb@E^high^เป็นครั้งคราว^他不时地看看手表。^Tā bùshí de kànkan shǒubiǎo.^เขามองนาฬิกาเป็นระยะๆ^high^
+B5-0065^adverb@L^medium^ไม่หยุด^雨下个不停。^Yǔ xià ge bù tíng.^ฝนตกไม่หยุด^medium^pos_doubtful: phrase (不 + 停) used adverbially and as complement
+B5-0066^verb@E^high^ไม่อนุญาต; ห้าม^上课不许玩手机。^Shàngkè bù xǔ wán shǒujī.^ระหว่างเรียนห้ามเล่นโทรศัพท์^high^
+B5-0067^verb@L^medium^มากกว่า; ไม่หยุดแค่^他不止一次帮助过我。^Tā bùzhǐ yí cì bāngzhù guo wǒ.^เขาช่วยเหลือฉันมากกว่าหนึ่งครั้ง^medium^pos_doubtful: 不止 is verb "be more than" and adverb "not only"
+B5-0068^adjective@E^medium^ไม่เพียงพอ; ข้อบกพร่อง^他的经验还不足。^Tā de jīngyàn hái bùzú.^ประสบการณ์ของเขายังไม่เพียงพอ^medium^polysemy: adjective "insufficient" vs. noun "shortcoming" (存在不足)
+B5-0069^noun@E^high^ส่วน; ตำแหน่ง (ร่างกาย)^你哪个部位疼？^Nǐ nǎge bùwèi téng?^คุณเจ็บตรงส่วนไหน?^high^
+B5-0070^verb@E^high^ทาย; เดา^你猜我今年多大？^Nǐ cāi wǒ jīnnián duō dà?^คุณทายสิว่าปีนี้ฉันอายุเท่าไร?^high^
+B5-0071^verb@E^medium^คาดเดา; การคาดเดา^这只是我的猜测。^Zhè zhǐ shì wǒ de cāicè.^นี่เป็นเพียงการคาดเดาของฉัน^medium^pos_doubtful: 猜测 is both verb and noun; example shows the noun
+B5-0072^noun@E^medium^กรรมการ (กีฬา); ผู้ตัดสิน^裁判吹了哨子。^Cáipàn chuī le shàozi.^กรรมการเป่านกหวีด^medium^polysemy: noun "referee" vs. verb "judge; adjudicate"
+B5-0073^verb@E^medium^จัดซื้อ^他负责为公司采购材料。^Tā fùzé wèi gōngsī cǎigòu cáiliào.^เขารับผิดชอบจัดซื้อวัสดุให้บริษัท^medium^pos_doubtful: gloss "Purchase" is noun or verb; 采购 is mainly the verb "procure"
+B5-0074^noun@E^high^ลอตเตอรี่; สลากกินแบ่ง^他每周都买彩票。^Tā měi zhōu dōu mǎi cǎipiào.^เขาซื้อลอตเตอรี่ทุกสัปดาห์^medium^source_gloss: "lottery" is the draw; 彩票 is the lottery ticket
+B5-0075^noun@E^high^ร้านอาหาร^这家餐馆的菜很好吃。^Zhè jiā cānguǎn de cài hěn hǎochī.^อาหารร้านนี้อร่อยมาก^high^
+B5-0076^noun@E^high^ห้องอาหาร; ภัตตาคาร^酒店的餐厅在一楼。^Jiǔdiàn de cāntīng zài yī lóu.^ห้องอาหารของโรงแรมอยู่ชั้นหนึ่ง^high^
+B5-0077^noun@E^high^ธุรกิจอาหารและเครื่องดื่ม^他从事餐饮行业。^Tā cóngshì cānyǐn hángyè.^เขาทำธุรกิจด้านอาหารและเครื่องดื่ม^high^
+B5-0078^noun@E^high^ทุ่งหญ้า^草原上有很多牛羊。^Cǎoyuán shang yǒu hěn duō niú yáng.^บนทุ่งหญ้ามีวัวและแกะมากมาย^high^
+B5-0079^measure_word@E^high^เล่ม (ลักษณนามของหนังสือ); สมุด^这套书一共有五册。^Zhè tào shū yígòng yǒu wǔ cè.^หนังสือชุดนี้มีทั้งหมดห้าเล่ม^medium^polysemy: measure word "volume" vs. noun "book; register" (手册)
+B5-0080^noun@E^high^ระดับ; ลำดับชั้น^这篇文章层次很清楚。^Zhè piān wénzhāng céngcì hěn qīngchu.^บทความนี้มีลำดับชั้นชัดเจน^medium^polysemy: "arrangement; layers (of ideas)" vs. "level; grade" (文化层次)
+B5-0081^noun@E^high^ส้อม; กากบาท^他在错的答案上画了个叉。^Tā zài cuò de dá'àn shang huà le ge chā.^เขากากบาทลงบนคำตอบที่ผิด^medium^polysemy: "fork" vs. "cross (×)"; also verb "pierce with a fork"; example shows "cross"
+B5-0082^noun@E^high^ส้อม^西餐要用刀子和叉子。^Xīcān yào yòng dāozi hé chāzi.^อาหารตะวันตกต้องใช้มีดและส้อม^high^
+B5-0083^noun@E^high^ความแตกต่าง^这两个东西没有什么差别。^Zhè liǎng ge dōngxi méiyǒu shénme chābié.^ของสองชิ้นนี้ไม่มีความแตกต่างกัน^high^
+B5-0084^noun@E^high^ช่องว่าง; ความต่าง^城市和农村的差距很大。^Chéngshì hé nóngcūn de chājù hěn dà.^ช่องว่างระหว่างเมืองกับชนบทกว้างมาก^high^
+B5-0085^verb@E^high^เสียบ; สอด; แทรก^请把卡插进去。^Qǐng bǎ kǎ chā jìnqu.^กรุณาเสียบบัตรเข้าไป^high^
+B5-0086^verb@E^high^สอบถาม; ค้นหาข้อมูล^你可以在网上查询成绩。^Nǐ kěyǐ zài wǎngshang cháxún chéngjì.^คุณค้นหาผลสอบทางอินเทอร์เน็ตได้^medium^source_gloss: "demand" is a poor gloss; 查询 means "inquire; look up"
+B5-0087^adverb@L^medium^เกือบ; เกือบจะ^我差点儿迟到了。^Wǒ chàdiǎnr chídào le.^ฉันเกือบมาสาย^medium^variant: pinyin "chā（yì）diǎnr" — standard reading is chà; 一 is optional (差一点儿)
+B5-0088^verb@E^high^รื้อ; แกะ; ถอด^他把信拆开了。^Tā bǎ xìn chāikāi le.^เขาแกะจดหมายออก^medium^source_gloss: "Remove" is loose; 拆 means "take apart; tear open; demolish"
+B5-0089^verb@E^high^รื้อถอน^这座旧楼要拆除了。^Zhè zuò jiù lóu yào chāichú le.^ตึกเก่าหลังนี้จะถูกรื้อถอน^high^
+B5-0090^noun@E^high^อุตสาหกรรม^旅游产业发展很快。^Lǚyóu chǎnyè fāzhǎn hěn kuài.^อุตสาหกรรมการท่องเที่ยวพัฒนาอย่างรวดเร็ว^high^
+B5-0091^noun@E^high^ความยาว^这条河的长度是多少？^Zhè tiáo hé de chángdù shì duōshao?^แม่น้ำสายนี้ยาวเท่าไร?^high^
+B5-0092^adjective@E^medium^อายุยืน^祝您健康长寿！^Zhù nín jiànkāng chángshòu!^ขอให้ท่านสุขภาพแข็งแรงและอายุยืน!^medium^pos_doubtful: gloss "long life; longevity" is a noun; 长寿 is also adjective "long-lived"
+B5-0093^noun@E^high^ลำไส้^他的肠胃不太好。^Tā de chángwèi bú tài hǎo.^ระบบลำไส้และกระเพาะของเขาไม่ค่อยดี^medium^example: bare 肠 is often bound (肠胃, 香肠)
+B5-0094^verb@E^high^ชิม; ลิ้มลอง^你尝尝这个菜。^Nǐ chángchang zhège cài.^คุณลองชิมอาหารจานนี้ดู^medium^polysemy: "taste" vs. "experience" (尝到甜头)
+B5-0095^verb@E^medium^ลอง; ทดลอง^我想尝试一下新的方法。^Wǒ xiǎng chángshì yí xià xīn de fāngfǎ.^ฉันอยากลองวิธีใหม่ดู^high^
+B5-0096^noun@E^high^ผู้อำนวยการโรงงาน^他是这家工厂的厂长。^Tā shì zhè jiā gōngchǎng de chǎngzhǎng.^เขาเป็นผู้อำนวยการโรงงานนี้^high^
+B5-0097^noun@E^high^ฉาก; สถานการณ์; ภาพ^婚礼的场面很热闹。^Hūnlǐ de chǎngmiàn hěn rènao.^บรรยากาศงานแต่งงานคึกคักมาก^high^
+B5-0098^verb@E^medium^สนับสนุน; ส่งเสริม (แนวคิด)^学校倡导节约用水。^Xuéxiào chàngdǎo jiéyuē yòng shuǐ.^โรงเรียนรณรงค์ให้ประหยัดน้ำ^high^
+B5-0099^verb@E^high^ก้าวข้าม; เหนือกว่า^他超越了自己的纪录。^Tā chāoyuè le zìjǐ de jìlù.^เขาทำได้เหนือกว่าสถิติของตัวเอง^medium^source_gloss: "Transcend" is narrow; 超越 also "surpass; overtake"
+B5-0100^noun@E^high^เจ้าของรถ^车主很快就来了。^Chēzhǔ hěn kuài jiù lái le.^เจ้าของรถมาถึงอย่างรวดเร็ว^high^
+B5-0102^noun@E^high^ตำแหน่งเกียรติยศ; ฉายา^他获得了“优秀教师”的称号。^Tā huòdé le “yōuxiù jiàoshī” de chēnghào.^เขาได้รับตำแหน่ง “ครูดีเด่น”^high^
+B5-0103^noun@E^high^ต้นทุน^我们要降低成本。^Wǒmen yào jiàngdī chéngběn.^พวกเราต้องลดต้นทุน^high^
+B5-0104^verb@L^medium^ตกลงซื้อขาย; ปิดดีล^这笔生意终于成交了。^Zhè bǐ shēngyi zhōngyú chéngjiāo le.^ธุรกิจนี้ตกลงกันได้ในที่สุด^medium^pos_doubtful: gloss "Deal" is noun or verb; 成交 is the verb "close a deal"
+B5-0105^noun@E^high^ผลสัมฤทธิ์; ประสิทธิผล^这个方法很有成效。^Zhège fāngfǎ hěn yǒu chéngxiào.^วิธีนี้ได้ผลดีมาก^high^
+B5-0106^noun@E^high^สำนวนสี่คำ; ภาษิต^“一石二鸟”是一个成语。^“Yì shí èr niǎo” shì yí ge chéngyǔ.^“ยิงปืนนัดเดียวได้นกสองตัว” เป็นสำนวนจีน^high^
+B5-0107^verb@E^high^รับเป็นเจ้าภาพ; รับดำเนินการ^这次比赛由我们学校承办。^Zhè cì bǐsài yóu wǒmen xuéxiào chéngbàn.^การแข่งขันครั้งนี้โรงเรียนของเราเป็นเจ้าภาพจัด^high^
+B5-0108^noun@E^high^ในเมือง^他在城里工作。^Tā zài chéng li gōngzuò.^เขาทำงานอยู่ในเมือง^high^
+B5-0109^verb@E^high^ขึ้น (ยานพาหนะ); คูณ^我们乘飞机去北京。^Wǒmen chéng fēijī qù Běijīng.^พวกเราขึ้นเครื่องบินไปปักกิ่ง^medium^polysemy: "ride; take (transport)" vs. math "multiply" (二乘三)
+B5-0110^verb@E^high^ขึ้นรถ; โดยสารรถ^请大家按顺序乘车。^Qǐng dàjiā àn shùnxù chéngchē.^ขอให้ทุกคนขึ้นรถตามลำดับ^high^
+B5-0111^noun@E^high^ผู้โดยสาร^乘客们请注意安全。^Chéngkèmen qǐng zhùyì ānquán.^ผู้โดยสารทุกท่านโปรดระมัดระวังความปลอดภัย^high^
+B5-0112^verb@E^high^โดยสาร^我乘坐火车去上海。^Wǒ chéngzuò huǒchē qù Shànghǎi.^ฉันโดยสารรถไฟไปเซี่ยงไฮ้^high^
+B5-0113^adjective@L^low^ลำบาก; เหนื่อยแรง^他学汉语有点儿吃力。^Tā xué Hànyǔ yǒudiǎnr chīlì.^เขาเรียนภาษาจีนค่อนข้างลำบาก^low^source_gloss: gloss "Sweaty" is wrong; 吃力 means "strenuous; requiring effort"
+B5-0114^noun@E^high^บ่อ; สระ^池子里有很多鱼。^Chízi li yǒu hěn duō yú.^ในบ่อมีปลามากมาย^high^
+B5-0115^adjective@E^high^สาย; ช้า^对不起，我来迟了。^Duìbuqǐ, wǒ lái chí le.^ขอโทษ ฉันมาช้า^high^
+B5-0116^noun@E^medium^แรงกระตุ้น; หุนหันพลันแล่น^他是一时冲动才这么做的。^Tā shì yìshí chōngdòng cái zhème zuò de.^เขาทำแบบนี้เพราะความหุนหันชั่ววูบ^medium^polysemy: noun "impulse" vs. adjective "impulsive" (别太冲动)
+B5-0117^noun@E^medium^ความขัดแย้ง; ขัดแย้ง^他们之间发生了冲突。^Tāmen zhījiān fāshēng le chōngtū.^เกิดความขัดแย้งระหว่างพวกเขา^medium^pos_doubtful: 冲突 is both noun and verb "clash"
+B5-0118^adjective@E^high^เพียงพอ; อุดมสมบูรณ์^这里的阳光很充足。^Zhèlǐ de yángguāng hěn chōngzú.^ที่นี่แสงแดดเพียงพอ^high^
+B5-0119^verb@E^high^กลุ้มใจ; กังวล^别愁了，办法总会有的。^Bié chóu le, bànfǎ zǒng huì yǒu de.^อย่ากลุ้มใจเลย ยังไงก็ต้องมีทางออก^high^
+B5-0120^adjective@E^high^น่าเกลียด; ขี้เหร่^这件衣服太丑了。^Zhè jiàn yīfu tài chǒu le.^เสื้อตัวนี้น่าเกลียดเกินไป^medium^polysemy: adjective "ugly" vs. noun "clown role" (戏曲 丑角) and zodiac "Chou"
+B5-0121^adjective@E^high^เหม็น^这个垃圾桶太臭了。^Zhège lājītǒng tài chòu le.^ถังขยะนี้เหม็นเกินไป^high^
+B5-0122^verb@E^high^พิมพ์เผยแพร่; จัดพิมพ์^这本书是去年出版的。^Zhè běn shū shì qùnián chūbǎn de.^หนังสือเล่มนี้จัดพิมพ์เมื่อปีที่แล้ว^high^
+B5-0123^verb@L^medium^เดินทางไปทำงาน (ต่างถิ่น)^他下个星期去上海出差。^Tā xià ge xīngqī qù Shànghǎi chūchāi.^สัปดาห์หน้าเขาจะไปทำงานที่เซี่ยงไฮ้^medium^source_gloss: "A business travel" is a noun phrase; 出差 is the verb "go on a business trip"
+B5-0124^verb@E^high^เหงื่อออก^天太热了，我出汗了。^Tiān tài rè le, wǒ chūhàn le.^อากาศร้อนเกินไป ฉันเหงื่อออกแล้ว^high^
+B5-0125^verb@E^high^เนื่องมาจาก; ด้วย (เหตุผล)^他这么做是出于好心。^Tā zhème zuò shì chūyú hǎoxīn.^เขาทำแบบนี้ด้วยความหวังดี^high^
+B5-0126^noun@E^high^ช่วงเริ่มต้น^这是项目的初期阶段。^Zhè shì xiàngmù de chūqī jiēduàn.^นี่เป็นช่วงเริ่มต้นของโครงการ^medium^source_gloss: "prime" is not a sense of 初期; core is "initial stage"
+B5-0127^conjunction@E^high^นอกจากว่า; เว้นแต่^除非你去，否则我也不去。^Chúfēi nǐ qù, fǒuzé wǒ yě bú qù.^เว้นแต่คุณจะไป ไม่อย่างนั้นฉันก็ไม่ไป^high^
+B5-0128^noun@E^high^คืนส่งท้ายปีเก่า (ตรุษจีน)^除夕晚上全家一起吃年夜饭。^Chúxī wǎnshang quánjiā yìqǐ chī niányèfàn.^คืนส่งท้ายปีเก่าทั้งครอบครัวกินอาหารเย็นด้วยกัน^high^
+B5-0129^noun@E^high^ห้องครัว^妈妈在厨房做饭。^Māma zài chúfáng zuòfàn.^แม่กำลังทำอาหารอยู่ในห้องครัว^high^
+B5-0130^verb@E^medium^ลงโทษ; การลงโทษ^违反规定的人会受到处罚。^Wéifǎn guīdìng de rén huì shòudào chǔfá.^ผู้ฝ่าฝืนกฎจะได้รับการลงโทษ^medium^pos_doubtful: 处罚 is both verb and noun; example shows the noun use
+B5-0131^noun@L^low^การลงโทษทางวินัย^他因为打架受到了学校的处分。^Tā yīnwèi dǎjià shòudào le xuéxiào de chǔfèn.^เขาถูกโรงเรียนลงโทษทางวินัยเพราะชกต่อย^low^source_gloss: gloss "prescription" is wrong; 处分 means "disciplinary action; punish"
+B5-0132^verb@E^high^อยู่ใน (สภาพ)^他正处在人生的低谷。^Tā zhèng chǔzài rénshēng de dīgǔ.^เขากำลังอยู่ในจุดต่ำสุดของชีวิต^high^
+B5-0133^verb@E^high^ถ่ายทอด; ส่งต่อ (ข้อความ)^请把我的意思传达给他。^Qǐng bǎ wǒ de yìsi chuándá gěi tā.^กรุณาถ่ายทอดความหมายของฉันไปถึงเขา^high^
+B5-0134^verb@E^high^ส่งต่อ; ถ่ายทอด^请把这个消息传递给大家。^Qǐng bǎ zhège xiāoxi chuándì gěi dàjiā.^กรุณาส่งต่อข่าวนี้ให้ทุกคน^high^
+B5-0135^noun@E^medium^แฟกซ์; ส่งแฟกซ์^请把文件传真给我。^Qǐng bǎ wénjiàn chuánzhēn gěi wǒ.^กรุณาส่งแฟกซ์เอกสารมาให้ฉัน^medium^pos_doubtful: 传真 is both noun "fax" and verb "send by fax"; example shows the verb
+B5-0136^noun@E^high^ผ้าม่าน^请把窗帘拉上。^Qǐng bǎ chuānglián lāshang.^กรุณาปิดผ้าม่าน^high^
+B5-0137^verb@E^high^บุกฝ่า; พุ่งเข้าไป^他闯进了房间。^Tā chuǎng jìn le fángjiān.^เขาพุ่งพรวดเข้าไปในห้อง^medium^polysemy: "rush; dash" vs. "temper oneself; venture out" (闯一闯)
+B5-0138^verb@E^high^ก่อตั้ง^这家公司创立于一九九八年。^Zhè jiā gōngsī chuànglì yú yī jiǔ jiǔ bā nián.^บริษัทนี้ก่อตั้งเมื่อปี 1998^high^
+B5-0139^noun@E^high^พจนานุกรม^这本辞典很有用。^Zhè běn cídiǎn hěn yǒuyòng.^พจนานุกรมเล่มนี้มีประโยชน์มาก^high^
+B5-0140^verb@E^high^ลาออก^他上个月辞职了。^Tā shàng ge yuè cízhí le.^เขาลาออกเมื่อเดือนที่แล้ว^high^
+B5-0141^noun@L^medium^หลังจากนั้น^此后，我们再也没见过面。^Cǐhòu, wǒmen zài yě méi jiàn guo miàn.^หลังจากนั้น พวกเราก็ไม่เคยเจอกันอีกเลย^high^
+B5-0142^noun@L^medium^ขณะนี้^此刻我的心情很激动。^Cǐkè wǒ de xīnqíng hěn jīdòng.^ขณะนี้ฉันรู้สึกตื่นเต้นมาก^high^
+B5-0143^noun@L^medium^ขณะนี้; ตอนนี้^此时，天已经黑了。^Cǐshí, tiān yǐjīng hēi le.^ขณะนั้น ฟ้ามืดแล้ว^high^
+B5-0144^adjective@E^high^ฉลาด^这个孩子非常聪明。^Zhège háizi fēicháng cōngming.^เด็กคนนี้ฉลาดมาก^high^
+B5-0145^conjunction@E^high^จึง; ดังนั้น^他努力学习，从而提高了成绩。^Tā nǔlì xuéxí, cóng'ér tígāo le chéngjì.^เขาตั้งใจเรียน จึงทำให้ผลการเรียนดีขึ้น^high^
+B5-0146^adverb@L^medium^จากในนั้น; จากตรงนั้น^我从中学到了很多东西。^Wǒ cóngzhōng xuédào le hěn duō dōngxi.^ฉันได้เรียนรู้หลายสิ่งจากเรื่องนั้น^medium^pos_doubtful: 从中 is a preposition + localizer used adverbially
+B5-0147^adjective@E^high^กรอบ; เปราะ; (เสียง) ใส^这个苹果又甜又脆。^Zhège píngguǒ yòu tián yòu cuì.^แอปเปิลลูกนี้ทั้งหวานทั้งกรอบ^medium^polysemy: crisp / brittle / fragile / clear (voice) combined; example shows "crisp"
+B5-0148^noun@E^high^เงินฝาก^他在银行有一笔存款。^Tā zài yínháng yǒu yì bǐ cúnkuǎn.^เขามีเงินฝากอยู่ในธนาคารก้อนหนึ่ง^medium^polysemy: noun "deposit; savings" vs. verb-object "deposit money"
