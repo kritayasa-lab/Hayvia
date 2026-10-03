@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B4-0844^adjective@E^high^เข้มงวด; แน่นหนา; รุนแรง^我们老师对学生很严。^Wǒmen lǎoshī duì xuésheng hěn yán.^ครูของเราเข้มงวดกับนักเรียนมาก^medium^polysemy: strict / tight / severe / stern combined; example shows "strict"
+B4-0845^adjective@E^high^เข้มงวด^这个学校的规定很严格。^Zhège xuéxiào de guīdìng hěn yángé.^กฎของโรงเรียนนี้เข้มงวดมาก^high^
+B4-0846^adjective@E^high^ร้ายแรง; รุนแรง^他的病很严重。^Tā de bìng hěn yánzhòng.^อาการป่วยของเขาร้ายแรงมาก^high^
+B4-0847^verb@E^medium^วิจัย; ศึกษาค้นคว้า^他在研究中国历史。^Tā zài yánjiū Zhōngguó lìshǐ.^เขากำลังศึกษาค้นคว้าประวัติศาสตร์จีน^medium^polysemy: verb "research" vs. "consider; discuss" (研究一下); also noun "research"
+B4-0848^noun@E^high^นักศึกษาระดับบัณฑิตศึกษา^她是北京大学的研究生。^Tā shì Běijīng Dàxué de yánjiūshēng.^เธอเป็นนักศึกษาปริญญาโทของมหาวิทยาลัยปักกิ่ง^high^
+B4-0849^verb@E^high^วิจัยและพัฒนา; คิดค้น^这家公司研制了一种新药。^Zhè jiā gōngsī yánzhì le yì zhǒng xīn yào.^บริษัทนี้คิดค้นยาชนิดใหม่ขึ้นมา^high^
+B4-0850^noun@E^high^เกลือ^汤里放点儿盐。^Tāng li fàng diǎnr yán.^ใส่เกลือในน้ำแกงหน่อย^high^
+B4-0851^noun@E^high^แว่นตา^我找不到我的眼镜了。^Wǒ zhǎo bu dào wǒ de yǎnjìng le.^ฉันหาแว่นตาของฉันไม่เจอ^high^
+B4-0852^noun@E^high^น้ำตา^她流下了感动的眼泪。^Tā liúxià le gǎndòng de yǎnlèi.^เธอหลั่งน้ำตาด้วยความซาบซึ้ง^medium^source_gloss: "eyedrop" is not a sense of 眼泪 (that is 眼药水)
+B4-0853^noun@E^high^ในสายตา^在妈妈眼里，我永远是个孩子。^Zài māma yǎn li, wǒ yǒngyuǎn shì ge háizi.^ในสายตาแม่ ฉันยังเป็นเด็กเสมอ^high^
+B4-0854^noun@E^medium^สุนทรพจน์; กล่าวปาฐกถา^他的演讲很精彩。^Tā de yǎnjiǎng hěn jīngcǎi.^สุนทรพจน์ของเขายอดเยี่ยมมาก^medium^pos_doubtful: 演讲 is both noun "speech" and verb "give a speech"; example shows the noun
+B4-0855^noun@E^high^ระเบียง^阳台上有很多花。^Yángtái shang yǒu hěn duō huā.^บนระเบียงมีดอกไม้มากมาย^high^
+B4-0856^verb@E^high^ปลูกฝังจนเป็นนิสัย^他养成了早睡早起的习惯。^Tā yǎngchéng le zǎo shuì zǎo qǐ de xíguàn.^เขาติดนิสัยนอนเร็วตื่นเช้า^high^
+B4-0857^noun@E^high^เอว^我的腰很疼。^Wǒ de yāo hěn téng.^ฉันปวดเอวมาก^high^
+B4-0858^verb@E^high^เขย่า; ส่าย; โบก^他摇了摇头。^Tā yáo le yáo tóu.^เขาส่ายหัว^high^
+B4-0859^noun@E^high^ยา; เวชภัณฑ์^这种药物要按时服用。^Zhè zhǒng yàowù yào ànshí fúyòng.^ยาชนิดนี้ต้องรับประทานตรงเวลา^high^
+B4-0861^adjective@E^medium^สมัครเล่น; ยามว่าง^他是一名业余歌手。^Tā shì yì míng yèyú gēshǒu.^เขาเป็นนักร้องสมัครเล่น^medium^polysemy: "amateur" vs. "spare-time" (业余时间)
+B4-0862^noun@E^high^ใบไม้^秋天的叶子变黄了。^Qiūtiān de yèzi biàn huáng le.^ใบไม้ในฤดูใบไม้ร่วงเปลี่ยนเป็นสีเหลือง^high^
+B4-0863^noun@E^high^การรักษาพยาบาล^这里的医疗条件很好。^Zhèlǐ de yīliáo tiáojiàn hěn hǎo.^สภาพการรักษาพยาบาลที่นี่ดีมาก^high^
+B4-0864^noun@E^high^แพทยศาสตร์^他在大学学医学。^Tā zài dàxué xué yīxué.^เขาเรียนแพทยศาสตร์ที่มหาวิทยาลัย^high^
+B4-0865^verb@E^high^พึ่งพา^我们不能总是依靠父母。^Wǒmen bù néng zǒngshì yīkào fùmǔ.^พวกเราไม่ควรพึ่งพาพ่อแม่ตลอดไป^high^
+B4-0866^adverb@E^high^ยังคง^多年过去了，他依然很年轻。^Duō nián guòqu le, tā yīrán hěn niánqīng.^ผ่านไปหลายปี เขายังคงดูหนุ่มอยู่^high^
+B4-0867^adverb@L^medium^ทั้งหมดโดยไม่มีข้อยกเว้น^所有人一律不准进入。^Suǒyǒu rén yílǜ bù zhǔn jìnrù.^ทุกคนห้ามเข้าโดยไม่มีข้อยกเว้น^medium^source_gloss: "all and singular" is archaic English; 一律 means "uniformly; without exception"
+B4-0868^adverb@E^high^ซ้ำแล้วซ้ำเล่า^他一再说对不起。^Tā yízài shuō duìbuqǐ.^เขาพูดขอโทษซ้ำแล้วซ้ำเล่า^high^
+B4-0869^adjective@L^medium^เป็นเอกฉันท์; สอดคล้องกัน^大家的意见很一致。^Dàjiā de yìjiàn hěn yízhì.^ความเห็นของทุกคนสอดคล้องกัน^medium^source_gloss: "Agreement" is a noun; 一致 is mainly adjective/adverb "unanimous; consistent"
+B4-0870^verb@E^high^ย้าย; เคลื่อน; เปลี่ยน^请把桌子移到窗户旁边。^Qǐng bǎ zhuōzi yí dào chuānghu pángbiān.^กรุณาย้ายโต๊ะไปไว้ข้างหน้าต่าง^medium^polysemy: move / remove / shift vs. change / alter; example shows "move"
+B4-0871^verb@E^high^เคลื่อนที่; ขยับ^请不要移动这些东西。^Qǐng búyào yídòng zhèxiē dōngxi.^กรุณาอย่าเคลื่อนย้ายของเหล่านี้^medium^polysemy: verb "move" vs. attributive "mobile" (移动电话)
+B4-0872^noun@E^medium^ผู้อพยพ; ย้ายถิ่นฐาน^他是来自中国的移民。^Tā shì láizì Zhōngguó de yímín.^เขาเป็นผู้อพยพจากจีน^medium^pos_doubtful: 移民 is both noun "immigrant" and verb "emigrate"; example shows the noun
+B4-0873^noun@E^high^มรดก^长城是世界文化遗产。^Chángchéng shì shìjiè wénhuà yíchǎn.^กำแพงเมืองจีนเป็นมรดกโลกทางวัฒนธรรม^medium^polysemy: "heritage (cultural)" vs. "inheritance; estate"
+B4-0874^verb@L^medium^ถ่ายทอดทางพันธุกรรม^他的高个子是遗传他爸爸的。^Tā de gāo gèzi shì yíchuán tā bàba de.^ความสูงของเขาได้รับการถ่ายทอดทางพันธุกรรมมาจากพ่อ^medium^source_gloss: "inheritance" is loose; 遗传 = genetic heredity (verb "inherit genetically")
+B4-0875^noun@E^high^ข้อสงสัย; คำถาม^你还有什么疑问吗？^Nǐ hái yǒu shénme yíwèn ma?^คุณยังมีข้อสงสัยอะไรอีกไหม?^high^
+B4-0876^conjunction@E^high^รวมทั้ง; และ^老师、学生以及家长都来了。^Lǎoshī, xuésheng yǐjí jiāzhǎng dōu lái le.^ครู นักเรียน รวมทั้งผู้ปกครองมากันหมด^high^
+B4-0877^noun@L^high^ภายใน^请在一小时以内完成。^Qǐng zài yì xiǎoshí yǐnèi wánchéng.^กรุณาทำให้เสร็จภายในหนึ่งชั่วโมง^high^
+B4-0878^other^low^โดยทั่วไปแล้ว^一般来说，南方比北方暖和。^Yìbān lái shuō, nánfāng bǐ běifāng nuǎnhuo.^โดยทั่วไปแล้ว ทางใต้อบอุ่นกว่าทางเหนือ^high^pos_doubtful: discourse phrase with no single POS
+B4-0879^noun@E^high^หน้าที่; พันธะ^保护环境是每个人的义务。^Bǎohù huánjìng shì měi ge rén de yìwù.^การปกป้องสิ่งแวดล้อมเป็นหน้าที่ของทุกคน^medium^polysemy: noun "obligation" vs. attributive "voluntary; unpaid" (义务劳动)
+B4-0880^verb@L^medium^วิพากษ์วิจารณ์; ซุบซิบ^大家都在议论这件事。^Dàjiā dōu zài yìlùn zhè jiàn shì.^ทุกคนกำลังพูดถึงเรื่องนี้กันอยู่^medium^source_gloss: "Discussion" is a noun; 议论 is mainly the verb "talk about; comment on"
+B4-0881^verb@E^high^นำ; ชักนำ; ดึงดูด; ก่อให้เกิด^他的话引得大家都笑了。^Tā de huà yǐn de dàjiā dōu xiào le.^คำพูดของเขาทำให้ทุกคนหัวเราะ^medium^polysemy: lead / guide / draw / stretch / lure / attract / cause combined; example shows "cause"
+B4-0882^verb@E^high^ชี้นำ; แนะแนว^老师引导学生思考问题。^Lǎoshī yǐndǎo xuésheng sīkǎo wèntí.^ครูชี้นำนักเรียนให้คิดเรื่องปัญหา^high^
+B4-0883^verb@E^high^นำเข้า (เทคโนโลยี/บุคลากร)^公司引进了新技术。^Gōngsī yǐnjìn le xīn jìshù.^บริษัทนำเทคโนโลยีใหม่เข้ามา^high^
+B4-0884^verb@E^high^ทำให้เกิด^这件事引起了大家的注意。^Zhè jiàn shì yǐnqǐ le dàjiā de zhùyì.^เรื่องนี้ทำให้ทุกคนให้ความสนใจ^high^
+B4-0885^auxiliary@L^low^ควร; ตอบรับ; รับปาก^你应早点儿回家。^Nǐ yīng zǎo diǎnr huí jiā.^คุณควรกลับบ้านเร็วหน่อย^low^polysemy: auxiliary 应 yīng "should" vs. 应 yìng "answer; respond" — different readings merged; pos_doubtful: no source POS
+B4-0886^adjective@E^high^กล้าหาญ^他是一位英勇的战士。^Tā shì yí wèi yīngyǒng de zhànshì.^เขาเป็นนักรบที่กล้าหาญ^high^
+B4-0887^verb@E^high^เปิดให้บริการ; ประกอบกิจการ^这家商店二十四小时营业。^Zhè jiā shāngdiàn èrshísì xiǎoshí yíngyè.^ร้านนี้เปิดให้บริการยี่สิบสี่ชั่วโมง^high^
+B4-0888^verb@E^high^ได้รับ; ชนะได้^他的表演赢得了观众的掌声。^Tā de biǎoyǎn yíngdé le guānzhòng de zhǎngshēng.^การแสดงของเขาได้รับเสียงปรบมือจากผู้ชม^high^
+B4-0889^noun@E^high^เงา^树的影子很长。^Shù de yǐngzi hěn cháng.^เงาของต้นไม้ยาวมาก^high^
+B4-0890^adjective@E^high^กล้าหาญ^他是一个勇敢的孩子。^Tā shì yí ge yǒnggǎn de háizi.^เขาเป็นเด็กที่กล้าหาญ^high^
+B4-0891^noun@E^high^ความกล้าหาญ^他鼓起勇气说出了真话。^Tā gǔqǐ yǒngqì shuōchū le zhēnhuà.^เขารวบรวมความกล้าพูดความจริงออกมา^high^
+B4-0892^noun@E^high^ประโยชน์ใช้สอย^这种材料的用途很广。^Zhè zhǒng cáiliào de yòngtú hěn guǎng.^วัสดุชนิดนี้มีประโยชน์ใช้สอยหลากหลาย^high^
+B4-0893^adjective@E^high^ดีเยี่ยม^他有优良的传统。^Tā yǒu yōuliáng de chuántǒng.^เขามีประเพณีอันดีงาม^high^
+B4-0894^adjective@E^high^งดงาม; สละสลวย^这首歌的旋律很优美。^Zhè shǒu gē de xuánlǜ hěn yōuměi.^ทำนองเพลงนี้ไพเราะงดงามมาก^high^
+B4-0895^adjective@E^high^ยอดเยี่ยม; โดดเด่น^他是一名优秀的学生。^Tā shì yì míng yōuxiù de xuésheng.^เขาเป็นนักเรียนที่ยอดเยี่ยม^high^
+B4-0896^noun@E^high^ที่ทำการไปรษณีย์^邮局几点关门？^Yóujú jǐ diǎn guānmén?^ไปรษณีย์ปิดกี่โมง?^high^
+B4-0897^adjective@E^high^แข็งแรง; มีพลัง^这个小伙子真有劲儿。^Zhège xiǎohuǒzi zhēn yǒujìnr.^ชายหนุ่มคนนี้แข็งแรงจริงๆ^medium^polysemy: "strong; energetic" vs. "interesting; fun" (这个游戏真有劲儿)
+B4-0898^adjective@E^high^น่าสนใจ; สนุก^这本书很有趣。^Zhè běn shū hěn yǒuqù.^หนังสือเล่มนี้น่าสนใจมาก^high^
+B4-0899^adjective@E^high^มีจำกัด^我们的时间有限。^Wǒmen de shíjiān yǒuxiàn.^เวลาของพวกเรามีจำกัด^high^
+B4-0900^noun@E^high^โรงเรียนอนุบาล^我女儿在上幼儿园。^Wǒ nǚ'ér zài shàng yòu'éryuán.^ลูกสาวของฉันเรียนอยู่โรงเรียนอนุบาล^high^
+B4-0901^conjunction@E^high^ดังนั้น; จึง^天下雨了，于是我们回家了。^Tiān xià yǔ le, yúshì wǒmen huí jiā le.^ฝนตกแล้ว พวกเราจึงกลับบ้าน^high^
+B4-0902^noun@E^high^ไวยากรณ์^汉语的语法不太难。^Hànyǔ de yǔfǎ bú tài nán.^ไวยากรณ์ภาษาจีนไม่ค่อยยาก^high^
+B4-0903^noun@E^medium^การออกเสียง; เสียงพูด; ข้อความเสียง^他给我发了一条语音。^Tā gěi wǒ fā le yì tiáo yǔyīn.^เขาส่งข้อความเสียงมาหาฉัน^medium^polysemy: "pronunciation (phonetics)" vs. "voice message"; source_gloss: "voice" is loose
+B4-0904^noun@E^high^หยก^这个手镯是玉做的。^Zhège shǒuzhuó shì yù zuò de.^กำไลวงนี้ทำจากหยก^high^
+B4-0905^noun@E^high^ข้าวโพด^我喜欢吃玉米。^Wǒ xǐhuan chī yùmǐ.^ฉันชอบกินข้าวโพด^high^
+B4-0906^verb@E^medium^พยากรณ์; คาดการณ์^专家预测明年经济会更好。^Zhuānjiā yùcè míngnián jīngjì huì gèng hǎo.^ผู้เชี่ยวชาญคาดการณ์ว่าเศรษฐกิจปีหน้าจะดีขึ้น^high^
+B4-0907^verb@E^high^จอง; สั่งล่วงหน้า^我预订了一间房间。^Wǒ yùdìng le yì jiān fángjiān.^ฉันจองห้องไว้หนึ่งห้อง^high^
+B4-0908^verb@E^high^พบ; เจอ; ประสบ^遇事不要慌。^Yù shì búyào huāng.^เจอเรื่องอะไรก็อย่าตื่นตระหนก^high^
+B4-0909^verb@E^high^ประสบ; เจอ^我遇到了一个难题。^Wǒ yùdào le yí ge nántí.^ฉันเจอปัญหายากข้อหนึ่ง^high^
+B4-0910^verb@E^high^พบเจอโดยบังเอิญ^我在超市遇见了老师。^Wǒ zài chāoshì yùjiàn le lǎoshī.^ฉันบังเอิญเจอครูที่ซูเปอร์มาร์เก็ต^high^
+B4-0911^noun@E^high^วัตถุดิบ^这些是做面包的原料。^Zhèxiē shì zuò miànbāo de yuánliào.^นี่คือวัตถุดิบสำหรับทำขนมปัง^high^
+B4-0912^noun@E^high^หลักการ^这是一个原则问题。^Zhè shì yí ge yuánzé wèntí.^นี่เป็นเรื่องของหลักการ^high^
+B4-0913^adjective@E^high^กลม; วงกลม^今天的月亮很圆。^Jīntiān de yuèliang hěn yuán.^พระจันทร์คืนนี้กลมมาก^medium^polysemy: adjective "round" vs. noun "circle" vs. currency 元 variant (圆)
+B4-0914^adjective@L^medium^สมบูรณ์; ราบรื่นดี^会议圆满结束了。^Huìyì yuánmǎn jiéshù le.^การประชุมจบลงอย่างสมบูรณ์^medium^source_gloss: "Satisfactorily" is adverbial; 圆满 is the adjective "complete; perfect" used adverbially
+B4-0915^noun@E^medium^การนัดพบ; เดต; นัด^今天晚上我有一个约会。^Jīntiān wǎnshang wǒ yǒu yí ge yuēhuì.^คืนนี้ฉันมีนัด^medium^pos_doubtful: 约会 is both noun "date; appointment" and verb "go on a date"
+B4-0916^noun@E^high^สิ้นเดือน^这个月底我要搬家。^Zhège yuèdǐ wǒ yào bānjiā.^สิ้นเดือนนี้ฉันจะย้ายบ้าน^high^
+B4-0917^verb@E^high^อ่าน^我喜欢阅读中文小说。^Wǒ xǐhuan yuèdú Zhōngwén xiǎoshuō.^ฉันชอบอ่านนวนิยายภาษาจีน^high^
+B4-0918^noun@E^high^งานกีฬา; การแข่งขันกีฬา^学校下周举行运动会。^Xuéxiào xiàzhōu jǔxíng yùndònghuì.^โรงเรียนจัดงานกีฬาสัปดาห์หน้า^high^
+B4-0919^noun@E^high^นักกีฬา^他是一名游泳运动员。^Tā shì yì míng yóuyǒng yùndòngyuán.^เขาเป็นนักกีฬาว่ายน้ำ^high^
+B4-0920^noun@E^high^โชค^今天我的运气很好。^Jīntiān wǒ de yùnqi hěn hǎo.^วันนี้โชคของฉันดีมาก^high^
+B4-0921^verb@L^medium^นำมาใช้; ประยุกต์ใช้^我们要学会运用新知识。^Wǒmen yào xuéhuì yùnyòng xīn zhīshi.^พวกเราต้องเรียนรู้ที่จะนำความรู้ใหม่มาใช้^medium^source_gloss: "Application" is a noun; 运用 is the verb "apply; make use of"
+B4-0922^adverb@E^high^ซ้ำแล้วซ้ำเล่า^他再三感谢我。^Tā zàisān gǎnxiè wǒ.^เขาขอบคุณฉันซ้ำแล้วซ้ำเล่า^high^
+B4-0923^verb@E^high^แคร์; ใส่ใจ^我不在乎别人怎么想。^Wǒ bú zàihu biérén zěnme xiǎng.^ฉันไม่สนว่าคนอื่นจะคิดอย่างไร^high^
+B4-0924^verb@E^high^อยู่ที่; ขึ้นอยู่กับ^成功的关键在于努力。^Chénggōng de guānjiàn zàiyú nǔlì.^กุญแจของความสำเร็จอยู่ที่ความพยายาม^high^
+B4-0925^verb@E^high^เห็นด้วย; สนับสนุน^我赞成你的意见。^Wǒ zànchéng nǐ de yìjiàn.^ฉันเห็นด้วยกับความคิดเห็นของคุณ^high^
+B4-0926^verb@E^high^ชื่นชม; ยกย่อง^老师很赞赏他的作品。^Lǎoshī hěn zànshǎng tā de zuòpǐn.^ครูชื่นชมผลงานของเขามาก^high^
+B4-0927^verb@E^medium^สนับสนุน (ทุน); ผู้สนับสนุน^这家公司赞助了这次比赛。^Zhè jiā gōngsī zànzhù le zhè cì bǐsài.^บริษัทนี้สนับสนุนการแข่งขันครั้งนี้^medium^pos_doubtful: gloss "Sponsor" is noun or verb; 赞助 is mainly the verb "sponsor; support"
+B4-0928^noun@E^high^รูปลักษณ์; ทรง; การออกแบบ^她的新发型造型很漂亮。^Tā de xīn fàxíng zàoxíng hěn piàoliang.^ทรงผมใหม่ของเธอสวยมาก^medium^polysemy: noun "style; look" vs. verb "model; mould"
+B4-0929^noun@E^medium^การต่อสู้; สู้รบ^这是一场激烈的战斗。^Zhè shì yì chǎng jīliè de zhàndòu.^นี่เป็นการต่อสู้ที่ดุเดือด^medium^pos_doubtful: 战斗 is both noun "battle" and verb "fight"; example shows the noun
+B4-0930^verb@E^high^เอาชนะ^他战胜了自己的恐惧。^Tā zhànshèng le zìjǐ de kǒngjù.^เขาเอาชนะความกลัวของตัวเองได้^high^
+B4-0931^noun@E^high^ทหาร; นักรบ^他是一名勇敢的战士。^Tā shì yì míng yǒnggǎn de zhànshì.^เขาเป็นนักรบที่กล้าหาญ^high^
+B4-0932^noun@E^high^สงคราม^我们都希望没有战争。^Wǒmen dōu xīwàng méiyǒu zhànzhēng.^พวกเราทุกคนหวังว่าจะไม่มีสงคราม^high^
+B4-0933^noun@E^high^สามี^她的丈夫是医生。^Tā de zhàngfu shì yīshēng.^สามีของเธอเป็นหมอ^high^
+B4-0934^verb@E^high^ทักทาย; เรียก; ดูแลต้อนรับ^他跟我打了个招呼。^Tā gēn wǒ dǎ le ge zhāohu.^เขาทักทายฉัน^medium^polysemy: call / hail / greet / attend to (guests) combined; example shows "greet" (打招呼)
+B4-0936^verb@E^high^ไฟไหม้^那栋楼着火了！^Nà dòng lóu zháohuǒ le!^ตึกหลังนั้นไฟไหม้!^high^
+B4-0937^adjective@L^medium^ร้อนใจ; กังวล^别着急，慢慢来。^Bié zháojí, mànmàn lái.^ไม่ต้องร้อนใจ ค่อยๆ ทำ^medium^source_gloss: "Worry" suggests verb; 着急 is mainly adjective "anxious; in a hurry"
+B4-0938^verb@E^high^จัดประชุม; เรียกประชุม^公司明天召开大会。^Gōngsī míngtiān zhàokāi dàhuì.^บริษัทจะจัดประชุมใหญ่พรุ่งนี้^high^
+B4-0939^verb@L^low^หัก; พับ; ลดราคา^他的腿摔折了。^Tā de tuǐ shuāi zhé le.^ขาของเขาหักเพราะล้ม^low^polysemy: "break; fracture" vs. "fold" vs. noun "discount" (打八折); source_gloss: "fracture" is noun-like; pos_doubtful: no source POS
+B4-0940^noun@E^high^เข็ม; การฉีดยา^请给我一根针。^Qǐng gěi wǒ yì gēn zhēn.^กรุณาให้เข็มฉันหนึ่งเล่ม^medium^polysemy: "needle" vs. "injection" (打针); example shows "needle"
+B4-0941^preposition@L^medium^มุ่งเป้าไปที่; สำหรับ^针对这个问题，我们开了一个会。^Zhēnduì zhège wèntí, wǒmen kāi le yí ge huì.^สำหรับปัญหานี้ พวกเราได้เปิดประชุมหนึ่งครั้ง^medium^source_gloss: "In the light of" is loose; 针对 means "aimed at; with regard to" (verb/preposition)
+B4-0942^measure_word@L^low^ระยะหนึ่ง; ช่วง (ลักษณนามของเหตุการณ์สั้นๆ); แนวรบ^刚才下了一阵雨。^Gāngcái xià le yí zhèn yǔ.^เมื่อกี้ฝนตกอยู่พักหนึ่ง^low^source_gloss: gloss "front" (battle line) omits the common measure word "spell; burst" (一阵风); polysemy; pos_doubtful: no source POS
+B4-0943^verb@E^medium^โต้เถียง; ถกเถียง^他们为这个问题争论了很久。^Tāmen wèi zhège wèntí zhēnglùn le hěn jiǔ.^พวกเขาถกเถียงกันเรื่องนี้อยู่นาน^high^
+B4-0944^verb@E^high^พิชิต; เอาชนะ^他的歌声征服了所有观众。^Tā de gēshēng zhēngfú le suǒyǒu guānzhòng.^เสียงร้องของเขาพิชิตใจผู้ชมทุกคน^high^
+B4-0945^verb@E^high^ขอ (ความเห็น)^老师征求了大家的意见。^Lǎoshī zhēngqiú le dàjiā de yìjiàn.^ครูขอความคิดเห็นจากทุกคน^high^
