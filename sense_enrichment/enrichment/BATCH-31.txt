@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B4-0743^verb@L^medium^ล่าช้า; ช้ากว่ากำหนด^火车晚点了半个小时。^Huǒchē wǎndiǎn le bàn ge xiǎoshí.^รถไฟล่าช้าครึ่งชั่วโมง^high^
+B4-0744^conjunction@E^high^หากว่า (เผื่อ); ในกรณีที่^带上伞吧，万一下雨呢。^Dàishang sǎn ba, wànyī xià yǔ ne.^พกร่มไปด้วยเถอะ เผื่อฝนตก^medium^polysemy: conjunction "in case" vs. noun "contingency" (以防万一)
+B4-0745^noun@E^high^กษัตริย์; หัวหน้า; ราชา^他是这里的足球之王。^Tā shì zhèlǐ de zúqiú zhī wáng.^เขาเป็นราชาฟุตบอลของที่นี่^medium^polysemy: "king; monarch" vs. "head; chief; champion"; also common surname 王
+B4-0746^noun@E^high^เครือข่าย^今天网络有问题。^Jīntiān wǎngluò yǒu wèntí.^วันนี้เครือข่ายมีปัญหา^high^
+B4-0747^noun@E^high^ที่อยู่เว็บไซต์^请告诉我这个网站的网址。^Qǐng gàosu wǒ zhège wǎngzhàn de wǎngzhǐ.^กรุณาบอกที่อยู่เว็บไซต์นี้ให้ฉันหน่อย^high^
+B4-0748^verb@E^medium^ยิ้ม; รอยยิ้ม^她对我微笑。^Tā duì wǒ wēixiào.^เธอยิ้มให้ฉัน^medium^pos_doubtful: gloss "Smile" is noun or verb; example shows the verb
+B4-0749^noun@E^high^วีแชท (แอปโซเชียลจีน)^我们加个微信吧。^Wǒmen jiā ge Wēixìn ba.^พวกเราแอดวีแชทกันเถอะ^high^
+B4-0750^noun@E^high^ผ้าพันคอ^天冷了，戴上围巾吧。^Tiān lěng le, dàishang wéijīn ba.^อากาศหนาวแล้ว ใส่ผ้าพันคอเถอะ^high^
+B4-0751^verb@E^high^รักษาไว้; คงไว้^我们要维持良好的关系。^Wǒmen yào wéichí liánghǎo de guānxì.^พวกเราต้องรักษาความสัมพันธ์ที่ดีไว้^high^
+B4-0752^verb@E^high^ปกป้อง; ดูแลรักษา^我们要维护公共秩序。^Wǒmen yào wéihù gōnggòng zhìxù.^พวกเราต้องรักษาความสงบเรียบร้อยของสาธารณะ^high^
+B4-0753^verb@E^medium^ซ่อมบำรุง^这台机器需要维修。^Zhè tái jīqì xūyào wéixiū.^เครื่องนี้ต้องซ่อมบำรุง^high^
+B4-0754^noun@E^high^หาง^小狗摇着尾巴。^Xiǎo gǒu yáo zhe wěiba.^ลูกหมากระดิกหาง^high^
+B4-0755^adverb@E^high^ไม่แน่เสมอไป^贵的东西未必好。^Guì de dōngxi wèibì hǎo.^ของแพงไม่จำเป็นต้องดีเสมอไป^high^
+B4-0756^noun@E^high^อนาคต^我们的未来会更好。^Wǒmen de wèilái huì gèng hǎo.^อนาคตของเราจะดียิ่งขึ้น^high^
+B4-0757^verb@E^high^ตั้งอยู่ที่^北京位于中国北方。^Běijīng wèiyú Zhōngguó běifāng.^ปักกิ่งตั้งอยู่ทางตอนเหนือของจีน^high^
+B4-0758^noun@E^high^ตำแหน่ง; ที่ตั้ง^这个位置很好。^Zhège wèizhì hěn hǎo.^ตำแหน่งนี้ดีมาก^high^
+B4-0759^noun@E^high^รสชาติ; กลิ่น^这个菜的味儿不错。^Zhège cài de wèir búcuò.^อาหารจานนี้รสชาติไม่เลว^high^
+B4-0761^adjective@E^high^มั่นคง; มั่นใจ; แน่นอน^他走路走得很稳。^Tā zǒulù zǒu de hěn wěn.^เขาเดินได้มั่นคงมาก^medium^polysemy: "steady; stable" vs. "sure; certain" (稳赢); example shows "steady"
+B4-0762^adjective@E^high^มั่นคง; คงที่^他的工作很稳定。^Tā de gōngzuò hěn wěndìng.^งานของเขามั่นคงมาก^high^
+B4-0763^verb@E^high^ทักทาย; ถามไถ่^请代我问候你的父母。^Qǐng dài wǒ wènhòu nǐ de fùmǔ.^กรุณาฝากความคิดถึงถึงพ่อแม่ของคุณด้วย^high^
+B4-0764^verb@L^low^ไม่มี; ไร้^他在这件事上无可奈何。^Tā zài zhè jiàn shì shang wú kě nài hé.^เขาจนปัญญาในเรื่องนี้^low^source_gloss: gloss "nothing" is a loose noun gloss; 无 is the (literary) verb "not have; without"; pos_doubtful; example: bare 无 is literary, sentence uses an idiom
+B4-0765^verb@E^high^ไม่สามารถ^我无法相信这是真的。^Wǒ wúfǎ xiāngxìn zhè shì zhēn de.^ฉันไม่สามารถเชื่อได้ว่านี่เป็นเรื่องจริง^high^
+B4-0766^adjective@E^high^น่าเบื่อ; เบื่อ^周末一个人在家很无聊。^Zhōumò yí ge rén zài jiā hěn wúliáo.^สุดสัปดาห์อยู่บ้านคนเดียวน่าเบื่อมาก^high^
+B4-0767^conjunction@E^high^ไม่ว่า^无论多忙，他都坚持锻炼。^Wúlùn duō máng, tā dōu jiānchí duànliàn.^ไม่ว่าจะยุ่งแค่ไหน เขาก็ยังออกกำลังกายสม่ำเสมอ^high^
+B4-0768^adjective@E^high^นับไม่ถ้วน^天上有无数的星星。^Tiān shang yǒu wúshù de xīngxing.^บนฟ้ามีดวงดาวนับไม่ถ้วน^high^
+B4-0769^verb@L^low^ไม่สำคัญ; ไม่เป็นไร; ไม่แคร์^去不去都无所谓。^Qù bu qù dōu wúsuǒwèi.^จะไปหรือไม่ไปก็ไม่สำคัญ^low^source_gloss: gloss "cannot be designated as" is the rare literal sense; common sense is "doesn't matter; not care"
+B4-0770^adjective@E^high^ไม่มีที่สิ้นสุด; ไร้ขีดจำกัด^年轻人有无限的可能。^Niánqīngrén yǒu wúxiàn de kěnéng.^คนหนุ่มสาวมีความเป็นไปได้อย่างไร้ขีดจำกัด^high^
+B4-0771^adjective@E^high^หลากสีสัน^花园里开满了五颜六色的花。^Huāyuán li kāimǎn le wǔ yán liù sè de huā.^ในสวนมีดอกไม้หลากสีสันบานเต็มไปหมด^high^
+B4-0772^noun@E^medium^ความเข้าใจผิด; เข้าใจผิด^这是一个误会。^Zhè shì yí ge wùhuì.^นี่เป็นความเข้าใจผิด^medium^pos_doubtful: 误会 is both noun and verb (你误会我了); example shows the noun
+B4-0773^noun@E^high^แตงโม^夏天吃西瓜很舒服。^Xiàtiān chī xīguā hěn shūfu.^หน้าร้อนกินแตงโมสดชื่นมาก^high^
+B4-0774^verb@E^high^สูด; ดูด; ซึม^请深深地吸一口气。^Qǐng shēnshēn de xī yì kǒu qì.^กรุณาสูดหายใจเข้าลึกๆ^medium^polysemy: inhale / breathe vs. absorb / suck in; example shows "inhale"
+B4-0775^noun@E^high^หลอดดูด^请给我一根吸管。^Qǐng gěi wǒ yì gēn xīguǎn.^ขอหลอดดูดหนึ่งอัน^high^
+B4-0776^verb@E^high^ดูดซับ; ซึมซับ^植物从土里吸收水分。^Zhíwù cóng tǔ li xīshōu shuǐfèn.^พืชดูดซับน้ำจากดิน^medium^polysemy: literal "absorb" vs. figurative "take in (knowledge); recruit"
+B4-0777^verb@E^high^สูบบุหรี่^请勿吸烟。^Qǐng wù xīyān.^ห้ามสูบบุหรี่^high^
+B4-0778^verb@E^high^ดึงดูด^这里的风景吸引了很多游客。^Zhèlǐ de fēngjǐng xīyǐn le hěn duō yóukè.^ทิวทัศน์ที่นี่ดึงดูดนักท่องเที่ยวมากมาย^high^
+B4-0779^verb@E^high^ชื่นชอบ^这是孩子们喜爱的动画片。^Zhè shì háizimen xǐ'ài de dònghuàpiàn.^นี่เป็นการ์ตูนที่เด็กๆ ชื่นชอบ^high^
+B4-0780^noun@E^high^ชุด; ซีรีส์^这家公司推出了一系列新产品。^Zhè jiā gōngsī tuīchū le yí xìliè xīn chǎnpǐn.^บริษัทนี้เปิดตัวผลิตภัณฑ์ใหม่ชุดหนึ่ง^high^
+B4-0781^noun@E^high^ระบบ^电脑系统出问题了。^Diànnǎo xìtǒng chū wèntí le.^ระบบคอมพิวเตอร์มีปัญหา^medium^polysemy: noun "system" vs. adjective "systematic" (系统地学习)
+B4-0782^adjective@E^high^เรียว; ละเอียด; รอบคอบ^她的腰很细。^Tā de yāo hěn xì.^เอวของเธอคอดมาก^medium^polysemy: thin / slender vs. delicate / careful / trifling combined; example shows "slender"
+B4-0783^noun@E^high^รายละเอียด^请注意细节。^Qǐng zhùyì xìjié.^กรุณาใส่ใจรายละเอียด^high^
+B4-0784^adjective@E^high^ละเอียดรอบคอบ^她工作很细致。^Tā gōngzuò hěn xìzhì.^เธอทำงานละเอียดรอบคอบมาก^high^
+B4-0785^noun@E^high^เดือนหน้า^我下个月去北京出差。^Wǒ xià ge yuè qù Běijīng chūchāi.^เดือนหน้าฉันจะไปทำงานที่ปักกิ่ง^high^
+B4-0786^verb@E^high^ลดลง; ตกลง^最近气温下降了。^Zuìjìn qìwēn xiàjiàng le.^ช่วงนี้อุณหภูมิลดลง^high^
+B4-0787^verb@E^high^ลงชั้นล่าง^我下楼去拿快递。^Wǒ xiàlóu qù ná kuàidì.^ฉันลงไปข้างล่างเพื่อรับพัสดุ^high^
+B4-0788^verb@E^high^ดาวน์โหลด^我从网上下载了一首歌。^Wǒ cóng wǎngshang xiàzài le yì shǒu gē.^ฉันดาวน์โหลดเพลงหนึ่งเพลงจากอินเทอร์เน็ต^high^
+B4-0789^noun@E^high^ฤดูร้อน^夏季这里很热。^Xiàjì zhèlǐ hěn rè.^ฤดูร้อนที่นี่ร้อนมาก^high^
+B4-0790^adjective@E^high^สด; สดใส; อร่อย; หายาก^这些鱼很鲜。^Zhèxiē yú hěn xiān.^ปลาพวกนี้สดมาก^medium^polysemy: fresh / bright / delicious / rare (鲜为人知) combined; example shows "fresh"
+B4-0791^noun@E^high^ดอกไม้สด^他送给我一束鲜花。^Tā sòng gěi wǒ yí shù xiānhuā.^เขาให้ดอกไม้สดฉันหนึ่งช่อ^high^
+B4-0792^adjective@E^high^ชัดเจน; โดดเด่น^他的观点很鲜明。^Tā de guāndiǎn hěn xiānmíng.^ความคิดเห็นของเขาชัดเจนมาก^high^
+B4-0793^adjective@E^high^เค็ม^这个菜太咸了。^Zhège cài tài xián le.^อาหารจานนี้เค็มเกินไป^high^
+B4-0794^adjective@E^high^เห็นได้ชัด; โดดเด่น^他的成绩有了显著的提高。^Tā de chéngjì yǒu le xiǎnzhù de tígāo.^ผลการเรียนของเขาดีขึ้นอย่างเห็นได้ชัด^high^
+B4-0795^noun@E^high^อำเภอ (เขตปกครอง)^他是从一个小县城来的。^Tā shì cóng yí ge xiǎo xiànchéng lái de.^เขามาจากตัวอำเภอเล็กๆ แห่งหนึ่ง^high^
+B4-0796^verb@E^medium^จำกัด; ข้อจำกัด^这里限制车速。^Zhèlǐ xiànzhì chēsù.^ที่นี่จำกัดความเร็วรถ^medium^pos_doubtful: 限制 is both verb "restrict" and noun "restriction"
+B4-0797^verb@E^high^เข้ากันได้; อยู่ร่วมกัน^他很容易和别人相处。^Tā hěn róngyì hé biérén xiāngchǔ.^เขาเข้ากับคนอื่นได้ง่าย^high^
+B4-0798^adjective@E^medium^ตรงกันข้าม^他的看法和我相反。^Tā de kànfǎ hé wǒ xiāngfǎn.^ความเห็นของเขาตรงข้ามกับของฉัน^medium^polysemy: adjective "opposite" vs. conjunction "on the contrary" (相反，…)
+B4-0799^noun@E^high^กล่อง; หีบ^他买了一箱苹果。^Tā mǎi le yì xiāng píngguǒ.^เขาซื้อแอปเปิลมาหนึ่งลัง^medium^pos_doubtful: 箱 is noun "box; chest" and measure word "case of"; example shows measure word
+B4-0800^noun@E^high^หีบ; กล่อง; กระเป๋าเดินทาง^这个箱子太重了。^Zhège xiāngzi tài zhòng le.^กล่องใบนี้หนักเกินไป^high^
+B4-0801^verb@E^high^คิดถึง^我很想念我的家人。^Wǒ hěn xiǎngniàn wǒ de jiārén.^ฉันคิดถึงครอบครัวมาก^high^
+B4-0802^verb@E^medium^จินตนาการ^我无法想象没有手机的生活。^Wǒ wúfǎ xiǎngxiàng méiyǒu shǒujī de shēnghuó.^ฉันจินตนาการไม่ออกว่าชีวิตที่ไม่มีมือถือจะเป็นอย่างไร^high^
+B4-0803^measure_word@L^low^รายการ; ข้อ (ลักษณนาม)^这是一项重要的工作。^Zhè shì yí xiàng zhòngyào de gōngzuò.^นี่เป็นงานสำคัญชิ้นหนึ่ง^low^source_gloss: gloss "term" is vague; 项 is mainly a measure word for items/tasks; also noun "neck; nape" (literary); pos_doubtful: no source POS
+B4-0804^noun@E^high^โครงการ; รายการ^这个项目明年完成。^Zhège xiàngmù míngnián wánchéng.^โครงการนี้จะแล้วเสร็จในปีหน้า^medium^polysemy: "project" vs. "item; event (sports)" (比赛项目)
+B4-0805^noun@E^high^รูปถ่าย^这是我小时候的相片。^Zhè shì wǒ xiǎoshíhou de xiàngpiàn.^นี่คือรูปถ่ายตอนเด็กของฉัน^high^
+B4-0806^verb@L^medium^ย่อย (อาหาร); ซึมซับ^吃太多不容易消化。^Chī tài duō bù róngyì xiāohuà.^กินมากเกินไปจะย่อยยาก^medium^source_gloss: "Digestion" is a noun; 消化 is mainly the verb "digest"
+B4-0807^verb@L^medium^จำหน่าย; การขาย^这家公司主要销售电脑。^Zhè jiā gōngsī zhǔyào xiāoshòu diànnǎo.^บริษัทนี้จำหน่ายคอมพิวเตอร์เป็นหลัก^medium^pos_doubtful: gloss "Sale" is a noun; 销售 is both verb and noun; example shows the verb
+B4-0808^noun@E^high^ของว่าง; อาหารทานเล่น^这条街上有很多小吃。^Zhè tiáo jiē shang yǒu hěn duō xiǎochī.^ถนนสายนี้มีของว่างมากมาย^high^
+B4-0809^noun@E^high^หนุ่มน้อย; ชายหนุ่ม^这个小伙子很能干。^Zhège xiǎohuǒzi hěn nénggàn.^ชายหนุ่มคนนี้มีความสามารถมาก^high^
+B4-0810^adjective@E^high^ขนาดเล็ก^这是一家小型超市。^Zhè shì yì jiā xiǎoxíng chāoshì.^นี่เป็นซูเปอร์มาร์เก็ตขนาดเล็ก^high^
+B4-0811^noun@E^high^ประสิทธิภาพ^我们要提高工作效率。^Wǒmen yào tígāo gōngzuò xiàolǜ.^พวกเราต้องเพิ่มประสิทธิภาพในการทำงาน^high^
+B4-0812^measure_word@L^medium^บ้าง; จำนวนหนึ่ง^这些书是我的。^Zhèxiē shū shì wǒ de.^หนังสือพวกนี้เป็นของฉัน^medium^pos_doubtful: 些 is an indefinite measure word mostly used in 这些/那些/一些
+B4-0813^noun@E^high^จิตใจ; จิตวิทยา^他的心理压力很大。^Tā de xīnlǐ yālì hěn dà.^เขามีความกดดันทางจิตใจมาก^medium^polysemy: "psychology (field)" vs. "mentality; state of mind"; example shows "mentality"
+B4-0814^noun@E^high^เจ้าบ่าว^新郎今天特别帅。^Xīnláng jīntiān tèbié shuài.^เจ้าบ่าววันนี้หล่อเป็นพิเศษ^high^
+B4-0815^noun@E^high^เจ้าสาว^新娘穿着白色的婚纱。^Xīnniáng chuān zhe báisè de hūnshā.^เจ้าสาวสวมชุดแต่งงานสีขาว^high^
+B4-0816^adjective@E^high^สด; สดชื่น; แปลกใหม่^这些水果很新鲜。^Zhèxiē shuǐguǒ hěn xīnxiān.^ผลไม้พวกนี้สดมาก^medium^polysemy: "fresh (food, air)" vs. "novel; new" (新鲜事)
+B4-0817^adjective@E^high^รูปแบบใหม่; ชนิดใหม่^这是一种新型材料。^Zhè shì yì zhǒng xīnxíng cáiliào.^นี่เป็นวัสดุชนิดใหม่^high^
+B4-0818^adjective@L^medium^ตื่นเต้น^听到这个消息，他很兴奋。^Tīngdào zhège xiāoxi, tā hěn xīngfèn.^พอได้ยินข่าวนี้ เขาตื่นเต้นมาก^medium^source_gloss: "Excitement" is a noun; 兴奋 is mainly the adjective "excited"
+B4-0819^verb@E^high^พรรณนา; อธิบายลักษณะ^我不知道怎么形容我的心情。^Wǒ bù zhīdào zěnme xíngróng wǒ de xīnqíng.^ฉันไม่รู้จะบรรยายความรู้สึกของตัวเองอย่างไร^high^
+B4-0820^noun@E^high^สถานการณ์^现在的形势对我们很有利。^Xiànzài de xíngshì duì wǒmen hěn yǒulì.^สถานการณ์ตอนนี้เป็นผลดีต่อพวกเรามาก^high^
+B4-0821^noun@E^high^แบบ; แม่พิมพ์; ประเภท^你是什么血型？^Nǐ shì shénme xuèxíng?^คุณกรุ๊ปเลือดอะไร?^medium^polysemy: mould / model / type / pattern combined; example: bare 型 is bound, sentence uses 血型
+B4-0822^noun@E^high^รุ่น (สินค้า)^你的手机是什么型号？^Nǐ de shǒujī shì shénme xínghào?^โทรศัพท์มือถือของคุณรุ่นอะไร?^high^
+B4-0823^verb@E^high^ตื่น^我早上六点就醒了。^Wǒ zǎoshang liù diǎn jiù xǐng le.^ฉันตื่นตั้งแต่หกโมงเช้า^medium^polysemy: "wake up" vs. "sober up; come to" (酒醒了)
+B4-0824^noun@E^high^ความสนใจ^我对音乐很有兴趣。^Wǒ duì yīnyuè hěn yǒu xìngqù.^ฉันสนใจดนตรีมาก^high^
+B4-0825^noun@E^high^ลักษณะ; ธรรมชาติ (ของสิ่ง)^这两件事的性质不一样。^Zhè liǎng jiàn shì de xìngzhì bù yíyàng.^ลักษณะของสองเรื่องนี้ไม่เหมือนกัน^high^
+B4-0826^noun@E^high^พี่น้อง (ผู้ชาย)^他们兄弟俩长得很像。^Tāmen xiōngdì liǎ zhǎng de hěn xiàng.^สองพี่น้องคู่นี้หน้าตาคล้ายกันมาก^medium^variant: 兄弟 xiōngdì (brothers) vs. 兄弟 xiōngdi (younger brother; buddy)
+B4-0827^noun@E^high^หน้าอก; ทรวงอก^他的胸部受伤了。^Tā de xiōngbù shòushāng le.^หน้าอกของเขาได้รับบาดเจ็บ^high^
+B4-0828^verb@E^high^ซ่อม^我的自行车需要修理。^Wǒ de zìxíngchē xūyào xiūlǐ.^จักรยานของฉันต้องซ่อม^high^
+B4-0829^verb@L^medium^เลือก; ทางเลือก^你可以自己选择。^Nǐ kěyǐ zìjǐ xuǎnzé.^คุณเลือกเองได้^medium^pos_doubtful: gloss "Choice" is a noun; 选择 is both verb and noun; example shows the verb
+B4-0830^noun@E^high^หน่วยกิต^这门课有三个学分。^Zhè mén kè yǒu sān ge xuéfēn.^วิชานี้มีสามหน่วยกิต^high^
+B4-0831^noun@E^high^ปีการศึกษา^新学年九月开始。^Xīn xuénián jiǔyuè kāishǐ.^ปีการศึกษาใหม่เริ่มเดือนกันยายน^high^
+B4-0832^noun@E^high^ชั่วโมงเรียน^这门课一共有六十个学时。^Zhè mén kè yígòng yǒu liùshí ge xuéshí.^วิชานี้มีทั้งหมดหกสิบชั่วโมงเรียน^high^
+B4-0833^noun@E^high^วิชาการ^他在学术上很有成就。^Tā zài xuéshù shang hěn yǒu chéngjiù.^เขาประสบความสำเร็จด้านวิชาการมาก^medium^source_gloss: "learning" is loose; 学术 means "academic research; scholarship"
+B4-0834^noun@E^high^ความรู้; วิชาความรู้^他是一个很有学问的人。^Tā shì yí ge hěn yǒu xuéwen de rén.^เขาเป็นคนที่มีความรู้มาก^high^
+B4-0835^verb@E^high^ค้นหา; ตามหา^他一直在寻找自己的梦想。^Tā yìzhí zài xúnzhǎo zìjǐ de mèngxiǎng.^เขาตามหาความฝันของตัวเองมาตลอด^high^
+B4-0836^adjective@E^high^รวดเร็ว^他迅速地跑了过去。^Tā xùnsù de pǎo le guòqu.^เขาวิ่งไปอย่างรวดเร็ว^high^
+B4-0837^noun@E^high^ฟัน; งาช้าง^我牙疼。^Wǒ yá téng.^ฉันปวดฟัน^medium^polysemy: tooth / ivory / tooth-like thing combined; example shows "tooth"
+B4-0838^noun@E^high^แปรงสีฟัน^我买了一把新牙刷。^Wǒ mǎi le yì bǎ xīn yáshuā.^ฉันซื้อแปรงสีฟันอันใหม่^high^
+B4-0839^noun@E^high^เอเชียนเกมส์^亚运会每四年举行一次。^Yàyùnhuì měi sì nián jǔxíng yí cì.^เอเชียนเกมส์จัดขึ้นทุกสี่ปี^high^
+B4-0840^particle@L^medium^(คำลงท้ายแสดงอารมณ์) นะ; จัง^你怎么才来呀？^Nǐ zěnme cái lái ya?^ทำไมเพิ่งมาล่ะ?^medium^source_gloss: "ah" suggests interjection; 呀 is mainly a sentence-final particle (variant of 啊)
+B4-0841^verb@E^high^ยืดออก; ขยายเวลา^会议延长了一个小时。^Huìyì yáncháng le yí ge xiǎoshí.^การประชุมขยายเวลาออกไปหนึ่งชั่วโมง^high^
+B4-0842^verb@L^medium^เลื่อนกำหนด^因为下雨，比赛延期了。^Yīnwèi xià yǔ, bǐsài yánqī le.^เพราะฝนตก การแข่งขันจึงเลื่อนออกไป^medium^source_gloss: "Delay" may be read as noun; 延期 is the verb "postpone; extend (a deadline)"
+B4-0843^verb@E^high^สืบต่อ; ดำเนินต่อ^这个传统一直延续到今天。^Zhège chuántǒng yìzhí yánxù dào jīntiān.^ประเพณีนี้สืบต่อมาจนถึงทุกวันนี้^high^
