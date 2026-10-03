@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B2-0216^numeral@L^medium^มากมาย; หลาย^我有好多问题想问你。^Wǒ yǒu hǎoduō wèntí xiǎng wèn nǐ.^ฉันมีคำถามมากมายอยากถามคุณ^medium^pos_doubtful: quantity word 好多 has no exact enum value (adjective or numeral)
+B2-0217^adjective@L^medium^นานมาก^好久不见！^Hǎojiǔ bú jiàn!^ไม่ได้เจอกันนานเลย!^high^
+B2-0218^noun@E^high^คนดี^他是个好人。^Tā shì ge hǎorén.^เขาเป็นคนดี^high^
+B2-0219^noun@E^high^เรื่องดี; การทำความดี^这是一件好事。^Zhè shì yí jiàn hǎoshì.^นี่เป็นเรื่องดี^high^
+B2-0220^adverb@L^medium^ดูเหมือนว่า; คล้ายกับ^天好像要下雨了。^Tiān hǎoxiàng yào xià yǔ le.^ท้องฟ้าดูเหมือนฝนจะตก^medium^source_gloss: "Be like" suggests a verb; 好像 is mostly the adverb "seem; as if"
+B2-0221^adjective@E^high^เหมาะสม^这件衣服你穿很合适。^Zhè jiàn yīfu nǐ chuān hěn héshì.^เสื้อตัวนี้คุณใส่แล้วเหมาะมาก^high^
+B2-0222^noun@E^high^แม่น้ำ^这条河很长。^Zhè tiáo hé hěn cháng.^แม่น้ำสายนี้ยาวมาก^high^
+B2-0223^adjective@E^high^ดำ; มืด^天黑了，我们回家吧。^Tiān hēi le, wǒmen huí jiā ba.^ฟ้ามืดแล้ว พวกเรากลับบ้านกันเถอะ^high^
+B2-0224^noun@E^high^กระดานดำ^老师在黑板上写字。^Lǎoshī zài hēibǎn shang xiě zì.^ครูกำลังเขียนหนังสือบนกระดานดำ^high^
+B2-0225^noun@E^high^สีดำ^我喜欢黑色的鞋。^Wǒ xǐhuan hēisè de xié.^ฉันชอบรองเท้าสีดำ^high^
+B2-0226^adjective@E^high^แดง^她的脸红了。^Tā de liǎn hóng le.^หน้าของเธอแดงขึ้น^high^
+B2-0227^noun@E^high^สีแดง^中国人喜欢红色。^Zhōngguórén xǐhuan hóngsè.^คนจีนชอบสีแดง^high^
+B2-0228^noun@L^medium^ต่อมา; ภายหลัง^后来他去了北京。^Hòulái tā qù le Běijīng.^ต่อมาเขาก็ไปปักกิ่ง^high^
+B2-0229^adverb@E^high^ทันใดนั้น; จู่ๆ^忽然下起了大雨。^Hūrán xià qǐ le dà yǔ.^จู่ๆ ฝนก็ตกลงมาอย่างหนัก^high^
+B2-0230^noun@E^high^ทะเลสาบ^湖边有很多人在散步。^Hú biān yǒu hěn duō rén zài sànbù.^ริมทะเลสาบมีคนมากมายเดินเล่นอยู่^high^
+B2-0231^noun@E^high^หนังสือเดินทาง^出国要带护照。^Chūguó yào dài hùzhào.^ไปต่างประเทศต้องพกหนังสือเดินทาง^high^
+B2-0233^noun@E^high^สวน; สวนดอกไม้^我家后边有一个小花园。^Wǒ jiā hòubian yǒu yí ge xiǎo huāyuán.^ข้างหลังบ้านฉันมีสวนดอกไม้เล็กๆ อยู่สวนหนึ่ง^high^
+B2-0234^noun@E^medium^ภาพวาด; วาด^墙上有一张画。^Qiáng shang yǒu yì zhāng huà.^บนผนังมีภาพวาดอยู่ภาพหนึ่ง^medium^pos_doubtful: 画 is both noun "painting" and verb "draw; paint"; example shows the noun
+B2-0235^noun@E^high^จิตรกร; ศิลปิน^他是一位有名的画家。^Tā shì yí wèi yǒumíng de huàjiā.^เขาเป็นจิตรกรที่มีชื่อเสียงคนหนึ่ง^high^
+B2-0236^noun@E^high^ภาพวาด^这张画儿是我画的。^Zhè zhāng huàr shì wǒ huà de.^ภาพนี้ฉันวาดเอง^high^
+B2-0237^noun@E^high^ข้อเสีย; ผลเสีย^抽烟对身体有坏处。^Chōuyān duì shēntǐ yǒu huàichu.^การสูบบุหรี่มีผลเสียต่อร่างกาย^high^
+B2-0238^noun@E^high^คนเลว^坏人被警察抓住了。^Huàirén bèi jǐngchá zhuāzhù le.^คนร้ายถูกตำรวจจับได้แล้ว^high^
+B2-0239^verb@E^high^ยินดีต้อนรับ^欢迎你来我家！^Huānyíng nǐ lái wǒ jiā!^ยินดีต้อนรับสู่บ้านของฉัน!^high^
+B2-0240^verb@E^high^เปลี่ยน; แลก^我想换一件衣服。^Wǒ xiǎng huàn yí jiàn yīfu.^ฉันอยากเปลี่ยนเสื้อ^high^
+B2-0241^adjective@E^high^เหลือง^树叶黄了。^Shùyè huáng le.^ใบไม้เหลืองแล้ว^high^
+B2-0242^noun@E^high^สีเหลือง^她穿着一条黄色的裙子。^Tā chuān zhe yì tiáo huángsè de qúnzi.^เธอสวมกระโปรงสีเหลืองตัวหนึ่ง^high^
+B2-0244^verb@E^high^กลับประเทศ^他下个月回国。^Tā xià ge yuè huíguó.^เดือนหน้าเขาจะกลับประเทศ^high^
+B2-0246^noun@E^high^กิจกรรม^学校明天有一个活动。^Xuéxiào míngtiān yǒu yí ge huódòng.^พรุ่งนี้โรงเรียนมีกิจกรรมอย่างหนึ่ง^medium^polysemy: 活动 is also the verb "move about; exercise"; gloss gives the noun
+B2-0247^conjunction@E^high^หรือ^你可以坐车或走路去。^Nǐ kěyǐ zuò chē huò zǒulù qù.^คุณจะนั่งรถหรือเดินไปก็ได้^high^
+B2-0248^conjunction@L^low^หรือ; บางที^你可以周六或者周日来。^Nǐ kěyǐ zhōuliù huòzhě zhōurì lái.^คุณมาวันเสาร์หรือวันอาทิตย์ก็ได้^medium^source_gloss: gloss "perhaps" omits the core sense "or" (statements); polysemy: conjunction "or" vs. adverb "perhaps"; example shows "or"
+B2-0249^noun@E^high^โอกาส^这是一个很好的机会。^Zhè shì yí ge hěn hǎo de jīhuì.^นี่เป็นโอกาสที่ดีมาก^high^
+B2-0250^noun@E^high^ไก่^我家养了五只鸡。^Wǒ jiā yǎng le wǔ zhī jī.^บ้านฉันเลี้ยงไก่ห้าตัว^high^
+B2-0251^noun@E^high^ระดับ; ชั้น; เกรด; ขั้น^他通过了汉语四级考试。^Tā tōngguò le Hànyǔ sì jí kǎoshì.^เขาสอบผ่านภาษาจีนระดับสี่แล้ว^medium^polysemy: level / rank / grade / degree / step combined; example shows "level"; pos_doubtful: also a measure word
+B2-0252^adjective@E^high^รีบ; ร้อนใจ; เร่งด่วน; หงุดหงิด^别急，慢慢说。^Bié jí, mànmàn shuō.^ไม่ต้องรีบ ค่อยๆ พูด^medium^polysemy: fast / anxious / urgent / annoyed combined; example shows "anxious"
+B2-0253^noun@E^medium^แผน; วางแผน^你有什么计划？^Nǐ yǒu shénme jìhuà?^คุณมีแผนอะไรบ้าง?^medium^pos_doubtful: 计划 is both noun "plan" and verb "to plan"; example shows the noun
+B2-0254^noun@E^high^คอมพิวเตอร์^他是学计算机的。^Tā shì xué jìsuànjī de.^เขาเรียนคอมพิวเตอร์^high^
+B2-0255^verb@E^high^บวก; เพิ่ม; ใส่^咖啡里加点儿糖。^Kāfēi li jiā diǎnr táng.^ใส่น้ำตาลในกาแฟหน่อย^high^
+B2-0256^verb@E^high^เติมน้ำมัน; สู้ๆ (ให้กำลังใจ)^加油！你一定能行！^Jiāyóu! Nǐ yídìng néng xíng!^สู้ๆ! คุณต้องทำได้แน่!^medium^polysemy: literal "refuel" vs. cheer "make an all-out effort"; gloss "oil" is not a sense of the word; example shows the cheer
+B2-0257^other^low^ผู้เชี่ยวชาญ; -กร (ปัจจัยเติมท้ายบอกอาชีพ/ผู้เชี่ยวชาญ)^他是一位有名的科学家。^Tā shì yí wèi yǒumíng de kēxuéjiā.^เขาเป็นนักวิทยาศาสตร์ที่มีชื่อเสียงคนหนึ่ง^medium^pos_doubtful: noun suffix has no matching POS in the enum
+B2-0258^noun@E^high^ครอบครัว^他有一个幸福的家庭。^Tā yǒu yí ge xìngfú de jiātíng.^เขามีครอบครัวที่มีความสุข^high^
+B2-0259^noun@E^high^ผู้ปกครอง; หัวหน้าครอบครัว^明天学校开家长会。^Míngtiān xuéxiào kāi jiāzhǎng huì.^พรุ่งนี้โรงเรียนจัดประชุมผู้ปกครอง^high^
+B2-0260^adjective@E^high^ปลอม; เท็จ^这个包是假的。^Zhège bāo shì jiǎ de.^กระเป๋าใบนี้เป็นของปลอม^high^
+B2-0261^noun@E^high^ช่วงวันหยุด; ช่วงปิดเทอม^假期你打算去哪儿？^Jiàqī nǐ dǎsuan qù nǎr?^ช่วงวันหยุดคุณวางแผนจะไปไหน?^high^
+B2-0262^verb@E^high^ตรวจ; ตรวจสอบ^医生在给他检查身体。^Yīshēng zài gěi tā jiǎnchá shēntǐ.^หมอกำลังตรวจร่างกายให้เขา^high^
+B2-0263^verb@E^high^ได้พบ; ได้เห็น^见到你很高兴。^Jiàndào nǐ hěn gāoxìng.^ดีใจที่ได้พบคุณ^high^
+B2-0264^verb@E^high^เคยเห็น; เคยพบ^我好像在哪儿见过他。^Wǒ hǎoxiàng zài nǎr jiànguo tā.^ฉันเหมือนเคยเห็นเขาที่ไหนสักแห่ง^high^
+B2-0265^measure_word@L^medium^ชิ้น; ตัว; เรื่อง (ลักษณนาม)^我买了一件衬衫。^Wǒ mǎi le yí jiàn chènshān.^ฉันซื้อเสื้อเชิ้ตหนึ่งตัว^medium^source_gloss: "piece" reads as noun; 件 is a measure word (clothes, matters)
+B2-0266^adjective@E^medium^แข็งแรง; สุขภาพ^祝你身体健康！^Zhù nǐ shēntǐ jiànkāng!^ขอให้คุณสุขภาพแข็งแรง!^high^
+B2-0267^verb@E^high^พูด; เล่า; อธิบาย^老师讲得很清楚。^Lǎoshī jiǎng de hěn qīngchu.^ครูอธิบายได้ชัดเจนมาก^high^
+B2-0268^verb@E^high^พูด; กล่าวสุนทรพจน์^校长在台上讲话。^Xiàozhǎng zài tái shang jiǎnghuà.^ครูใหญ่กำลังกล่าวอยู่บนเวที^high^
+B2-0269^verb@E^high^ส่ง; ยื่น; มอบ^请把作业交给老师。^Qǐng bǎ zuòyè jiāo gěi lǎoshī.^กรุณาส่งการบ้านให้ครู^medium^polysemy: 交 also "make (friends)" and "pay (fees)"; gloss gives "hand over"
+B2-0270^verb@E^high^มอบให้; ส่งให้^这件事就交给我吧。^Zhè jiàn shì jiù jiāogěi wǒ ba.^เรื่องนี้มอบให้ฉันเถอะ^high^
+B2-0271^verb@E^high^คบเพื่อน; หาเพื่อน^我喜欢交朋友。^Wǒ xǐhuan jiāo péngyou.^ฉันชอบคบเพื่อน^high^
+B2-0272^noun@E^high^การจราจร; การคมนาคม^这里的交通很方便。^Zhèlǐ de jiāotōng hěn fāngbiàn.^การคมนาคมที่นี่สะดวกมาก^high^
+B2-0273^noun@E^low^เขา (สัตว์); มุม; เจียว (หน่วยเงิน)^这头牛的角很长。^Zhè tóu niú de jiǎo hěn cháng.^เขาของวัวตัวนี้ยาวมาก^low^source_gloss: gloss "horn" omits band-2 senses "corner; angle" and money unit 角 (=1/10 yuan); polysemy: unrelated senses share the form
+B2-0274^noun@E^high^มุม; มุมมอง^换个角度想一想。^Huàn ge jiǎodù xiǎng yi xiǎng.^ลองคิดจากอีกมุมหนึ่ง^high^
+B2-0275^noun@E^high^เกี๊ยว^过年的时候我们一起包饺子。^Guònián de shíhou wǒmen yìqǐ bāo jiǎozi.^ตอนตรุษจีนพวกเราห่อเกี๊ยวด้วยกัน^high^
+B2-0276^noun@E^high^เท้า^我的脚很疼。^Wǒ de jiǎo hěn téng.^เท้าของฉันเจ็บมาก^high^
+B2-0277^verb@E^high^เรียกว่า; มีชื่อว่า^这种花叫作牡丹。^Zhè zhǒng huā jiàozuò mǔdan.^ดอกไม้ชนิดนี้เรียกว่าดอกโบตั๋น^high^
+B2-0278^noun@E^high^ครู; อาจารย์^她是一名中学教师。^Tā shì yì míng zhōngxué jiàoshī.^เธอเป็นครูโรงเรียนมัธยม^high^
+B2-0279^noun@E^high^ห้องเรียน^学生们都在教室里。^Xuéshengmen dōu zài jiàoshì li.^นักเรียนทุกคนอยู่ในห้องเรียน^high^
+B2-0280^noun@L^medium^การเรียนการสอน; สอน^他在大学做教学工作。^Tā zài dàxué zuò jiàoxué gōngzuò.^เขาทำงานด้านการสอนที่มหาวิทยาลัย^medium^pos_doubtful: gloss "teach" suggests verb, but 教学 is mainly a noun ("teaching")
+B2-0281^noun@E^high^การศึกษา^父母都很重视孩子的教育。^Fùmǔ dōu hěn zhòngshì háizi de jiàoyù.^พ่อแม่ล้วนให้ความสำคัญกับการศึกษาของลูก^high^
+B2-0282^verb@E^high^รับ (คน); ต่อ; รับสาย^我去机场接朋友。^Wǒ qù jīchǎng jiē péngyou.^ฉันไปรับเพื่อนที่สนามบิน^medium^source_gloss: gloss "meet， pick" is garbled (likely "meet; pick up"); polysemy: 接 also "receive; answer (phone); connect"
+B2-0283^verb@E^high^ได้รับ^我接到了他的电话。^Wǒ jiēdào le tā de diànhuà.^ฉันได้รับโทรศัพท์จากเขาแล้ว^high^
+B2-0284^verb@E^high^ยอมรับ; รับ^他接受了我的意见。^Tā jiēshòu le wǒ de yìjiàn.^เขายอมรับความคิดเห็นของฉัน^high^
+B2-0285^other^low^ต่อไป; ถัดไป^接下来，我们学习第五课。^Jiēxiàlai, wǒmen xuéxí dì wǔ kè.^ต่อไป เรามาเรียนบทที่ห้ากัน^high^pos_doubtful: discourse phrase (接 + 下来) with no single POS
+B2-0286^adverb@L^medium^ต่อจากนั้น; ติดต่อกัน^他吃完饭，接着又去工作了。^Tā chī wán fàn, jiēzhe yòu qù gōngzuò le.^เขากินข้าวเสร็จ ต่อจากนั้นก็ไปทำงานอีก^medium^pos_doubtful: 接着 is also a verb ("continue; catch"); example shows the adverb "then"
+B2-0287^noun@E^high^ถนน (ในเมือง)^我们去街上走走吧。^Wǒmen qù jiē shang zǒuzou ba.^พวกเราไปเดินเล่นตามถนนกันเถอะ^high^
+B2-0289^noun@E^high^รายการ (โทรทัศน์/การแสดง)^这个电视节目很有意思。^Zhège diànshì jiémù hěn yǒu yìsi.^รายการโทรทัศน์นี้น่าสนใจมาก^high^
+B2-0290^noun@E^high^เทศกาล; วันสำคัญ^中秋节是一个传统节日。^Zhōngqiū Jié shì yí ge chuántǒng jiérì.^เทศกาลไหว้พระจันทร์เป็นเทศกาลตามประเพณี^high^
+B2-0291^noun@E^high^ผลลัพธ์; ผล^考试结果出来了。^Kǎoshì jiéguǒ chūlai le.^ผลสอบออกมาแล้ว^medium^polysemy: noun "result" vs. conjunction-like "in the end; as a result" (结果他没来)
+B2-0292^verb@E^high^ยืม; ให้ยืม^我可以借你的书吗？^Wǒ kěyǐ jiè nǐ de shū ma?^ฉันขอยืมหนังสือของคุณได้ไหม?^medium^polysemy: 借 means both "borrow" and "lend" (借给); gloss gives "borrow"
+B2-0293^measure_word@L^high^ชั่ง (หน่วยน้ำหนักจีน = ครึ่งกิโลกรัม)^我要买两斤苹果。^Wǒ yào mǎi liǎng jīn píngguǒ.^ฉันจะซื้อแอปเปิลสองชั่ง^high^
+B2-0294^noun@E^high^ต่อจากนี้ไป; ในอนาคต^今后我要努力学习。^Jīnhòu wǒ yào nǔlì xuéxí.^ต่อจากนี้ไปฉันจะตั้งใจเรียน^high^
+B2-0295^verb@E^high^เข้า; เข้าสู่^火车进入了山洞。^Huǒchē jìnrù le shāndòng.^รถไฟแล่นเข้าไปในอุโมงค์^high^
+B2-0296^verb@E^high^ดำเนินการ; จัด^会议正在进行。^Huìyì zhèngzài jìnxíng.^การประชุมกำลังดำเนินอยู่^high^
+B2-0297^adjective@E^high^ใกล้^我家离学校很近。^Wǒ jiā lí xuéxiào hěn jìn.^บ้านฉันอยู่ใกล้โรงเรียนมาก^high^
+B2-0298^adverb@E^high^บ่อยๆ; เป็นประจำ^他经常去图书馆。^Tā jīngcháng qù túshūguǎn.^เขาไปห้องสมุดเป็นประจำ^high^
+B2-0299^preposition@L^low^ผ่าน; หลังจาก; โดยผ่าน^经过大家的努力，我们成功了。^Jīngguò dàjiā de nǔlì, wǒmen chénggōng le.^ด้วยความพยายามของทุกคน พวกเราจึงประสบความสำเร็จ^medium^polysemy: verb "pass by" vs. preposition "after; through"; pos_doubtful: no source POS; example shows "through"
+B2-0300^noun@E^high^ผู้จัดการ^他是我们公司的经理。^Tā shì wǒmen gōngsī de jīnglǐ.^เขาเป็นผู้จัดการบริษัทของพวกเรา^high^
+B2-0301^noun@E^high^เหล้า; สุรา^我不喝酒。^Wǒ bù hē jiǔ.^ฉันไม่ดื่มเหล้า^high^
+B2-0302^noun@E^high^โรงแรม^我们住在这家酒店。^Wǒmen zhù zài zhè jiā jiǔdiàn.^พวกเราพักอยู่ที่โรงแรมนี้^high^
+B2-0303^adverb@L^medium^กำลังจะ; ใกล้จะ^火车就要开了。^Huǒchē jiù yào kāi le.^รถไฟกำลังจะออกแล้ว^high^
+B2-0304^verb@E^high^ยก; ชู^他把箱子举起来了。^Tā bǎ xiāngzi jǔ qǐlai le.^เขายกกล่องขึ้นมาแล้ว^high^
+B2-0305^verb@E^high^ยกมือ^有问题请举手。^Yǒu wèntí qǐng jǔshǒu.^ถ้ามีคำถามกรุณายกมือ^high^
+B2-0306^verb@E^high^จัด (งาน/การประชุม)^学校下个月举行运动会。^Xuéxiào xià ge yuè jǔxíng yùndònghuì.^เดือนหน้าโรงเรียนจะจัดงานกีฬา^high^
+B2-0307^measure_word@L^medium^ประโยค (ลักษณนาม)^我想跟你说几句话。^Wǒ xiǎng gēn nǐ shuō jǐ jù huà.^ฉันอยากคุยกับคุณสักสองสามประโยค^medium^pos_doubtful: gloss "sentence" reads as noun; bare 句 is mostly a measure word (noun is 句子)
+B2-0308^noun@E^high^ประโยค^请用这个词造一个句子。^Qǐng yòng zhège cí zào yí ge jùzi.^กรุณาใช้คำนี้แต่งประโยคหนึ่งประโยค^high^
+B2-0309^noun@E^high^บัตร; การ์ด^我可以用银行卡吗？^Wǒ kěyǐ yòng yínháng kǎ ma?^ฉันใช้บัตรธนาคารได้ไหม?^high^
+B2-0310^verb@E^high^เปิดเครื่อง^下了飞机，他马上开机了。^Xià le fēijī, tā mǎshàng kāijī le.^ลงจากเครื่องบิน เขาก็เปิดเครื่องทันที^high^
+B2-0311^adjective@E^high^มีความสุข; สนุก^今天玩得很开心。^Jīntiān wán de hěn kāixīn.^วันนี้เที่ยวสนุกมาก^high^
+B2-0312^verb@E^high^เปิดภาคเรียน^九月一号开学。^Jiǔ yuè yī hào kāixué.^วันที่หนึ่งกันยายนเปิดภาคเรียน^high^
+B2-0313^noun@E^high^ความคิดเห็น; ทัศนะ^你对这件事有什么看法？^Nǐ duì zhè jiàn shì yǒu shénme kànfǎ?^คุณมีความคิดเห็นอย่างไรต่อเรื่องนี้?^high^
+B2-0314^noun@E^high^ผู้เข้าสอบ^考生们都进考场了。^Kǎoshēngmen dōu jìn kǎochǎng le.^ผู้เข้าสอบทุกคนเข้าห้องสอบแล้ว^high^
+B2-0315^verb@E^high^พิง; อิง; พึ่งพา^别靠在墙上。^Bié kào zài qiáng shang.^อย่าพิงกำแพง^medium^polysemy: 靠 also "depend on" and "be near"; gloss gives "lean"
+B2-0316^noun@E^high^วิชา; วงศ์; แผนก^你最喜欢哪一科？^Nǐ zuì xǐhuan nǎ yì kē?^คุณชอบวิชาไหนมากที่สุด?^medium^polysemy: subject / (biological) family / section combined; example shows "subject"
+B2-0317^noun@E^high^วิทยาศาสตร์^我对科学很感兴趣。^Wǒ duì kēxué hěn gǎn xìngqù.^ฉันสนใจวิทยาศาสตร์มาก^high^
+B2-0318^adjective@E^high^น่ารัก^这只小猫很可爱。^Zhè zhī xiǎo māo hěn kě'ài.^ลูกแมวตัวนี้น่ารักมาก^high^
+B2-0319^adverb@E^medium^อาจจะ; เป็นไปได้^他可能不来了。^Tā kěnéng bù lái le.^เขาอาจจะไม่มาแล้ว^medium^polysemy: adverb "probably", adjective "possible" and noun "possibility" share the form
