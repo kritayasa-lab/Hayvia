@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B5-0453^adjective@E^high^บ้า; รุนแรง; ป่าเถื่อน; ลำพอง^他太狂了，谁的话都不听。^Tā tài kuáng le, shéi de huà dōu bù tīng.^เขาลำพองเกินไป ไม่ฟังใครเลย^medium^polysemy: mad / violent / wild vs. arrogant / unrestrained; example shows "arrogant"
+B5-0454^verb@L^low^ขาดทุน; ขาด; ดีที่ (โชคดีที่)^这次生意亏了很多钱。^Zhè cì shēngyi kuī le hěn duō qián.^ธุรกิจครั้งนี้ขาดทุนไปมาก^low^polysemy: verb "lose money; be deficient" vs. adverb "luckily; thanks to" (亏你提醒我); source_gloss: nouns "deficit; deficiency"; pos_doubtful: no source POS
+B5-0455^verb@E^medium^รบกวน; ทำให้กลุ้มใจ; ปัญหาค้างคาใจ^这个问题一直困扰着我。^Zhège wèntí yìzhí kùnrǎo zhe wǒ.^ปัญหานี้รบกวนจิตใจฉันมาตลอด^medium^pos_doubtful: 困扰 is both verb "trouble" and noun "trouble"
+B5-0456^verb@E^high^ลืมไว้; ตกหล่น^我把手机落在家里了。^Wǒ bǎ shǒujī là zài jiā li le.^ฉันลืมโทรศัพท์ไว้ที่บ้าน^medium^variant: 落 là (leave behind) vs. 落 luò (B4-0500, fall); homographs split by reading
+B5-0457^noun@E^medium^จดหมายที่ส่งมา; ส่งจดหมายมา^谢谢你的来信。^Xièxie nǐ de láixìn.^ขอบคุณสำหรับจดหมายของคุณ^medium^pos_doubtful: 来信 is both noun "incoming letter" and verb "write (to us)"
+B5-0458^adjective@E^high^เน่า; เละ; เปื่อย^这个苹果烂了。^Zhège píngguǒ làn le.^แอปเปิลลูกนี้เน่าแล้ว^medium^polysemy: "rotten" vs. "mushy; worn-out" vs. "terrible (quality)" (烂片)
+B5-0459^verb@L^medium^อ่านออกเสียง^请大声朗读课文。^Qǐng dàshēng lǎngdú kèwén.^กรุณาอ่านบทเรียนออกเสียงดังๆ^medium^source_gloss: "Reading aloud" is a gerund; 朗读 is the verb "read aloud"
+B5-0460^adjective@E^high^โรแมนติก^这是一部浪漫的爱情电影。^Zhè shì yí bù làngmàn de àiqíng diànyǐng.^นี่เป็นภาพยนตร์รักโรแมนติก^high^
+B5-0461^noun@E^medium^แรงงาน; การทำงาน; ทำงาน^劳动最光荣。^Láodòng zuì guāngróng.^การทำงานเป็นสิ่งที่มีเกียรติที่สุด^medium^pos_doubtful: 劳动 is both noun "labour" and verb "work; do manual labour"
+B5-0462^noun@E^high^ลูกแพร์^我喜欢吃梨。^Wǒ xǐhuan chī lí.^ฉันชอบกินลูกแพร์^high^
+B5-0463^noun@E^high^พิธี; มารยาท; ของขวัญ^中国是一个礼仪之邦，讲究礼。^Zhōngguó shì yí ge lǐyí zhī bāng, jiǎngjiu lǐ.^จีนเป็นดินแดนแห่งพิธีการ ให้ความสำคัญกับมารยาท^low^polysemy: ceremony / rite / courtesy / manners / gift combined; example: bare 礼 is stiff, usually bound (礼物, 礼貌)
+B5-0464^noun@E^high^สัปดาห์; วัน (ในสัปดาห์); พิธีทางศาสนา^他每个礼拜天都去教堂。^Tā měi ge lǐbàitiān dōu qù jiàotáng.^เขาไปโบสถ์ทุกวันอาทิตย์^medium^polysemy: "week; day of week" vs. "religious service"; example uses 礼拜天
+B5-0465^noun@E^medium^มารยาท; สุภาพ^他是一个很有礼貌的孩子。^Tā shì yí ge hěn yǒu lǐmào de háizi.^เขาเป็นเด็กที่มีมารยาทดีมาก^medium^pos_doubtful: 礼貌 is noun "politeness" and adjective "polite"
+B5-0466^adjective@E^medium^ร้ายกาจ; เก่งมาก; รุนแรง^他的汉语说得真厉害！^Tā de Hànyǔ shuō de zhēn lìhai!^เขาพูดภาษาจีนเก่งมากจริงๆ!^medium^polysemy: "fierce; severe" vs. "awesome; impressive"; example shows "impressive"
+B5-0467^verb@E^high^ยืน; ตั้ง; ก่อตั้ง; ตั้งตรง^他立在门口一动不动。^Tā lì zài ménkǒu yí dòng bú dòng.^เขายืนนิ่งอยู่ที่หน้าประตู^medium^polysemy: stand / erect / found / set up vs. adjective "upright; vertical"; example shows "stand"
+B5-0468^noun@E^high^จุดยืน^请说明你的立场。^Qǐng shuōmíng nǐ de lìchǎng.^กรุณาแสดงจุดยืนของคุณ^high^
+B5-0469^noun@E^high^กำไร^今年公司的利润增加了。^Jīnnián gōngsī de lìrùn zēngjiā le.^ปีนี้กำไรของบริษัทเพิ่มขึ้น^high^
+B5-0470^noun@E^medium^ข้อยกเว้น; เป็นข้อยกเว้น^每个人都要参加，谁也不能例外。^Měi ge rén dōu yào cānjiā, shéi yě bù néng lìwài.^ทุกคนต้องเข้าร่วม ไม่มีใครได้รับการยกเว้น^medium^pos_doubtful: 例外 is both noun "exception" and verb "be an exception"; example shows the verb
+B5-0471^verb@E^high^เชื่อมต่อ^这座桥连接着两个城市。^Zhè zuò qiáo liánjiē zhe liǎng ge chéngshì.^สะพานนี้เชื่อมสองเมืองเข้าด้วยกัน^high^
+B5-0472^verb@L^medium^ติดต่อประสานงาน^我们保持联络吧。^Wǒmen bǎochí liánluò ba.^พวกเราติดต่อกันไว้นะ^medium^source_gloss: "liaison" is a noun; 联络 is mainly the verb "contact; get in touch"
+B5-0473^verb@L^medium^นึกโยงถึง; เชื่อมโยงความคิด^看到这张照片，我联想到了小时候。^Kàndào zhè zhāng zhàopiàn, wǒ liánxiǎng dào le xiǎoshíhou.^พอเห็นรูปนี้ ฉันก็นึกโยงไปถึงสมัยเด็ก^medium^source_gloss: "association" is a noun; 联想 is the verb "associate (in thought)"; also brand Lenovo
+B5-0474^noun@E^high^กะละมังล้างหน้า^请把脸盆拿过来。^Qǐng bǎ liǎnpén ná guòlai.^กรุณาหยิบกะละมังมาให้หน่อย^high^
+B5-0475^noun@E^high^สีหน้า; ผิวหน้า^你的脸色不太好，是不是生病了？^Nǐ de liǎnsè bú tài hǎo, shì bu shì shēngbìng le?^สีหน้าคุณไม่ค่อยดี ป่วยหรือเปล่า?^high^
+B5-0476^verb@L^medium^มีความรัก; คบหาเป็นแฟน^他们恋爱三年了。^Tāmen liàn'ài sān nián le.^พวกเขาคบกันมาสามปีแล้ว^medium^source_gloss: "Love" is generic; 恋爱 means "romantic love; be in a relationship"
+B5-0477^noun@E^high^สองฝั่ง; ช่องแคบไต้หวัน^河的两岸都是树。^Hé de liǎng'àn dōu shì shù.^สองฝั่งแม่น้ำเต็มไปด้วยต้นไม้^medium^polysemy: literal "both banks" vs. political "both sides of the Taiwan Strait"
+B5-0478^noun@E^high^เพื่อนบ้าน^我们的邻居很友好。^Wǒmen de línjū hěn yǒuhǎo.^เพื่อนบ้านของเราเป็นมิตรมาก^high^
+B5-0479^noun@E^high^กระดิ่ง^上课铃响了。^Shàngkè líng xiǎng le.^กริ่งเข้าเรียนดังแล้ว^high^
+B5-0480^noun@E^high^เสียงกริ่ง; เสียงเรียกเข้า^你的手机铃声很好听。^Nǐ de shǒujī língshēng hěn hǎotīng.^เสียงเรียกเข้ามือถือของคุณเพราะมาก^high^
+B5-0481^noun@E^high^เนกไท^他今天打了一条红领带。^Tā jīntiān dǎ le yì tiáo hóng lǐngdài.^วันนี้เขาผูกเนกไทสีแดง^high^
+B5-0482^verb@E^high^ทำให้; สั่ง; คำสั่ง; ฤดูกาล^这个消息令人很高兴。^Zhège xiāoxi lìng rén hěn gāoxìng.^ข่าวนี้ทำให้คนดีใจมาก^medium^polysemy: causative "make" vs. "order; command" vs. noun "decree; season" (夏令); example shows causative
+B5-0483^verb@E^high^ไหลเวียน; เคลื่อนย้าย^河水在不停地流动。^Héshuǐ zài bù tíng de liúdòng.^น้ำในแม่น้ำไหลไม่หยุด^medium^polysemy: verb "flow" vs. adjective "mobile" (流动人口)
+B5-0484^verb@L^medium^หมุนเวียน; ถ่ายเท^打开窗户，让空气流通一下。^Dǎkāi chuānghu, ràng kōngqì liútōng yí xià.^เปิดหน้าต่างให้อากาศถ่ายเทหน่อย^medium^source_gloss: "circulation" is a noun; 流通 is mainly the verb "circulate"
+B5-0485^verb@E^high^รั่ว; ตกหล่น^房顶漏水了。^Fángdǐng lòu shuǐ le.^หลังคารั่วแล้ว^medium^polysemy: "leak" vs. "leave out; omit" (漏了一个字)
+B5-0486^noun@E^high^รูรั่ว; ช่องโหว่^这个计划有很多漏洞。^Zhège jìhuà yǒu hěn duō lòudòng.^แผนนี้มีช่องโหว่มากมาย^medium^polysemy: literal "hole; leak" vs. figurative "loophole; flaw"; example shows figurative
+B5-0487^noun@E^high^ตรรกะ^他说话很有逻辑。^Tā shuōhuà hěn yǒu luóji.^เขาพูดอย่างมีตรรกะ^high^
+B5-0488^verb@E^high^นำไปปฏิบัติจริง^我们要把计划落实到位。^Wǒmen yào bǎ jìhuà luòshí dào wèi.^พวกเราต้องนำแผนไปปฏิบัติให้เป็นผล^high^
+B5-0489^noun@E^high^ท่าเรือ^船已经到码头了。^Chuán yǐjīng dào mǎtou le.^เรือมาถึงท่าเรือแล้ว^high^
+B5-0490^verb@E^high^ด่า; ดุว่า^妈妈骂了他一顿。^Māma mà le tā yí dùn.^แม่ดุเขาไปชุดใหญ่^medium^polysemy: "scold" vs. "curse; swear at"
+B5-0491^noun@E^medium^การค้าขาย; ธุรกิจ; ซื้อขาย^他在做小买卖。^Tā zài zuò xiǎo mǎimai.^เขาทำการค้าขายเล็กๆ^medium^variant: 买卖 mǎimai (business, noun) vs. 买卖 mǎimài (buy and sell, verb)
+B5-0492^adjective@E^high^ยาวนานมาก^经过漫长的等待，他终于回来了。^Jīngguò màncháng de děngdài, tā zhōngyú huílai le.^หลังจากรอคอยอย่างยาวนาน ในที่สุดเขาก็กลับมา^high^
+B5-0493^noun@E^high^การ์ตูน (ภาพวาด)^我小时候喜欢看漫画。^Wǒ xiǎoshíhou xǐhuan kàn mànhuà.^ตอนเด็กฉันชอบอ่านการ์ตูน^medium^source_gloss: English "Cartoon" is ambiguous (also animation 动画片); 漫画 = comics; caricature
+B5-0494^noun@E^high^พู่กันจีน^他用毛笔写字。^Tā yòng máobǐ xiě zì.^เขาใช้พู่กันจีนเขียนหนังสือ^high^
+B5-0495^noun@E^medium^ความขัดแย้ง; ขัดแย้งกัน^他们之间有很多矛盾。^Tāmen zhījiān yǒu hěn duō máodùn.^ระหว่างพวกเขามีความขัดแย้งมากมาย^medium^pos_doubtful: 矛盾 is noun "contradiction; conflict" and adjective "conflicted" (心里很矛盾)
+B5-0496^verb@E^high^พวยพุ่ง; เสี่ยง; บุ่มบ่าม^他冒着大雨去上班。^Tā mào zhe dà yǔ qù shàngbān.^เขาฝ่าฝนตกหนักไปทำงาน^medium^polysemy: give off (冒烟) / risk; brave (冒雨) / rash (冒失) combined; example shows "brave (the rain)"
+B5-0497^noun@E^high^การค้า^两国之间的贸易很多。^Liǎng guó zhījiān de màoyì hěn duō.^การค้าระหว่างสองประเทศมีมาก^high^
+B5-0498^noun@E^high^ถ่านหิน^这里冬天烧煤取暖。^Zhèlǐ dōngtiān shāo méi qǔnuǎn.^ที่นี่ฤดูหนาวเผาถ่านหินเพื่อให้ความอบอุ่น^high^
+B5-0499^noun@E^high^แก๊ส^做饭以后要关好煤气。^Zuòfàn yǐhòu yào guān hǎo méiqì.^ทำอาหารเสร็จแล้วต้องปิดแก๊สให้เรียบร้อย^high^
+B5-0500^noun@E^high^แผนกผู้ป่วยนอก^门诊在医院一楼。^Ménzhěn zài yīyuàn yī lóu.^แผนกผู้ป่วยนอกอยู่ชั้นหนึ่งของโรงพยาบาล^high^
+B5-0501^adjective@E^high^มีเสน่ห์; น่าหลงใหล^这里的风景很迷人。^Zhèlǐ de fēngjǐng hěn mírén.^ทิวทัศน์ที่นี่มีเสน่ห์มาก^high^
+B5-0502^noun@E^medium^ความเชื่อโชคลาง; งมงาย^这只是一种迷信。^Zhè zhǐ shì yì zhǒng míxìn.^นี่เป็นเพียงความเชื่อโชคลาง^medium^pos_doubtful: 迷信 is both noun "superstition" and verb "blindly believe in"
+B5-0503^noun@E^high^รูปลักษณ์; โฉมหน้า^这个城市的面貌发生了很大变化。^Zhège chéngshì de miànmào fāshēng le hěn dà biànhuà.^โฉมหน้าของเมืองนี้เปลี่ยนไปมาก^medium^source_gloss: "face" is narrow; 面貌 means "appearance; look (of a person or place)"
+B5-0504^noun@E^high^หน้าตา (ศักดิ์ศรี)^给我点儿面子吧。^Gěi wǒ diǎnr miànzi ba.^ไว้หน้าฉันหน่อยเถอะ^high^
+B5-0505^measure_word@L^high^วินาที^一分钟有六十秒。^Yì fēnzhōng yǒu liùshí miǎo.^หนึ่งนาทีมีหกสิบวินาที^high^
+B5-0506^adjective@E^high^อ่อนไหว; ไวต่อ^她对别人的评价很敏感。^Tā duì biérén de píngjià hěn mǐngǎn.^เธออ่อนไหวต่อคำวิจารณ์ของคนอื่นมาก^high^
+B5-0507^adjective@E^high^สว่างไสว^这个房间很明亮。^Zhège fángjiān hěn míngliàng.^ห้องนี้สว่างมาก^high^
+B5-0508^adverb@E^high^ชัดๆ; เห็นๆ อยู่ว่า^他明明知道，却说不知道。^Tā míngmíng zhīdào, què shuō bù zhīdào.^เขารู้อยู่ชัดๆ แต่กลับบอกว่าไม่รู้^high^
+B5-0509^noun@E^medium^คำสั่ง; สั่ง^这是上级的命令。^Zhè shì shàngjí de mìnglìng.^นี่เป็นคำสั่งจากเบื้องบน^medium^pos_doubtful: 命令 is both noun "order" and verb "order"
+B5-0510^noun@E^high^แบบอย่าง; ต้นแบบ^他是我们学习的模范。^Tā shì wǒmen xuéxí de mófàn.^เขาเป็นแบบอย่างให้พวกเราเรียนรู้^medium^source_gloss: English "model" is ambiguous (also 模型, 模特儿); 模范 = exemplary person
+B5-0511^verb@E^high^เลียนแบบ^孩子喜欢模仿大人。^Háizi xǐhuan mófǎng dàrén.^เด็กชอบเลียนแบบผู้ใหญ่^high^
+B5-0512^adjective@E^high^คลุมเครือ; พร่ามัว^照片有点儿模糊。^Zhàopiàn yǒudiǎnr móhu.^รูปถ่ายพร่ามัวไปหน่อย^high^
+B5-0513^noun@E^high^รูปแบบ; โหมด^这是一种新的经营模式。^Zhè shì yì zhǒng xīn de jīngyíng móshì.^นี่เป็นรูปแบบการดำเนินธุรกิจแบบใหม่^high^
+B5-0514^verb@E^high^ถู; เสียดสี; กระทบกระทั่ง^他们之间常常发生摩擦。^Tāmen zhījiān chángcháng fāshēng mócā.^ระหว่างพวกเขามักมีการกระทบกระทั่งกัน^medium^polysemy: literal "rub; friction" vs. figurative "clash"; example shows figurative
+B5-0515^noun@E^high^รถจักรยานยนต์^他骑摩托上班。^Tā qí mótuō shàngbān.^เขาขี่มอเตอร์ไซค์ไปทำงาน^high^
+B5-0516^noun@E^high^รูปร่างหน้าตา^她的模样很像她妈妈。^Tā de múyàng hěn xiàng tā māma.^หน้าตาของเธอคล้ายแม่มาก^high^
+B5-0517^noun@E^medium^สายตา^大家的目光都集中在他身上。^Dàjiā de mùguāng dōu jízhōng zài tā shēnshang.^สายตาของทุกคนจับจ้องอยู่ที่เขา^medium^source_gloss: "Eye" is loose; 目光 means "gaze; look; vision"
+B5-0518^noun@E^medium^ความอดทน; อดทน^老师很有耐心。^Lǎoshī hěn yǒu nàixīn.^ครูมีความอดทนมาก^medium^pos_doubtful: 耐心 is noun "patience" and adjective "patient"
+B5-0519^noun@E^high^เพศชาย^这种病男性比较多见。^Zhè zhǒng bìng nánxìng bǐjiào duō jiàn.^โรคนี้พบในเพศชายค่อนข้างมาก^high^
+B5-0520^noun@E^high^เหนือและใต้^中国南北的气候差别很大。^Zhōngguó nánběi de qìhòu chābié hěn dà.^สภาพอากาศทางเหนือและใต้ของจีนต่างกันมาก^high^
+B5-0521^noun@E^high^ขั้วโลกใต้^企鹅生活在南极。^Qǐ'é shēnghuó zài Nánjí.^นกเพนกวินอาศัยอยู่ที่ขั้วโลกใต้^high^
+B5-0522^adjective@E^high^หาได้ยาก^这真是一个难得的机会。^Zhè zhēn shì yí ge nándé de jīhuì.^นี่เป็นโอกาสที่หาได้ยากจริงๆ^medium^polysemy: adjective "rare; hard to come by" vs. adverb "seldom" (难得见面)
+B5-0523^verb@L^medium^ยากที่จะ^这件事让人难以相信。^Zhè jiàn shì ràng rén nányǐ xiāngxìn.^เรื่องนี้ยากที่จะเชื่อ^medium^pos_doubtful: 难以 is a verb-like modifier before verbs ("hard to")
+B5-0524^noun@E^high^สมอง^你的脑子真好使。^Nǐ de nǎozi zhēn hǎoshǐ.^สมองคุณดีจริงๆ^high^
+B5-0525^adjective@E^high^ภายใน; โดยกำเนิด^内在美比外表更重要。^Nèizài měi bǐ wàibiǎo gèng zhòngyào.^ความงามภายในสำคัญกว่ารูปลักษณ์ภายนอก^high^
+B5-0526^noun@E^high^พลังงาน^运动需要消耗能量。^Yùndòng xūyào xiāohào néngliàng.^การออกกำลังกายต้องใช้พลังงาน^high^
+B5-0527^noun@E^medium^ประจำปี; ปี (รอบปี)^这是我们公司的年度报告。^Zhè shì wǒmen gōngsī de niándù bàogào.^นี่คือรายงานประจำปีของบริษัทเรา^medium^source_gloss: "year" is loose; 年度 means "(fiscal/annual) year; annual"
+B5-0528^noun@E^high^อายุ^请问您的年龄？^Qǐngwèn nín de niánlíng?^ขอถามอายุของคุณหน่อย?^high^
+B5-0529^noun@E^high^ก่อนปีใหม่; หลายปีก่อน^三年前我来过这里。^Sān nián qián wǒ lái guo zhèlǐ.^เมื่อสามปีก่อนฉันเคยมาที่นี่^low^polysemy: "before (Chinese) New Year" vs. "N years ago"; pos_doubtful: often a phrase (年 + 前) rather than a word
+B5-0531^noun@E^high^กางเกงยีนส์^他喜欢穿牛仔裤。^Tā xǐhuan chuān niúzǎikù.^เขาชอบใส่กางเกงยีนส์^high^
+B5-0532^noun@E^high^ผลิตผลทางการเกษตร^这些农产品很新鲜。^Zhèxiē nóngchǎnpǐn hěn xīnxiān.^ผลิตผลทางการเกษตรเหล่านี้สดมาก^high^
+B5-0533^noun@E^high^เพศหญิง^越来越多的女性参加工作。^Yuè lái yuè duō de nǚxìng cānjiā gōngzuò.^ผู้หญิงทำงานมากขึ้นเรื่อยๆ^high^
+B5-0534^adjective@E^high^อุ่น; อบอุ่น^春天来了，天气暖了。^Chūntiān lái le, tiānqì nuǎn le.^ฤดูใบไม้ผลิมาแล้ว อากาศอุ่นขึ้น^medium^polysemy: adjective "warm" vs. verb "warm up" (暖暖手)
+B5-0535^adverb@E^high^บางครั้งบางคราว^我偶尔去看电影。^Wǒ ǒu'ěr qù kàn diànyǐng.^ฉันไปดูหนังบ้างเป็นบางครั้ง^high^
+B5-0536^adjective@E^high^บังเอิญ^这只是一次偶然的机会。^Zhè zhǐ shì yí cì ǒurán de jīhuì.^นี่เป็นเพียงโอกาสโดยบังเอิญ^high^
+B5-0537^noun@E^high^ไอดอล; รูปเคารพ^他是很多年轻人的偶像。^Tā shì hěn duō niánqīngrén de ǒuxiàng.^เขาเป็นไอดอลของคนหนุ่มสาวจำนวนมาก^high^
+B5-0538^verb@E^high^ถ่ายทำ; ถ่าย^这部电影是在北京拍摄的。^Zhè bù diànyǐng shì zài Běijīng pāishè de.^ภาพยนตร์เรื่องนี้ถ่ายทำที่ปักกิ่ง^high^
+B5-0539^verb@E^high^ขจัด; ตัดออก^我们要排除一切困难。^Wǒmen yào páichú yíqiè kùnnan.^พวกเราต้องขจัดอุปสรรคทั้งหมด^high^
+B5-0540^noun@E^high^ข้าง; อื่น^他站在一旁看着。^Tā zhàn zài yì páng kàn zhe.^เขายืนดูอยู่ข้างๆ^medium^polysemy: "side" vs. "other; else" (旁人); example shows "side"
+B5-0541^verb@E^high^อยู่เป็นเพื่อน; พาไป^我陪妈妈去医院。^Wǒ péi māma qù yīyuàn.^ฉันพาแม่ไปโรงพยาบาล^high^
+B5-0542^verb@E^high^ชดใช้; ขาดทุน^你弄坏了我的书，要赔。^Nǐ nòng huài le wǒ de shū, yào péi.^คุณทำหนังสือฉันเสีย ต้องชดใช้นะ^medium^polysemy: "compensate; pay for" vs. "lose money" (赔钱)
+B5-0543^verb@E^high^ชดเชย; จ่ายค่าเสียหาย^公司赔偿了他的损失。^Gōngsī péicháng le tā de sǔnshī.^บริษัทชดเชยความเสียหายให้เขา^high^
+B5-0544^verb@L^medium^จัดหา; ติดตั้ง (อุปกรณ์)^每个教室都配备了电脑。^Měi ge jiàoshì dōu pèibèi le diànnǎo.^ทุกห้องเรียนติดตั้งคอมพิวเตอร์ไว้^medium^source_gloss: "Equipment" is a noun; 配备 is mainly the verb "equip; provide"
+B5-0545^verb@E^medium^จัดให้เป็นชุด; ครบชุด^这个小区的配套设施很齐全。^Zhège xiǎoqū de pèitào shèshī hěn qíquán.^สิ่งอำนวยความสะดวกของหมู่บ้านนี้ครบครัน^medium^pos_doubtful: 配套 is verb "form a complete set" mostly used attributively ("supporting")
+B5-0546^verb@E^high^พ่น; ฉีด; พุ่ง^他往花上喷了一些水。^Tā wǎng huā shang pēn le yìxiē shuǐ.^เขาพ่นน้ำใส่ดอกไม้นิดหน่อย^high^
+B5-0547^noun@E^high^กะละมัง; อ่าง; กระถาง^我买了一盆花。^Wǒ mǎi le yì pén huā.^ฉันซื้อดอกไม้มาหนึ่งกระถาง^medium^pos_doubtful: 盆 is noun "basin; pot" and measure word; example shows measure word
+B5-0548^verb@E^high^คลุม; พาด (บนไหล่)^她披着一件外衣。^Tā pī zhe yí jiàn wàiyī.^เธอคลุมเสื้อนอกไว้ตัวหนึ่ง^high^
+B5-0549^noun@E^high^ผิวหนัง^她的皮肤很白。^Tā de pífū hěn bái.^ผิวของเธอขาวมาก^high^
+B5-0550^noun@E^high^รองเท้าหนัง^他穿着一双黑皮鞋。^Tā chuān zhe yì shuāng hēi píxié.^เขาสวมรองเท้าหนังสีดำหนึ่งคู่^high^
+B5-0551^noun@E^medium^อารมณ์; นิสัยใจคอ^他的脾气很大。^Tā de píqi hěn dà.^เขาอารมณ์ร้ายมาก^medium^source_gloss: "Bad temper" is one use; 脾气 = temperament (neutral), often "(bad) temper"
+B5-0552^measure_word@E^high^ตัว (ลักษณนามของม้า); พับ (ผ้า)^他养了两匹马。^Tā yǎng le liǎng pǐ mǎ.^เขาเลี้ยงม้าไว้สองตัว^high^
+B5-0553^verb@E^high^หลอกลวง^你别骗我。^Nǐ bié piàn wǒ.^คุณอย่าหลอกฉัน^high^
