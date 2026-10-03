@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B5-0352^noun@E^high^อัคคีภัย; ไฟไหม้^昨晚这里发生了一场火灾。^Zuówǎn zhèlǐ fāshēng le yì chǎng huǒzāi.^เมื่อคืนเกิดไฟไหม้ที่นี่^high^
+B5-0353^conjunction@E^high^หรือ^你可以打电话或是发邮件。^Nǐ kěyǐ dǎ diànhuà huòshì fā yóujiàn.^คุณจะโทรหรือส่งอีเมลก็ได้^high^
+B5-0354^noun@E^high^หุ่นยนต์^这个机器人会说话。^Zhège jīqìrén huì shuōhuà.^หุ่นยนต์ตัวนี้พูดได้^high^
+B5-0355^noun@E^high^กลไก; ระบบ^我们要建立新的管理机制。^Wǒmen yào jiànlì xīn de guǎnlǐ jīzhì.^พวกเราต้องสร้างกลไกการบริหารใหม่^medium^polysemy: noun "mechanism" vs. attributive "machine-made" (机制纸)
+B5-0356^noun@E^high^กล้ามเนื้อ^他的肌肉很发达。^Tā de jīròu hěn fādá.^กล้ามเนื้อของเขาแข็งแรงมาก^high^
+B5-0357^noun@E^high^ฐาน; ศูนย์^这里是一个训练基地。^Zhèlǐ shì yí ge xùnliàn jīdì.^ที่นี่เป็นศูนย์ฝึก^high^
+B5-0358^noun@E^high^กองทุน^他们成立了一个教育基金。^Tāmen chénglì le yí ge jiàoyù jījīn.^พวกเขาจัดตั้งกองทุนการศึกษาขึ้นมาหนึ่งกองทุน^high^
+B5-0359^conjunction@E^high^ถึงแม้ว่า^即使下雨，我也要去。^Jíshǐ xià yǔ, wǒ yě yào qù.^ถึงแม้ฝนจะตก ฉันก็จะไป^high^
+B5-0360^noun@E^high^กลุ่มบริษัท; กลุ่ม^他在一家大集团工作。^Tā zài yì jiā dà jítuán gōngzuò.^เขาทำงานอยู่ในกลุ่มบริษัทใหญ่แห่งหนึ่ง^high^
+B5-0361^verb@E^high^บีบ; เบียด; แออัด^公交车上太挤了。^Gōngjiāochē shang tài jǐ le.^บนรถเมล์แออัดเกินไป^medium^polysemy: verb "squeeze; push" vs. adjective "crowded"; example shows "crowded"
+B5-0362^noun@E^medium^ความจำ; จดจำ^他的记忆力很好。^Tā de jìyìlì hěn hǎo.^ความจำของเขาดีมาก^medium^pos_doubtful: 记忆 is both noun "memory" and verb "remember"; example uses 记忆力
+B5-0363^noun@E^high^ทักษะ^他掌握了很多工作技能。^Tā zhǎngwò le hěn duō gōngzuò jìnéng.^เขามีทักษะการทำงานมากมาย^high^
+B5-0364^verb@E^high^สืบทอด; รับมรดก^我们要继承优秀的传统。^Wǒmen yào jìchéng yōuxiù de chuántǒng.^พวกเราต้องสืบทอดประเพณีอันดีงาม^medium^polysemy: "inherit (property)" vs. "carry on (tradition)"; example shows "carry on"
+B5-0365^verb@E^high^อุ่น; ให้ความร้อน^请把饭加热一下。^Qǐng bǎ fàn jiārè yí xià.^กรุณาอุ่นข้าวหน่อย^high^
+B5-0366^conjunction@L^medium^บวกกับ; ประกอบกับ^天气不好，加上路远，我们就不去了。^Tiānqì bù hǎo, jiāshang lù yuǎn, wǒmen jiù bú qù le.^อากาศไม่ดี ประกอบกับทางไกล พวกเราเลยไม่ไป^medium^pos_doubtful: 加上 is verb "add" and conjunction "in addition"; example shows conjunction
+B5-0367^verb@E^high^เร่งความเร็ว^汽车开始加速了。^Qìchē kāishǐ jiāsù le.^รถยนต์เริ่มเร่งความเร็ว^high^
+B5-0368^verb@L^low^ดำเนินการ (ต่อสิ่งที่กล่าวถึง)^这个问题必须加以解决。^Zhège wèntí bìxū jiāyǐ jiějué.^ปัญหานี้ต้องได้รับการแก้ไข^low^source_gloss: gloss "moreover; in addition clip; folder; press from both sides; place in" merges the next entry (夹); 加以 is a formal verb before disyllabic verbs, "moreover" is a rare conjunction use
+B5-0369^verb@L^low^หนีบ; คีบ; แทรกอยู่ระหว่าง^他用筷子夹菜。^Tā yòng kuàizi jiā cài.^เขาใช้ตะเกียบคีบกับข้าว^low^source_gloss: gloss "between; mix" is the tail of a list that started in the 加以 row ("clip; folder; press from both sides"); polysemy
+B5-0370^noun@E^low^เล็บ; เปลือกแข็ง; อันดับหนึ่ง; เกราะ^我要去剪指甲。^Wǒ yào qù jiǎn zhǐjia.^ฉันจะไปตัดเล็บ^low^polysemy: "nail (finger)" vs. "first (ordinal)" vs. "shell; armour"; example: bare 甲 is bound, sentence uses 指甲
+B5-0371^noun@E^high^ราคา; มูลค่า^这件衣服什么价？^Zhè jiàn yīfu shénme jià?^เสื้อตัวนี้ราคาเท่าไร?^high^
+B5-0372^verb@E^high^ขับขี่^开车的时候要注意安全驾驶。^Kāichē de shíhou yào zhùyì ānquán jiàshǐ.^ขับรถต้องขับขี่อย่างปลอดภัย^high^
+B5-0373^noun@E^high^ใบขับขี่^他去年考到了驾照。^Tā qùnián kǎodào le jiàzhào.^เขาสอบได้ใบขับขี่เมื่อปีที่แล้ว^high^
+B5-0374^adjective@E^high^มั่นคง; แน่วแน่^他的态度很坚定。^Tā de tàidu hěn jiāndìng.^ท่าทีของเขามั่นคงมาก^medium^polysemy: adjective "firm" vs. verb "strengthen" (坚定信心)
+B5-0375^noun@E^high^ไหล่^他拍了拍我的肩。^Tā pāi le pāi wǒ de jiān.^เขาตบไหล่ฉันเบาๆ^high^
+B5-0376^adjective@E^high^ยากลำบาก; ลำเค็ญ^他们的生活很艰苦。^Tāmen de shēnghuó hěn jiānkǔ.^ชีวิตของพวกเขายากลำบากมาก^high^
+B5-0377^adjective@E^high^ยากลำบาก^他艰难地站了起来。^Tā jiānnán de zhàn le qǐlai.^เขาลุกขึ้นยืนอย่างยากลำบาก^high^
+B5-0378^verb@E^high^ตรวจสอบ; ทดสอบ^实践是检验真理的唯一标准。^Shíjiàn shì jiǎnyàn zhēnlǐ de wéiyī biāozhǔn.^การปฏิบัติคือเกณฑ์เดียวในการพิสูจน์ความจริง^high^
+B5-0379^verb@E^high^บรรเทา; ลดลง^运动可以减轻压力。^Yùndòng kěyǐ jiǎnqīng yālì.^การออกกำลังกายช่วยบรรเทาความเครียด^high^
+B5-0380^verb@E^high^ตัด; เล็ม; กรรไกร^我想去剪头发。^Wǒ xiǎng qù jiǎn tóufa.^ฉันอยากไปตัดผม^medium^polysemy: verb "cut; clip" vs. noun "scissors"; example shows the verb
+B5-0381^noun@E^high^กรรไกร^请把剪刀递给我。^Qǐng bǎ jiǎndāo dì gěi wǒ.^กรุณายื่นกรรไกรให้ฉัน^high^
+B5-0382^noun@E^high^กรรไกร^这把剪子很快。^Zhè bǎ jiǎnzi hěn kuài.^กรรไกรเล่มนี้คมมาก^high^
+B5-0383^adjective@E^high^ทางอ้อม^这是间接的原因。^Zhè shì jiànjiē de yuányīn.^นี่เป็นสาเหตุทางอ้อม^high^
+B5-0384^verb@E^high^ก่อสร้าง^这座桥是十年前建造的。^Zhè zuò qiáo shì shí nián qián jiànzào de.^สะพานนี้สร้างขึ้นเมื่อสิบปีก่อน^high^
+B5-0385^noun@E^medium^สิ่งก่อสร้าง; สถาปัตยกรรม; สร้าง^这座建筑很有特色。^Zhè zuò jiànzhù hěn yǒu tèsè.^สิ่งก่อสร้างนี้มีเอกลักษณ์มาก^medium^polysemy: "building" vs. "architecture (field)" vs. verb "build"; example shows "building"
+B5-0386^adjective@E^high^สมบูรณ์; มีครบถ้วน^这里的法律制度很健全。^Zhèlǐ de fǎlǜ zhìdù hěn jiànquán.^ระบบกฎหมายที่นี่สมบูรณ์มาก^medium^source_gloss: English "sound" is ambiguous (also 声音); 健全 = sound; complete; well-established
+B5-0387^noun@E^high^ปุ่ม (คีย์บอร์ด); พันธะ (เคมี)^请按回车键。^Qǐng àn huíchē jiàn.^กรุณากดปุ่ม Enter^medium^polysemy: "key (keyboard)" vs. chemistry "bond"; example shows "key"
+B5-0388^noun@E^high^แป้นพิมพ์^电脑键盘坏了。^Diànnǎo jiànpán huài le.^แป้นพิมพ์คอมพิวเตอร์เสีย^high^
+B5-0389^adverb@E^high^จะ; กำลังจะ^会议将在明天举行。^Huìyì jiāng zài míngtiān jǔxíng.^การประชุมจะจัดขึ้นพรุ่งนี้^medium^polysemy: adverb "will" vs. preposition (= 把, formal) vs. noun 将 jiàng "general"
+B5-0390^adverb@E^high^กำลังจะ^火车将要到站了。^Huǒchē jiāngyào dào zhàn le.^รถไฟกำลังจะถึงสถานี^high^
+B5-0391^verb@E^medium^ให้รางวัล; รางวัล^学校奖励了优秀学生。^Xuéxiào jiǎnglì le yōuxiù xuésheng.^โรงเรียนให้รางวัลแก่นักเรียนดีเด่น^medium^pos_doubtful: 奖励 is both verb "reward" and noun "reward"
+B5-0392^verb@E^high^มอบหมาย; ส่งมอบ; สารภาพ^他把工作交代给了同事。^Tā bǎ gōngzuò jiāodài gěi le tóngshì.^เขาส่งมอบงานให้เพื่อนร่วมงาน^medium^polysemy: "hand over" vs. "explain; instruct" vs. "confess"
+B5-0393^noun@E^high^ชานเมือง^他住在郊区。^Tā zhù zài jiāoqū.^เขาอาศัยอยู่ชานเมือง^high^
+B5-0394^noun@E^high^เทปกาว^请用胶带把箱子封好。^Qǐng yòng jiāodài bǎ xiāngzi fēng hǎo.^กรุณาใช้เทปกาวปิดกล่องให้เรียบร้อย^high^
+B5-0395^noun@E^high^กาวน้ำ^我需要一瓶胶水。^Wǒ xūyào yì píng jiāoshuǐ.^ฉันต้องการกาวน้ำหนึ่งขวด^high^
+B5-0396^noun@E^high^ฝีเท้า; ก้าว^我听到了他的脚步声。^Wǒ tīngdào le tā de jiǎobù shēng.^ฉันได้ยินเสียงฝีเท้าของเขา^high^
+B5-0397^verb@E^medium^สัมผัส; ติดต่อ^我们要多接触社会。^Wǒmen yào duō jiēchù shèhuì.^พวกเราต้องสัมผัสสังคมให้มาก^medium^polysemy: physical "touch" vs. "come into contact with; engage with"
+B5-0398^adverb@E^high^ต่อเนื่องกัน; ติดๆ กัน^他接连三天没来上课。^Tā jiēlián sān tiān méi lái shàngkè.^เขาไม่มาเรียนติดต่อกันสามวัน^high^
+B5-0399^verb@E^high^ยกเลิก; ปลดเปลื้อง^他们解除了合同。^Tāmen jiěchú le hétong.^พวกเขายกเลิกสัญญาแล้ว^medium^source_gloss: "Relieve" is narrow; 解除 means "remove; cancel; lift (a ban)"
+B5-0400^verb@E^high^ปลดปล่อย^我们要解放思想。^Wǒmen yào jiěfàng sīxiǎng.^พวกเราต้องปลดปล่อยความคิด^medium^polysemy: verb "liberate" vs. noun "Liberation (1949)"
+B5-0401^verb@E^high^เลิก (นิสัย); ระวัง^他已经戒烟了。^Tā yǐjīng jièyān le.^เขาเลิกบุหรี่แล้ว^medium^polysemy: "quit (habit)" vs. "guard against" (戒备) and noun "ring" (戒指)
+B5-0402^measure_word@L^low^รุ่น; ครั้ง (ลักษณนามของการจัดงานต่อเนื่อง)^他是我们学校第一届毕业生。^Tā shì wǒmen xuéxiào dì yī jiè bìyèshēng.^เขาเป็นบัณฑิตรุ่นแรกของโรงเรียนเรา^medium^source_gloss: "Session" is narrow; 届 is a measure word for terms, graduating classes, events; pos_doubtful: no source POS
+B5-0403^noun@E^high^วันนี้^今日天气晴朗。^Jīnrì tiānqì qínglǎng.^วันนี้อากาศแจ่มใส^high^
+B5-0404^conjunction@E^high^ถึงแม้ว่า^尽管很累，他还是坚持工作。^Jǐnguǎn hěn lèi, tā háishi jiānchí gōngzuò.^ถึงแม้จะเหนื่อยมาก เขาก็ยังทำงานต่อ^medium^polysemy: conjunction "although" vs. adverb "feel free to" (有问题尽管问)
+B5-0405^adverb@E^high^แน่น^妈妈紧紧地抱着孩子。^Māma jǐnjǐn de bào zhe háizi.^แม่กอดลูกไว้แน่น^high^
+B5-0406^adverb@E^high^ให้มากที่สุดเท่าที่ทำได้^请尽可能早点儿来。^Qǐng jǐn kěnéng zǎo diǎnr lái.^กรุณามาให้เร็วที่สุดเท่าที่ทำได้^high^
+B5-0407^verb@L^medium^วิวัฒนาการ^人类是从猿进化来的。^Rénlèi shì cóng yuán jìnhuà lái de.^มนุษย์วิวัฒนาการมาจากลิง^medium^source_gloss: "evolution" is a noun; 进化 is mainly the verb "evolve"
+B5-0408^noun@L^medium^ช่วงนี้^近来你身体好吗？^Jìnlái nǐ shēntǐ hǎo ma?^ช่วงนี้คุณสุขภาพดีไหม?^high^
+B5-0409^noun@E^high^งบประมาณ; เงินทุน^这个项目缺少经费。^Zhège xiàngmù quēshǎo jīngfèi.^โครงการนี้ขาดงบประมาณ^high^
+B5-0410^noun@E^high^ภาพ; ทัศนียภาพ^春天到处是一片美丽的景象。^Chūntiān dàochù shì yí piàn měilì de jǐngxiàng.^ฤดูใบไม้ผลิมีภาพที่งดงามไปทั่ว^high^
+B5-0411^verb@E^medium^เตือน; คำเตือน^老师警告他不要再迟到了。^Lǎoshī jǐnggào tā búyào zài chídào le.^ครูเตือนเขาอย่ามาสายอีก^medium^pos_doubtful: gloss "warning" is a noun; 警告 is both verb "warn" and noun; example shows the verb
+B5-0412^noun@E^high^การแข่งขัน^他参加了数学竞赛。^Tā cānjiā le shùxué jìngsài.^เขาเข้าร่วมการแข่งขันคณิตศาสตร์^high^
+B5-0413^verb@E^high^แข่งขัน^两家公司竞争得很激烈。^Liǎng jiā gōngsī jìngzhēng de hěn jīliè.^สองบริษัทแข่งขันกันอย่างดุเดือด^high^
+B5-0414^noun@E^high^ขี้เมา^他爸爸是个酒鬼。^Tā bàba shì ge jiǔguǐ.^พ่อของเขาเป็นคนขี้เมา^high^
+B5-0415^verb@L^medium^ช่วยเหลือผู้ประสบภัย^很多人去灾区救灾。^Hěn duō rén qù zāiqū jiùzāi.^หลายคนไปช่วยเหลือผู้ประสบภัยในพื้นที่ภัยพิบัติ^medium^source_gloss: "disaster relief" is a noun phrase; 救灾 is a verb-object "provide disaster relief"
+B5-0416^adverb@E^medium^คาดไม่ถึงว่า^他居然一个人做完了。^Tā jūrán yí ge rén zuò wán le.^คาดไม่ถึงว่าเขาจะทำเสร็จคนเดียว^medium^source_gloss: "actually" is loose; 居然 expresses surprise "unexpectedly"
+B5-0417^noun@E^high^สถานการณ์^现在的局面对我们不利。^Xiànzài de júmiàn duì wǒmen búlì.^สถานการณ์ตอนนี้ไม่เป็นผลดีต่อเรา^high^
+B5-0418^noun@E^high^ผู้อำนวยการสำนัก^他是教育局的局长。^Tā shì jiàoyùjú de júzhǎng.^เขาเป็นผู้อำนวยการสำนักงานการศึกษา^high^
+B5-0419^noun@E^medium^การกระทำ; พฤติกรรม^他的举动很奇怪。^Tā de jǔdòng hěn qíguài.^การกระทำของเขาแปลกมาก^medium^source_gloss: "Move" is ambiguous; 举动 = act; behaviour
+B5-0420^verb@E^high^ปฏิเสธ^他拒绝了我的邀请。^Tā jùjué le wǒ de yāoqǐng.^เขาปฏิเสธคำเชิญของฉัน^high^
+B5-0421^noun@E^high^สโมสร; ชมรม^他参加了一个足球俱乐部。^Tā cānjiā le yí ge zúqiú jùlèbù.^เขาเข้าร่วมสโมสรฟุตบอลแห่งหนึ่ง^high^
+B5-0422^noun@E^high^บทละคร; บทภาพยนตร์^他在写一个电影剧本。^Tā zài xiě yí ge diànyǐng jùběn.^เขากำลังเขียนบทภาพยนตร์^high^
+B5-0423^adverb@E^high^ไม่มีวัน; ไม่เด็ดขาด^我决不会放弃。^Wǒ jué bú huì fàngqì.^ฉันไม่มีวันยอมแพ้^high^
+B5-0424^adjective@L^medium^สิ้นหวัง^他感到很绝望。^Tā gǎndào hěn juéwàng.^เขารู้สึกสิ้นหวังมาก^medium^pos_doubtful: gloss "Despair" is noun/verb; 绝望 is verb "despair" and adjective "hopeless"
+B5-0425^noun@E^high^ทหาร^他爸爸是一名军人。^Tā bàba shì yì míng jūnrén.^พ่อของเขาเป็นทหาร^high^
+B5-0426^verb@E^high^เปิดงาน; เปิดม่าน^展览会明天开幕。^Zhǎnlǎnhuì míngtiān kāimù.^งานนิทรรศการจะเปิดพรุ่งนี้^high^
+B5-0427^noun@E^high^พิธีเปิด^开幕式在晚上八点开始。^Kāimùshì zài wǎnshang bā diǎn kāishǐ.^พิธีเปิดเริ่มตอนสองทุ่ม^high^
+B5-0428^verb@E^high^มองว่าเป็น^别把我看成外人。^Bié bǎ wǒ kànchéng wàirén.^อย่ามองว่าฉันเป็นคนนอก^high^
+B5-0429^verb@E^high^มองออก; ดูออก^我看出他不高兴了。^Wǒ kànchū tā bù gāoxìng le.^ฉันดูออกว่าเขาไม่พอใจ^high^
+B5-0430^verb@E^high^มอง; ปฏิบัติต่อ^你怎么看待这个问题？^Nǐ zěnme kàndài zhège wèntí?^คุณมองปัญหานี้อย่างไร?^high^
+B5-0431^verb@E^medium^ประเมิน; ทดสอบ^公司每年都要考核员工。^Gōngsī měinián dōu yào kǎohé yuángōng.^บริษัทประเมินพนักงานทุกปี^high^
+B5-0432^noun@E^high^บาร์บีคิว; เนื้อย่าง^我们晚上去吃烤肉吧。^Wǒmen wǎnshang qù chī kǎoròu ba.^ตอนเย็นพวกเราไปกินเนื้อย่างกันเถอะ^high^
+B5-0433^noun@E^high^เป็ดย่าง^北京烤鸭很有名。^Běijīng kǎoyā hěn yǒumíng.^เป็ดย่างปักกิ่งมีชื่อเสียงมาก^high^
+B5-0434^verb@E^high^เข้าใกล้; อยู่ใกล้^我家靠近地铁站。^Wǒ jiā kàojìn dìtiězhàn.^บ้านฉันอยู่ใกล้สถานีรถไฟใต้ดิน^high^
+B5-0435^measure_word@E^high^เม็ด; ดวง; ลูก (ลักษณนามของสิ่งกลมเล็ก)^天上有一颗星星。^Tiān shang yǒu yì kē xīngxing.^บนฟ้ามีดาวอยู่ดวงหนึ่ง^high^
+B5-0436^verb@E^medium^ไอ^他咳了几声。^Tā ké le jǐ shēng.^เขาไอสองสามครั้ง^medium^variant: 咳 ké (cough) vs. 咳 hāi (interjection "alas"); bare 咳 is less common than 咳嗽
+B5-0437^conjunction@L^low^แต่; สามารถ; จริงๆ^这本书好是好，可太贵了。^Zhè běn shū hǎo shì hǎo, kě tài guì le.^หนังสือเล่มนี้ดีก็จริง แต่แพงเกินไป^low^polysemy: can / may / approve / be worth / suit / but / yet — auxiliary, verb, conjunction and adverb (emphatic 可) senses combined; pos_doubtful: no source POS
+B5-0438^adjective@E^high^น่าสงสาร^这只小狗真可怜。^Zhè zhī xiǎo gǒu zhēn kělián.^ลูกหมาตัวนี้น่าสงสารจริงๆ^medium^polysemy: adjective "pitiful" vs. verb "pity"; English "Poor" also means "not rich" (穷)
+B5-0439^adjective@L^medium^น่าเสียดาย^真可惜，我们没赶上火车。^Zhēn kěxī, wǒmen méi gǎnshàng huǒchē.^น่าเสียดายจริงๆ พวกเราไม่ทันรถไฟ^medium^source_gloss: "unfortunately" is adverbial; 可惜 is mainly the adjective "pitiful; regrettable"
+B5-0440^verb@E^high^ปรารถนา; โหยหา^他渴望得到父母的理解。^Tā kěwàng dédào fùmǔ de lǐjiě.^เขาปรารถนาให้พ่อแม่เข้าใจ^high^
+B5-0442^noun@E^high^ลูกค้า^我们要为客户提供好的服务。^Wǒmen yào wèi kèhù tígōng hǎo de fúwù.^พวกเราต้องให้บริการที่ดีแก่ลูกค้า^high^
+B5-0443^adjective@E^high^สุภาพ; เกรงใจ^别客气，就像在自己家一样。^Bié kèqi, jiù xiàng zài zìjǐ jiā yíyàng.^ไม่ต้องเกรงใจ ทำตัวเหมือนอยู่บ้านตัวเองเลย^medium^polysemy: adjective "polite" vs. verb "stand on ceremony" (别客气)
+B5-0444^noun@E^high^ห้องรับแขก^客厅里有一个大沙发。^Kètīng li yǒu yí ge dà shāfā.^ในห้องรับแขกมีโซฟาตัวใหญ่^high^
+B5-0445^noun@E^high^หัวข้อวิจัย; ประเด็นศึกษา^这是一个新的研究课题。^Zhè shì yí ge xīn de yánjiū kètí.^นี่เป็นหัวข้อวิจัยใหม่^high^
+B5-0446^adverb@L^medium^แน่นอน; ยืนยัน^他肯定会来的。^Tā kěndìng huì lái de.^เขามาแน่นอน^medium^polysemy: adverb "definitely" vs. verb "affirm; approve" vs. adjective "sure"
+B5-0447^noun@E^high^กลางอากาศ; บนท้องฟ้า^空中飞着很多鸟。^Kōngzhōng fēi zhe hěn duō niǎo.^บนท้องฟ้ามีนกบินอยู่มากมาย^high^
+B5-0448^verb@E^high^ควบคุม^他控制不住自己的情绪。^Tā kòngzhì bu zhù zìjǐ de qíngxù.^เขาควบคุมอารมณ์ตัวเองไม่ได้^high^
+B5-0449^noun@E^high^คำขวัญ; สโลแกน^他们大声喊着口号。^Tāmen dàshēng hǎn zhe kǒuhào.^พวกเขาตะโกนคำขวัญเสียงดัง^high^
+B5-0450^noun@E^high^คลัง; โกดัง; ฐานข้อมูล^这些货物放在仓库里。^Zhèxiē huòwù fàng zài cāngkù li.^สินค้าเหล่านี้เก็บอยู่ในโกดัง^medium^example: bare 库 is bound (仓库, 数据库); sentence uses 仓库
+B5-0451^adjective@E^high^มีความสุข; สบายใจ^孩子们玩得很快活。^Háizimen wán de hěn kuàihuo.^เด็กๆ เล่นอย่างมีความสุข^high^
+B5-0452^noun@E^high^ความกว้าง^这条路的宽度是十米。^Zhè tiáo lù de kuāndù shì shí mǐ.^ถนนสายนี้กว้างสิบเมตร^high^
