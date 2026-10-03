@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B3-0072^verb@E^high^นำมาใช้; ใช้^这家公司采用了新技术。^Zhè jiā gōngsī cǎiyòng le xīn jìshù.^บริษัทนี้นำเทคโนโลยีใหม่มาใช้^high^
+B3-0073^noun@E^medium^หลากสี; สี (ไม่ใช่ขาวดำ)^这是一台彩色电视机。^Zhè shì yì tái cǎisè diànshìjī.^นี่เป็นโทรทัศน์สีเครื่องหนึ่ง^medium^pos_doubtful: 彩色 is used mostly attributively ("colour TV"); noun vs. adjective unclear
+B3-0074^adverb@E^high^เคย^我曾经在北京住过两年。^Wǒ céngjīng zài Běijīng zhù guo liǎng nián.^ฉันเคยอาศัยอยู่ที่ปักกิ่งสองปี^high^
+B3-0075^verb@E^high^ก่อให้เกิด; เกิดขึ้น^这个问题产生了很大的影响。^Zhège wèntí chǎnshēng le hěn dà de yǐngxiǎng.^ปัญหานี้ก่อให้เกิดผลกระทบอย่างมาก^high^
+B3-0076^noun@E^high^กำแพงเมืองจีน^我去过长城。^Wǒ qù guo Chángchéng.^ฉันเคยไปกำแพงเมืองจีน^high^
+B3-0077^noun@E^high^จุดแข็ง; ข้อดี^每个人都有自己的长处。^Měi ge rén dōu yǒu zìjǐ de chángchù.^ทุกคนมีจุดแข็งของตัวเอง^high^
+B3-0078^noun@L^medium^ระยะยาว^这是一个长期的计划。^Zhè shì yí ge chángqī de jìhuà.^นี่เป็นแผนระยะยาว^high^
+B3-0079^noun@E^high^โรงงาน^他在一家汽车厂工作。^Tā zài yì jiā qìchē chǎng gōngzuò.^เขาทำงานอยู่ที่โรงงานรถยนต์แห่งหนึ่ง^high^
+B3-0080^noun@E^high^โอกาส; สถานการณ์^在这种场合要穿正式一点儿。^Zài zhè zhǒng chǎnghé yào chuān zhèngshì yìdiǎnr.^ในโอกาสแบบนี้ต้องแต่งกายให้เป็นทางการหน่อย^high^
+B3-0081^noun@E^high^สถานที่^公共场所不能抽烟。^Gōnggòng chǎngsuǒ bù néng chōuyān.^ห้ามสูบบุหรี่ในที่สาธารณะ^high^
+B3-0082^adjective@E^high^สุดยอด; ซูเปอร์^这是一家超级市场。^Zhè shì yì jiā chāojí shìchǎng.^นี่คือซูเปอร์มาร์เก็ตแห่งหนึ่ง^high^
+B3-0083^preposition@E^high^ไปทาง; หันไปทาง^他朝我走过来。^Tā cháo wǒ zǒu guòlai.^เขาเดินมาทางฉัน^high^
+B3-0084^adjective@E^medium^หนวกหู; เสียงดัง; ทะเลาะ^外面太吵了。^Wàimian tài chǎo le.^ข้างนอกเสียงดังเกินไป^medium^polysemy: adjective "noisy" vs. verb "quarrel; disturb"; example shows "noisy"
+B3-0085^verb@E^high^ทะเลาะ; มีปากเสียง^他们又吵架了。^Tāmen yòu chǎojià le.^พวกเขาทะเลาะกันอีกแล้ว^high^
+B3-0086^noun@E^high^เสื้อเชิ้ต^他穿了一件白衬衫。^Tā chuān le yí jiàn bái chènshān.^เขาสวมเสื้อเชิ้ตสีขาวตัวหนึ่ง^high^
+B3-0087^noun@E^high^เสื้อเชิ้ต^这件衬衣很合身。^Zhè jiàn chènyī hěn héshēn.^เสื้อเชิ้ตตัวนี้พอดีตัวมาก^high^
+B3-0088^verb@E^high^เรียกว่า; ได้ชื่อว่า^北京被称为中国的首都。^Běijīng bèi chēngwéi Zhōngguó de shǒudū.^ปักกิ่งได้ชื่อว่าเป็นเมืองหลวงของจีน^high^
+B3-0089^adjective@L^medium^ความสำเร็จ; ประสบความสำเร็จ^这次活动很成功。^Zhè cì huódòng hěn chénggōng.^กิจกรรมครั้งนี้ประสบความสำเร็จมาก^medium^pos_doubtful: gloss "Success" is a noun, but 成功 is used as verb/adjective "succeed; successful"
+B3-0090^noun@E^high^ผลงาน; ผลสำเร็จ^这是我们努力的成果。^Zhè shì wǒmen nǔlì de chéngguǒ.^นี่คือผลสำเร็จจากความพยายามของพวกเรา^high^
+B3-0091^noun@E^high^ความสำเร็จ; ผลงาน^他在科学上取得了很大的成就。^Tā zài kēxué shang qǔdé le hěn dà de chéngjiù.^เขาประสบความสำเร็จอย่างมากด้านวิทยาศาสตร์^high^
+B3-0092^verb@E^high^ก่อตั้ง^这所学校成立于一九五〇年。^Zhè suǒ xuéxiào chénglì yú yī jiǔ wǔ líng nián.^โรงเรียนนี้ก่อตั้งเมื่อปี 1950^high^
+B3-0093^adjective@E^high^เป็นผู้ใหญ่; สุก (ผลไม้)^他比以前成熟多了。^Tā bǐ yǐqián chéngshú duō le.^เขาเป็นผู้ใหญ่ขึ้นกว่าแต่ก่อนมาก^high^
+B3-0094^noun@E^high^สมาชิก^我们家有五个成员。^Wǒmen jiā yǒu wǔ ge chéngyuán.^ครอบครัวเรามีสมาชิกห้าคน^high^
+B3-0095^verb@E^high^เติบโต^孩子在快乐中成长。^Háizi zài kuàilè zhōng chéngzhǎng.^เด็กเติบโตอย่างมีความสุข^high^
+B3-0096^noun@E^high^เมือง; ตัวเมือง^我明天进城买东西。^Wǒ míngtiān jìn chéng mǎi dōngxi.^พรุ่งนี้ฉันจะเข้าเมืองไปซื้อของ^high^
+B3-0097^noun@E^high^เมือง^上海是一个大城市。^Shànghǎi shì yí ge dà chéngshì.^เซี่ยงไฮ้เป็นเมืองใหญ่^high^
+B3-0098^noun@E^high^ระดับ; ขอบเขต^他的汉语达到了很高的程度。^Tā de Hànyǔ dádào le hěn gāo de chéngdù.^ภาษาจีนของเขาถึงระดับสูงมาก^high^
+B3-0099^verb@L^medium^ต่อเนื่อง^大雨持续了三天。^Dà yǔ chíxù le sān tiān.^ฝนตกหนักต่อเนื่องสามวัน^medium^source_gloss: "Continued" is a past form; 持续 is the verb "continue; last"
+B3-0100^verb@E^high^เต็มไปด้วย^房间里充满了笑声。^Fángjiān li chōngmǎn le xiàoshēng.^ในห้องเต็มไปด้วยเสียงหัวเราะ^high^
+B3-0102^noun@L^medium^ช่วงต้น; เริ่มแรก; ตอนต้น^初到北京的时候，我不太习惯。^Chū dào Běijīng de shíhou, wǒ bú tài xíguàn.^ตอนมาถึงปักกิ่งใหม่ๆ ฉันไม่ค่อยคุ้นเคย^medium^polysemy: beginning / basis / "at the beginning of" combined; pos_doubtful: no source POS, 初 is noun/adjective/adverb by context
+B3-0103^other^low^(คำนำหน้าแสดงลำดับแรก เช่น วันที่/ชั้นปี)^我弟弟今年上初一。^Wǒ dìdi jīnnián shàng chū yī.^ปีนี้น้องชายฉันเรียนชั้นมัธยมต้นปีหนึ่ง^medium^pos_doubtful: prefix has no matching POS in the enum; source_gloss: pinyin field carries an inline example "（chū yī）"
+B3-0104^adjective@E^high^เบื้องต้น^这只是一个初步的计划。^Zhè zhǐ shì yí ge chūbù de jìhuà.^นี่เป็นเพียงแผนเบื้องต้น^high^
+B3-0105^adjective@E^high^ระดับต้น^我在学初级汉语。^Wǒ zài xué chūjí Hànyǔ.^ฉันกำลังเรียนภาษาจีนระดับต้น^medium^source_gloss: "primary" is ambiguous; 初级 means "elementary; beginner level"
+B3-0106^noun@E^high^มัธยมต้น^我妹妹在上初中。^Wǒ mèimei zài shàng chūzhōng.^น้องสาวของฉันเรียนอยู่ชั้นมัธยมต้น^high^
+B3-0107^preposition@L^medium^นอกจาก; ยกเว้น^除了他，大家都来了。^Chúle tā, dàjiā dōu lái le.^นอกจากเขาแล้ว ทุกคนมากันหมด^medium^polysemy: "except" vs. "besides; in addition to" (除了…还…); gloss gives "except"
+B3-0108^verb@L^low^จัดการ; ดำเนินการ^这件事我来处理。^Zhè jiàn shì wǒ lái chǔlǐ.^เรื่องนี้ฉันจะจัดการเอง^low^source_gloss: gloss "Handle pass; pass on; hand down; impart; spread;" is merged with the next entry (传); only "handle" belongs to 处理
+B3-0109^verb@E^high^ส่งต่อ; ถ่ายทอด; แพร่^请把球传给我。^Qǐng bǎ qiú chuán gěi wǒ.^กรุณาส่งลูกบอลมาให้ฉัน^high^
+B3-0110^verb@E^high^แพร่กระจาย; เผยแพร่^这个消息很快就传播开了。^Zhège xiāoxi hěn kuài jiù chuánbō kāi le.^ข่าวนี้แพร่กระจายออกไปอย่างรวดเร็ว^high^
+B3-0111^verb@E^high^ดังมา; ส่งมา^外面传来了音乐声。^Wàimian chuánlái le yīnyuè shēng.^มีเสียงดนตรีดังมาจากข้างนอก^high^
+B3-0112^noun@E^high^ตำนาน^这是一个古老的传说。^Zhè shì yí ge gǔlǎo de chuánshuō.^นี่เป็นตำนานเก่าแก่เรื่องหนึ่ง^medium^polysemy: noun "legend" vs. verb "it is said" (传说他…); example shows the noun
+B3-0113^verb@E^high^สร้างสรรค์สิ่งใหม่; นวัตกรรม^年轻人要敢于创新。^Niánqīngrén yào gǎnyú chuàngxīn.^คนหนุ่มสาวต้องกล้าสร้างสรรค์สิ่งใหม่^high^
+B3-0114^verb@E^medium^เริ่มต้นธุรกิจ; บุกเบิก^他大学毕业后开始创业。^Tā dàxué bìyè hòu kāishǐ chuàngyè.^หลังเรียนจบมหาวิทยาลัยเขาเริ่มต้นธุรกิจ^medium^source_gloss: "carve out" is vague; 创业 means "start a business; found an enterprise"
+B3-0115^verb@E^high^สร้าง; สร้างสรรค์^我们要用双手创造美好的生活。^Wǒmen yào yòng shuāngshǒu chuàngzào měihǎo de shēnghuó.^พวกเราต้องสร้างชีวิตที่ดีด้วยสองมือของเรา^high^
+B3-0116^verb@L^medium^สร้างสรรค์ผลงาน (ศิลปะ/วรรณกรรม); ผลงาน^他正在创作一部小说。^Tā zhèngzài chuàngzuò yí bù xiǎoshuō.^เขากำลังเขียนนวนิยายเรื่องหนึ่ง^medium^pos_doubtful: gloss "A literary creation" is a noun, but 创作 is mainly the verb "create (art/literature)"
+B3-0117^adverb@E^medium^ตลอดมา; (ไม่) เคยเลย^他从来不迟到。^Tā cónglái bù chídào.^เขาไม่เคยมาสายเลย^medium^source_gloss: "Always" misses that 从来 is mostly used with negation ("never")
+B3-0118^noun@E^high^แต่ก่อน; สมัยก่อน^从前有一座山。^Cóngqián yǒu yí zuò shān.^กาลครั้งหนึ่งมีภูเขาลูกหนึ่ง^high^
+B3-0119^verb@E^high^ทำ (อาชีพ); ประกอบ (อาชีพ)^他从事教育工作。^Tā cóngshì jiàoyù gōngzuò.^เขาทำงานด้านการศึกษา^high^
+B3-0120^noun@E^high^หมู่บ้าน^我们村有一百多户人家。^Wǒmen cūn yǒu yìbǎi duō hù rénjiā.^หมู่บ้านเรามีบ้านเรือนกว่าหนึ่งร้อยหลัง^high^
+B3-0121^verb@E^high^ฝาก; เก็บ^我去银行存钱。^Wǒ qù yínháng cún qián.^ฉันไปฝากเงินที่ธนาคาร^high^
+B3-0122^verb@L^medium^มีอยู่; ดำรงอยู่^这个问题一直存在。^Zhège wèntí yìzhí cúnzài.^ปัญหานี้มีอยู่มาตลอด^medium^pos_doubtful: gloss "existence" is a noun, but 存在 is mainly the verb "exist"
+B3-0123^noun@E^high^ข้อผิดพลาด; ความผิด^请改正你的错误。^Qǐng gǎizhèng nǐ de cuòwù.^กรุณาแก้ไขข้อผิดพลาดของคุณ^medium^polysemy: noun "error" vs. adjective "wrong" (错误的看法); example shows the noun
+B3-0124^verb@E^high^บรรลุ; ถึง^他终于达到了自己的目标。^Tā zhōngyú dádào le zìjǐ de mùbiāo.^ในที่สุดเขาก็บรรลุเป้าหมายของตัวเอง^high^
+B3-0125^verb@E^high^ทำแตก; ทำลาย (สถิติ)^他打破了世界纪录。^Tā dǎpò le shìjiè jìlù.^เขาทำลายสถิติโลก^medium^polysemy: literal "break; smash" vs. figurative "break (a record)"; example shows figurative
+B3-0126^verb@E^high^สอบถาม; สืบถาม^我去打听一下他的消息。^Wǒ qù dǎting yí xià tā de xiāoxi.^ฉันจะไปสอบถามข่าวคราวของเขาหน่อย^high^
+B3-0127^adverb@E^high^คงจะ; ประมาณ^他大概不来了。^Tā dàgài bù lái le.^เขาคงจะไม่มาแล้ว^medium^polysemy: adverb "probably" vs. noun/adjective "general idea; approximate"
+B3-0128^noun@E^high^สถานทูต^他在中国大使馆工作。^Tā zài Zhōngguó dàshǐguǎn gōngzuò.^เขาทำงานที่สถานทูตจีน^high^
+B3-0129^adverb@E^high^ประมาณ^大约有一百人参加。^Dàyuē yǒu yìbǎi rén cānjiā.^มีผู้เข้าร่วมประมาณหนึ่งร้อยคน^high^
+B3-0130^noun@E^high^หมอ (ภาษาพูด)^大夫说我需要多休息。^Dàifu shuō wǒ xūyào duō xiūxi.^หมอบอกว่าฉันต้องพักผ่อนให้มาก^high^
+B3-0131^verb@E^high^แทน; ทำแทน^请代我向你父母问好。^Qǐng dài wǒ xiàng nǐ fùmǔ wènhǎo.^ฝากความคิดถึงไปยังพ่อแม่ของคุณแทนฉันด้วย^medium^polysemy: 代 also "generation; era" (noun); gloss gives verb "substitute"
+B3-0132^noun@E^medium^ผู้แทน; ตัวแทน; เป็นตัวแทน^他是我们班的代表。^Tā shì wǒmen bān de dàibiǎo.^เขาเป็นตัวแทนของห้องเรา^medium^pos_doubtful: 代表 is both noun "representative" and verb "represent"; example shows the noun
+B3-0133^noun@E^high^คณะผู้แทน^中国代表团已经到了。^Zhōngguó dàibiǎotuán yǐjīng dào le.^คณะผู้แทนจีนมาถึงแล้ว^high^
+B3-0134^verb@E^high^ขับเคลื่อน; กระตุ้น^旅游带动了当地经济。^Lǚyóu dàidòng le dāngdì jīngjì.^การท่องเที่ยวช่วยขับเคลื่อนเศรษฐกิจท้องถิ่น^high^
+B3-0135^verb@E^high^นำ; พา^老师带领我们参观博物馆。^Lǎoshī dàilǐng wǒmen cānguān bówùguǎn.^ครูพาพวกเราเยี่ยมชมพิพิธภัณฑ์^high^
+B3-0136^noun@E^high^หน่วย; บท; ห้องชุด^我们今天学习第三单元。^Wǒmen jīntiān xuéxí dì sān dānyuán.^วันนี้พวกเราเรียนหน่วยที่สาม^medium^polysemy: "unit (of a textbook)" vs. "apartment unit / entrance"; example shows textbook unit
+B3-0137^noun@E^medium^แต่แรก; ตอนแรก^当初我不同意他的看法。^Dāngchū wǒ bù tóngyì tā de kànfǎ.^ตอนแรกฉันไม่เห็นด้วยกับความคิดของเขา^medium^source_gloss: "Original" is loose; 当初 is the time noun "at that time; originally"
+B3-0138^noun@E^high^ท้องถิ่น^我们去尝尝当地的小吃。^Wǒmen qù chángchang dāngdì de xiǎochī.^พวกเราไปลองชิมของว่างท้องถิ่นกัน^high^
+B3-0139^adverb@L^high^แน่นอน^A：你会来吗？B：当然会来！^A: Nǐ huì lái ma? B: Dāngrán huì lái!^A: คุณจะมาไหม? B: มาแน่นอน!^high^
+B3-0140^noun@L^high^ในบรรดา; ตรงกลาง^我们当中谁最高？^Wǒmen dāngzhōng shéi zuì gāo?^ในบรรดาพวกเราใครสูงที่สุด?^high^
+B3-0141^noun@E^high^มีด^小心，这把刀很快。^Xiǎoxīn, zhè bǎ dāo hěn kuài.^ระวังนะ มีดเล่มนี้คมมาก^high^
+B3-0142^noun@E^high^ผู้กำกับ^他是一位有名的电影导演。^Tā shì yí wèi yǒumíng de diànyǐng dǎoyǎn.^เขาเป็นผู้กำกับภาพยนตร์ที่มีชื่อเสียง^medium^pos_doubtful: 导演 is both noun "director" and verb "direct"; example shows the noun
+B3-0143^verb@E^high^มาถึง; ไปถึง^火车下午三点到达北京。^Huǒchē xiàwǔ sān diǎn dàodá Běijīng.^รถไฟถึงปักกิ่งตอนบ่ายสามโมง^high^
+B3-0144^adverb@L^low^สุดท้ายแล้ว; ตกลงว่า; จนถึงที่สุด^你到底去不去？^Nǐ dàodǐ qù bu qù?^ตกลงคุณจะไปหรือไม่ไป?^medium^polysemy: verb "to the end" (坚持到底) vs. adverb "after all; on earth"; gloss gives the verb; example shows the adverb
+B3-0145^verb@E^medium^ทำคะแนน; คะแนนที่ได้^他在比赛中得分最多。^Tā zài bǐsài zhōng défēn zuì duō.^เขาทำคะแนนได้มากที่สุดในการแข่งขัน^medium^pos_doubtful: "score" is both verb and noun; example shows the verb
+B3-0146^verb@E^high^รอคอย^我们在等待他的回答。^Wǒmen zài děngdài tā de huídá.^พวกเรากำลังรอคำตอบจากเขา^high^
+B3-0147^noun@E^high^ข้างใต้; ข้างล่าง^桌子底下有一只猫。^Zhuōzi dǐxia yǒu yì zhī māo.^ใต้โต๊ะมีแมวอยู่ตัวหนึ่ง^high^
+B3-0148^noun@E^high^พื้นที่; ภูมิภาค^这个地区的天气很热。^Zhège dìqū de tiānqì hěn rè.^อากาศในพื้นที่นี้ร้อนมาก^high^
+B3-0149^noun@E^high^ละครโทรทัศน์; ซีรีส์^我最近在看一部电视剧。^Wǒ zuìjìn zài kàn yí bù diànshìjù.^ช่วงนี้ฉันกำลังดูละครทีวีเรื่องหนึ่ง^high^
+B3-0150^noun@E^high^สถานีโทรทัศน์^他在电视台工作。^Tā zài diànshìtái gōngzuò.^เขาทำงานที่สถานีโทรทัศน์^high^
+B3-0151^noun@E^high^สถานีวิทยุ^我每天早上听电台的新闻。^Wǒ měitiān zǎoshang tīng diàntái de xīnwén.^ฉันฟังข่าวจากสถานีวิทยุทุกเช้า^high^
+B3-0152^noun@E^high^อีเมล^请给我发电子邮件。^Qǐng gěi wǒ fā diànzǐ yóujiàn.^กรุณาส่งอีเมลมาหาฉัน^high^
+B3-0153^verb@E^high^โอนย้าย; ย้าย^他被调到北京工作了。^Tā bèi diào dào Běijīng gōngzuò le.^เขาถูกย้ายไปทำงานที่ปักกิ่งแล้ว^medium^variant: 调 diào (transfer) is a homograph of 调 tiáo (adjust); this row covers diào only
+B3-0154^noun@E^medium^การสำรวจ; การสอบสวน; สำรวจ^警察正在进行调查。^Jǐngchá zhèngzài jìnxíng diàochá.^ตำรวจกำลังดำเนินการสอบสวน^medium^pos_doubtful: 调查 is both noun and verb; example shows the noun
+B3-0155^verb@E^high^จอง; สั่ง; ทำ (สัญญา); แก้ไข^我订了两张电影票。^Wǒ dìng le liǎng zhāng diànyǐng piào.^ฉันจองตั๋วหนังไว้สองใบ^medium^polysemy: conclude (a treaty) / draw up / order / revise combined; example shows "order; book"
+B3-0156^adjective@E^high^เป็นประจำ; ตามกำหนด^你要定期检查身体。^Nǐ yào dìngqī jiǎnchá shēntǐ.^คุณต้องตรวจสุขภาพเป็นประจำ^high^
+B3-0157^noun@E^high^ภาคตะวันออก^上海在中国东部。^Shànghǎi zài Zhōngguó dōngbù.^เซี่ยงไฮ้อยู่ทางภาคตะวันออกของจีน^high^
+B3-0158^noun@E^high^พลังขับเคลื่อน; แรงจูงใจ^兴趣是学习的动力。^Xìngqù shì xuéxí de dònglì.^ความสนใจคือแรงจูงใจในการเรียน^medium^polysemy: "power" (mechanical) vs. "motivation"; example shows "motivation"
+B3-0159^adjective@E^high^ซาบซึ้ง; ประทับใจ^这是一个动人的故事。^Zhè shì yí ge dòngrén de gùshi.^นี่เป็นเรื่องราวที่ซาบซึ้งใจ^high^
+B3-0160^noun@E^high^ผู้อ่าน^这本书很受读者欢迎。^Zhè běn shū hěn shòu dúzhě huānyíng.^หนังสือเล่มนี้ได้รับความนิยมจากผู้อ่านมาก^high^
+B3-0161^noun@E^high^ข้อบกพร่อง; จุดอ่อน^每个人都有短处。^Měi ge rén dōu yǒu duǎnchù.^ทุกคนล้วนมีจุดอ่อน^high^
+B3-0162^noun@E^high^กางเกงขาสั้น^夏天我喜欢穿短裤。^Xiàtiān wǒ xǐhuan chuān duǎnkù.^หน้าร้อนฉันชอบใส่กางเกงขาสั้น^high^
+B3-0163^noun@L^medium^ระยะสั้น^他在这里短期工作。^Tā zài zhèlǐ duǎnqī gōngzuò.^เขาทำงานที่นี่ในระยะสั้น^high^
+B3-0164^verb@E^high^ขาด; หัก; ตัด^绳子断了。^Shéngzi duàn le.^เชือกขาดแล้ว^high^
+B3-0165^noun@E^high^สมาชิกทีม^他是我们球队的队员。^Tā shì wǒmen qiúduì de duìyuán.^เขาเป็นสมาชิกทีมของพวกเรา^high^
+B3-0166^verb@E^high^ปฏิบัติต่อ^我们要认真对待这个问题。^Wǒmen yào rènzhēn duìdài zhège wèntí.^พวกเราต้องจัดการกับปัญหานี้อย่างจริงจัง^high^
+B3-0167^noun@E^high^อีกฝ่าย; ฝ่ายตรงข้าม^他没有听清对方说的话。^Tā méiyǒu tīngqīng duìfāng shuō de huà.^เขาฟังไม่ชัดว่าอีกฝ่ายพูดอะไร^high^
+B3-0168^noun@E^high^คู่แข่ง; คู่ต่อสู้^他是一个很强的对手。^Tā shì yí ge hěn qiáng de duìshǒu.^เขาเป็นคู่แข่งที่แข็งแกร่งมาก^high^
+B3-0169^noun@E^medium^เป้าหมาย; วัตถุ; แฟน (คู่หมั้นหมาย)^我们调查的对象是大学生。^Wǒmen diàochá de duìxiàng shì dàxuéshēng.^กลุ่มเป้าหมายในการสำรวจของเราคือนักศึกษา^medium^polysemy: "object; target" vs. colloquial "boyfriend/girlfriend" (找对象); example shows "target"
+B3-0170^measure_word@L^low^มื้อ (ลักษณนามของมื้ออาหาร); ครั้ง^我一天吃三顿饭。^Wǒ yì tiān chī sān dùn fàn.^ฉันกินข้าววันละสามมื้อ^medium^source_gloss: gloss "Meal" reads as noun; 顿 is a measure word for meals and for scoldings/beatings; pos_doubtful: no source POS
+B3-0171^verb@E^high^ตีพิมพ์; แถลง^他在报纸上发表了一篇文章。^Tā zài bàozhǐ shang fābiǎo le yì piān wénzhāng.^เขาตีพิมพ์บทความหนึ่งบทในหนังสือพิมพ์^high^
+B3-0172^verb@E^high^ส่ง; ปล่อยออก; เปล่ง^手机发出了奇怪的声音。^Shǒujī fāchū le qíguài de shēngyīn.^โทรศัพท์มือถือส่งเสียงแปลกๆ ออกมา^high^
