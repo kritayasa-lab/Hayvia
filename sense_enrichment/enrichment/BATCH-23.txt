@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B3-0895^adverb@L^medium^เต็มๆ; ตลอดทั้ง^我整整等了你两个小时。^Wǒ zhěngzhěng děng le nǐ liǎng ge xiǎoshí.^ฉันรอคุณมาเต็มๆ สองชั่วโมง^medium^pos_doubtful: gloss "whole; full" is adjectival; 整整 is used adverbially before quantities
+B3-0897^adjective@E^high^เป็นทางการ^这是一次正式的会议。^Zhè shì yí cì zhèngshì de huìyì.^นี่เป็นการประชุมอย่างเป็นทางการ^high^
+B3-0898^noun@E^high^ใบรับรอง; หลักฐาน^请出示你的学生证。^Qǐng chūshì nǐ de xuéshengzhèng.^กรุณาแสดงบัตรนักศึกษาของคุณ^medium^example: bare 证 is mostly bound (学生证, 身份证); sentence uses a compound
+B3-0899^noun@E^high^เอกสารประจำตัว^过海关要带好证件。^Guò hǎiguān yào dài hǎo zhèngjiàn.^ผ่านศุลกากรต้องพกเอกสารประจำตัวให้พร้อม^high^
+B3-0900^noun@E^high^หลักฐาน^警察找到了新的证据。^Jǐngchá zhǎodào le xīn de zhèngjù.^ตำรวจพบหลักฐานใหม่^high^
+B3-0901^verb@E^medium^พิสูจน์; ใบรับรอง^事实证明他是对的。^Shìshí zhèngmíng tā shì duì de.^ข้อเท็จจริงพิสูจน์ว่าเขาถูก^high^
+B3-0903^verb@E^medium^สนับสนุน; การสนับสนุน^我们都支持你。^Wǒmen dōu zhīchí nǐ.^พวกเราทุกคนสนับสนุนคุณ^high^
+B3-0904^verb@E^high^ชำระเงิน; จ่าย^可以用手机支付吗？^Kěyǐ yòng shǒujī zhīfù ma?^จ่ายเงินด้วยโทรศัพท์มือถือได้ไหม?^high^
+B3-0905^adjective@L^low^เดี่ยว; โดดเดี่ยว; ตัว (ลักษณนามของสัตว์)^他只身一人来到北京。^Tā zhīshēn yì rén láidào Běijīng.^เขามาปักกิ่งเพียงลำพังคนเดียว^low^source_gloss: gloss "single; lonely" (literary 只身) omits the core band-3 measure word for animals (一只猫); polysemy: also homograph 只 zhǐ "only"
+B3-0906^adjective@E^high^ตรง^这条路很直。^Zhè tiáo lù hěn zhí.^ถนนสายนี้ตรงมาก^medium^polysemy: adjective "straight" vs. adverb "straight; continuously" (一直, 直哭)
+B3-0907^verb@L^medium^ถ่ายทอดสด^今晚的比赛电视会直播。^Jīnwǎn de bǐsài diànshì huì zhíbō.^การแข่งขันคืนนี้จะถ่ายทอดสดทางโทรทัศน์^medium^source_gloss: "on live" is garbled English; 直播 means "broadcast live / livestream"
+B3-0908^preposition@L^medium^จนกระทั่ง^他直到晚上十点才回家。^Tā zhídào wǎnshang shí diǎn cái huí jiā.^เขากลับบ้านจนกระทั่งสี่ทุ่ม^medium^pos_doubtful: 直到 is classed as verb or preposition ("until")
+B3-0909^verb@E^medium^มีค่า; มูลค่า^这块手表值多少钱？^Zhè kuài shǒubiǎo zhí duōshao qián?^นาฬิกาเรือนนี้มีมูลค่าเท่าไร?^medium^polysemy: noun "value" vs. verb "be worth"; also "be on duty" (值班); example shows "be worth"
+B3-0910^verb@E^high^คุ้มค่า; ควรค่า^这本书值得一读。^Zhè běn shū zhíde yì dú.^หนังสือเล่มนี้ควรค่าแก่การอ่าน^high^
+B3-0911^noun@E^high^พนักงาน; คนงาน^工厂有五百名职工。^Gōngchǎng yǒu wǔbǎi míng zhígōng.^โรงงานมีพนักงานห้าร้อยคน^high^
+B3-0912^noun@E^high^อาชีพ^你的职业是什么？^Nǐ de zhíyè shì shénme?^อาชีพของคุณคืออะไร?^high^
+B3-0913^adverb@L^high^จำต้อง; ไม่มีทางเลือกนอกจาก^没有车了，我只好走回家。^Méiyǒu chē le, wǒ zhǐhǎo zǒu huí jiā.^ไม่มีรถแล้ว ฉันจำต้องเดินกลับบ้าน^high^
+B3-0914^adverb@E^high^เพียงแค่; แต่^我只是想帮你。^Wǒ zhǐshì xiǎng bāng nǐ.^ฉันแค่อยากช่วยคุณ^medium^polysemy: adverb "merely" vs. conjunction "but; only that"; example shows "merely"
+B3-0915^conjunction@L^medium^เพียงแต่...เท่านั้น; มีเพียง^只有努力，才能成功。^Zhǐyǒu nǔlì, cái néng chénggōng.^ต้องพยายามเท่านั้นจึงจะประสบความสำเร็จ^medium^polysemy: conjunction "only if" (只有…才…) vs. adverb phrase "only have"; gloss "only" is ambiguous
+B3-0916^noun@E^low^นิ้ว; ชี้; หมายถึง^他用手指了指前面。^Tā yòng shǒu zhǐ le zhǐ qiánmiàn.^เขาใช้มือชี้ไปข้างหน้า^low^source_gloss: gloss "finger" (noun, usually 手指) omits the core verb "point; refer to"; polysemy: example shows the verb
+B3-0917^verb@E^high^ชี้ให้เห็น^老师指出了我的错误。^Lǎoshī zhǐchū le wǒ de cuòwù.^ครูชี้ให้เห็นข้อผิดพลาดของฉัน^high^
+B3-0918^verb@L^medium^แนะนำ; ชี้แนะ^谢谢您的指导。^Xièxie nín de zhǐdǎo.^ขอบคุณสำหรับคำชี้แนะของคุณ^medium^pos_doubtful: gloss "guidance" is a noun; 指导 is both verb "guide" and noun; example shows the noun use
+B3-0919^adverb@L^high^จนถึงทุกวันนี้^这件事至今还没解决。^Zhè jiàn shì zhìjīn hái méi jiějué.^เรื่องนี้จนถึงทุกวันนี้ก็ยังแก้ไม่ได้^high^
+B3-0920^adverb@E^high^อย่างน้อย^我至少要学三年。^Wǒ zhìshǎo yào xué sān nián.^ฉันต้องเรียนอย่างน้อยสามปี^high^
+B3-0921^noun@E^high^ความปรารถนา; ความตั้งใจ; อาสา^他的志愿是当一名老师。^Tā de zhìyuàn shì dāng yì míng lǎoshī.^ความปรารถนาของเขาคือการเป็นครู^medium^polysemy: noun "aspiration; wish" vs. verb/attributive "volunteer"; example shows "aspiration"
+B3-0922^noun@E^high^อาสาสมัคร^我想当一名志愿者。^Wǒ xiǎng dāng yì míng zhìyuànzhě.^ฉันอยากเป็นอาสาสมัคร^high^
+B3-0923^verb@E^high^กำหนด; วางแผน (นโยบาย)^我们制定了一个学习计划。^Wǒmen zhìdìng le yí ge xuéxí jìhuà.^พวกเราวางแผนการเรียนขึ้นมาแผนหนึ่ง^high^
+B3-0924^noun@E^high^ระบบ; ระเบียบ^学校有严格的考试制度。^Xuéxiào yǒu yángé de kǎoshì zhìdù.^โรงเรียนมีระบบการสอบที่เข้มงวด^high^
+B3-0925^verb@E^high^ผลิต^这家工厂制造汽车。^Zhè jiā gōngchǎng zhìzào qìchē.^โรงงานนี้ผลิตรถยนต์^high^
+B3-0926^verb@E^high^ทำ; สร้าง; ผลิต^这个蛋糕是妈妈自己制作的。^Zhège dàngāo shì māma zìjǐ zhìzuò de.^เค้กก้อนนี้แม่ทำเอง^high^
+B3-0927^noun@E^high^ภาคกลาง; ส่วนกลาง^湖北在中国中部。^Húběi zài Zhōngguó zhōngbù.^หูเป่ยอยู่ในภาคกลางของจีน^high^
+B3-0928^noun@E^high^ชนชาติจีน^中华民族有悠久的历史。^Zhōnghuá mínzú yǒu yōujiǔ de lìshǐ.^ชนชาติจีนมีประวัติศาสตร์ยาวนาน^high^
+B3-0929^adverb@E^high^ในที่สุด^我终于找到工作了。^Wǒ zhōngyú zhǎodào gōngzuò le.^ในที่สุดฉันก็หางานได้แล้ว^high^
+B3-0930^noun@E^high^ระฆัง; นาฬิกา; เวลา^墙上的钟停了。^Qiáng shang de zhōng tíng le.^นาฬิกาบนผนังหยุดเดินแล้ว^medium^polysemy: bell / clock / time (五分钟) combined; example shows "clock"
+B3-0932^noun@E^high^เมล็ดพันธุ์^春天是种种子的季节。^Chūntiān shì zhòng zhǒngzi de jìjié.^ฤดูใบไม้ผลิเป็นฤดูปลูกเมล็ดพันธุ์^high^
+B3-0933^adjective@E^high^สำคัญยิ่ง; ใหญ่หลวง^这是一个重大的决定。^Zhè shì yí ge zhòngdà de juédìng.^นี่เป็นการตัดสินใจครั้งสำคัญ^high^
+B3-0934^noun@E^high^รอบๆ; บริเวณรอบ^学校周围有很多商店。^Xuéxiào zhōuwéi yǒu hěn duō shāngdiàn.^รอบๆ โรงเรียนมีร้านค้ามากมาย^high^
+B3-0935^noun@E^high^หมู^农民养了很多猪。^Nóngmín yǎng le hěn duō zhū.^ชาวนาเลี้ยงหมูไว้มาก^high^
+B3-0936^verb@E^medium^ดำเนินรายการ; เป็นประธาน^今天的晚会由他主持。^Jīntiān de wǎnhuì yóu tā zhǔchí.^งานคืนนี้เขาเป็นพิธีกร^medium^source_gloss: "Host" may be read as noun; 主持 is the verb "host; preside over"
+B3-0937^adjective@E^high^ริเริ่มเอง; กระตือรือร้น^他总是主动帮助别人。^Tā zǒngshì zhǔdòng bāngzhù biérén.^เขามักริเริ่มช่วยเหลือคนอื่นเสมอ^high^
+B3-0938^noun@E^medium^หัวหน้า; ผู้อำนวยการ^他是我们的班主任。^Tā shì wǒmen de bānzhǔrèn.^เขาเป็นครูประจำชั้นของเรา^medium^source_gloss: "Headmaster" is narrow; 主任 means "director; head (of a department)"; example uses compound 班主任
+B3-0939^noun@E^high^ความคิด; ไอเดีย^这是个好主意！^Zhè shì ge hǎo zhǔyi!^นี่เป็นความคิดที่ดี!^high^
+B3-0940^noun@E^medium^ข้อเสนอ; ความเห็น; เสนอ^他的主张得到了大家的支持。^Tā de zhǔzhāng dédào le dàjiā de zhīchí.^ข้อเสนอของเขาได้รับการสนับสนุนจากทุกคน^medium^pos_doubtful: 主张 is both noun "position" and verb "advocate"; example shows the noun
+B3-0941^verb@E^medium^ระวัง; ใส่ใจ^过马路要注意安全。^Guò mǎlù yào zhùyì ānquán.^ข้ามถนนต้องระวังความปลอดภัย^medium^source_gloss: "Be careful" is one use; 注意 means "pay attention to; take note"
+B3-0942^verb@E^high^อวยพร^祝你身体健康！^Zhù nǐ shēntǐ jiànkāng!^ขอให้คุณสุขภาพแข็งแรง!^high^
+B3-0943^verb@E^high^คว้า; จับ^小猫抓住了一只老鼠。^Xiǎo māo zhuāzhù le yì zhī lǎoshǔ.^แมวน้อยจับหนูได้ตัวหนึ่ง^high^
+B3-0944^verb@E^high^จับไว้; คว้าไว้^你要抓住这个机会。^Nǐ yào zhuāzhù zhège jīhuì.^คุณต้องคว้าโอกาสนี้ไว้^high^
+B3-0945^noun@E^high^ผู้เชี่ยวชาญ^他是电脑方面的专家。^Tā shì diànnǎo fāngmiàn de zhuānjiā.^เขาเป็นผู้เชี่ยวชาญด้านคอมพิวเตอร์^high^
+B3-0946^adverb@L^medium^โดยเฉพาะ; เฉพาะทาง^我是专门来看你的。^Wǒ shì zhuānmén lái kàn nǐ de.^ฉันตั้งใจมาหาคุณโดยเฉพาะ^medium^polysemy: adjective "specialized" vs. adverb "specially; on purpose"; example shows the adverb
+B3-0947^noun@E^medium^หัวข้อพิเศษ; เรื่องเฉพาะ^电视台做了一个关于环保的专题。^Diànshìtái zuò le yí ge guānyú huánbǎo de zhuāntí.^สถานีโทรทัศน์ทำรายการพิเศษเกี่ยวกับสิ่งแวดล้อม^medium^source_gloss: "special collection" is loose; 专题 means "special topic / feature"
+B3-0948^noun@E^high^สาขาวิชาเอก; วิชาชีพ^你的专业是什么？^Nǐ de zhuānyè shì shénme?^คุณเรียนสาขาวิชาอะไร?^medium^polysemy: noun "major; specialty" vs. adjective "professional" (很专业)
+B3-0949^verb@E^high^หมุน; วน^地球绕着太阳转。^Dìqiú rào zhe tàiyáng zhuàn.^โลกหมุนรอบดวงอาทิตย์^medium^variant: 转 zhuàn (rotate) vs. 转 zhuǎn (turn; transfer) share the gloss "turn"
+B3-0950^verb@E^high^เปลี่ยนแปลง; เปลี่ยน^他的态度转变了。^Tā de tàidu zhuǎnbiàn le.^ท่าทีของเขาเปลี่ยนไปแล้ว^high^
+B3-0951^noun@E^high^สภาพ; สถานการณ์^他的身体状况很好。^Tā de shēntǐ zhuàngkuàng hěn hǎo.^สภาพร่างกายของเขาดีมาก^high^
+B3-0952^noun@E^high^สภาพ; สถานะ^他今天的状态很好。^Tā jīntiān de zhuàngtài hěn hǎo.^วันนี้เขาอยู่ในสภาพที่ดีมาก^high^
+B3-0953^verb@E^high^ไล่ตาม^小狗在追小猫。^Xiǎo gǒu zài zhuī xiǎo māo.^ลูกหมากำลังไล่ลูกแมว^high^
+B3-0954^adjective@L^low^แม่นยำ; อนุญาต; มาตรฐาน^他的发音很准。^Tā de fāyīn hěn zhǔn.^การออกเสียงของเขาแม่นยำมาก^low^polysemy: verb "permit; allow" vs. adjective "accurate" vs. noun "standard"; source_gloss: "follow" is not a clear sense; pos_doubtful: no source POS
+B3-0955^noun@E^high^คุณสมบัติ^他没有资格参加比赛。^Tā méiyǒu zīgé cānjiā bǐsài.^เขาไม่มีคุณสมบัติเข้าร่วมการแข่งขัน^high^
+B3-0956^noun@E^high^เงินทุน^这个项目需要很多资金。^Zhège xiàngmù xūyào hěn duō zījīn.^โครงการนี้ต้องใช้เงินทุนมาก^high^
+B3-0957^noun@E^high^บุตรธิดา; ลูกๆ^父母都希望子女过得好。^Fùmǔ dōu xīwàng zǐnǚ guò de hǎo.^พ่อแม่ล้วนหวังให้ลูกๆ มีชีวิตที่ดี^high^
+B3-0958^preposition@E^high^ตั้งแต่^自从来了中国，我每天都说汉语。^Zìcóng lái le Zhōngguó, wǒ měitiān dōu shuō Hànyǔ.^ตั้งแต่มาจีน ฉันพูดภาษาจีนทุกวัน^high^
+B3-0959^adjective@E^high^อัตโนมัติ^这扇门是自动的。^Zhè shàn mén shì zìdòng de.^ประตูบานนี้เป็นแบบอัตโนมัติ^high^
+B3-0960^adjective@E^medium^สำนึกด้วยตนเอง; รู้ตัว^他学习很自觉。^Tā xuéxí hěn zìjué.^เขาเรียนด้วยความรับผิดชอบของตัวเอง^medium^source_gloss: "Conscious" is loose; 自觉 means "self-disciplined; on one's own initiative" (also verb "be aware")
+B3-0961^adjective@E^high^เป็นธรรมชาติ; ธรรมชาติ^他说汉语说得很自然。^Tā shuō Hànyǔ shuō de hěn zìrán.^เขาพูดภาษาจีนได้อย่างเป็นธรรมชาติ^medium^polysemy: adjective "natural" vs. noun "nature" (大自然) and adverb "naturally; of course"
+B3-0962^pronoun@L^medium^ตัวเอง; ตนเอง^每个人都要注意自身的安全。^Měi ge rén dōu yào zhùyì zìshēn de ānquán.^ทุกคนต้องใส่ใจความปลอดภัยของตัวเอง^high^
+B3-0963^verb@L^medium^ตัดสินใจเอง; เป็นอิสระ^孩子应该学会自主学习。^Háizi yīnggāi xuéhuì zìzhǔ xuéxí.^เด็กควรเรียนรู้ที่จะเรียนด้วยตัวเอง^medium^source_gloss: "Autonomy" is a noun; 自主 is verb/adjective "act on one's own; independent"
+B3-0964^adverb@E^high^เสมอ; ตลอด^他总迟到。^Tā zǒng chídào.^เขามาสายเสมอ^medium^polysemy: adverb "always" vs. adjective "total; general" (总经理); also "after all"
+B3-0965^verb@L^medium^สรุป; บทสรุป^请总结一下这次活动。^Qǐng zǒngjié yí xià zhè cì huódòng.^กรุณาสรุปกิจกรรมครั้งนี้หน่อย^medium^pos_doubtful: gloss "summary" is a noun; 总结 is both verb and noun; example shows the verb
+B3-0966^adverb@E^high^เสมอ; ตลอด^他总是很忙。^Tā zǒngshì hěn máng.^เขายุ่งอยู่เสมอ^high^
+B3-0967^adjective@E^high^เพียงพอ^我们有足够的时间。^Wǒmen yǒu zúgòu de shíjiān.^พวกเรามีเวลาเพียงพอ^high^
+B3-0968^noun@E^high^ฟุตบอล^他每天下午踢足球。^Tā měitiān xiàwǔ tī zúqiú.^เขาเตะฟุตบอลทุกบ่าย^high^
+B3-0969^noun@E^medium^การผสมผสาน; กลุ่ม; ผสม^这是一个很好的组合。^Zhè shì yí ge hěn hǎo de zǔhé.^นี่เป็นการผสมผสานที่ดีมาก^medium^polysemy: noun "combination; (music) group" vs. verb "combine"
+B3-0970^noun@L^medium^ประมาณ; ราวๆ; ซ้ายและขวา^他三十岁左右。^Tā sānshí suì zuǒyòu.^เขาอายุประมาณสามสิบปี^medium^polysemy: "about; approximately" vs. literal "left and right" and verb "control"; pos_doubtful: post-numeral 左右 is a noun of approximation
+B3-0971^noun@E^high^ผลงาน^这是他最有名的作品。^Zhè shì tā zuì yǒumíng de zuòpǐn.^นี่คือผลงานที่มีชื่อเสียงที่สุดของเขา^high^
+B3-0972^noun@E^high^ผู้แต่ง; ผู้เขียน^这本书的作者是谁？^Zhè běn shū de zuòzhě shì shéi?^ใครเป็นผู้แต่งหนังสือเล่มนี้?^high^
+B3-0973^verb@E^high^ไปเป็นแขก; ไปเยี่ยม^周末我去朋友家做客。^Zhōumò wǒ qù péngyou jiā zuòkè.^สุดสัปดาห์ฉันไปเป็นแขกที่บ้านเพื่อน^high^
+B4-0001^noun@E^high^ป้า; น้า; (เรียกผู้หญิงวัยกลางคน)^阿姨，请问邮局在哪儿？^Āyí, qǐngwèn yóujú zài nǎr?^คุณป้าครับ ขอถามหน่อยไปรษณีย์อยู่ที่ไหน?^medium^polysemy: kinship "aunt" vs. address term for women and "nanny; housekeeper"; example shows address term
+B4-0002^interjection@E^high^อ้า; โอ้ (คำอุทาน)^啊！原来是你！^À! Yuánlái shì nǐ!^อ้า! ที่แท้ก็คุณนี่เอง!^medium^variant: interjection 啊 (tones vary: ā/á/ǎ/à) vs. particle 啊 a (B2-0001); source pinyin "a" is toneless
+B4-0003^adjective@E^high^เตี้ย^他比我矮一点儿。^Tā bǐ wǒ ǎi yìdiǎnr.^เขาเตี้ยกว่าฉันนิดหน่อย^high^
+B4-0004^adjective@E^high^เตี้ยเล็ก^他个子很矮小。^Tā gèzi hěn ǎixiǎo.^เขารูปร่างเตี้ยเล็ก^high^
+B4-0005^verb@E^high^รักชาติ^他是一个爱国的人。^Tā shì yí ge àiguó de rén.^เขาเป็นคนรักชาติ^high^
+B4-0006^verb@E^high^ดูแลรักษา; ทะนุถนอม^我们要爱护公共财物。^Wǒmen yào àihù gōnggòng cáiwù.^พวกเราต้องดูแลรักษาทรัพย์สินสาธารณะ^high^
+B4-0007^adjective@L^low^สงบ; ปลอดภัย; ติดตั้ง^我在这儿住得很安心。^Wǒ zài zhèr zhù de hěn ānxīn.^ฉันอยู่ที่นี่อย่างสบายใจ^low^polysemy: adjective "quiet; safe" vs. verb "install; fix"; pos_doubtful: no source POS; example: bare 安 is bound, sentence uses 安心
+B4-0008^verb@E^high^จัดวาง; จัดหาที่อยู่ให้^政府安置了受灾的群众。^Zhèngfǔ ānzhì le shòuzāi de qúnzhòng.^รัฐบาลจัดหาที่อยู่ให้ผู้ประสบภัย^high^
+B4-0009^adverb@E^high^ตรงเวลา^请按时交作业。^Qǐng ànshí jiāo zuòyè.^กรุณาส่งการบ้านตรงเวลา^high^
+B4-0010^adjective@E^high^มืด^房间里太暗了，开灯吧。^Fángjiān li tài àn le, kāi dēng ba.^ในห้องมืดเกินไป เปิดไฟเถอะ^high^
+B4-0011^verb@E^high^บอกเป็นนัย^他用眼神暗示我别说话。^Tā yòng yǎnshén ànshì wǒ bié shuōhuà.^เขาใช้สายตาบอกเป็นนัยให้ฉันอย่าพูด^high^
+B4-0012^noun@E^high^รถบัส^我们坐巴士去机场。^Wǒmen zuò bāshì qù jīchǎng.^พวกเรานั่งรถบัสไปสนามบิน^high^
+B4-0013^noun@E^high^ห้างสรรพสินค้า; สินค้าเบ็ดเตล็ด^我去百货商店买东西。^Wǒ qù bǎihuò shāngdiàn mǎi dōngxi.^ฉันไปซื้อของที่ห้างสรรพสินค้า^medium^polysemy: "general merchandise" vs. "department store" (百货商店); example uses the compound
+B4-0014^verb@L^low^วาง; จัดวาง; แกว่ง; ลูกตุ้ม^桌子上摆着很多书。^Zhuōzi shang bǎi zhe hěn duō shū.^บนโต๊ะมีหนังสือวางอยู่มากมาย^low^source_gloss: gloss "pendulum" (noun) omits the core verb "put; arrange; swing"; polysemy: example shows "arrange"
+B4-0015^verb@E^high^แกว่ง; โยก^树枝在风中摆动。^Shùzhī zài fēng zhōng bǎidòng.^กิ่งไม้แกว่งไปมาในสายลม^high^
+B4-0016^verb@E^high^สลัดทิ้ง; หลุดพ้น^他终于摆脱了困难。^Tā zhōngyú bǎituō le kùnnan.^ในที่สุดเขาก็หลุดพ้นจากความยากลำบาก^high^
+B4-0017^verb@E^high^แพ้; ทำให้แพ้; ล้มเหลว^我们队败给了对手。^Wǒmen duì bài gěi le duìshǒu.^ทีมของเราแพ้คู่แข่ง^medium^polysemy: "defeat; beat" (transitive) vs. "fail; lose" (intransitive); example shows "lose"
+B4-0018^verb@E^high^ทำธุระ; ทำงาน^他办事很认真。^Tā bànshì hěn rènzhēn.^เขาทำงานอย่างจริงจัง^high^
+B4-0019^noun@E^high^พัสดุ; ห่อ^我去邮局寄包裹。^Wǒ qù yóujú jì bāoguǒ.^ฉันไปส่งพัสดุที่ไปรษณีย์^high^
+B4-0020^verb@E^high^ประกอบด้วย; บรรจุ^这句话包含了很多意思。^Zhè jù huà bāohán le hěn duō yìsi.^ประโยคนี้มีความหมายหลายอย่าง^high^
+B4-0021^verb@E^high^รวมถึง^价格包括早餐。^Jiàgé bāokuò zǎocān.^ราคารวมอาหารเช้าแล้ว^high^
+B4-0022^adjective@E^high^บาง^这本书很薄。^Zhè běn shū hěn báo.^หนังสือเล่มนี้บางมาก^high^
+B4-0023^noun@E^medium^สมบัติ; ล้ำค่า^这是我家的传家宝。^Zhè shì wǒ jiā de chuánjiābǎo.^นี่คือสมบัติตกทอดของบ้านฉัน^medium^polysemy: noun "treasure" vs. adjective "precious"; example: bare 宝 is bound, sentence uses 传家宝
+B4-0024^noun@E^high^ลูกน้อย; ที่รัก^宝宝，快来吃饭。^Bǎobao, kuài lái chīfàn.^ลูกจ๋า รีบมากินข้าวเร็ว^high^
