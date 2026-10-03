@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B3-0173^adjective@E^high^พัฒนาแล้ว; เจริญ^这是一个发达国家。^Zhè shì yí ge fādá guójiā.^นี่เป็นประเทศที่พัฒนาแล้ว^high^
+B3-0174^verb@E^high^เริ่ม; ปลุกระดม; สตาร์ท (เครื่องยนต์)^他发动了汽车。^Tā fādòng le qìchē.^เขาสตาร์ทรถยนต์^medium^polysemy: "launch (a campaign); mobilize" vs. "start (an engine)"; example shows "start"
+B3-0175^noun@E^medium^สิ่งประดิษฐ์; ประดิษฐ์^电话是一个伟大的发明。^Diànhuà shì yí ge wěidà de fāmíng.^โทรศัพท์เป็นสิ่งประดิษฐ์ที่ยิ่งใหญ่^high^
+B3-0176^verb@E^high^เกิดขึ้น^这里发生了什么事？^Zhèlǐ fāshēng le shénme shì?^ที่นี่เกิดอะไรขึ้น?^high^
+B3-0177^verb@E^high^ส่ง^我已经把邮件发送给你了。^Wǒ yǐjīng bǎ yóujiàn fāsòng gěi nǐ le.^ฉันส่งอีเมลให้คุณแล้ว^high^
+B3-0178^verb@E^medium^พูด; แสดงความเห็น (ในที่ประชุม)^会上他第一个发言。^Huì shang tā dì yī ge fāyán.^ในที่ประชุมเขาเป็นคนแรกที่แสดงความเห็น^high^
+B3-0179^noun@E^medium^การพัฒนา; พัฒนา^这个城市的发展很快。^Zhège chéngshì de fāzhǎn hěn kuài.^การพัฒนาของเมืองนี้รวดเร็วมาก^high^
+B3-0180^verb@L^medium^คัดค้าน; ต่อต้าน^很多人反对这个计划。^Hěn duō rén fǎnduì zhège jìhuà.^หลายคนคัดค้านแผนนี้^medium^source_gloss: "Opposition" is a noun; 反对 is mainly the verb "oppose"
+B3-0181^adverb@E^high^ซ้ำแล้วซ้ำเล่า^我反复读了好几遍。^Wǒ fǎnfù dú le hǎo jǐ biàn.^ฉันอ่านซ้ำแล้วซ้ำเล่าหลายรอบ^high^
+B3-0182^noun@E^high^ปฏิกิริยา; การตอบสนอง^听到这个消息，他没有什么反应。^Tīngdào zhège xiāoxi, tā méiyǒu shénme fǎnyìng.^พอได้ยินข่าวนี้ เขาก็ไม่มีปฏิกิริยาอะไร^high^
+B3-0183^adverb@E^high^ยังไงก็; อย่างไรเสีย^你别急，反正还有时间。^Nǐ bié jí, fǎnzhèng hái yǒu shíjiān.^ไม่ต้องรีบ ยังไงก็ยังมีเวลาอยู่^high^
+B3-0184^noun@E^high^ขอบเขต; ขอบข่าย^这不在我们讨论的范围内。^Zhè bú zài wǒmen tǎolùn de fànwéi nèi.^เรื่องนี้ไม่อยู่ในขอบเขตที่เราจะหารือ^high^
+B3-0185^noun@E^high^วิธี; รูปแบบ^每个人的学习方式不一样。^Měi ge rén de xuéxí fāngshì bù yíyàng.^แต่ละคนมีวิธีการเรียนไม่เหมือนกัน^high^
+B3-0186^verb@E^high^ป้องกัน^冬天要注意防感冒。^Dōngtiān yào zhùyì fáng gǎnmào.^ฤดูหนาวต้องระวังป้องกันหวัด^high^
+B3-0187^verb@E^high^ป้องกัน; กันไม่ให้^我们要防止这种事情再发生。^Wǒmen yào fángzhǐ zhè zhǒng shìqing zài fāshēng.^พวกเราต้องป้องกันไม่ให้เรื่องแบบนี้เกิดขึ้นอีก^high^
+B3-0188^noun@E^high^เจ้าของบ้าน (ผู้ให้เช่า)^房东人很好。^Fángdōng rén hěn hǎo.^เจ้าของบ้านเป็นคนดีมาก^high^
+B3-0189^noun@E^high^บ้านเรือน; อาคาร^这里的房屋都很旧。^Zhèlǐ de fángwū dōu hěn jiù.^บ้านเรือนที่นี่เก่ามาก^high^
+B3-0190^noun@E^high^ค่าเช่าบ้าน^这里的房租太贵了。^Zhèlǐ de fángzū tài guì le.^ค่าเช่าบ้านที่นี่แพงเกินไป^high^
+B3-0191^verb@E^high^เยี่ยมเยือน; เข้าเยี่ยมชม^总统访问了中国。^Zǒngtǒng fǎngwèn le Zhōngguó.^ประธานาธิบดีเยือนประเทศจีน^medium^polysemy: "visit (officially)" vs. "access (a website)"; example shows official visit
+B3-0192^verb@E^high^วางไว้ที่; ใส่ลงใน^请把书放到书架上。^Qǐng bǎ shū fàngdào shūjià shang.^กรุณาวางหนังสือไว้บนชั้นหนังสือ^high^
+B3-0193^noun@E^medium^การบิน; บิน^这次飞行很顺利。^Zhè cì fēixíng hěn shùnlì.^การบินครั้งนี้ราบรื่นดี^high^
+B3-0194^noun@E^high^ค่าธรรมเนียม; ค่าใช้จ่าย^这个月的电费很高。^Zhège yuè de diànfèi hěn gāo.^ค่าไฟเดือนนี้สูงมาก^medium^polysemy: noun "fee" vs. verb "cost; waste" (费时间); example uses compound 电费
+B3-0195^noun@E^high^ค่าใช้จ่าย^这次旅行的费用是多少？^Zhè cì lǚxíng de fèiyòng shì duōshao?^ค่าใช้จ่ายของการเดินทางครั้งนี้เท่าไร?^high^
+B3-0196^verb@E^low^แยกจากกัน; ตามลำดับ; ความแตกต่าง^我们分别了十年。^Wǒmen fēnbié le shí nián.^พวกเราแยกจากกันมาสิบปี^low^source_gloss: gloss "part" is ambiguous (verb "part from" vs. noun); polysemy: 分别 also adverb "separately; respectively" and noun "difference"; example shows "part from"
+B3-0197^verb@L^medium^แบ่งสรร; จัดสรร^公司给他分配了一个新任务。^Gōngsī gěi tā fēnpèi le yí ge xīn rènwu.^บริษัทมอบหมายงานใหม่ให้เขาหนึ่งงาน^medium^source_gloss: "distribution" is a noun; 分配 is mainly the verb "allocate; assign"
+B3-0198^verb@L^medium^แบ่งกลุ่ม^老师让我们分组讨论。^Lǎoshī ràng wǒmen fēnzǔ tǎolùn.^ครูให้พวกเราแบ่งกลุ่มอภิปราย^medium^source_gloss: "grouping" is a noun; 分组 is the verb phrase "divide into groups"
+B3-0199^adjective@E^high^อุดมสมบูรณ์; หลากหลาย^他的经验很丰富。^Tā de jīngyàn hěn fēngfù.^เขามีประสบการณ์มาก^medium^polysemy: adjective "rich; abundant" vs. verb "enrich" (丰富生活); example shows adjective
+B3-0200^noun@E^high^ความเสี่ยง^做生意有风险。^Zuò shēngyi yǒu fēngxiǎn.^การทำธุรกิจมีความเสี่ยง^high^
+B3-0201^verb@L^low^ปฏิเสธ; ในแง่ลบ^他否定了我的想法。^Tā fǒudìng le wǒ de xiǎngfǎ.^เขาปฏิเสธความคิดของฉัน^medium^polysemy: verb "negate; deny" vs. adjective "negative" (否定句); gloss gives adjective, example shows verb
+B3-0202^verb@E^high^ปฏิเสธ (ไม่ยอมรับ)^他否认自己拿了钱。^Tā fǒurèn zìjǐ ná le qián.^เขาปฏิเสธว่าไม่ได้เอาเงินไป^high^
+B3-0203^noun@E^high^เครื่องแต่งกาย; เสื้อผ้า^这家店卖儿童服装。^Zhè jiā diàn mài értóng fúzhuāng.^ร้านนี้ขายเสื้อผ้าเด็ก^high^
+B3-0204^noun@E^high^โชคดี; ความสุข; บุญ^春节的时候，人们在门上贴“福”字。^Chūnjié de shíhou, rénmen zài mén shang tiē “fú” zì.^ช่วงตรุษจีน ผู้คนติดอักษร “ฝู” ไว้ที่ประตู^high^
+B3-0205^noun@E^high^พ่อแม่^我的父母都是老师。^Wǒ de fùmǔ dōu shì lǎoshī.^พ่อแม่ของฉันเป็นครูทั้งคู่^high^
+B3-0206^noun@E^high^บิดา; พ่อ^我父亲今年六十岁。^Wǒ fùqīn jīnnián liùshí suì.^คุณพ่อของฉันปีนี้อายุหกสิบปี^high^
+B3-0207^verb@E^high^จ่าย; มอบ^我来付钱。^Wǒ lái fù qián.^ฉันจ่ายเอง^medium^polysemy: "pay" vs. "commit; hand over" (付诸实践); example shows "pay"
+B3-0208^verb@E^high^รับผิดชอบ^这件事由我负责。^Zhè jiàn shì yóu wǒ fùzé.^เรื่องนี้ฉันเป็นผู้รับผิดชอบ^medium^polysemy: verb "be responsible for" vs. adjective "conscientious" (他很负责)
+B3-0209^verb@E^high^ถ่ายเอกสาร^请帮我复印这份材料。^Qǐng bāng wǒ fùyìn zhè fèn cáiliào.^กรุณาช่วยถ่ายเอกสารชุดนี้ให้หน่อย^high^
+B3-0210^adjective@E^high^ซับซ้อน^这个问题很复杂。^Zhège wèntí hěn fùzá.^ปัญหานี้ซับซ้อนมาก^high^
+B3-0211^adjective@E^high^รวย; ร่ำรวย^他家很富。^Tā jiā hěn fù.^บ้านเขารวยมาก^high^
+B3-0212^verb@L^medium^ปรับปรุง; พัฒนาให้ดีขึ้น^我们要改进工作方法。^Wǒmen yào gǎijìn gōngzuò fāngfǎ.^พวกเราต้องปรับปรุงวิธีการทำงาน^medium^source_gloss: "Improvement" is a noun; 改进 is mainly the verb "improve"
+B3-0213^verb@E^high^ปรับปรุงเปลี่ยนแปลง; ปฏิรูป^这条老街被改造成了步行街。^Zhè tiáo lǎo jiē bèi gǎizào chéng le bùxíngjiē.^ถนนเก่าสายนี้ถูกปรับปรุงเป็นถนนคนเดิน^high^
+B3-0214^noun@E^high^แนวคิด; ความคิดรวบยอด^这个概念很难理解。^Zhège gàiniàn hěn nán lǐjiě.^แนวคิดนี้เข้าใจยากมาก^high^
+B3-0215^verb@E^high^ไล่ตาม; เร่งรีบ; ตามทัน^我要赶第一班车。^Wǒ yào gǎn dì yī bān chē.^ฉันต้องรีบไปให้ทันรถเที่ยวแรก^medium^polysemy: catch up with / rush / drive away combined; example shows "rush to catch"
+B3-0216^verb@E^high^รีบไปถึง^他及时赶到了机场。^Tā jíshí gǎndào le jīchǎng.^เขารีบไปถึงสนามบินได้ทันเวลา^high^
+B3-0217^adverb@E^high^รีบ; โดยเร็ว^天要下雨了，赶紧回家吧。^Tiān yào xià yǔ le, gǎnjǐn huí jiā ba.^ฝนจะตกแล้ว รีบกลับบ้านเถอะ^high^
+B3-0218^adverb@L^medium^รีบ; เร็วเข้า^赶快走吧，要迟到了！^Gǎnkuài zǒu ba, yào chídào le!^รีบไปเถอะ จะสายแล้ว!^medium^source_gloss: "Come on" is a loose rendering; 赶快 is the adverb "quickly; hurry"
+B3-0219^auxiliary@L^high^กล้า^你敢一个人去吗？^Nǐ gǎn yí ge rén qù ma?^คุณกล้าไปคนเดียวไหม?^high^
+B3-0220^verb@L^medium^เป็นหวัด; ไข้หวัด^我感冒了。^Wǒ gǎnmào le.^ฉันเป็นหวัด^medium^source_gloss: "Cold" is ambiguous in English (temperature vs. illness); 感冒 = catch a cold / the common cold
+B3-0221^noun@E^high^ความรู้สึก; ความผูกพัน^他们两个人的感情很好。^Tāmen liǎng ge rén de gǎnqíng hěn hǎo.^ความสัมพันธ์ของทั้งสองคนดีมาก^high^
+B3-0222^verb@E^medium^สัมผัส; รู้สึก; ความรู้สึก^你能感受到他的热情吗？^Nǐ néng gǎnshòu dào tā de rèqíng ma?^คุณสัมผัสได้ถึงความอบอุ่นของเขาไหม?^medium^pos_doubtful: 感受 is both verb "feel" and noun "impression"; example shows the verb
+B3-0223^pronoun@L^medium^ทำไม; ทำอะไร (ภาษาพูด)^你干吗不早说？^Nǐ gànmá bù zǎo shuō?^ทำไมคุณไม่บอกแต่แรก?^medium^polysemy: "why" vs. "what (are you) doing"; colloquial; example shows "why"
+B3-0224^adjective@E^high^ความเร็วสูง^这是一列高速列车。^Zhè shì yí liè gāosù lièchē.^นี่คือรถไฟความเร็วสูงขบวนหนึ่ง^high^
+B3-0225^noun@E^high^ทางด่วน^我们走高速公路吧。^Wǒmen zǒu gāosù gōnglù ba.^พวกเราไปทางด่วนกันเถอะ^high^
+B3-0226^verb@E^medium^อำลา; บอกลา^他向大家告别。^Tā xiàng dàjiā gàobié.^เขาบอกลาทุกคน^high^
+B3-0227^noun@E^high^แฟนเพลง^她是这个歌手的歌迷。^Tā shì zhège gēshǒu de gēmí.^เธอเป็นแฟนเพลงของนักร้องคนนี้^high^
+B3-0228^noun@E^high^เสียงร้องเพลง^教室里传来了歌声。^Jiàoshì li chuánlái le gēshēng.^มีเสียงร้องเพลงดังมาจากห้องเรียน^high^
+B3-0229^noun@E^high^นักร้อง^她是一位有名的歌手。^Tā shì yí wèi yǒumíng de gēshǒu.^เธอเป็นนักร้องที่มีชื่อเสียง^high^
+B3-0230^noun@L^medium^ส่วนตัว; ปัจเจกบุคคล^这是我的个人意见。^Zhè shì wǒ de gèrén yìjiàn.^นี่เป็นความเห็นส่วนตัวของฉัน^medium^pos_doubtful: gloss "personal" is adjectival; 个人 is a noun ("individual") used attributively
+B3-0231^noun@E^high^บุคลิกภาพ; ลักษณะเฉพาะตัว^她是一个很有个性的人。^Tā shì yí ge hěn yǒu gèxìng de rén.^เธอเป็นคนที่มีบุคลิกเฉพาะตัวมาก^high^
+B3-0232^pronoun@L^medium^แต่ละ; ทุก^各国人民都喜欢和平。^Gè guó rénmín dōu xǐhuan hépíng.^ประชาชนทุกประเทศล้วนรักสันติภาพ^medium^source_gloss: "various" is loose; 各 means "each; every"
+B3-0233^noun@E^high^ทุกท้องที่; ที่ต่างๆ^全国各地的人都来了。^Quánguó gèdì de rén dōu lái le.^ผู้คนจากทั่วประเทศมากันหมด^high^
+B3-0234^pronoun@L^high^ทุกท่าน^各位，请安静一下。^Gèwèi, qǐng ānjìng yí xià.^ทุกท่าน กรุณาเงียบสักครู่^high^
+B3-0235^pronoun@L^medium^ทุกชนิด; หลากหลาย^超市里有各种水果。^Chāoshì li yǒu gè zhǒng shuǐguǒ.^ในซูเปอร์มาร์เก็ตมีผลไม้ทุกชนิด^high^
+B3-0236^pronoun@L^high^แต่ละคน; ต่างคนต่าง^下课后大家各自回家。^Xiàkè hòu dàjiā gèzì huí jiā.^หลังเลิกเรียนทุกคนต่างแยกย้ายกลับบ้าน^high^
+B3-0237^adverb@E^medium^เลย (ใช้กับปฏิเสธ); โดยสิ้นเชิง; พื้นฐาน^我根本不认识他。^Wǒ gēnběn bú rènshi tā.^ฉันไม่รู้จักเขาเลย^medium^polysemy: adverb "at all" vs. noun/adjective "root; fundamental"; example shows "at all"
+B3-0238^adverb@E^high^ยิ่งขึ้น^他变得更加努力了。^Tā biàn de gèngjiā nǔlì le.^เขาขยันยิ่งขึ้นกว่าเดิม^high^
+B3-0239^noun@E^high^โรงงาน^这家工厂有五百个工人。^Zhè jiā gōngchǎng yǒu wǔbǎi ge gōngrén.^โรงงานนี้มีคนงานห้าร้อยคน^high^
+B3-0240^noun@E^high^วิศวกร^我哥哥是一名工程师。^Wǒ gēge shì yì míng gōngchéngshī.^พี่ชายของฉันเป็นวิศวกร^high^
+B3-0241^noun@E^high^เวลา; ความพยายาม^我没工夫跟你聊天。^Wǒ méi gōngfu gēn nǐ liáotiān.^ฉันไม่มีเวลาคุยกับคุณ^medium^variant: 工夫 (time; effort) overlaps 功夫 (B3-0250, kung fu; skill); spellings are often interchanged
+B3-0242^noun@E^high^เครื่องมือ^手机是很重要的工具。^Shǒujī shì hěn zhòngyào de gōngjù.^โทรศัพท์มือถือเป็นเครื่องมือที่สำคัญมาก^high^
+B3-0243^noun@E^high^อุตสาหกรรม^这个城市的工业很发达。^Zhège chéngshì de gōngyè hěn fādá.^อุตสาหกรรมของเมืองนี้พัฒนามาก^high^
+B3-0244^noun@E^high^เงินเดือน; ค่าจ้าง^他的工资很高。^Tā de gōngzī hěn gāo.^เงินเดือนของเขาสูงมาก^high^
+B3-0245^verb@E^high^ประกาศ; เผยแพร่ต่อสาธารณะ^考试成绩已经公布了。^Kǎoshì chéngjì yǐjīng gōngbù le.^ผลสอบประกาศแล้ว^high^
+B3-0246^adjective@E^high^สาธารณะ; ส่วนรวม^这是公共场所，请不要大声说话。^Zhè shì gōnggòng chǎngsuǒ, qǐng búyào dàshēng shuōhuà.^นี่เป็นที่สาธารณะ กรุณาอย่าพูดเสียงดัง^high^
+B3-0247^adjective@E^medium^เปิดเผย; เปิดต่อสาธารณะ^这次会议是公开的。^Zhè cì huìyì shì gōngkāi de.^การประชุมครั้งนี้เปิดต่อสาธารณะ^medium^source_gloss: "open" is ambiguous; 公开 means "public; make public", not "open (a door)"
+B3-0248^noun@E^high^พลเมือง^每个公民都有投票的权利。^Měi ge gōngmín dōu yǒu tóupiào de quánlì.^พลเมืองทุกคนมีสิทธิ์ลงคะแนนเสียง^high^
+B3-0249^noun@E^high^ข้าราชการ^他考上了公务员。^Tā kǎoshàng le gōngwùyuán.^เขาสอบเข้ารับราชการได้แล้ว^high^
+B3-0250^noun@E^high^กังฟู; ฝีมือ^他从小学习中国功夫。^Tā cóngxiǎo xuéxí Zhōngguó gōngfu.^เขาเรียนกังฟูจีนมาตั้งแต่เด็ก^medium^polysemy: "kung fu" vs. "skill; effort; time" (下功夫); variant: overlaps 工夫 (B3-0241)
+B3-0251^noun@E^high^การบ้าน; บทเรียน^我做完功课了。^Wǒ zuò wán gōngkè le.^ฉันทำการบ้านเสร็จแล้ว^high^
+B3-0252^noun@E^high^ฟังก์ชัน; หน้าที่การใช้งาน^这个手机有很多功能。^Zhège shǒujī yǒu hěn duō gōngnéng.^โทรศัพท์มือถือเครื่องนี้มีฟังก์ชันมากมาย^high^
+B3-0253^adjective@E^high^ร่วมกัน^我们有共同的爱好。^Wǒmen yǒu gòngtóng de àihào.^พวกเรามีงานอดิเรกร่วมกัน^high^
+B3-0254^verb@E^high^มีทั้งหมด; มีร่วมกัน^我们学校共有两千名学生。^Wǒmen xuéxiào gòngyǒu liǎngqiān míng xuésheng.^โรงเรียนของเรามีนักเรียนทั้งหมดสองพันคน^medium^polysemy: "have altogether" vs. "share; owned by all"; example shows "have altogether"
+B3-0255^noun@E^high^หญิงสาว; เด็กผู้หญิง^那个姑娘很漂亮。^Nàge gūniang hěn piàoliang.^หญิงสาวคนนั้นสวยมาก^high^
+B3-0256^adjective@E^high^โบราณ; เก่าแก่^这是一座古城。^Zhè shì yí zuò gǔ chéng.^นี่คือเมืองโบราณแห่งหนึ่ง^high^
+B3-0257^noun@L^medium^สมัยโบราณ^古代的人怎么过春节？^Gǔdài de rén zěnme guò Chūnjié?^คนสมัยโบราณฉลองตรุษจีนอย่างไร?^medium^pos_doubtful: gloss "Ancient" is adjectival; 古代 is a time noun "ancient times"
+B3-0258^noun@E^high^บ้านเกิด^我很想念我的故乡。^Wǒ hěn xiǎngniàn wǒ de gùxiāng.^ฉันคิดถึงบ้านเกิดมาก^high^
+B3-0259^verb@E^high^แขวน; วางสาย^墙上挂着一幅画。^Qiáng shang guà zhe yì fú huà.^บนผนังแขวนภาพวาดไว้ภาพหนึ่ง^medium^polysemy: 挂 also "hang up (phone)" and "register (at a hospital)"; gloss gives "hang"
+B3-0260^noun@E^low^ความสัมพันธ์^我和他的关系很好。^Wǒ hé tā de guānxi hěn hǎo.^ความสัมพันธ์ระหว่างฉันกับเขาดีมาก^low^source_gloss: gloss "relationship attention; follow with interest; pay close" merges the next entry (关注); only "relationship" belongs to 关系
+B3-0261^verb@L^medium^ให้ความสนใจ; ติดตาม^大家都很关注这件事。^Dàjiā dōu hěn guānzhù zhè jiàn shì.^ทุกคนให้ความสนใจเรื่องนี้มาก^medium^source_gloss: gloss starts mid-phrase ("attention; show solicitude for") — part of it spilled into the 关系 row
+B3-0262^verb@L^medium^สังเกต; สังเกตการณ์^请仔细观察这张图片。^Qǐng zǐxì guānchá zhè zhāng túpiàn.^กรุณาสังเกตรูปภาพนี้อย่างละเอียด^medium^source_gloss: "observation" is a noun; 观察 is mainly the verb "observe"
+B3-0263^verb@E^high^ชม; ดู^很多人来观看比赛。^Hěn duō rén lái guānkàn bǐsài.^มีคนมากมายมาชมการแข่งขัน^high^
+B3-0264^noun@E^high^แนวคิด; ทัศนคติ^年轻人的观念变了。^Niánqīngrén de guānniàn biàn le.^แนวคิดของคนหนุ่มสาวเปลี่ยนไปแล้ว^high^
+B3-0265^noun@E^high^ผู้ชม^观众们都站起来鼓掌。^Guānzhòngmen dōu zhàn qǐlai gǔzhǎng.^ผู้ชมทุกคนลุกขึ้นปรบมือ^high^
+B3-0266^verb@E^high^ควบคุม; ดูแล; จัดการ^这件事你别管。^Zhè jiàn shì nǐ bié guǎn.^เรื่องนี้คุณอย่ายุ่ง^medium^polysemy: "manage; be in charge of" vs. "mind; interfere" (别管); also noun "tube"; example shows "interfere"
+B3-0267^verb@L^medium^บริหาร; จัดการ; การบริหาร^他负责管理这家公司。^Tā fùzé guǎnlǐ zhè jiā gōngsī.^เขารับผิดชอบบริหารบริษัทนี้^medium^pos_doubtful: gloss "Administration" is a noun; 管理 is both verb and noun; example shows the verb
+B3-0268^noun@E^high^แสง; หมด (เกลี้ยง)^房间里没有光。^Fángjiān li méiyǒu guāng.^ในห้องไม่มีแสง^medium^polysemy: noun "light" vs. adjective/complement "used up" (吃光) and adverb "only"; example shows "light"
+B3-0269^adjective@L^medium^สว่าง; สดใส; ความสว่าง^我们的未来是光明的。^Wǒmen de wèilái shì guāngmíng de.^อนาคตของพวกเราสดใส^medium^pos_doubtful: gloss "light" (noun) vs. common adjective "bright; promising"; example shows adjective
+B3-0270^noun@E^medium^การกระจายเสียง; วิทยุ; ประกาศ^我每天早上听广播。^Wǒ měitiān zǎoshang tīng guǎngbō.^ฉันฟังวิทยุทุกเช้า^high^
+B3-0271^adjective@E^high^กว้างใหญ่; จำนวนมาก^广大人民都支持这个政策。^Guǎngdà rénmín dōu zhīchí zhège zhèngcè.^ประชาชนจำนวนมากล้วนสนับสนุนนโยบายนี้^medium^polysemy: "vast (area)" vs. "numerous (people)"; example shows "numerous"
+B3-0272^noun@E^high^ข้อกำหนด; กฎระเบียบ^我们要遵守学校的规定。^Wǒmen yào zūnshǒu xuéxiào de guīdìng.^พวกเราต้องปฏิบัติตามกฎระเบียบของโรงเรียน^high^
