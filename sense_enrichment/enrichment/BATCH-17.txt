@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B3-0273^noun@E^medium^มาตรฐาน; บรรทัดฐาน; ได้มาตรฐาน^写汉字要符合规范。^Xiě Hànzì yào fúhé guīfàn.^การเขียนอักษรจีนต้องเป็นไปตามมาตรฐาน^medium^pos_doubtful: 规范 is noun "standard" and adjective "standard; normative"; example shows the noun
+B3-0274^noun@E^high^ภายในประเทศ^他喜欢在国内旅游。^Tā xǐhuan zài guónèi lǚyóu.^เขาชอบเที่ยวในประเทศ^high^
+B3-0275^noun@E^high^วันชาติ (จีน)^国庆节我们放七天假。^Guóqìng Jié wǒmen fàng qī tiān jià.^วันชาติพวกเราหยุดเจ็ดวัน^high^
+B3-0276^adverb@E^high^สมดังคาด; อย่างที่คิดไว้^天气预报说今天下雨，果然下雨了。^Tiānqì yùbào shuō jīntiān xià yǔ, guǒrán xià yǔ le.^พยากรณ์อากาศบอกว่าวันนี้ฝนตก แล้วฝนก็ตกจริงๆ^high^
+B3-0277^noun@E^high^น้ำผลไม้^我要一杯果汁。^Wǒ yào yì bēi guǒzhī.^ฉันขอน้ำผลไม้หนึ่งแก้ว^high^
+B3-0278^noun@E^high^กระบวนการ; ขั้นตอน^学习是一个长期的过程。^Xuéxí shì yí ge chángqī de guòchéng.^การเรียนรู้เป็นกระบวนการระยะยาว^high^
+B3-0280^interjection@E^high^ฮ่าๆ (เสียงหัวเราะ)^哈哈，你真有意思！^Hāhā, nǐ zhēn yǒu yìsi!^ฮ่าๆ คุณนี่ตลกจริงๆ!^high^
+B3-0281^noun@E^high^ศุลกากร^过海关的时候要检查行李。^Guò hǎiguān de shíhou yào jiǎnchá xíngli.^ตอนผ่านศุลกากรต้องตรวจกระเป๋า^high^
+B3-0282^verb@L^medium^กลัว^我害怕一个人走夜路。^Wǒ hàipà yí ge rén zǒu yèlù.^ฉันกลัวเดินคนเดียวตอนกลางคืน^medium^source_gloss: "Fear" may be read as noun; 害怕 is the verb "be afraid"
+B3-0284^adverb@L^medium^อย่างดี; ให้ดี; ดีมากๆ^你要好好学习。^Nǐ yào hǎohǎo xuéxí.^คุณต้องตั้งใจเรียนให้ดี^medium^polysemy: adjective "really good" vs. adverb "properly; carefully" (好好学习); gloss gives adjective, example shows adverb
+B3-0285^adjective@L^medium^อยากรู้อยากเห็น^孩子们对什么都很好奇。^Háizimen duì shénme dōu hěn hàoqí.^เด็กๆ อยากรู้อยากเห็นไปทุกเรื่อง^high^
+B3-0286^verb@E^high^ปิด; หุบ; เท่ากับ; รวม^他合上了书。^Tā héshang le shū.^เขาปิดหนังสือ^medium^polysemy: close / be equal to / add up to / join combined; example shows "close"
+B3-0287^adjective@E^high^ชอบด้วยกฎหมาย^这是合法的生意。^Zhè shì héfǎ de shēngyi.^นี่เป็นธุรกิจที่ถูกกฎหมาย^high^
+B3-0288^adjective@E^high^ผ่านเกณฑ์; ได้มาตรฐาน^这些产品都合格。^Zhèxiē chǎnpǐn dōu hégé.^ผลิตภัณฑ์เหล่านี้ผ่านเกณฑ์ทั้งหมด^high^
+B3-0289^adjective@E^high^สมเหตุสมผล^这个价格很合理。^Zhège jiàgé hěn hélǐ.^ราคานี้สมเหตุสมผลมาก^high^
+B3-0290^verb@L^medium^ร่วมมือ; ความร่วมมือ^我们合作得很愉快。^Wǒmen hézuò de hěn yúkuài.^พวกเราร่วมมือกันอย่างราบรื่น^medium^pos_doubtful: gloss "cooperation" is a noun; 合作 is mainly the verb "cooperate"
+B3-0291^noun@E^high^สันติภาพ^我们热爱和平。^Wǒmen rè'ài hépíng.^พวกเรารักสันติภาพ^high^
+B3-0292^noun@E^high^ชาดำ^我喜欢喝红茶。^Wǒ xǐhuan hē hóngchá.^ฉันชอบดื่มชาดำ^high^
+B3-0293^noun@E^high^ไวน์แดง^他点了一瓶红酒。^Tā diǎn le yì píng hóngjiǔ.^เขาสั่งไวน์แดงหนึ่งขวด^high^
+B3-0294^noun@E^high^ผลที่ตามมา (มักเป็นผลเสีย)^你要考虑后果。^Nǐ yào kǎolǜ hòuguǒ.^คุณต้องคำนึงถึงผลที่ตามมา^high^
+B3-0295^noun@E^high^ข้างหลัง^房子后面有一个花园。^Fángzi hòumiàn yǒu yí ge huāyuán.^ข้างหลังบ้านมีสวนอยู่สวนหนึ่ง^high^
+B3-0296^noun@E^high^ปีถัดจากปีหน้า (อีกสองปี)^我后年大学毕业。^Wǒ hòunián dàxué bìyè.^อีกสองปีฉันจะจบมหาวิทยาลัย^high^
+B3-0297^noun@E^high^อินเทอร์เน็ต^互联网改变了我们的生活。^Hùliánwǎng gǎibiàn le wǒmen de shēnghuó.^อินเทอร์เน็ตเปลี่ยนแปลงชีวิตของพวกเรา^high^
+B3-0298^adverb@E^high^ซึ่งกันและกัน^我们要互相帮助。^Wǒmen yào hùxiāng bāngzhù.^พวกเราต้องช่วยเหลือซึ่งกันและกัน^high^
+B3-0299^verb@E^high^พายเรือ^周末我们去公园划船。^Zhōumò wǒmen qù gōngyuán huáchuán.^สุดสัปดาห์พวกเราไปพายเรือที่สวนสาธารณะ^high^
+B3-0300^noun@E^high^ชาวจีน; คนเชื้อสายจีน^这里住着很多华人。^Zhèlǐ zhù zhe hěn duō huárén.^ที่นี่มีชาวจีนอาศัยอยู่มาก^high^
+B3-0301^other^low^-ภิวัตน์; ทำให้เป็น... (ปัจจัย)^中国正在实现现代化。^Zhōngguó zhèngzài shíxiàn xiàndàihuà.^จีนกำลังก้าวสู่ความทันสมัย^medium^pos_doubtful: suffix has no matching POS in the enum; source_gloss: pinyin field carries an inline example "（xiàn dàihuà）"
+B3-0302^noun@E^high^ละครเวที^我们去看话剧吧。^Wǒmen qù kàn huàjù ba.^พวกเราไปดูละครเวทีกันเถอะ^high^
+B3-0303^noun@E^high^หัวข้อสนทนา^我们换个话题吧。^Wǒmen huàn ge huàtí ba.^พวกเราเปลี่ยนหัวข้อสนทนากันเถอะ^high^
+B3-0304^adjective@E^high^รื่นเริง; สนุกสนาน^大家度过了一个欢乐的晚上。^Dàjiā dùguò le yí ge huānlè de wǎnshang.^ทุกคนใช้เวลาค่ำคืนอย่างรื่นเริง^high^
+B3-0305^noun@E^high^ห่วง; วง; ข้อต่อ^这是整个计划中重要的一环。^Zhè shì zhěnggè jìhuà zhōng zhòngyào de yì huán.^นี่เป็นขั้นตอนสำคัญขั้นหนึ่งในแผนทั้งหมด^medium^polysemy: literal "ring; loop" vs. figurative "link (in a chain)"; example shows "link"
+B3-0306^noun@E^high^การอนุรักษ์สิ่งแวดล้อม^我们要有环保意识。^Wǒmen yào yǒu huánbǎo yìshi.^พวกเราต้องมีจิตสำนึกในการอนุรักษ์สิ่งแวดล้อม^high^
+B3-0307^noun@E^high^สิ่งแวดล้อม; สภาพแวดล้อม^这里的环境很好。^Zhèlǐ de huánjìng hěn hǎo.^สภาพแวดล้อมที่นี่ดีมาก^high^
+B3-0308^noun@E^high^การประชุม^今天下午有一个重要的会议。^Jīntiān xiàwǔ yǒu yí ge zhòngyào de huìyì.^บ่ายวันนี้มีการประชุมสำคัญ^high^
+B3-0309^noun@E^medium^สมาชิก^我是这家健身房的会员。^Wǒ shì zhè jiā jiànshēnfáng de huìyuán.^ฉันเป็นสมาชิกของฟิตเนสแห่งนี้^medium^source_gloss: "membership" is the status; 会员 means "member" (person)
+B3-0310^verb@E^medium^มีชีวิต; อยู่; ช่วยชีวิต; มีชีวิตชีวา^这条鱼还活着。^Zhè tiáo yú hái huó zhe.^ปลาตัวนี้ยังมีชีวิตอยู่^medium^polysemy: live / save / work / living / alive mix verb, noun (干活) and adjective senses; example shows "be alive"
+B3-0312^noun@E^high^เครื่องจักร^这台机器坏了。^Zhè tái jīqì huài le.^เครื่องจักรเครื่องนี้เสียแล้ว^high^
+B3-0313^adjective@E^high^กระตือรือร้น; เชิงบวก^他学习很积极。^Tā xuéxí hěn jījí.^เขาเรียนอย่างกระตือรือร้นมาก^high^
+B3-0314^adjective@E^high^พื้นฐาน^这是最基本的知识。^Zhè shì zuì jīběn de zhīshi.^นี่เป็นความรู้พื้นฐานที่สุด^high^
+B3-0315^adverb@E^high^โดยพื้นฐาน; โดยรวม^我的作业基本上做完了。^Wǒ de zuòyè jīběnshang zuò wán le.^การบ้านของฉันทำเสร็จเกือบหมดแล้ว^high^
+B3-0316^noun@E^high^พื้นฐาน; รากฐาน^他的汉语基础很好。^Tā de Hànyǔ jīchǔ hěn hǎo.^พื้นฐานภาษาจีนของเขาดีมาก^high^
+B3-0317^adjective@E^high^ทันเวลา; ทันท่วงที^谢谢你及时帮助我。^Xièxie nǐ jíshí bāngzhù wǒ.^ขอบคุณที่ช่วยเหลือฉันได้ทันท่วงที^medium^pos_doubtful: 及时 is adjective "timely" and adverb "promptly"; example shows adverbial use
+B3-0318^complement@L^high^...มากๆ; ...สุดๆ^今天的天气好极了。^Jīntiān de tiānqì hǎo jí le.^วันนี้อากาศดีสุดๆ^high^variant: canonical word "…极了 …" is a pattern with ellipses and padding spaces
+B3-0319^noun@E^medium^ส่วนรวม; กลุ่ม^我们要关心集体。^Wǒmen yào guānxīn jítǐ.^พวกเราต้องใส่ใจส่วนรวม^medium^pos_doubtful: 集体 is noun "collective" and attributive adjective (集体活动)
+B3-0320^verb@E^high^รวมศูนย์; ตั้งใจ (มีสมาธิ)^上课要集中注意力。^Shàngkè yào jízhōng zhùyìlì.^ในชั้นเรียนต้องมีสมาธิ^medium^polysemy: verb "concentrate; gather" vs. adjective "centralized"; English "focus" covers both
+B3-0321^verb@L^medium^คำนวณ; การคำนวณ^请计算一下总共多少钱。^Qǐng jìsuàn yí xià zǒnggòng duōshao qián.^กรุณาคำนวณดูว่าทั้งหมดเท่าไร^medium^source_gloss: "Calculation" is a noun; 计算 is mainly the verb "calculate"
+B3-0322^verb@E^medium^บันทึก; จดบันทึก^请把会议内容记录下来。^Qǐng bǎ huìyì nèiróng jìlù xiàlai.^กรุณาบันทึกเนื้อหาการประชุมไว้^medium^variant: 记录 (record; take notes) vs. 纪录 (B3-0324, a [sports] record) share the gloss "Record"
+B3-0323^noun@E^high^นักข่าว^记者正在采访他。^Jìzhě zhèngzài cǎifǎng tā.^นักข่าวกำลังสัมภาษณ์เขา^high^
+B3-0324^noun@E^medium^สถิติ (การแข่งขัน)^他打破了世界纪录。^Tā dǎpò le shìjiè jìlù.^เขาทำลายสถิติโลก^medium^variant: 纪录 (a record, e.g. world record) vs. 记录 (B3-0322, to record) share the gloss "Record"
+B3-0325^verb@L^low^ระลึกถึง; ที่ระลึก; รำลึก^这张照片很有纪念意义。^Zhè zhāng zhàopiàn hěn yǒu jìniàn yìyì.^รูปนี้มีคุณค่าทางจิตใจมาก^medium^source_gloss: "Anniversary" is a loose gloss; 纪念 means "commemorate; souvenir"; pos_doubtful: verb vs. noun
+B3-0326^noun@E^high^เทคโนโลยี; เทคนิค^这家公司的技术很先进。^Zhè jiā gōngsī de jìshù hěn xiānjìn.^เทคโนโลยีของบริษัทนี้ทันสมัยมาก^high^
+B3-0327^verb@E^high^ทำต่อ; ดำเนินต่อไป^休息一下，我们再继续。^Xiūxi yí xià, wǒmen zài jìxù.^พักสักครู่ แล้วเราค่อยทำต่อ^high^
+B3-0328^verb@E^medium^แปรรูป; ผลิต^这些水果要加工成果汁。^Zhèxiē shuǐguǒ yào jiāgōng chéng guǒzhī.^ผลไม้เหล่านี้จะถูกแปรรูปเป็นน้ำผลไม้^medium^source_gloss: "machining" is narrow; 加工 means "process; manufacture" in general
+B3-0329^verb@E^high^เร่ง; เพิ่มความเร็ว^我们要加快速度。^Wǒmen yào jiākuài sùdù.^พวกเราต้องเร่งความเร็ว^high^
+B3-0330^verb@E^high^เสริมสร้าง; เพิ่มความแข็งแกร่ง^我们要加强锻炼。^Wǒmen yào jiāqiáng duànliàn.^พวกเราต้องออกกำลังกายให้มากขึ้น^high^
+B3-0331^noun@E^high^เฟอร์นิเจอร์^我们买了一些新家具。^Wǒmen mǎi le yìxiē xīn jiājù.^พวกเราซื้อเฟอร์นิเจอร์ใหม่มาบ้าง^high^
+B3-0332^noun@E^high^สมาชิกครอบครัว; ญาติ^病人家属请在外面等。^Bìngrén jiāshǔ qǐng zài wàimian děng.^ญาติผู้ป่วยกรุณารอข้างนอก^high^
+B3-0333^noun@E^high^บ้านเกิด^我的家乡在南方。^Wǒ de jiāxiāng zài nánfāng.^บ้านเกิดของฉันอยู่ทางใต้^high^
+B3-0334^noun@E^high^ราคา^这个价格太高了。^Zhège jiàgé tài gāo le.^ราคานี้สูงเกินไป^high^
+B3-0335^noun@E^high^ราคา^这件衣服价钱不贵。^Zhè jiàn yīfu jiàqián bú guì.^เสื้อตัวนี้ราคาไม่แพง^high^
+B3-0336^noun@E^high^คุณค่า; มูลค่า^这本书很有价值。^Zhè běn shū hěn yǒu jiàzhí.^หนังสือเล่มนี้มีคุณค่ามาก^high^
+B3-0337^noun@E^high^โครง; ชั้นวาง; ขาตั้ง; (ลักษณนามของเครื่องบิน/เปียโน)^书架上有很多书。^Shūjià shang yǒu hěn duō shū.^บนชั้นหนังสือมีหนังสือมากมาย^low^polysemy: frame / rack / shelf / stand; also common measure word (一架飞机) not in gloss; example uses compound 书架
+B3-0338^verb@E^high^ยืนหยัด; ยืนกราน^他坚持每天跑步。^Tā jiānchí měitiān pǎobù.^เขาวิ่งทุกวันอย่างสม่ำเสมอ^medium^polysemy: "insist on" vs. "persist in; keep doing"; example shows "persist"
+B3-0339^adjective@E^high^เด็ดเดี่ยว; แน่วแน่^他坚决反对这个计划。^Tā jiānjué fǎnduì zhège jìhuà.^เขาคัดค้านแผนนี้อย่างเด็ดเดี่ยว^high^
+B3-0340^adjective@E^high^เข้มแข็ง; แข็งแกร่ง (จิตใจ)^她是一个坚强的女孩。^Tā shì yí ge jiānqiáng de nǚhái.^เธอเป็นเด็กผู้หญิงที่เข้มแข็ง^high^
+B3-0341^adjective@E^high^ง่าย; เรียบง่าย^这个问题很简单。^Zhège wèntí hěn jiǎndān.^ปัญหานี้ง่ายมาก^high^
+B3-0342^adverb@E^high^แทบจะ; เรียกได้ว่า^他说汉语简直像中国人一样。^Tā shuō Hànyǔ jiǎnzhí xiàng Zhōngguórén yíyàng.^เขาพูดภาษาจีนแทบจะเหมือนคนจีนเลย^high^
+B3-0343^verb@E^high^สร้าง; ก่อตั้ง^这里要建一所新学校。^Zhèlǐ yào jiàn yì suǒ xīn xuéxiào.^ที่นี่จะสร้างโรงเรียนใหม่หนึ่งแห่ง^high^
+B3-0344^verb@E^high^สร้างเสร็จ^这座大桥已经建成了。^Zhè zuò dà qiáo yǐjīng jiànchéng le.^สะพานใหญ่แห่งนี้สร้างเสร็จแล้ว^high^
+B3-0345^verb@E^high^จัดตั้ง; สร้าง (ความสัมพันธ์)^两国建立了友好关系。^Liǎng guó jiànlì le yǒuhǎo guānxì.^สองประเทศสร้างความสัมพันธ์ฉันมิตร^high^
+B3-0346^verb@E^medium^ก่อสร้าง; พัฒนา; การพัฒนา^我们要建设美丽的家乡。^Wǒmen yào jiànshè měilì de jiāxiāng.^พวกเราต้องพัฒนาบ้านเกิดให้สวยงาม^high^
+B3-0347^noun@E^medium^ข้อเสนอแนะ; เสนอแนะ^你的建议很好。^Nǐ de jiànyì hěn hǎo.^ข้อเสนอแนะของคุณดีมาก^high^
+B3-0348^adverb@E^high^เกือบ; ใกล้จะ^他在中国住了将近十年。^Tā zài Zhōngguó zhù le jiāngjìn shí nián.^เขาอาศัยอยู่ในจีนมาเกือบสิบปี^high^
+B3-0349^noun@E^high^อนาคต^将来我想当一名医生。^Jiānglái wǒ xiǎng dāng yì míng yīshēng.^ในอนาคตฉันอยากเป็นหมอ^high^
+B3-0350^verb@E^high^จ่ายค่าธรรมเนียม; ชำระเงิน^你去哪儿交费？^Nǐ qù nǎr jiāofèi?^คุณไปจ่ายค่าธรรมเนียมที่ไหน?^high^
+B3-0351^noun@E^high^ตำรวจจราจร^交警在路口指挥交通。^Jiāojǐng zài lùkǒu zhǐhuī jiāotōng.^ตำรวจจราจรอำนวยการจราจรอยู่ที่ทางแยก^high^
+B3-0352^verb@L^medium^แลกเปลี่ยน; สื่อสาร^我们经常用汉语交流。^Wǒmen jīngcháng yòng Hànyǔ jiāoliú.^พวกเรามักสื่อสารกันเป็นภาษาจีน^medium^source_gloss: "Communication" is a noun; 交流 is mainly the verb "exchange; communicate"
+B3-0353^verb@E^medium^คบหา; ติดต่อสัมพันธ์^我和他交往了很多年。^Wǒ hé tā jiāowǎng le hěn duō nián.^ฉันกับเขาคบหากันมาหลายปี^medium^source_gloss: "affiliate with" is unidiomatic; 交往 means "associate with; date"
+B3-0354^noun@E^high^การซื้อขาย; ธุรกรรม^这笔交易很成功。^Zhè bǐ jiāoyì hěn chénggōng.^ธุรกรรมครั้งนี้ประสบความสำเร็จมาก^high^
+B3-0356^adverb@E^high^ค่อนข้าง^今天的气温较高。^Jīntiān de qìwēn jiào gāo.^อุณหภูมิวันนี้ค่อนข้างสูง^high^
+B3-0357^noun@E^high^ตำราเรียน; สื่อการสอน^这本教材很适合初学者。^Zhè běn jiàocái hěn shìhé chūxuézhě.^ตำราเรียนเล่มนี้เหมาะกับผู้เริ่มต้นมาก^high^
+B3-0358^noun@E^high^โค้ช; ครูฝึก^他是我们的游泳教练。^Tā shì wǒmen de yóuyǒng jiàoliàn.^เขาเป็นโค้ชว่ายน้ำของพวกเรา^high^
+B3-0359^adjective@E^high^แข็งแรง; ทนทาน^这把椅子很结实。^Zhè bǎ yǐzi hěn jiēshi.^เก้าอี้ตัวนี้แข็งแรงมาก^high^
+B3-0360^verb@L^medium^ต้อนรับ^他们热情地接待了我们。^Tāmen rèqíng de jiēdài le wǒmen.^พวกเขาต้อนรับพวกเราอย่างอบอุ่น^medium^source_gloss: "Reception" is a noun; 接待 is mainly the verb "receive (guests)"
+B3-0361^verb@E^medium^ใกล้; เข้าใกล้^比赛接近尾声了。^Bǐsài jiējìn wěishēng le.^การแข่งขันใกล้จะจบแล้ว^medium^pos_doubtful: 接近 is verb "approach" and adjective "close"; gloss "near" fits both
+B3-0362^verb@E^high^ประหยัด^我们要节约用水。^Wǒmen yào jiéyuē yòng shuǐ.^พวกเราต้องประหยัดน้ำ^high^
+B3-0363^verb@L^medium^ผสมผสาน; รวมกัน^我们要把学习和实践结合起来。^Wǒmen yào bǎ xuéxí hé shíjiàn jiéhé qǐlai.^พวกเราต้องผสมผสานการเรียนกับการปฏิบัติเข้าด้วยกัน^medium^source_gloss: "Combination" is a noun; 结合 is mainly the verb "combine"
+B3-0364^verb@E^high^แต่งงาน^他们明年结婚。^Tāmen míngnián jiéhūn.^พวกเขาจะแต่งงานปีหน้า^high^
+B3-0365^verb@E^high^จบ; สิ้นสุด^会议结束了。^Huìyì jiéshù le.^การประชุมจบแล้ว^high^
+B3-0366^verb@E^high^แก้ไข (ปัญหา)^这个问题很难解决。^Zhège wèntí hěn nán jiějué.^ปัญหานี้แก้ไขยากมาก^high^
+B3-0367^verb@E^high^แก้ (ปม); ปลด (กระดุม)^请帮我解开这个结。^Qǐng bāng wǒ jiěkāi zhège jié.^กรุณาช่วยแก้ปมนี้ให้ฉันหน่อย^high^
+B3-0368^noun@E^high^ทองคำ^这条项链是金的。^Zhè tiáo xiàngliàn shì jīn de.^สร้อยคอเส้นนี้เป็นทองคำ^high^
+B3-0369^noun@E^high^เหรียญทอง^他获得了一枚金牌。^Tā huòdé le yì méi jīnpái.^เขาได้รับเหรียญทองหนึ่งเหรียญ^high^
+B3-0370^adverb@E^high^เพียง; แค่^这件事仅他一个人知道。^Zhè jiàn shì jǐn tā yí ge rén zhīdào.^เรื่องนี้มีเพียงเขาคนเดียวที่รู้^high^
+B3-0371^adverb@E^high^เพียงแค่^仅仅一天，他就学会了。^Jǐnjǐn yì tiān, tā jiù xuéhuì le.^เพียงแค่วันเดียว เขาก็เรียนเป็นแล้ว^high^
+B3-0372^adverb@E^high^พยายามให้มากที่สุด^我会尽量早点儿来。^Wǒ huì jǐnliàng zǎo diǎnr lái.^ฉันจะพยายามมาให้เร็วที่สุด^high^
+B3-0373^adjective@E^high^แน่น; คับ; เร่งด่วน; เข้มงวด^这双鞋太紧了。^Zhè shuāng xié tài jǐn le.^รองเท้าคู่นี้คับเกินไป^medium^polysemy: tight / close / urgent / strict combined; example shows "tight"
+B3-0374^adjective@E^high^ฉุกเฉิน; เร่งด่วน^这是紧急情况。^Zhè shì jǐnjí qíngkuàng.^นี่เป็นสถานการณ์ฉุกเฉิน^high^
+B3-0375^adjective@E^high^ตื่นเต้น; ประหม่า; ตึงเครียด^考试前我很紧张。^Kǎoshì qián wǒ hěn jǐnzhāng.^ก่อนสอบฉันตื่นเต้นมาก^medium^polysemy: "nervous" vs. "tense; in short supply" (时间紧张); example shows "nervous"
+B3-0376^verb@L^medium^ก้าวหน้า; ความก้าวหน้า^你的汉语进步很快。^Nǐ de Hànyǔ jìnbù hěn kuài.^ภาษาจีนของคุณก้าวหน้าเร็วมาก^medium^pos_doubtful: 进步 is verb "progress", noun "progress" and adjective "progressive"

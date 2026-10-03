@@ -127,7 +127,8 @@ def reason_tags(reason):
 
 
 def headword(word):
-    return re.sub(r"[¹²³⁴⁵⁶⁷⁸⁹⁰]", "", word)
+    """Strip homograph superscripts and pattern ellipses (e.g. "…极了 …")."""
+    return re.sub(r"[¹²³⁴⁵⁶⁷⁸⁹⁰…\s]", "", word)
 
 
 def resolve_pos(r, e, sibling_pos):
