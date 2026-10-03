@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B2-0429^verb@E^high^ขี่จักรยาน^我每天骑车去上班。^Wǒ měitiān qíchē qù shàngbān.^ฉันขี่จักรยานไปทำงานทุกวัน^high^
+B2-0430^verb@E^high^(เครื่องบิน) ขึ้นบิน^飞机马上就要起飞了。^Fēijī mǎshàng jiù yào qǐfēi le.^เครื่องบินกำลังจะขึ้นบินแล้ว^high^
+B2-0431^noun@E^high^อากาศ; ก๊าซ; ลมหายใจ^我跑得太快，有点儿喘不过气。^Wǒ pǎo de tài kuài, yǒudiǎnr chuǎn bu guò qì.^ฉันวิ่งเร็วเกินไป เลยหายใจไม่ค่อยทัน^medium^polysemy: air / gas / breath combined (also "anger" 生气); example shows "breath"
+B2-0432^noun@E^high^อุณหภูมิอากาศ^今天的气温很高。^Jīntiān de qìwēn hěn gāo.^อุณหภูมิวันนี้สูงมาก^high^
+B2-0433^numeral@E^high^พัน^这个手机三千块。^Zhège shǒujī sānqiān kuài.^โทรศัพท์มือถือเครื่องนี้ราคาสามพันหยวน^high^
+B2-0434^measure_word@L^high^กิโลกรัม^我的体重是五十千克。^Wǒ de tǐzhòng shì wǔshí qiānkè.^น้ำหนักของฉันห้าสิบกิโลกรัม^high^
+B2-0435^noun@E^high^ปีก่อนปีที่แล้ว (สองปีก่อน)^我前年去过一次上海。^Wǒ qiánnián qù guo yí cì Shànghǎi.^เมื่อสองปีก่อนฉันเคยไปเซี่ยงไฮ้ครั้งหนึ่ง^high^
+B2-0436^noun@E^high^กำแพง; ผนัง^墙上挂着一张地图。^Qiáng shang guà zhe yì zhāng dìtú.^บนผนังแขวนแผนที่ไว้แผ่นหนึ่ง^high^
+B2-0437^noun@E^high^คนหนุ่มสาว; เยาวชน^他是一个有理想的青年。^Tā shì yí ge yǒu lǐxiǎng de qīngnián.^เขาเป็นคนหนุ่มที่มีอุดมการณ์^high^
+B2-0438^noun@E^high^วัยรุ่น; เยาวชน^青少年要多参加体育活动。^Qīngshàonián yào duō cānjiā tǐyù huódòng.^วัยรุ่นควรเข้าร่วมกิจกรรมกีฬาให้มาก^high^
+B2-0439^adjective@E^high^เบา^这个箱子很轻。^Zhège xiāngzi hěn qīng.^กล่องใบนี้เบามาก^medium^polysemy: "light" (weight) vs. "gentle; soft" (轻声); gloss ambiguous in English between weight and light/colour
+B2-0440^adjective@E^high^ชัดเจน^老师讲得很清楚。^Lǎoshī jiǎng de hěn qīngchu.^ครูอธิบายได้ชัดเจนมาก^high^
+B2-0441^adjective@E^high^(ท้องฟ้า) แจ่มใส; แดดออก^今天天气晴。^Jīntiān tiānqì qíng.^วันนี้อากาศแจ่มใส^high^
+B2-0442^noun@E^high^วันที่ท้องฟ้าแจ่มใส^明天是晴天。^Míngtiān shì qíngtiān.^พรุ่งนี้ท้องฟ้าแจ่มใส^high^
+B2-0443^verb@E^high^เลี้ยง (อาหาร); เป็นเจ้ามือ^今天我请客。^Jīntiān wǒ qǐngkè.^วันนี้ฉันเลี้ยงเอง^high^
+B2-0444^verb@E^medium^ขอร้อง; คำขอ^他请求老师原谅他。^Tā qǐngqiú lǎoshī yuánliàng tā.^เขาขอร้องให้ครูให้อภัยเขา^medium^pos_doubtful: "request" is both verb and noun; example shows the verb
+B2-0445^noun@E^high^ฤดูใบไม้ร่วง^北京的秋天很美。^Běijīng de qiūtiān hěn měi.^ฤดูใบไม้ร่วงที่ปักกิ่งสวยมาก^high^
+B2-0446^verb@E^high^ขอร้อง; วิงวอน^我求你帮我一次。^Wǒ qiú nǐ bāng wǒ yí cì.^ฉันขอร้องให้คุณช่วยฉันสักครั้ง^high^
+B2-0447^noun@E^high^สนามกีฬา (สำหรับเล่นบอล)^学生们在球场上踢足球。^Xuéshengmen zài qiúchǎng shang tī zúqiú.^นักเรียนกำลังเตะฟุตบอลอยู่ในสนาม^high^
+B2-0448^noun@E^high^ทีมกีฬา (ประเภทลูกบอล)^我们学校的球队赢了。^Wǒmen xuéxiào de qiúduì yíng le.^ทีมของโรงเรียนเราชนะแล้ว^high^
+B2-0449^noun@E^high^รองเท้าผ้าใบ; รองเท้ากีฬา^我买了一双新球鞋。^Wǒ mǎi le yì shuāng xīn qiúxié.^ฉันซื้อรองเท้าผ้าใบคู่ใหม่^high^
+B2-0450^verb@E^high^เอา; รับ; ถอน (เงิน)^我去银行取钱。^Wǒ qù yínháng qǔ qián.^ฉันไปถอนเงินที่ธนาคาร^high^
+B2-0451^verb@E^high^ได้รับ; บรรลุ^他取得了很好的成绩。^Tā qǔdé le hěn hǎo de chéngjì.^เขาได้ผลการเรียนที่ดีมาก^high^
+B2-0452^adjective@E^high^ทั้งหมด; ครบ; สมบูรณ์^全班同学都来了。^Quán bān tóngxué dōu lái le.^เพื่อนนักเรียนทั้งห้องมากันครบแล้ว^high^
+B2-0453^noun@L^medium^ทั้งหมด^我把全部的钱都给了他。^Wǒ bǎ quánbù de qián dōu gěi le tā.^ฉันให้เงินทั้งหมดแก่เขาไปแล้ว^high^
+B2-0454^noun@E^high^ทั่วประเทศ^全国人民都在过春节。^Quánguó rénmín dōu zài guò Chūnjié.^ประชาชนทั่วประเทศกำลังฉลองตรุษจีน^high^
+B2-0455^noun@E^high^ทั้งครอบครัว^周末我们全家去公园。^Zhōumò wǒmen quánjiā qù gōngyuán.^สุดสัปดาห์ครอบครัวเราทั้งบ้านไปสวนสาธารณะ^high^
+B2-0456^noun@E^high^ตลอดทั้งปี^这里全年都很热。^Zhèlǐ quánnián dōu hěn rè.^ที่นี่ร้อนตลอดทั้งปี^high^
+B2-0457^noun@E^high^ทั้งตัว; ทั่วร่างกาย^下雨了，他全身都湿了。^Xià yǔ le, tā quánshēn dōu shī le.^ฝนตก เขาเปียกไปทั้งตัว^high^
+B2-0458^noun@E^high^ทั้งหมด; ทุกคน^请全体同学站起来。^Qǐng quántǐ tóngxué zhàn qǐlai.^ขอให้นักเรียนทุกคนลุกขึ้นยืน^high^
+B2-0459^conjunction@E^high^แล้วก็; จากนั้น^我们先吃饭，然后去看电影。^Wǒmen xiān chīfàn, ránhòu qù kàn diànyǐng.^พวกเรากินข้าวก่อน แล้วค่อยไปดูหนัง^high^
+B2-0460^verb@L^low^ให้; ปล่อยให้; หลีกทาง^妈妈让我早点儿回家。^Māma ràng wǒ zǎo diǎnr huí jiā.^แม่ให้ฉันกลับบ้านเร็วหน่อย^low^source_gloss: gloss "Give Way" omits the core band-2 causative sense "let; make (sb do)"; polysemy: "yield" vs. causative "let"; example shows causative
+B2-0461^adjective@L^medium^กระตือรือร้น; อบอุ่นเป็นมิตร^这里的人很热情。^Zhèlǐ de rén hěn rèqíng.^คนที่นี่อัธยาศัยดีมาก^medium^pos_doubtful: gloss "Enthusiasm" is a noun, but 热情 is mostly the adjective "warm; enthusiastic"
+B2-0462^noun@E^high^ประชากร^中国人口很多。^Zhōngguó rénkǒu hěn duō.^จีนมีประชากรมาก^high^
+B2-0463^noun@E^high^ผู้คน^人们都喜欢过节。^Rénmen dōu xǐhuan guòjié.^ผู้คนล้วนชอบฉลองเทศกาล^high^
+B2-0464^noun@E^high^จำนวนคน^今天来上课的人数不多。^Jīntiān lái shàngkè de rénshù bù duō.^จำนวนคนที่มาเรียนวันนี้ไม่มาก^high^
+B2-0465^verb@E^high^เห็นว่า; คิดว่า^我认为这个办法很好。^Wǒ rènwéi zhège bànfǎ hěn hǎo.^ฉันเห็นว่าวิธีนี้ดีมาก^high^
+B2-0466^noun@E^high^หนังสือพิมพ์รายวัน^爸爸每天看《人民日报》。^Bàba měitiān kàn “Rénmín Rìbào”.^พ่ออ่านหนังสือพิมพ์เหรินหมินรึเป้าทุกวัน^high^
+B2-0467^noun@E^high^วัน; ชีวิตความเป็นอยู่^现在的日子越来越好了。^Xiànzài de rìzi yuè lái yuè hǎo le.^ชีวิตความเป็นอยู่ตอนนี้ดีขึ้นเรื่อยๆ^medium^polysemy: "day (date)" vs. "life; livelihood" combined; example shows "life"
+B2-0468^conjunction@E^high^ถ้า^如果明天下雨，我们就不去了。^Rúguǒ míngtiān xià yǔ, wǒmen jiù bú qù le.^ถ้าพรุ่งนี้ฝนตก พวกเราก็จะไม่ไป^high^
+B2-0469^noun@E^high^ทางเข้า^入口在那边。^Rùkǒu zài nàbian.^ทางเข้าอยู่ทางโน้น^high^
+B2-0470^verb@E^high^ปรึกษาหารือ^这件事我们商量一下吧。^Zhè jiàn shì wǒmen shāngliang yí xià ba.^เรื่องนี้พวกเราปรึกษากันหน่อยเถอะ^high^
+B2-0471^noun@E^high^นักธุรกิจ; พ่อค้า^他爸爸是一个商人。^Tā bàba shì yí ge shāngrén.^พ่อของเขาเป็นนักธุรกิจ^high^
+B2-0472^noun@E^high^สัปดาห์ที่แล้ว^上周我去了上海。^Shàngzhōu wǒ qù le Shànghǎi.^สัปดาห์ที่แล้วฉันไปเซี่ยงไฮ้^high^
+B2-0473^noun@E^high^ส่วนน้อย; จำนวนน้อย^只有少数人不同意。^Zhǐyǒu shǎoshù rén bù tóngyì.^มีเพียงคนส่วนน้อยที่ไม่เห็นด้วย^high^
+B2-0474^noun@E^high^เด็กหนุ่ม; วัยรุ่น^他是一个聪明的少年。^Tā shì yí ge cōngming de shàonián.^เขาเป็นเด็กหนุ่มที่ฉลาด^high^
+B2-0475^noun@E^high^ข้างกาย; ใกล้ตัว^妈妈一直在我身边。^Māma yìzhí zài wǒ shēnbiān.^แม่อยู่ข้างกายฉันมาตลอด^high^
+B2-0476^pronoun@L^medium^แบบไหน; อย่างไร^你喜欢什么样的电影？^Nǐ xǐhuan shénmeyàng de diànyǐng?^คุณชอบหนังแบบไหน?^high^
+B2-0478^noun@E^high^คำศัพท์ใหม่^这课有二十个生词。^Zhè kè yǒu èrshí ge shēngcí.^บทนี้มีคำศัพท์ใหม่ยี่สิบคำ^high^
+B2-0479^noun@E^medium^ชีวิต; การใช้ชีวิต^我很喜欢这里的生活。^Wǒ hěn xǐhuan zhèlǐ de shēnghuó.^ฉันชอบการใช้ชีวิตที่นี่มาก^medium^pos_doubtful: 生活 is also a verb "to live"; example shows the noun
+B2-0480^noun@E^high^เสียง^她的声音很好听。^Tā de shēngyīn hěn hǎotīng.^เสียงของเธอไพเราะมาก^high^
+B2-0483^adverb@E^high^มาก; อย่างยิ่ง^我十分感谢你。^Wǒ shífēn gǎnxiè nǐ.^ฉันขอบคุณคุณอย่างยิ่ง^high^
+B2-0484^adjective@E^medium^จริง; ตามความเป็นจริง^这个办法不太实际。^Zhège bànfǎ bú tài shíjì.^วิธีนี้ไม่ค่อยสมจริง^medium^polysemy: adjective "practical; realistic" vs. noun "reality" (实际上); example shows "realistic"
+B2-0485^verb@L^medium^ฝึกงาน; การฝึกงาน^他在一家公司实习。^Tā zài yì jiā gōngsī shíxí.^เขาฝึกงานอยู่ที่บริษัทแห่งหนึ่ง^medium^pos_doubtful: gloss "Internship" is a noun, but 实习 is mainly the verb "do an internship"
+B2-0486^verb@L^medium^ทำให้เป็นจริง; บรรลุ^他终于实现了自己的理想。^Tā zhōngyú shíxiàn le zìjǐ de lǐxiǎng.^ในที่สุดเขาก็ทำความฝันของตัวเองให้เป็นจริงได้^medium^pos_doubtful: gloss "Realization" is a noun, but 实现 is the verb "realize; achieve"
+B2-0487^adverb@L^medium^จริงๆ; แท้จริง^我实在太累了。^Wǒ shízài tài lèi le.^ฉันเหนื่อยเกินไปจริงๆ^medium^polysemy: adjective "real; honest" vs. adverb "really; indeed"; source_gloss: typo "indeeed"; example shows adverb
+B2-0488^adjective@L^low^(ทำงาน) ละเอียดรอบคอบ; เอาจริงเอาจัง^他做事很实在。^Tā zuòshì hěn shízai.^เขาทำงานอย่างจริงจังและรอบคอบ^low^source_gloss: rare neutral-tone reading "done carefully"; variant: homograph of 实在 shízài (B2-0487), split relies on tone only
+B2-0489^noun@E^high^อาหาร^冰箱里有很多食物。^Bīngxiāng li yǒu hěn duō shíwù.^ในตู้เย็นมีอาหารมากมาย^high^
+B2-0490^verb@E^high^ใช้; การใช้^这台电脑使用起来很方便。^Zhè tái diànnǎo shǐyòng qǐlai hěn fāngbiàn.^คอมพิวเตอร์เครื่องนี้ใช้งานสะดวกมาก^high^
+B2-0491^noun@E^high^เมือง; นคร^他住在北京市。^Tā zhù zài Běijīng Shì.^เขาอาศัยอยู่ในนครปักกิ่ง^high^
+B2-0492^noun@E^high^นายกเทศมนตรี^市长参观了我们学校。^Shìzhǎng cānguān le wǒmen xuéxiào.^นายกเทศมนตรีมาเยี่ยมชมโรงเรียนของเรา^high^
+B2-0493^noun@E^high^เรื่อง; ธุระ^我有一件事情想告诉你。^Wǒ yǒu yí jiàn shìqing xiǎng gàosu nǐ.^ฉันมีเรื่องหนึ่งอยากบอกคุณ^high^
+B2-0494^verb@E^high^เก็บ; รับ; รวบรวม^老师收了我们的作业。^Lǎoshī shōu le wǒmen de zuòyè.^ครูเก็บการบ้านของพวกเราไปแล้ว^high^
+B2-0495^verb@E^high^ได้รับ^我收到了你的信。^Wǒ shōudào le nǐ de xìn.^ฉันได้รับจดหมายของคุณแล้ว^high^
+B2-0496^noun@E^high^รายได้^他的收入很高。^Tā de shōurù hěn gāo.^รายได้ของเขาสูงมาก^high^
+B2-0497^noun@E^high^นาฬิกาข้อมือ^这块手表是我爸爸送的。^Zhè kuài shǒubiǎo shì wǒ bàba sòng de.^นาฬิกาข้อมือเรือนนี้พ่อให้ฉันมา^high^
+B2-0498^verb@E^medium^ได้รับ; ประสบ^他受到了老师的表扬。^Tā shòudào le lǎoshī de biǎoyáng.^เขาได้รับคำชมจากครู^medium^source_gloss: "Suffer" is only one use; 受到 is neutral "receive; be subjected to" (praise or harm)
+B2-0499^adjective@E^high^สบาย^这张床很舒服。^Zhè zhāng chuáng hěn shūfu.^เตียงนี้นอนสบายมาก^high^
+B2-0500^adjective@E^high^สุก; คุ้นเคย; ชำนาญ^米饭熟了，可以吃了。^Mǐfàn shú le, kěyǐ chī le.^ข้าวสุกแล้ว กินได้แล้ว^medium^polysemy: ripe / cooked / familiar / skilled combined; example shows "cooked"
+B2-0501^verb@E^high^นับ^请你数一数有多少人。^Qǐng nǐ shǔ yi shǔ yǒu duōshao rén.^กรุณานับดูว่ามีกี่คน^high^
+B2-0502^noun@E^high^ตัวเลข^这个数字是什么意思？^Zhège shùzì shì shénme yìsi?^ตัวเลขนี้หมายความว่าอะไร?^high^
+B2-0503^noun@E^high^ระดับ; มาตรฐาน^他的汉语水平很高。^Tā de Hànyǔ shuǐpíng hěn gāo.^ระดับภาษาจีนของเขาสูงมาก^high^
+B2-0504^adjective@L^medium^ราบรื่น^祝你一切顺利！^Zhù nǐ yíqiè shùnlì!^ขอให้ทุกอย่างราบรื่น!^medium^source_gloss: "smoothly" is adverbial; 顺利 is mainly the adjective "smooth; successful"
+B2-0505^verb@E^medium^อธิบาย; คำอธิบาย^请你说明一下原因。^Qǐng nǐ shuōmíng yí xià yuányīn.^กรุณาอธิบายเหตุผลหน่อย^medium^pos_doubtful: 说明 is both verb "explain" and noun "explanation/instructions"; example shows the verb
+B2-0506^noun@E^high^คนขับรถ^他是一名出租车司机。^Tā shì yì míng chūzūchē sījī.^เขาเป็นคนขับแท็กซี่^high^
+B2-0507^verb@E^high^ส่งไปถึง^请把这些书送到我家。^Qǐng bǎ zhèxiē shū sòngdào wǒ jiā.^กรุณาส่งหนังสือพวกนี้ไปที่บ้านฉัน^high^
+B2-0508^verb@E^high^มอบให้แก่^这本书送给你。^Zhè běn shū sònggěi nǐ.^หนังสือเล่มนี้ให้คุณ^high^
+B2-0509^verb@E^high^นับ; คำนวณ^你算一下一共多少钱。^Nǐ suàn yí xià yígòng duōshao qián.^คุณคำนวณดูหน่อยว่าทั้งหมดเท่าไร^medium^polysemy: 算 also "be considered as; count as" (算了); gloss gives "count; calculate"
+B2-0510^conjunction@E^high^แม้ว่า; ถึงแม้^虽然很累，但是我很高兴。^Suīrán hěn lèi, dànshì wǒ hěn gāoxìng.^แม้จะเหนื่อยมาก แต่ฉันก็ดีใจมาก^high^
+B2-0511^adjective@E^medium^ตามสบาย; ตามใจ; ลวกๆ^你随便坐吧。^Nǐ suíbiàn zuò ba.^นั่งตามสบายเลย^medium^polysemy: "casual; as you like" vs. "careless"; gloss gives "casual"; example shows "as you like"
+B2-0512^adverb@E^high^ทุกเมื่อ; เมื่อไรก็ได้^有问题随时给我打电话。^Yǒu wèntí suíshí gěi wǒ dǎ diànhuà.^มีปัญหาโทรหาฉันได้ทุกเมื่อ^high^
+B2-0513^conjunction@E^high^ดังนั้น; จึง^今天下雨，所以我没出门。^Jīntiān xià yǔ, suǒyǐ wǒ méi chūmén.^วันนี้ฝนตก ดังนั้นฉันจึงไม่ได้ออกจากบ้าน^high^
+B2-0514^adjective@L^medium^ทั้งหมด; ทุก^所有的学生都参加了。^Suǒyǒu de xuésheng dōu cānjiā le.^นักเรียนทุกคนเข้าร่วมหมด^high^
+B2-0515^pronoun@E^high^มัน^这只猫很可爱，它叫咪咪。^Zhè zhī māo hěn kě'ài, tā jiào Mīmī.^แมวตัวนี้น่ารักมาก มันชื่อมี่มี่^high^
+B2-0516^pronoun@E^high^พวกมัน^这些小狗很可爱，它们都很听话。^Zhèxiē xiǎo gǒu hěn kě'ài, tāmen dōu hěn tīnghuà.^ลูกหมาพวกนี้น่ารักมาก พวกมันเชื่อฟังทุกตัว^high^
+B2-0517^noun@E^medium^คุณนาย; ภรรยา^王太太是我的邻居。^Wáng tàitai shì wǒ de línjū.^คุณนายหวังเป็นเพื่อนบ้านของฉัน^medium^source_gloss: "Ma'am" is a form of address; 太太 means "Mrs.; wife"
+B2-0518^noun@E^high^ดวงอาทิตย์^太阳出来了。^Tàiyáng chūlai le.^ดวงอาทิตย์ขึ้นแล้ว^high^
+B2-0519^noun@E^high^ทัศนคติ; ท่าที^他的工作态度很好。^Tā de gōngzuò tàidu hěn hǎo.^ทัศนคติในการทำงานของเขาดีมาก^high^
+B2-0520^verb@E^high^อภิปราย; หารือ^我们正在讨论这个问题。^Wǒmen zhèngzài tǎolùn zhège wèntí.^พวกเรากำลังหารือเรื่องนี้กันอยู่^high^
+B2-0521^measure_word@L^medium^ชุด (ลักษณนาม)^我买了一套新衣服。^Wǒ mǎi le yí tào xīn yīfu.^ฉันซื้อเสื้อผ้าใหม่หนึ่งชุด^medium^pos_doubtful: "set" can be noun or measure word; 套 is mainly a measure word
+B2-0522^adverb@E^medium^เป็นพิเศษ; โดยเฉพาะ^我特别喜欢吃饺子。^Wǒ tèbié xǐhuan chī jiǎozi.^ฉันชอบกินเกี๊ยวเป็นพิเศษ^medium^polysemy: adverb "especially" vs. adjective "special" (很特别); example shows the adverb
+B2-0523^noun@E^high^ลักษณะเด่น; จุดเด่น^这个城市有什么特点？^Zhège chéngshì yǒu shénme tèdiǎn?^เมืองนี้มีลักษณะเด่นอะไร?^high^
+B2-0524^adjective@L^medium^เจ็บ; ปวด^我头很疼。^Wǒ tóu hěn téng.^ฉันปวดหัวมาก^medium^pos_doubtful: gloss "hurt" reads as verb; 疼 is mainly the adjective "painful; sore"
+B2-0525^verb@E^high^หิ้ว; ถือ; ยก (ประเด็น)^他手里提着一个包。^Tā shǒu li tí zhe yí ge bāo.^เขาหิ้วกระเป๋าใบหนึ่งอยู่ในมือ^medium^polysemy: "carry (in the hand)" vs. "raise; mention" (提问题); gloss gives "carry"
+B2-0526^verb@E^high^เสนอ; ยกขึ้นมา^他提出了一个好建议。^Tā tíchū le yí ge hǎo jiànyì.^เขาเสนอข้อแนะนำที่ดีข้อหนึ่ง^high^
+B2-0527^verb@E^high^กล่าวถึง; พูดถึง^他在信中提到了你。^Tā zài xìn zhōng tídào le nǐ.^เขาพูดถึงคุณในจดหมาย^high^
+B2-0528^verb@E^high^ยกระดับ; เพิ่ม; ปรับปรุงให้ดีขึ้น^我想提高我的汉语水平。^Wǒ xiǎng tígāo wǒ de Hànyǔ shuǐpíng.^ฉันอยากยกระดับภาษาจีนของฉัน^high^
+B2-0529^noun@E^medium^โจทย์; คำถาม; หัวข้อ^这道题太难了。^Zhè dào tí tài nán le.^โจทย์ข้อนี้ยากเกินไป^medium^source_gloss: "topic" — at band 2 题 mostly means "question; exercise problem"
+B2-0530^noun@E^high^พลศึกษา; กีฬา^我最喜欢上体育课。^Wǒ zuì xǐhuan shàng tǐyù kè.^ฉันชอบเรียนวิชาพลศึกษามากที่สุด^high^
+B2-0531^noun@E^high^สนามกีฬา; สเตเดียม^比赛在体育场举行。^Bǐsài zài tǐyùchǎng jǔxíng.^การแข่งขันจัดขึ้นที่สนามกีฬา^high^

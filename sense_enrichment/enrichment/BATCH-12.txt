@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B2-0532^noun@E^high^โรงยิม; สนามกีฬาในร่ม^我们在体育馆打篮球。^Wǒmen zài tǐyùguǎn dǎ lánqiú.^พวกเราเล่นบาสเกตบอลในโรงยิม^high^
+B2-0533^noun@E^high^บนท้องฟ้า; สวรรค์^天上有很多星星。^Tiānshàng yǒu hěn duō xīngxing.^บนท้องฟ้ามีดวงดาวมากมาย^high^
+B2-0534^measure_word@L^medium^เส้น; สาย; ตัว (ลักษณนามของสิ่งยาว)^这条裤子很好看。^Zhè tiáo kùzi hěn hǎokàn.^กางเกงตัวนี้สวยมาก^medium^source_gloss: "strip" reads as noun; 条 is mainly a measure word for long thin things
+B2-0535^noun@E^high^เงื่อนไข; สภาพ^这里的生活条件很好。^Zhèlǐ de shēnghuó tiáojiàn hěn hǎo.^สภาพความเป็นอยู่ที่นี่ดีมาก^high^
+B2-0536^verb@E^high^ฟังบรรยาย; ฟังครูสอน^上课要认真听讲。^Shàngkè yào rènzhēn tīngjiǎng.^ในชั้นเรียนต้องตั้งใจฟังครูสอน^high^
+B2-0537^verb@E^high^ได้ยินมาว่า; ได้ข่าวว่า^听说他下个月结婚。^Tīngshuō tā xià ge yuè jiéhūn.^ได้ยินมาว่าเขาจะแต่งงานเดือนหน้า^high^
+B2-0538^verb@E^high^หยุด; จอด^雨停了。^Yǔ tíng le.^ฝนหยุดแล้ว^high^
+B2-0539^verb@E^high^จอดรถ^这里不能停车。^Zhèlǐ bù néng tíngchē.^ที่นี่จอดรถไม่ได้^high^
+B2-0540^noun@E^high^ลานจอดรถ^停车场在楼下。^Tíngchēchǎng zài lóuxià.^ลานจอดรถอยู่ชั้นล่าง^high^
+B2-0542^other^low^ดีมาก; ไม่เลวเลย^你的汉语说得挺好的。^Nǐ de Hànyǔ shuō de tǐng hǎo de.^คุณพูดภาษาจีนได้ดีมาก^high^pos_doubtful: phrase (挺 + 好) with no single POS
+B2-0543^adjective@L^low^ทะลุ; ผ่านตลอด; ทั่วไป; เข้าใจ; ผู้เชี่ยวชาญ^这条路不通。^Zhè tiáo lù bù tōng.^ถนนสายนี้ไปต่อไม่ได้^low^polysemy: through / common / all / understand / expert are distinct senses with different POS; pos_doubtful: no source POS; example shows "through (passable)"
+B2-0544^verb@E^medium^ผ่าน; อนุมัติ; ผ่านทาง^会议通过了这个计划。^Huìyì tōngguò le zhège jìhuà.^ที่ประชุมอนุมัติแผนนี้แล้ว^medium^polysemy: gloss "adopt" covers only one use; 通过 also "pass (exam)" and preposition "by means of"
+B2-0545^noun@E^medium^ประกาศ; แจ้ง^学校发了一个通知。^Xuéxiào fā le yí ge tōngzhī.^โรงเรียนออกประกาศฉบับหนึ่ง^medium^pos_doubtful: 通知 is both noun "notice" and verb "notify"; example shows the noun
+B2-0546^conjunction@L^medium^ในขณะเดียวกัน^他工作很忙，同时还在学习汉语。^Tā gōngzuò hěn máng, tóngshí hái zài xuéxí Hànyǔ.^เขางานยุ่งมาก ในขณะเดียวกันก็ยังเรียนภาษาจีนอยู่^medium^pos_doubtful: 同时 is used as noun "same time" and conjunction "meanwhile"
+B2-0547^noun@E^high^เพื่อนร่วมงาน^他是我的同事。^Tā shì wǒ de tóngshì.^เขาเป็นเพื่อนร่วมงานของฉัน^high^
+B2-0548^adjective@E^high^เหมือนกัน; เช่นเดียวกัน^我们用同样的方法。^Wǒmen yòng tóngyàng de fāngfǎ.^พวกเราใช้วิธีเดียวกัน^high^
+B2-0550^other^low^(ปัจจัยเติมท้ายคำบอกตำแหน่ง/คำนาม)^外头很冷，里头很暖和。^Wàitou hěn lěng, lǐtou hěn nuǎnhuo.^ข้างนอกหนาวมาก ข้างในอบอุ่น^medium^pos_doubtful: suffix has no matching POS in the enum; source_gloss: pinyin tóu given, but the suffix is neutral-tone tou
+B2-0551^noun@E^high^ผม; เส้นผม^她的头发很长。^Tā de tóufa hěn cháng.^ผมของเธอยาวมาก^high^
+B2-0552^noun@E^high^รูปภาพ; ภาพถ่าย^这张图片很漂亮。^Zhè zhāng túpiàn hěn piàoliang.^รูปภาพนี้สวยมาก^high^
+B2-0553^verb@E^high^ผลัก; ดัน^请推门。^Qǐng tuī mén.^กรุณาผลักประตู^high^
+B2-0554^noun@E^high^ขา^我的腿很长。^Wǒ de tuǐ hěn cháng.^ขาของฉันยาวมาก^high^
+B2-0555^noun@E^high^ต่างถิ่น; ที่อื่น^他是从外地来的。^Tā shì cóng wàidì lái de.^เขามาจากต่างถิ่น^high^
+B2-0556^noun@E^high^อาหารสั่งกลับบ้าน; เดลิเวอรี^我们今天叫外卖吧。^Wǒmen jīntiān jiào wàimài ba.^วันนี้พวกเราสั่งอาหารเดลิเวอรีกันเถอะ^high^
+B2-0557^verb@E^high^เสร็จ; หมด^我的作业做完了。^Wǒ de zuòyè zuò wán le.^การบ้านของฉันทำเสร็จแล้ว^high^
+B2-0558^verb@E^high^ทำให้เสร็จสมบูรณ์^我已经完成了今天的工作。^Wǒ yǐjīng wánchéng le jīntiān de gōngzuò.^ฉันทำงานของวันนี้เสร็จแล้ว^high^
+B2-0559^adverb@E^high^โดยสิ้นเชิง; ทั้งหมด^我完全同意你的看法。^Wǒ wánquán tóngyì nǐ de kànfǎ.^ฉันเห็นด้วยกับความคิดเห็นของคุณโดยสิ้นเชิง^high^
+B2-0560^interjection@L^medium^ราตรีสวัสดิ์^晚安，明天见！^Wǎn'ān, míngtiān jiàn!^ราตรีสวัสดิ์ พรุ่งนี้เจอกัน!^high^
+B2-0561^noun@E^high^หนังสือพิมพ์ฉบับเย็น^爸爸下班后看晚报。^Bàba xiàbān hòu kàn wǎnbào.^พ่ออ่านหนังสือพิมพ์ฉบับเย็นหลังเลิกงาน^high^
+B2-0562^noun@E^high^อาหารเย็น; มื้อค่ำ^我们一起吃晚餐吧。^Wǒmen yìqǐ chī wǎncān ba.^พวกเรากินมื้อค่ำด้วยกันเถอะ^high^
+B2-0563^noun@E^high^งานเลี้ยงตอนค่ำ; งานสังสรรค์^今天晚上学校有一个晚会。^Jīntiān wǎnshang xuéxiào yǒu yí ge wǎnhuì.^คืนนี้โรงเรียนมีงานสังสรรค์^high^
+B2-0564^noun@E^high^ชาม; ถ้วย^我吃了两碗米饭。^Wǒ chī le liǎng wǎn mǐfàn.^ฉันกินข้าวไปสองชาม^medium^pos_doubtful: 碗 is both noun "bowl" and measure word; example shows the measure word
+B2-0565^numeral@E^high^หมื่น^这台电脑一万块钱。^Zhè tái diànnǎo yí wàn kuài qián.^คอมพิวเตอร์เครื่องนี้ราคาหนึ่งหมื่นหยวน^high^
+B2-0566^noun@E^high^ตาข่าย; เครือข่าย; อินเทอร์เน็ต^这里的网很慢。^Zhèlǐ de wǎng hěn màn.^อินเทอร์เน็ตที่นี่ช้ามาก^medium^polysemy: "net" (physical) vs. "network/internet"; example shows "internet"
+B2-0567^noun@E^high^เทนนิส^他每个周末都打网球。^Tā měi ge zhōumò dōu dǎ wǎngqiú.^เขาเล่นเทนนิสทุกสุดสัปดาห์^high^
+B2-0568^noun@E^high^เว็บไซต์^这个网站很有用。^Zhège wǎngzhàn hěn yǒuyòng.^เว็บไซต์นี้มีประโยชน์มาก^high^
+B2-0569^preposition@E^high^ไปทาง; สู่^一直往前走。^Yìzhí wǎng qián zǒu.^เดินตรงไปข้างหน้า^high^
+B2-0570^preposition@L^low^เพื่อ; ให้; (โดย)^这本书是为孩子们写的。^Zhè běn shū shì wèi háizimen xiě de.^หนังสือเล่มนี้เขียนขึ้นเพื่อเด็กๆ^low^source_mismatch: gloss "by" fits passive 为 wéi (为…所), but pinyin is wèi ("for"); Thai/example follow the pinyin; overlaps B3-0752
+B2-0571^pronoun@L^high^ทำไม^你为什么不来？^Nǐ wèishénme bù lái?^ทำไมคุณไม่มา?^high^
+B2-0572^measure_word@E^high^ท่าน (ลักษณนามของคนแบบสุภาพ)^这位老师是我们的班主任。^Zhè wèi lǎoshī shì wǒmen de bānzhǔrèn.^ครูท่านนี้เป็นครูประจำชั้นของพวกเรา^high^
+B2-0573^noun@E^high^รสชาติ; กลิ่น^这个菜的味道很好。^Zhège cài de wèidao hěn hǎo.^อาหารจานนี้รสชาติดีมาก^high^
+B2-0574^interjection@E^high^ฮัลโหล; เฮ้^喂，你好！请问你找谁？^Wèi, nǐ hǎo! Qǐngwèn nǐ zhǎo shéi?^ฮัลโหล สวัสดีครับ ไม่ทราบต้องการเรียนสายใคร?^high^
+B2-0575^noun@E^high^อุณหภูมิ^今天的温度是二十度。^Jīntiān de wēndù shì èrshí dù.^อุณหภูมิวันนี้ยี่สิบองศา^high^
+B2-0576^verb@E^high^ดม; ได้กลิ่น^你闻，这是什么味道？^Nǐ wén, zhè shì shénme wèidao?^คุณลองดมดูสิ นี่กลิ่นอะไร?^high^
+B2-0577^verb@E^high^ถามทาง^我迷路了，只好问路。^Wǒ mílù le, zhǐhǎo wènlù.^ฉันหลงทาง เลยต้องถามทาง^high^
+B2-0578^noun@E^high^ปัญหา; คำถาม^你有什么问题吗？^Nǐ yǒu shénme wèntí ma?^คุณมีคำถามอะไรไหม?^medium^polysemy: "problem" vs. "question" (both very common); gloss gives "problem"; example reads as "question"
+B2-0579^noun@E^high^อาหารกลางวัน^午餐我吃了面条。^Wǔcān wǒ chī le miàntiáo.^มื้อกลางวันฉันกินบะหมี่^high^
+B2-0580^verb@E^medium^งีบหลับตอนกลางวัน^我每天中午都要午睡。^Wǒ měitiān zhōngwǔ dōu yào wǔshuì.^ฉันงีบหลับตอนเที่ยงทุกวัน^medium^pos_doubtful: gloss "nap" is noun or verb; example shows the verb
+B2-0581^noun@E^high^ทิศตะวันตกเฉียงเหนือ^新疆在中国的西北。^Xīnjiāng zài Zhōngguó de xīběi.^ซินเจียงอยู่ทางตะวันตกเฉียงเหนือของจีน^high^
+B2-0582^noun@E^high^อาหารตะวันตก^你喜欢吃西餐还是中餐？^Nǐ xǐhuan chī xīcān háishi zhōngcān?^คุณชอบอาหารตะวันตกหรืออาหารจีน?^high^
+B2-0583^noun@E^high^ทิศตะวันตก; ตะวันตก (ประเทศตะวันตก)^太阳从西方落下。^Tàiyáng cóng xīfāng luòxia.^ดวงอาทิตย์ตกทางทิศตะวันตก^medium^polysemy: direction "west" vs. "the West (Western countries)"; example shows direction
+B2-0584^noun@E^high^ทิศตะวันตกเฉียงใต้^成都在中国的西南。^Chéngdū zài Zhōngguó de xīnán.^เฉิงตูอยู่ทางตะวันตกเฉียงใต้ของจีน^high^
+B2-0585^noun@E^high^การแพทย์แผนตะวันตก; แพทย์แผนปัจจุบัน^你看西医还是中医？^Nǐ kàn xīyī háishi zhōngyī?^คุณไปหาหมอแผนปัจจุบันหรือหมอจีน?^medium^polysemy: "Western medicine" vs. "doctor of Western medicine"; example reads as the doctor
+B2-0586^noun@E^medium^นิสัย; ความเคยชิน; เคยชิน^早睡早起是好习惯。^Zǎo shuì zǎo qǐ shì hǎo xíguàn.^นอนเร็วตื่นเช้าเป็นนิสัยที่ดี^medium^pos_doubtful: 习惯 is both noun "habit" and verb "be used to"; example shows the noun
+B2-0587^noun@E^high^เครื่องซักผ้า^我家买了一台新洗衣机。^Wǒ jiā mǎi le yì tái xīn xǐyījī.^บ้านฉันซื้อเครื่องซักผ้าเครื่องใหม่^high^
+B2-0588^verb@E^high^อาบน้ำ^我每天晚上洗澡。^Wǒ měitiān wǎnshang xǐzǎo.^ฉันอาบน้ำทุกคืน^high^
+B2-0590^verb@E^high^หิมะตก^外面下雪了。^Wàimian xià xuě le.^ข้างนอกหิมะตกแล้ว^high^
+B2-0591^noun@E^high^สัปดาห์หน้า^下周我们有考试。^Xiàzhōu wǒmen yǒu kǎoshì.^สัปดาห์หน้าพวกเรามีสอบ^high^
+B2-0592^noun@E^high^ฤดูร้อน^夏天很热。^Xiàtiān hěn rè.^ฤดูร้อนร้อนมาก^high^
+B2-0593^adjective@E^high^เหมือนกัน^我们的爱好相同。^Wǒmen de àihào xiāngtóng.^งานอดิเรกของพวกเราเหมือนกัน^high^
+B2-0594^verb@E^high^เชื่อ; เชื่อมั่น^我相信你一定能成功。^Wǒ xiāngxìn nǐ yídìng néng chénggōng.^ฉันเชื่อว่าคุณต้องประสบความสำเร็จแน่^high^
+B2-0595^verb@L^low^ดัง; ส่งเสียง^电话响了。^Diànhuà xiǎng le.^โทรศัพท์ดังแล้ว^medium^source_gloss: gloss "loud" is adjectival, but 响 is mostly the verb "ring; sound"; pos_doubtful: no source POS
+B2-0596^verb@E^high^นึกถึง; คิดถึง^我没想到他会来。^Wǒ méi xiǎngdào tā huì lái.^ฉันไม่คิดว่าเขาจะมา^high^
+B2-0597^noun@E^high^ความคิด; ความเห็น^你的想法很好。^Nǐ de xiǎngfǎ hěn hǎo.^ความคิดของคุณดีมาก^high^
+B2-0598^verb@E^high^นึกขึ้นได้; ระลึกถึง^我想起来了，他叫李明。^Wǒ xiǎng qǐlai le, tā jiào Lǐ Míng.^ฉันนึกออกแล้ว เขาชื่อหลี่หมิง^high^
+B2-0599^preposition@E^high^ไปทาง; ต่อ; ยัง^他向我走过来。^Tā xiàng wǒ zǒu guòlai.^เขาเดินมาทางฉัน^high^
+B2-0600^noun@E^high^กล้องถ่ายรูป^我买了一个新相机。^Wǒ mǎi le yí ge xīn xiàngjī.^ฉันซื้อกล้องถ่ายรูปตัวใหม่^high^
+B2-0602^other^low^(คำนำหน้าแซ่แสดงความเป็นกันเองกับคนอายุน้อยกว่า) เสี่ยว-^小王，你过来一下。^Xiǎo Wáng, nǐ guòlai yí xià.^เสี่ยวหวัง มานี่หน่อย^medium^pos_doubtful: prefix has no matching POS in the enum; source_gloss: pinyin field carries an inline example "（xiǎowáng）"
+B2-0603^adverb@L^medium^เสียงเบา; กระซิบ^图书馆里要小声说话。^Túshūguǎn li yào xiǎoshēng shuōhuà.^ในห้องสมุดต้องพูดเสียงเบาๆ^high^
+B2-0604^noun@E^high^ตอนเด็ก; วัยเด็ก^我小时候住在农村。^Wǒ xiǎoshíhou zhù zài nóngcūn.^ตอนเด็กฉันอาศัยอยู่ในชนบท^high^
+B2-0605^noun@E^high^นวนิยาย^我喜欢看小说。^Wǒ xǐhuan kàn xiǎoshuō.^ฉันชอบอ่านนวนิยาย^high^
+B2-0606^verb@L^medium^ระวัง; ระมัดระวัง^小心！车来了！^Xiǎoxīn! Chē lái le!^ระวัง! รถมาแล้ว!^medium^source_gloss: "Look out" is the exclamation use; 小心 is the verb/adjective "be careful"
+B2-0607^noun@E^high^กลุ่มย่อย; ทีม^我们分成四个小组讨论。^Wǒmen fēnchéng sì ge xiǎozǔ tǎolùn.^พวกเราแบ่งเป็นสี่กลุ่มเพื่ออภิปราย^high^
+B2-0608^noun@E^high^บริเวณโรงเรียน; วิทยาเขต^我们的校园很漂亮。^Wǒmen de xiàoyuán hěn piàoliang.^บริเวณโรงเรียนของเราสวยมาก^high^
+B2-0609^noun@E^high^ครูใหญ่; อธิการบดี^校长在办公室。^Xiàozhǎng zài bàngōngshì.^ครูใหญ่อยู่ในห้องทำงาน^high^
+B2-0610^noun@E^high^เรื่องตลก; มุก^他给我们讲了一个笑话。^Tā gěi wǒmen jiǎng le yí ge xiàohua.^เขาเล่าเรื่องตลกให้พวกเราฟังเรื่องหนึ่ง^medium^polysemy: 笑话 is also the verb "laugh at" (别笑话我); gloss gives the noun
+B2-0611^noun@E^high^เรื่องตลก; มุก^爷爷很会讲笑话儿。^Yéye hěn huì jiǎng xiàohuar.^คุณปู่เล่าเรื่องตลกเก่งมาก^high^variant: erhua form of 笑话 (B2-0610)
+B2-0612^noun@E^high^รองเท้า^这双鞋很舒服。^Zhè shuāng xié hěn shūfu.^รองเท้าคู่นี้ใส่สบายมาก^high^
+B2-0613^noun@E^high^ในใจ^他心里很高兴。^Tā xīnli hěn gāoxìng.^ในใจเขาดีใจมาก^high^
+B2-0614^noun@E^high^อารมณ์; ความรู้สึก^今天我的心情很好。^Jīntiān wǒ de xīnqíng hěn hǎo.^วันนี้อารมณ์ของฉันดีมาก^high^
+B2-0615^noun@E^high^ในใจ^他是我心中的英雄。^Tā shì wǒ xīnzhōng de yīngxióng.^เขาคือฮีโร่ในใจของฉัน^high^
+B2-0616^noun@E^high^ข่าว^我每天晚上看新闻。^Wǒ měitiān wǎnshang kàn xīnwén.^ฉันดูข่าวทุกคืน^high^
+B2-0618^noun@E^high^สัญญาณ^这里手机没有信号。^Zhèlǐ shǒujī méiyǒu xìnhào.^ที่นี่โทรศัพท์มือถือไม่มีสัญญาณ^high^
+B2-0619^noun@E^high^ข้อมูล; ข่าวสาร^网上有很多信息。^Wǎngshang yǒu hěn duō xìnxī.^บนอินเทอร์เน็ตมีข้อมูลมากมาย^high^
+B2-0620^noun@E^high^ความมั่นใจ^我对这次考试很有信心。^Wǒ duì zhè cì kǎoshì hěn yǒu xìnxīn.^ฉันมั่นใจในการสอบครั้งนี้มาก^high^
+B2-0621^noun@E^high^บัตรเครดิต^可以用信用卡吗？^Kěyǐ yòng xìnyòngkǎ ma?^ใช้บัตรเครดิตได้ไหม?^high^
+B2-0622^noun@E^high^ดวงดาว^晚上天上有很多星星。^Wǎnshang tiān shang yǒu hěn duō xīngxing.^ตอนกลางคืนบนท้องฟ้ามีดวงดาวมากมาย^high^
+B2-0623^verb@L^medium^ลงมือทำ; ปฏิบัติ; การกระทำ^我们马上行动吧。^Wǒmen mǎshàng xíngdòng ba.^พวกเราลงมือทำกันเดี๋ยวนี้เลย^medium^source_gloss: "Get some action" is unidiomatic; 行动 is verb "take action" / noun "action"
+B2-0624^noun@E^high^คนเดินเท้า^行人要走人行道。^Xíngrén yào zǒu rénxíngdào.^คนเดินเท้าต้องเดินบนทางเท้า^high^
+B2-0625^noun@E^high^พฤติกรรม; การกระทำ^这种行为是不对的。^Zhè zhǒng xíngwéi shì bú duì de.^พฤติกรรมแบบนี้ไม่ถูกต้อง^high^
+B2-0626^noun@E^medium^แซ่; นามสกุล; มีแซ่ว่า^您贵姓？我姓王。^Nín guìxìng? Wǒ xìng Wáng.^คุณแซ่อะไรครับ? ผมแซ่หวัง^medium^pos_doubtful: gloss "surname" is a noun, but 姓 is mostly used as the verb "be surnamed"
+B2-0627^noun@E^high^ชื่อและนามสกุล^请写上你的姓名。^Qǐng xiěshang nǐ de xìngmíng.^กรุณาเขียนชื่อและนามสกุลของคุณ^high^
+B2-0628^verb@E^high^ลาพักร้อน; หยุดพักผ่อน^他下个月休假。^Tā xià ge yuè xiūjià.^เดือนหน้าเขาจะลาพักร้อน^high^
+B2-0629^numeral@L^medium^มากมาย; หลาย^许多人喜欢这首歌。^Xǔduō rén xǐhuan zhè shǒu gē.^หลายคนชอบเพลงนี้^medium^pos_doubtful: quantity word 许多 has no exact enum value (adjective or numeral)
+B2-0630^verb@E^high^เลือก; คัดเลือก^你选哪一个？^Nǐ xuǎn nǎ yí ge?^คุณเลือกอันไหน?^high^
+B2-0631^noun@E^high^ภาคเรียน^这个学期我有六门课。^Zhège xuéqī wǒ yǒu liù mén kè.^ภาคเรียนนี้ฉันมีหกวิชา^high^
+B2-0632^noun@E^high^หิมะ^地上都是雪。^Dì shang dōu shì xuě.^บนพื้นมีแต่หิมะ^high^
+B2-0633^noun@E^high^สี^你喜欢什么颜色？^Nǐ xǐhuan shénme yánsè?^คุณชอบสีอะไร?^high^
+B2-0634^noun@E^high^ตา^他看了我一眼。^Tā kàn le wǒ yì yǎn.^เขามองฉันแวบหนึ่ง^medium^pos_doubtful: example uses 眼 as a verbal measure (看一眼); noun "eye" is mostly 眼睛
+B2-0635^noun@E^high^ดวงตา^她的眼睛很大。^Tā de yǎnjing hěn dà.^ดวงตาของเธอโตมาก^high^
+B2-0636^verb@E^high^เลี้ยง; ดูแล; เพาะปลูก^我家养了一只狗。^Wǒ jiā yǎng le yì zhī gǒu.^บ้านฉันเลี้ยงสุนัขไว้หนึ่งตัว^medium^polysemy: raise / keep / support (family) / cultivate combined; example shows "keep (a pet)"
