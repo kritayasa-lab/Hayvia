@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B4-0436^verb@E^high^สำรวจ; ตรวจสอบภาคสนาม^专家们来这里考察。^Zhuānjiāmen lái zhèlǐ kǎochá.^ผู้เชี่ยวชาญมาสำรวจที่นี่^high^
+B4-0437^verb@E^high^พิจารณา; คิดใคร่ครวญ^让我考虑一下。^Ràng wǒ kǎolǜ yí xià.^ขอฉันพิจารณาสักครู่^high^
+B4-0438^measure_word@E^high^ต้น (ลักษณนามของต้นไม้)^院子里有两棵树。^Yuànzi li yǒu liǎng kē shù.^ในลานบ้านมีต้นไม้สองต้น^high^
+B4-0439^conjunction@L^medium^เห็นได้ว่า; ดังนั้น^他一直在笑，可见他很高兴。^Tā yìzhí zài xiào, kějiàn tā hěn gāoxìng.^เขายิ้มตลอดเวลา เห็นได้ว่าเขาดีใจมาก^medium^source_gloss: "So" is loose; 可见 means "it is thus clear that"
+B4-0440^noun@E^high^พื้นที่; อวกาศ^这个房间的空间很大。^Zhège fángjiān de kōngjiān hěn dà.^ห้องนี้มีพื้นที่กว้างมาก^medium^polysemy: "room; space (area)" vs. "outer space"; example shows "room"
+B4-0442^noun@E^high^กระเป๋า (เสื้อ); ถุง^他把手放在口袋里。^Tā bǎ shǒu fàng zài kǒudai li.^เขาเอามือล้วงไว้ในกระเป๋า^high^
+B4-0443^noun@E^high^ภาษาพูด^他的汉语口语很好。^Tā de Hànyǔ kǒuyǔ hěn hǎo.^ภาษาจีนพูดของเขาดีมาก^high^
+B4-0444^adjective@E^high^ขม; ลำบาก^这药太苦了。^Zhè yào tài kǔ le.^ยานี้ขมเกินไป^medium^polysemy: "bitter (taste)" vs. "hard; miserable" (生活很苦)
+B4-0445^noun@E^high^นักบัญชี; การบัญชี^她是公司的会计。^Tā shì gōngsī de kuàijì.^เธอเป็นนักบัญชีของบริษัท^high^
+B4-0446^noun@E^high^พัสดุด่วน; ส่งด่วน^我的快递到了。^Wǒ de kuàidì dào le.^พัสดุของฉันมาถึงแล้ว^high^
+B4-0447^adjective@E^high^กว้าง^这条马路很宽。^Zhè tiáo mǎlù hěn kuān.^ถนนสายนี้กว้างมาก^high^
+B4-0448^adjective@E^high^กว้างใหญ่^他有宽广的胸怀。^Tā yǒu kuānguǎng de xiōnghuái.^เขาเป็นคนใจกว้าง^high^
+B4-0449^noun@E^high^น้ำแร่^请给我一瓶矿泉水。^Qǐng gěi wǒ yì píng kuàngquánshuǐ.^ขอน้ำแร่หนึ่งขวด^high^
+B4-0450^verb@E^high^ขยาย^公司想扩大生产。^Gōngsī xiǎng kuòdà shēngchǎn.^บริษัทต้องการขยายการผลิต^high^
+B4-0451^verb@E^high^ขยาย; แผ่ขยาย^我们要扩展业务。^Wǒmen yào kuòzhǎn yèwù.^พวกเราต้องขยายธุรกิจ^high^
+B4-0452^noun@E^high^วงเล็บ^请把答案写在括号里。^Qǐng bǎ dá'àn xiě zài kuòhào li.^กรุณาเขียนคำตอบไว้ในวงเล็บ^high^
+B4-0453^noun@E^high^ขยะ^请把垃圾扔进垃圾桶。^Qǐng bǎ lājī rēng jìn lājītǒng.^กรุณาทิ้งขยะลงถังขยะ^high^
+B4-0454^verb@E^high^ดึงเปิด; รูด (ซิป)^他拉开了窗帘。^Tā lākāi le chuānglián.^เขาดึงม่านเปิด^high^
+B4-0455^adjective@E^high^เผ็ด^四川菜很辣。^Sìchuān cài hěn là.^อาหารเสฉวนเผ็ดมาก^high^
+B4-0456^verb@L^medium^ไม่ทัน^快走吧，要来不及了。^Kuài zǒu ba, yào láibují le.^รีบไปเถอะ จะไม่ทันแล้ว^high^
+B4-0457^verb@L^medium^ทันเวลา^别着急，还来得及。^Bié zháojí, hái láidejí.^ไม่ต้องรีบ ยังทันอยู่^high^
+B4-0458^noun@E^high^แหล่งที่มา^这条消息的来源可靠吗？^Zhè tiáo xiāoxi de láiyuán kěkào ma?^แหล่งที่มาของข่าวนี้เชื่อถือได้ไหม?^high^
+B4-0459^noun@E^high^สามี (ภาษาพูด)^我老公是医生。^Wǒ lǎogōng shì yīshēng.^สามีของฉันเป็นหมอ^high^
+B4-0460^noun@E^high^บ้านเกิด^过年我要回老家。^Guònián wǒ yào huí lǎojiā.^ตรุษจีนฉันจะกลับบ้านเกิด^high^
+B4-0461^noun@E^high^ภรรยา (ภาษาพูด)^他老婆做饭很好吃。^Tā lǎopo zuòfàn hěn hǎochī.^ภรรยาของเขาทำอาหารอร่อยมาก^high^
+B4-0462^adjective@E^high^ซื่อสัตย์; เรียบร้อย^他是个老实人。^Tā shì ge lǎoshi rén.^เขาเป็นคนซื่อๆ^medium^polysemy: "honest" vs. "well-behaved; naive" (老实点儿)
+B4-0463^noun@E^high^ความสนุก; ความเพลิดเพลิน^读书给我带来很多乐趣。^Dúshū gěi wǒ dàilai hěn duō lèqù.^การอ่านหนังสือทำให้ฉันมีความสุขมาก^high^
+B4-0464^noun@E^high^น้ำตา^她流下了眼泪。^Tā liúxià le yǎnlèi.^เธอหลั่งน้ำตา^medium^example: bare 泪 is mostly bound (眼泪, 泪水); sentence uses 眼泪
+B4-0465^noun@E^high^น้ำตา^她的眼里充满了泪水。^Tā de yǎn li chōngmǎn le lèishuǐ.^ดวงตาของเธอเต็มไปด้วยน้ำตา^high^
+B4-0466^noun@E^high^ประเภท^你喜欢什么类型的电影？^Nǐ xǐhuan shénme lèixíng de diànyǐng?^คุณชอบภาพยนตร์ประเภทไหน?^high^
+B4-0467^adjective@L^medium^สงบ; ใจเย็น^遇到问题要冷静。^Yùdào wèntí yào lěngjìng.^เจอปัญหาต้องใจเย็น^medium^source_gloss: "calm down" is a verb phrase; 冷静 is mainly the adjective "calm" (also verb in 冷静一下)
+B4-0468^measure_word@L^high^เซนติเมตร^这张桌子长一百二十厘米。^Zhè zhāng zhuōzi cháng yìbǎi èrshí límǐ.^โต๊ะตัวนี้ยาวหนึ่งร้อยยี่สิบเซนติเมตร^high^
+B4-0469^verb@L^medium^ขาดไม่ได้^孩子离不开父母。^Háizi lí bu kāi fùmǔ.^เด็กขาดพ่อแม่ไม่ได้^high^
+B4-0470^noun@E^high^กำลัง; แรง^我没力气了。^Wǒ méi lìqi le.^ฉันหมดแรงแล้ว^high^
+B4-0471^noun@E^high^ประวัติศาสตร์^中国有悠久的历史。^Zhōngguó yǒu yōujiǔ de lìshǐ.^จีนมีประวัติศาสตร์ยาวนาน^high^
+B4-0472^adverb@E^high^ทันที^请立即回来。^Qǐng lìjí huílai.^กรุณากลับมาทันที^high^
+B4-0473^noun@E^high^ดอกเบี้ย^银行的利息很低。^Yínháng de lìxī hěn dī.^ดอกเบี้ยธนาคารต่ำมาก^high^
+B4-0474^noun@E^high^ผลประโยชน์^我们要保护消费者的利益。^Wǒmen yào bǎohù xiāofèizhě de lìyì.^พวกเราต้องคุ้มครองผลประโยชน์ของผู้บริโภค^medium^source_gloss: English "interest" is ambiguous (also hobby, bank interest); 利益 = "benefit; interests"
+B4-0475^numeral@L^medium^สอง (คน); สองสามคน^我们俩是好朋友。^Wǒmen liǎ shì hǎo péngyou.^พวกเราสองคนเป็นเพื่อนสนิทกัน^medium^pos_doubtful: 俩 = 两个 (numeral + measure word fused); no exact POS
+B4-0476^adjective@E^high^ดี^他有良好的学习习惯。^Tā yǒu liánghǎo de xuéxí xíguàn.^เขามีนิสัยการเรียนที่ดี^high^
+B4-0477^verb@E^high^วัด; ประมาณ^请帮我量一下身高。^Qǐng bāng wǒ liáng yí xià shēngāo.^ช่วยวัดส่วนสูงให้ฉันหน่อย^medium^variant: "amount" belongs to 量 liàng (数量), but pinyin is liáng ("measure"); polysemy
+B4-0478^noun@E^high^ธัญญาหาร; อาหาร^我们不能浪费粮食。^Wǒmen bù néng làngfèi liángshi.^พวกเราไม่ควรทิ้งขว้างอาหาร^high^
+B4-0479^noun@E^high^สองข้าง; ทั้งสองฝ่าย^马路两边都是树。^Mǎlù liǎngbiān dōu shì shù.^ทั้งสองข้างถนนเต็มไปด้วยต้นไม้^high^
+B4-0480^verb@E^high^พักฟื้น^他在海边疗养了一个月。^Tā zài hǎibiān liáoyǎng le yí ge yuè.^เขาไปพักฟื้นที่ชายทะเลหนึ่งเดือน^high^
+B4-0481^adjective@E^high^ยอดเยี่ยม; ไม่ธรรมดา^他真了不起！^Tā zhēn liǎobuqǐ!^เขาเก่งจริงๆ!^high^
+B4-0482^verb@E^high^เข้าใจ; รู้จัก^我很了解他。^Wǒ hěn liǎojiě tā.^ฉันรู้จักเขาดี^medium^polysemy: "understand; know well" vs. "find out" (了解情况)
+B4-0483^verb@E^high^เรียง; จัดเป็นรายการ^请把要买的东西列出来。^Qǐng bǎ yào mǎi de dōngxi liè chūlai.^กรุณาจดรายการของที่จะซื้อ^medium^polysemy: verb "arrange; list" vs. measure word for trains (一列火车)
+B4-0484^noun@E^high^ขบวนรถไฟ^列车马上就要开了。^Lièchē mǎshàng jiù yào kāi le.^ขบวนรถไฟกำลังจะออก^high^
+B4-0485^verb@E^high^บรรจุเข้าไปใน^这个项目已经列入计划了。^Zhège xiàngmù yǐjīng lièrù jìhuà le.^โครงการนี้ถูกบรรจุไว้ในแผนแล้ว^high^
+B4-0486^verb@E^high^ถูกจัดให้เป็น^这里被列为世界文化遗产。^Zhèlǐ bèi lièwéi shìjiè wénhuà yíchǎn.^ที่นี่ถูกจัดให้เป็นมรดกโลกทางวัฒนธรรม^high^
+B4-0487^adjective@E^high^ชั่วคราว^这是一个临时的办法。^Zhè shì yí ge línshí de bànfǎ.^นี่เป็นวิธีชั่วคราว^medium^polysemy: adjective "temporary" vs. adverb "at the last moment" (临时决定)
+B4-0488^noun@E^high^ขนมขบเคี้ยว^小孩子喜欢吃零食。^Xiǎo háizi xǐhuan chī língshí.^เด็กๆ ชอบกินขนม^high^
+B4-0489^verb@E^high^สืบทอด; แพร่หลาย^这个故事流传了很多年。^Zhège gùshi liúchuán le hěn duō nián.^เรื่องเล่านี้สืบทอดมาหลายปี^high^
+B4-0490^noun@E^high^บันได^请走楼梯上去。^Qǐng zǒu lóutī shàngqu.^กรุณาขึ้นทางบันได^high^
+B4-0491^noun@E^high^พื้นดิน; แผ่นดิน^地球上的陆地比海洋少。^Dìqiú shang de lùdì bǐ hǎiyáng shǎo.^บนโลกมีพื้นดินน้อยกว่ามหาสมุทร^high^
+B4-0492^adverb@E^high^ทยอย; ต่อเนื่องกัน^客人们陆续到了。^Kèrénmen lùxù dào le.^แขกทยอยมาถึง^high^
+B4-0493^verb@E^medium^รับเข้าศึกษา; คัดเลือก^他被北京大学录取了。^Tā bèi Běijīng Dàxué lùqǔ le.^เขาได้รับเข้าศึกษาที่มหาวิทยาลัยปักกิ่ง^medium^source_gloss: "matriculate" is rare English; 录取 means "admit (to a school); recruit"
+B4-0494^noun@E^high^ทนายความ^他是一名律师。^Tā shì yì míng lǜshī.^เขาเป็นทนายความ^high^
+B4-0495^verb@L^low^ล้อ; รอบ; ผลัดกัน^今天轮到我值班。^Jīntiān lún dào wǒ zhíbān.^วันนี้ถึงตาฉันเข้าเวร^low^polysemy: noun "wheel; ring" vs. verb "take turns" vs. measure word "round"; pos_doubtful: no source POS; example shows "take turns"
+B4-0496^noun@E^high^เรือกลไฟ; เรือ^我们坐轮船去上海。^Wǒmen zuò lúnchuán qù Shànghǎi.^พวกเรานั่งเรือไปเซี่ยงไฮ้^high^
+B4-0497^noun@E^high^รถเข็นคนพิการ; วีลแชร์^爷爷坐着轮椅。^Yéye zuò zhe lúnyǐ.^คุณปู่นั่งวีลแชร์^high^
+B4-0498^noun@E^high^ล้อ^这辆车的轮子坏了。^Zhè liàng chē de lúnzi huài le.^ล้อของรถคันนี้เสีย^high^
+B4-0499^noun@E^high^วิทยานิพนธ์; บทความวิชาการ^他在写毕业论文。^Tā zài xiě bìyè lùnwén.^เขากำลังเขียนวิทยานิพนธ์จบการศึกษา^medium^source_gloss: "paper" is ambiguous (also 纸); 论文 = academic paper; thesis
+B4-0500^verb@E^high^ตก; หล่น; (ดวงอาทิตย์) ตก; ล้าหลัง^树叶落了一地。^Shùyè luò le yí dì.^ใบไม้ร่วงเต็มพื้น^medium^polysemy: fall / set / decline / drop behind combined; example shows "fall"
+B4-0501^noun@E^high^ผ้าขนหนู^请给我一条毛巾。^Qǐng gěi wǒ yì tiáo máojīn.^กรุณาให้ผ้าขนหนูฉันหนึ่งผืน^high^
+B4-0502^noun@E^high^เสื้อไหมพรม; สเวตเตอร์^天冷了，穿件毛衣吧。^Tiān lěng le, chuān jiàn máoyī ba.^อากาศหนาวแล้ว ใส่สเวตเตอร์เถอะ^high^
+B4-0503^noun@E^high^หมวก^他戴着一顶黑帽子。^Tā dài zhe yì dǐng hēi màozi.^เขาสวมหมวกสีดำใบหนึ่ง^high^
+B4-0504^interjection@L^medium^ใช่แล้ว; ถูกต้อง^没错，就是他。^Méi cuò, jiù shì tā.^ใช่แล้ว ก็คือเขานั่นแหละ^medium^pos_doubtful: set phrase (没 + 错) used as a reply
+B4-0505^other^low^ไม่มีทาง; ทำไม่ได้^这么多作业，我没法儿做完。^Zhème duō zuòyè, wǒ méifǎr zuò wán.^การบ้านเยอะขนาดนี้ ฉันไม่มีทางทำเสร็จ^high^pos_doubtful: phrase (没 + 法儿) with no single POS
+B4-0506^other^low^คาดไม่ถึง; ไม่คิดว่า^没想到你也来了！^Méi xiǎngdào nǐ yě lái le!^ไม่คิดว่าคุณจะมาด้วย!^high^pos_doubtful: phrase (没 + 想到) with no single POS
+B4-0507^noun@E^high^ดอลลาร์สหรัฐ^这台电脑一千美金。^Zhè tái diànnǎo yìqiān měijīn.^คอมพิวเตอร์เครื่องนี้ราคาหนึ่งพันดอลลาร์^high^
+B4-0508^noun@E^high^สาวงาม^她是一个大美女。^Tā shì yí ge dà měinǚ.^เธอเป็นสาวสวยมาก^high^
+B4-0509^noun@E^high^ความฝัน^我昨晚做了一个奇怪的梦。^Wǒ zuówǎn zuò le yí ge qíguài de mèng.^เมื่อคืนฉันฝันแปลกๆ^high^
+B4-0510^verb@E^high^ฝันเห็น^我梦见了我的奶奶。^Wǒ mèngjiàn le wǒ de nǎinai.^ฉันฝันเห็นย่าของฉัน^high^
+B4-0511^noun@E^medium^ความฝัน (ความปรารถนา); ใฝ่ฝัน^我的梦想是当一名医生。^Wǒ de mèngxiǎng shì dāng yì míng yīshēng.^ความฝันของฉันคือการเป็นหมอ^high^
+B4-0512^noun@E^medium^ความลับ; เป็นความลับ^这是我们之间的秘密。^Zhè shì wǒmen zhījiān de mìmì.^นี่เป็นความลับระหว่างเรา^high^
+B4-0513^noun@E^high^เลขานุการ^她是经理的秘书。^Tā shì jīnglǐ de mìshū.^เธอเป็นเลขานุการของผู้จัดการ^high^
+B4-0514^adjective@E^high^หนาแน่น; ลับ; สนิท^这片树林很密。^Zhè piàn shùlín hěn mì.^ป่าแห่งนี้หนาทึบมาก^medium^polysemy: thick / dense vs. secret vs. close (intimate); example shows "dense"
+B4-0515^noun@E^high^รหัสผ่าน^我忘了密码。^Wǒ wàng le mìmǎ.^ฉันลืมรหัสผ่าน^high^
+B4-0516^adjective@E^high^ใกล้ชิด^他们的关系很密切。^Tāmen de guānxì hěn mìqiè.^ความสัมพันธ์ของพวกเขาใกล้ชิดมาก^high^
+B4-0517^verb@L^medium^ไม่เสียค่าใช้จ่าย; ฟรี^这个公园免费开放。^Zhège gōngyuán miǎnfèi kāifàng.^สวนสาธารณะนี้เปิดให้เข้าฟรี^medium^pos_doubtful: 免费 is verb "be free of charge" used adverbially/attributively
+B4-0518^verb@E^high^เผชิญ^我们面临着很多困难。^Wǒmen miànlín zhe hěn duō kùnnan.^พวกเรากำลังเผชิญความยากลำบากมากมาย^high^
+B4-0519^verb@E^medium^สัมภาษณ์งาน; การสัมภาษณ์^明天我要去面试。^Míngtiān wǒ yào qù miànshì.^พรุ่งนี้ฉันจะไปสัมภาษณ์งาน^high^
+B4-0520^verb@E^medium^บรรยาย; พรรณนา^请描述一下当时的情况。^Qǐng miáoshù yí xià dāngshí de qíngkuàng.^กรุณาบรรยายสถานการณ์ในตอนนั้น^high^
+B4-0521^verb@E^high^พรรณนา (ในงานเขียน)^这篇文章描写了家乡的美景。^Zhè piān wénzhāng miáoxiě le jiāxiāng de měijǐng.^บทความนี้พรรณนาความงามของบ้านเกิด^high^
+B4-0522^noun@E^high^แบรนด์ดัง^他喜欢穿名牌儿。^Tā xǐhuan chuān míngpáir.^เขาชอบใส่ของแบรนด์เนม^high^
+B4-0523^noun@E^high^นามบัตร^这是我的名片。^Zhè shì wǒ de míngpiàn.^นี่คือนามบัตรของฉัน^high^
+B4-0524^noun@E^high^คนดัง^他是我们这里的名人。^Tā shì wǒmen zhèlǐ de míngrén.^เขาเป็นคนดังของที่นี่^high^
+B4-0525^verb@E^high^ลูบ; คลำ^他摸了摸孩子的头。^Tā mō le mō háizi de tóu.^เขาลูบหัวเด็กเบาๆ^medium^source_gloss: "feel" is ambiguous; 摸 = touch/stroke/feel (with hands), not emotional "feel"
+B4-0526^noun@E^high^นางแบบ; นายแบบ^她是一名时装模特儿。^Tā shì yì míng shízhuāng mótèr.^เธอเป็นนางแบบแฟชั่น^high^
+B4-0527^noun@E^high^แบบจำลอง; โมเดล^他做了一个飞机模型。^Tā zuò le yí ge fēijī móxíng.^เขาทำโมเดลเครื่องบินขึ้นมาหนึ่งชิ้น^high^
+B4-0528^noun@E^high^ปลาย; ท้าย; สุดท้าย^到了学期末，大家都很忙。^Dàole xuéqī mò, dàjiā dōu hěn máng.^พอถึงปลายภาคเรียน ทุกคนก็ยุ่งกันมาก^high^
+B4-0529^adverb@E^high^อย่างเงียบๆ^他默默地帮助别人。^Tā mòmò de bāngzhù biérén.^เขาช่วยเหลือผู้อื่นอย่างเงียบๆ^high^
+B4-0530^conjunction@E^high^ถึงแม้; แม้ว่า^哪怕下雨，我也要去。^Nǎpà xià yǔ, wǒ yě yào qù.^ถึงแม้ฝนจะตก ฉันก็จะไป^high^
+B4-0532^noun@E^high^ชายหญิง^男女都可以参加。^Nán nǚ dōu kěyǐ cānjiā.^ทั้งชายและหญิงเข้าร่วมได้^high^
+B4-0533^noun@E^high^สุภาพบุรุษ; ผู้ชาย^这是男士用的手表。^Zhè shì nánshì yòng de shǒubiǎo.^นี่เป็นนาฬิกาสำหรับผู้ชาย^high^
+B4-0534^adjective@E^high^หลีกเลี่ยงไม่ได้^刚开始工作，犯错是难免的。^Gāng kāishǐ gōngzuò, fàn cuò shì nánmiǎn de.^เพิ่งเริ่มทำงาน การทำผิดพลาดเป็นเรื่องหลีกเลี่ยงไม่ได้^high^
+B4-0535^noun@E^high^หัว; ศีรษะ^他摇了摇脑袋。^Tā yáo le yáo nǎodai.^เขาส่ายหัว^high^
+B4-0536^verb@E^high^ส่งเสียงดัง; ก่อเรื่อง; ประสบ^孩子们在外面闹。^Háizimen zài wàimian nào.^เด็กๆ ส่งเสียงดังอยู่ข้างนอก^medium^polysemy: adjective "noisy" vs. verb "make noise; stir up trouble; suffer from" (闹肚子)
+B4-0537^noun@E^high^นาฬิกาปลุก^我每天早上被闹钟叫醒。^Wǒ měitiān zǎoshang bèi nàozhōng jiàoxǐng.^ทุกเช้าฉันถูกนาฬิกาปลุกปลุกให้ตื่น^high^
