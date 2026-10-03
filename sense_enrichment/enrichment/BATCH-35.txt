@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B5-0149^measure_word@E^medium^ชุ่น (หน่วยวัดจีน ≈ 3.3 ซม.); นิดเดียว^这张照片是五寸的。^Zhè zhāng zhàopiàn shì wǔ cùn de.^รูปนี้ขนาดห้านิ้ว^medium^polysemy: unit "cun" vs. adjective-like "very short; tiny" (寸步难行)
+B5-0150^verb@E^high^บรรลุ (ข้อตกลง)^双方达成了协议。^Shuāngfāng dáchéng le xiéyì.^ทั้งสองฝ่ายบรรลุข้อตกลง^high^
+B5-0151^verb@E^high^ตอบ; ตอบสนอง^这个问题我答不上来。^Zhège wèntí wǒ dá bu shànglai.^คำถามนี้ฉันตอบไม่ได้^medium^polysemy: answer / reply / respond / return (a favour) combined; example shows "answer"
+B5-0152^verb@E^medium^ตอบกลับ; คำตอบ^请尽快答复我。^Qǐng jǐnkuài dáfù wǒ.^กรุณาตอบกลับฉันโดยเร็ว^high^
+B5-0154^verb@E^high^แต่งตัว^她今天打扮得很漂亮。^Tā jīntiān dǎban de hěn piàoliang.^วันนี้เธอแต่งตัวสวยมาก^high^
+B5-0155^verb@E^medium^ห่อกลับบ้าน; แพ็กของ^服务员，这些菜帮我打包。^Fúwùyuán, zhèxiē cài bāng wǒ dǎbāo.^พนักงานครับ ช่วยห่ออาหารพวกนี้กลับบ้านให้หน่อย^medium^polysemy: "pack (luggage)" vs. "take away leftovers"; example shows takeaway
+B5-0156^verb@E^high^โจมตี; ปราบปราม; บั่นทอน^这次失败对他打击很大。^Zhè cì shībài duì tā dǎjī hěn dà.^ความล้มเหลวครั้งนี้กระทบจิตใจเขามาก^medium^polysemy: "strike; crack down on" vs. "blow; setback"; example shows "setback"
+B5-0157^verb@E^high^ชกต่อย; ต่อยตี^小孩子不应该打架。^Xiǎo háizi bù yīnggāi dǎjià.^เด็กไม่ควรต่อยตีกัน^high^
+B5-0158^verb@E^high^รบกวน^对不起，打扰一下。^Duìbuqǐ, dǎrǎo yí xià.^ขอโทษนะ ขอรบกวนสักครู่^high^
+B5-0159^adjective@E^high^กล้า; ใจกล้า^他大胆地说出了自己的想法。^Tā dàdǎn de shuōchū le zìjǐ de xiǎngfǎ.^เขากล้าพูดความคิดของตัวเองออกมา^high^
+B5-0160^adverb@E^high^ส่วนใหญ่^这里的人大都很友好。^Zhèlǐ de rén dàdōu hěn yǒuhǎo.^คนที่นี่ส่วนใหญ่เป็นมิตร^high^
+B5-0161^noun@E^high^โครงร่าง; หลักสูตร^请看一下考试大纲。^Qǐng kàn yí xià kǎoshì dàgāng.^กรุณาดูโครงร่างการสอบหน่อย^high^
+B5-0162^pronoun@L^high^ทุกคน (ภาษาพูด)^大伙儿一起去吃饭吧。^Dàhuǒr yìqǐ qù chīfàn ba.^ทุกคนไปกินข้าวด้วยกันเถอะ^high^
+B5-0163^noun@E^high^การแข่งขันรางวัลใหญ่; กรังด์ปรีซ์^他参加了钢琴大奖赛。^Tā cānjiā le gāngqín dàjiǎngsài.^เขาเข้าร่วมการแข่งขันเปียโนรางวัลใหญ่^high^
+B5-0164^noun@E^high^สมอง^大脑需要休息。^Dànǎo xūyào xiūxi.^สมองต้องการการพักผ่อน^high^
+B5-0165^noun@E^high^เรื่องใหญ่; เหตุการณ์สำคัญ^结婚是人生的大事。^Jiéhūn shì rénshēng de dàshì.^การแต่งงานเป็นเรื่องใหญ่ของชีวิต^medium^polysemy: noun "major event" vs. adverbial "in a big way" (大事宣传)
+B5-0166^noun@E^high^ห้องโถง^我在酒店大厅等你。^Wǒ zài jiǔdiàn dàtīng děng nǐ.^ฉันรอคุณที่ล็อบบี้โรงแรม^high^
+B5-0167^noun@E^high^ช้าง^大象的鼻子很长。^Dàxiàng de bízi hěn cháng.^งวงช้างยาวมาก^high^
+B5-0168^noun@E^high^แพนด้ายักษ์^大熊猫是中国的国宝。^Dàxióngmāo shì Zhōngguó de guóbǎo.^แพนด้ายักษ์เป็นสมบัติของชาติจีน^high^
+B5-0169^verb@E^high^มากกว่า^五大于三。^Wǔ dàyú sān.^ห้ามากกว่าสาม^high^
+B5-0170^adverb@E^high^โดยประมาณ; คร่าวๆ^我大致了解了情况。^Wǒ dàzhì liǎojiě le qíngkuàng.^ฉันเข้าใจสถานการณ์คร่าวๆ แล้ว^medium^polysemy: adverb "roughly" vs. adjective "general; approximate"
+B5-0171^verb@E^low^อยู่; พัก; ตกตะลึง^他在家里呆了一天。^Tā zài jiā li dāi le yì tiān.^เขาอยู่บ้านทั้งวัน^low^polysemy: verb "stay" vs. adjective "dull; stunned" (发呆); variant: 呆 dāi overlaps 待 dāi (B5-0172) for "stay"
+B5-0172^verb@E^medium^อยู่; พัก^我在北京待了三天。^Wǒ zài Běijīng dāi le sān tiān.^ฉันพักอยู่ปักกิ่งสามวัน^medium^variant: 待 dāi (stay) overlaps 呆 (B5-0171); also homograph 待 dài "treat; wait"
+B5-0173^noun@E^high^ราคาที่ต้องจ่าย; ต้นทุน^成功是需要付出代价的。^Chénggōng shì xūyào fùchū dàijià de.^ความสำเร็จต้องแลกมาด้วยราคาที่ต้องจ่าย^high^
+B5-0174^noun@E^medium^ตัวแทน; รักษาการ^他是这家公司在中国的代理。^Tā shì zhè jiā gōngsī zài Zhōngguó de dàilǐ.^เขาเป็นตัวแทนของบริษัทนี้ในจีน^medium^polysemy: noun "agent" vs. verb "act on behalf of; be acting (head)"
+B5-0175^verb@E^high^มี; แฝงด้วย^他的话带有一点儿批评的意思。^Tā de huà dàiyǒu yìdiǎnr pīpíng de yìsi.^คำพูดของเขาแฝงความหมายเชิงตำหนิอยู่บ้าง^high^
+B5-0176^verb@E^medium^กู้เงิน; ให้กู้; เงินกู้^他向银行贷款买房。^Tā xiàng yínháng dàikuǎn mǎi fáng.^เขากู้เงินธนาคารเพื่อซื้อบ้าน^medium^polysemy: verb "borrow / lend (a loan)" vs. noun "loan"
+B5-0177^adjective@E^high^เดี่ยว; อย่างเดียว^这里的饮食很单一。^Zhèlǐ de yǐnshí hěn dānyī.^อาหารการกินที่นี่จำเจ^high^
+B5-0178^noun@E^high^ความกล้า; ถุงน้ำดี^他的胆很大。^Tā de dǎn hěn dà.^เขาใจกล้ามาก^medium^polysemy: "courage" vs. anatomical "gallbladder"; example shows "courage"
+B5-0179^adjective@E^high^ขี้ขลาด; ขี้กลัว^她很胆小，不敢一个人走夜路。^Tā hěn dǎnxiǎo, bù gǎn yí ge rén zǒu yèlù.^เธอขี้กลัวมาก ไม่กล้าเดินคนเดียวตอนกลางคืน^high^
+B5-0180^noun@E^high^เค้ก^我给你买了一个生日蛋糕。^Wǒ gěi nǐ mǎi le yí ge shēngrì dàngāo.^ฉันซื้อเค้กวันเกิดมาให้คุณ^high^
+B5-0181^adverb@L^medium^ณ ที่นั้นทันที^小偷被当场抓住了。^Xiǎotōu bèi dāngchǎng zhuāzhù le.^ขโมยถูกจับได้คาหนังคาเขา^medium^pos_doubtful: 当场 is a noun used adverbially ("on the spot")
+B5-0182^noun@E^medium^ร่วมสมัย; ปัจจุบัน^他是当代著名的作家。^Tā shì dāngdài zhùmíng de zuòjiā.^เขาเป็นนักเขียนร่วมสมัยที่มีชื่อเสียง^medium^pos_doubtful: gloss "Contemporary" is adjectival; 当代 is a time noun used attributively
+B5-0183^noun@E^high^ปีเหล่านั้น; ในสมัยนั้น^当年他只有二十岁。^Dāngnián tā zhǐ yǒu èrshí suì.^ในสมัยนั้นเขาอายุเพียงยี่สิบปี^medium^variant: 当年 dāngnián (in those years) vs. 当年 dàngnián (the same year)
+B5-0184^noun@E^high^ปัจจุบัน; ขณะนี้^当前最重要的是安全。^Dāngqián zuì zhòngyào de shì ānquán.^ขณะนี้สิ่งที่สำคัญที่สุดคือความปลอดภัย^high^
+B5-0185^verb@E^high^ได้รับเลือก^他当选为班长。^Tā dāngxuǎn wéi bānzhǎng.^เขาได้รับเลือกเป็นหัวหน้าห้อง^medium^source_gloss: "come in" is unclear; 当选 = "be elected"
+B5-0186^verb@E^high^บัง; ขวาง; กัน^前面的人挡住了我的视线。^Qiánmiàn de rén dǎngzhù le wǒ de shìxiàn.^คนข้างหน้าบังสายตาฉัน^high^
+B5-0187^verb@E^medium^มาถึง; การมาถึง^春天的到来让人高兴。^Chūntiān de dàolái ràng rén gāoxìng.^การมาถึงของฤดูใบไม้ผลิทำให้คนมีความสุข^medium^pos_doubtful: gloss "arrival; advent" is a noun; 到来 is a verb mostly used nominally
+B5-0188^adverb@E^high^กลับ...; จริงๆ แล้ว^房间不大，倒是挺干净的。^Fángjiān bú dà, dàoshì tǐng gānjìng de.^ห้องไม่ใหญ่ แต่กลับสะอาดดีทีเดียว^high^
+B5-0189^noun@E^high^ศีลธรรม; คุณธรรม^我们要遵守社会道德。^Wǒmen yào zūnshǒu shèhuì dàodé.^พวกเราต้องยึดถือศีลธรรมของสังคม^high^
+B5-0190^interjection@L^low^พอเถอะ; พอแล้ว; ได้แล้ว^得了，别说了。^Déle, bié shuō le.^พอเถอะ ไม่ต้องพูดแล้ว^low^polysemy: interjection "that's enough" vs. verb "got (an illness)" (得了感冒); pos_doubtful: no source POS
+B5-0191^verb@E^high^สามารถ; จึงได้^在大家的帮助下，问题得以解决。^Zài dàjiā de bāngzhù xià, wèntí déyǐ jiějué.^ด้วยความช่วยเหลือของทุกคน ปัญหาจึงได้รับการแก้ไข^high^
+B5-0192^verb@E^high^รอคอย^请在这里等候。^Qǐng zài zhèlǐ děnghòu.^กรุณารอที่นี่^high^
+B5-0193^noun@E^high^ระดับ; ชั้น^这家酒店的等级很高。^Zhè jiā jiǔdiàn de děngjí hěn gāo.^โรงแรมนี้มีระดับสูงมาก^high^
+B5-0194^verb@E^high^ต่ำกว่า^今天的气温低于零度。^Jīntiān de qìwēn dīyú líng dù.^อุณหภูมิวันนี้ต่ำกว่าศูนย์องศา^high^
+B5-0195^noun@E^high^เขต; บริเวณ^这里是一个安全地带。^Zhèlǐ shì yí ge ānquán dìdài.^ที่นี่เป็นเขตปลอดภัย^high^
+B5-0196^noun@E^high^ภูมิประเทศ^这里的地形很复杂。^Zhèlǐ de dìxíng hěn fùzá.^ภูมิประเทศที่นี่ซับซ้อนมาก^high^
+B5-0197^noun@E^high^แผ่นดินไหว^昨天这里发生了地震。^Zuótiān zhèlǐ fāshēng le dìzhèn.^เมื่อวานเกิดแผ่นดินไหวที่นี่^high^
+B5-0198^verb@L^medium^ยื่นให้; ส่งต่อ^请把那本书递给我。^Qǐng bǎ nà běn shū dì gěi wǒ.^กรุณายื่นหนังสือเล่มนั้นให้ฉัน^medium^source_gloss: "Delivery" is a noun; 递 is the verb "hand over; pass"
+B5-0199^verb@E^high^ยื่นให้^他把钥匙递给了我。^Tā bǎ yàoshi dìgěi le wǒ.^เขายื่นกุญแจให้ฉัน^high^
+B5-0200^noun@E^high^พิธี^毕业典礼明天举行。^Bìyè diǎnlǐ míngtiān jǔxíng.^พิธีจบการศึกษาจัดขึ้นพรุ่งนี้^high^
+B5-0201^verb@E^high^จุดไฟ^他点燃了蜡烛。^Tā diǎnrán le làzhú.^เขาจุดเทียน^high^
+B5-0202^noun@E^high^แบตเตอรี่; ถ่าน^手机电池没电了。^Shǒujī diànchí méi diàn le.^แบตเตอรี่มือถือหมดแล้ว^high^
+B5-0203^noun@E^high^หม้อหุงข้าว^我买了一个新电饭锅。^Wǒ mǎi le yí ge xīn diànfànguō.^ฉันซื้อหม้อหุงข้าวใบใหม่^high^
+B5-0204^noun@E^high^ฉบับอิเล็กทรอนิกส์^这本书有电子版吗？^Zhè běn shū yǒu diànzǐbǎn ma?^หนังสือเล่มนี้มีฉบับอิเล็กทรอนิกส์ไหม?^high^
+B5-0205^verb@E^high^โยกย้าย; ระดม; กระตุ้น^他被调动到别的部门了。^Tā bèi diàodòng dào bié de bùmén le.^เขาถูกโยกย้ายไปแผนกอื่นแล้ว^medium^polysemy: "transfer (staff)" vs. "mobilize; arouse (enthusiasm)" (调动积极性)
+B5-0206^verb@E^high^ทำหาย; ทิ้ง^我的钱包丢了。^Wǒ de qiánbāo diū le.^กระเป๋าสตางค์ของฉันหายแล้ว^medium^polysemy: "lose" vs. "throw away" (丢垃圾)
+B5-0207^noun@E^high^แรงจูงใจ^他这样做的动机是什么？^Tā zhèyàng zuò de dòngjī shì shénme?^แรงจูงใจที่เขาทำแบบนี้คืออะไร?^high^
+B5-0208^verb@L^low^ลงมือ; ลงไม้ลงมือ^我们自己动手做吧。^Wǒmen zìjǐ dòngshǒu zuò ba.^พวกเราลงมือทำเองเถอะ^low^source_gloss: "DIY" is a loose gloss; 动手 means "start work; do it oneself" and also "hit someone"; polysemy
+B5-0209^noun@E^medium^ความเคลื่อนไหว; พลวัต^请关注最新动态。^Qǐng guānzhù zuìxīn dòngtài.^กรุณาติดตามความเคลื่อนไหวล่าสุด^medium^polysemy: noun "developments; trends" vs. adjective "dynamic"
+B5-0210^verb@L^medium^ระดมพล; ปลุกระดม^老师动员大家参加活动。^Lǎoshī dòngyuán dàjiā cānjiā huódòng.^ครูชักชวนทุกคนเข้าร่วมกิจกรรม^medium^source_gloss: "mobilization" is a noun; 动员 is mainly the verb "mobilize"
+B5-0211^verb@E^high^แช่แข็ง; หนาวจนแข็ง^外面太冷了，我的手都冻红了。^Wàimian tài lěng le, wǒ de shǒu dōu dòng hóng le.^ข้างนอกหนาวเกินไป มือฉันแดงเพราะความหนาว^medium^polysemy: verb "freeze" vs. noun "jelly" (果冻)
+B5-0212^noun@E^high^หลุม; รู; ถ้ำ^我的袜子破了一个洞。^Wǒ de wàzi pò le yí ge dòng.^ถุงเท้าของฉันขาดเป็นรู^high^
+B5-0213^noun@E^high^ผลิตภัณฑ์จากถั่ว^豆腐是一种豆制品。^Dòufu shì yì zhǒng dòuzhìpǐn.^เต้าหู้เป็นผลิตภัณฑ์จากถั่วชนิดหนึ่ง^high^
+B5-0214^noun@E^high^พิษ; ยาเสพติด; มีพิษ^这种蘑菇有毒。^Zhè zhǒng mógu yǒu dú.^เห็ดชนิดนี้มีพิษ^medium^polysemy: poison / toxin vs. narcotics vs. adjective "poisonous; vicious"
+B5-0215^measure_word@L^medium^กอง (ลักษณนาม); กองไว้^桌子上有一堆书。^Zhuōzi shang yǒu yì duī shū.^บนโต๊ะมีหนังสือกองหนึ่ง^medium^pos_doubtful: gloss "heap" is noun; 堆 is also verb "pile up" and measure word; example shows measure word
+B5-0216^verb@L^medium^ตรงข้ามกัน; ขัดแย้งกัน^这两种观点是对立的。^Zhè liǎng zhǒng guāndiǎn shì duìlì de.^สองความคิดเห็นนี้ขัดแย้งกัน^medium^source_gloss: "Opposition" is a noun; 对立 is verb/adjective "be opposed; antagonistic"
+B5-0217^verb@L^medium^สอดคล้อง; ตรงกัน^这两个词的意思不完全对应。^Zhè liǎng ge cí de yìsi bù wánquán duìyìng.^ความหมายของสองคำนี้ไม่ตรงกันทั้งหมด^medium^source_gloss: "Corresponding" is a participle; 对应 is the verb "correspond"
+B5-0218^measure_word@L^high^ตัน^这辆车能装五吨货。^Zhè liàng chē néng zhuāng wǔ dūn huò.^รถคันนี้บรรทุกสินค้าได้ห้าตัน^high^
+B5-0219^measure_word@E^high^ดอก (ลักษณนามของดอกไม้)^她手里拿着一朵花。^Tā shǒu li ná zhe yì duǒ huā.^เธอถือดอกไม้อยู่หนึ่งดอก^high^
+B5-0220^verb@E^high^ซ่อน; หลบ; หลีกเลี่ยง^孩子躲在门后面。^Háizi duǒ zài mén hòumiàn.^เด็กซ่อนอยู่หลังประตู^medium^polysemy: "hide" vs. "avoid; dodge"; example shows "hide"
+B5-0221^noun@E^high^ลูกๆ; บุตรธิดา^父母都希望儿女幸福。^Fùmǔ dōu xīwàng érnǚ xìngfú.^พ่อแม่ล้วนหวังให้ลูกๆ มีความสุข^high^
+B5-0222^noun@E^high^หู^我的耳朵有点儿疼。^Wǒ de ěrduo yǒudiǎnr téng.^หูของฉันเจ็บนิดหน่อย^high^
+B5-0223^noun@E^high^คิวอาร์โค้ด^请扫一下这个二维码。^Qǐng sǎo yí xià zhège èrwéimǎ.^กรุณาสแกนคิวอาร์โค้ดนี้หน่อย^high^
+B5-0224^verb@E^high^เผยแพร่; ประกาศ^公司发布了新产品。^Gōngsī fābù le xīn chǎnpǐn.^บริษัทเปิดตัวผลิตภัณฑ์ใหม่^high^
+B5-0225^verb@E^high^รู้ตัว; สังเกตเห็น^我发觉他今天有点儿不高兴。^Wǒ fājué tā jīntiān yǒudiǎnr bù gāoxìng.^ฉันสังเกตเห็นว่าวันนี้เขาไม่ค่อยพอใจ^high^
+B5-0226^verb@E^high^ยิง; ปล่อย (จรวด)^中国成功发射了一颗卫星。^Zhōngguó chénggōng fāshè le yì kē wèixīng.^จีนปล่อยดาวเทียมได้สำเร็จหนึ่งดวง^high^
+B5-0227^verb@E^high^ออก (หนังสือ/เงิน); จัดจำหน่าย^这张邮票是去年发行的。^Zhè zhāng yóupiào shì qùnián fāxíng de.^แสตมป์ดวงนี้ออกเมื่อปีที่แล้ว^high^
+B5-0228^verb@E^high^ลงโทษ; ปรับ^他上课迟到被老师罚站了。^Tā shàngkè chídào bèi lǎoshī fá zhàn le.^เขามาเรียนสายจึงถูกครูลงโทษให้ยืน^medium^polysemy: verb "punish; fine" vs. noun "punishment; retribution"
+B5-0229^verb@E^medium^ปรับเงิน; ค่าปรับ^他因为乱停车被罚款了。^Tā yīnwèi luàn tíngchē bèi fákuǎn le.^เขาถูกปรับเพราะจอดรถผิดที่^medium^pos_doubtful: 罚款 is both verb "fine" and noun "fine"
+B5-0230^noun@E^high^กฎหมาย; ข้อบังคับ^我们要遵守交通法规。^Wǒmen yào zūnshǒu jiāotōng fǎguī.^พวกเราต้องปฏิบัติตามกฎจราจร^high^
+B5-0231^noun@E^high^ระบบกฎหมาย; นิติรัฐ^我们要加强法制建设。^Wǒmen yào jiāqiáng fǎzhì jiànshè.^พวกเราต้องเสริมสร้างระบบกฎหมาย^high^
+B5-0232^adjective@L^medium^เจริญรุ่งเรือง^这个城市越来越繁荣。^Zhège chéngshì yuè lái yuè fánróng.^เมืองนี้เจริญรุ่งเรืองขึ้นเรื่อยๆ^medium^source_gloss: "Boom" is noun/verb; 繁荣 is mainly adjective "prosperous" (also verb "make prosperous")
+B5-0233^verb@E^high^กลับ; ย้อนกลับ^我们明天返回北京。^Wǒmen míngtiān fǎnhuí Běijīng.^พวกเราจะกลับปักกิ่งพรุ่งนี้^high^
+B5-0234^verb@L^medium^ป้องกันและรักษา^我们要做好疾病防治工作。^Wǒmen yào zuò hǎo jíbìng fángzhì gōngzuò.^พวกเราต้องทำงานป้องกันและรักษาโรคให้ดี^medium^source_gloss: "Prevention and cure" is a noun phrase; 防治 is the verb "prevent and treat"
+B5-0235^verb@E^high^ขยาย (ให้ใหญ่ขึ้น)^请把照片放大一点儿。^Qǐng bǎ zhàopiàn fàngdà yìdiǎnr.^กรุณาขยายรูปให้ใหญ่ขึ้นหน่อย^high^
+B5-0236^verb@E^high^ยอมแพ้; ละทิ้ง^无论多难，都不要放弃。^Wúlùn duō nán, dōu búyào fàngqì.^ไม่ว่าจะยากแค่ไหน ก็อย่ายอมแพ้^high^
+B5-0237^verb@E^high^แบ่งเป็น^老师把学生分成三组。^Lǎoshī bǎ xuésheng fēnchéng sān zǔ.^ครูแบ่งนักเรียนเป็นสามกลุ่ม^high^
+B5-0238^verb@E^high^แยกส่วน; ย่อยสลาย^这个问题可以分解成几个小问题。^Zhège wèntí kěyǐ fēnjiě chéng jǐ ge xiǎo wèntí.^ปัญหานี้แยกออกเป็นปัญหาย่อยได้หลายข้อ^medium^polysemy: chemistry "decompose" vs. "break down (a problem)"; example shows "break down"
+B5-0239^verb@E^medium^จัดหมวดหมู่; การจำแนก^请把垃圾分类。^Qǐng bǎ lājī fēnlèi.^กรุณาคัดแยกขยะ^high^
+B5-0240^verb@E^high^แยกจากกัน^他们分离了十年。^Tāmen fēnlí le shí nián.^พวกเขาพลัดพรากจากกันสิบปี^high^
+B5-0241^verb@L^medium^วิเคราะห์; การวิเคราะห์^我们来分析一下原因。^Wǒmen lái fēnxī yí xià yuányīn.^พวกเรามาวิเคราะห์สาเหตุกันหน่อย^medium^pos_doubtful: gloss "Analysis" is a noun; 分析 is both verb and noun; example shows the verb
+B5-0242^verb@E^high^แบ่งปัน^我想和大家分享一个好消息。^Wǒ xiǎng hé dàjiā fēnxiǎng yí ge hǎo xiāoxi.^ฉันอยากแบ่งปันข่าวดีกับทุกคน^high^
+B5-0243^verb@E^high^เก็บเกี่ยวได้ผลดี^今年农民又丰收了。^Jīnnián nóngmín yòu fēngshōu le.^ปีนี้ชาวนาได้ผลผลิตดีอีกแล้ว^high^
+B5-0244^noun@E^high^กิริยาท่าทาง; บุคลิก^他很有风度。^Tā hěn yǒu fēngdù.^เขามีบุคลิกที่สง่างาม^high^
+B5-0245^noun@E^high^ทิวทัศน์; มีหน้ามีตา^桂林的风光很美。^Guìlín de fēngguāng hěn měi.^ทิวทัศน์ของกุ้ยหลินงดงามมาก^medium^polysemy: noun "scenery" vs. adjective "glorious; honourable" (很风光)
+B5-0247^adjective@E^high^บ้า; คลั่ง^你疯了吗？^Nǐ fēng le ma?^คุณบ้าไปแล้วเหรอ?^high^
+B5-0248^adjective@E^high^บ้าคลั่ง^球迷们疯狂地欢呼。^Qiúmímen fēngkuáng de huānhū.^แฟนบอลโห่ร้องอย่างบ้าคลั่ง^high^
+B5-0249^verb@E^high^ประคอง; พยุง^他扶着奶奶过马路。^Tā fú zhe nǎinai guò mǎlù.^เขาประคองคุณย่าข้ามถนน^high^
+B5-0250^verb@E^high^เชื่อฟัง; ปฏิบัติตาม^少数服从多数。^Shǎoshù fúcóng duōshù.^เสียงข้างน้อยต้องยอมรับเสียงข้างมาก^high^
