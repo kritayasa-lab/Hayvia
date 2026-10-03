@@ -1,0 +1,101 @@
+# source_id ^ pos ^ pos_confidence ^ thai_meaning ^ example_zh ^ example_pinyin ^ example_thai ^ enrichment_confidence ^ review_reason
+B4-0025^noun@E^high^ลูกรัก; สุดที่รัก; ของล้ำค่า^宝贝，别哭了。^Bǎobèi, bié kū le.^ลูกรัก อย่าร้องไห้เลย^medium^polysemy: "baby; darling" vs. "treasure"; gloss gives "baby"
+B4-0026^adjective@E^high^มีค่า; ล้ำค่า^时间是最宝贵的。^Shíjiān shì zuì bǎoguì de.^เวลาเป็นสิ่งที่มีค่าที่สุด^high^
+B4-0027^noun@E^high^อัญมณี; เพชรพลอย^她戴着一个宝石戒指。^Tā dài zhe yí ge bǎoshí jièzhi.^เธอสวมแหวนอัญมณีวงหนึ่ง^high^
+B4-0028^verb@L^medium^รักษาความลับ^这件事请你保密。^Zhè jiàn shì qǐng nǐ bǎomì.^เรื่องนี้กรุณาเก็บเป็นความลับ^medium^source_gloss: "secrecy" is a noun; 保密 is the verb "keep secret"
+B4-0029^adjective@E^high^อนุรักษนิยม; หัวโบราณ^他的想法比较保守。^Tā de xiǎngfǎ bǐjiào bǎoshǒu.^ความคิดของเขาค่อนข้างหัวโบราณ^medium^polysemy: adjective "conservative" vs. verb "guard; keep" (保守秘密)
+B4-0030^verb@E^high^อุ้ม; กอด^妈妈抱着孩子。^Māma bào zhe háizi.^แม่อุ้มลูกอยู่^high^
+B4-0031^noun@E^high^ภูมิหลัง; ฉากหลัง^这张照片的背景很漂亮。^Zhè zhāng zhàopiàn de bèijǐng hěn piàoliang.^ฉากหลังของรูปนี้สวยมาก^medium^polysemy: "backdrop (of a picture)" vs. "background (of a person/event)"; example shows backdrop
+B4-0032^measure_word@L^high^เท่า^这个房间是那个的两倍大。^Zhège fángjiān shì nàge de liǎng bèi dà.^ห้องนี้ใหญ่เป็นสองเท่าของห้องนั้น^high^
+B4-0033^verb@E^high^ถูกบังคับ; จำต้อง^因为下雨，比赛被迫停止。^Yīnwèi xià yǔ, bǐsài bèipò tíngzhǐ.^เพราะฝนตก การแข่งขันจำต้องหยุดลง^high^
+B4-0034^noun@E^high^ปริญญาตรี^他是本科毕业生。^Tā shì běnkē bìyèshēng.^เขาเป็นบัณฑิตระดับปริญญาตรี^high^
+B4-0035^adjective@E^high^โง่; งุ่มง่าม^我太笨了，又做错了。^Wǒ tài bèn le, yòu zuò cuò le.^ฉันโง่เกินไป ทำผิดอีกแล้ว^high^
+B4-0036^noun@E^high^คะแนน (การแข่งขัน)^现在比分是二比一。^Xiànzài bǐfēn shì èr bǐ yī.^ตอนนี้คะแนนสองต่อหนึ่ง^high^
+B4-0037^verb@L^medium^จบการศึกษา^他明年大学毕业。^Tā míngnián dàxué bìyè.^ปีหน้าเขาจะเรียนจบมหาวิทยาลัย^medium^source_gloss: "graduation" is a noun; 毕业 is the verb "graduate"
+B4-0038^noun@E^high^ผู้สำเร็จการศึกษา; บัณฑิต^今年的毕业生很多。^Jīnnián de bìyèshēng hěn duō.^ปีนี้มีผู้สำเร็จการศึกษามาก^high^
+B4-0039^verb@E^high^หลบ; หลีกเลี่ยง^我们找个地方避雨吧。^Wǒmen zhǎo ge dìfang bì yǔ ba.^พวกเราหาที่หลบฝนกันเถอะ^high^
+B4-0040^verb@E^high^หลีกเลี่ยง^我们要避免犯同样的错误。^Wǒmen yào bìmiǎn fàn tóngyàng de cuòwù.^พวกเราต้องหลีกเลี่ยงการทำผิดซ้ำ^high^
+B4-0041^verb@E^high^แต่ง; เรียบเรียง; สาน; กุเรื่อง^这个故事是他编的。^Zhège gùshi shì tā biān de.^เรื่องนี้เขาแต่งขึ้นมาเอง^medium^polysemy: invent / plait / edit / compile / compose combined; example shows "make up"
+B4-0042^verb@E^medium^โต้วาที; การโต้วาที^同学们在辩论这个问题。^Tóngxuémen zài biànlùn zhège wèntí.^นักเรียนกำลังโต้วาทีเรื่องนี้^high^
+B4-0043^noun@E^high^สัญลักษณ์; เครื่องหมาย^这是我们学校的标志。^Zhè shì wǒmen xuéxiào de biāozhì.^นี่คือสัญลักษณ์ของโรงเรียนเรา^medium^polysemy: noun "sign; symbol" vs. verb "mark; symbolize"
+B4-0044^noun@E^high^สีหน้า; การแสดงออกทางสีหน้า^他的表情很奇怪。^Tā de biǎoqíng hěn qíguài.^สีหน้าของเขาแปลกมาก^high^
+B4-0045^verb@E^medium^ชมเชย; ยกย่อง^老师表扬了他。^Lǎoshī biǎoyáng le tā.^ครูชมเชยเขา^high^
+B4-0047^noun@E^high^น้ำแข็ง^河面结冰了。^Hémiàn jié bīng le.^ผิวน้ำในแม่น้ำกลายเป็นน้ำแข็งแล้ว^high^
+B4-0048^noun@E^high^ตู้เย็น^冰箱里有很多水果。^Bīngxiāng li yǒu hěn duō shuǐguǒ.^ในตู้เย็นมีผลไม้มากมาย^high^
+B4-0049^noun@E^high^น้ำแข็งและหิมะ^北方的冬天到处是冰雪。^Běifāng de dōngtiān dàochù shì bīngxuě.^ฤดูหนาวทางเหนือมีแต่น้ำแข็งและหิมะ^high^
+B4-0050^noun@E^high^ทหาร; กำลังทหาร; อาวุธ^他当了三年兵。^Tā dāng le sān nián bīng.^เขาเป็นทหารมาสามปี^medium^polysemy: soldier / force / weapon / military combined; example shows "soldier"
+B4-0052^adjective@L^medium^ไม่เป็นไร; ไม่สำคัญ^A：对不起！B：不要紧。^A: Duìbuqǐ! B: Bú yàojǐn.^A: ขอโทษ! B: ไม่เป็นไร^medium^pos_doubtful: 不要紧 is a set expression (adjective "not serious") used as a reply
+B4-0053^verb@L^medium^ไม่สนใจ; ไม่แคร์^他不在乎别人怎么说。^Tā bú zàihu biérén zěnme shuō.^เขาไม่สนว่าคนอื่นจะพูดอย่างไร^high^
+B4-0054^conjunction@E^high^ไม่ว่า^不管多难，我都要试试。^Bùguǎn duō nán, wǒ dōu yào shìshi.^ไม่ว่าจะยากแค่ไหน ฉันก็จะลองดู^high^
+B4-0055^conjunction@E^high^มิฉะนั้น; ไม่อย่างนั้น^快走吧，不然要迟到了。^Kuài zǒu ba, bùrán yào chídào le.^รีบไปเถอะ ไม่อย่างนั้นจะสาย^high^
+B4-0056^verb@L^medium^จัดวาง; ตกแต่ง; มอบหมาย^我们把教室布置得很漂亮。^Wǒmen bǎ jiàoshì bùzhì de hěn piàoliang.^พวกเราตกแต่งห้องเรียนอย่างสวยงาม^medium^source_gloss: "Arrangement" is a noun; 布置 is the verb "arrange; decorate; assign"
+B4-0057^verb@E^high^เดินเท้า^我每天步行去公司。^Wǒ měitiān bùxíng qù gōngsī.^ฉันเดินไปบริษัททุกวัน^high^
+B4-0058^verb@E^high^เช็ด; ถู^请把桌子擦干净。^Qǐng bǎ zhuōzi cā gānjìng.^กรุณาเช็ดโต๊ะให้สะอาด^high^
+B4-0060^noun@E^high^วัสดุ; เอกสาร; ข้อมูล^这些材料都很重要。^Zhèxiē cáiliào dōu hěn zhòngyào.^เอกสารเหล่านี้สำคัญทั้งหมด^medium^polysemy: "(raw) materials" vs. "documents; data"; example ambiguous
+B4-0061^noun@E^high^ทรัพย์สิน^这是他的私人财产。^Zhè shì tā de sīrén cáichǎn.^นี่เป็นทรัพย์สินส่วนตัวของเขา^high^
+B4-0062^noun@E^high^ความมั่งคั่ง; ทรัพย์สมบัติ^健康是最大的财富。^Jiànkāng shì zuì dà de cáifù.^สุขภาพคือทรัพย์สมบัติที่ยิ่งใหญ่ที่สุด^high^
+B4-0063^verb@E^medium^สัมภาษณ์ (โดยนักข่าว)^记者采访了这位运动员。^Jìzhě cǎifǎng le zhè wèi yùndòngyuán.^นักข่าวสัมภาษณ์นักกีฬาคนนี้^high^
+B4-0064^verb@L^medium^อ้างอิง; ใช้ประกอบ^这本书可以参考一下。^Zhè běn shū kěyǐ cānkǎo yí xià.^หนังสือเล่มนี้ใช้อ้างอิงได้^medium^source_gloss: "Reference resources" is a noun phrase; 参考 is mainly the verb "consult; refer to"
+B4-0065^verb@E^high^มีส่วนร่วม^很多学生参与了这次活动。^Hěn duō xuésheng cānyù le zhè cì huódòng.^นักเรียนจำนวนมากมีส่วนร่วมในกิจกรรมนี้^high^
+B4-0066^noun@E^high^สนามโรงเรียน; สนามกีฬา^学生们在操场上跑步。^Xuéshengmen zài cāochǎng shang pǎobù.^นักเรียนกำลังวิ่งอยู่ในสนาม^high^
+B4-0067^verb@L^medium^ใช้งาน; ควบคุม (เครื่อง)^这台机器很容易操作。^Zhè tái jīqì hěn róngyì cāozuò.^เครื่องนี้ใช้งานง่ายมาก^medium^source_gloss: "operation" is a noun; 操作 is mainly the verb "operate"
+B4-0068^verb@E^high^วัด; สำรวจ; คาดคะเน^请帮我测一下体温。^Qǐng bāng wǒ cè yí xià tǐwēn.^ช่วยวัดอุณหภูมิร่างกายให้ฉันหน่อย^medium^polysemy: survey / measure vs. conjecture / infer combined; example shows "measure"
+B4-0069^verb@E^high^วัด; ตรวจวัด^工人正在测量这块地。^Gōngrén zhèngzài cèliáng zhè kuài dì.^คนงานกำลังวัดที่ดินแปลงนี้^high^
+B4-0070^noun@E^medium^การทดสอบ; ทดสอบ^明天有一个汉语测试。^Míngtiān yǒu yí ge Hànyǔ cèshì.^พรุ่งนี้มีการทดสอบภาษาจีน^medium^pos_doubtful: 测试 is both noun "test" and verb "test"; example shows the noun
+B4-0071^adverb@E^high^เคย^他曾在北京工作过。^Tā céng zài Běijīng gōngzuò guo.^เขาเคยทำงานที่ปักกิ่ง^high^
+B4-0072^noun@E^high^ใบชา^这是今年的新茶叶。^Zhè shì jīnnián de xīn cháyè.^นี่เป็นใบชาใหม่ของปีนี้^high^
+B4-0073^noun@E^high^ผลิตภัณฑ์^这家公司的产品很好。^Zhè jiā gōngsī de chǎnpǐn hěn hǎo.^ผลิตภัณฑ์ของบริษัทนี้ดีมาก^high^
+B4-0074^adjective@L^high^ทางไกล^我们坐长途汽车去。^Wǒmen zuò chángtú qìchē qù.^พวกเรานั่งรถทัวร์ทางไกลไป^high^
+B4-0075^noun@E^high^สามัญสำนึก; ความรู้ทั่วไป^这是生活常识。^Zhè shì shēnghuó chángshí.^นี่เป็นความรู้ทั่วไปในการใช้ชีวิต^high^
+B4-0076^noun@E^high^แผ่นเสียง^他收藏了很多老唱片。^Tā shōucáng le hěn duō lǎo chàngpiàn.^เขาสะสมแผ่นเสียงเก่าไว้มากมาย^high^
+B4-0077^verb@E^high^ลอก; คัดลอก^考试不能抄别人的答案。^Kǎoshì bù néng chāo biérén de dá'àn.^ตอนสอบห้ามลอกคำตอบของคนอื่น^high^
+B4-0078^verb@E^high^คัดลอก; เขียนตาม^请把生词抄写三遍。^Qǐng bǎ shēngcí chāoxiě sān biàn.^กรุณาคัดคำศัพท์ใหม่สามรอบ^high^
+B4-0079^adjective@E^high^ชื้น; น้ำขึ้นน้ำลง^衣服还有点儿潮。^Yīfu hái yǒudiǎnr cháo.^เสื้อผ้ายังชื้นอยู่นิดหน่อย^medium^polysemy: adjective "damp" vs. noun "tide" (and slang "trendy"); example shows "damp"
+B4-0080^noun@E^high^กระแสนิยม; แนวโน้ม^年轻人喜欢追潮流。^Niánqīngrén xǐhuan zhuī cháoliú.^คนหนุ่มสาวชอบตามกระแส^high^
+B4-0081^adjective@E^high^ชื้น; อับชื้น^南方的春天很潮湿。^Nánfāng de chūntiān hěn cháoshī.^ฤดูใบไม้ผลิทางใต้อากาศชื้นมาก^high^
+B4-0082^adjective@E^high^ถี่ถ้วน; อย่างสิ้นเชิง^我们要彻底解决这个问题。^Wǒmen yào chèdǐ jiějué zhège wèntí.^พวกเราต้องแก้ไขปัญหานี้อย่างถอนรากถอนโคน^high^
+B4-0083^verb@E^high^จม; ลึก; หนัก^船沉到了海底。^Chuán chén dào le hǎidǐ.^เรือจมลงสู่ก้นทะเล^medium^polysemy: verb "sink; lower" vs. adjectives "deep; heavy"; example shows "sink"
+B4-0084^adjective@E^high^เงียบ; นิ่งเงียบ^他沉默了很久。^Tā chénmò le hěn jiǔ.^เขานิ่งเงียบไปนาน^high^
+B4-0085^adjective@E^high^หนักอึ้ง; หนักหน่วง^他的心情很沉重。^Tā de xīnqíng hěn chénzhòng.^จิตใจของเขาหนักอึ้งมาก^high^
+B4-0086^verb@E^high^ยกย่อง; ชื่นชม^大家都称赞他。^Dàjiā dōu chēngzàn tā.^ทุกคนต่างชื่นชมเขา^high^
+B4-0087^noun@E^high^ผู้ใหญ่^这部电影只适合成人看。^Zhè bù diànyǐng zhǐ shìhé chéngrén kàn.^ภาพยนตร์เรื่องนี้เหมาะสำหรับผู้ใหญ่เท่านั้น^high^
+B4-0088^adjective@E^high^ซื่อสัตย์^他是一个诚实的孩子。^Tā shì yí ge chéngshí de háizi.^เขาเป็นเด็กที่ซื่อสัตย์^high^
+B4-0089^noun@E^high^ความซื่อสัตย์; ความน่าเชื่อถือ^做生意要讲诚信。^Zuò shēngyi yào jiǎng chéngxìn.^ทำธุรกิจต้องยึดถือความซื่อสัตย์^high^
+B4-0090^verb@E^high^รับผิดชอบ; แบกรับ^这件事由我承担责任。^Zhè jiàn shì yóu wǒ chéngdān zérèn.^เรื่องนี้ฉันจะรับผิดชอบเอง^high^
+B4-0091^verb@E^high^ยอมรับ^他承认自己错了。^Tā chéngrèn zìjǐ cuò le.^เขายอมรับว่าตัวเองผิด^high^
+B4-0092^verb@E^high^ทนรับ; แบกรับ^他承受了很大的压力。^Tā chéngshòu le hěn dà de yālì.^เขาแบกรับความกดดันอย่างมาก^high^
+B4-0093^noun@E^high^ขั้นตอน; โปรแกรม^请按照程序办事。^Qǐng ànzhào chéngxù bànshì.^กรุณาทำตามขั้นตอน^medium^polysemy: "procedure" vs. "(computer) program"; gloss gives "program", example shows "procedure"
+B4-0094^verb@L^medium^ตกใจ; ประหลาดใจ^听到这个消息，大家都很吃惊。^Tīngdào zhège xiāoxi, dàjiā dōu hěn chījīng.^พอได้ยินข่าวนี้ ทุกคนต่างตกใจ^high^
+B4-0095^verb@L^medium^มาสาย^对不起，我迟到了。^Duìbuqǐ, wǒ chídào le.^ขอโทษ ฉันมาสาย^medium^source_gloss: "Late" is adjectival; 迟到 is the verb "arrive late"
+B4-0096^measure_word@L^low^ฉื่อ (หน่วยความยาวจีน); ไม้บรรทัด^这块布有三尺长。^Zhè kuài bù yǒu sān chǐ cháng.^ผ้าผืนนี้ยาวสามฉื่อ^low^source_gloss: gloss "rule; ruler" omits the unit "chi (≈1/3 m)"; polysemy: noun "ruler" vs. measure word; pos_doubtful: no source POS
+B4-0097^noun@E^high^ขนาด^这件衣服的尺寸太大了。^Zhè jiàn yīfu de chǐcun tài dà le.^เสื้อตัวนี้ขนาดใหญ่เกินไป^high^
+B4-0098^noun@E^high^ไม้บรรทัด^我可以借一下你的尺子吗？^Wǒ kěyǐ jiè yí xià nǐ de chǐzi ma?^ฉันขอยืมไม้บรรทัดของคุณหน่อยได้ไหม?^high^
+B4-0099^verb@L^low^พุ่ง; ชง (น้ำ); ล้าง^他冲进了教室。^Tā chōng jìn le jiàoshì.^เขาพุ่งเข้าไปในห้องเรียน^low^source_gloss: "punching" is not a sense of 冲 chōng (likely confused with 冲压 or chòng); core senses are "rush; rinse; pour boiling water"; polysemy
+B4-0100^verb@E^high^ชาร์จไฟ^我的手机需要充电。^Wǒ de shǒujī xūyào chōngdiàn.^โทรศัพท์มือถือของฉันต้องชาร์จไฟ^medium^polysemy: literal "charge (battery)" vs. figurative "recharge oneself (study more)"
+B4-0101^noun@E^high^ที่ชาร์จ^我忘带充电器了。^Wǒ wàng dài chōngdiànqì le.^ฉันลืมเอาที่ชาร์จมา^high^
+B4-0102^adjective@L^medium^เต็มที่; เพียงพอ^我们做了充分的准备。^Wǒmen zuò le chōngfèn de zhǔnbèi.^พวกเราเตรียมตัวอย่างเต็มที่^medium^source_gloss: "To the full" is adverbial; 充分 is the adjective "ample; full" (also used adverbially)
+B4-0103^noun@E^high^แมลง; หนอน^树叶上有很多虫子。^Shùyè shang yǒu hěn duō chóngzi.^บนใบไม้มีแมลงมากมาย^high^
+B4-0104^verb@E^high^สูบ; ดึงออก; หด; สุ่มเลือก^他从书包里抽出一本书。^Tā cóng shūbāo li chōuchū yì běn shū.^เขาดึงหนังสือเล่มหนึ่งออกมาจากกระเป๋า^medium^polysemy: pump / take out / shrink / pick out combined (also "smoke" 抽烟); example shows "take out"
+B4-0105^verb@L^medium^จับรางวัล; การจับรางวัล^今天晚会有抽奖活动。^Jīntiān wǎnhuì yǒu chōujiǎng huódòng.^งานคืนนี้มีกิจกรรมจับรางวัล^medium^pos_doubtful: 抽奖 is a verb-object phrase; gloss gives nouns
+B4-0106^verb@L^medium^สูบบุหรี่^这里不能抽烟。^Zhèlǐ bù néng chōuyān.^ที่นี่ห้ามสูบบุหรี่^medium^source_gloss: "smoking" is a gerund; 抽烟 is the verb-object phrase "smoke"
+B4-0107^noun@E^high^ทางออก^请问出口在哪儿？^Qǐngwèn chūkǒu zài nǎr?^ขอถามหน่อย ทางออกอยู่ที่ไหน?^medium^variant: same form as 出口 "export" (B2-0070); this row covers "exit"
+B4-0108^adjective@E^high^ยอดเยี่ยม; โดดเด่น^他的表现很出色。^Tā de biǎoxiàn hěn chūsè.^ผลงานของเขายอดเยี่ยมมาก^high^
+B4-0109^verb@E^high^วางขาย; ขาย^这套房子正在出售。^Zhè tào fángzi zhèngzài chūshòu.^บ้านหลังนี้กำลังประกาศขาย^high^
+B4-0110^verb@E^high^เข้าร่วม (ประชุม/งาน)^他出席了今天的会议。^Tā chūxí le jīntiān de huìyì.^เขาเข้าร่วมการประชุมวันนี้^high^
+B4-0111^verb@E^high^อยู่ใน (สภาพ)^这个国家处于发展阶段。^Zhège guójiā chǔyú fāzhǎn jiēduàn.^ประเทศนี้อยู่ในช่วงพัฒนา^high^
+B4-0112^verb@E^high^อยู่; คบหา; อยู่ในฐานะ^他和同事们处得很好。^Tā hé tóngshìmen chǔ de hěn hǎo.^เขาเข้ากับเพื่อนร่วมงานได้ดี^medium^polysemy: dwell / get along with / be in a position of; also 处 chù "place" (noun); example shows "get along"
+B4-0113^verb@E^high^สวมใส่^外面冷，穿上大衣吧。^Wàimian lěng, chuānshang dàyī ba.^ข้างนอกหนาว ใส่เสื้อโค้ทเถอะ^high^
+B4-0114^noun@E^high^ประเพณี; ดั้งเดิม^春节是中国的传统节日。^Chūnjié shì Zhōngguó de chuántǒng jiérì.^ตรุษจีนเป็นเทศกาลตามประเพณีของจีน^medium^polysemy: noun "tradition" vs. adjective "traditional"; example shows attributive use
+B4-0115^noun@E^high^หน้าต่าง^请打开窗户。^Qǐng dǎkāi chuānghu.^กรุณาเปิดหน้าต่าง^high^
+B4-0116^noun@E^high^ขอบหน้าต่าง^窗台上放着一盆花。^Chuāngtái shang fàng zhe yì pén huā.^บนขอบหน้าต่างมีกระถางดอกไม้วางอยู่^high^
+B4-0117^noun@E^high^หน้าต่าง^窗子开着呢。^Chuāngzi kāi zhe ne.^หน้าต่างเปิดอยู่นะ^high^
+B4-0118^noun@E^high^ฤดูใบไม้ผลิ^春季是旅游的好时候。^Chūnjì shì lǚyóu de hǎo shíhou.^ฤดูใบไม้ผลิเป็นช่วงเวลาที่ดีสำหรับการท่องเที่ยว^high^
+B4-0119^adjective@E^high^บริสุทธิ์; แท้; ชำนาญ^这是纯牛奶。^Zhè shì chún niúnǎi.^นี่คือนมแท้^medium^polysemy: pure / unmixed / simple / skilful combined; example shows "pure"
+B4-0120^noun@E^high^น้ำบริสุทธิ์; น้ำดื่ม^我要一瓶纯净水。^Wǒ yào yì píng chúnjìngshuǐ.^ฉันขอน้ำดื่มหนึ่งขวด^high^
+B4-0121^noun@E^high^คำศัพท์^他的汉语词汇很丰富。^Tā de Hànyǔ cíhuì hěn fēngfù.^คำศัพท์ภาษาจีนของเขามีมากมาย^high^
+B4-0122^pronoun@E^high^นี้; ที่นี่; ตอนนี้^此人是我的老师。^Cǐ rén shì wǒ de lǎoshī.^บุคคลนี้คือครูของฉัน^high^
+B4-0123^conjunction@E^high^นอกจากนี้^此外，我还想说一点。^Cǐwài, wǒ hái xiǎng shuō yì diǎn.^นอกจากนี้ ฉันยังอยากพูดอีกข้อหนึ่ง^high^
+B4-0125^noun@E^high^หนาม^玫瑰花有刺。^Méiguīhuā yǒu cì.^ดอกกุหลาบมีหนาม^medium^polysemy: noun "thorn" vs. verb "stab; prick"
+B4-0126^verb@E^high^กระตุ้น; ระคายเคือง^这种音乐太刺激了。^Zhè zhǒng yīnyuè tài cìjī le.^ดนตรีแบบนี้เร้าใจเกินไป^medium^polysemy: verb "stimulate" vs. adjective "exciting; thrilling" vs. noun "stimulus"; example shows adjective use
+B4-0127^adverb@E^high^นับจากนั้น^他从此再也没来过。^Tā cóngcǐ zài yě méi lái guo.^นับจากนั้นเขาก็ไม่เคยมาอีกเลย^high^
+B4-0128^adjective@E^high^หนา; หยาบ; สะเพร่า; หยาบคาย^这棵树很粗。^Zhè kē shù hěn cū.^ต้นไม้ต้นนี้ลำต้นใหญ่มาก^medium^polysemy: thick / coarse / gruff / careless / rude combined; example shows "thick"
